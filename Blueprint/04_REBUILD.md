@@ -1,4 +1,4 @@
-RB-01 Autonomous Rebuild Rule
+# RB-01 Autonomous Rebuild Rule
 
 Purpose:
 Ensure only final validated batches are released.
