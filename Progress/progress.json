@@ -1,10 +1,11 @@
 {
-  "current_project": "P1",
-  "current_chapter": "CH1",
-  "current_subtopic": "ST4",
-  "current_set": "S1",
-  "current_batch": "B1",
-  "question_start": 1,
-  "question_end": 10,
-  "status": "ACTIVE"
+"current_project": "P1",
+"current_chapter": "CH1",
+"current_subtopic": "ST4",
+"current_set": "S1",
+"current_batch": "B1",
+"question_start": 1,
+"question_end": 10,
+"current_node": "P1_CH1_ST4_S1_B1",
+"status": "ACTIVE"
 }
