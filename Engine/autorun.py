@@ -6,6 +6,7 @@ Phase 6.1
 
 Reads the current runtime state and displays it.
 """
+
 from core.logger import get_logger
 from core.state_manager import load_progress
 from config import FACTORY_NAME, FACTORY_VERSION
@@ -19,10 +20,12 @@ def print_header():
 
 
 def main():
-    print_header()
+
     logger = get_logger()
 
-logger.info("AUTORUN Started")
+    logger.info("AUTORUN Started")
+
+    print_header()
 
     progress = load_progress()
 
@@ -41,7 +44,8 @@ logger.info("AUTORUN Started")
 
     print()
     print("AUTORUN State Engine loaded successfully.")
-logger.info("AUTORUN Completed Successfully")
+
+    logger.info("AUTORUN Completed Successfully")
 
 
 if __name__ == "__main__":
