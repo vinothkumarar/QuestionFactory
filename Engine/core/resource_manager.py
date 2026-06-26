@@ -1,4 +1,3 @@
-"""
 Question Factory Engine
 Resource Manager
 
