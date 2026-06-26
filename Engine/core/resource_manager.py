@@ -1,31 +1,37 @@
 """
-Question Factory OS
+Question Factory Engine
 Resource Manager
 
 Purpose:
-Ensure the required folder structure exists for the current node.
+Manage the QuestionBank folder structure.
 """
 
 from pathlib import Path
-
 from config import QUESTIONBANK_DIR
 
 
-def ensure_questionbank_path(project, chapter, subtopic):
+class ResourceManager:
     """
-    Create QuestionBank folder hierarchy if it does not exist.
-
-    Returns:
-        Path object of the subtopic folder.
+    Handles creation and verification of QuestionBank folders.
     """
 
-    path = (
-        QUESTIONBANK_DIR
-        / project
-        / chapter
-        / subtopic
-    )
+    def ensure_questionbank_path(
+        self,
+        project: str,
+        chapter: str,
+        subtopic: str,
+    ) -> Path:
 
-    path.mkdir(parents=True, exist_ok=True)
+        folder = (
+            QUESTIONBANK_DIR
+            / project
+            / chapter
+            / subtopic
+        )
 
-    return path
+        folder.mkdir(
+            parents=True,
+            exist_ok=True
+        )
+
+        return folder
