@@ -10,6 +10,7 @@ Reads the current runtime state and displays it.
 from core.logger import get_logger
 from core.state_manager import load_progress
 from config import FACTORY_NAME, FACTORY_VERSION
+from core.runtime_manager import RuntimeManager
 
 
 def print_header():
@@ -27,7 +28,10 @@ def main():
 
     print_header()
 
-    progress = load_progress()
+    runtime = RuntimeManager()
+    progress = runtime.progress
+
+    
     from core.resource_manager import ensure_questionbank_path
     folder = ensure_questionbank_path(
     progress["current_project"],
