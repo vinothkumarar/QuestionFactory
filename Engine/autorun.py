@@ -28,6 +28,16 @@ def main():
     print_header()
 
     progress = load_progress()
+    from core.resource_manager import ensure_questionbank_path
+    folder = ensure_questionbank_path(
+    progress["current_project"],
+    progress["current_chapter"],
+    progress["current_subtopic"]
+)
+
+print()
+print("QuestionBank Path")
+print(folder)
 
     print("Current Runtime State")
     print("-" * 50)
