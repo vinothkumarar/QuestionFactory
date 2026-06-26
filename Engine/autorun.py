@@ -1,0 +1,44 @@
+"""
+Question Factory OS
+AUTORUN Engine
+
+Phase 6.1
+
+Reads the current runtime state and displays it.
+"""
+
+from core.state_manager import load_progress
+from config import FACTORY_NAME, FACTORY_VERSION
+
+
+def print_header():
+    print("=" * 50)
+    print(f"{FACTORY_NAME} v{FACTORY_VERSION}")
+    print("=" * 50)
+    print()
+
+
+def main():
+    print_header()
+
+    progress = load_progress()
+
+    print("Current Runtime State")
+    print("-" * 50)
+
+    print(f"Project      : {progress.get('current_project')}")
+    print(f"Chapter      : {progress.get('current_chapter')}")
+    print(f"Subtopic     : {progress.get('current_subtopic')}")
+    print(f"Set          : {progress.get('current_set')}")
+    print(f"Batch        : {progress.get('current_batch')}")
+    print(f"Question From: Q{progress.get('question_start'):03}")
+    print(f"Question To  : Q{progress.get('question_end'):03}")
+    print(f"Current Node : {progress.get('current_node')}")
+    print(f"Status       : {progress.get('status')}")
+
+    print()
+    print("AUTORUN State Engine loaded successfully.")
+
+
+if __name__ == "__main__":
+    main()
