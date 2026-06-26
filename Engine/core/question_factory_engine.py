@@ -10,20 +10,21 @@ Responsibilities:
 """
 
 from core.runtime_manager import RuntimeManager
-from core.resource_manager import ensure_questionbank_path
+from core.resource_manager import ResourceManager
 
 
 class QuestionFactoryEngine:
 
     def __init__(self):
-
+        self.resource_manager = ResourceManager()
         self.runtime = RuntimeManager()
+        self.folder = None
 
     def execute(self):
 
         progress = self.runtime.progress
 
-        folder = ensure_questionbank_path(
+        self.folder = self.resource_manager.ensure_questionbank_path(
             progress["current_project"],
             progress["current_chapter"],
             progress["current_subtopic"]
@@ -35,7 +36,7 @@ class QuestionFactoryEngine:
         print("=" * 50)
 
         print(f"Current Node : {progress['current_node']}")
-        print(f"QuestionBank : {folder}")
+        print(f"QuestionBank : {self.folder}")
 
         print()
         print("Engine executed successfully.")
