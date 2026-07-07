@@ -82,3 +82,11 @@ QUESTION_SCHEMA = [
     "question_image_url",
     "solution_image_url"
 ]
+QUESTION_DEFAULTS = {
+    "status": "draft",
+    "version": "1.0",
+    "language": "English",
+    "marks": 4,
+    "negative_marks": -1,
+    "is_verified": False,
+}

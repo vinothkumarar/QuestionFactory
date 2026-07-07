@@ -6,6 +6,7 @@ Builds a production-ready Question dictionary.
 """
 
 from core.question_code_generator import QuestionCodeGenerator
+from core.schema import QUESTION_DEFAULTS
 from metadata.metadata_loader import MetadataLoader
 
 
@@ -31,12 +32,7 @@ class QuestionBuilder:
         metadata = self.metadata_loader.get_metadata(metadata_key)
 
         question = {}
-        question["status"] = "draft"
-        question["version"] = "1.0"
-        question["language"] = "English"
-        question["marks"] = 4
-        question["negative_marks"] = -1
-        question["is_verified"] = False
+        question.update(QUESTION_DEFAULTS)
 
         question["question_code"] = self.code_generator.generate(
             runtime["current_project"],
