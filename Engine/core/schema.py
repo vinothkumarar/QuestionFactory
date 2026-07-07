@@ -177,3 +177,21 @@ QUESTION_FIELD_GROUPS = {
     "language"
 ]
 }
+QUESTION_REQUIRED_FIELDS = [
+
+    "question_code",
+
+    "subject_name",
+    "unit_name",
+    "chapter_name",
+    "subtopic_name",
+
+    "difficulty",
+    "question_type",
+
+    "question_text",
+
+    "correct_option",
+    "answer"
+]
+
