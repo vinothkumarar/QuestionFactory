@@ -20,6 +20,7 @@ class SchemaValidator:
                 missing.append(field)
 
         return {
+    "validator": "SchemaValidator",
     "passed": len(missing) == 0,
     "errors": missing
 }

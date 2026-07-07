@@ -25,7 +25,7 @@ class RequiredFieldValidator:
                 errors.append(f"{field} is required")
 
         return {
-            "passed": len(errors) == 0,
-            "errors": errors
-        }
-        
+    "validator": "RequiredFieldValidator",
+    "passed": len(errors) == 0,
+    "errors": errors
+}
