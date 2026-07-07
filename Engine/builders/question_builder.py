@@ -1,0 +1,47 @@
+"""
+Question Factory OS
+Question Builder
+
+Builds a production-ready Question dictionary.
+"""
+
+from core.question_code_generator import QuestionCodeGenerator
+from metadata.metadata_loader import MetadataLoader
+
+
+class QuestionBuilder:
+
+    def __init__(self):
+
+        self.code_generator = QuestionCodeGenerator()
+        self.metadata_loader = MetadataLoader()
+
+    def build(
+        self,
+        runtime: dict,
+        question_number: int
+    ):
+
+        metadata_key = (
+            f"{runtime['current_project']}_"
+            f"{runtime['current_chapter']}_"
+            f"{runtime['current_subtopic']}"
+        )
+
+        metadata = self.metadata_loader.get_metadata(metadata_key)
+
+        question = {}
+
+        question["question_code"] = self.code_generator.generate(
+            runtime["current_project"],
+            runtime["current_chapter"],
+            runtime["current_subtopic"],
+            runtime["current_set"],
+            question_number
+        )
+
+        if metadata:
+            question.update(metadata)
+
+        return question
+        
