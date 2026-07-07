@@ -90,3 +90,90 @@ QUESTION_DEFAULTS = {
     "negative_marks": -1,
     "is_verified": False,
 }
+# ==========================================================
+# Question Domain Model
+# Field Ownership Groups
+# (Engine v1.0)
+# ==========================================================
+QUESTION_FIELD_GROUPS = {
+    "identity": [
+    "id",
+    "question_code",
+    "version"
+],
+    "runtime": [
+    "created_at",
+    "updated_at",
+    "created_by",
+
+    "subject_id",
+    "unit_id",
+    "chapter_id",
+    "subtopic_id",
+
+    "subject_name",
+    "unit_name",
+    "chapter_name",
+    "subtopic_name"
+],
+    "content": [
+    "difficulty",
+    "difficulty_score",
+
+    "question_type",
+    "answer_type",
+
+    "question_text",
+
+    "option_a",
+    "option_b",
+    "option_c",
+    "option_d",
+
+    "correct_option",
+    "answer",
+
+    "explanation",
+    "more_explanation",
+
+    "concept_tested",
+    "question_archetype",
+
+    "source_type",
+
+    "tags",
+
+    "estimated_time_sec"
+],
+    "exam": [
+    "marks",
+    "negative_marks",
+
+    "exam_level",
+
+    "chapter_weightage",
+    "exam_relevance",
+
+    "pyq_inspired",
+    "pyq_exam",
+    "pyq_year",
+    "pyq_topic"
+],
+    "workflow": [
+    "status",
+
+    "is_verified",
+    "reviewed_by",
+    "review_date"
+],
+    "media": [
+    "image_required",
+    "has_diagram",
+    "latex_required",
+
+    "question_image_url",
+    "solution_image_url",
+
+    "language"
+]
+}
