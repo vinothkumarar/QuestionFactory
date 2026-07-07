@@ -8,6 +8,7 @@ Builds a production-ready Question dictionary.
 from core.question_code_generator import QuestionCodeGenerator
 from core.schema import QUESTION_DEFAULTS
 from metadata.metadata_loader import MetadataLoader
+from builders.question_object_factory import QuestionObjectFactory
 
 
 class QuestionBuilder:
@@ -16,6 +17,7 @@ class QuestionBuilder:
 
         self.code_generator = QuestionCodeGenerator()
         self.metadata_loader = MetadataLoader()
+        self.object_factory = QuestionObjectFactory()
 
     def build(
         self,
@@ -31,8 +33,7 @@ class QuestionBuilder:
 
         metadata = self.metadata_loader.get_metadata(metadata_key)
 
-        question = {}
-        question.update(QUESTION_DEFAULTS)
+        question = self.object_factory.create()
 
         question["question_code"] = self.code_generator.generate(
             runtime["current_project"],
