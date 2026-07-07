@@ -34,6 +34,9 @@ class QuestionBuilder:
         question["status"] = "draft"
         question["version"] = "1.0"
         question["language"] = "English"
+        question["marks"] = 4
+        question["negative_marks"] = -1
+        question["is_verified"] = False
 
         question["question_code"] = self.code_generator.generate(
             runtime["current_project"],
