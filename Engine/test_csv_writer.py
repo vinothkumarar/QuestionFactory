@@ -1,7 +1,9 @@
-from core.resource_manager import ensure_questionbank_path
+from core.resource_manager import ResourceManager
 from core.csv_writer import CSVWriter
 
-folder = ensure_questionbank_path(
+resource_manager = ResourceManager()
+
+folder = resource_manager.ensure_questionbank_path(
     "P1",
     "CH1",
     "ST4"
