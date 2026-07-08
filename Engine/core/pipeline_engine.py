@@ -1,13 +1,15 @@
 """
 Question Factory OS
 Pipeline Engine
-
-Runs the complete Question generation pipeline.
 """
 
 from builders.question_builder import QuestionBuilder
-from core.generation_engine import GenerationEngine
+from builders.question_merger import QuestionMerger
+
+from ai.prompt_builder import PromptBuilder
+from ai.provider_factory import ProviderFactory
 from ai.response_parser import ResponseParser
+
 from core.validation_engine import ValidationEngine
 
 
@@ -15,33 +17,49 @@ class PipelineEngine:
 
     def __init__(self):
 
-        self.builder = QuestionBuilder()
-        self.generator = GenerationEngine()
+        self.question_builder = QuestionBuilder()
+
+        self.prompt_builder = PromptBuilder()
+
+        self.provider = ProviderFactory.create()
+
         self.parser = ResponseParser()
+
+        self.merger = QuestionMerger()
+
         self.validator = ValidationEngine()
 
-    def run(
+    def generate(
         self,
-        runtime: dict,
-        question_number: int
+        runtime,
+        question_number
     ):
 
-        question = self.builder.build(
+        question = self.question_builder.build(
             runtime,
             question_number
         )
 
-        response = self.generator.generate(question)
-
-        question = self.parser.parse(
-            response,
+        prompt = self.prompt_builder.build(
             question
         )
 
-        report = self.validator.validate(question)
+        response = self.provider.generate(
+            prompt
+        )
 
-        return {
-            "question": question,
-            "validation": report
-        }
+        ai_data = self.parser.parse(
+            response
+        )
+
+        question = self.merger.merge(
+            question,
+            ai_data
+        )
+
+        validation = self.validator.validate(
+            question
+        )
+
+        return question, validation
         

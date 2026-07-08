@@ -1,21 +1,22 @@
 """
 Question Factory OS
 Response Parser
-
-Converts AI responses into Question objects.
 """
+
+import json
 
 
 class ResponseParser:
 
-    def parse(self, response: str, question: dict) -> dict:
-        """
-        Parses the AI response and updates the question object.
+    def parse(self, response: str) -> dict:
 
-        For now, store the raw response.
-        """
+        try:
 
-        question["raw_ai_response"] = response
+            return json.loads(response)
 
-        return question
-        
+        except json.JSONDecodeError as ex:
+
+            raise RuntimeError(
+                f"Invalid JSON received from AI.\n\n{ex}"
+            )
+            
