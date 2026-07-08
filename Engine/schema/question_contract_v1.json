@@ -1,0 +1,197 @@
+{
+  "contract_name": "Question Factory OS - Question Contract",
+  "version": "1.0.0",
+
+  "sections": {
+
+    "identity": {
+
+      "owner": "QuestionBuilder",
+
+      "fields": [
+
+        "question_code",
+
+        "project_code",
+
+        "subject_code",
+
+        "unit_code",
+
+        "chapter_code",
+
+        "subtopic_code",
+
+        "set_no",
+
+        "question_no",
+
+        "batch_no",
+
+        "version",
+
+        "status",
+
+        "created_at",
+
+        "updated_at",
+
+        "created_by"
+
+      ]
+
+    },
+
+    "metadata": {
+
+      "owner": "QuestionBuilder",
+
+      "fields": [
+
+        "subject_id",
+
+        "unit_id",
+
+        "chapter_id",
+
+        "subtopic_id",
+
+        "subject_name",
+
+        "unit_name",
+
+        "chapter_name",
+
+        "subtopic_name",
+
+        "language",
+
+        "marks",
+
+        "negative_marks"
+
+      ]
+
+    },
+
+    "educational": {
+
+      "owner": "AI",
+
+      "fields": [
+
+        "difficulty",
+
+        "difficulty_score",
+
+        "question_type",
+
+        "answer_type",
+
+        "question_text",
+
+        "option_a",
+
+        "option_b",
+
+        "option_c",
+
+        "option_d",
+
+        "correct_option",
+
+        "answer",
+
+        "explanation",
+
+        "more_explanation",
+
+        "concept_tested",
+
+        "question_archetype",
+
+        "estimated_time_sec",
+
+        "bloom_level",
+
+        "exam_level",
+
+        "chapter_weightage",
+
+        "exam_relevance",
+
+        "source_type",
+
+        "tags",
+
+        "pyq_inspired",
+
+        "pyq_exam",
+
+        "pyq_year",
+
+        "pyq_topic",
+
+        "image_required",
+
+        "has_diagram",
+
+        "latex_required"
+
+      ]
+
+    },
+
+    "runtime": {
+
+      "owner": "PipelineEngine",
+
+      "fields": [
+
+        "provider",
+
+        "model",
+
+        "generation_time_ms",
+
+        "prompt_version",
+
+        "qgs_version",
+
+        "schema_version",
+
+        "validation_version",
+
+        "prompt_tokens",
+
+        "completion_tokens",
+
+        "estimated_cost"
+
+      ]
+
+    },
+
+    "validation": {
+
+      "owner": "ValidationEngine",
+
+      "fields": [
+
+        "validation_passed",
+
+        "validation_score",
+
+        "validator_results",
+
+        "repair_attempts",
+
+        "approved"
+
+      ]
+
+    }
+
+  }
+
+}

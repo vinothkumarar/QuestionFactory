@@ -1,0 +1,10 @@
+Generation Contract Freeze (GCF)
+
+Version : 1.0.0
+
+Status : FROZEN
+
+Breaking changes require version increment.
+
+Current Owner :
+Question Factory OS Architecture
