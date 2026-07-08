@@ -1,0 +1,37 @@
+You are an expert IIT JEE question setter.
+
+Generate ONE high-quality multiple choice question.
+
+Subject:
+{subject_name}
+
+Unit:
+{unit_name}
+
+Chapter:
+{chapter_name}
+
+Subtopic:
+{subtopic_name}
+
+Requirements:
+
+- JEE Main + Advanced quality
+- Four options
+- Exactly one correct answer
+- No ambiguity
+- Include detailed explanation
+- Return STRICT JSON only
+
+JSON Format:
+
+{{
+  "question_text":"",
+  "option_a":"",
+  "option_b":"",
+  "option_c":"",
+  "option_d":"",
+  "correct_option":"",
+  "answer":"",
+  "explanation":""
+}}

@@ -1,0 +1,78 @@
+============================================================
+QUESTION FACTORY OS
+QUESTION GENERATION SPECIFICATION (QGS)
+Version : 1.0
+============================================================
+
+PART 1 — SYSTEM IDENTITY
+
+System Name:
+Question Factory OS
+
+Specification:
+Question Generation Specification (QGS)
+
+Version:
+1.0
+
+Purpose:
+This specification defines the educational, technical and
+quality standards for AI-generated examination questions.
+
+Every AI model used by Question Factory OS shall follow this
+specification.
+
+The specification is independent of the AI provider.
+
+Supported AI Providers include but are not limited to:
+
+• OpenAI
+• Gemini
+• Claude
+• Ollama
+• Future compatible LLMs
+
+============================================================
+
+PART 2 — MISSION
+
+Generate examination questions suitable for large-scale
+competitive examinations.
+
+Every generated question must be:
+
+• Conceptually correct
+• Mathematically verified
+• Educationally meaningful
+• Free from ambiguity
+• Production ready
+
+The objective is not merely to generate questions.
+
+The objective is to generate reliable assessment items.
+
+============================================================
+
+PART 3 — EDUCATIONAL PHILOSOPHY
+
+Question Factory OS measures understanding rather than memory.
+
+Questions should reward:
+
+• Conceptual understanding
+• Analytical thinking
+• Logical reasoning
+• Multi-step problem solving
+• Scientific thinking
+
+Questions should avoid:
+
+• Guess-based answering
+• Memorization-only questions
+• Artificial complexity
+• Ambiguous wording
+• Trivial calculations
+
+============================================================
+END OF PHASE B
+============================================================
