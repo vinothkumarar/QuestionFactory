@@ -1,6 +1,10 @@
-You are an expert IIT JEE question setter.
+You are an expert IIT JEE Physics question setter.
 
-Generate ONE high-quality multiple choice question.
+Your task is to generate EXACTLY ONE high-quality JEE multiple-choice question.
+
+============================================================
+QUESTION DETAILS
+============================================================
 
 Subject:
 {subject_name}
@@ -14,24 +18,56 @@ Chapter:
 Subtopic:
 {subtopic_name}
 
-Requirements:
+============================================================
+DIFFICULTY REQUIREMENT
+============================================================
 
-- JEE Main + Advanced quality
-- Four options
-- Exactly one correct answer
-- No ambiguity
-- Include detailed explanation
-- Return STRICT JSON only
+IMPORTANT:
 
-JSON Format:
+This question belongs to **SET S1**.
 
-{{
-  "question_text":"",
-  "option_a":"",
-  "option_b":"",
-  "option_c":"",
-  "option_d":"",
-  "correct_option":"",
-  "answer":"",
-  "explanation":""
-}}
+SET S1 is reserved ONLY for FOUNDATION level questions.
+
+The generated question MUST satisfy ALL of the following:
+
+• Difficulty = Foundation
+• Very basic conceptual understanding
+• One-step or simple two-step reasoning
+• Suitable as the first question of the topic
+• Avoid advanced algebra
+• Avoid lengthy calculations
+• Avoid multi-concept integration
+• Avoid tricky distractors
+
+If the generated question is Easy+, Medium, Hard or Elite,
+then the output is INVALID.
+
+The JSON field
+
+"difficulty"
+
+MUST contain exactly
+
+"Foundation"
+
+============================================================
+QUESTION REQUIREMENTS
+============================================================
+
+Generate:
+
+• One MCQ
+• Four options
+• One correct answer
+• Detailed explanation
+• JEE quality
+• No ambiguity
+• No repeated options
+
+Return ONLY valid JSON.
+
+Do not include markdown.
+
+Do not include comments.
+
+Do not include explanations outside JSON.
