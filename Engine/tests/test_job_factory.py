@@ -4,17 +4,17 @@ Job Factory Test
 """
 
 from repositories.runtime_repository import RuntimeRepository
-from jobs.job_factory import JobFactory
+from planning.production_planner import ProductionPlanner
 
 
 runtime = RuntimeRepository().get_runtime()
 
-factory = JobFactory()
+planner = ProductionPlanner()
 
-job = factory.create(runtime)
+order = planner.create(runtime)
 
 print("=" * 80)
 print("GENERATION JOB CREATED")
 print("=" * 80)
 
-print(job)
+print(order)

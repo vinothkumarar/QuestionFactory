@@ -3,20 +3,20 @@ Question Factory OS
 Job Queue Test
 """
 
-from scheduler.job_queue import JobQueue
-from jobs.job_factory import JobFactory
 from repositories.runtime_repository import RuntimeRepository
+from planning.production_planner import ProductionPlanner
+from planning.production_queue import ProductionQueue
 
 
 runtime = RuntimeRepository().get_runtime()
 
-factory = JobFactory()
+planner = ProductionPlanner()
 
-queue = JobQueue()
+queue = ProductionQueue()
 
-job = factory.create(runtime)
+production_order = planner.create(runtime)
 
-queue.add(job)
+queue.add(production_order)
 
 print("=" * 80)
 print("QUEUE SIZE")
@@ -27,7 +27,7 @@ print(queue.size())
 print()
 
 print("=" * 80)
-print("NEXT JOB")
+print("NEXT PRODUCTION ORDER")
 print("=" * 80)
 
 print(queue.get())

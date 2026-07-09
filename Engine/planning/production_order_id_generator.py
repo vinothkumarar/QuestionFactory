@@ -1,10 +1,10 @@
 """
 Question Factory OS
-Job ID Generator
+Production Order ID Generator
 """
 
 
-class JobIdGenerator:
+class ProductionOrderIdGenerator:
 
     def generate(
         self,
@@ -18,7 +18,7 @@ class JobIdGenerator:
 
         return (
 
-            f"JOB_"
+            f"ORDER_"
 
             f"{runtime['current_project']}_"
 

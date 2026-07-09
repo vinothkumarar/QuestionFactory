@@ -1,32 +1,32 @@
 """
 Question Factory OS
-Job Factory
+Production Planner
 """
 
-from models.generation_job_model import GenerationJobModel
-from jobs.job_id_generator import JobIdGenerator
+from models.production_order_model import ProductionOrderModel
+from planning.production_order_id_generator import ProductionOrderIdGenerator
 
 
-class JobFactory:
+class ProductionPlanner:
 
     def __init__(self):
 
-        self.id_generator = JobIdGenerator()
+        self.id_generator = ProductionOrderIdGenerator()
 
     def create(
         self,
         runtime: dict,
         question_count: int = 100
-    ) -> GenerationJobModel:
+    ) -> ProductionOrderModel:
 
-        job_id = self.id_generator.generate(
+        order_id = self.id_generator.generate(
             runtime,
             question_count
         )
 
-        return GenerationJobModel(
+        return ProductionOrderModel(
 
-            job_id=job_id,
+            order_id=order_id,
 
             subject="Physics",
 
@@ -43,5 +43,6 @@ class JobFactory:
             question_start=runtime["next_question"],
 
             question_count=question_count
+
         )
-        
+                

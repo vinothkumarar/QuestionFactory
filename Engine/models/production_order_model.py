@@ -1,15 +1,15 @@
 """
 Question Factory OS
-Generation Job Model
+Production Order Model
 """
 
 from dataclasses import dataclass
 
 
 @dataclass
-class GenerationJobModel:
+class ProductionOrderModel:
 
-    job_id: str
+    order_id: str
 
     subject: str
 
@@ -27,5 +27,4 @@ class GenerationJobModel:
 
     question_count: int
 
-    status: str = "READY"
-    
+    status: str = "PLANNED"

@@ -1,20 +1,20 @@
 """
 Question Factory OS
-Job Queue
+Production Queue
 """
 
 from collections import deque
 
 
-class JobQueue:
+class ProductionQueue:
 
     def __init__(self):
 
         self.queue = deque()
 
-    def add(self, job):
+    def add(self, production_order):
 
-        self.queue.append(job)
+        self.queue.append(production_order)
 
     def get(self):
 
@@ -31,4 +31,3 @@ class JobQueue:
     def is_empty(self):
 
         return len(self.queue) == 0
-        

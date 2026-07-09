@@ -1,14 +1,14 @@
 """
 Question Factory OS
-Generation Job Model Test
+Production Order Model Test
 """
 
-from models.generation_job_model import GenerationJobModel
+from models.production_order_model import ProductionOrderModel
 
 
-job = GenerationJobModel(
+order = ProductionOrderModel(
 
-    job_id="JOB_000001",
+    order_id="ORDER_P1_CH1_ST4_S1_B3_Q201_300",
 
     subject="Physics",
 
@@ -29,7 +29,7 @@ job = GenerationJobModel(
 )
 
 print("=" * 80)
-print("GENERATION JOB")
+print("PRODUCTION ORDER")
 print("=" * 80)
 
-print(job)
+print(order)
