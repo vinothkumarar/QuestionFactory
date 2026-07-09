@@ -1,46 +1,45 @@
 """
 Question Factory OS
 Runtime Manager
-
-Purpose:
-Manage runtime state transitions for the Question Factory.
 """
 
-from core.state_manager import (
-    load_progress,
-    save_progress,
-    load_metadata,
-    save_metadata,
-    load_manifest,
-    save_manifest,
-)
+import json
+from pathlib import Path
 
 
 class RuntimeManager:
 
     def __init__(self):
-        self.progress = load_progress()
-        self.metadata = load_metadata()
-        self.manifest = load_manifest()
 
-    # -----------------------------------------
-    # Get Current Runtime
-    # -----------------------------------------
+        self.runtime_file = (
+            Path(__file__).parent.parent
+            / "runtime.json"
+        )
 
-    def get_current_node(self):
-        return self.progress.get("current_node")
+    def load(self):
 
-    def get_current_batch(self):
-        return self.progress.get("current_batch")
+        with open(
+            self.runtime_file,
+            "r",
+            encoding="utf-8"
+        ) as f:
 
-    def get_current_set(self):
-        return self.progress.get("current_set")
+            return json.load(f)
 
-    # -----------------------------------------
-    # Save Runtime
-    # -----------------------------------------
+    def save(
+        self,
+        runtime: dict
+    ):
 
-    def save(self):
-        save_progress(self.progress)
-        save_metadata(self.metadata)
-        save_manifest(self.manifest)
+        with open(
+            self.runtime_file,
+            "w",
+            encoding="utf-8"
+        ) as f:
+
+            json.dump(
+                runtime,
+                f,
+                indent=4
+            )
+            

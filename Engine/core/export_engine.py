@@ -15,13 +15,11 @@ class ExportEngine:
     def export_csv(
         self,
         report,
-        output_file="output/questions.csv"
+        runtime: dict
     ):
 
-        self.csv_exporter.export(
+        return self.csv_exporter.export(
             report,
-            output_file
+            runtime
         )
-
-        return output_file
-        
+            

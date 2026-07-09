@@ -3,11 +3,9 @@ Question Factory OS
 CSV Export Test
 """
 
-from pathlib import Path
-
-from jobs.generation_job import GenerationJob
 from core.batch_generation_engine import BatchGenerationEngine
 from core.export_engine import ExportEngine
+from jobs.generation_job import GenerationJob
 
 
 runtime = {
@@ -18,9 +16,12 @@ runtime = {
 
     "current_subtopic": "ST4",
 
-    "current_set": "S1"
+    "current_set": "S1",
+
+    "current_batch": 1
 
 }
+
 
 job = GenerationJob(
 
@@ -32,6 +33,7 @@ job = GenerationJob(
 
 )
 
+
 print("=" * 80)
 print("GENERATING QUESTIONS")
 print("=" * 80)
@@ -40,22 +42,30 @@ batch_engine = BatchGenerationEngine()
 
 report = batch_engine.generate(job)
 
+print()
+
+print("=" * 80)
+print("BATCH REPORT")
+print("=" * 80)
+
 print(report.summary())
 
-output_dir = Path("output")
-output_dir.mkdir(exist_ok=True)
-
-output_file = output_dir / "questions.csv"
+print()
 
 export_engine = ExportEngine()
 
-export_engine.export_csv(
+output_file = export_engine.export_csv(
+
     report,
-    str(output_file)
+
+    runtime
+
 )
 
 print()
+
 print("=" * 80)
-print("EXPORT COMPLETE")
+print("SMART EXPORT COMPLETE")
 print("=" * 80)
-print(output_file.resolve())
+
+print(output_file)

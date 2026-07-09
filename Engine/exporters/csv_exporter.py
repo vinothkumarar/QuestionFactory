@@ -1,17 +1,56 @@
 """
 Question Factory OS
-CSV Exporter
+Smart CSV Exporter
 """
 
 import csv
 from pathlib import Path
 
+from core.folder_manager import FolderManager
+from core.file_name_generator import FileNameGenerator
+
 
 class CSVExporter:
 
-    def export(self, report, output_file):
+    def __init__(self):
 
-        output_path = Path(output_file)
+        self.folder_manager = FolderManager()
+        self.file_name_generator = FileNameGenerator()
+
+    def export(
+        self,
+        report,
+        runtime: dict
+    ):
+
+        if not report.results:
+
+            print("No questions to export.")
+            return
+
+        # ----------------------------------------
+        # Create output folder
+        # ----------------------------------------
+
+        first_question = report.results[0]["question"]
+
+        output_folder = self.folder_manager.create_output_folder(
+            first_question
+        )
+
+        # ----------------------------------------
+        # Generate filename
+        # ----------------------------------------
+
+        file_name = self.file_name_generator.generate(
+            runtime
+        )
+
+        output_file = output_folder / file_name
+
+        # ----------------------------------------
+        # Prepare rows
+        # ----------------------------------------
 
         rows = []
 
@@ -21,13 +60,14 @@ class CSVExporter:
                 result["question"]
             )
 
-        if not rows:
-            return
-
         fieldnames = list(rows[0].keys())
 
+        # ----------------------------------------
+        # Write CSV
+        # ----------------------------------------
+
         with open(
-            output_path,
+            output_file,
             "w",
             newline="",
             encoding="utf-8"
@@ -44,10 +84,10 @@ class CSVExporter:
             writer.writerows(rows)
 
         print()
-
         print("=" * 80)
-        print("CSV EXPORTED")
+        print("SMART CSV EXPORT COMPLETE")
         print("=" * 80)
+        print(output_file.resolve())
 
-        print(output_path.resolve())
+        return output_file
         
