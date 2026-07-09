@@ -1,0 +1,17 @@
+{
+    "version": "1.0",
+
+    "difficulty_by_set": {
+
+        "S1": "Foundation",
+
+        "S2": "Easy+",
+
+        "S3": "Medium",
+
+        "S4": "Hard",
+
+        "S5": "Elite"
+
+    }
+}

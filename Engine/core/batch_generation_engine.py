@@ -4,6 +4,7 @@ Batch Generation Engine
 """
 
 from core.pipeline_engine import PipelineEngine
+from models.batch_report import BatchReport
 
 
 class BatchGenerationEngine:
@@ -14,7 +15,7 @@ class BatchGenerationEngine:
 
     def generate(self, job):
 
-        results = []
+        report = BatchReport()
 
         for question_number in range(
             job.start_question,
@@ -26,15 +27,10 @@ class BatchGenerationEngine:
                 question_number
             )
 
-            results.append({
+            report.add_result(
+                question,
+                validation
+            )
 
-                "question_number": question_number,
-
-                "question": question,
-
-                "validation": validation
-
-            })
-
-        return results
+        return report
         

@@ -1,4 +1,5 @@
 """
+Question Factory OS
 Batch Generation Test
 """
 
@@ -29,16 +30,19 @@ job = GenerationJob(
 
 engine = BatchGenerationEngine()
 
-results = engine.generate(job)
+report = engine.generate(job)
 
 print("=" * 80)
-print("BATCH SUMMARY")
+print("BATCH REPORT")
 print("=" * 80)
 
-for result in results:
+print(report.summary())
+
+print()
+
+for result in report.results:
 
     q = result["question"]
-
     v = result["validation"]
 
     print(
