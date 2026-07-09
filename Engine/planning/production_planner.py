@@ -3,8 +3,14 @@ Question Factory OS
 Production Planner
 """
 
+from models.factory_state_model import FactoryStateModel
 from models.production_order_model import ProductionOrderModel
-from planning.production_order_id_generator import ProductionOrderIdGenerator
+
+from planning.production_order_id_generator import (
+    ProductionOrderIdGenerator
+)
+
+from core.factory_state_manager import FactoryStateManager
 
 
 class ProductionPlanner:
@@ -13,15 +19,19 @@ class ProductionPlanner:
 
         self.id_generator = ProductionOrderIdGenerator()
 
-    def create(
+        self.state_manager = FactoryStateManager()
+
+    def plan(
         self,
-        runtime: dict,
-        question_count: int = 100
+        state: FactoryStateModel
     ) -> ProductionOrderModel:
 
+        question_start = self.state_manager.get_question_start(
+            state
+        )
+
         order_id = self.id_generator.generate(
-            runtime,
-            question_count
+            state
         )
 
         return ProductionOrderModel(
@@ -30,19 +40,21 @@ class ProductionPlanner:
 
             subject="Physics",
 
-            unit=runtime["current_project"],
+            unit=state.project,
 
-            chapter=runtime["current_chapter"],
+            chapter=state.chapter,
 
-            subtopic=runtime["current_subtopic"],
+            subtopic=state.subtopic,
 
-            set_no=runtime["current_set"],
+            set_no=state.set_no,
 
-            batch_no=runtime["current_batch"],
+            batch_no=state.current_batch,
 
-            question_start=runtime["next_question"],
+            question_start=question_start,
 
-            question_count=question_count
+            question_count=state.questions_per_batch,
+
+            status="PLANNED"
 
         )
-                
+        

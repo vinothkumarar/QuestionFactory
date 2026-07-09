@@ -1,20 +1,27 @@
 """
 Question Factory OS
-Job Factory Test
+Production Planner Test
 """
 
-from repositories.runtime_repository import RuntimeRepository
-from planning.production_planner import ProductionPlanner
+from repositories.factory_state_repository import (
+    FactoryStateRepository
+)
+
+from planning.production_planner import (
+    ProductionPlanner
+)
 
 
-runtime = RuntimeRepository().get_runtime()
+repository = FactoryStateRepository()
+
+state = repository.load()
 
 planner = ProductionPlanner()
 
-order = planner.create(runtime)
+production_order = planner.plan(state)
 
 print("=" * 80)
-print("GENERATION JOB CREATED")
+print("PRODUCTION ORDER")
 print("=" * 80)
 
-print(order)
+print(production_order)

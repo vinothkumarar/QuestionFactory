@@ -1,20 +1,22 @@
 """
 Question Factory OS
-Job Queue Test
+Production Queue Test
 """
 
-from repositories.runtime_repository import RuntimeRepository
+from repositories.factory_state_repository import FactoryStateRepository
 from planning.production_planner import ProductionPlanner
 from planning.production_queue import ProductionQueue
 
 
-runtime = RuntimeRepository().get_runtime()
+repository = FactoryStateRepository()
+
+state = repository.load()
 
 planner = ProductionPlanner()
 
 queue = ProductionQueue()
 
-production_order = planner.create(runtime)
+production_order = planner.plan(state)
 
 queue.add(production_order)
 
