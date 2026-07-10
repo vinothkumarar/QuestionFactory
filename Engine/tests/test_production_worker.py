@@ -85,3 +85,16 @@ if result.raw_response:
 else:
 
     print(result.error_message)
+print()
+
+print("=" * 80)
+print("PARSED RESPONSE")
+print("=" * 80)
+
+if result.parsed_response:
+
+    print(result.parsed_response)
+
+else:
+
+    print("None")

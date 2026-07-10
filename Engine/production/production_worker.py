@@ -43,16 +43,36 @@ class ProductionWorker:
 
         try:
 
+            # --------------------------------------------------
+            # Build Question Skeleton
+            # --------------------------------------------------
+
             skeleton = self._build_question(
                 production_order
             )
+
+            # --------------------------------------------------
+            # Build Prompt
+            # --------------------------------------------------
 
             prompt = self._build_prompt(
                 skeleton
             )
 
-            raw = self._generate_response(
+            # --------------------------------------------------
+            # Generate AI Response
+            # --------------------------------------------------
+
+            raw_response = self._generate_response(
                 prompt
+            )
+
+            # --------------------------------------------------
+            # Parse AI Response
+            # --------------------------------------------------
+
+            parsed_response = self._parse_response(
+                raw_response
             )
 
             execution_time = int(
@@ -67,9 +87,9 @@ class ProductionWorker:
 
                 prompt=prompt,
 
-                raw_response=raw,
+                raw_response=raw_response,
 
-                parsed_response=None,
+                parsed_response=parsed_response,
 
                 validation=None,
 
@@ -106,6 +126,10 @@ class ProductionWorker:
                 error_message=str(ex)
 
             )
+
+    # ----------------------------------------------------------
+    # Private Methods
+    # ----------------------------------------------------------
 
     def _build_question(
         self,
@@ -222,5 +246,3 @@ class ProductionWorker:
             error_message=error_message
 
         )
-
-        
