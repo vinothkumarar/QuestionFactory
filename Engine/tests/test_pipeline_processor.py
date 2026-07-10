@@ -1,20 +1,25 @@
 """
 Question Factory OS
-Pipeline Stage Test
+Pipeline Processor Test
 
-Version : 2.3.7.1.2
+Milestone : M4
+Sprint    : S1
+Patch      : P1
 """
 
-from pipeline.stages.pipeline_stage import PipelineStage
+from pipeline.processors.pipeline_processor import PipelineProcessor
+
 from models.pipeline_context_model import PipelineContextModel
 from models.production_order_model import ProductionOrderModel
 
 
-class DummyStage(PipelineStage):
+class DummyProcessor(PipelineProcessor):
 
-    name = "Dummy Stage"
+    stage_id = "DUMMY"
 
-    description = "Testing PipelineStage interface."
+    name = "Dummy Processor"
+
+    description = "Testing PipelineProcessor."
 
     def execute(
         self,
@@ -49,19 +54,26 @@ order = ProductionOrderModel(
 )
 
 context = PipelineContextModel(
+
     production_order=order
+
 )
 
-stage = DummyStage()
+processor = DummyProcessor()
 
-result = stage.execute(context)
+result = processor.execute(
+
+    context
+
+)
 
 print("=" * 80)
-print("PIPELINE STAGE")
+print("PIPELINE PROCESSOR")
 print("=" * 80)
 
-print("Stage Name       :", stage.name)
-print("Description      :", stage.description)
+print("Processor Name :", processor.name)
+print("Stage ID       :", processor.stage_id)
+print("Description    :", processor.description)
 
 print()
 
