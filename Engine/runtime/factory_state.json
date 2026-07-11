@@ -5,5 +5,5 @@
     "set_no": "S1",
     "current_batch": 7,
     "questions_per_batch": 100,
-    "status": "COMPLETED"
+    "status": "RUNNING"
 }

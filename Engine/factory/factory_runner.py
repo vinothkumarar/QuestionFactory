@@ -2,9 +2,9 @@
 Question Factory OS
 Factory Runner
 
-Milestone : M9
-Sprint    : S4
-Release   : R1
+Milestone : M10
+Sprint    : S1
+Release   : R3
 """
 
 from planning.queue_builder import QueueBuilder
@@ -19,6 +19,14 @@ from validators.csv_validator import CSVValidator
 
 from models.production_request_model import (
     ProductionRequestModel
+)
+
+from repositories.factory_state_repository import (
+    FactoryStateRepository
+)
+
+from core.factory_state_manager import (
+    FactoryStateManager
 )
 
 from config.factory_config import (
@@ -39,6 +47,10 @@ class FactoryRunner:
 
         self.validator = CSVValidator()
 
+        self.state_repository = FactoryStateRepository()
+
+        self.state_manager = FactoryStateManager()
+
     def run(self):
 
         print("=" * 60)
@@ -46,6 +58,16 @@ class FactoryRunner:
         print("=" * 60)
 
         total_questions_generated = 0
+
+        state = self.state_repository.load()
+
+        state = self.state_manager.set_running(
+            state
+        )
+
+        self.state_repository.update(
+            state
+        )
 
         for order in PRODUCTION_ORDERS:
 
@@ -117,6 +139,22 @@ class FactoryRunner:
                 validation.passed
             )
 
+            #
+            # Runtime Commit
+            #
+
+            if validation.passed:
+
+                for _ in range(queue.total_batches):
+
+                    state = self.state_manager.complete_batch(
+                        state
+                    )
+
+                self.state_repository.update(
+                    state
+                )
+
         print()
 
         print("=" * 60)
@@ -137,7 +175,18 @@ class FactoryRunner:
 
         print()
 
+        print(
+            "Current Batch       :",
+            state.current_batch
+        )
+
+        print(
+            "Factory Status      :",
+            state.status
+        )
+
+        print()
+
         print("READY FOR IMPORT")
 
         return total_questions_generated
-        
