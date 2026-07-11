@@ -2,8 +2,8 @@
 Question Factory OS
 Queue Builder Test
 
-Milestone : M9
-Sprint    : S3
+Milestone : M10
+Sprint    : S1
 Release   : R1
 """
 
@@ -12,6 +12,7 @@ from planning.queue_builder import QueueBuilder
 from models.production_request_model import (
     ProductionRequestModel
 )
+
 
 request = ProductionRequestModel(
 
@@ -36,32 +37,47 @@ builder = QueueBuilder()
 queue = builder.build(request)
 
 print("=" * 80)
-print("QUEUE BUILDER")
+print("QUEUE BUILDER V2")
 print("=" * 80)
 
 print()
 
-print("Total Batches   :", queue.total_batches)
+print("Total Orders    :", len(queue.orders))
 
 print("Total Questions :", queue.total_questions)
 
+print("Total Batches   :", queue.total_batches)
+
 print()
 
-for order in queue.orders:
+print("First Five Orders")
+print("-" * 80)
 
-    end_question = (
-        order.question_start
-        + order.question_count
-        - 1
-    )
+for order in queue.orders[:5]:
 
     print(
 
-        f"Batch {order.batch_no} : "
+        f"Batch {order.batch_no} | "
 
         f"Q{order.question_start}"
 
-        f"-Q{end_question}"
+    )
+
+print()
+
+print("Last Five Orders")
+print("-" * 80)
+
+for order in queue.orders[-5:]:
+
+    print(
+
+        f"Batch {order.batch_no} | "
+
+        f"Q{order.question_start}"
 
     )
-    
+
+print()
+
+print("Queue Builder V2 PASSED")

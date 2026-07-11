@@ -2,19 +2,22 @@
 Question Factory OS
 Queue Builder
 
-Milestone : M9
-Sprint    : S3
+Milestone : M10
+Sprint    : S1
 Release   : R1
 """
-
-import math
 
 from models.production_order_model import ProductionOrderModel
 from models.production_queue_model import ProductionQueueModel
 from models.production_request_model import ProductionRequestModel
 
-from repositories.factory_state_repository import FactoryStateRepository
-from core.factory_state_manager import FactoryStateManager
+from repositories.factory_state_repository import (
+    FactoryStateRepository
+)
+
+from core.factory_state_manager import (
+    FactoryStateManager
+)
 
 
 class QueueBuilder:
@@ -36,26 +39,22 @@ class QueueBuilder:
             request=request
         )
 
-        remaining = request.total_questions
+        current_batch = state.current_batch
 
-        batch = state.current_batch
+        question_number = self.manager.get_question_start(
+            state
+        )
 
-        while remaining > 0:
+        batch_question_count = 0
 
-            state.current_batch = batch
-
-            question_start = self.manager.get_question_start(
-                state
-            )
-
-            question_count = min(
-                remaining,
-                state.questions_per_batch
-            )
+        for index in range(request.total_questions):
 
             order = ProductionOrderModel(
 
-                order_id=f"{request.request_id}_B{batch}",
+                order_id=(
+                    f"{request.request_id}"
+                    f"_Q{question_number}"
+                ),
 
                 subject=request.subject,
 
@@ -67,23 +66,33 @@ class QueueBuilder:
 
                 set_no=request.set_no,
 
-                batch_no=batch,
+                batch_no=current_batch,
 
-                question_start=question_start,
+                question_start=question_number,
 
-                question_count=question_count
+                question_count=1
 
             )
 
             queue.orders.append(order)
 
-            remaining -= question_count
+            queue.total_questions += 1
 
-            batch += 1
+            batch_question_count += 1
 
-        queue.total_batches = len(queue.orders)
+            question_number += 1
 
-        queue.total_questions = request.total_questions
+            if batch_question_count == state.questions_per_batch:
+
+                queue.total_batches += 1
+
+                current_batch += 1
+
+                batch_question_count = 0
+
+        if batch_question_count > 0:
+
+            queue.total_batches += 1
 
         return queue
         

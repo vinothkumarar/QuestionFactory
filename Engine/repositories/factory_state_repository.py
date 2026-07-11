@@ -1,6 +1,10 @@
 """
 Question Factory OS
 Factory State Repository
+
+Milestone : M10
+Sprint    : S1
+Release   : R2
 """
 
 import json
@@ -48,13 +52,19 @@ class FactoryStateRepository:
             current_batch=data["current_batch"],
 
             questions_per_batch=data.get(
+
                 "questions_per_batch",
+
                 100
+
             ),
 
             status=data.get(
+
                 "status",
+
                 "READY"
+
             )
 
         )
@@ -95,4 +105,44 @@ class FactoryStateRepository:
             encoding="utf-8"
 
         )
+
+    def update(
+        self,
+        state: FactoryStateModel
+    ) -> FactoryStateModel:
+        """
+        Saves the latest factory state
+        and returns the updated model.
+        """
+
+        self.save(state)
+
+        return state
+
+    def reset(self) -> FactoryStateModel:
+        """
+        Resets the factory runtime.
+        """
+
+        state = FactoryStateModel(
+
+            project="",
+
+            chapter="",
+
+            subtopic="",
+
+            set_no="",
+
+            current_batch=1,
+
+            questions_per_batch=100,
+
+            status="READY"
+
+        )
+
+        self.save(state)
+
+        return state
         
