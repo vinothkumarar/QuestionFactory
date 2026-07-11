@@ -2,8 +2,8 @@
 Question Factory OS
 Batch Execution Engine
 
-Milestone : M6
-Sprint    : S3
+Milestone : M10
+Sprint    : S2
 Release   : R1
 """
 
@@ -18,8 +18,21 @@ from constants.generation_status import GenerationStatus
 
 class BatchExecutionEngine:
     """
-    Executes an entire ProductionQueue
-    and returns a BatchResultModel.
+    Manufacturing Engine
+
+    Executes an entire Production Queue.
+
+    Each ProductionOrder represents one production batch.
+
+    Example
+
+    Batch 6
+
+    Q501-Q600
+
+    Generates
+
+    100 validated questions.
     """
 
     def __init__(self):
@@ -41,25 +54,63 @@ class BatchExecutionEngine:
 
         for production_order in production_queue:
 
-            result = self.worker.execute(
-                production_order
+            print()
+
+            print("=" * 70)
+            print(
+                f"Executing Batch {production_order.batch_no}"
             )
-
-            worker_results.append(
-                result
+            print(
+                f"Question Range : "
+                f"Q{production_order.question_start}"
+                f"-Q{production_order.question_start + production_order.question_count - 1}"
             )
+            print("=" * 70)
 
-            if result.status == GenerationStatus.SUCCESS:
+            #
+            # Manufacture Questions
+            #
 
-                successful += 1
+            for question_no in range(
 
-            else:
+                production_order.question_start,
 
-                failed += 1
+                production_order.question_start
+                + production_order.question_count
+
+            ):
+
+                production_order.question_start = question_no
+
+                result = self.worker.execute(
+                    production_order
+                )
+
+                worker_results.append(
+                    result
+                )
+
+                if result.status == GenerationStatus.SUCCESS:
+
+                    successful += 1
+
+                    print(
+                        f"✔ Q{question_no}"
+                    )
+
+                else:
+
+                    failed += 1
+
+                    print(
+                        f"✘ Q{question_no}"
+                    )
 
         execution_time = int(
 
-            (time.time() - start_time) * 1000
+            (time.time() - start_time)
+
+            * 1000
 
         )
 
@@ -76,4 +127,3 @@ class BatchExecutionEngine:
             worker_results=worker_results
 
         )
-        
