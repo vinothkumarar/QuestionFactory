@@ -2,8 +2,8 @@
 Question Factory OS
 Build Processor
 
-Milestone : M4
-Sprint    : S1
+Milestone : M10
+Sprint    : S3
 Release   : R1
 """
 
@@ -16,8 +16,13 @@ from pipeline.processors.pipeline_processor import PipelineProcessor
 
 class BuildProcessor(PipelineProcessor):
     """
-    Builds the Question Skeleton using
-    the QuestionBuilder.
+    Stage 1
+
+    Builds the Question Skeleton.
+
+    The generated skeleton contains all
+    production metadata required by the
+    downstream AI pipeline.
     """
 
     stage_id = "BUILD"
@@ -37,15 +42,40 @@ class BuildProcessor(PipelineProcessor):
 
         runtime = {
 
-            "current_project": context.production_order.unit,
+            #
+            # Project Information
+            #
 
-            "current_chapter": context.production_order.chapter,
+            "current_project":
+                context.production_order.unit,
 
-            "current_subtopic": context.production_order.subtopic,
+            "current_subject":
+                context.production_order.subject,
 
-            "current_set": context.production_order.set_no,
+            "current_unit":
+                context.production_order.unit,
 
-            "current_batch": context.production_order.batch_no
+            "current_chapter":
+                context.production_order.chapter,
+
+            "current_subtopic":
+                context.production_order.subtopic,
+
+            "current_set":
+                context.production_order.set_no,
+
+            "current_batch":
+                context.production_order.batch_no,
+
+            #
+            # Manufacturing Information
+            #
+
+            "question_number":
+                context.production_order.question_start,
+
+            "difficulty":
+                "Blueprint"
 
         }
 

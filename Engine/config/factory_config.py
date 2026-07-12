@@ -41,7 +41,7 @@ PRODUCTION_ORDERS = [
 
         "question_start": 501,
 
-        "question_count": 100
+        "question_count": 20
 
     }
 

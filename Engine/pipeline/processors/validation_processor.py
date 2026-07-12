@@ -2,10 +2,12 @@
 Question Factory OS
 Validation Processor
 
-Milestone : M4
-Sprint    : S6
+Milestone : M12
+Sprint    : S3
 Release   : R1
 """
+
+from builders.boolean_normalizer import BooleanNormalizer
 
 from core.validation_engine import ValidationEngine
 
@@ -16,16 +18,21 @@ from pipeline.processors.pipeline_processor import PipelineProcessor
 
 class ValidationProcessor(PipelineProcessor):
     """
-    Validates the merged Question object.
+    Stage 6
+
+    Performs final data normalization
+    followed by complete validation.
     """
 
     stage_id = "VALIDATE"
 
     name = "Validation Processor"
 
-    description = "Runs Validation Engine."
+    description = "Normalizes and validates Question."
 
     def __init__(self):
+
+        self.boolean_normalizer = BooleanNormalizer()
 
         self.validator = ValidationEngine()
 
@@ -33,6 +40,20 @@ class ValidationProcessor(PipelineProcessor):
         self,
         context: PipelineContextModel
     ) -> PipelineContextModel:
+
+        #
+        # Boolean Normalization
+        #
+
+        context.question = self.boolean_normalizer.normalize(
+
+            context.question
+
+        )
+
+        #
+        # Validation
+        #
 
         context.validation = self.validator.validate(
 
