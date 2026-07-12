@@ -2,38 +2,106 @@
 Question Factory OS
 Question CSV Exporter
 
-Milestone : M10
-Sprint    : S2
+Milestone : M13
+Sprint    : S3
 Release   : R1
 """
 
 import csv
 import os
+from pathlib import Path
 
 from schema.question_schema import EXPORT_COLUMNS
 
 
 class QuestionCSVExporter:
     """
-    CSV Exporter
-
-    Supports
-
-    • Full Export
-    • Incremental Append
+    Exports BatchResultModel to a uniquely
+    named production CSV.
     """
 
     def export(
         self,
         batch_result,
-        output_file
+        production_order
     ):
 
-        os.makedirs(
+        #
+        # First Question
+        #
 
-            os.path.dirname(output_file),
+        first_question = (
+            batch_result.worker_results[0].question
+        )
+
+        unit = first_question["unit_id"]
+        chapter = first_question["chapter_id"]
+        subtopic = first_question["subtopic_id"]
+        set_no = first_question["set_no"]
+
+        question_start = (
+            production_order.question_start
+        )
+
+        question_end = (
+
+            question_start
+
+            + production_order.question_count
+
+            - 1
+
+        )
+
+        #
+        # Output Folder
+        #
+
+        output_folder = (
+
+            Path("output")
+
+            / unit
+
+            / chapter
+
+            / subtopic
+
+        )
+
+        output_folder.mkdir(
+
+            parents=True,
 
             exist_ok=True
+
+        )
+
+        #
+        # File Name
+        #
+
+        file_name = (
+
+            f"{unit}_"
+
+            f"{chapter}_"
+
+            f"{subtopic}_"
+
+            f"{set_no}_"
+
+            f"Q{question_start:03d}"
+
+            f"_Q{question_end:03d}.csv"
+
+        )
+
+        output_file = (
+
+            output_folder
+
+            / file_name
 
         )
 
@@ -63,106 +131,27 @@ class QuestionCSVExporter:
 
             for result in batch_result.worker_results:
 
-                self._write_question(
+                question = result.question.copy()
 
-                    writer,
+                #
+                # Convert Tags
+                #
 
-                    result.question
+                if isinstance(
 
-                )
+                    question.get("tags"),
 
-        return output_file
+                    list
 
-    def append(
-        self,
-        question: dict,
-        output_file: str
-    ):
+                ):
 
-        os.makedirs(
+                    question["tags"] = ",".join(
 
-            os.path.dirname(output_file),
+                        question["tags"]
 
-            exist_ok=True
+                    )
 
-        )
+                writer.writerow(question)
 
-        file_exists = os.path.exists(
-            output_file
-        )
-
-        write_header = (
-
-            not file_exists
-
-            or
-
-            os.path.getsize(output_file) == 0
-
-        )
-
-        with open(
-
-            output_file,
-
-            "a",
-
-            newline="",
-
-            encoding="utf-8"
-
-        ) as csv_file:
-
-            writer = csv.DictWriter(
-
-                csv_file,
-
-                fieldnames=EXPORT_COLUMNS,
-
-                extrasaction="ignore"
-
-            )
-
-            if write_header:
-
-                writer.writeheader()
-
-            self._write_question(
-
-                writer,
-
-                question
-
-            )
-
-    #
-    # Internal
-    #
-
-    def _write_question(
-
-        self,
-
-        writer,
-
-        question
-
-    ):
-
-        question = question.copy()
-
-        if isinstance(
-
-            question.get("tags"),
-
-            list
-
-        ):
-
-            question["tags"] = ",".join(
-
-                question["tags"]
-
-            )
-
-        writer.writerow(question)
+        return str(output_file)
+        

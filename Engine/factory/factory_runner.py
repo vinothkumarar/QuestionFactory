@@ -127,7 +127,7 @@ class FactoryRunner:
 
                 batch_result,
 
-                OUTPUT_FILE
+                queue.orders[0]
 
             )
 
