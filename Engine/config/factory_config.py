@@ -2,7 +2,7 @@
 Question Factory OS
 Factory Configuration
 
-Milestone : M8
+Milestone : M13
 Sprint    : S1
 Release   : R1
 """
@@ -13,9 +13,17 @@ Release   : R1
 
 FACTORY_NAME = "Question Factory OS"
 
-VERSION = "3.1"
+VERSION = "3.2"
 
 OUTPUT_FILE = "output/questions.csv"
+
+# -------------------------------------------------
+# Retry Configuration
+# -------------------------------------------------
+
+MAX_RETRY_COUNT = 3
+
+RETRY_DELAY_SECONDS = 2
 
 # -------------------------------------------------
 # Production Orders
@@ -37,9 +45,9 @@ PRODUCTION_ORDERS = [
 
         "set_no": "S1",
 
-        "batch_no": 6,
+        "batch_no": 8,
 
-        "question_start": 501,
+        "question_start": 701,
 
         "question_count": 20
 

@@ -2,9 +2,11 @@
 Question Factory OS
 Production Worker
 
-Milestone : M5
-Sprint    : S3
-Release   : R1
+Milestone : M13
+Sprint    : S1
+Release   : R2
+
+Automatic Retry & Self-Healing Engine
 """
 
 import time
@@ -18,16 +20,22 @@ from pipeline.execution_pipeline_builder import (
     ExecutionPipelineBuilder
 )
 
+from config.factory_config import (
+    MAX_RETRY_COUNT,
+    RETRY_DELAY_SECONDS
+)
+
 
 class ProductionWorker:
     """
-    Thin orchestration layer.
+    Executes one Production Order.
 
-    Responsibilities
+    Features
 
-    1. Create PipelineContext
-    2. Execute Pipeline
-    3. Return WorkerResult
+    • Automatic Retry
+    • Self Healing
+    • Retry Statistics
+    • Stable Return Model
     """
 
     def __init__(self):
@@ -41,82 +49,116 @@ class ProductionWorker:
         production_order
     ) -> WorkerResultModel:
 
-        start_time = time.time()
+        last_result = None
 
-        context = PipelineContextModel(
+        for attempt in range(1, MAX_RETRY_COUNT + 1):
 
-            production_order=production_order
+            start_time = time.time()
 
+            context = PipelineContextModel(
+
+                production_order=production_order
+
+            )
+
+            try:
+
+                context = self.pipeline.run(
+                    context
+                )
+
+                execution_time = int(
+
+                    (time.time() - start_time)
+
+                    * 1000
+
+                )
+
+                return WorkerResultModel(
+
+                    production_order=production_order,
+
+                    question=context.question,
+
+                    prompt=context.prompt,
+
+                    raw_response=context.raw_response,
+
+                    parsed_response=context.parsed_response,
+
+                    validation=context.validation,
+
+                    provider=context.provider,
+
+                    execution_time_ms=execution_time,
+
+                    retry_count=attempt - 1,
+
+                    status=GenerationStatus.SUCCESS,
+
+                    error_message=None
+
+                )
+
+            except Exception as ex:
+
+                execution_time = int(
+
+                    (time.time() - start_time)
+
+                    * 1000
+
+                )
+
+                last_result = WorkerResultModel(
+
+                    production_order=production_order,
+
+                    question=context.question,
+
+                    prompt=context.prompt,
+
+                    raw_response=context.raw_response,
+
+                    parsed_response=context.parsed_response,
+
+                    validation=context.validation,
+
+                    provider=context.provider,
+
+                    execution_time_ms=execution_time,
+
+                    retry_count=attempt,
+
+                    status=GenerationStatus.AI_FAILED,
+
+                    error_message=str(ex)
+
+                )
+
+                print()
+
+                print(
+                    f"[Retry {attempt}/{MAX_RETRY_COUNT}] "
+                    f"Q{production_order.question_start}"
+                )
+
+                print(
+                    f"Reason : {ex}"
+                )
+
+                if attempt < MAX_RETRY_COUNT:
+
+                    time.sleep(
+                        RETRY_DELAY_SECONDS
+                    )
+
+        print()
+
+        print(
+            f"FAILED AFTER {MAX_RETRY_COUNT} ATTEMPTS"
         )
 
-        try:
-
-            context = self.pipeline.run(
-                context
-            )
-
-            execution_time = int(
-
-                (time.time() - start_time) * 1000
-
-            )
-
-            return WorkerResultModel(
-
-                production_order=production_order,
-
-                question=context.question,
-
-                prompt=context.prompt,
-
-                raw_response=context.raw_response,
-
-                parsed_response=context.parsed_response,
-
-                validation=context.validation,
-
-                provider=context.provider,
-
-                execution_time_ms=execution_time,
-
-                retry_count=context.retry_count,
-
-                status=GenerationStatus.SUCCESS,
-
-                error_message=None
-
-            )
-
-        except Exception as ex:
-
-            execution_time = int(
-
-                (time.time() - start_time) * 1000
-
-            )
-
-            return WorkerResultModel(
-
-                production_order=production_order,
-
-                question=context.question,
-
-                prompt=context.prompt,
-
-                raw_response=context.raw_response,
-
-                parsed_response=context.parsed_response,
-
-                validation=context.validation,
-
-                provider=context.provider,
-
-                execution_time_ms=execution_time,
-
-                retry_count=context.retry_count,
-
-                status=GenerationStatus.AI_FAILED,
-
-                error_message=str(ex)
-
-            )
+        return last_result
+        

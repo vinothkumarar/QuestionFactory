@@ -2,9 +2,9 @@
 Question Factory OS
 Factory Runner
 
-Milestone : M10
-Sprint    : S1
-Release   : R3
+Milestone : M12
+Sprint    : S5
+Release   : R1
 """
 
 from planning.queue_builder import QueueBuilder
@@ -16,6 +16,10 @@ from exporters.question_csv_exporter import (
 )
 
 from validators.csv_validator import CSVValidator
+
+from reporting.production_report import (
+    ProductionReport
+)
 
 from models.production_request_model import (
     ProductionRequestModel
@@ -46,6 +50,8 @@ class FactoryRunner:
         self.exporter = QuestionCSVExporter()
 
         self.validator = CSVValidator()
+
+        self.production_report = ProductionReport()
 
         self.state_repository = FactoryStateRepository()
 
@@ -140,6 +146,22 @@ class FactoryRunner:
             )
 
             #
+            # Production Report
+            #
+
+            self.production_report.print_report(
+
+                request,
+
+                batch_result,
+
+                validation,
+
+                csv_file
+
+            )
+
+            #
             # Runtime Commit
             #
 
@@ -190,3 +212,4 @@ class FactoryRunner:
         print("READY FOR IMPORT")
 
         return total_questions_generated
+        
