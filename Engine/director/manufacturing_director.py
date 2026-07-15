@@ -373,7 +373,7 @@ class ManufacturingDirector:
                 "Batch failed quality verification "
                 "after repair cycle."
             )
-                def _package(
+    def _package(
         self,
         context: ManufacturingContext,
     ) -> None:

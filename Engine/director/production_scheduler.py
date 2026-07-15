@@ -127,7 +127,7 @@ class ProductionScheduler:
         )
 
         return node
-            def _assign_location(
+    def _assign_location(
         self,
         node: ProductionNodeModel,
         runtime: RuntimeModel,
