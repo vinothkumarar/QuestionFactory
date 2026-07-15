@@ -6,7 +6,6 @@ Runtime Progress Test
 from core.runtime_manager import RuntimeManager
 from core.batch_progress_manager import BatchProgressManager
 
-
 runtime_manager = RuntimeManager()
 
 runtime = runtime_manager.load()

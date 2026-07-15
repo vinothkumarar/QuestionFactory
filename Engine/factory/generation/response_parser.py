@@ -25,9 +25,7 @@ class ResponseParser:
 
     def __init__(self):
 
-        self.logger = logging.getLogger(
-            self.__class__.__name__
-        )
+        self.logger = logging.getLogger(self.__class__.__name__)
 
     # ---------------------------------------------------------
     # Public API
@@ -51,17 +49,11 @@ class ResponseParser:
             Parsed question objects.
         """
 
-        self.logger.info(
-            "Parsing AI response."
-        )
+        self.logger.info("Parsing AI response.")
 
-        cleaned_response = self._clean_response(
-            response
-        )
+        cleaned_response = self._clean_response(response)
 
-        questions = self._parse_json(
-            cleaned_response
-        )
+        questions = self._parse_json(cleaned_response)
 
         self.logger.info(
             "Parsed %d question(s).",
@@ -69,7 +61,8 @@ class ResponseParser:
         )
 
         return questions
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Response Cleaning
     # ---------------------------------------------------------
 
@@ -92,11 +85,11 @@ class ResponseParser:
 
         if cleaned.startswith("```json"):
 
-            cleaned = cleaned[len("```json"):]
+            cleaned = cleaned[len("```json") :]
 
         elif cleaned.startswith("```"):
 
-            cleaned = cleaned[len("```"):]
+            cleaned = cleaned[len("```") :]
 
         if cleaned.endswith("```"):
 
@@ -104,9 +97,7 @@ class ResponseParser:
 
         cleaned = cleaned.strip()
 
-        self.logger.info(
-            "AI response cleaned."
-        )
+        self.logger.info("AI response cleaned.")
 
         return cleaned
 
@@ -129,15 +120,11 @@ class ResponseParser:
 
         try:
 
-            parsed = json.loads(
-                response
-            )
+            parsed = json.loads(response)
 
         except json.JSONDecodeError as ex:
 
-            raise ValueError(
-                "Invalid JSON returned by AI."
-            ) from ex
+            raise ValueError("Invalid JSON returned by AI.") from ex
 
         if isinstance(
             parsed,
@@ -171,13 +158,9 @@ class ResponseParser:
             list,
         ):
 
-            raise ValueError(
-                "Expected a JSON array of questions."
-            )
+            raise ValueError("Expected a JSON array of questions.")
 
-        self.logger.info(
-            "JSON successfully parsed."
-        )
+        self.logger.info("JSON successfully parsed.")
 
         return parsed
 
@@ -199,9 +182,7 @@ class ResponseParser:
 
         if not questions:
 
-            raise ValueError(
-                "No questions were parsed."
-            )
+            raise ValueError("No questions were parsed.")
 
         for index, question in enumerate(
             questions,
@@ -213,16 +194,11 @@ class ResponseParser:
                 dict,
             ):
 
-                raise ValueError(
-                    "Question "
-                    f"{index} "
-                    "is not a JSON object."
-                )
+                raise ValueError("Question " f"{index} " "is not a JSON object.")
 
-        self.logger.info(
-            "Basic response validation completed."
-        )
-            # ---------------------------------------------------------
+        self.logger.info("Basic response validation completed.")
+        # ---------------------------------------------------------
+
     # Lifecycle Hooks
     # ---------------------------------------------------------
 
@@ -268,12 +244,8 @@ class ResponseParser:
 
         return {
             "response_characters": len(response),
-            "response_lines": len(
-                response.splitlines()
-            ),
-            "parsed_questions": len(
-                questions
-            ),
+            "response_lines": len(response.splitlines()),
+            "parsed_questions": len(questions),
         }
 
     def summary(
@@ -291,12 +263,8 @@ class ResponseParser:
         )
 
         return {
-            "parsed_questions": (
-                stats["parsed_questions"]
-            ),
-            "response_lines": (
-                stats["response_lines"]
-            ),
+            "parsed_questions": (stats["parsed_questions"]),
+            "response_lines": (stats["response_lines"]),
         }
 
     def diagnostics(
@@ -333,17 +301,11 @@ class ResponseParser:
         complete parsing workflow.
         """
 
-        self.before_parse(
-            response
-        )
+        self.before_parse(response)
 
-        questions = self.parse(
-            response
-        )
+        questions = self.parse(response)
 
-        self.validate_questions(
-            questions
-        )
+        self.validate_questions(questions)
 
         self.after_parse(
             response,
@@ -351,7 +313,8 @@ class ResponseParser:
         )
 
         return questions
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Component Information
     # ---------------------------------------------------------
 
@@ -429,10 +392,7 @@ class ResponseParser:
         Determine whether a response format is supported.
         """
 
-        return (
-            response_format.upper()
-            in self.supported_formats()
-        )
+        return response_format.upper() in self.supported_formats()
 
     # ---------------------------------------------------------
     # Utility Methods
@@ -460,10 +420,9 @@ class ResponseParser:
         cleaning routine.
         """
 
-        return self._clean_response(
-            response
-        )
-            # ---------------------------------------------------------
+        return self._clean_response(response)
+        # ---------------------------------------------------------
+
     # Parser Information
     # ---------------------------------------------------------
 
@@ -475,9 +434,7 @@ class ResponseParser:
         return {
             "name": self.component_name,
             "version": self.version,
-            "supported_formats": (
-                self.supported_formats()
-            ),
+            "supported_formats": (self.supported_formats()),
         }
 
     # ---------------------------------------------------------
@@ -485,14 +442,7 @@ class ResponseParser:
     # ---------------------------------------------------------
 
     def __repr__(self) -> str:
-        return (
-            "ResponseParser("
-            f"version='{self.version}')"
-        )
+        return "ResponseParser(" f"version='{self.version}')"
 
     def __str__(self) -> str:
-        return (
-            f"{self.component_name} "
-            f"[v{self.version}]"
-        )
-        
+        return f"{self.component_name} " f"[v{self.version}]"

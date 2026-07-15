@@ -22,16 +22,8 @@ class ResourceManager:
         subtopic: str,
     ) -> Path:
 
-        folder = (
-            QUESTIONBANK_DIR
-            / project
-            / chapter
-            / subtopic
-        )
+        folder = QUESTIONBANK_DIR / project / chapter / subtopic
 
-        folder.mkdir(
-            parents=True,
-            exist_ok=True
-        )
+        folder.mkdir(parents=True, exist_ok=True)
 
         return folder

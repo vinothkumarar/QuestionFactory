@@ -22,10 +22,10 @@ from Engine.models.question_batch_model import (
     QuestionBatchModel,
 )
 
-
 # ---------------------------------------------------------
 # Validator Interface
 # ---------------------------------------------------------
+
 
 class Validator(ABC):
     """
@@ -53,6 +53,7 @@ class Validator(ABC):
 # Question Validator
 # ---------------------------------------------------------
 
+
 class QuestionValidator:
     """
     Coordinates execution of all validators.
@@ -60,13 +61,9 @@ class QuestionValidator:
 
     def __init__(self):
 
-        self.logger = logging.getLogger(
-            self.__class__.__name__
-        )
+        self.logger = logging.getLogger(self.__class__.__name__)
 
-        self._validators: List[
-            Validator
-        ] = []
+        self._validators: List[Validator] = []
 
     # ---------------------------------------------------------
     # Public API
@@ -80,9 +77,7 @@ class QuestionValidator:
         Execute every registered validator.
         """
 
-        self.logger.info(
-            "Starting validation."
-        )
+        self.logger.info("Starting validation.")
 
         results = []
 
@@ -93,20 +88,15 @@ class QuestionValidator:
                 validator.name,
             )
 
-            result = validator.validate(
-                batch
-            )
+            result = validator.validate(batch)
 
-            results.append(
-                result
-            )
+            results.append(result)
 
-        self.logger.info(
-            "Validation completed."
-        )
+        self.logger.info("Validation completed.")
 
         return results
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Validator Management
     # ---------------------------------------------------------
 
@@ -118,9 +108,7 @@ class QuestionValidator:
         Register a validator.
         """
 
-        self._validators.append(
-            validator
-        )
+        self._validators.append(validator)
 
         self.logger.info(
             "Registered validator: %s",
@@ -144,9 +132,7 @@ class QuestionValidator:
 
             if validator.name == validator_name:
 
-                self._validators.remove(
-                    validator
-                )
+                self._validators.remove(validator)
 
                 self.logger.info(
                     "Removed validator: %s",
@@ -180,9 +166,7 @@ class QuestionValidator:
         Return a copy of all registered validators.
         """
 
-        return list(
-            self._validators
-        )
+        return list(self._validators)
 
     def clear(
         self,
@@ -193,9 +177,7 @@ class QuestionValidator:
 
         self._validators.clear()
 
-        self.logger.info(
-            "Validator registry cleared."
-        )
+        self.logger.info("Validator registry cleared.")
 
     # ---------------------------------------------------------
     # Information
@@ -209,9 +191,7 @@ class QuestionValidator:
         Return the number of registered validators.
         """
 
-        return len(
-            self._validators
-        )
+        return len(self._validators)
 
     def validator_names(
         self,
@@ -220,11 +200,7 @@ class QuestionValidator:
         Return validator names.
         """
 
-        return [
-            validator.name
-            for validator
-            in self._validators
-        ]
+        return [validator.name for validator in self._validators]
 
     def has_validator(
         self,
@@ -234,11 +210,9 @@ class QuestionValidator:
         Determine whether a validator exists.
         """
 
-        return (
-            validator_name
-            in self.validator_names()
-        )
-            # ---------------------------------------------------------
+        return validator_name in self.validator_names()
+        # ---------------------------------------------------------
+
     # Lifecycle Hooks
     # ---------------------------------------------------------
 
@@ -281,13 +255,9 @@ class QuestionValidator:
         Execute the complete validation workflow.
         """
 
-        self.before_validation(
-            batch
-        )
+        self.before_validation(batch)
 
-        results = self.validate(
-            batch
-        )
+        results = self.validate(batch)
 
         self.after_validation(
             batch,
@@ -309,12 +279,8 @@ class QuestionValidator:
         """
 
         return {
-            "validator_count": (
-                self.validator_count
-            ),
-            "result_count": len(
-                results
-            ),
+            "validator_count": (self.validator_count),
+            "result_count": len(results),
         }
 
     # ---------------------------------------------------------
@@ -330,17 +296,12 @@ class QuestionValidator:
         """
 
         return {
-            "component": (
-                self.__class__.__name__
-            ),
-            "validators": (
-                self.validator_names()
-            ),
-            "summary": self.summary(
-                results
-            ),
+            "component": (self.__class__.__name__),
+            "validators": (self.validator_names()),
+            "summary": self.summary(results),
         }
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Component Information
     # ---------------------------------------------------------
 
@@ -372,9 +333,7 @@ class QuestionValidator:
         return {
             "component": self.component_name,
             "version": self.version,
-            "registered_validators": (
-                self.validator_count
-            ),
+            "registered_validators": (self.validator_count),
             "status": "READY",
         }
 
@@ -422,22 +381,13 @@ class QuestionValidator:
 
         names = self.validator_names()
 
-        duplicates = {
-            name
-            for name in names
-            if names.count(name) > 1
-        }
+        duplicates = {name for name in names if names.count(name) > 1}
 
         if duplicates:
 
-            duplicate_list = ", ".join(
-                sorted(duplicates)
-            )
+            duplicate_list = ", ".join(sorted(duplicates))
 
-            raise ValueError(
-                "Duplicate validators detected: "
-                f"{duplicate_list}"
-            )
+            raise ValueError("Duplicate validators detected: " f"{duplicate_list}")
 
     def execution_information(self) -> dict:
         """
@@ -446,14 +396,11 @@ class QuestionValidator:
 
         return {
             "execution_model": "SEQUENTIAL",
-            "validator_count": (
-                self.validator_count
-            ),
-            "validators": (
-                self.validator_names()
-            ),
+            "validator_count": (self.validator_count),
+            "validators": (self.validator_names()),
         }
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Information
     # ---------------------------------------------------------
 
@@ -467,12 +414,8 @@ class QuestionValidator:
         return {
             "name": self.component_name,
             "version": self.version,
-            "validator_count": (
-                self.validator_count
-            ),
-            "validators": (
-                self.validator_names()
-            ),
+            "validator_count": (self.validator_count),
+            "validators": (self.validator_names()),
         }
 
     # ---------------------------------------------------------
@@ -493,8 +436,4 @@ class QuestionValidator:
         self,
     ) -> str:
 
-        return (
-            f"{self.component_name} "
-            f"[{self.validator_count} validator(s)]"
-        )
-        
+        return f"{self.component_name} " f"[{self.validator_count} validator(s)]"

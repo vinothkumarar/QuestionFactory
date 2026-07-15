@@ -29,7 +29,7 @@ class QuestionFactoryEngine:
         self.folder = self.resource_manager.ensure_questionbank_path(
             progress["current_project"],
             progress["current_chapter"],
-            progress["current_subtopic"]
+            progress["current_subtopic"],
         )
 
         filename = (
@@ -40,10 +40,7 @@ class QuestionFactoryEngine:
             f"{progress['current_batch']}.csv"
         )
 
-        csv_file = self.csv_writer.create_batch_file(
-            self.folder,
-            filename
-        )
+        csv_file = self.csv_writer.create_batch_file(self.folder, filename)
 
         print()
         print("=" * 50)

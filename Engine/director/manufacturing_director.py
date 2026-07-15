@@ -190,7 +190,8 @@ class ManufacturingDirector:
             self.logger.exception(ex)
 
             raise
-                # ---------------------------------------------------------
+            # ---------------------------------------------------------
+
     # Private Lifecycle
     # ---------------------------------------------------------
 
@@ -354,8 +355,7 @@ class ManufacturingDirector:
         if not repair_report.is_success:
 
             raise RuntimeError(
-                "Automatic repair failed. "
-                "Manufacturing cycle aborted."
+                "Automatic repair failed. " "Manufacturing cycle aborted."
             )
 
         self.logger.info("Re-running QA after repair")
@@ -370,9 +370,9 @@ class ManufacturingDirector:
         if not qa_report.is_success:
 
             raise RuntimeError(
-                "Batch failed quality verification "
-                "after repair cycle."
+                "Batch failed quality verification " "after repair cycle."
             )
+
     def _package(
         self,
         context: ManufacturingContext,
@@ -439,9 +439,7 @@ class ManufacturingDirector:
 
         completed_at = datetime.utcnow()
 
-        duration = (
-            completed_at - context.started_at
-        ).total_seconds()
+        duration = (completed_at - context.started_at).total_seconds()
 
         summary = {
             "state": self.state.value,
@@ -453,8 +451,7 @@ class ManufacturingDirector:
         self.production_logger.factory_completed(summary)
 
         self.logger.info(
-            "Manufacturing cycle completed successfully "
-            "(%.2f seconds)",
+            "Manufacturing cycle completed successfully " "(%.2f seconds)",
             duration,
         )
 
@@ -527,7 +524,8 @@ class ManufacturingDirector:
         self.production_logger.factory_stopped()
 
         self.logger.info("Manufacturing Director stopped")
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Health & Diagnostics
     # ---------------------------------------------------------
 
@@ -568,9 +566,7 @@ class ManufacturingDirector:
         }
 
         missing = [
-            name
-            for name, service in required_services.items()
-            if service is None
+            name for name, service in required_services.items() if service is None
         ]
 
         if missing:
@@ -671,8 +667,4 @@ class ManufacturingDirector:
         )
 
     def __str__(self) -> str:
-        return (
-            f"{self.component_name} "
-            f"[{self.state.value}]"
-        )
-        
+        return f"{self.component_name} " f"[{self.state.value}]"

@@ -28,9 +28,7 @@ class BatchResultModel:
 
     execution_time_ms: int = 0
 
-    worker_results: list[WorkerResultModel] = field(
-        default_factory=list
-    )
+    worker_results: list[WorkerResultModel] = field(default_factory=list)
 
     @property
     def success_rate(self) -> float:
@@ -38,11 +36,4 @@ class BatchResultModel:
         if self.total_orders == 0:
             return 0.0
 
-        return round(
-
-            (self.successful / self.total_orders) * 100,
-
-            2
-
-        )
-        
+        return round((self.successful / self.total_orders) * 100, 2)

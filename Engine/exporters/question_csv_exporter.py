@@ -20,111 +20,50 @@ class QuestionCSVExporter:
     named production CSV.
     """
 
-    def export(
-        self,
-        batch_result,
-        production_order
-    ):
+    def export(self, batch_result, production_order):
 
         #
         # First Question
         #
 
-        first_question = (
-            batch_result.worker_results[0].question
-        )
+        first_question = batch_result.worker_results[0].question
 
         unit = first_question["unit_id"]
         chapter = first_question["chapter_id"]
         subtopic = first_question["subtopic_id"]
         set_no = first_question["set_no"]
 
-        question_start = (
-            production_order.question_start
-        )
+        question_start = production_order.question_start
 
-        question_end = (
-
-            question_start
-
-            + production_order.question_count
-
-            - 1
-
-        )
+        question_end = question_start + production_order.question_count - 1
 
         #
         # Output Folder
         #
 
-        output_folder = (
+        output_folder = Path("output") / unit / chapter / subtopic
 
-            Path("output")
-
-            / unit
-
-            / chapter
-
-            / subtopic
-
-        )
-
-        output_folder.mkdir(
-
-            parents=True,
-
-            exist_ok=True
-
-        )
+        output_folder.mkdir(parents=True, exist_ok=True)
 
         #
         # File Name
         #
 
         file_name = (
-
             f"{unit}_"
-
             f"{chapter}_"
-
             f"{subtopic}_"
-
             f"{set_no}_"
-
             f"Q{question_start:03d}"
-
             f"_Q{question_end:03d}.csv"
-
         )
 
-        output_file = (
+        output_file = output_folder / file_name
 
-            output_folder
-
-            / file_name
-
-        )
-
-        with open(
-
-            output_file,
-
-            "w",
-
-            newline="",
-
-            encoding="utf-8"
-
-        ) as csv_file:
+        with open(output_file, "w", newline="", encoding="utf-8") as csv_file:
 
             writer = csv.DictWriter(
-
-                csv_file,
-
-                fieldnames=EXPORT_COLUMNS,
-
-                extrasaction="ignore"
-
+                csv_file, fieldnames=EXPORT_COLUMNS, extrasaction="ignore"
             )
 
             writer.writeheader()
@@ -137,21 +76,10 @@ class QuestionCSVExporter:
                 # Convert Tags
                 #
 
-                if isinstance(
+                if isinstance(question.get("tags"), list):
 
-                    question.get("tags"),
-
-                    list
-
-                ):
-
-                    question["tags"] = ",".join(
-
-                        question["tags"]
-
-                    )
+                    question["tags"] = ",".join(question["tags"])
 
                 writer.writerow(question)
 
         return str(output_file)
-        

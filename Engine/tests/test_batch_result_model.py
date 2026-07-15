@@ -9,17 +9,8 @@ Release   : R1
 
 from models.batch_result_model import BatchResultModel
 
-
 result = BatchResultModel(
-
-    total_orders=100,
-
-    successful=98,
-
-    failed=2,
-
-    execution_time_ms=125000
-
+    total_orders=100, successful=98, failed=2, execution_time_ms=125000
 )
 
 print("=" * 80)

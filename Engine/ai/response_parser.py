@@ -16,7 +16,4 @@ class ResponseParser:
 
         except json.JSONDecodeError as ex:
 
-            raise RuntimeError(
-                f"Invalid JSON received from AI.\n\n{ex}"
-            )
-            
+            raise RuntimeError(f"Invalid JSON received from AI.\n\n{ex}")

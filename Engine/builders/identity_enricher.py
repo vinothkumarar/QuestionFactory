@@ -14,12 +14,7 @@ class IdentityEnricher:
 
         self.code_generator = QuestionCodeGenerator()
 
-    def apply(
-        self,
-        question: dict,
-        runtime: dict,
-        question_number: int
-    ):
+    def apply(self, question: dict, runtime: dict, question_number: int):
 
         # --------------------------------------------------
         # Runtime Identity
@@ -36,10 +31,7 @@ class IdentityEnricher:
         question["question_no"] = question_number
 
         # Batch support (default for now)
-        question["batch_no"] = runtime.get(
-            "current_batch",
-            1
-        )
+        question["batch_no"] = runtime.get("current_batch", 1)
 
         # --------------------------------------------------
         # Question Code
@@ -50,8 +42,7 @@ class IdentityEnricher:
             runtime["current_chapter"],
             runtime["current_subtopic"],
             runtime["current_set"],
-            question_number
+            question_number,
         )
 
         return question
-        

@@ -9,9 +9,7 @@ Release   : R3
 
 from factory.factory_runner import FactoryRunner
 
-from repositories.factory_state_repository import (
-    FactoryStateRepository
-)
+from repositories.factory_state_repository import FactoryStateRepository
 
 
 def main():
@@ -29,13 +27,9 @@ def main():
     print("Runtime Before")
     print("-" * 80)
 
-    print(
-        f"Batch  : {before.current_batch}"
-    )
+    print(f"Batch  : {before.current_batch}")
 
-    print(
-        f"Status : {before.status}"
-    )
+    print(f"Status : {before.status}")
 
     print()
 
@@ -53,13 +47,9 @@ def main():
 
     print()
 
-    print(
-        f"Batch  : {after.current_batch}"
-    )
+    print(f"Batch  : {after.current_batch}")
 
-    print(
-        f"Status : {after.status}"
-    )
+    print(f"Status : {after.status}")
 
     print()
 
@@ -69,20 +59,11 @@ def main():
 
     print()
 
-    print(
-        "Questions Generated :",
-        total_generated
-    )
+    print("Questions Generated :", total_generated)
 
-    print(
-        "Batch Advanced      :",
-        after.current_batch > before.current_batch
-    )
+    print("Batch Advanced      :", after.current_batch > before.current_batch)
 
-    print(
-        "Factory Status      :",
-        after.status
-    )
+    print("Factory Status      :", after.status)
 
     print()
 
@@ -92,4 +73,3 @@ def main():
 if __name__ == "__main__":
 
     main()
-    

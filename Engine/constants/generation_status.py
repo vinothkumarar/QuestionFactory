@@ -21,4 +21,3 @@ class GenerationStatus:
     RETRY = "RETRY"
 
     SKIPPED = "SKIPPED"
-    

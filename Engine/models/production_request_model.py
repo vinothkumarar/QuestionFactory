@@ -43,4 +43,3 @@ class ProductionRequestModel:
     output_file: str = "output/questions.csv"
 
     blueprint_version: str = "v3.1"
-    

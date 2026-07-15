@@ -20,7 +20,4 @@ class CSVValidationResultModel:
 
     total_errors: int = 0
 
-    errors: list[str] = field(
-        default_factory=list
-    )
-    
+    errors: list[str] = field(default_factory=list)

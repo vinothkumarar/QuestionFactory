@@ -53,9 +53,7 @@ class RuntimeController:
 
         self.logger = logging.getLogger(self.__class__.__name__)
 
-        self.runtime_file = (
-            runtime_file or self.DEFAULT_RUNTIME_FILE
-        )
+        self.runtime_file = runtime_file or self.DEFAULT_RUNTIME_FILE
 
     # ---------------------------------------------------------
     # Public API
@@ -71,9 +69,7 @@ class RuntimeController:
 
         if not self.runtime_file.exists():
 
-            self.logger.info(
-                "Runtime file not found. Creating new runtime."
-            )
+            self.logger.info("Runtime file not found. Creating new runtime.")
 
             runtime = RuntimeModel()
 
@@ -123,9 +119,7 @@ class RuntimeController:
                 ensure_ascii=False,
             )
 
-        self.logger.info(
-            "Runtime saved successfully."
-        )
+        self.logger.info("Runtime saved successfully.")
 
     def reset(self) -> RuntimeModel:
         """
@@ -136,12 +130,11 @@ class RuntimeController:
 
         self.save(runtime)
 
-        self.logger.info(
-            "Runtime reset completed."
-        )
+        self.logger.info("Runtime reset completed.")
 
         return runtime
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Validation
     # ---------------------------------------------------------
 
@@ -238,9 +231,7 @@ class RuntimeController:
 
         if not runtime.is_recovery_required:
 
-            self.logger.info(
-                "Runtime recovery not required."
-            )
+            self.logger.info("Runtime recovery not required.")
 
             return runtime
 
@@ -276,23 +267,16 @@ class RuntimeController:
             Backup file path.
         """
 
-        backup_directory = (
-            self.runtime_file.parent / "backups"
-        )
+        backup_directory = self.runtime_file.parent / "backups"
 
         backup_directory.mkdir(
             parents=True,
             exist_ok=True,
         )
 
-        timestamp = datetime.utcnow().strftime(
-            "%Y%m%d_%H%M%S"
-        )
+        timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
 
-        backup_file = (
-            backup_directory /
-            f"runtime_{timestamp}.json"
-        )
+        backup_file = backup_directory / f"runtime_{timestamp}.json"
 
         with backup_file.open(
             "w",
@@ -328,7 +312,8 @@ class RuntimeController:
         """
 
         return deepcopy(runtime)
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Runtime Progression
     # ---------------------------------------------------------
 
@@ -397,9 +382,7 @@ class RuntimeController:
         history.last_batch_id = production.batch_id
         history.last_production_node = production.production_node
 
-        history.last_completed_at = (
-            datetime.utcnow().isoformat()
-        )
+        history.last_completed_at = datetime.utcnow().isoformat()
 
         history.last_status = "SUCCESS"
 
@@ -419,11 +402,7 @@ class RuntimeController:
 
         statistics.total_batches += 1
 
-        question_count = (
-            production.question_to
-            - production.question_from
-            + 1
-        )
+        question_count = production.question_to - production.question_from + 1
 
         statistics.total_questions += question_count
 
@@ -438,8 +417,7 @@ class RuntimeController:
             if statistics.total_batches > 0:
 
                 statistics.average_batch_time_seconds = (
-                    statistics.total_runtime_seconds
-                    / statistics.total_batches
+                    statistics.total_runtime_seconds / statistics.total_batches
                 )
 
     def _advance_production(
@@ -470,41 +448,28 @@ class RuntimeController:
             production.subtopic = production_node.subtopic
 
         if hasattr(production_node, "set_number"):
-            production.set_number = (
-                production_node.set_number
-            )
+            production.set_number = production_node.set_number
 
         if hasattr(production_node, "batch_number"):
-            production.batch_number = (
-                production_node.batch_number
-            )
+            production.batch_number = production_node.batch_number
 
         if hasattr(production_node, "question_from"):
-            production.question_from = (
-                production_node.question_from
-            )
+            production.question_from = production_node.question_from
 
         if hasattr(production_node, "question_to"):
-            production.question_to = (
-                production_node.question_to
-            )
+            production.question_to = production_node.question_to
 
         if hasattr(production_node, "batch_id"):
-            production.batch_id = (
-                production_node.batch_id
-            )
+            production.batch_id = production_node.batch_id
 
         if hasattr(production_node, "production_node"):
-            production.production_node = (
-                production_node.production_node
-            )
+            production.production_node = production_node.production_node
 
-        production.next_question_number = (
-            production.question_to + 1
-        )
+        production.next_question_number = production.question_to + 1
 
         runtime.touch()
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Runtime Status Management
     # ---------------------------------------------------------
 
@@ -540,9 +505,7 @@ class RuntimeController:
 
         self.save(runtime)
 
-        self.logger.info(
-            "Manufacturing cycle completed."
-        )
+        self.logger.info("Manufacturing cycle completed.")
 
         return runtime
 
@@ -671,9 +634,7 @@ class RuntimeController:
             ),
             "total_batches": runtime.statistics.total_batches,
             "total_questions": runtime.statistics.total_questions,
-            "recovery_required": (
-                runtime.recovery.recovery_required
-            ),
+            "recovery_required": (runtime.recovery.recovery_required),
         }
 
     # ---------------------------------------------------------
@@ -681,13 +642,7 @@ class RuntimeController:
     # ---------------------------------------------------------
 
     def __repr__(self) -> str:
-        return (
-            f"RuntimeController("
-            f"runtime_file='{self.runtime_file}')"
-        )
+        return f"RuntimeController(" f"runtime_file='{self.runtime_file}')"
 
     def __str__(self) -> str:
-        return (
-            f"RuntimeController[{self.runtime_file}]"
-        )
-        
+        return f"RuntimeController[{self.runtime_file}]"

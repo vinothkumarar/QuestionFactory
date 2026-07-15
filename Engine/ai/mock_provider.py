@@ -13,4 +13,3 @@ class MockProvider(AIProvider):
     def generate(self, prompt: str) -> str:
 
         return f"MOCK RESPONSE:\n\n{prompt}"
-        

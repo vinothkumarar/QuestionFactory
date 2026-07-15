@@ -23,10 +23,10 @@ from dataclasses import dataclass, field, asdict
 from datetime import datetime
 from typing import Any, Dict, List
 
-
 # ---------------------------------------------------------
 # Factory Information
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class FactoryInfo:
@@ -41,48 +41,41 @@ class FactoryInfo:
 
     description: str = ""
 
-    created_at: str = field(
-        default_factory=lambda: datetime.utcnow().isoformat()
-    )
+    created_at: str = field(default_factory=lambda: datetime.utcnow().isoformat())
 
 
 # ---------------------------------------------------------
 # Rules
 # ---------------------------------------------------------
 
+
 @dataclass(slots=True)
 class RuleBook:
 
-    rules: Dict[str, str] = field(
-        default_factory=dict
-    )
+    rules: Dict[str, str] = field(default_factory=dict)
 
-    rebuild_rules: Dict[str, str] = field(
-        default_factory=dict
-    )
+    rebuild_rules: Dict[str, str] = field(default_factory=dict)
 
-    generation_rules: Dict[str, str] = field(
-        default_factory=dict
-    )
+    generation_rules: Dict[str, str] = field(default_factory=dict)
 
-    runtime_rules: Dict[str, str] = field(
-        default_factory=dict
-    )
+    runtime_rules: Dict[str, str] = field(default_factory=dict)
 
 
 # ---------------------------------------------------------
 # Archetypes
 # ---------------------------------------------------------
 
+
 @dataclass(slots=True)
 class ArchetypeBook:
 
-    archetypes: Dict[str, Any] = field(
-        default_factory=dict
-    )
+    archetypes: Dict[str, Any] = field(default_factory=dict)
     # ---------------------------------------------------------
+
+
 # Saturation
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class SaturationBook:
@@ -93,22 +86,17 @@ class SaturationBook:
     complete and when manufacturing should advance.
     """
 
-    policies: Dict[str, Any] = field(
-        default_factory=dict
-    )
+    policies: Dict[str, Any] = field(default_factory=dict)
 
-    thresholds: Dict[str, Any] = field(
-        default_factory=dict
-    )
+    thresholds: Dict[str, Any] = field(default_factory=dict)
 
-    progression_rules: Dict[str, Any] = field(
-        default_factory=dict
-    )
+    progression_rules: Dict[str, Any] = field(default_factory=dict)
 
 
 # ---------------------------------------------------------
 # Schema
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class SchemaBook:
@@ -116,26 +104,19 @@ class SchemaBook:
     Defines the canonical schema used throughout the factory.
     """
 
-    question_schema: Dict[str, Any] = field(
-        default_factory=dict
-    )
+    question_schema: Dict[str, Any] = field(default_factory=dict)
 
-    csv_schema: Dict[str, Any] = field(
-        default_factory=dict
-    )
+    csv_schema: Dict[str, Any] = field(default_factory=dict)
 
-    metadata_schema: Dict[str, Any] = field(
-        default_factory=dict
-    )
+    metadata_schema: Dict[str, Any] = field(default_factory=dict)
 
-    validation_rules: Dict[str, Any] = field(
-        default_factory=dict
-    )
+    validation_rules: Dict[str, Any] = field(default_factory=dict)
 
 
 # ---------------------------------------------------------
 # Runtime Behavior
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class RuntimeBehavior:
@@ -163,6 +144,7 @@ class RuntimeBehavior:
 # ---------------------------------------------------------
 # Folder Structure
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class FolderStructure:
@@ -193,6 +175,7 @@ class FolderStructure:
 # Upload Rules
 # ---------------------------------------------------------
 
+
 @dataclass(slots=True)
 class UploadRules:
     """
@@ -213,8 +196,11 @@ class UploadRules:
 
     archive_completed_batches: bool = True
     # ---------------------------------------------------------
+
+
 # Version Control
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class VersionControl:
@@ -231,9 +217,7 @@ class VersionControl:
 
     minimum_factory_version: str = "2.0.0"
 
-    compatible_factory_versions: List[str] = field(
-        default_factory=lambda: ["2.0.0"]
-    )
+    compatible_factory_versions: List[str] = field(default_factory=lambda: ["2.0.0"])
 
     frozen: bool = True
 
@@ -245,6 +229,7 @@ class VersionControl:
 # ---------------------------------------------------------
 # Automation
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class AutomationSettings:
@@ -276,19 +261,16 @@ class AutomationSettings:
 # Blueprint Metadata
 # ---------------------------------------------------------
 
+
 @dataclass(slots=True)
 class BlueprintMetadata:
     """
     Metadata describing the compiled blueprint.
     """
 
-    source_documents: List[str] = field(
-        default_factory=list
-    )
+    source_documents: List[str] = field(default_factory=list)
 
-    compiled_at: str = field(
-        default_factory=lambda: datetime.utcnow().isoformat()
-    )
+    compiled_at: str = field(default_factory=lambda: datetime.utcnow().isoformat())
 
     compiler_version: str = "2.0.0"
 
@@ -296,14 +278,13 @@ class BlueprintMetadata:
 
     document_count: int = 0
 
-    custom_properties: Dict[str, Any] = field(
-        default_factory=dict
-    )
+    custom_properties: Dict[str, Any] = field(default_factory=dict)
 
 
 # ---------------------------------------------------------
 # Blueprint Model
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class BlueprintModel:
@@ -316,52 +297,30 @@ class BlueprintModel:
     instance during execution.
     """
 
-    factory: FactoryInfo = field(
-        default_factory=FactoryInfo
-    )
+    factory: FactoryInfo = field(default_factory=FactoryInfo)
 
-    rules: RuleBook = field(
-        default_factory=RuleBook
-    )
+    rules: RuleBook = field(default_factory=RuleBook)
 
-    archetypes: ArchetypeBook = field(
-        default_factory=ArchetypeBook
-    )
+    archetypes: ArchetypeBook = field(default_factory=ArchetypeBook)
 
-    saturation: SaturationBook = field(
-        default_factory=SaturationBook
-    )
+    saturation: SaturationBook = field(default_factory=SaturationBook)
 
-    schema: SchemaBook = field(
-        default_factory=SchemaBook
-    )
+    schema: SchemaBook = field(default_factory=SchemaBook)
 
-    runtime: RuntimeBehavior = field(
-        default_factory=RuntimeBehavior
-    )
+    runtime: RuntimeBehavior = field(default_factory=RuntimeBehavior)
 
-    folders: FolderStructure = field(
-        default_factory=FolderStructure
-    )
+    folders: FolderStructure = field(default_factory=FolderStructure)
 
-    upload: UploadRules = field(
-        default_factory=UploadRules
-    )
+    upload: UploadRules = field(default_factory=UploadRules)
 
-    version: VersionControl = field(
-        default_factory=VersionControl
-    )
+    version: VersionControl = field(default_factory=VersionControl)
 
-    automation: AutomationSettings = field(
-        default_factory=AutomationSettings
-    )
+    automation: AutomationSettings = field(default_factory=AutomationSettings)
 
-    metadata: BlueprintMetadata = field(
-        default_factory=BlueprintMetadata
-    )
+    metadata: BlueprintMetadata = field(default_factory=BlueprintMetadata)
     # ---------------------------------------------------------
-# Blueprint Operations
-# ---------------------------------------------------------
+    # Blueprint Operations
+    # ---------------------------------------------------------
 
     def to_dict(self) -> Dict[str, Any]:
         """
@@ -383,39 +342,17 @@ class BlueprintModel:
         """
 
         return cls(
-            factory=FactoryInfo(
-                **payload.get("factory", {})
-            ),
-            rules=RuleBook(
-                **payload.get("rules", {})
-            ),
-            archetypes=ArchetypeBook(
-                **payload.get("archetypes", {})
-            ),
-            saturation=SaturationBook(
-                **payload.get("saturation", {})
-            ),
-            schema=SchemaBook(
-                **payload.get("schema", {})
-            ),
-            runtime=RuntimeBehavior(
-                **payload.get("runtime", {})
-            ),
-            folders=FolderStructure(
-                **payload.get("folders", {})
-            ),
-            upload=UploadRules(
-                **payload.get("upload", {})
-            ),
-            version=VersionControl(
-                **payload.get("version", {})
-            ),
-            automation=AutomationSettings(
-                **payload.get("automation", {})
-            ),
-            metadata=BlueprintMetadata(
-                **payload.get("metadata", {})
-            ),
+            factory=FactoryInfo(**payload.get("factory", {})),
+            rules=RuleBook(**payload.get("rules", {})),
+            archetypes=ArchetypeBook(**payload.get("archetypes", {})),
+            saturation=SaturationBook(**payload.get("saturation", {})),
+            schema=SchemaBook(**payload.get("schema", {})),
+            runtime=RuntimeBehavior(**payload.get("runtime", {})),
+            folders=FolderStructure(**payload.get("folders", {})),
+            upload=UploadRules(**payload.get("upload", {})),
+            version=VersionControl(**payload.get("version", {})),
+            automation=AutomationSettings(**payload.get("automation", {})),
+            metadata=BlueprintMetadata(**payload.get("metadata", {})),
         )
 
     # ---------------------------------------------------------
@@ -499,15 +436,9 @@ class BlueprintModel:
                 "auto_runtime_update": self.automation.auto_runtime_update,
             },
             "runtime": {
-                "repair_before_expand": (
-                    self.runtime.repair_before_expand
-                ),
-                "auto_checkpoint": (
-                    self.runtime.auto_checkpoint
-                ),
-                "enable_recovery": (
-                    self.runtime.enable_recovery
-                ),
+                "repair_before_expand": (self.runtime.repair_before_expand),
+                "auto_checkpoint": (self.runtime.auto_checkpoint),
+                "enable_recovery": (self.runtime.enable_recovery),
             },
             "folders": {
                 "engine": self.folders.engine,
@@ -530,8 +461,4 @@ class BlueprintModel:
         )
 
     def __str__(self) -> str:
-        return (
-            f"{self.factory.name} "
-            f"Blueprint v{self.blueprint_version}"
-        )
-        
+        return f"{self.factory.name} " f"Blueprint v{self.blueprint_version}"

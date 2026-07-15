@@ -11,16 +11,11 @@ class KnowledgeSchema:
 
     def __init__(self):
 
-        self.database = (
-            Path(__file__).parent
-            / "knowledge.db"
-        )
+        self.database = Path(__file__).parent / "knowledge.db"
 
     def create(self):
 
-        connection = sqlite3.connect(
-            self.database
-        )
+        connection = sqlite3.connect(self.database)
 
         cursor = connection.cursor()
 
@@ -126,4 +121,3 @@ class KnowledgeSchema:
         print("=" * 80)
         print("KNOWLEDGE DATABASE CREATED")
         print("=" * 80)
-        

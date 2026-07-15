@@ -34,9 +34,7 @@ class QuestionGenerator:
 
     def __init__(self):
 
-        self.logger = logging.getLogger(
-            self.__class__.__name__
-        )
+        self.logger = logging.getLogger(self.__class__.__name__)
 
     # ---------------------------------------------------------
     # Public API
@@ -68,21 +66,15 @@ class QuestionGenerator:
             Raw generated questions.
         """
 
-        self.logger.info(
-            "Starting question generation."
+        self.logger.info("Starting question generation.")
+
+        generation_request = self._build_request(
+            node,
+            blueprint,
+            runtime,
         )
 
-        generation_request = (
-            self._build_request(
-                node,
-                blueprint,
-                runtime,
-            )
-        )
-
-        questions = self._invoke_ai(
-            generation_request
-        )
+        questions = self._invoke_ai(generation_request)
 
         self.logger.info(
             "Generated %d question(s).",
@@ -90,7 +82,8 @@ class QuestionGenerator:
         )
 
         return questions
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Request Building
     # ---------------------------------------------------------
 
@@ -112,9 +105,7 @@ class QuestionGenerator:
             "factory": {
                 "name": blueprint.factory.name,
                 "version": blueprint.factory.version,
-                "blueprint_version": (
-                    blueprint.blueprint_version
-                ),
+                "blueprint_version": (blueprint.blueprint_version),
             },
             "production": {
                 "unit_code": node.unit_code,
@@ -122,39 +113,23 @@ class QuestionGenerator:
                 "subtopic_code": node.subtopic_code,
                 "set_number": node.set_number,
                 "batch_number": node.batch_number,
-                "question_start": (
-                    node.question_start
-                ),
-                "question_end": (
-                    node.question_end
-                ),
-                "question_count": (
-                    node.question_count
-                ),
+                "question_start": (node.question_start),
+                "question_end": (node.question_end),
+                "question_count": (node.question_count),
             },
             "runtime": {
                 "run_id": runtime.run_id,
-                "repair_before_expand": (
-                    runtime.repair_before_expand
-                ),
-                "checkpoint_enabled": (
-                    runtime.auto_checkpoint
-                ),
+                "repair_before_expand": (runtime.repair_before_expand),
+                "checkpoint_enabled": (runtime.auto_checkpoint),
             },
             "generation": {
                 "rules": blueprint.rules.rules,
-                "archetypes": (
-                    blueprint.archetypes.archetypes
-                ),
-                "schema_version": (
-                    blueprint.schema_version
-                ),
+                "archetypes": (blueprint.archetypes.archetypes),
+                "schema_version": (blueprint.schema_version),
             },
         }
 
-        self.logger.info(
-            "Generation request created."
-        )
+        self.logger.info("Generation request created.")
 
         return request
 
@@ -174,9 +149,7 @@ class QuestionGenerator:
         implementation.
         """
 
-        self.logger.info(
-            "Invoking AI generation backend."
-        )
+        self.logger.info("Invoking AI generation backend.")
 
         #
         # Future implementation:
@@ -191,7 +164,8 @@ class QuestionGenerator:
         #
 
         return []
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Request Validation
     # ---------------------------------------------------------
 
@@ -215,9 +189,7 @@ class QuestionGenerator:
 
             if section not in request:
 
-                raise ValueError(
-                    f"Missing request section: {section}"
-                )
+                raise ValueError(f"Missing request section: {section}")
 
         production = request["production"]
 
@@ -236,13 +208,9 @@ class QuestionGenerator:
 
             if field not in production:
 
-                raise ValueError(
-                    f"Missing production field: {field}"
-                )
+                raise ValueError(f"Missing production field: {field}")
 
-        self.logger.info(
-            "Generation request validated."
-        )
+        self.logger.info("Generation request validated.")
 
     # ---------------------------------------------------------
     # Lifecycle Hooks
@@ -296,12 +264,8 @@ class QuestionGenerator:
             "subtopic": production["subtopic_code"],
             "set": production["set_number"],
             "batch": production["batch_number"],
-            "requested_questions": (
-                production["question_count"]
-            ),
-            "generated_questions": len(
-                questions
-            ),
+            "requested_questions": (production["question_count"]),
+            "generated_questions": len(questions),
         }
 
     def diagnostics(
@@ -322,7 +286,8 @@ class QuestionGenerator:
             "factory": request["factory"],
             "runtime": request["runtime"],
         }
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Generator Information
     # ---------------------------------------------------------
 
@@ -382,12 +347,8 @@ class QuestionGenerator:
         return {
             "component": self.component_name,
             "version": self.version,
-            "default_provider": (
-                self.default_provider()
-            ),
-            "supported_providers": (
-                self.supported_providers()
-            ),
+            "default_provider": (self.default_provider()),
+            "supported_providers": (self.supported_providers()),
             "status": "READY",
         }
 
@@ -423,10 +384,7 @@ class QuestionGenerator:
         Determine whether a provider is supported.
         """
 
-        return (
-            provider
-            in self.supported_providers()
-        )
+        return provider in self.supported_providers()
 
     def create_empty_result(self) -> List[dict]:
         """
@@ -436,7 +394,8 @@ class QuestionGenerator:
         """
 
         return []
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Execution Helpers
     # ---------------------------------------------------------
 
@@ -480,14 +439,7 @@ class QuestionGenerator:
     # ---------------------------------------------------------
 
     def __repr__(self) -> str:
-        return (
-            "QuestionGenerator("
-            f"version='{self.version}')"
-        )
+        return "QuestionGenerator(" f"version='{self.version}')"
 
     def __str__(self) -> str:
-        return (
-            f"{self.component_name} "
-            f"[v{self.version}]"
-        )
-        
+        return f"{self.component_name} " f"[v{self.version}]"

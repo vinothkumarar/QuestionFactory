@@ -45,9 +45,7 @@ class ProductionScheduler:
 
     def __init__(self) -> None:
 
-        self.logger = logging.getLogger(
-            self.__class__.__name__
-        )
+        self.logger = logging.getLogger(self.__class__.__name__)
 
     # ---------------------------------------------------------
     # Public API
@@ -74,9 +72,7 @@ class ProductionScheduler:
         ProductionNodeModel
         """
 
-        self.logger.info(
-            "Determining next production node."
-        )
+        self.logger.info("Determining next production node.")
 
         node = self._build_node(
             runtime=runtime,
@@ -127,6 +123,7 @@ class ProductionScheduler:
         )
 
         return node
+
     def _assign_location(
         self,
         node: ProductionNodeModel,
@@ -157,8 +154,7 @@ class ProductionScheduler:
         node.location = location
 
         self.logger.info(
-            "Location assigned: %s/%s/%s/%s "
-            "(Set %s Batch %s)",
+            "Location assigned: %s/%s/%s/%s " "(Set %s Batch %s)",
             location.subject,
             location.unit,
             location.chapter,
@@ -181,11 +177,7 @@ class ProductionScheduler:
         question_range = QuestionRange(
             question_from=production.question_from,
             question_to=production.question_to,
-            expected_questions=(
-                production.question_to
-                - production.question_from
-                + 1
-            ),
+            expected_questions=(production.question_to - production.question_from + 1),
         )
 
         node.question_range = question_range
@@ -217,13 +209,10 @@ class ProductionScheduler:
 
         execution.execution_order = 1
 
-        execution.estimated_duration_seconds = (
-            node.question_count * 60
-        )
+        execution.estimated_duration_seconds = node.question_count * 60
 
         self.logger.info(
-            "Execution plan prepared "
-            "(priority=%d, estimated=%ds)",
+            "Execution plan prepared " "(priority=%d, estimated=%ds)",
             execution.priority,
             execution.estimated_duration_seconds,
         )
@@ -262,7 +251,8 @@ class ProductionScheduler:
             "Production node created: %s",
             metadata.production_node,
         )
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Validation
     # ---------------------------------------------------------
 
@@ -284,27 +274,17 @@ class ProductionScheduler:
             "subtopic": production.subtopic,
         }
 
-        missing = [
-            field
-            for field, value in required_fields.items()
-            if not value
-        ]
+        missing = [field for field, value in required_fields.items() if not value]
 
         if missing:
-            raise ValueError(
-                "Runtime is incomplete. "
-                f"Missing: {', '.join(missing)}"
-            )
+            raise ValueError("Runtime is incomplete. " f"Missing: {', '.join(missing)}")
 
         if production.question_from <= 0:
-            raise ValueError(
-                "question_from must be greater than zero."
-            )
+            raise ValueError("question_from must be greater than zero.")
 
         if production.question_to < production.question_from:
             raise ValueError(
-                "question_to must be greater than or equal "
-                "to question_from."
+                "question_to must be greater than or equal " "to question_from."
             )
 
         self.logger.info("Runtime validation successful.")
@@ -322,13 +302,9 @@ class ProductionScheduler:
         """
 
         if blueprint is None:
-            raise ValueError(
-                "Blueprint cannot be None."
-            )
+            raise ValueError("Blueprint cannot be None.")
 
-        self.logger.info(
-            "Blueprint validation successful."
-        )
+        self.logger.info("Blueprint validation successful.")
 
     def validate_node(
         self,
@@ -339,33 +315,21 @@ class ProductionScheduler:
         """
 
         if node.question_count <= 0:
-            raise ValueError(
-                "Production node contains no questions."
-            )
+            raise ValueError("Production node contains no questions.")
 
         if not node.location.subject:
-            raise ValueError(
-                "Production node subject is missing."
-            )
+            raise ValueError("Production node subject is missing.")
 
         if not node.location.unit:
-            raise ValueError(
-                "Production node unit is missing."
-            )
+            raise ValueError("Production node unit is missing.")
 
         if not node.location.chapter:
-            raise ValueError(
-                "Production node chapter is missing."
-            )
+            raise ValueError("Production node chapter is missing.")
 
         if not node.location.subtopic:
-            raise ValueError(
-                "Production node subtopic is missing."
-            )
+            raise ValueError("Production node subtopic is missing.")
 
-        self.logger.info(
-            "Production node validation successful."
-        )
+        self.logger.info("Production node validation successful.")
 
     # ---------------------------------------------------------
     # Planning Diagnostics
@@ -388,16 +352,10 @@ class ProductionScheduler:
             "subtopic": node.location.subtopic,
             "set": node.location.set_number,
             "batch": node.location.batch_number,
-            "question_from": (
-                node.question_range.question_from
-            ),
-            "question_to": (
-                node.question_range.question_to
-            ),
+            "question_from": (node.question_range.question_from),
+            "question_to": (node.question_range.question_to),
             "priority": node.execution.priority,
-            "estimated_duration": (
-                node.execution.estimated_duration_seconds
-            ),
+            "estimated_duration": (node.execution.estimated_duration_seconds),
         }
 
     def log_schedule(
@@ -411,14 +369,14 @@ class ProductionScheduler:
         summary = self.planning_summary(node)
 
         self.logger.info(
-            "Scheduled %s | Questions %d-%d | "
-            "Priority %d",
+            "Scheduled %s | Questions %d-%d | " "Priority %d",
             summary["production_node"],
             summary["question_from"],
             summary["question_to"],
             summary["priority"],
         )
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Scheduling Policy
     # ---------------------------------------------------------
 
@@ -532,10 +490,7 @@ class ProductionScheduler:
     # ---------------------------------------------------------
 
     def __repr__(self) -> str:
-        return (
-            "ProductionScheduler("
-            "version='2.0.0')"
-        )
+        return "ProductionScheduler(" "version='2.0.0')"
 
     def __str__(self) -> str:
         return "ProductionScheduler"

@@ -24,4 +24,3 @@ class FactoryStateModel:
     questions_per_batch: int = 100
 
     status: str = "READY"
-    

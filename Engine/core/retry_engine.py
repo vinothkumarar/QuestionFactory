@@ -18,22 +18,10 @@ class RetryEngine:
 
         self.parser = ResponseParser()
 
-    def repair(
-        self,
-        question,
-        validation
-    ):
+    def repair(self, question, validation):
 
-        prompt = self.builder.build(
-            question,
-            validation
-        )
+        prompt = self.builder.build(question, validation)
 
-        response = self.provider.generate(
-            prompt
-        )
+        response = self.provider.generate(prompt)
 
-        return self.parser.parse(
-            response
-        )
-        
+        return self.parser.parse(response)

@@ -29,37 +29,18 @@ class PipelineEngine:
 
         self.validator = ValidationEngine()
 
-    def generate(
-        self,
-        runtime,
-        question_number
-    ):
+    def generate(self, runtime, question_number):
 
-        question = self.question_builder.build(
-            runtime,
-            question_number
-        )
+        question = self.question_builder.build(runtime, question_number)
 
-        prompt = self.prompt_builder.build(
-            question
-        )
+        prompt = self.prompt_builder.build(question)
 
-        response = self.provider.generate(
-            prompt
-        )
+        response = self.provider.generate(prompt)
 
-        ai_data = self.parser.parse(
-            response
-        )
+        ai_data = self.parser.parse(response)
 
-        question = self.merger.merge(
-            question,
-            ai_data
-        )
+        question = self.merger.merge(question, ai_data)
 
-        validation = self.validator.validate(
-            question
-        )
+        validation = self.validator.validate(question)
 
         return question, validation
-        

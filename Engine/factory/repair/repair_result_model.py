@@ -24,21 +24,13 @@ class RepairResultModel:
 
     regeneration_required: bool = False
 
-    repaired_items: List[str] = field(
-        default_factory=list
-    )
+    repaired_items: List[str] = field(default_factory=list)
 
-    failed_repairs: List[str] = field(
-        default_factory=list
-    )
+    failed_repairs: List[str] = field(default_factory=list)
 
-    warnings: List[str] = field(
-        default_factory=list
-    )
+    warnings: List[str] = field(default_factory=list)
 
-    metadata: Dict = field(
-        default_factory=dict
-    )
+    metadata: Dict = field(default_factory=dict)
     # ---------------------------------------------------------
     # Repair Status
     # ---------------------------------------------------------
@@ -53,9 +45,7 @@ class RepairResultModel:
 
         self.repaired = True
 
-        self.repaired_items.append(
-            item
-        )
+        self.repaired_items.append(item)
 
     def mark_failed(
         self,
@@ -66,9 +56,7 @@ class RepairResultModel:
         completed.
         """
 
-        self.failed_repairs.append(
-            item
-        )
+        self.failed_repairs.append(item)
 
     def mark_regeneration_required(
         self,
@@ -81,9 +69,7 @@ class RepairResultModel:
 
         self.regeneration_required = True
 
-        self.failed_repairs.append(
-            reason
-        )
+        self.failed_repairs.append(reason)
 
     # ---------------------------------------------------------
     # Warnings
@@ -97,9 +83,7 @@ class RepairResultModel:
         Add a repair warning.
         """
 
-        self.warnings.append(
-            warning
-        )
+        self.warnings.append(warning)
 
     @property
     def warning_count(
@@ -109,9 +93,7 @@ class RepairResultModel:
         Number of repair warnings.
         """
 
-        return len(
-            self.warnings
-        )
+        return len(self.warnings)
 
     # ---------------------------------------------------------
     # Metadata
@@ -141,6 +123,7 @@ class RepairResultModel:
             key,
             default,
         )
+
     # ---------------------------------------------------------
     # Statistics
     # ---------------------------------------------------------
@@ -153,9 +136,7 @@ class RepairResultModel:
         Number of successfully repaired items.
         """
 
-        return len(
-            self.repaired_items
-        )
+        return len(self.repaired_items)
 
     @property
     def failed_count(
@@ -165,9 +146,7 @@ class RepairResultModel:
         Number of failed repair attempts.
         """
 
-        return len(
-            self.failed_repairs
-        )
+        return len(self.failed_repairs)
 
     def statistics(
         self,
@@ -181,9 +160,7 @@ class RepairResultModel:
             "repaired": self.repaired_count,
             "failed": self.failed_count,
             "warnings": self.warning_count,
-            "regeneration_required": (
-                self.regeneration_required
-            ),
+            "regeneration_required": (self.regeneration_required),
         }
 
     # ---------------------------------------------------------
@@ -200,18 +177,10 @@ class RepairResultModel:
         return {
             "module": self.module_name,
             "success": self.repaired,
-            "repaired_items": (
-                self.repaired_count
-            ),
-            "failed_items": (
-                self.failed_count
-            ),
-            "warnings": (
-                self.warning_count
-            ),
-            "regeneration_required": (
-                self.regeneration_required
-            ),
+            "repaired_items": (self.repaired_count),
+            "failed_items": (self.failed_count),
+            "warnings": (self.warning_count),
+            "regeneration_required": (self.regeneration_required),
         }
 
     # ---------------------------------------------------------
@@ -228,19 +197,12 @@ class RepairResultModel:
         return {
             "summary": self.summary(),
             "statistics": self.statistics(),
-            "repaired_items": (
-                list(self.repaired_items)
-            ),
-            "failed_repairs": (
-                list(self.failed_repairs)
-            ),
-            "warnings": (
-                list(self.warnings)
-            ),
-            "metadata": (
-                dict(self.metadata)
-            ),
+            "repaired_items": (list(self.repaired_items)),
+            "failed_repairs": (list(self.failed_repairs)),
+            "warnings": (list(self.warnings)),
+            "metadata": (dict(self.metadata)),
         }
+
     # ---------------------------------------------------------
     # Utility Methods
     # ---------------------------------------------------------
@@ -307,19 +269,11 @@ class RepairResultModel:
         return {
             "module": self.module_name,
             "status": (
-                "REGENERATION_REQUIRED"
-                if self.regeneration_required
-                else "READY"
+                "REGENERATION_REQUIRED" if self.regeneration_required else "READY"
             ),
-            "repaired_items": (
-                self.repaired_count
-            ),
-            "failed_repairs": (
-                self.failed_count
-            ),
-            "warnings": (
-                self.warning_count
-            ),
+            "repaired_items": (self.repaired_count),
+            "failed_repairs": (self.failed_count),
+            "warnings": (self.warning_count),
         }
 
     # ---------------------------------------------------------
@@ -357,17 +311,12 @@ class RepairResultModel:
         return {
             "module": self.module_name,
             "repair_status": (
-                "REGENERATION_REQUIRED"
-                if self.regeneration_required
-                else "COMPLETED"
+                "REGENERATION_REQUIRED" if self.regeneration_required else "COMPLETED"
             ),
-            "successful_repairs": (
-                self.repaired_count
-            ),
-            "failed_repairs": (
-                self.failed_count
-            ),
+            "successful_repairs": (self.repaired_count),
+            "failed_repairs": (self.failed_count),
         }
+
     # ---------------------------------------------------------
     # Repair Information
     # ---------------------------------------------------------
@@ -382,15 +331,9 @@ class RepairResultModel:
         return {
             "module": self.module_name,
             "repaired": self.repaired,
-            "regeneration_required": (
-                self.regeneration_required
-            ),
-            "statistics": (
-                self.statistics()
-            ),
-            "execution": (
-                self.execution_information()
-            ),
+            "regeneration_required": (self.regeneration_required),
+            "statistics": (self.statistics()),
+            "execution": (self.execution_information()),
         }
 
     # ---------------------------------------------------------
@@ -425,8 +368,4 @@ class RepairResultModel:
 
             status = "NO_CHANGES"
 
-        return (
-            f"{self.module_name} - "
-            f"{status}"
-        )
-        
+        return f"{self.module_name} - " f"{status}"

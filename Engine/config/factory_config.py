@@ -30,27 +30,15 @@ RETRY_DELAY_SECONDS = 2
 # -------------------------------------------------
 
 PRODUCTION_ORDERS = [
-
     {
-
         "order_id": "ORDER_001",
-
         "subject": "Physics",
-
         "unit": "P1",
-
         "chapter": "CH1",
-
         "subtopic": "ST4",
-
         "set_no": "S1",
-
         "batch_no": 8,
-
         "question_start": 701,
-
-        "question_count": 100
-
+        "question_count": 100,
     }
-
 ]

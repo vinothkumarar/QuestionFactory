@@ -7,12 +7,11 @@ from builders.question_builder import QuestionBuilder
 from ai.prompt_builder import PromptBuilder
 from ai.provider_factory import ProviderFactory
 
-
 runtime = {
     "current_project": "P1",
     "current_chapter": "CH1",
     "current_subtopic": "ST4",
-    "current_set": "S1"
+    "current_set": "S1",
 }
 
 
@@ -47,10 +46,7 @@ parser = ResponseParser()
 
 ai_data = parser.parse(response)
 
-merged = QuestionMerger().merge(
-    question,
-    ai_data
-)
+merged = QuestionMerger().merge(question, ai_data)
 
 print("=" * 80)
 print("MERGED QUESTION")

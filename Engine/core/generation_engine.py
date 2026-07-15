@@ -25,4 +25,3 @@ class GenerationEngine:
         response = self.provider.generate(prompt)
 
         return response
-        

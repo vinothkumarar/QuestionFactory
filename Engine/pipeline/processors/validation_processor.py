@@ -36,30 +36,18 @@ class ValidationProcessor(PipelineProcessor):
 
         self.validator = ValidationEngine()
 
-    def execute(
-        self,
-        context: PipelineContextModel
-    ) -> PipelineContextModel:
+    def execute(self, context: PipelineContextModel) -> PipelineContextModel:
 
         #
         # Boolean Normalization
         #
 
-        context.question = self.boolean_normalizer.normalize(
-
-            context.question
-
-        )
+        context.question = self.boolean_normalizer.normalize(context.question)
 
         #
         # Validation
         #
 
-        context.validation = self.validator.validate(
-
-            context.question
-
-        )
+        context.validation = self.validator.validate(context.question)
 
         return context
-        

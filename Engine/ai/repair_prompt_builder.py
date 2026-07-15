@@ -6,17 +6,11 @@ Repair Prompt Builder
 
 class RepairPromptBuilder:
 
-    def build(
-        self,
-        question,
-        validation
-    ):
+    def build(self, question, validation):
 
         prompt = []
 
-        prompt.append(
-            "The following generated question failed validation."
-        )
+        prompt.append("The following generated question failed validation.")
 
         prompt.append("")
 
@@ -28,13 +22,10 @@ class RepairPromptBuilder:
 
         prompt.append("")
 
-        prompt.append(
-            "Return ONLY corrected JSON."
-        )
+        prompt.append("Return ONLY corrected JSON.")
 
         prompt.append("")
 
         prompt.append(str(question))
 
         return "\n".join(prompt)
-        

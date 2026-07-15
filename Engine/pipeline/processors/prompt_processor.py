@@ -30,16 +30,8 @@ class PromptProcessor(PipelineProcessor):
 
         self.builder = PromptBuilder()
 
-    def execute(
-        self,
-        context: PipelineContextModel
-    ) -> PipelineContextModel:
+    def execute(self, context: PipelineContextModel) -> PipelineContextModel:
 
-        context.prompt = self.builder.build(
-
-            context.question
-
-        )
+        context.prompt = self.builder.build(context.question)
 
         return context
-        

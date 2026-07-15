@@ -9,14 +9,9 @@ Release   : R1
 
 from validators.csv_validator import CSVValidator
 
-
 validator = CSVValidator()
 
-result = validator.validate(
-
-    "output/questions.csv"
-
-)
+result = validator.validate("output/questions.csv")
 
 print("=" * 80)
 print("CSV VALIDATOR")
@@ -41,4 +36,3 @@ if result.errors:
     for error in result.errors:
 
         print(error)
-        

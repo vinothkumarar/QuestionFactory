@@ -39,4 +39,3 @@ class PipelineStatus:
     COMPLETED = "COMPLETED"
 
     FAILED = "FAILED"
-    

@@ -16,10 +16,10 @@ from __future__ import annotations
 import logging
 from abc import ABC, abstractmethod
 
-
 # ---------------------------------------------------------
 # Provider Interface
 # ---------------------------------------------------------
+
 
 class AIProvider(ABC):
     """
@@ -47,6 +47,7 @@ class AIProvider(ABC):
 # AI Client
 # ---------------------------------------------------------
 
+
 class AIClient:
     """
     Provider-independent AI client.
@@ -57,9 +58,7 @@ class AIClient:
         provider: AIProvider,
     ):
 
-        self.logger = logging.getLogger(
-            self.__class__.__name__
-        )
+        self.logger = logging.getLogger(self.__class__.__name__)
 
         self.provider = provider
 
@@ -81,16 +80,13 @@ class AIClient:
             self.provider.name,
         )
 
-        response = self.provider.generate(
-            prompt
-        )
+        response = self.provider.generate(prompt)
 
-        self.logger.info(
-            "AI response received."
-        )
+        self.logger.info("AI response received.")
 
         return response
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Provider Management
     # ---------------------------------------------------------
 
@@ -140,19 +136,13 @@ class AIClient:
 
         if not isinstance(prompt, str):
 
-            raise TypeError(
-                "Prompt must be a string."
-            )
+            raise TypeError("Prompt must be a string.")
 
         if not prompt.strip():
 
-            raise ValueError(
-                "Prompt cannot be empty."
-            )
+            raise ValueError("Prompt cannot be empty.")
 
-        self.logger.info(
-            "Prompt validation successful."
-        )
+        self.logger.info("Prompt validation successful.")
 
     # ---------------------------------------------------------
     # Lifecycle Hooks
@@ -199,17 +189,11 @@ class AIClient:
         Convenience wrapper around generate().
         """
 
-        self.validate_prompt(
-            prompt
-        )
+        self.validate_prompt(prompt)
 
-        self.before_generation(
-            prompt
-        )
+        self.before_generation(prompt)
 
-        response = self.generate(
-            prompt
-        )
+        response = self.generate(prompt)
 
         self.after_generation(
             prompt,
@@ -217,7 +201,8 @@ class AIClient:
         )
 
         return response
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Response Validation
     # ---------------------------------------------------------
 
@@ -231,19 +216,13 @@ class AIClient:
 
         if not isinstance(response, str):
 
-            raise TypeError(
-                "AI response must be a string."
-            )
+            raise TypeError("AI response must be a string.")
 
         if not response.strip():
 
-            raise ValueError(
-                "AI response is empty."
-            )
+            raise ValueError("AI response is empty.")
 
-        self.logger.info(
-            "AI response validation successful."
-        )
+        self.logger.info("AI response validation successful.")
 
     # ---------------------------------------------------------
     # Statistics
@@ -339,7 +318,8 @@ class AIClient:
             "provider": self.provider_name,
             "status": "READY",
         }
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Capabilities
     # ---------------------------------------------------------
 
@@ -401,7 +381,4 @@ class AIClient:
         )
 
     def __str__(self) -> str:
-        return (
-            f"{self.component_name} "
-            f"[{self.provider_name}]"
-        )
+        return f"{self.component_name} " f"[{self.provider_name}]"

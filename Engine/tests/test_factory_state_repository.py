@@ -5,7 +5,6 @@ Factory State Repository Test
 
 from repositories.factory_state_repository import FactoryStateRepository
 
-
 repository = FactoryStateRepository()
 
 state = repository.load()

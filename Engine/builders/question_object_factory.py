@@ -18,9 +18,6 @@ class QuestionObjectFactory:
         for field in SchemaManager.get_schema():
             question[field] = None
 
-        question.update(
-            SchemaManager.get_defaults()
-        )
+        question.update(SchemaManager.get_defaults())
 
         return question
-        

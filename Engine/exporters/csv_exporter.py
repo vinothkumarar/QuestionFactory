@@ -17,11 +17,7 @@ class CSVExporter:
         self.folder_manager = FolderManager()
         self.file_name_generator = FileNameGenerator()
 
-    def export(
-        self,
-        report,
-        runtime: dict
-    ):
+    def export(self, report, runtime: dict):
 
         if not report.results:
 
@@ -34,17 +30,13 @@ class CSVExporter:
 
         first_question = report.results[0]["question"]
 
-        output_folder = self.folder_manager.create_output_folder(
-            first_question
-        )
+        output_folder = self.folder_manager.create_output_folder(first_question)
 
         # ----------------------------------------
         # Generate filename
         # ----------------------------------------
 
-        file_name = self.file_name_generator.generate(
-            runtime
-        )
+        file_name = self.file_name_generator.generate(runtime)
 
         output_file = output_folder / file_name
 
@@ -56,9 +48,7 @@ class CSVExporter:
 
         for result in report.results:
 
-            rows.append(
-                result["question"]
-            )
+            rows.append(result["question"])
 
         fieldnames = list(rows[0].keys())
 
@@ -66,17 +56,10 @@ class CSVExporter:
         # Write CSV
         # ----------------------------------------
 
-        with open(
-            output_file,
-            "w",
-            newline="",
-            encoding="utf-8"
-        ) as csvfile:
+        with open(output_file, "w", newline="", encoding="utf-8") as csvfile:
 
             writer = csv.DictWriter(
-                csvfile,
-                fieldnames=fieldnames,
-                extrasaction="ignore"
+                csvfile, fieldnames=fieldnames, extrasaction="ignore"
             )
 
             writer.writeheader()
@@ -90,4 +73,3 @@ class CSVExporter:
         print(output_file.resolve())
 
         return output_file
-        

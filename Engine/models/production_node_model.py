@@ -27,10 +27,10 @@ from datetime import datetime
 from typing import Any, Dict
 import uuid
 
-
 # ---------------------------------------------------------
 # Production Location
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class ProductionLocation:
@@ -52,6 +52,7 @@ class ProductionLocation:
 # Question Range
 # ---------------------------------------------------------
 
+
 @dataclass(slots=True)
 class QuestionRange:
 
@@ -65,6 +66,7 @@ class QuestionRange:
 # ---------------------------------------------------------
 # Execution Information
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class ExecutionInfo:
@@ -85,8 +87,11 @@ class ExecutionInfo:
 
     completed_at: str = ""
     # ---------------------------------------------------------
+
+
 # Quality Information
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class QualityInfo:
@@ -118,15 +123,14 @@ class QualityInfo:
 # Node Metadata
 # ---------------------------------------------------------
 
+
 @dataclass(slots=True)
 class NodeMetadata:
     """
     Additional metadata describing the production order.
     """
 
-    node_id: str = field(
-        default_factory=lambda: str(uuid.uuid4())
-    )
+    node_id: str = field(default_factory=lambda: str(uuid.uuid4()))
 
     production_node: str = ""
 
@@ -136,20 +140,17 @@ class NodeMetadata:
 
     factory_version: str = "2.0.0"
 
-    created_at: str = field(
-        default_factory=lambda: datetime.utcnow().isoformat()
-    )
+    created_at: str = field(default_factory=lambda: datetime.utcnow().isoformat())
 
     created_by: str = "ProductionScheduler"
 
-    tags: Dict[str, Any] = field(
-        default_factory=dict
-    )
+    tags: Dict[str, Any] = field(default_factory=dict)
 
 
 # ---------------------------------------------------------
 # Production Node
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class ProductionNodeModel:
@@ -161,25 +162,15 @@ class ProductionNodeModel:
     manufacturing lifecycle.
     """
 
-    location: ProductionLocation = field(
-        default_factory=ProductionLocation
-    )
+    location: ProductionLocation = field(default_factory=ProductionLocation)
 
-    question_range: QuestionRange = field(
-        default_factory=QuestionRange
-    )
+    question_range: QuestionRange = field(default_factory=QuestionRange)
 
-    execution: ExecutionInfo = field(
-        default_factory=ExecutionInfo
-    )
+    execution: ExecutionInfo = field(default_factory=ExecutionInfo)
 
-    quality: QualityInfo = field(
-        default_factory=QualityInfo
-    )
+    quality: QualityInfo = field(default_factory=QualityInfo)
 
-    metadata: NodeMetadata = field(
-        default_factory=NodeMetadata
-    )
+    metadata: NodeMetadata = field(default_factory=NodeMetadata)
 
     status: str = "PLANNED"
 
@@ -193,8 +184,8 @@ class ProductionNodeModel:
 
     repair_cycles: int = 0
     # ---------------------------------------------------------
-# Production Node Operations
-# ---------------------------------------------------------
+    # Production Node Operations
+    # ---------------------------------------------------------
 
     def start(self) -> None:
         """
@@ -204,9 +195,7 @@ class ProductionNodeModel:
         self.status = "RUNNING"
         self.current_stage = "MANUFACTURING"
 
-        self.execution.started_at = (
-            datetime.utcnow().isoformat()
-        )
+        self.execution.started_at = datetime.utcnow().isoformat()
 
     def complete(self) -> None:
         """
@@ -216,9 +205,7 @@ class ProductionNodeModel:
         self.status = "COMPLETED"
         self.current_stage = "FINISHED"
 
-        self.execution.completed_at = (
-            datetime.utcnow().isoformat()
-        )
+        self.execution.completed_at = datetime.utcnow().isoformat()
 
     def fail(self) -> None:
         """
@@ -278,11 +265,7 @@ class ProductionNodeModel:
         Number of questions requested for this node.
         """
 
-        return (
-            self.question_range.question_to
-            - self.question_range.question_from
-            + 1
-        )
+        return self.question_range.question_to - self.question_range.question_from + 1
 
     @property
     def production_node(self) -> str:
@@ -343,21 +326,11 @@ class ProductionNodeModel:
         """
 
         return cls(
-            location=ProductionLocation(
-                **payload.get("location", {})
-            ),
-            question_range=QuestionRange(
-                **payload.get("question_range", {})
-            ),
-            execution=ExecutionInfo(
-                **payload.get("execution", {})
-            ),
-            quality=QualityInfo(
-                **payload.get("quality", {})
-            ),
-            metadata=NodeMetadata(
-                **payload.get("metadata", {})
-            ),
+            location=ProductionLocation(**payload.get("location", {})),
+            question_range=QuestionRange(**payload.get("question_range", {})),
+            execution=ExecutionInfo(**payload.get("execution", {})),
+            quality=QualityInfo(**payload.get("quality", {})),
+            metadata=NodeMetadata(**payload.get("metadata", {})),
             status=payload.get(
                 "status",
                 "PLANNED",
@@ -411,4 +384,3 @@ class ProductionNodeModel:
             f"status='{self.status}', "
             f"stage='{self.current_stage}')"
         )
-        

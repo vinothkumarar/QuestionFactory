@@ -25,9 +25,7 @@ class OpenAIProvider:
         api_key = os.getenv("OPENAI_API_KEY")
 
         if not api_key:
-            raise RuntimeError(
-                "OPENAI_API_KEY not found."
-            )
+            raise RuntimeError("OPENAI_API_KEY not found.")
 
         self.client = OpenAI(api_key=api_key)
 
@@ -36,16 +34,13 @@ class OpenAIProvider:
         try:
 
             response = self.client.responses.create(
-                model=self.config["model"],
-                input=prompt
+                model=self.config["model"], input=prompt
             )
 
             return response.output_text
 
         except AuthenticationError:
-            raise RuntimeError(
-                "OpenAI authentication failed. Check your API key."
-            )
+            raise RuntimeError("OpenAI authentication failed. Check your API key.")
 
         except RateLimitError:
             raise RuntimeError(
@@ -53,13 +48,7 @@ class OpenAIProvider:
             )
 
         except APIConnectionError:
-            raise RuntimeError(
-                "Unable to connect to OpenAI."
-            )
+            raise RuntimeError("Unable to connect to OpenAI.")
 
         except Exception as ex:
-            raise RuntimeError(
-                f"OpenAI Error: {ex}"
-            )
-            
-                 
+            raise RuntimeError(f"OpenAI Error: {ex}")

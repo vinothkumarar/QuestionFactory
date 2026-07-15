@@ -27,8 +27,7 @@ class IdentityValidator:
             errors.append("question_code format is invalid")
 
         return {
-    "validator": "IdentityValidator",
-    "passed": len(errors) == 0,
-    "errors": errors
-}
-        
+            "validator": "IdentityValidator",
+            "passed": len(errors) == 0,
+            "errors": errors,
+        }

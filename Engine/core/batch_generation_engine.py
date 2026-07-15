@@ -18,19 +18,11 @@ class BatchGenerationEngine:
         report = BatchReport()
 
         for question_number in range(
-            job.start_question,
-            job.start_question + job.count
+            job.start_question, job.start_question + job.count
         ):
 
-            question, validation = self.pipeline.generate(
-                job.runtime,
-                question_number
-            )
+            question, validation = self.pipeline.generate(job.runtime, question_number)
 
-            report.add_result(
-                question,
-                validation
-            )
+            report.add_result(question, validation)
 
         return report
-        

@@ -15,33 +15,21 @@ class ValidationEngine:
     def __init__(self):
 
         self.validators = [
-
             SchemaValidator(),
-
             RequiredFieldValidator(),
-
             MetadataValidator(),
-
             IdentityValidator(),
-
-            DifficultyValidator()
-
+            DifficultyValidator(),
         ]
 
     def validate(self, question):
 
         report = {
-
             "passed": True,
-
             "total_validators": len(self.validators),
-
             "passed_validators": 0,
-
             "failed_validators": 0,
-
-            "errors": []
-
+            "errors": [],
         }
 
         for validator in self.validators:
@@ -58,9 +46,6 @@ class ValidationEngine:
 
                 report["failed_validators"] += 1
 
-                report["errors"].extend(
-                    result["errors"]
-                )
+                report["errors"].extend(result["errors"])
 
         return report
-        

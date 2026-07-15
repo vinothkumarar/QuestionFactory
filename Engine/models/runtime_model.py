@@ -24,10 +24,10 @@ from dataclasses import dataclass, field, asdict
 from datetime import datetime
 from typing import Any, Dict
 
-
 # ---------------------------------------------------------
 # Factory
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class FactoryStateModel:
@@ -51,6 +51,7 @@ class FactoryStateModel:
 # ---------------------------------------------------------
 # Production
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class ProductionStateModel:
@@ -80,8 +81,11 @@ class ProductionStateModel:
 
     batch_id: str = ""
     # ---------------------------------------------------------
+
+
 # Statistics
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class StatisticsModel:
@@ -112,6 +116,7 @@ class StatisticsModel:
 # ---------------------------------------------------------
 # History
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class HistoryModel:
@@ -147,6 +152,7 @@ class HistoryModel:
 # Recovery
 # ---------------------------------------------------------
 
+
 @dataclass(slots=True)
 class RecoveryModel:
     """
@@ -178,42 +184,29 @@ class RecoveryModel:
 # Runtime Root
 # ---------------------------------------------------------
 
+
 @dataclass(slots=True)
 class RuntimeModel:
     """
     Root runtime model shared across the factory.
     """
 
-    factory: FactoryStateModel = field(
-        default_factory=FactoryStateModel
-    )
+    factory: FactoryStateModel = field(default_factory=FactoryStateModel)
 
-    production: ProductionStateModel = field(
-        default_factory=ProductionStateModel
-    )
+    production: ProductionStateModel = field(default_factory=ProductionStateModel)
 
-    statistics: StatisticsModel = field(
-        default_factory=StatisticsModel
-    )
+    statistics: StatisticsModel = field(default_factory=StatisticsModel)
 
-    history: HistoryModel = field(
-        default_factory=HistoryModel
-    )
+    history: HistoryModel = field(default_factory=HistoryModel)
 
-    recovery: RecoveryModel = field(
-        default_factory=RecoveryModel
-    )
+    recovery: RecoveryModel = field(default_factory=RecoveryModel)
 
-    created_at: str = field(
-        default_factory=lambda: datetime.utcnow().isoformat()
-    )
+    created_at: str = field(default_factory=lambda: datetime.utcnow().isoformat())
 
-    updated_at: str = field(
-        default_factory=lambda: datetime.utcnow().isoformat()
-    )
+    updated_at: str = field(default_factory=lambda: datetime.utcnow().isoformat())
     # ---------------------------------------------------------
-# Runtime Operations
-# ---------------------------------------------------------
+    # Runtime Operations
+    # ---------------------------------------------------------
 
     def touch(self) -> None:
         """
@@ -324,21 +317,11 @@ class RuntimeModel:
         """
 
         return cls(
-            factory=FactoryStateModel(
-                **data.get("factory", {})
-            ),
-            production=ProductionStateModel(
-                **data.get("production", {})
-            ),
-            statistics=StatisticsModel(
-                **data.get("statistics", {})
-            ),
-            history=HistoryModel(
-                **data.get("history", {})
-            ),
-            recovery=RecoveryModel(
-                **data.get("recovery", {})
-            ),
+            factory=FactoryStateModel(**data.get("factory", {})),
+            production=ProductionStateModel(**data.get("production", {})),
+            statistics=StatisticsModel(**data.get("statistics", {})),
+            history=HistoryModel(**data.get("history", {})),
+            recovery=RecoveryModel(**data.get("recovery", {})),
             created_at=data.get(
                 "created_at",
                 datetime.utcnow().isoformat(),
@@ -393,4 +376,3 @@ class RuntimeModel:
             f"node='{self.production.production_node}', "
             f"batch='{self.production.batch_id}')"
         )
-        

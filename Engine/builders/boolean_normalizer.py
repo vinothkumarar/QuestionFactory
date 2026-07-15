@@ -12,78 +12,27 @@ Normalizes AI generated boolean values.
 
 class BooleanNormalizer:
 
-    BOOLEAN_FIELDS = [
+    BOOLEAN_FIELDS = ["pyq_inspired", "image_required", "has_diagram", "latex_required"]
 
-        "pyq_inspired",
-
-        "image_required",
-
-        "has_diagram",
-
-        "latex_required"
-
-    ]
-
-    TRUE_VALUES = {
-
-        True,
-
-        "true",
-
-        "True",
-
-        "TRUE",
-
-        "yes",
-
-        "Yes",
-
-        "YES",
-
-        "y",
-
-        "Y",
-
-        "1",
-
-        1
-
-    }
+    TRUE_VALUES = {True, "true", "True", "TRUE", "yes", "Yes", "YES", "y", "Y", "1", 1}
 
     FALSE_VALUES = {
-
         False,
-
         "false",
-
         "False",
-
         "FALSE",
-
         "no",
-
         "No",
-
         "NO",
-
         "n",
-
         "N",
-
         "0",
-
         0,
-
         None,
-
-        ""
-
+        "",
     }
 
-    def normalize(
-        self,
-        question: dict
-    ) -> dict:
+    def normalize(self, question: dict) -> dict:
 
         for field in self.BOOLEAN_FIELDS:
 
@@ -107,4 +56,3 @@ class BooleanNormalizer:
                 question[field] = False
 
         return question
-        

@@ -16,10 +16,6 @@ class RuntimeRepository:
 
         return self.manager.load()
 
-    def save_runtime(
-        self,
-        runtime: dict
-    ):
+    def save_runtime(self, runtime: dict):
 
         self.manager.save(runtime)
-        

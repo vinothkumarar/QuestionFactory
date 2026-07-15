@@ -12,14 +12,6 @@ class ExportEngine:
 
         self.csv_exporter = CSVExporter()
 
-    def export_csv(
-        self,
-        report,
-        runtime: dict
-    ):
+    def export_csv(self, report, runtime: dict):
 
-        return self.csv_exporter.export(
-            report,
-            runtime
-        )
-            
+        return self.csv_exporter.export(report, runtime)

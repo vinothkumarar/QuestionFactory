@@ -11,10 +11,7 @@ from abc import ABC, abstractmethod
 class AIProvider(ABC):
 
     @abstractmethod
-    def generate(
-        self,
-        prompt: str
-    ) -> str:
+    def generate(self, prompt: str) -> str:
         """
         Generate AI response.
 
@@ -22,4 +19,3 @@ class AIProvider(ABC):
             str
         """
         pass
-        

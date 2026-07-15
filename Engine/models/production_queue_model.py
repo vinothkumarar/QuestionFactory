@@ -19,11 +19,8 @@ class ProductionQueueModel:
 
     request: ProductionRequestModel
 
-    orders: list[ProductionOrderModel] = field(
-        default_factory=list
-    )
+    orders: list[ProductionOrderModel] = field(default_factory=list)
 
     total_batches: int = 0
 
     total_questions: int = 0
-    

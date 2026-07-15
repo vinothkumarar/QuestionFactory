@@ -16,18 +16,12 @@ class ContractManager:
     def __init__(self):
 
         self.contract_path = (
-            Path(__file__).parent.parent
-            / "schema"
-            / "question_contract_v1.json"
+            Path(__file__).parent.parent / "schema" / "question_contract_v1.json"
         )
 
     def load(self):
 
-        with open(
-            self.contract_path,
-            "r",
-            encoding="utf-8"
-        ) as f:
+        with open(self.contract_path, "r", encoding="utf-8") as f:
 
             return json.load(f)
 
@@ -97,4 +91,3 @@ class ContractManager:
         lines.append("Return ONLY the final validated JSON object.")
 
         return "\n".join(lines)
-        

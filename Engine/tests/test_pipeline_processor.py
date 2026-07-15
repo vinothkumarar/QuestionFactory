@@ -21,10 +21,7 @@ class DummyProcessor(PipelineProcessor):
 
     description = "Testing PipelineProcessor."
 
-    def execute(
-        self,
-        context: PipelineContextModel
-    ) -> PipelineContextModel:
+    def execute(self, context: PipelineContextModel) -> PipelineContextModel:
 
         print(f"Executing : {self.name}")
 
@@ -32,40 +29,22 @@ class DummyProcessor(PipelineProcessor):
 
 
 order = ProductionOrderModel(
-
     order_id="ORDER_TEST",
-
     subject="Physics",
-
     unit="P1",
-
     chapter="CH1",
-
     subtopic="ST4",
-
     set_no="S1",
-
     batch_no=1,
-
     question_start=1,
-
-    question_count=1
-
+    question_count=1,
 )
 
-context = PipelineContextModel(
-
-    production_order=order
-
-)
+context = PipelineContextModel(production_order=order)
 
 processor = DummyProcessor()
 
-result = processor.execute(
-
-    context
-
-)
+result = processor.execute(context)
 
 print("=" * 80)
 print("PIPELINE PROCESSOR")

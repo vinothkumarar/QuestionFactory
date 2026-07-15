@@ -9,25 +9,16 @@ Release   : R3
 Runs an entire Production Plan automatically.
 """
 
-from scheduler.production_scheduler import (
-    ProductionScheduler
-)
+from scheduler.production_scheduler import ProductionScheduler
 
-from factory.factory_runner import (
-    FactoryRunner
-)
+from factory.factory_runner import FactoryRunner
 
-from repositories.factory_state_repository import (
-    FactoryStateRepository
-)
+from repositories.factory_state_repository import FactoryStateRepository
 
-from models.production_plan_model import (
-    ProductionPlanModel
-)
+from models.production_plan_model import ProductionPlanModel
 
 
 class AutonomousFactory:
-
     """
     Autonomous Manufacturing Controller
 
@@ -45,14 +36,9 @@ class AutonomousFactory:
 
         self.runner = FactoryRunner()
 
-        self.state_repository = (
-            FactoryStateRepository()
-        )
+        self.state_repository = FactoryStateRepository()
 
-    def execute(
-        self,
-        plan: ProductionPlanModel
-    ):
+    def execute(self, plan: ProductionPlanModel):
 
         print("=" * 80)
         print("QUESTION FACTORY OS")
@@ -63,18 +49,11 @@ class AutonomousFactory:
 
         print("Loading Production Plan...")
 
-        requests = self.scheduler.build_schedule(
-            plan
-        )
+        requests = self.scheduler.build_schedule(plan)
 
-        print(
-            f"Total Batches    : {len(requests)}"
-        )
+        print(f"Total Batches    : {len(requests)}")
 
-        print(
-            f"Questions/Batch  : "
-            f"{plan.questions_per_batch}"
-        )
+        print(f"Questions/Batch  : " f"{plan.questions_per_batch}")
 
         print()
 
@@ -89,18 +68,14 @@ class AutonomousFactory:
             print()
 
             print("=" * 80)
-            print(
-                f"Starting Batch {request.batch_no}"
-            )
+            print(f"Starting Batch {request.batch_no}")
             print("=" * 80)
 
             #
             # Execute Factory
             #
 
-            generated = self.runner.run(
-                production_request=request
-            )
+            generated = self.runner.run(production_request=request)
 
             total_questions += generated
 
@@ -114,17 +89,13 @@ class AutonomousFactory:
 
                 print()
 
-                print(
-                    f"Batch {request.batch_no} failed."
-                )
+                print(f"Batch {request.batch_no} failed.")
 
                 if plan.stop_on_failure:
 
                     print()
 
-                    print(
-                        "Stopping Production..."
-                    )
+                    print("Stopping Production...")
 
                     break
 
@@ -136,38 +107,22 @@ class AutonomousFactory:
 
         print()
 
-        print(
-            f"Completed Batches : "
-            f"{completed_batches}"
-        )
+        print(f"Completed Batches : " f"{completed_batches}")
 
-        print(
-            f"Failed Batches    : "
-            f"{failed_batches}"
-        )
+        print(f"Failed Batches    : " f"{failed_batches}")
 
-        print(
-            f"Questions Created : "
-            f"{total_questions}"
-        )
+        print(f"Questions Created : " f"{total_questions}")
 
         print()
 
         state = self.state_repository.load()
 
-        print(
-            f"Current Batch     : "
-            f"{state.current_batch}"
-        )
+        print(f"Current Batch     : " f"{state.current_batch}")
 
-        print(
-            f"Factory Status    : "
-            f"{state.status}"
-        )
+        print(f"Factory Status    : " f"{state.status}")
 
         print()
 
         print("AUTONOMOUS RUN COMPLETED")
 
         return total_questions
-        

@@ -38,22 +38,16 @@ class ValidationResultModel:
     # Findings
     # ---------------------------------------------------------
 
-    errors: List[str] = field(
-        default_factory=list
-    )
+    errors: List[str] = field(default_factory=list)
 
-    warnings: List[str] = field(
-        default_factory=list
-    )
+    warnings: List[str] = field(default_factory=list)
 
     # ---------------------------------------------------------
     # Metadata
     # ---------------------------------------------------------
 
-    metadata: Dict = field(
-        default_factory=dict
-    )
-        # ---------------------------------------------------------
+    metadata: Dict = field(default_factory=dict)
+    # ---------------------------------------------------------
     # Result Management
     # ---------------------------------------------------------
 
@@ -65,9 +59,7 @@ class ValidationResultModel:
         Add a validation error.
         """
 
-        self.errors.append(
-            message
-        )
+        self.errors.append(message)
 
         self.success = False
 
@@ -79,9 +71,7 @@ class ValidationResultModel:
         Add a validation warning.
         """
 
-        self.warnings.append(
-            message
-        )
+        self.warnings.append(message)
 
     def clear_errors(
         self,
@@ -134,15 +124,9 @@ class ValidationResultModel:
             "validator_name": self.validator_name,
             "rule_code": self.rule_code,
             "success": self.success,
-            "errors": list(
-                self.errors
-            ),
-            "warnings": list(
-                self.warnings
-            ),
-            "metadata": dict(
-                self.metadata
-            ),
+            "errors": list(self.errors),
+            "warnings": list(self.warnings),
+            "metadata": dict(self.metadata),
         }
 
     @classmethod
@@ -186,7 +170,8 @@ class ValidationResultModel:
                 )
             ),
         )
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Copy Support
     # ---------------------------------------------------------
 
@@ -197,9 +182,7 @@ class ValidationResultModel:
         Create a deep copy of the validation result.
         """
 
-        return ValidationResultModel.from_dict(
-            self.to_dict()
-        )
+        return ValidationResultModel.from_dict(self.to_dict())
 
     # ---------------------------------------------------------
     # State Inspection
@@ -230,10 +213,7 @@ class ValidationResultModel:
         Determine whether validation succeeded.
         """
 
-        return (
-            self.success
-            and not self.has_errors()
-        )
+        return self.success and not self.has_errors()
 
     def is_failed(
         self,
@@ -256,15 +236,9 @@ class ValidationResultModel:
         """
 
         return {
-            "error_count": len(
-                self.errors
-            ),
-            "warning_count": len(
-                self.warnings
-            ),
-            "metadata_count": len(
-                self.metadata
-            ),
+            "error_count": len(self.errors),
+            "warning_count": len(self.warnings),
+            "metadata_count": len(self.metadata),
         }
 
     # ---------------------------------------------------------
@@ -329,7 +303,8 @@ class ValidationResultModel:
             key,
             default,
         )
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Summary
     # ---------------------------------------------------------
 
@@ -362,9 +337,7 @@ class ValidationResultModel:
         return {
             "summary": self.summary(),
             "statistics": self.statistics(),
-            "metadata": dict(
-                self.metadata
-            ),
+            "metadata": dict(self.metadata),
         }
 
     # ---------------------------------------------------------
@@ -406,11 +379,7 @@ class ValidationResultModel:
             "component": self.component_name,
             "version": self.version,
             "validator": self.validator_name,
-            "status": (
-                "PASSED"
-                if self.is_successful()
-                else "FAILED"
-            ),
+            "status": ("PASSED" if self.is_successful() else "FAILED"),
         }
 
     # ---------------------------------------------------------
@@ -463,7 +432,8 @@ class ValidationResultModel:
         self.warnings.clear()
 
         self.metadata.clear()
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Information
     # ---------------------------------------------------------
 
@@ -503,11 +473,7 @@ class ValidationResultModel:
         self,
     ) -> str:
 
-        status = (
-            "PASSED"
-            if self.is_successful()
-            else "FAILED"
-        )
+        status = "PASSED" if self.is_successful() else "FAILED"
 
         return (
             f"{self.rule_code} | "
@@ -515,4 +481,3 @@ class ValidationResultModel:
             f"Errors={self.error_count} | "
             f"Warnings={self.warning_count}"
         )
-        

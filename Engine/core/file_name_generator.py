@@ -6,10 +6,7 @@ File Name Generator
 
 class FileNameGenerator:
 
-    def generate(
-        self,
-        runtime: dict
-    ) -> str:
+    def generate(self, runtime: dict) -> str:
 
         project = runtime["current_project"]
 
@@ -19,16 +16,6 @@ class FileNameGenerator:
 
         set_no = runtime["current_set"]
 
-        batch = runtime.get(
-            "current_batch",
-            1
-        )
+        batch = runtime.get("current_batch", 1)
 
-        return (
-            f"{project}_"
-            f"{chapter}_"
-            f"{subtopic}_"
-            f"{set_no}_"
-            f"B{batch}.csv"
-        )
-        
+        return f"{project}_" f"{chapter}_" f"{subtopic}_" f"{set_no}_" f"B{batch}.csv"

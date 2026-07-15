@@ -9,10 +9,7 @@ Release   : R2
 
 from core.factory_state_manager import FactoryStateManager
 
-from repositories.factory_state_repository import (
-    FactoryStateRepository
-)
-
+from repositories.factory_state_repository import FactoryStateRepository
 
 manager = FactoryStateManager()
 
@@ -36,15 +33,9 @@ print()
 print("Question Range")
 print("-" * 80)
 
-print(
-    "Start :",
-    manager.get_question_start(state)
-)
+print("Start :", manager.get_question_start(state))
 
-print(
-    "End   :",
-    manager.get_question_end(state)
-)
+print("End   :", manager.get_question_end(state))
 
 print()
 
@@ -73,15 +64,9 @@ print()
 print("Question Range After Batch Completion")
 print("-" * 80)
 
-print(
-    "Start :",
-    manager.get_question_start(state)
-)
+print("Start :", manager.get_question_start(state))
 
-print(
-    "End   :",
-    manager.get_question_end(state)
-)
+print("End   :", manager.get_question_end(state))
 
 print()
 

@@ -50,4 +50,3 @@ class PipelineContextModel:
     status: str | None = None
 
     error_message: str | None = None
-    

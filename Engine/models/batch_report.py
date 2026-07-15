@@ -16,11 +16,7 @@ class BatchReport:
 
         self.results = []
 
-    def add_result(
-        self,
-        question,
-        validation
-    ):
+    def add_result(self, question, validation):
 
         self.total += 1
 
@@ -29,13 +25,7 @@ class BatchReport:
         else:
             self.failed += 1
 
-        self.results.append({
-
-            "question": question,
-
-            "validation": validation
-
-        })
+        self.results.append({"question": question, "validation": validation})
 
     def summary(self):
 
@@ -43,22 +33,11 @@ class BatchReport:
 
         if self.total > 0:
 
-            success_rate = (
-                self.passed / self.total
-            ) * 100
+            success_rate = (self.passed / self.total) * 100
 
         return {
-
             "total": self.total,
-
             "passed": self.passed,
-
             "failed": self.failed,
-
-            "success_rate": round(
-                success_rate,
-                2
-            )
-
+            "success_rate": round(success_rate, 2),
         }
-        

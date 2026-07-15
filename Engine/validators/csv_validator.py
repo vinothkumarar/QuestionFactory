@@ -9,9 +9,7 @@ Release   : R1
 
 import csv
 
-from models.csv_validation_result_model import (
-    CSVValidationResultModel
-)
+from models.csv_validation_result_model import CSVValidationResultModel
 
 from schema.question_schema import EXPORT_COLUMNS
 
@@ -19,39 +17,18 @@ from schema.question_schema import EXPORT_COLUMNS
 class CSVValidator:
 
     REQUIRED_FIELDS = [
-
         "question_code",
-
         "question_text",
-
         "option_a",
-
         "option_b",
-
         "option_c",
-
         "option_d",
-
-        "correct_option"
-
+        "correct_option",
     ]
 
-    VALID_OPTIONS = {
+    VALID_OPTIONS = {"A", "B", "C", "D"}
 
-        "A",
-
-        "B",
-
-        "C",
-
-        "D"
-
-    }
-
-    def validate(
-        self,
-        csv_file
-    ) -> CSVValidationResultModel:
+    def validate(self, csv_file) -> CSVValidationResultModel:
 
         result = CSVValidationResultModel()
 
@@ -59,11 +36,7 @@ class CSVValidator:
 
         questions = set()
 
-        with open(
-            csv_file,
-            newline="",
-            encoding="utf-8"
-        ) as file:
+        with open(csv_file, newline="", encoding="utf-8") as file:
 
             reader = csv.DictReader(file)
 
@@ -75,14 +48,9 @@ class CSVValidator:
 
                 result.passed = False
 
-                result.errors.append(
-                    "CSV header does not match QUESTION_SCHEMA."
-                )
+                result.errors.append("CSV header does not match QUESTION_SCHEMA.")
 
-            for row_number, row in enumerate(
-                reader,
-                start=2
-            ):
+            for row_number, row in enumerate(reader, start=2):
 
                 result.total_rows += 1
 
@@ -94,11 +62,7 @@ class CSVValidator:
 
                     if not row.get(field, "").strip():
 
-                        result.errors.append(
-
-                            f"Row {row_number}: Missing {field}"
-
-                        )
+                        result.errors.append(f"Row {row_number}: Missing {field}")
 
                 #
                 # Duplicate question_code
@@ -109,9 +73,7 @@ class CSVValidator:
                 if code in codes:
 
                     result.errors.append(
-
                         f"Row {row_number}: Duplicate question_code {code}"
-
                     )
 
                 codes.add(code)
@@ -124,11 +86,7 @@ class CSVValidator:
 
                 if text in questions:
 
-                    result.errors.append(
-
-                        f"Row {row_number}: Duplicate question_text"
-
-                    )
+                    result.errors.append(f"Row {row_number}: Duplicate question_text")
 
                 questions.add(text)
 
@@ -138,19 +96,10 @@ class CSVValidator:
 
                 if row["correct_option"] not in self.VALID_OPTIONS:
 
-                    result.errors.append(
-
-                        f"Row {row_number}: Invalid correct_option"
-
-                    )
+                    result.errors.append(f"Row {row_number}: Invalid correct_option")
 
         result.total_errors = len(result.errors)
 
-        result.passed = (
-
-            result.total_errors == 0
-
-        )
+        result.passed = result.total_errors == 0
 
         return result
-        

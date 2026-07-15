@@ -42,13 +42,10 @@ class BlueprintLoader:
         blueprint_directory: Optional[Path] = None,
     ):
 
-        self.logger = logging.getLogger(
-            self.__class__.__name__
-        )
+        self.logger = logging.getLogger(self.__class__.__name__)
 
         self.blueprint_directory = (
-            blueprint_directory
-            or self.DEFAULT_BLUEPRINT_DIRECTORY
+            blueprint_directory or self.DEFAULT_BLUEPRINT_DIRECTORY
         )
 
         self.compiler = BlueprintCompiler()
@@ -66,32 +63,25 @@ class BlueprintLoader:
 
         if self._cache is not None:
 
-            self.logger.info(
-                "Using cached blueprint."
-            )
+            self.logger.info("Using cached blueprint.")
 
             return self._cache
 
         markdown_files = self._discover()
 
-        markdown_content = self._read_files(
-            markdown_files
-        )
+        markdown_content = self._read_files(markdown_files)
 
-        blueprint = self.compiler.compile(
-            markdown_content
-        )
+        blueprint = self.compiler.compile(markdown_content)
 
         self.validate(blueprint)
 
         self._cache = blueprint
 
-        self.logger.info(
-            "Blueprint successfully loaded."
-        )
+        self.logger.info("Blueprint successfully loaded.")
 
         return blueprint
-            # -----------------------------------------------------
+        # -----------------------------------------------------
+
     # Blueprint Discovery
     # -----------------------------------------------------
 
@@ -105,18 +95,13 @@ class BlueprintLoader:
 
         if not self.blueprint_directory.exists():
             raise FileNotFoundError(
-                f"Blueprint directory not found: "
-                f"{self.blueprint_directory}"
+                f"Blueprint directory not found: " f"{self.blueprint_directory}"
             )
 
-        files = sorted(
-            self.blueprint_directory.glob("*.md")
-        )
+        files = sorted(self.blueprint_directory.glob("*.md"))
 
         if not files:
-            raise FileNotFoundError(
-                "No blueprint markdown files found."
-            )
+            raise FileNotFoundError("No blueprint markdown files found.")
 
         self._verify_required_files(files)
 
@@ -155,25 +140,18 @@ class BlueprintLoader:
             "13_RUNTIME_BEHAVIOR.md",
         ]
 
-        discovered = {
-            file.name for file in files
-        }
+        discovered = {file.name for file in files}
 
         missing = [
-            filename
-            for filename in required_files
-            if filename not in discovered
+            filename for filename in required_files if filename not in discovered
         ]
 
         if missing:
             raise RuntimeError(
-                "Blueprint is incomplete. Missing file(s): "
-                f"{', '.join(missing)}"
+                "Blueprint is incomplete. Missing file(s): " f"{', '.join(missing)}"
             )
 
-        self.logger.info(
-            "Blueprint integrity verification passed."
-        )
+        self.logger.info("Blueprint integrity verification passed.")
 
     # -----------------------------------------------------
     # Blueprint Reading
@@ -214,7 +192,8 @@ class BlueprintLoader:
         )
 
         return documents
-            # -----------------------------------------------------
+        # -----------------------------------------------------
+
     # Validation
     # -----------------------------------------------------
 
@@ -232,21 +211,15 @@ class BlueprintLoader:
         """
 
         if blueprint is None:
-            raise ValueError(
-                "Blueprint compilation returned None."
-            )
+            raise ValueError("Blueprint compilation returned None.")
 
         if not isinstance(
             blueprint,
             BlueprintModel,
         ):
-            raise TypeError(
-                "Invalid blueprint type returned by compiler."
-            )
+            raise TypeError("Invalid blueprint type returned by compiler.")
 
-        self.logger.info(
-            "Blueprint validation successful."
-        )
+        self.logger.info("Blueprint validation successful.")
 
     # -----------------------------------------------------
     # Cache Management
@@ -277,9 +250,7 @@ class BlueprintLoader:
         discovery and compilation cycle.
         """
 
-        self.logger.info(
-            "Clearing blueprint cache."
-        )
+        self.logger.info("Clearing blueprint cache.")
 
         self._cache = None
 
@@ -290,9 +261,7 @@ class BlueprintLoader:
 
         self.clear_cache()
 
-        self.logger.info(
-            "Reloading blueprint."
-        )
+        self.logger.info("Reloading blueprint.")
 
         return self.load()
 
@@ -316,11 +285,7 @@ class BlueprintLoader:
         if not self.blueprint_directory_exists():
             return 0
 
-        return len(
-            list(
-                self.blueprint_directory.glob("*.md")
-            )
-        )
+        return len(list(self.blueprint_directory.glob("*.md")))
 
     def health(self) -> dict:
         """
@@ -329,18 +294,13 @@ class BlueprintLoader:
 
         return {
             "component": self.__class__.__name__,
-            "blueprint_directory": str(
-                self.blueprint_directory
-            ),
-            "directory_exists": (
-                self.blueprint_directory_exists()
-            ),
+            "blueprint_directory": str(self.blueprint_directory),
+            "directory_exists": (self.blueprint_directory_exists()),
             "cached": self.is_cached(),
-            "discovered_files": (
-                self.discovered_file_count()
-            ),
+            "discovered_files": (self.discovered_file_count()),
         }
-            # -----------------------------------------------------
+        # -----------------------------------------------------
+
     # Blueprint Metadata
     # -----------------------------------------------------
 
@@ -380,10 +340,7 @@ class BlueprintLoader:
         if not self.blueprint_directory.exists():
             return []
 
-        return sorted(
-            file.name
-            for file in self.blueprint_directory.glob("*.md")
-        )
+        return sorted(file.name for file in self.blueprint_directory.glob("*.md"))
 
     def blueprint_exists(
         self,
@@ -393,9 +350,7 @@ class BlueprintLoader:
         Determine whether a specific blueprint document exists.
         """
 
-        return (
-            self.blueprint_directory / filename
-        ).exists()
+        return (self.blueprint_directory / filename).exists()
 
     def document_path(
         self,
@@ -459,9 +414,7 @@ class BlueprintLoader:
         factory execution.
         """
 
-        self.logger.info(
-            "Initializing Blueprint Loader."
-        )
+        self.logger.info("Initializing Blueprint Loader.")
 
         self.before_load()
 
@@ -472,16 +425,13 @@ class BlueprintLoader:
         Clears cached state and releases resources.
         """
 
-        self.logger.info(
-            "Shutting down Blueprint Loader."
-        )
+        self.logger.info("Shutting down Blueprint Loader.")
 
         self.clear_cache()
 
-        self.logger.info(
-            "Blueprint Loader shutdown complete."
-        )
-            # -----------------------------------------------------
+        self.logger.info("Blueprint Loader shutdown complete.")
+        # -----------------------------------------------------
+
     # Summary
     # -----------------------------------------------------
 
@@ -522,9 +472,7 @@ class BlueprintLoader:
         reload and recompilation.
         """
 
-        self.logger.info(
-            "Blueprint cache invalidated."
-        )
+        self.logger.info("Blueprint cache invalidated.")
 
         self.clear_cache()
 
@@ -540,9 +488,7 @@ class BlueprintLoader:
         return {
             "loader_version": self.version,
             "component": self.component_name,
-            "blueprint_directory": str(
-                self.blueprint_directory
-            ),
+            "blueprint_directory": str(self.blueprint_directory),
             "cached": self.blueprint_loaded(),
             "documents": self.list_documents(),
             "health": self.health(),
@@ -560,8 +506,4 @@ class BlueprintLoader:
         )
 
     def __str__(self) -> str:
-        return (
-            f"{self.component_name} "
-            f"[v{self.version}]"
-        )
-        
+        return f"{self.component_name} " f"[v{self.version}]"

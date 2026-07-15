@@ -26,10 +26,10 @@ import re
 from dataclasses import dataclass, field
 from typing import Dict, List
 
-
 # ---------------------------------------------------------
 # Parsed Section
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class ParsedSection:
@@ -48,6 +48,7 @@ class ParsedSection:
 # Parsed Document
 # ---------------------------------------------------------
 
+
 @dataclass(slots=True)
 class ParsedDocument:
     """
@@ -56,18 +57,15 @@ class ParsedDocument:
 
     filename: str
 
-    sections: List[ParsedSection] = field(
-        default_factory=list
-    )
+    sections: List[ParsedSection] = field(default_factory=list)
 
-    metadata: Dict[str, str] = field(
-        default_factory=dict
-    )
+    metadata: Dict[str, str] = field(default_factory=dict)
 
 
 # ---------------------------------------------------------
 # Blueprint Parser
 # ---------------------------------------------------------
+
 
 class BlueprintParser:
     """
@@ -78,9 +76,7 @@ class BlueprintParser:
 
     def __init__(self) -> None:
 
-        self.logger = logging.getLogger(
-            self.__class__.__name__
-        )
+        self.logger = logging.getLogger(self.__class__.__name__)
 
     # -----------------------------------------------------
     # Public API
@@ -115,11 +111,9 @@ class BlueprintParser:
                 filename,
             )
 
-            parsed_documents[filename] = (
-                self._parse_document(
-                    filename,
-                    markdown,
-                )
+            parsed_documents[filename] = self._parse_document(
+                filename,
+                markdown,
             )
 
         self.logger.info(
@@ -128,7 +122,8 @@ class BlueprintParser:
         )
 
         return parsed_documents
-            # -----------------------------------------------------
+        # -----------------------------------------------------
+
     # Document Parsing
     # -----------------------------------------------------
 
@@ -158,9 +153,7 @@ class BlueprintParser:
 
                 # Persist previous section before starting a new one.
                 if current_section is not None:
-                    document.sections.append(
-                        current_section
-                    )
+                    document.sections.append(current_section)
 
                 current_section = ParsedSection(
                     level=len(heading.group(1)),
@@ -179,9 +172,7 @@ class BlueprintParser:
         if current_section is not None:
             document.sections.append(current_section)
 
-        document.metadata = self._build_metadata(
-            document
-        )
+        document.metadata = self._build_metadata(document)
 
         self.logger.info(
             "Parsed %d section(s) from %s",
@@ -209,9 +200,7 @@ class BlueprintParser:
 
         return {
             "filename": document.filename,
-            "section_count": str(
-                len(document.sections)
-            ),
+            "section_count": str(len(document.sections)),
             "parser": self.__class__.__name__,
         }
 
@@ -227,10 +216,7 @@ class BlueprintParser:
         Return the section titles in document order.
         """
 
-        return [
-            section.title
-            for section in document.sections
-        ]
+        return [section.title for section in document.sections]
 
     def find_section(
         self,
@@ -247,14 +233,12 @@ class BlueprintParser:
 
         for section in document.sections:
 
-            if (
-                section.title.casefold()
-                == lookup
-            ):
+            if section.title.casefold() == lookup:
                 return section
 
         return None
-            # -----------------------------------------------------
+        # -----------------------------------------------------
+
     # Markdown Element Extraction
     # -----------------------------------------------------
 
@@ -282,9 +266,7 @@ class BlueprintParser:
                 or stripped.startswith("* ")
                 or stripped.startswith("+ ")
             ):
-                items.append(
-                    stripped[2:].strip()
-                )
+                items.append(stripped[2:].strip())
 
         return items
 
@@ -303,21 +285,15 @@ class BlueprintParser:
 
         items: List[str] = []
 
-        pattern = re.compile(
-            r"^\d+\.\s+(.*)$"
-        )
+        pattern = re.compile(r"^\d+\.\s+(.*)$")
 
         for line in section.content:
 
-            match = pattern.match(
-                line.strip()
-            )
+            match = pattern.match(line.strip())
 
             if match:
 
-                items.append(
-                    match.group(1).strip()
-                )
+                items.append(match.group(1).strip())
 
         return items
 
@@ -344,30 +320,18 @@ class BlueprintParser:
                 continue
 
             # Skip markdown separator rows.
-            if set(
-                stripped.replace("|", "").replace("-", "")
-            ) == {":"} or stripped.replace(
-                "|", ""
-            ).replace(
-                "-", ""
-            ).strip() == "":
+            if (
+                set(stripped.replace("|", "").replace("-", "")) == {":"}
+                or stripped.replace("|", "").replace("-", "").strip() == ""
+            ):
                 continue
 
-            cells = [
-                cell.strip()
-                for cell in stripped.split("|")
-            ]
+            cells = [cell.strip() for cell in stripped.split("|")]
 
-            if (
-                cells
-                and cells[0] == ""
-            ):
+            if cells and cells[0] == "":
                 cells = cells[1:]
 
-            if (
-                cells
-                and cells[-1] == ""
-            ):
+            if cells and cells[-1] == "":
                 cells = cells[:-1]
 
             rows.append(cells)
@@ -398,9 +362,7 @@ class BlueprintParser:
 
                 if collecting:
 
-                    blocks.append(
-                        "\n".join(buffer)
-                    )
+                    blocks.append("\n".join(buffer))
 
                     buffer.clear()
 
@@ -417,7 +379,8 @@ class BlueprintParser:
                 buffer.append(line)
 
         return blocks
-            # -----------------------------------------------------
+        # -----------------------------------------------------
+
     # Statistics
     # -----------------------------------------------------
 
@@ -444,21 +407,13 @@ class BlueprintParser:
 
             total_lines += len(section.content)
 
-            bullet_items += len(
-                self.extract_bullet_lists(section)
-            )
+            bullet_items += len(self.extract_bullet_lists(section))
 
-            numbered_items += len(
-                self.extract_numbered_lists(section)
-            )
+            numbered_items += len(self.extract_numbered_lists(section))
 
-            table_rows += len(
-                self.extract_tables(section)
-            )
+            table_rows += len(self.extract_tables(section))
 
-            code_blocks += len(
-                self.extract_code_blocks(section)
-            )
+            code_blocks += len(self.extract_code_blocks(section))
 
         return {
             "sections": section_count,
@@ -493,10 +448,7 @@ class BlueprintParser:
         Check whether a section exists.
         """
 
-        return (
-            self.find_section(document, title)
-            is not None
-        )
+        return self.find_section(document, title) is not None
 
     def section_count(
         self,
@@ -523,12 +475,8 @@ class BlueprintParser:
         return {
             "filename": document.filename,
             "metadata": document.metadata,
-            "statistics": self.statistics(
-                document
-            ),
-            "section_titles": self.section_titles(
-                document
-            ),
+            "statistics": self.statistics(document),
+            "section_titles": self.section_titles(document),
         }
 
     def summary(
@@ -539,19 +487,15 @@ class BlueprintParser:
         Produce an overall parsing summary.
         """
 
-        total_sections = sum(
-            len(doc.sections)
-            for doc in documents.values()
-        )
+        total_sections = sum(len(doc.sections) for doc in documents.values())
 
         return {
             "documents": len(documents),
             "sections": total_sections,
-            "filenames": sorted(
-                documents.keys()
-            ),
+            "filenames": sorted(documents.keys()),
         }
-            # -----------------------------------------------------
+        # -----------------------------------------------------
+
     # Lifecycle
     # -----------------------------------------------------
 
@@ -563,18 +507,14 @@ class BlueprintParser:
         plugin registration and parser configuration.
         """
 
-        self.logger.info(
-            "Blueprint Parser initialized."
-        )
+        self.logger.info("Blueprint Parser initialized.")
 
     def shutdown(self) -> None:
         """
         Shutdown the Blueprint Parser.
         """
 
-        self.logger.info(
-            "Blueprint Parser shutdown completed."
-        )
+        self.logger.info("Blueprint Parser shutdown completed.")
 
     # -----------------------------------------------------
     # Parser Information
@@ -658,14 +598,7 @@ class BlueprintParser:
     # -----------------------------------------------------
 
     def __repr__(self) -> str:
-        return (
-            "BlueprintParser("
-            f"version='{self.version}')"
-        )
+        return "BlueprintParser(" f"version='{self.version}')"
 
     def __str__(self) -> str:
-        return (
-            f"{self.component_name} "
-            f"[v{self.version}]"
-        )
-        
+        return f"{self.component_name} " f"[v{self.version}]"

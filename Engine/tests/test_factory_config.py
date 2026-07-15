@@ -33,4 +33,3 @@ print("-" * 80)
 for order in PRODUCTION_ORDERS:
 
     print(order)
-    

@@ -9,27 +9,16 @@ Rollback  : Restore Original Design
 
 from planning.queue_builder import QueueBuilder
 
-from models.production_request_model import (
-    ProductionRequestModel
-)
-
+from models.production_request_model import ProductionRequestModel
 
 request = ProductionRequestModel(
-
     request_id="REQ_001",
-
     subject="Physics",
-
     unit="P1",
-
     chapter="CH1",
-
     subtopic="ST4",
-
     set_no="S1",
-
-    total_questions=250
-
+    total_questions=250,
 )
 
 builder = QueueBuilder()
@@ -50,25 +39,9 @@ print()
 
 for order in queue.orders:
 
-    end_question = (
+    end_question = order.question_start + order.question_count - 1
 
-        order.question_start
-
-        + order.question_count
-
-        - 1
-
-    )
-
-    print(
-
-        f"Batch {order.batch_no} : "
-
-        f"Q{order.question_start}"
-
-        f"-Q{end_question}"
-
-    )
+    print(f"Batch {order.batch_no} : " f"Q{order.question_start}" f"-Q{end_question}")
 
 print()
 

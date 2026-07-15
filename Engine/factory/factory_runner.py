@@ -11,32 +11,19 @@ from planning.queue_builder import QueueBuilder
 
 from batch.batch_execution_engine import BatchExecutionEngine
 
-from exporters.question_csv_exporter import (
-    QuestionCSVExporter
-)
+from exporters.question_csv_exporter import QuestionCSVExporter
 
 from validators.csv_validator import CSVValidator
 
-from reporting.production_report import (
-    ProductionReport
-)
+from reporting.production_report import ProductionReport
 
-from models.production_request_model import (
-    ProductionRequestModel
-)
+from models.production_request_model import ProductionRequestModel
 
-from repositories.factory_state_repository import (
-    FactoryStateRepository
-)
+from repositories.factory_state_repository import FactoryStateRepository
 
-from core.factory_state_manager import (
-    FactoryStateManager
-)
+from core.factory_state_manager import FactoryStateManager
 
-from config.factory_config import (
-    OUTPUT_FILE,
-    PRODUCTION_ORDERS
-)
+from config.factory_config import OUTPUT_FILE, PRODUCTION_ORDERS
 
 
 class FactoryRunner:
@@ -67,98 +54,52 @@ class FactoryRunner:
 
         state = self.state_repository.load()
 
-        state = self.state_manager.set_running(
-            state
-        )
+        state = self.state_manager.set_running(state)
 
-        self.state_repository.update(
-            state
-        )
+        self.state_repository.update(state)
 
         for order in PRODUCTION_ORDERS:
 
             request = ProductionRequestModel(
-
                 request_id=order["order_id"],
-
                 subject=order["subject"],
-
                 unit=order["unit"],
-
                 chapter=order["chapter"],
-
                 subtopic=order["subtopic"],
-
                 set_no=order["set_no"],
-
-                total_questions=order["question_count"]
-
+                total_questions=order["question_count"],
             )
 
-            queue = self.queue_builder.build(
-                request
-            )
+            queue = self.queue_builder.build(request)
 
             print()
 
-            print(
-                f"Production Request : {request.request_id}"
-            )
+            print(f"Production Request : {request.request_id}")
 
-            print(
-                f"Total Batches      : {queue.total_batches}"
-            )
+            print(f"Total Batches      : {queue.total_batches}")
 
-            print(
-                f"Total Questions    : {queue.total_questions}"
-            )
+            print(f"Total Questions    : {queue.total_questions}")
 
             print()
 
-            batch_result = self.batch_engine.execute(
-                queue.orders
-            )
+            batch_result = self.batch_engine.execute(queue.orders)
 
-            total_questions_generated += (
-                batch_result.successful
-            )
+            total_questions_generated += batch_result.successful
 
-            csv_file = self.exporter.export(
+            csv_file = self.exporter.export(batch_result, queue.orders[0])
 
-                batch_result,
+            print("CSV Exported       :", csv_file)
 
-                queue.orders[0]
+            validation = self.validator.validate(csv_file)
 
-            )
-
-            print(
-                "CSV Exported       :",
-                csv_file
-            )
-
-            validation = self.validator.validate(
-                csv_file
-            )
-
-            print(
-                "CSV Validation     :",
-                validation.passed
-            )
+            print("CSV Validation     :", validation.passed)
 
             #
             # Production Report
             #
 
             self.production_report.print_report(
-
-                request,
-
-                batch_result,
-
-                validation,
-
-                csv_file
-
+                request, batch_result, validation, csv_file
             )
 
             #
@@ -169,13 +110,9 @@ class FactoryRunner:
 
                 for _ in range(queue.total_batches):
 
-                    state = self.state_manager.complete_batch(
-                        state
-                    )
+                    state = self.state_manager.complete_batch(state)
 
-                self.state_repository.update(
-                    state
-                )
+                self.state_repository.update(state)
 
         print()
 
@@ -185,31 +122,18 @@ class FactoryRunner:
 
         print()
 
-        print(
-            "Questions Generated :",
-            total_questions_generated
-        )
+        print("Questions Generated :", total_questions_generated)
 
-        print(
-            "CSV File            :",
-            OUTPUT_FILE
-        )
+        print("CSV File            :", OUTPUT_FILE)
 
         print()
 
-        print(
-            "Current Batch       :",
-            state.current_batch
-        )
+        print("Current Batch       :", state.current_batch)
 
-        print(
-            "Factory Status      :",
-            state.status
-        )
+        print("Factory Status      :", state.status)
 
         print()
 
         print("READY FOR IMPORT")
 
         return total_questions_generated
-        

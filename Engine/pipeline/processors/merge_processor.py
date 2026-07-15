@@ -31,18 +31,8 @@ class MergeProcessor(PipelineProcessor):
 
         self.merger = QuestionMerger()
 
-    def execute(
-        self,
-        context: PipelineContextModel
-    ) -> PipelineContextModel:
+    def execute(self, context: PipelineContextModel) -> PipelineContextModel:
 
-        context.question = self.merger.merge(
-
-            context.question,
-
-            context.parsed_response
-
-        )
+        context.question = self.merger.merge(context.question, context.parsed_response)
 
         return context
-        

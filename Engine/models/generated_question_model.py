@@ -47,9 +47,7 @@ class GeneratedQuestionModel:
 
     question_text: str = ""
 
-    options: List[str] = field(
-        default_factory=list
-    )
+    options: List[str] = field(default_factory=list)
 
     correct_option: str = ""
 
@@ -65,14 +63,10 @@ class GeneratedQuestionModel:
 
     concept: str = ""
 
-    tags: List[str] = field(
-        default_factory=list
-    )
+    tags: List[str] = field(default_factory=list)
 
-    metadata: Dict = field(
-        default_factory=dict
-    )
-        # ---------------------------------------------------------
+    metadata: Dict = field(default_factory=dict)
+    # ---------------------------------------------------------
     # Serialization
     # ---------------------------------------------------------
 
@@ -188,9 +182,7 @@ class GeneratedQuestionModel:
         Create a deep copy of this model.
         """
 
-        return GeneratedQuestionModel.from_dict(
-            self.to_dict()
-        )
+        return GeneratedQuestionModel.from_dict(self.to_dict())
 
     # ---------------------------------------------------------
     # Metadata Helpers
@@ -220,7 +212,8 @@ class GeneratedQuestionModel:
             key,
             default,
         )
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # State Inspection
     # ---------------------------------------------------------
 
@@ -261,18 +254,10 @@ class GeneratedQuestionModel:
         """
 
         return {
-            "option_count": len(
-                self.options
-            ),
-            "tag_count": len(
-                self.tags
-            ),
-            "question_length": len(
-                self.question_text
-            ),
-            "explanation_length": len(
-                self.explanation
-            ),
+            "option_count": len(self.options),
+            "tag_count": len(self.tags),
+            "question_length": len(self.question_text),
+            "explanation_length": len(self.explanation),
         }
 
     # ---------------------------------------------------------
@@ -301,9 +286,7 @@ class GeneratedQuestionModel:
         Determine whether an explanation exists.
         """
 
-        return bool(
-            self.explanation.strip()
-        )
+        return bool(self.explanation.strip())
 
     @property
     def has_metadata(self) -> bool:
@@ -320,7 +303,8 @@ class GeneratedQuestionModel:
         """
 
         return len(self.tags) > 0
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Summary
     # ---------------------------------------------------------
 
@@ -384,11 +368,7 @@ class GeneratedQuestionModel:
             "component": self.component_name,
             "version": self.version,
             "complete": self.is_complete(),
-            "status": (
-                "READY"
-                if self.is_complete()
-                else "INCOMPLETE"
-            ),
+            "status": ("READY" if self.is_complete() else "INCOMPLETE"),
         }
 
     # ---------------------------------------------------------
@@ -428,7 +408,8 @@ class GeneratedQuestionModel:
         """
 
         self.tags.clear()
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Utility Methods
     # ---------------------------------------------------------
 
@@ -483,4 +464,3 @@ class GeneratedQuestionModel:
             f"{self.unit_code}/{self.chapter_code}/"
             f"{self.subtopic_code}"
         )
-        

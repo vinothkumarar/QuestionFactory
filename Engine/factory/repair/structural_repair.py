@@ -62,6 +62,7 @@ class StructuralRepair(RepairBase):
         )
 
         return result
+
     # ---------------------------------------------------------
     # Batch Repair
     # ---------------------------------------------------------
@@ -83,76 +84,47 @@ class StructuralRepair(RepairBase):
 
             batch.metadata = {}
 
-            result.mark_repaired(
-                "Created batch metadata."
-            )
+            result.mark_repaired("Created batch metadata.")
 
         #
         # Unit
         #
 
-        if (
-            "unit" not in batch.metadata
-            and batch.unit_code
-        ):
+        if "unit" not in batch.metadata and batch.unit_code:
 
-            batch.metadata["unit"] = (
-                batch.unit_code
-            )
+            batch.metadata["unit"] = batch.unit_code
 
-            result.mark_repaired(
-                "Recovered unit metadata."
-            )
+            result.mark_repaired("Recovered unit metadata.")
 
         #
         # Chapter
         #
 
-        if (
-            "chapter" not in batch.metadata
-            and batch.chapter_code
-        ):
+        if "chapter" not in batch.metadata and batch.chapter_code:
 
-            batch.metadata["chapter"] = (
-                batch.chapter_code
-            )
+            batch.metadata["chapter"] = batch.chapter_code
 
-            result.mark_repaired(
-                "Recovered chapter metadata."
-            )
+            result.mark_repaired("Recovered chapter metadata.")
 
         #
         # Subtopic
         #
 
-        if (
-            "subtopic" not in batch.metadata
-            and batch.subtopic_code
-        ):
+        if "subtopic" not in batch.metadata and batch.subtopic_code:
 
-            batch.metadata["subtopic"] = (
-                batch.subtopic_code
-            )
+            batch.metadata["subtopic"] = batch.subtopic_code
 
-            result.mark_repaired(
-                "Recovered subtopic metadata."
-            )
+            result.mark_repaired("Recovered subtopic metadata.")
 
         #
         # Batch ID
         #
 
-        if (
-            not batch.batch_id.strip()
-        ):
+        if not batch.batch_id.strip():
 
-            batch.batch_id = (
-                "AUTO_BATCH"
-            )
+            batch.batch_id = "AUTO_BATCH"
 
-            result.mark_repaired(
-                "Generated batch ID."
-            )
+            result.mark_repaired("Generated batch ID.")
 
     # ---------------------------------------------------------
     # Question Repair
@@ -177,6 +149,7 @@ class StructuralRepair(RepairBase):
                 question,
                 result,
             )
+
     # ---------------------------------------------------------
     # Individual Question Repair
     # ---------------------------------------------------------
@@ -199,10 +172,7 @@ class StructuralRepair(RepairBase):
 
             question.metadata = {}
 
-            result.mark_repaired(
-                f"Question {index}: "
-                "Created metadata."
-            )
+            result.mark_repaired(f"Question {index}: " "Created metadata.")
 
         #
         # Explanation
@@ -211,89 +181,55 @@ class StructuralRepair(RepairBase):
         if not question.explanation.strip():
 
             question.explanation = (
-                "Explanation will be "
-                "generated during the "
-                "academic repair stage."
+                "Explanation will be " "generated during the " "academic repair stage."
             )
 
             result.mark_repaired(
-                f"Question {index}: "
-                "Inserted placeholder "
-                "explanation."
+                f"Question {index}: " "Inserted placeholder " "explanation."
             )
 
         #
         # Estimated solving time
         #
 
-        if (
-            "estimated_time_sec"
-            not in question.metadata
-        ):
+        if "estimated_time_sec" not in question.metadata:
 
-            question.metadata[
-                "estimated_time_sec"
-            ] = 120
+            question.metadata["estimated_time_sec"] = 120
 
             result.mark_repaired(
-                f"Question {index}: "
-                "Estimated solving time "
-                "assigned."
+                f"Question {index}: " "Estimated solving time " "assigned."
             )
 
         #
         # Bloom level
         #
 
-        if (
-            "bloom_level"
-            not in question.metadata
-        ):
+        if "bloom_level" not in question.metadata:
 
-            question.metadata[
-                "bloom_level"
-            ] = "Understand"
+            question.metadata["bloom_level"] = "Understand"
 
-            result.mark_repaired(
-                f"Question {index}: "
-                "Bloom level assigned."
-            )
+            result.mark_repaired(f"Question {index}: " "Bloom level assigned.")
 
         #
         # Exam level
         #
 
-        if (
-            "exam_level"
-            not in question.metadata
-        ):
+        if "exam_level" not in question.metadata:
 
-            question.metadata[
-                "exam_level"
-            ] = "JEE Main"
+            question.metadata["exam_level"] = "JEE Main"
 
-            result.mark_repaired(
-                f"Question {index}: "
-                "Exam level assigned."
-            )
+            result.mark_repaired(f"Question {index}: " "Exam level assigned.")
 
         #
         # Source type
         #
 
-        if (
-            "source_type"
-            not in question.metadata
-        ):
+        if "source_type" not in question.metadata:
 
-            question.metadata[
-                "source_type"
-            ] = "AI_GENERATED"
+            question.metadata["source_type"] = "AI_GENERATED"
 
-            result.mark_repaired(
-                f"Question {index}: "
-                "Source type assigned."
-            )
+            result.mark_repaired(f"Question {index}: " "Source type assigned.")
+
     # ---------------------------------------------------------
     # Metadata Normalization
     # ---------------------------------------------------------
@@ -313,68 +249,39 @@ class StructuralRepair(RepairBase):
         # Tags
         #
 
-        if (
-            "tags"
-            not in question.metadata
-        ):
+        if "tags" not in question.metadata:
 
-            question.metadata[
-                "tags"
-            ] = []
+            question.metadata["tags"] = []
 
-            result.mark_repaired(
-                f"Question {index}: "
-                "Tags initialized."
-            )
+            result.mark_repaired(f"Question {index}: " "Tags initialized.")
 
         #
         # Language
         #
 
-        if (
-            "language"
-            not in question.metadata
-        ):
+        if "language" not in question.metadata:
 
-            question.metadata[
-                "language"
-            ] = "English"
+            question.metadata["language"] = "English"
 
-            result.mark_repaired(
-                f"Question {index}: "
-                "Language assigned."
-            )
+            result.mark_repaired(f"Question {index}: " "Language assigned.")
 
         #
         # Question code
         #
 
-        if (
-            question.question_code
-        ):
+        if question.question_code:
 
-            question.question_code = (
-                question.question_code
-                .strip()
-                .upper()
-            )
+            question.question_code = question.question_code.strip().upper()
 
         #
         # Trim text fields
         #
 
-        question.question_text = (
-            question.question_text.strip()
-        )
+        question.question_text = question.question_text.strip()
 
-        question.explanation = (
-            question.explanation.strip()
-        )
+        question.explanation = question.explanation.strip()
 
-        question.options = [
-            option.strip()
-            for option in question.options
-        ]
+        question.options = [option.strip() for option in question.options]
 
     # ---------------------------------------------------------
     # Batch Normalization
@@ -389,21 +296,13 @@ class StructuralRepair(RepairBase):
         Normalize batch information.
         """
 
-        batch.batch_id = (
-            batch.batch_id.strip()
-        )
+        batch.batch_id = batch.batch_id.strip()
 
-        batch.unit_code = (
-            batch.unit_code.strip()
-        )
+        batch.unit_code = batch.unit_code.strip()
 
-        batch.chapter_code = (
-            batch.chapter_code.strip()
-        )
+        batch.chapter_code = batch.chapter_code.strip()
 
-        batch.subtopic_code = (
-            batch.subtopic_code.strip()
-        )
+        batch.subtopic_code = batch.subtopic_code.strip()
 
         result.set_metadata(
             "normalized_questions",
@@ -414,6 +313,7 @@ class StructuralRepair(RepairBase):
             "normalization_completed",
             True,
         )
+
     # ---------------------------------------------------------
     # Statistics
     # ---------------------------------------------------------
@@ -428,21 +328,11 @@ class StructuralRepair(RepairBase):
         """
 
         return {
-            "questions_processed": (
-                batch.question_count
-            ),
-            "repairs_applied": (
-                result.repaired_count
-            ),
-            "failed_repairs": (
-                result.failed_count
-            ),
-            "warnings": (
-                result.warning_count
-            ),
-            "regeneration_required": (
-                result.regeneration_required
-            ),
+            "questions_processed": (batch.question_count),
+            "repairs_applied": (result.repaired_count),
+            "failed_repairs": (result.failed_count),
+            "warnings": (result.warning_count),
+            "regeneration_required": (result.regeneration_required),
         }
 
     # ---------------------------------------------------------
@@ -466,12 +356,8 @@ class StructuralRepair(RepairBase):
                 batch,
                 result,
             ),
-            "repair_summary": (
-                result.summary()
-            ),
-            "repair_metadata": (
-                dict(result.metadata)
-            ),
+            "repair_summary": (result.summary()),
+            "repair_metadata": (dict(result.metadata)),
         }
 
     # ---------------------------------------------------------
@@ -488,18 +374,10 @@ class StructuralRepair(RepairBase):
         return {
             "module": self.name,
             "repair_code": self.repair_code,
-            "repair_scope": (
-                "STRUCTURAL"
-            ),
-            "automatic": (
-                self.supports_auto_repair()
-            ),
-            "batch_repair": (
-                self.supports_batch_repair()
-            ),
-            "execution": (
-                self.execution_information()
-            ),
+            "repair_scope": ("STRUCTURAL"),
+            "automatic": (self.supports_auto_repair()),
+            "batch_repair": (self.supports_batch_repair()),
+            "execution": (self.execution_information()),
         }
 
     # ---------------------------------------------------------
@@ -510,17 +388,10 @@ class StructuralRepair(RepairBase):
         self,
     ) -> str:
 
-        return (
-            "StructuralRepair("
-            f"repair_code='{self.repair_code}')"
-        )
+        return "StructuralRepair(" f"repair_code='{self.repair_code}')"
 
     def __str__(
         self,
     ) -> str:
 
-        return (
-            f"{self.repair_code} - "
-            "Structural Repair"
-        )
-        
+        return f"{self.repair_code} - " "Structural Repair"

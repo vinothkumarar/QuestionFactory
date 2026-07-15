@@ -6,11 +6,7 @@ Batch Progress Manager
 
 class BatchProgressManager:
 
-    def next_batch(
-        self,
-        runtime: dict,
-        questions_per_batch: int = 100
-    ) -> dict:
+    def next_batch(self, runtime: dict, questions_per_batch: int = 100) -> dict:
 
         runtime = runtime.copy()
 
@@ -19,4 +15,3 @@ class BatchProgressManager:
         runtime["next_question"] += questions_per_batch
 
         return runtime
-        

@@ -30,14 +30,8 @@ class ParseProcessor(PipelineProcessor):
 
         self.parser = ResponseParser()
 
-    def execute(
-        self,
-        context: PipelineContextModel
-    ) -> PipelineContextModel:
+    def execute(self, context: PipelineContextModel) -> PipelineContextModel:
 
-        context.parsed_response = self.parser.parse(
-            context.raw_response
-        )
+        context.parsed_response = self.parser.parse(context.raw_response)
 
         return context
-        

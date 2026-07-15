@@ -21,9 +21,7 @@ class ProviderFactory:
 
         if provider == "openai":
             from ai.openai_provider import OpenAIProvider
+
             return OpenAIProvider()
 
-        raise ValueError(
-            f"Unsupported provider: {provider}"
-        )
-        
+        raise ValueError(f"Unsupported provider: {provider}")

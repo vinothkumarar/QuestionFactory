@@ -77,6 +77,7 @@ class R02Validator(ValidatorBase):
             result.mark_success()
 
         return result
+
     # ---------------------------------------------------------
     # Answer Validation
     # ---------------------------------------------------------
@@ -124,92 +125,52 @@ class R02Validator(ValidatorBase):
             if not option.strip():
 
                 result.add_error(
-                    f"Question {index}: "
-                    f"Option {option_index} "
-                    "is empty."
+                    f"Question {index}: " f"Option {option_index} " "is empty."
                 )
 
         #
         # Duplicate options
         #
 
-        normalized = [
+        normalized = [option.strip().lower() for option in question.options]
 
-            option.strip().lower()
-
-            for option in question.options
-
-        ]
-
-        unique = {
-
-            option
-
-            for option in normalized
-
-            if option
-
-        }
+        unique = {option for option in normalized if option}
 
         if len(unique) != len(normalized):
 
-            result.add_error(
-                f"Question {index}: "
-                "Duplicate options detected."
-            )
+            result.add_error(f"Question {index}: " "Duplicate options detected.")
 
         #
         # Correct option
         #
 
-        if (
-            question.correct_option
-            not in {"A", "B", "C", "D"}
-        ):
+        if question.correct_option not in {"A", "B", "C", "D"}:
 
-            result.add_error(
-                f"Question {index}: "
-                "Invalid correct option."
-            )
+            result.add_error(f"Question {index}: " "Invalid correct option.")
 
         option_map = {
-
             "A": 0,
             "B": 1,
             "C": 2,
             "D": 3,
-
         }
 
-        if (
-            question.correct_option
-            in option_map
-        ):
+        if question.correct_option in option_map:
 
-            option_index = option_map[
-                question.correct_option
-            ]
+            option_index = option_map[question.correct_option]
 
-            if (
-                option_index
-                >= len(question.options)
-            ):
+            if option_index >= len(question.options):
 
                 result.add_error(
-                    f"Question {index}: "
-                    "Correct option does not "
-                    "exist."
+                    f"Question {index}: " "Correct option does not " "exist."
                 )
 
-            elif not question.options[
-                option_index
-            ].strip():
+            elif not question.options[option_index].strip():
 
                 result.add_error(
-                    f"Question {index}: "
-                    "Correct option refers to "
-                    "an empty choice."
+                    f"Question {index}: " "Correct option refers to " "an empty choice."
                 )
+
     # ---------------------------------------------------------
     # Explanation Validation
     # ---------------------------------------------------------
@@ -232,18 +193,14 @@ class R02Validator(ValidatorBase):
 
             if not explanation:
 
-                result.add_warning(
-                    f"Question {index}: "
-                    "Explanation is empty."
-                )
+                result.add_warning(f"Question {index}: " "Explanation is empty.")
 
                 continue
 
             if len(explanation) < 20:
 
                 result.add_warning(
-                    f"Question {index}: "
-                    "Explanation appears too short."
+                    f"Question {index}: " "Explanation appears too short."
                 )
 
     # ---------------------------------------------------------
@@ -280,11 +237,7 @@ class R02Validator(ValidatorBase):
         Validate one question.
         """
 
-        question_text = (
-            question.question_text
-            .strip()
-            .lower()
-        )
+        question_text = question.question_text.strip().lower()
 
         #
         # Question identical to an option
@@ -295,15 +248,9 @@ class R02Validator(ValidatorBase):
             start=1,
         ):
 
-            normalized_option = (
-                option.strip().lower()
-            )
+            normalized_option = option.strip().lower()
 
-            if (
-                question_text
-                and question_text
-                == normalized_option
-            ):
+            if question_text and question_text == normalized_option:
 
                 result.add_error(
                     f"Question {index}: "
@@ -318,9 +265,7 @@ class R02Validator(ValidatorBase):
         if len(question_text) < 10:
 
             result.add_warning(
-                f"Question {index}: "
-                "Question text appears "
-                "too short."
+                f"Question {index}: " "Question text appears " "too short."
             )
 
         #
@@ -328,12 +273,10 @@ class R02Validator(ValidatorBase):
         #
 
         ambiguous_terms = {
-
             "maybe",
             "possibly",
             "approximately",
             "around",
-
         }
 
         lowered = question_text
@@ -347,6 +290,7 @@ class R02Validator(ValidatorBase):
                     f"Potential ambiguity "
                     f"('{term}') detected."
                 )
+
     # ---------------------------------------------------------
     # Statistics
     # ---------------------------------------------------------
@@ -361,18 +305,10 @@ class R02Validator(ValidatorBase):
         """
 
         return {
-            "questions_checked": (
-                batch.question_count
-            ),
-            "errors": (
-                result.error_count
-            ),
-            "warnings": (
-                result.warning_count
-            ),
-            "passed": (
-                result.is_successful()
-            ),
+            "questions_checked": (batch.question_count),
+            "errors": (result.error_count),
+            "warnings": (result.warning_count),
+            "passed": (result.is_successful()),
         }
 
     # ---------------------------------------------------------
@@ -391,18 +327,10 @@ class R02Validator(ValidatorBase):
         return {
             "validator": self.name,
             "rule_code": self.rule_code,
-            "questions_checked": (
-                batch.question_count
-            ),
-            "success": (
-                result.is_successful()
-            ),
-            "errors": (
-                result.error_count
-            ),
-            "warnings": (
-                result.warning_count
-            ),
+            "questions_checked": (batch.question_count),
+            "success": (result.is_successful()),
+            "errors": (result.error_count),
+            "warnings": (result.warning_count),
         }
 
     # ---------------------------------------------------------
@@ -465,6 +393,7 @@ class R02Validator(ValidatorBase):
             "statistics": True,
             "health_reporting": True,
         }
+
     # ---------------------------------------------------------
     # Execution Information
     # ---------------------------------------------------------
@@ -500,9 +429,7 @@ class R02Validator(ValidatorBase):
             "rule_code": self.rule_code,
             "validation_scope": "ACADEMIC",
             "version": self.version,
-            "execution": (
-                self.execution_information()
-            ),
+            "execution": (self.execution_information()),
         }
 
     # ---------------------------------------------------------
@@ -513,17 +440,10 @@ class R02Validator(ValidatorBase):
         self,
     ) -> str:
 
-        return (
-            "R02Validator("
-            f"rule='{self.rule_code}')"
-        )
+        return "R02Validator(" f"rule='{self.rule_code}')"
 
     def __str__(
         self,
     ) -> str:
 
-        return (
-            f"{self.rule_code} - "
-            "Academic Validation"
-        )
-        
+        return f"{self.rule_code} - " "Academic Validation"

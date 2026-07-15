@@ -39,4 +39,3 @@ class ExecutionPipelineBuilder:
         pipeline.add_processor(ValidationProcessor())
 
         return pipeline
-        

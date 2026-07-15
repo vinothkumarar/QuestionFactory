@@ -21,10 +21,10 @@ from Engine.models.pipeline_context_model import (
     PipelineContextModel,
 )
 
-
 # ---------------------------------------------------------
 # Pipeline Stage
 # ---------------------------------------------------------
+
 
 class PipelineStage(ABC):
     """
@@ -52,6 +52,7 @@ class PipelineStage(ABC):
 # Execution Pipeline
 # ---------------------------------------------------------
 
+
 class ExecutionPipeline:
     """
     Executes manufacturing stages sequentially.
@@ -59,14 +60,11 @@ class ExecutionPipeline:
 
     def __init__(self):
 
-        self.logger = logging.getLogger(
-            self.__class__.__name__
-        )
+        self.logger = logging.getLogger(self.__class__.__name__)
 
-        self._stages: List[
-            PipelineStage
-        ] = []
-            # ---------------------------------------------------------
+        self._stages: List[PipelineStage] = []
+        # ---------------------------------------------------------
+
     # Stage Management
     # ---------------------------------------------------------
 
@@ -137,9 +135,7 @@ class ExecutionPipeline:
 
         self._stages.clear()
 
-        self.logger.info(
-            "Pipeline cleared."
-        )
+        self.logger.info("Pipeline cleared.")
 
     # ---------------------------------------------------------
     # Information
@@ -171,10 +167,7 @@ class ExecutionPipeline:
         Return registered stage names.
         """
 
-        return [
-            stage.name
-            for stage in self._stages
-        ]
+        return [stage.name for stage in self._stages]
 
     def has_stage(
         self,
@@ -185,7 +178,8 @@ class ExecutionPipeline:
         """
 
         return stage_name in self.stage_names()
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Execution
     # ---------------------------------------------------------
 
@@ -200,9 +194,7 @@ class ExecutionPipeline:
         were registered.
         """
 
-        self.logger.info(
-            "Pipeline execution started."
-        )
+        self.logger.info("Pipeline execution started.")
 
         self.before_pipeline(context)
 
@@ -220,9 +212,7 @@ class ExecutionPipeline:
 
             try:
 
-                context = stage.execute(
-                    context
-                )
+                context = stage.execute(context)
 
             except Exception:
 
@@ -240,9 +230,7 @@ class ExecutionPipeline:
 
         self.after_pipeline(context)
 
-        self.logger.info(
-            "Pipeline execution completed."
-        )
+        self.logger.info("Pipeline execution completed.")
 
         return context
 
@@ -296,7 +284,8 @@ class ExecutionPipeline:
         """
 
         return
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Stage Lookup
     # ---------------------------------------------------------
 
@@ -413,7 +402,8 @@ class ExecutionPipeline:
         """
 
         return self.has_stage(stage_name)
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Pipeline Information
     # ---------------------------------------------------------
 
@@ -457,22 +447,13 @@ class ExecutionPipeline:
 
         stage_names = self.stage_names()
 
-        duplicates = {
-            name
-            for name in stage_names
-            if stage_names.count(name) > 1
-        }
+        duplicates = {name for name in stage_names if stage_names.count(name) > 1}
 
         if duplicates:
 
-            duplicate_list = ", ".join(
-                sorted(duplicates)
-            )
+            duplicate_list = ", ".join(sorted(duplicates))
 
-            raise ValueError(
-                "Duplicate pipeline stages detected: "
-                f"{duplicate_list}"
-            )
+            raise ValueError("Duplicate pipeline stages detected: " f"{duplicate_list}")
 
     # ---------------------------------------------------------
     # Representation
@@ -486,8 +467,4 @@ class ExecutionPipeline:
         )
 
     def __str__(self) -> str:
-        return (
-            f"{self.component_name} "
-            f"[{self.stage_count} stage(s)]"
-        )
-        
+        return f"{self.component_name} " f"[{self.stage_count} stage(s)]"

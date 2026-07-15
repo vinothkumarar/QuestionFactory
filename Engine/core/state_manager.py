@@ -15,16 +15,12 @@ Authoritative runtime files:
 import json
 from pathlib import Path
 
-from config import (
-    PROGRESS_FILE,
-    METADATA_FILE,
-    MANIFEST_FILE
-)
-
+from config import PROGRESS_FILE, METADATA_FILE, MANIFEST_FILE
 
 # --------------------------------------------------
 # Generic Helpers
 # --------------------------------------------------
+
 
 def load_json(file_path: Path):
     """Load JSON from file."""
@@ -40,17 +36,13 @@ def save_json(file_path: Path, data):
     """Save JSON to file."""
 
     with open(file_path, "w", encoding="utf-8") as f:
-        json.dump(
-            data,
-            f,
-            indent=4,
-            ensure_ascii=False
-        )
+        json.dump(data, f, indent=4, ensure_ascii=False)
 
 
 # --------------------------------------------------
 # Progress
 # --------------------------------------------------
+
 
 def load_progress():
     return load_json(PROGRESS_FILE)
@@ -64,6 +56,7 @@ def save_progress(data):
 # Metadata
 # --------------------------------------------------
 
+
 def load_metadata():
     return load_json(METADATA_FILE)
 
@@ -75,6 +68,7 @@ def save_metadata(data):
 # --------------------------------------------------
 # Batch Manifest
 # --------------------------------------------------
+
 
 def load_manifest():
     return load_json(MANIFEST_FILE)

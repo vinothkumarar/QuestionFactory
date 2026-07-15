@@ -11,8 +11,6 @@ from pathlib import Path
 from core.schema import QUESTION_SCHEMA
 
 
-
-
 class CSVWriter:
 
     def create_batch_file(self, folder: Path, filename: str):
@@ -28,4 +26,3 @@ class CSVWriter:
             writer.writerow(QUESTION_SCHEMA)
 
         return file_path
-        

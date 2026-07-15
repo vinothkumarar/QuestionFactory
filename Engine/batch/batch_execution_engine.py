@@ -40,10 +40,7 @@ class BatchExecutionEngine:
 
         self.worker = ProductionWorker()
 
-    def execute(
-        self,
-        production_queue
-    ) -> BatchResultModel:
+    def execute(self, production_queue) -> BatchResultModel:
 
         start_time = time.time()
 
@@ -58,9 +55,7 @@ class BatchExecutionEngine:
             print()
 
             print("=" * 70)
-            print(
-                f"Executing Batch {production_order.batch_no}"
-            )
+            print(f"Executing Batch {production_order.batch_no}")
 
             print(
                 f"Question Range : "
@@ -75,46 +70,29 @@ class BatchExecutionEngine:
             batch_failed = 0
 
             for question_no in range(
-
                 production_order.question_start,
-
-                production_order.question_start
-                + production_order.question_count
-
+                production_order.question_start + production_order.question_count,
             ):
 
                 #
                 # Create an immutable copy for this question.
                 #
 
-                question_order = deepcopy(
-                    production_order
-                )
+                question_order = deepcopy(production_order)
 
-                question_order.question_start = (
-                    question_no
-                )
+                question_order.question_start = question_no
 
-                result = self.worker.execute(
-                    question_order
-                )
+                result = self.worker.execute(question_order)
 
-                worker_results.append(
-                    result
-                )
+                worker_results.append(result)
 
-                if (
-                    result.status
-                    == GenerationStatus.SUCCESS
-                ):
+                if result.status == GenerationStatus.SUCCESS:
 
                     successful += 1
 
                     batch_success += 1
 
-                    print(
-                        f"✔ Q{question_no}"
-                    )
+                    print(f"✔ Q{question_no}")
 
                 else:
 
@@ -122,43 +100,22 @@ class BatchExecutionEngine:
 
                     batch_failed += 1
 
-                    print(
-                        f"✘ Q{question_no}"
-                    )
+                    print(f"✘ Q{question_no}")
 
             print()
 
-            print(
-                f"Batch {production_order.batch_no} Completed"
-            )
+            print(f"Batch {production_order.batch_no} Completed")
 
-            print(
-                f"Successful : {batch_success}"
-            )
+            print(f"Successful : {batch_success}")
 
-            print(
-                f"Failed     : {batch_failed}"
-            )
+            print(f"Failed     : {batch_failed}")
 
-        execution_time = int(
-
-            (time.time() - start_time)
-
-            * 1000
-
-        )
+        execution_time = int((time.time() - start_time) * 1000)
 
         return BatchResultModel(
-
             total_orders=len(production_queue),
-
             successful=successful,
-
             failed=failed,
-
             execution_time_ms=execution_time,
-
-            worker_results=worker_results
-
+            worker_results=worker_results,
         )
-        

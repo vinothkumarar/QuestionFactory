@@ -49,9 +49,7 @@ class BlueprintCompiler:
 
     def __init__(self) -> None:
 
-        self.logger = logging.getLogger(
-            self.__class__.__name__
-        )
+        self.logger = logging.getLogger(self.__class__.__name__)
 
         self.parser = BlueprintParser()
 
@@ -76,13 +74,9 @@ class BlueprintCompiler:
         BlueprintModel
         """
 
-        self.logger.info(
-            "Starting blueprint compilation."
-        )
+        self.logger.info("Starting blueprint compilation.")
 
-        parsed_documents = self.parser.parse(
-            markdown_documents
-        )
+        parsed_documents = self.parser.parse(markdown_documents)
 
         blueprint = BlueprintModel()
 
@@ -131,12 +125,11 @@ class BlueprintCompiler:
             parsed_documents,
         )
 
-        self.logger.info(
-            "Blueprint compilation completed."
-        )
+        self.logger.info("Blueprint compilation completed.")
 
         return blueprint
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Factory Information
     # ---------------------------------------------------------
 
@@ -154,13 +147,10 @@ class BlueprintCompiler:
         """
 
         blueprint.factory.description = (
-            "Autonomous Manufacturing Operating System "
-            "for Question Factory."
+            "Autonomous Manufacturing Operating System " "for Question Factory."
         )
 
-        self.logger.info(
-            "Factory information compiled."
-        )
+        self.logger.info("Factory information compiled.")
 
     # ---------------------------------------------------------
     # Rules
@@ -182,9 +172,7 @@ class BlueprintCompiler:
 
         if document is None:
 
-            self.logger.warning(
-                "Rules document not found."
-            )
+            self.logger.warning("Rules document not found.")
 
             return
 
@@ -192,34 +180,19 @@ class BlueprintCompiler:
 
         for section in document.sections:
 
-            bullet_items = (
-                self.parser.extract_bullet_lists(
-                    section
-                )
-            )
+            bullet_items = self.parser.extract_bullet_lists(section)
 
-            numbered_items = (
-                self.parser.extract_numbered_lists(
-                    section
-                )
-            )
+            numbered_items = self.parser.extract_numbered_lists(section)
 
-            collected_items = (
-                bullet_items + numbered_items
-            )
+            collected_items = bullet_items + numbered_items
 
             if collected_items:
 
-                rules[section.title] = (
-                    "\n".join(collected_items)
-                )
+                rules[section.title] = "\n".join(collected_items)
 
             else:
 
-                rules[section.title] = (
-                    "\n".join(section.content)
-                    .strip()
-                )
+                rules[section.title] = "\n".join(section.content).strip()
 
         self.logger.info(
             "Compiled %d rule section(s).",
@@ -242,46 +215,30 @@ class BlueprintCompiler:
             02_ARCHETYPES.md
         """
 
-        document = documents.get(
-            "02_ARCHETYPES.md"
-        )
+        document = documents.get("02_ARCHETYPES.md")
 
         if document is None:
 
-            self.logger.warning(
-                "Archetypes document not found."
-            )
+            self.logger.warning("Archetypes document not found.")
 
             return
 
-        archetypes = (
-            blueprint.archetypes.archetypes
-        )
+        archetypes = blueprint.archetypes.archetypes
 
         for section in document.sections:
 
             archetypes[section.title] = {
-                "content": (
-                    "\n".join(section.content)
-                    .strip()
-                ),
-                "bullet_items": (
-                    self.parser.extract_bullet_lists(
-                        section
-                    )
-                ),
-                "tables": (
-                    self.parser.extract_tables(
-                        section
-                    )
-                ),
+                "content": ("\n".join(section.content).strip()),
+                "bullet_items": (self.parser.extract_bullet_lists(section)),
+                "tables": (self.parser.extract_tables(section)),
             }
 
         self.logger.info(
             "Compiled %d archetype section(s).",
             len(archetypes),
         )
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Runtime
     # ---------------------------------------------------------
 
@@ -297,15 +254,11 @@ class BlueprintCompiler:
             13_RUNTIME_BEHAVIOR.md
         """
 
-        document = documents.get(
-            "13_RUNTIME_BEHAVIOR.md"
-        )
+        document = documents.get("13_RUNTIME_BEHAVIOR.md")
 
         if document is None:
 
-            self.logger.warning(
-                "Runtime behaviour document not found."
-            )
+            self.logger.warning("Runtime behaviour document not found.")
 
             return
 
@@ -313,9 +266,7 @@ class BlueprintCompiler:
 
         for section in document.sections:
 
-            text = "\n".join(
-                section.content
-            ).lower()
+            text = "\n".join(section.content).lower()
 
             title = section.title.lower()
 
@@ -327,39 +278,22 @@ class BlueprintCompiler:
             # with dedicated runtime rule definitions.
             #
 
-            if (
-                "repair" in title
-                or "repair before expand" in text
-            ):
+            if "repair" in title or "repair before expand" in text:
                 runtime.repair_before_expand = True
 
-            if (
-                "checkpoint" in title
-                or "checkpoint" in text
-            ):
+            if "checkpoint" in title or "checkpoint" in text:
                 runtime.auto_checkpoint = True
 
-            if (
-                "recovery" in title
-                or "recovery" in text
-            ):
+            if "recovery" in title or "recovery" in text:
                 runtime.enable_recovery = True
 
-            if (
-                "logging" in title
-                or "logging" in text
-            ):
+            if "logging" in title or "logging" in text:
                 runtime.enable_logging = True
 
-            if (
-                "packaging" in title
-                or "package" in text
-            ):
+            if "packaging" in title or "package" in text:
                 runtime.enable_packaging = True
 
-        self.logger.info(
-            "Runtime behaviour compiled."
-        )
+        self.logger.info("Runtime behaviour compiled.")
 
     # ---------------------------------------------------------
     # Schema
@@ -377,15 +311,11 @@ class BlueprintCompiler:
             05_SCHEMA.md
         """
 
-        document = documents.get(
-            "05_SCHEMA.md"
-        )
+        document = documents.get("05_SCHEMA.md")
 
         if document is None:
 
-            self.logger.warning(
-                "Schema document not found."
-            )
+            self.logger.warning("Schema document not found.")
 
             return
 
@@ -393,25 +323,15 @@ class BlueprintCompiler:
 
         for section in document.sections:
 
-            schema.validation_rules[
-                section.title
-            ] = "\n".join(
-                section.content
-            ).strip()
+            schema.validation_rules[section.title] = "\n".join(section.content).strip()
 
-            tables = self.parser.extract_tables(
-                section
-            )
+            tables = self.parser.extract_tables(section)
 
             if tables:
 
-                schema.csv_schema[
-                    section.title
-                ] = tables
+                schema.csv_schema[section.title] = tables
 
-        self.logger.info(
-            "Schema compiled."
-        )
+        self.logger.info("Schema compiled.")
 
     # ---------------------------------------------------------
     # Folder Structure
@@ -429,15 +349,11 @@ class BlueprintCompiler:
             07_FOLDER_STRUCTURE.md
         """
 
-        document = documents.get(
-            "07_FOLDER_STRUCTURE.md"
-        )
+        document = documents.get("07_FOLDER_STRUCTURE.md")
 
         if document is None:
 
-            self.logger.warning(
-                "Folder structure document not found."
-            )
+            self.logger.warning("Folder structure document not found.")
 
             return
 
@@ -447,16 +363,8 @@ class BlueprintCompiler:
         # Preserve the document for diagnostics.
         #
 
-        blueprint.metadata.custom_properties[
-            "folder_structure_document"
-        ] = "\n".join(
-
-            line
-
-            for section in document.sections
-
-            for line in section.content
-
+        blueprint.metadata.custom_properties["folder_structure_document"] = "\n".join(
+            line for section in document.sections for line in section.content
         ).strip()
 
         #
@@ -467,10 +375,9 @@ class BlueprintCompiler:
         # FolderStructure from the markdown itself.
         #
 
-        self.logger.info(
-            "Folder structure compiled."
-        )
-            # ---------------------------------------------------------
+        self.logger.info("Folder structure compiled.")
+        # ---------------------------------------------------------
+
     # Upload
     # ---------------------------------------------------------
 
@@ -486,15 +393,11 @@ class BlueprintCompiler:
             08_UPLOAD_REPAIR.md
         """
 
-        document = documents.get(
-            "08_UPLOAD_REPAIR.md"
-        )
+        document = documents.get("08_UPLOAD_REPAIR.md")
 
         if document is None:
 
-            self.logger.warning(
-                "Upload document not found."
-            )
+            self.logger.warning("Upload document not found.")
 
             return
 
@@ -502,9 +405,7 @@ class BlueprintCompiler:
 
         for section in document.sections:
 
-            text = "\n".join(
-                section.content
-            ).lower()
+            text = "\n".join(section.content).lower()
 
             if "csv" in text:
                 upload.export_format = "CSV"
@@ -524,9 +425,7 @@ class BlueprintCompiler:
             if "archive" in text:
                 upload.archive_completed_batches = True
 
-        self.logger.info(
-            "Upload configuration compiled."
-        )
+        self.logger.info("Upload configuration compiled.")
 
     # ---------------------------------------------------------
     # Version
@@ -544,15 +443,11 @@ class BlueprintCompiler:
             10_VERSION_CONTROL.md
         """
 
-        document = documents.get(
-            "10_VERSION_CONTROL.md"
-        )
+        document = documents.get("10_VERSION_CONTROL.md")
 
         if document is None:
 
-            self.logger.warning(
-                "Version document not found."
-            )
+            self.logger.warning("Version document not found.")
 
             return
 
@@ -564,13 +459,9 @@ class BlueprintCompiler:
             if section.content
         )
 
-        version.release_date = (
-            blueprint.metadata.compiled_at
-        )
+        version.release_date = blueprint.metadata.compiled_at
 
-        self.logger.info(
-            "Version information compiled."
-        )
+        self.logger.info("Version information compiled.")
 
     # ---------------------------------------------------------
     # Metadata
@@ -587,33 +478,21 @@ class BlueprintCompiler:
 
         metadata = blueprint.metadata
 
-        metadata.source_documents = sorted(
-            documents.keys()
+        metadata.source_documents = sorted(documents.keys())
+
+        metadata.document_count = len(documents)
+
+        metadata.custom_properties["compiled_sections"] = sum(
+            len(document.sections) for document in documents.values()
         )
 
-        metadata.document_count = len(
-            documents
-        )
+        metadata.custom_properties["compiler"] = self.__class__.__name__
 
-        metadata.custom_properties[
-            "compiled_sections"
-        ] = sum(
-            len(document.sections)
-            for document in documents.values()
-        )
+        metadata.custom_properties["parser_version"] = self.parser.version
 
-        metadata.custom_properties[
-            "compiler"
-        ] = self.__class__.__name__
+        self.logger.info("Blueprint metadata compiled.")
+        # ---------------------------------------------------------
 
-        metadata.custom_properties[
-            "parser_version"
-        ] = self.parser.version
-
-        self.logger.info(
-            "Blueprint metadata compiled."
-        )
-            # ---------------------------------------------------------
     # Diagnostics
     # ---------------------------------------------------------
 
@@ -628,15 +507,9 @@ class BlueprintCompiler:
         return {
             "factory": blueprint.factory.name,
             "factory_version": blueprint.factory.version,
-            "blueprint_version": (
-                blueprint.version.blueprint_version
-            ),
-            "schema_version": (
-                blueprint.version.schema_version
-            ),
-            "documents": (
-                blueprint.metadata.document_count
-            ),
+            "blueprint_version": (blueprint.version.blueprint_version),
+            "schema_version": (blueprint.version.schema_version),
+            "documents": (blueprint.metadata.document_count),
             "compiled_sections": (
                 blueprint.metadata.custom_properties.get(
                     "compiled_sections",
@@ -655,34 +528,18 @@ class BlueprintCompiler:
 
         return {
             "component": self.__class__.__name__,
-            "summary": self.summary(
-                blueprint
-            ),
+            "summary": self.summary(blueprint),
             "metadata": blueprint.metadata.custom_properties,
             "runtime": {
-                "auto_checkpoint": (
-                    blueprint.runtime.auto_checkpoint
-                ),
-                "enable_recovery": (
-                    blueprint.runtime.enable_recovery
-                ),
-                "repair_before_expand": (
-                    blueprint.runtime.repair_before_expand
-                ),
+                "auto_checkpoint": (blueprint.runtime.auto_checkpoint),
+                "enable_recovery": (blueprint.runtime.enable_recovery),
+                "repair_before_expand": (blueprint.runtime.repair_before_expand),
             },
             "automation": {
-                "autonomous_mode": (
-                    blueprint.automation.autonomous_mode
-                ),
-                "auto_schedule": (
-                    blueprint.automation.auto_schedule
-                ),
-                "auto_repair": (
-                    blueprint.automation.auto_repair
-                ),
-                "auto_package": (
-                    blueprint.automation.auto_package
-                ),
+                "autonomous_mode": (blueprint.automation.autonomous_mode),
+                "auto_schedule": (blueprint.automation.auto_schedule),
+                "auto_repair": (blueprint.automation.auto_repair),
+                "auto_package": (blueprint.automation.auto_package),
             },
         }
 
@@ -744,14 +601,7 @@ class BlueprintCompiler:
     # ---------------------------------------------------------
 
     def __repr__(self) -> str:
-        return (
-            "BlueprintCompiler("
-            f"version='{self.version}')"
-        )
+        return "BlueprintCompiler(" f"version='{self.version}')"
 
     def __str__(self) -> str:
-        return (
-            f"BlueprintCompiler "
-            f"[v{self.version}]"
-        )
-        
+        return f"BlueprintCompiler " f"[v{self.version}]"

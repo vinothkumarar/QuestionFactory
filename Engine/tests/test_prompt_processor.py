@@ -13,34 +13,19 @@ from models.production_order_model import ProductionOrderModel
 from pipeline.processors.build_processor import BuildProcessor
 from pipeline.processors.prompt_processor import PromptProcessor
 
-
 order = ProductionOrderModel(
-
     order_id="ORDER_TEST",
-
     subject="Physics",
-
     unit="P1",
-
     chapter="CH1",
-
     subtopic="ST4",
-
     set_no="S1",
-
     batch_no=6,
-
     question_start=501,
-
-    question_count=100
-
+    question_count=100,
 )
 
-context = PipelineContextModel(
-
-    production_order=order
-
-)
+context = PipelineContextModel(production_order=order)
 
 context = BuildProcessor().execute(context)
 

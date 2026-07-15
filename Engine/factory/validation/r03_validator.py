@@ -92,6 +92,7 @@ class R03Validator(ValidatorBase):
             result.mark_success()
 
         return result
+
     # ---------------------------------------------------------
     # Blueprint Validation
     # ---------------------------------------------------------
@@ -113,31 +114,24 @@ class R03Validator(ValidatorBase):
 
         if not batch.metadata:
 
-            result.add_warning(
-                "Batch contains no blueprint metadata."
-            )
+            result.add_warning("Batch contains no blueprint metadata.")
 
             return
 
         required_fields = [
-
             "subject",
             "unit",
             "chapter",
             "subtopic",
             "difficulty",
             "exam_level",
-
         ]
 
         for field in required_fields:
 
             if field not in batch.metadata:
 
-                result.add_warning(
-                    f"Blueprint metadata missing: "
-                    f"{field}"
-                )
+                result.add_warning(f"Blueprint metadata missing: " f"{field}")
 
         #
         # Blueprint consistency
@@ -145,34 +139,17 @@ class R03Validator(ValidatorBase):
 
         metadata = batch.metadata
 
-        if (
-            "unit" in metadata
-            and metadata["unit"] != batch.unit_code
-        ):
+        if "unit" in metadata and metadata["unit"] != batch.unit_code:
 
-            result.add_error(
-                "Blueprint unit mismatch."
-            )
+            result.add_error("Blueprint unit mismatch.")
 
-        if (
-            "chapter" in metadata
-            and metadata["chapter"]
-            != batch.chapter_code
-        ):
+        if "chapter" in metadata and metadata["chapter"] != batch.chapter_code:
 
-            result.add_error(
-                "Blueprint chapter mismatch."
-            )
+            result.add_error("Blueprint chapter mismatch.")
 
-        if (
-            "subtopic" in metadata
-            and metadata["subtopic"]
-            != batch.subtopic_code
-        ):
+        if "subtopic" in metadata and metadata["subtopic"] != batch.subtopic_code:
 
-            result.add_error(
-                "Blueprint subtopic mismatch."
-            )
+            result.add_error("Blueprint subtopic mismatch.")
 
     # ---------------------------------------------------------
     # Difficulty Validation
@@ -188,13 +165,11 @@ class R03Validator(ValidatorBase):
         """
 
         allowed = {
-
             "Easy",
             "Easy+",
             "Medium",
             "Hard",
             "Elite",
-
         }
 
         for index, question in enumerate(
@@ -202,26 +177,20 @@ class R03Validator(ValidatorBase):
             start=1,
         ):
 
-            difficulty = (
-                question.difficulty.strip()
-            )
+            difficulty = question.difficulty.strip()
 
             if not difficulty:
 
-                result.add_warning(
-                    f"Question {index}: "
-                    "Difficulty missing."
-                )
+                result.add_warning(f"Question {index}: " "Difficulty missing.")
 
                 continue
 
             if difficulty not in allowed:
 
                 result.add_error(
-                    f"Question {index}: "
-                    f"Invalid difficulty "
-                    f"'{difficulty}'."
+                    f"Question {index}: " f"Invalid difficulty " f"'{difficulty}'."
                 )
+
     # ---------------------------------------------------------
     # Concept Validation
     # ---------------------------------------------------------
@@ -249,71 +218,49 @@ class R03Validator(ValidatorBase):
             # Concept
             #
 
-            concept = (
-                question.concept
-                .strip()
-            )
+            concept = question.concept.strip()
 
             if not concept:
 
-                result.add_warning(
-                    f"Question {index}: "
-                    "Concept not specified."
-                )
+                result.add_warning(f"Question {index}: " "Concept not specified.")
 
             else:
 
-                concept_registry.add(
-                    concept.lower()
-                )
+                concept_registry.add(concept.lower())
 
             #
             # Archetype
             #
 
-            archetype = (
-                question.archetype
-                .strip()
-            )
+            archetype = question.archetype.strip()
 
             if not archetype:
 
-                result.add_warning(
-                    f"Question {index}: "
-                    "Archetype not specified."
-                )
+                result.add_warning(f"Question {index}: " "Archetype not specified.")
 
             else:
 
-                archetype_registry.add(
-                    archetype.lower()
-                )
+                archetype_registry.add(archetype.lower())
 
             #
             # Estimated solving time
             #
 
-            estimated_time = (
-                question.metadata.get(
-                    "estimated_time_sec",
-                    None,
-                )
+            estimated_time = question.metadata.get(
+                "estimated_time_sec",
+                None,
             )
 
             if estimated_time is None:
 
                 result.add_warning(
-                    f"Question {index}: "
-                    "Estimated solving time "
-                    "not provided."
+                    f"Question {index}: " "Estimated solving time " "not provided."
                 )
 
             elif estimated_time <= 0:
 
                 result.add_error(
-                    f"Question {index}: "
-                    "Invalid estimated solving "
-                    "time."
+                    f"Question {index}: " "Invalid estimated solving " "time."
                 )
 
         #
@@ -322,17 +269,11 @@ class R03Validator(ValidatorBase):
 
         if len(concept_registry) == 1:
 
-            result.add_warning(
-                "All questions use the same "
-                "concept."
-            )
+            result.add_warning("All questions use the same " "concept.")
 
         if len(archetype_registry) == 1:
 
-            result.add_warning(
-                "All questions use the same "
-                "archetype."
-            )
+            result.add_warning("All questions use the same " "archetype.")
 
     # ---------------------------------------------------------
     # Blueprint Attribute Validation
@@ -359,10 +300,7 @@ class R03Validator(ValidatorBase):
 
             if not bloom:
 
-                result.add_warning(
-                    f"Question {index}: "
-                    "Bloom level missing."
-                )
+                result.add_warning(f"Question {index}: " "Bloom level missing.")
 
             exam_level = question.metadata.get(
                 "exam_level",
@@ -371,10 +309,7 @@ class R03Validator(ValidatorBase):
 
             if not exam_level:
 
-                result.add_warning(
-                    f"Question {index}: "
-                    "Exam level missing."
-                )
+                result.add_warning(f"Question {index}: " "Exam level missing.")
 
             source_type = question.metadata.get(
                 "source_type",
@@ -383,10 +318,8 @@ class R03Validator(ValidatorBase):
 
             if not source_type:
 
-                result.add_warning(
-                    f"Question {index}: "
-                    "Source type missing."
-                )
+                result.add_warning(f"Question {index}: " "Source type missing.")
+
     # ---------------------------------------------------------
     # Quality Validation
     # ---------------------------------------------------------
@@ -433,11 +366,7 @@ class R03Validator(ValidatorBase):
             start=1,
         ):
 
-            correct = (
-                question.correct_option
-                .strip()
-                .upper()
-            )
+            correct = question.correct_option.strip().upper()
 
             option_labels = (
                 "A",
@@ -451,9 +380,7 @@ class R03Validator(ValidatorBase):
                 question.options,
             ):
 
-                if (
-                    label == correct
-                ):
+                if label == correct:
 
                     continue
 
@@ -483,20 +410,14 @@ class R03Validator(ValidatorBase):
             start=1,
         ):
 
-            bloom = (
-                question.metadata.get(
-                    "bloom_level",
-                    "",
-                )
-                .strip()
-            )
+            bloom = question.metadata.get(
+                "bloom_level",
+                "",
+            ).strip()
 
             if not bloom:
 
-                result.add_warning(
-                    f"Question {index}: "
-                    "Bloom level not assigned."
-                )
+                result.add_warning(f"Question {index}: " "Bloom level not assigned.")
 
     # ---------------------------------------------------------
     # Difficulty Progression
@@ -534,10 +455,7 @@ class R03Validator(ValidatorBase):
 
                 continue
 
-            if (
-                previous is not None
-                and current < previous
-            ):
+            if previous is not None and current < previous:
 
                 result.add_warning(
                     f"Question {index}: "
@@ -546,6 +464,7 @@ class R03Validator(ValidatorBase):
                 )
 
             previous = current
+
     # ---------------------------------------------------------
     # JEE Quality Validation
     # ---------------------------------------------------------
@@ -577,10 +496,7 @@ class R03Validator(ValidatorBase):
 
             if not exam_relevance:
 
-                result.add_warning(
-                    f"Question {index}: "
-                    "Exam relevance missing."
-                )
+                result.add_warning(f"Question {index}: " "Exam relevance missing.")
 
             #
             # PYQ information
@@ -594,9 +510,7 @@ class R03Validator(ValidatorBase):
             if pyq_inspired is None:
 
                 result.add_warning(
-                    f"Question {index}: "
-                    "PYQ inspiration flag "
-                    "missing."
+                    f"Question {index}: " "PYQ inspiration flag " "missing."
                 )
 
             #
@@ -608,10 +522,7 @@ class R03Validator(ValidatorBase):
                 None,
             )
 
-            if (
-                estimated_time is not None
-                and estimated_time > 300
-            ):
+            if estimated_time is not None and estimated_time > 300:
 
                 result.add_warning(
                     f"Question {index}: "
@@ -637,10 +548,7 @@ class R03Validator(ValidatorBase):
             1,
         )
 
-        penalty = (
-            result.error_count * 10
-            + result.warning_count * 2
-        )
+        penalty = result.error_count * 10 + result.warning_count * 2
 
         score = max(
             0,
@@ -659,9 +567,7 @@ class R03Validator(ValidatorBase):
 
         result.set_metadata(
             "quality_grade",
-            self._quality_grade(
-                score
-            ),
+            self._quality_grade(score),
         )
 
     def _quality_grade(
@@ -685,6 +591,7 @@ class R03Validator(ValidatorBase):
             return "C"
 
         return "REVIEW"
+
     # ---------------------------------------------------------
     # Blueprint Metrics
     # ---------------------------------------------------------
@@ -715,15 +622,11 @@ class R03Validator(ValidatorBase):
 
             if question.concept.strip():
 
-                concepts.add(
-                    question.concept.strip()
-                )
+                concepts.add(question.concept.strip())
 
             if question.archetype.strip():
 
-                archetypes.add(
-                    question.archetype.strip()
-                )
+                archetypes.add(question.archetype.strip())
 
             bloom = question.metadata.get(
                 "bloom_level",
@@ -732,46 +635,29 @@ class R03Validator(ValidatorBase):
 
             if bloom:
 
-                bloom_levels.add(
-                    bloom
-                )
+                bloom_levels.add(bloom)
 
             if question.difficulty.strip():
 
-                difficulty_levels.add(
-                    question.difficulty
-                )
+                difficulty_levels.add(question.difficulty)
 
         metrics = {
-
-            "concept_diversity":
-                round(
-                    len(concepts)
-                    / question_count,
-                    2,
-                ),
-
-            "archetype_diversity":
-                round(
-                    len(archetypes)
-                    / question_count,
-                    2,
-                ),
-
-            "bloom_diversity":
-                round(
-                    len(bloom_levels)
-                    / question_count,
-                    2,
-                ),
-
-            "difficulty_diversity":
-                round(
-                    len(difficulty_levels)
-                    / question_count,
-                    2,
-                ),
-
+            "concept_diversity": round(
+                len(concepts) / question_count,
+                2,
+            ),
+            "archetype_diversity": round(
+                len(archetypes) / question_count,
+                2,
+            ),
+            "bloom_diversity": round(
+                len(bloom_levels) / question_count,
+                2,
+            ),
+            "difficulty_diversity": round(
+                len(difficulty_levels) / question_count,
+                2,
+            ),
         }
 
         result.set_metadata(
@@ -797,15 +683,7 @@ class R03Validator(ValidatorBase):
             1,
         )
 
-        completed = sum(
-
-            1
-
-            for question in batch.questions
-
-            if question.is_complete()
-
-        )
+        completed = sum(1 for question in batch.questions if question.is_complete())
 
         coverage = round(
             completed / total,
@@ -826,6 +704,7 @@ class R03Validator(ValidatorBase):
             "total_questions",
             total,
         )
+
     # ---------------------------------------------------------
     # Manufacturing Readiness
     # ---------------------------------------------------------
@@ -942,6 +821,7 @@ class R03Validator(ValidatorBase):
             "quality_classification",
             classification,
         )
+
     # ---------------------------------------------------------
     # Manufacturing Report
     # ---------------------------------------------------------
@@ -956,55 +836,34 @@ class R03Validator(ValidatorBase):
         """
 
         report = {
-
-            "batch_id":
-                batch.batch_id,
-
-            "question_count":
-                batch.question_count,
-
-            "manufacturing_score":
-                result.get_metadata(
-                    "manufacturing_score",
-                    0,
-                ),
-
-            "quality_grade":
-                result.get_metadata(
-                    "quality_grade",
-                    "",
-                ),
-
-            "quality_classification":
-                result.get_metadata(
-                    "quality_classification",
-                    "",
-                ),
-
-            "coverage_score":
-                result.get_metadata(
-                    "coverage_score",
-                    0,
-                ),
-
-            "production_decision":
-                result.get_metadata(
-                    "production_decision",
-                    "",
-                ),
-
-            "manufacturing_readiness":
-                result.get_metadata(
-                    "manufacturing_readiness",
-                    "",
-                ),
-
-            "error_count":
-                result.error_count,
-
-            "warning_count":
-                result.warning_count,
-
+            "batch_id": batch.batch_id,
+            "question_count": batch.question_count,
+            "manufacturing_score": result.get_metadata(
+                "manufacturing_score",
+                0,
+            ),
+            "quality_grade": result.get_metadata(
+                "quality_grade",
+                "",
+            ),
+            "quality_classification": result.get_metadata(
+                "quality_classification",
+                "",
+            ),
+            "coverage_score": result.get_metadata(
+                "coverage_score",
+                0,
+            ),
+            "production_decision": result.get_metadata(
+                "production_decision",
+                "",
+            ),
+            "manufacturing_readiness": result.get_metadata(
+                "manufacturing_readiness",
+                "",
+            ),
+            "error_count": result.error_count,
+            "warning_count": result.warning_count,
         }
 
         result.set_metadata(
@@ -1030,31 +889,22 @@ class R03Validator(ValidatorBase):
         )
 
         summary = {
-
-            "concept_diversity":
-                metrics.get(
-                    "concept_diversity",
-                    0,
-                ),
-
-            "archetype_diversity":
-                metrics.get(
-                    "archetype_diversity",
-                    0,
-                ),
-
-            "difficulty_diversity":
-                metrics.get(
-                    "difficulty_diversity",
-                    0,
-                ),
-
-            "bloom_diversity":
-                metrics.get(
-                    "bloom_diversity",
-                    0,
-                ),
-
+            "concept_diversity": metrics.get(
+                "concept_diversity",
+                0,
+            ),
+            "archetype_diversity": metrics.get(
+                "archetype_diversity",
+                0,
+            ),
+            "difficulty_diversity": metrics.get(
+                "difficulty_diversity",
+                0,
+            ),
+            "bloom_diversity": metrics.get(
+                "bloom_diversity",
+                0,
+            ),
         }
 
         result.set_metadata(
@@ -1075,42 +925,31 @@ class R03Validator(ValidatorBase):
         """
 
         indicators = {
-
-            "structure":
-                "PASS",
-
-            "academic":
-                (
-                    "PASS"
-                    if result.error_count == 0
-                    else "FAIL"
-                ),
-
-            "blueprint":
-                (
-                    "PASS"
-                    if result.get_metadata(
-                        "manufacturing_score",
-                        0,
-                    ) >= 80
-                    else "FAIL"
-                ),
-
-            "ready":
-                (
-                    result.get_metadata(
-                        "manufacturing_readiness",
-                        "",
-                    )
-                    == "READY_FOR_PACKAGING"
-                ),
-
+            "structure": "PASS",
+            "academic": ("PASS" if result.error_count == 0 else "FAIL"),
+            "blueprint": (
+                "PASS"
+                if result.get_metadata(
+                    "manufacturing_score",
+                    0,
+                )
+                >= 80
+                else "FAIL"
+            ),
+            "ready": (
+                result.get_metadata(
+                    "manufacturing_readiness",
+                    "",
+                )
+                == "READY_FOR_PACKAGING"
+            ),
         }
 
         result.set_metadata(
             "quality_indicators",
             indicators,
         )
+
     # ---------------------------------------------------------
     # Statistics
     # ---------------------------------------------------------
@@ -1125,15 +964,9 @@ class R03Validator(ValidatorBase):
         """
 
         return {
-            "questions_checked": (
-                batch.question_count
-            ),
-            "errors": (
-                result.error_count
-            ),
-            "warnings": (
-                result.warning_count
-            ),
+            "questions_checked": (batch.question_count),
+            "errors": (result.error_count),
+            "warnings": (result.warning_count),
             "manufacturing_score": (
                 result.get_metadata(
                     "manufacturing_score",
@@ -1164,9 +997,7 @@ class R03Validator(ValidatorBase):
         return {
             "validator": self.name,
             "rule_code": self.rule_code,
-            "questions_checked": (
-                batch.question_count
-            ),
+            "questions_checked": (batch.question_count),
             "quality_grade": (
                 result.get_metadata(
                     "quality_grade",
@@ -1179,9 +1010,7 @@ class R03Validator(ValidatorBase):
                     "",
                 )
             ),
-            "success": (
-                result.is_successful()
-            ),
+            "success": (result.is_successful()),
         }
 
     # ---------------------------------------------------------
@@ -1239,9 +1068,7 @@ class R03Validator(ValidatorBase):
             "validator": self.name,
             "rule_code": self.rule_code,
             "version": self.version,
-            "validation_scope": (
-                "BLUEPRINT_QUALITY"
-            ),
+            "validation_scope": ("BLUEPRINT_QUALITY"),
             "status": "READY",
         }
 
@@ -1283,11 +1110,10 @@ class R03Validator(ValidatorBase):
             "validator": self.name,
             "rule_code": self.rule_code,
             "execution_mode": "SEQUENTIAL",
-            "validation_scope": (
-                "BLUEPRINT_AND_QUALITY"
-            ),
+            "validation_scope": ("BLUEPRINT_AND_QUALITY"),
             "framework_version": self.version,
         }
+
     # ---------------------------------------------------------
     # Statistics
     # ---------------------------------------------------------
@@ -1302,15 +1128,9 @@ class R03Validator(ValidatorBase):
         """
 
         return {
-            "questions_checked": (
-                batch.question_count
-            ),
-            "errors": (
-                result.error_count
-            ),
-            "warnings": (
-                result.warning_count
-            ),
+            "questions_checked": (batch.question_count),
+            "errors": (result.error_count),
+            "warnings": (result.warning_count),
             "manufacturing_score": (
                 result.get_metadata(
                     "manufacturing_score",
@@ -1341,9 +1161,7 @@ class R03Validator(ValidatorBase):
         return {
             "validator": self.name,
             "rule_code": self.rule_code,
-            "questions_checked": (
-                batch.question_count
-            ),
+            "questions_checked": (batch.question_count),
             "quality_grade": (
                 result.get_metadata(
                     "quality_grade",
@@ -1356,9 +1174,7 @@ class R03Validator(ValidatorBase):
                     "",
                 )
             ),
-            "success": (
-                result.is_successful()
-            ),
+            "success": (result.is_successful()),
         }
 
     # ---------------------------------------------------------
@@ -1416,9 +1232,7 @@ class R03Validator(ValidatorBase):
             "validator": self.name,
             "rule_code": self.rule_code,
             "version": self.version,
-            "validation_scope": (
-                "BLUEPRINT_QUALITY"
-            ),
+            "validation_scope": ("BLUEPRINT_QUALITY"),
             "status": "READY",
         }
 
@@ -1460,8 +1274,6 @@ class R03Validator(ValidatorBase):
             "validator": self.name,
             "rule_code": self.rule_code,
             "execution_mode": "SEQUENTIAL",
-            "validation_scope": (
-                "BLUEPRINT_AND_QUALITY"
-            ),
+            "validation_scope": ("BLUEPRINT_AND_QUALITY"),
             "framework_version": self.version,
         }

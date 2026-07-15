@@ -32,4 +32,3 @@ print("-" * 80)
 for index, column in enumerate(EXPORT_COLUMNS, start=1):
 
     print(f"{index:02d}. {column}")
-    

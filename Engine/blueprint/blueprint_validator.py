@@ -36,10 +36,10 @@ from Engine.blueprint.blueprint_model import (
     BlueprintModel,
 )
 
-
 # ---------------------------------------------------------
 # Validation Result
 # ---------------------------------------------------------
+
 
 @dataclass(slots=True)
 class ValidationResult:
@@ -49,13 +49,9 @@ class ValidationResult:
 
     valid: bool = True
 
-    errors: List[str] = field(
-        default_factory=list
-    )
+    errors: List[str] = field(default_factory=list)
 
-    warnings: List[str] = field(
-        default_factory=list
-    )
+    warnings: List[str] = field(default_factory=list)
 
     validated_sections: int = 0
 
@@ -64,6 +60,7 @@ class ValidationResult:
 # Blueprint Validator
 # ---------------------------------------------------------
 
+
 class BlueprintValidator:
     """
     Validates BlueprintModel instances.
@@ -71,9 +68,7 @@ class BlueprintValidator:
 
     def __init__(self) -> None:
 
-        self.logger = logging.getLogger(
-            self.__class__.__name__
-        )
+        self.logger = logging.getLogger(self.__class__.__name__)
 
     # -----------------------------------------------------
     # Public API
@@ -123,18 +118,16 @@ class BlueprintValidator:
             result,
         )
 
-        result.valid = (
-            len(result.errors) == 0
-        )
+        result.valid = len(result.errors) == 0
 
         self.logger.info(
-            "Blueprint validation completed "
-            "(valid=%s).",
+            "Blueprint validation completed " "(valid=%s).",
             result.valid,
         )
 
         return result
-            # -----------------------------------------------------
+        # -----------------------------------------------------
+
     # Structure Validation
     # -----------------------------------------------------
 
@@ -165,21 +158,15 @@ class BlueprintValidator:
 
             if section is None:
 
-                result.errors.append(
-                    f"Missing blueprint section: "
-                    f"{section_name}"
-                )
+                result.errors.append(f"Missing blueprint section: " f"{section_name}")
 
             else:
 
                 result.validated_sections += 1
 
-        if (
-            blueprint.metadata.document_count <= 0
-        ):
+        if blueprint.metadata.document_count <= 0:
             result.warnings.append(
-                "Blueprint contains no recorded "
-                "source documents."
+                "Blueprint contains no recorded " "source documents."
             )
 
     # -----------------------------------------------------
@@ -199,28 +186,19 @@ class BlueprintValidator:
 
         if not version.blueprint_version:
 
-            result.errors.append(
-                "Blueprint version is missing."
-            )
+            result.errors.append("Blueprint version is missing.")
 
         if version.schema_version <= 0:
 
-            result.errors.append(
-                "Invalid schema version."
-            )
+            result.errors.append("Invalid schema version.")
 
         if not version.minimum_factory_version:
 
-            result.warnings.append(
-                "Minimum factory version "
-                "not specified."
-            )
+            result.warnings.append("Minimum factory version " "not specified.")
 
         if not version.frozen:
 
-            result.warnings.append(
-                "Blueprint is not marked as frozen."
-            )
+            result.warnings.append("Blueprint is not marked as frozen.")
 
     # -----------------------------------------------------
     # Runtime Validation
@@ -239,38 +217,25 @@ class BlueprintValidator:
 
         if runtime.max_repair_cycles < 1:
 
-            result.errors.append(
-                "Maximum repair cycles "
-                "must be at least 1."
-            )
+            result.errors.append("Maximum repair cycles " "must be at least 1.")
 
         if runtime.checkpoint_interval < 1:
 
-            result.errors.append(
-                "Checkpoint interval "
-                "must be greater than zero."
-            )
+            result.errors.append("Checkpoint interval " "must be greater than zero.")
 
-        if (
-            runtime.enable_recovery
-            and not runtime.auto_checkpoint
-        ):
+        if runtime.enable_recovery and not runtime.auto_checkpoint:
 
             result.warnings.append(
-                "Recovery is enabled without "
-                "automatic checkpoints."
+                "Recovery is enabled without " "automatic checkpoints."
             )
 
-        if (
-            runtime.repair_before_expand
-            and runtime.max_repair_cycles == 1
-        ):
+        if runtime.repair_before_expand and runtime.max_repair_cycles == 1:
 
             result.warnings.append(
-                "Repair-before-expand is enabled "
-                "with only one repair attempt."
+                "Repair-before-expand is enabled " "with only one repair attempt."
             )
-                # -----------------------------------------------------
+            # -----------------------------------------------------
+
     # Automation Validation
     # -----------------------------------------------------
 
@@ -285,10 +250,7 @@ class BlueprintValidator:
 
         automation = blueprint.automation
 
-        if (
-            automation.auto_repair
-            and not automation.auto_quality_check
-        ):
+        if automation.auto_repair and not automation.auto_quality_check:
 
             result.warnings.append(
                 "Automatic repair is enabled "
@@ -296,24 +258,16 @@ class BlueprintValidator:
                 "are disabled."
             )
 
-        if (
-            automation.auto_schedule
-            and not automation.autonomous_mode
-        ):
+        if automation.auto_schedule and not automation.autonomous_mode:
 
             result.warnings.append(
-                "Automatic scheduling is enabled "
-                "while autonomous mode is disabled."
+                "Automatic scheduling is enabled " "while autonomous mode is disabled."
             )
 
-        if (
-            automation.auto_package
-            and not automation.auto_runtime_update
-        ):
+        if automation.auto_package and not automation.auto_runtime_update:
 
             result.warnings.append(
-                "Automatic packaging is enabled "
-                "without automatic runtime updates."
+                "Automatic packaging is enabled " "without automatic runtime updates."
             )
 
     # -----------------------------------------------------
@@ -345,9 +299,7 @@ class BlueprintValidator:
 
             if not value:
 
-                result.errors.append(
-                    f"Folder mapping missing: {name}"
-                )
+                result.errors.append(f"Folder mapping missing: {name}")
 
     # -----------------------------------------------------
     # Upload Validation
@@ -368,43 +320,29 @@ class BlueprintValidator:
             "CSV",
         }
 
-        if (
-            upload.export_format
-            not in supported_formats
-        ):
+        if upload.export_format not in supported_formats:
 
             result.errors.append(
-                "Unsupported export format: "
-                f"{upload.export_format}"
+                "Unsupported export format: " f"{upload.export_format}"
             )
 
         if not upload.output_directory:
 
-            result.errors.append(
-                "Upload output directory "
-                "is not configured."
-            )
+            result.errors.append("Upload output directory " "is not configured.")
 
-        if (
-            upload.compress_output
-            and upload.export_format != "CSV"
-        ):
+        if upload.compress_output and upload.export_format != "CSV":
 
             result.warnings.append(
-                "Compression is enabled for an "
-                "unrecognized export format."
+                "Compression is enabled for an " "unrecognized export format."
             )
 
-        if (
-            upload.include_manifest
-            and not upload.include_metadata
-        ):
+        if upload.include_manifest and not upload.include_metadata:
 
             result.warnings.append(
-                "Manifest generation is enabled "
-                "without metadata inclusion."
+                "Manifest generation is enabled " "without metadata inclusion."
             )
-                # -----------------------------------------------------
+            # -----------------------------------------------------
+
     # Validation Summary
     # -----------------------------------------------------
 
@@ -418,15 +356,9 @@ class BlueprintValidator:
 
         return {
             "valid": result.valid,
-            "validated_sections": (
-                result.validated_sections
-            ),
-            "error_count": len(
-                result.errors
-            ),
-            "warning_count": len(
-                result.warnings
-            ),
+            "validated_sections": (result.validated_sections),
+            "error_count": len(result.errors),
+            "warning_count": len(result.warnings),
         }
 
     def diagnostics(
@@ -438,9 +370,7 @@ class BlueprintValidator:
         """
 
         return {
-            "summary": self.summary(
-                result
-            ),
+            "summary": self.summary(result),
             "errors": result.errors,
             "warnings": result.warnings,
         }
@@ -482,9 +412,7 @@ class BlueprintValidator:
 
         message = "\n".join(result.errors)
 
-        raise ValueError(
-            f"Blueprint validation failed:\n{message}"
-        )
+        raise ValueError(f"Blueprint validation failed:\n{message}")
 
     # -----------------------------------------------------
     # Lifecycle Hooks
@@ -538,7 +466,8 @@ class BlueprintValidator:
             "version": self.version,
             "status": "READY",
         }
-            # -----------------------------------------------------
+        # -----------------------------------------------------
+
     # Validator Information
     # -----------------------------------------------------
 
@@ -599,14 +528,7 @@ class BlueprintValidator:
     # -----------------------------------------------------
 
     def __repr__(self) -> str:
-        return (
-            "BlueprintValidator("
-            f"version='{self.version}')"
-        )
+        return "BlueprintValidator(" f"version='{self.version}')"
 
     def __str__(self) -> str:
-        return (
-            f"{self.component_name} "
-            f"[v{self.version}]"
-        )
-        
+        return f"{self.component_name} " f"[v{self.version}]"

@@ -46,22 +46,16 @@ class QuestionBatchModel:
     # Questions
     # ---------------------------------------------------------
 
-    questions: List[
-        GeneratedQuestionModel
-    ] = field(
-        default_factory=list
-    )
+    questions: List[GeneratedQuestionModel] = field(default_factory=list)
 
     # ---------------------------------------------------------
     # Metadata
     # ---------------------------------------------------------
 
-    metadata: Dict = field(
-        default_factory=dict
-    )
+    metadata: Dict = field(default_factory=dict)
 
     status: str = "CREATED"
-        # ---------------------------------------------------------
+    # ---------------------------------------------------------
     # Question Management
     # ---------------------------------------------------------
 
@@ -73,9 +67,7 @@ class QuestionBatchModel:
         Add a question to the batch.
         """
 
-        self.questions.append(
-            question
-        )
+        self.questions.append(question)
 
     def remove_question(
         self,
@@ -92,14 +84,9 @@ class QuestionBatchModel:
 
         for question in self.questions:
 
-            if (
-                question.question_code
-                == question_code
-            ):
+            if question.question_code == question_code:
 
-                self.questions.remove(
-                    question
-                )
+                self.questions.remove(question)
 
                 return True
 
@@ -115,10 +102,7 @@ class QuestionBatchModel:
 
         for question in self.questions:
 
-            if (
-                question.question_code
-                == question_code
-            ):
+            if question.question_code == question_code:
 
                 return question
 
@@ -141,13 +125,8 @@ class QuestionBatchModel:
             "set_number": self.set_number,
             "batch_number": self.batch_number,
             "status": self.status,
-            "questions": [
-                question.to_dict()
-                for question in self.questions
-            ],
-            "metadata": dict(
-                self.metadata
-            ),
+            "questions": [question.to_dict() for question in self.questions],
+            "metadata": dict(self.metadata),
         }
 
     @classmethod
@@ -197,16 +176,11 @@ class QuestionBatchModel:
         )
 
         batch.questions = [
-
-            GeneratedQuestionModel.from_dict(
-                item
-            )
-
+            GeneratedQuestionModel.from_dict(item)
             for item in data.get(
                 "questions",
                 [],
             )
-
         ]
 
         return batch
@@ -222,10 +196,9 @@ class QuestionBatchModel:
         Create a deep copy of the batch.
         """
 
-        return QuestionBatchModel.from_dict(
-            self.to_dict()
-        )
-            # ---------------------------------------------------------
+        return QuestionBatchModel.from_dict(self.to_dict())
+        # ---------------------------------------------------------
+
     # State Inspection
     # ---------------------------------------------------------
 
@@ -248,10 +221,7 @@ class QuestionBatchModel:
         if self.is_empty():
             return False
 
-        return all(
-            question.is_complete()
-            for question in self.questions
-        )
+        return all(question.is_complete() for question in self.questions)
 
     # ---------------------------------------------------------
     # Statistics
@@ -263,22 +233,13 @@ class QuestionBatchModel:
         """
 
         complete_questions = sum(
-            1
-            for question in self.questions
-            if question.is_complete()
+            1 for question in self.questions if question.is_complete()
         )
 
         return {
-            "question_count": len(
-                self.questions
-            ),
-            "complete_questions": (
-                complete_questions
-            ),
-            "incomplete_questions": (
-                len(self.questions)
-                - complete_questions
-            ),
+            "question_count": len(self.questions),
+            "complete_questions": (complete_questions),
+            "incomplete_questions": (len(self.questions) - complete_questions),
         }
 
     # ---------------------------------------------------------
@@ -308,11 +269,7 @@ class QuestionBatchModel:
         Number of structurally complete questions.
         """
 
-        return sum(
-            1
-            for question in self.questions
-            if question.is_complete()
-        )
+        return sum(1 for question in self.questions if question.is_complete())
 
     @property
     def incomplete_question_count(self) -> int:
@@ -320,10 +277,7 @@ class QuestionBatchModel:
         Number of structurally incomplete questions.
         """
 
-        return (
-            self.question_count
-            - self.complete_question_count
-        )
+        return self.question_count - self.complete_question_count
 
     # ---------------------------------------------------------
     # Metadata Helpers
@@ -353,7 +307,8 @@ class QuestionBatchModel:
             key,
             default,
         )
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Summary
     # ---------------------------------------------------------
 
@@ -417,15 +372,9 @@ class QuestionBatchModel:
         return {
             "component": self.component_name,
             "version": self.version,
-            "status": (
-                "READY"
-                if self.is_complete()
-                else "INCOMPLETE"
-            ),
+            "status": ("READY" if self.is_complete() else "INCOMPLETE"),
             "question_count": self.question_count,
-            "complete_questions": (
-                self.complete_question_count
-            ),
+            "complete_questions": (self.complete_question_count),
         }
 
     # ---------------------------------------------------------
@@ -475,7 +424,8 @@ class QuestionBatchModel:
         """
 
         self.status = status
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Reset
     # ---------------------------------------------------------
 
@@ -514,8 +464,4 @@ class QuestionBatchModel:
 
     def __str__(self) -> str:
 
-        return (
-            f"{self.batch_id} | "
-            f"{self.question_count} question(s)"
-        )
-        
+        return f"{self.batch_id} | " f"{self.question_count} question(s)"

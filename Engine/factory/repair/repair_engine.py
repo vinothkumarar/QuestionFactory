@@ -21,10 +21,10 @@ from Engine.models.question_batch_model import (
     QuestionBatchModel,
 )
 
-
 # ---------------------------------------------------------
 # Repair Interface
 # ---------------------------------------------------------
+
 
 class RepairModule(ABC):
     """
@@ -52,6 +52,7 @@ class RepairModule(ABC):
 # Repair Engine
 # ---------------------------------------------------------
 
+
 class RepairEngine:
     """
     Coordinates execution of all
@@ -60,13 +61,9 @@ class RepairEngine:
 
     def __init__(self):
 
-        self.logger = logging.getLogger(
-            self.__class__.__name__
-        )
+        self.logger = logging.getLogger(self.__class__.__name__)
 
-        self._modules: List[
-            RepairModule
-        ] = []
+        self._modules: List[RepairModule] = []
 
     # ---------------------------------------------------------
     # Repair
@@ -80,9 +77,7 @@ class RepairEngine:
         Execute every registered repair module.
         """
 
-        self.logger.info(
-            "Starting repair cycle."
-        )
+        self.logger.info("Starting repair cycle.")
 
         results = []
 
@@ -93,19 +88,14 @@ class RepairEngine:
                 module.name,
             )
 
-            result = module.repair(
-                batch
-            )
+            result = module.repair(batch)
 
-            results.append(
-                result
-            )
+            results.append(result)
 
-        self.logger.info(
-            "Repair cycle completed."
-        )
+        self.logger.info("Repair cycle completed.")
 
         return results
+
     # ---------------------------------------------------------
     # Module Management
     # ---------------------------------------------------------
@@ -118,9 +108,7 @@ class RepairEngine:
         Register a repair module.
         """
 
-        self._modules.append(
-            module
-        )
+        self._modules.append(module)
 
         self.logger.info(
             "Registered repair module: %s",
@@ -144,9 +132,7 @@ class RepairEngine:
 
             if module.name == module_name:
 
-                self._modules.remove(
-                    module
-                )
+                self._modules.remove(module)
 
                 self.logger.info(
                     "Removed repair module: %s",
@@ -180,9 +166,7 @@ class RepairEngine:
         Return a copy of all registered modules.
         """
 
-        return list(
-            self._modules
-        )
+        return list(self._modules)
 
     def clear(
         self,
@@ -193,9 +177,7 @@ class RepairEngine:
 
         self._modules.clear()
 
-        self.logger.info(
-            "Repair module registry cleared."
-        )
+        self.logger.info("Repair module registry cleared.")
 
     # ---------------------------------------------------------
     # Information
@@ -210,9 +192,7 @@ class RepairEngine:
         repair modules.
         """
 
-        return len(
-            self._modules
-        )
+        return len(self._modules)
 
     def module_names(
         self,
@@ -222,11 +202,7 @@ class RepairEngine:
         repair modules.
         """
 
-        return [
-            module.name
-            for module
-            in self._modules
-        ]
+        return [module.name for module in self._modules]
 
     def has_module(
         self,
@@ -237,10 +213,8 @@ class RepairEngine:
         is registered.
         """
 
-        return (
-            module_name
-            in self.module_names()
-        )
+        return module_name in self.module_names()
+
     # ---------------------------------------------------------
     # Lifecycle Hooks
     # ---------------------------------------------------------
@@ -285,13 +259,9 @@ class RepairEngine:
         Execute the complete repair workflow.
         """
 
-        self.before_repair(
-            batch
-        )
+        self.before_repair(batch)
 
-        results = self.repair(
-            batch
-        )
+        results = self.repair(batch)
 
         self.after_repair(
             batch,
@@ -313,12 +283,8 @@ class RepairEngine:
         """
 
         return {
-            "module_count": (
-                self.module_count
-            ),
-            "result_count": len(
-                results
-            ),
+            "module_count": (self.module_count),
+            "result_count": len(results),
         }
 
     # ---------------------------------------------------------
@@ -334,16 +300,11 @@ class RepairEngine:
         """
 
         return {
-            "component": (
-                self.__class__.__name__
-            ),
-            "modules": (
-                self.module_names()
-            ),
-            "summary": self.summary(
-                results
-            ),
+            "component": (self.__class__.__name__),
+            "modules": (self.module_names()),
+            "summary": self.summary(results),
         }
+
     # ---------------------------------------------------------
     # Health
     # ---------------------------------------------------------
@@ -359,9 +320,7 @@ class RepairEngine:
             "component": "Repair Engine",
             "version": "2.0.0",
             "status": "READY",
-            "registered_modules": (
-                self.module_count
-            ),
+            "registered_modules": (self.module_count),
         }
 
     # ---------------------------------------------------------
@@ -398,9 +357,7 @@ class RepairEngine:
         return {
             "component": "Repair Engine",
             "execution_mode": "SEQUENTIAL",
-            "registered_modules": (
-                self.module_count
-            ),
+            "registered_modules": (self.module_count),
         }
 
     # ---------------------------------------------------------
@@ -416,10 +373,7 @@ class RepairEngine:
 
         if self.module_count == 0:
 
-            self.logger.warning(
-                "No repair modules have been "
-                "registered."
-            )
+            self.logger.warning("No repair modules have been " "registered.")
 
     # ---------------------------------------------------------
     # Utility Methods
@@ -443,6 +397,7 @@ class RepairEngine:
         """
 
         return self.module_count == 0
+
     # ---------------------------------------------------------
     # Health
     # ---------------------------------------------------------
@@ -458,9 +413,7 @@ class RepairEngine:
             "component": "Repair Engine",
             "version": "2.0.0",
             "status": "READY",
-            "registered_modules": (
-                self.module_count
-            ),
+            "registered_modules": (self.module_count),
         }
 
     # ---------------------------------------------------------
@@ -497,9 +450,7 @@ class RepairEngine:
         return {
             "component": "Repair Engine",
             "execution_mode": "SEQUENTIAL",
-            "registered_modules": (
-                self.module_count
-            ),
+            "registered_modules": (self.module_count),
         }
 
     # ---------------------------------------------------------
@@ -515,10 +466,7 @@ class RepairEngine:
 
         if self.module_count == 0:
 
-            self.logger.warning(
-                "No repair modules have been "
-                "registered."
-            )
+            self.logger.warning("No repair modules have been " "registered.")
 
     # ---------------------------------------------------------
     # Utility Methods
@@ -542,4 +490,3 @@ class RepairEngine:
         """
 
         return self.module_count == 0
-        

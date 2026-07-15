@@ -7,7 +7,6 @@ from repositories.factory_state_repository import FactoryStateRepository
 from planning.production_planner import ProductionPlanner
 from production.production_worker import ProductionWorker
 
-
 repository = FactoryStateRepository()
 
 state = repository.load()
@@ -18,9 +17,7 @@ production_order = planner.plan(state)
 
 worker = ProductionWorker()
 
-result = worker.execute(
-    production_order
-)
+result = worker.execute(production_order)
 
 print("=" * 80)
 print("WORKER RESULT")

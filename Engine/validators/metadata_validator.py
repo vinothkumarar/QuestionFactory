@@ -8,14 +8,7 @@ Validates metadata fields.
 
 class MetadataValidator:
 
-    REQUIRED_METADATA = [
-
-        "subject_name",
-        "unit_name",
-        "chapter_name",
-        "subtopic_name"
-
-    ]
+    REQUIRED_METADATA = ["subject_name", "unit_name", "chapter_name", "subtopic_name"]
 
     def validate(self, question: dict):
 
@@ -32,7 +25,7 @@ class MetadataValidator:
                 errors.append(f"{field} is empty")
 
         return {
-    "validator": "MetadataValidator",
-    "passed": len(errors) == 0,
-    "errors": errors
-}
+            "validator": "MetadataValidator",
+            "passed": len(errors) == 0,
+            "errors": errors,
+        }

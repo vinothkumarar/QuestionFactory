@@ -14,9 +14,7 @@ class DatabaseEngine:
 
     def save_question(self, question):
 
-        return self.adapter.insert_question(
-            question
-        )
+        return self.adapter.insert_question(question)
 
     def save_batch(self, report):
 
@@ -26,9 +24,7 @@ class DatabaseEngine:
 
         for result in report.results:
 
-            success = self.save_question(
-                result["question"]
-            )
+            success = self.save_question(result["question"])
 
             if success:
 
@@ -38,11 +34,4 @@ class DatabaseEngine:
 
                 skipped += 1
 
-        return {
-
-            "inserted": inserted,
-
-            "skipped": skipped
-
-        }
-        
+        return {"inserted": inserted, "skipped": skipped}

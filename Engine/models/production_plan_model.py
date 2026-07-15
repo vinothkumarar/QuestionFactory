@@ -30,4 +30,3 @@ class ProductionPlanModel:
     auto_commit: bool = True
 
     stop_on_failure: bool = True
-    

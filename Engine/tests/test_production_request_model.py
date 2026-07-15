@@ -7,26 +7,16 @@ Sprint    : S1
 Release   : R1
 """
 
-from models.production_request_model import (
-    ProductionRequestModel
-)
+from models.production_request_model import ProductionRequestModel
 
 request = ProductionRequestModel(
-
     request_id="REQ_001",
-
     subject="Physics",
-
     unit="P1",
-
     chapter="CH1",
-
     subtopic="ST4",
-
     set_no="S1",
-
-    total_questions=250
-
+    total_questions=250,
 )
 
 print("=" * 80)

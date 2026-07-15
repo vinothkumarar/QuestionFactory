@@ -16,14 +16,9 @@ from constants.generation_status import GenerationStatus
 from models.pipeline_context_model import PipelineContextModel
 from models.worker_result_model import WorkerResultModel
 
-from pipeline.execution_pipeline_builder import (
-    ExecutionPipelineBuilder
-)
+from pipeline.execution_pipeline_builder import ExecutionPipelineBuilder
 
-from config.factory_config import (
-    MAX_RETRY_COUNT,
-    RETRY_DELAY_SECONDS
-)
+from config.factory_config import MAX_RETRY_COUNT, RETRY_DELAY_SECONDS
 
 
 class ProductionWorker:
@@ -40,14 +35,9 @@ class ProductionWorker:
 
     def __init__(self):
 
-        self.pipeline = (
-            ExecutionPipelineBuilder().build()
-        )
+        self.pipeline = ExecutionPipelineBuilder().build()
 
-    def execute(
-        self,
-        production_order
-    ) -> WorkerResultModel:
+    def execute(self, production_order) -> WorkerResultModel:
 
         last_result = None
 
@@ -55,86 +45,44 @@ class ProductionWorker:
 
             start_time = time.time()
 
-            context = PipelineContextModel(
-
-                production_order=production_order
-
-            )
+            context = PipelineContextModel(production_order=production_order)
 
             try:
 
-                context = self.pipeline.run(
-                    context
-                )
+                context = self.pipeline.run(context)
 
-                execution_time = int(
-
-                    (time.time() - start_time)
-
-                    * 1000
-
-                )
+                execution_time = int((time.time() - start_time) * 1000)
 
                 return WorkerResultModel(
-
                     production_order=production_order,
-
                     question=context.question,
-
                     prompt=context.prompt,
-
                     raw_response=context.raw_response,
-
                     parsed_response=context.parsed_response,
-
                     validation=context.validation,
-
                     provider=context.provider,
-
                     execution_time_ms=execution_time,
-
                     retry_count=attempt - 1,
-
                     status=GenerationStatus.SUCCESS,
-
-                    error_message=None
-
+                    error_message=None,
                 )
 
             except Exception as ex:
 
-                execution_time = int(
-
-                    (time.time() - start_time)
-
-                    * 1000
-
-                )
+                execution_time = int((time.time() - start_time) * 1000)
 
                 last_result = WorkerResultModel(
-
                     production_order=production_order,
-
                     question=context.question,
-
                     prompt=context.prompt,
-
                     raw_response=context.raw_response,
-
                     parsed_response=context.parsed_response,
-
                     validation=context.validation,
-
                     provider=context.provider,
-
                     execution_time_ms=execution_time,
-
                     retry_count=attempt,
-
                     status=GenerationStatus.AI_FAILED,
-
-                    error_message=str(ex)
-
+                    error_message=str(ex),
                 )
 
                 print()
@@ -144,21 +92,14 @@ class ProductionWorker:
                     f"Q{production_order.question_start}"
                 )
 
-                print(
-                    f"Reason : {ex}"
-                )
+                print(f"Reason : {ex}")
 
                 if attempt < MAX_RETRY_COUNT:
 
-                    time.sleep(
-                        RETRY_DELAY_SECONDS
-                    )
+                    time.sleep(RETRY_DELAY_SECONDS)
 
         print()
 
-        print(
-            f"FAILED AFTER {MAX_RETRY_COUNT} ATTEMPTS"
-        )
+        print(f"FAILED AFTER {MAX_RETRY_COUNT} ATTEMPTS")
 
         return last_result
-        

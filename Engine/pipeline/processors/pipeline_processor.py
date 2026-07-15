@@ -26,10 +26,7 @@ class PipelineProcessor(ABC):
     description = ""
 
     @abstractmethod
-    def execute(
-        self,
-        context: PipelineContextModel
-    ) -> PipelineContextModel:
+    def execute(self, context: PipelineContextModel) -> PipelineContextModel:
         """
         Execute the processor.
 

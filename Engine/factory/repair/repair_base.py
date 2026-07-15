@@ -31,9 +31,7 @@ class RepairBase(ABC):
 
     def __init__(self):
 
-        self.logger = logging.getLogger(
-            self.__class__.__name__
-        )
+        self.logger = logging.getLogger(self.__class__.__name__)
 
     # ---------------------------------------------------------
     # Identity
@@ -65,6 +63,7 @@ class RepairBase(ABC):
         """
         Execute repair.
         """
+
     # ---------------------------------------------------------
     # Lifecycle Hooks
     # ---------------------------------------------------------
@@ -113,13 +112,9 @@ class RepairBase(ABC):
             self.name,
         )
 
-        self.before_repair(
-            batch
-        )
+        self.before_repair(batch)
 
-        result = self.repair(
-            batch
-        )
+        result = self.repair(batch)
 
         self.after_repair(
             batch,
@@ -161,11 +156,10 @@ class RepairBase(ABC):
             module_name=self.name,
         )
 
-        result.mark_regeneration_required(
-            reason
-        )
+        result.mark_regeneration_required(reason)
 
         return result
+
     # ---------------------------------------------------------
     # Summary
     # ---------------------------------------------------------
@@ -181,21 +175,11 @@ class RepairBase(ABC):
         return {
             "module": self.name,
             "repair_code": self.repair_code,
-            "repaired": (
-                result.repaired
-            ),
-            "repaired_items": (
-                result.repaired_count
-            ),
-            "failed_repairs": (
-                result.failed_count
-            ),
-            "warnings": (
-                result.warning_count
-            ),
-            "regeneration_required": (
-                result.regeneration_required
-            ),
+            "repaired": (result.repaired),
+            "repaired_items": (result.repaired_count),
+            "failed_repairs": (result.failed_count),
+            "warnings": (result.warning_count),
+            "regeneration_required": (result.regeneration_required),
         }
 
     # ---------------------------------------------------------
@@ -211,22 +195,10 @@ class RepairBase(ABC):
         """
 
         return {
-            "component": (
-                self.__class__.__name__
-            ),
-            "summary": (
-                self.summary(
-                    result
-                )
-            ),
-            "statistics": (
-                result.statistics()
-            ),
-            "metadata": (
-                dict(
-                    result.metadata
-                )
-            ),
+            "component": (self.__class__.__name__),
+            "summary": (self.summary(result)),
+            "statistics": (result.statistics()),
+            "metadata": (dict(result.metadata)),
         }
 
     # ---------------------------------------------------------
@@ -265,16 +237,10 @@ class RepairBase(ABC):
         """
 
         return {
-            "component": (
-                self.component_name
-            ),
+            "component": (self.component_name),
             "module": self.name,
-            "repair_code": (
-                self.repair_code
-            ),
-            "version": (
-                self.version
-            ),
+            "repair_code": (self.repair_code),
+            "version": (self.version),
             "status": "READY",
         }
 
@@ -297,6 +263,7 @@ class RepairBase(ABC):
             "health_reporting": True,
             "summary": True,
         }
+
     # ---------------------------------------------------------
     # Execution Information
     # ---------------------------------------------------------
@@ -333,16 +300,11 @@ class RepairBase(ABC):
 
         if not self.name.strip():
 
-            raise ValueError(
-                "Repair module name cannot "
-                "be empty."
-            )
+            raise ValueError("Repair module name cannot " "be empty.")
 
         if not self.repair_code.strip():
 
-            raise ValueError(
-                "Repair code cannot be empty."
-            )
+            raise ValueError("Repair code cannot be empty.")
 
     # ---------------------------------------------------------
     # Metadata Helpers
@@ -403,6 +365,7 @@ class RepairBase(ABC):
         """
 
         return True
+
     # ---------------------------------------------------------
     # Execution Information
     # ---------------------------------------------------------
@@ -439,16 +402,11 @@ class RepairBase(ABC):
 
         if not self.name.strip():
 
-            raise ValueError(
-                "Repair module name cannot "
-                "be empty."
-            )
+            raise ValueError("Repair module name cannot " "be empty.")
 
         if not self.repair_code.strip():
 
-            raise ValueError(
-                "Repair code cannot be empty."
-            )
+            raise ValueError("Repair code cannot be empty.")
 
     # ---------------------------------------------------------
     # Metadata Helpers
@@ -509,4 +467,3 @@ class RepairBase(ABC):
         """
 
         return True
-        

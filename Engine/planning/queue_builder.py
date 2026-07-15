@@ -23,16 +23,11 @@ class QueueBuilder:
 
         self.manager = FactoryStateManager()
 
-    def build(
-        self,
-        request: ProductionRequestModel
-    ) -> ProductionQueueModel:
+    def build(self, request: ProductionRequestModel) -> ProductionQueueModel:
 
         state = self.repository.load()
 
-        queue = ProductionQueueModel(
-            request=request
-        )
+        queue = ProductionQueueModel(request=request)
 
         remaining = request.total_questions
 
@@ -42,35 +37,20 @@ class QueueBuilder:
 
             state.current_batch = batch
 
-            question_start = self.manager.get_question_start(
-                state
-            )
+            question_start = self.manager.get_question_start(state)
 
-            question_count = min(
-                remaining,
-                state.questions_per_batch
-            )
+            question_count = min(remaining, state.questions_per_batch)
 
             order = ProductionOrderModel(
-
                 order_id=f"{request.request_id}_B{batch}",
-
                 subject=request.subject,
-
                 unit=request.unit,
-
                 chapter=request.chapter,
-
                 subtopic=request.subtopic,
-
                 set_no=request.set_no,
-
                 batch_no=batch,
-
                 question_start=question_start,
-
-                question_count=question_count
-
+                question_count=question_count,
             )
 
             queue.orders.append(order)

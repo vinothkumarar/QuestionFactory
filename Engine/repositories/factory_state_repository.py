@@ -17,99 +17,37 @@ class FactoryStateRepository:
 
     def __init__(self):
 
-        self.path = (
-
-            Path(__file__).parent.parent
-
-            / "runtime"
-
-            / "factory_state.json"
-
-        )
+        self.path = Path(__file__).parent.parent / "runtime" / "factory_state.json"
 
     def load(self) -> FactoryStateModel:
 
-        data = json.loads(
-
-            self.path.read_text(
-
-                encoding="utf-8"
-
-            )
-
-        )
+        data = json.loads(self.path.read_text(encoding="utf-8"))
 
         return FactoryStateModel(
-
             project=data["project"],
-
             chapter=data["chapter"],
-
             subtopic=data["subtopic"],
-
             set_no=data["set_no"],
-
             current_batch=data["current_batch"],
-
-            questions_per_batch=data.get(
-
-                "questions_per_batch",
-
-                100
-
-            ),
-
-            status=data.get(
-
-                "status",
-
-                "READY"
-
-            )
-
+            questions_per_batch=data.get("questions_per_batch", 100),
+            status=data.get("status", "READY"),
         )
 
-    def save(
-        self,
-        state: FactoryStateModel
-    ):
+    def save(self, state: FactoryStateModel):
 
         data = {
-
             "project": state.project,
-
             "chapter": state.chapter,
-
             "subtopic": state.subtopic,
-
             "set_no": state.set_no,
-
             "current_batch": state.current_batch,
-
             "questions_per_batch": state.questions_per_batch,
-
-            "status": state.status
-
+            "status": state.status,
         }
 
-        self.path.write_text(
+        self.path.write_text(json.dumps(data, indent=4), encoding="utf-8")
 
-            json.dumps(
-
-                data,
-
-                indent=4
-
-            ),
-
-            encoding="utf-8"
-
-        )
-
-    def update(
-        self,
-        state: FactoryStateModel
-    ) -> FactoryStateModel:
+    def update(self, state: FactoryStateModel) -> FactoryStateModel:
         """
         Saves the latest factory state
         and returns the updated model.
@@ -125,24 +63,15 @@ class FactoryStateRepository:
         """
 
         state = FactoryStateModel(
-
             project="",
-
             chapter="",
-
             subtopic="",
-
             set_no="",
-
             current_batch=1,
-
             questions_per_batch=100,
-
-            status="READY"
-
+            status="READY",
         )
 
         self.save(state)
 
         return state
-        

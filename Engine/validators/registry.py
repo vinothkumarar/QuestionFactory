@@ -14,6 +14,5 @@ VALIDATORS = [
     SchemaValidator(),
     RequiredFieldValidator(),
     MetadataValidator(),
-    IdentityValidator()
+    IdentityValidator(),
 ]
-

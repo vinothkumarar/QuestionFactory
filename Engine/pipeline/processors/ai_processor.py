@@ -32,22 +32,14 @@ class AIProcessor(PipelineProcessor):
 
         self.provider = ProviderFactory().create()
 
-    def execute(
-        self,
-        context: PipelineContextModel
-    ) -> PipelineContextModel:
+    def execute(self, context: PipelineContextModel) -> PipelineContextModel:
 
         start_time = time.time()
 
-        context.raw_response = self.provider.generate(
-            context.prompt
-        )
+        context.raw_response = self.provider.generate(context.prompt)
 
         context.provider = type(self.provider).__name__
 
-        context.execution_time_ms = int(
-            (time.time() - start_time) * 1000
-        )
+        context.execution_time_ms = int((time.time() - start_time) * 1000)
 
         return context
-        

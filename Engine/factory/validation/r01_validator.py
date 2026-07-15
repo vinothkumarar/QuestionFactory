@@ -80,6 +80,7 @@ class R01Validator(ValidatorBase):
             result.mark_success()
 
         return result
+
     # ---------------------------------------------------------
     # Batch Validation
     # ---------------------------------------------------------
@@ -95,43 +96,31 @@ class R01Validator(ValidatorBase):
 
         if batch is None:
 
-            result.add_error(
-                "Batch is None."
-            )
+            result.add_error("Batch is None.")
 
             return
 
         if batch.is_empty():
 
-            result.add_error(
-                "Batch contains no questions."
-            )
+            result.add_error("Batch contains no questions.")
 
             return
 
         if not batch.batch_id.strip():
 
-            result.add_warning(
-                "Batch ID is empty."
-            )
+            result.add_warning("Batch ID is empty.")
 
         if not batch.unit_code.strip():
 
-            result.add_warning(
-                "Unit code is empty."
-            )
+            result.add_warning("Unit code is empty.")
 
         if not batch.chapter_code.strip():
 
-            result.add_warning(
-                "Chapter code is empty."
-            )
+            result.add_warning("Chapter code is empty.")
 
         if not batch.subtopic_code.strip():
 
-            result.add_warning(
-                "Subtopic code is empty."
-            )
+            result.add_warning("Subtopic code is empty.")
 
     # ---------------------------------------------------------
     # Question Validation
@@ -170,50 +159,35 @@ class R01Validator(ValidatorBase):
 
         if not question.question_code.strip():
 
-            result.add_error(
-                f"Question {index}: "
-                "Missing question code."
-            )
+            result.add_error(f"Question {index}: " "Missing question code.")
 
         if not question.question_text.strip():
 
-            result.add_error(
-                f"Question {index}: "
-                "Question text is empty."
-            )
+            result.add_error(f"Question {index}: " "Question text is empty.")
 
         if len(question.options) < 4:
 
-            result.add_error(
-                f"Question {index}: "
-                "Less than four options found."
-            )
+            result.add_error(f"Question {index}: " "Less than four options found.")
 
         if not question.correct_option.strip():
 
-            result.add_error(
-                f"Question {index}: "
-                "Correct option not specified."
-            )
+            result.add_error(f"Question {index}: " "Correct option not specified.")
 
-        if (
-            question.correct_option
-            and question.correct_option
-            not in {"A", "B", "C", "D"}
-        ):
+        if question.correct_option and question.correct_option not in {
+            "A",
+            "B",
+            "C",
+            "D",
+        }:
 
             result.add_error(
-                f"Question {index}: "
-                "Correct option must be "
-                "A, B, C or D."
+                f"Question {index}: " "Correct option must be " "A, B, C or D."
             )
 
         if not question.explanation.strip():
 
-            result.add_warning(
-                f"Question {index}: "
-                "Explanation is empty."
-            )
+            result.add_warning(f"Question {index}: " "Explanation is empty.")
+
     # ---------------------------------------------------------
     # Duplicate Validation
     # ---------------------------------------------------------
@@ -228,32 +202,18 @@ class R01Validator(ValidatorBase):
         """
 
         question_codes = [
-
             question.question_code
-
             for question in batch.questions
-
             if question.question_code.strip()
-
         ]
 
         duplicates = [
-
-            code
-
-            for code, count in Counter(
-                question_codes
-            ).items()
-
-            if count > 1
-
+            code for code, count in Counter(question_codes).items() if count > 1
         ]
 
         for code in duplicates:
 
-            result.add_error(
-                f"Duplicate question code: {code}"
-            )
+            result.add_error(f"Duplicate question code: {code}")
 
     # ---------------------------------------------------------
     # Batch Consistency
@@ -274,38 +234,17 @@ class R01Validator(ValidatorBase):
             start=1,
         ):
 
-            if (
-                question.unit_code
-                and question.unit_code
-                != batch.unit_code
-            ):
+            if question.unit_code and question.unit_code != batch.unit_code:
 
-                result.add_error(
-                    f"Question {index}: "
-                    "Unit code mismatch."
-                )
+                result.add_error(f"Question {index}: " "Unit code mismatch.")
 
-            if (
-                question.chapter_code
-                and question.chapter_code
-                != batch.chapter_code
-            ):
+            if question.chapter_code and question.chapter_code != batch.chapter_code:
 
-                result.add_error(
-                    f"Question {index}: "
-                    "Chapter code mismatch."
-                )
+                result.add_error(f"Question {index}: " "Chapter code mismatch.")
 
-            if (
-                question.subtopic_code
-                and question.subtopic_code
-                != batch.subtopic_code
-            ):
+            if question.subtopic_code and question.subtopic_code != batch.subtopic_code:
 
-                result.add_error(
-                    f"Question {index}: "
-                    "Subtopic code mismatch."
-                )
+                result.add_error(f"Question {index}: " "Subtopic code mismatch.")
 
     # ---------------------------------------------------------
     # Statistics
@@ -321,19 +260,12 @@ class R01Validator(ValidatorBase):
         """
 
         return {
-            "questions_checked": (
-                batch.question_count
-            ),
-            "errors": (
-                result.error_count
-            ),
-            "warnings": (
-                result.warning_count
-            ),
-            "passed": (
-                result.is_successful()
-            ),
+            "questions_checked": (batch.question_count),
+            "errors": (result.error_count),
+            "warnings": (result.warning_count),
+            "passed": (result.is_successful()),
         }
+
     # ---------------------------------------------------------
     # Summary
     # ---------------------------------------------------------
@@ -350,18 +282,10 @@ class R01Validator(ValidatorBase):
         return {
             "validator": self.name,
             "rule_code": self.rule_code,
-            "questions_checked": (
-                batch.question_count
-            ),
-            "success": (
-                result.is_successful()
-            ),
-            "errors": (
-                result.error_count
-            ),
-            "warnings": (
-                result.warning_count
-            ),
+            "questions_checked": (batch.question_count),
+            "success": (result.is_successful()),
+            "errors": (result.error_count),
+            "warnings": (result.warning_count),
         }
 
     # ---------------------------------------------------------
@@ -440,6 +364,7 @@ class R01Validator(ValidatorBase):
             "validation_scope": "STRUCTURAL",
             "framework_version": self.version,
         }
+
     # ---------------------------------------------------------
     # Validator Information
     # ---------------------------------------------------------
@@ -456,9 +381,7 @@ class R01Validator(ValidatorBase):
             "rule_code": self.rule_code,
             "validation_scope": "STRUCTURAL",
             "version": self.version,
-            "execution": (
-                self.execution_information()
-            ),
+            "execution": (self.execution_information()),
         }
 
     # ---------------------------------------------------------
@@ -469,18 +392,10 @@ class R01Validator(ValidatorBase):
         self,
     ) -> str:
 
-        return (
-            "R01Validator("
-            f"rule='{self.rule_code}')"
-        )
+        return "R01Validator(" f"rule='{self.rule_code}')"
 
     def __str__(
         self,
     ) -> str:
 
-        return (
-            f"{self.rule_code} - "
-            "Structural Validation"
-        )
-
-        
+        return f"{self.rule_code} - " "Structural Validation"

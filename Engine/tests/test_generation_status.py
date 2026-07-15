@@ -5,7 +5,6 @@ Generation Status Test
 
 from constants.generation_status import GenerationStatus
 
-
 print("=" * 80)
 print("GENERATION STATUS")
 print("=" * 80)

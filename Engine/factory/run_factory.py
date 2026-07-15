@@ -33,10 +33,7 @@ def main():
 
     print()
 
-    print(
-        "Questions Generated :",
-        total_generated
-    )
+    print("Questions Generated :", total_generated)
 
     print()
 
@@ -48,4 +45,3 @@ def main():
 if __name__ == "__main__":
 
     main()
-    

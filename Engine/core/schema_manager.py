@@ -5,11 +5,7 @@ Schema Manager
 Provides access to the Question schema.
 """
 
-from core.schema import (
-    QUESTION_SCHEMA,
-    QUESTION_DEFAULTS,
-    QUESTION_FIELD_GROUPS
-)
+from core.schema import QUESTION_SCHEMA, QUESTION_DEFAULTS, QUESTION_FIELD_GROUPS
 
 
 class SchemaManager:

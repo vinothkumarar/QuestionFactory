@@ -12,7 +12,7 @@ class QuestionCodeGenerator:
         chapter: str,
         subtopic: str,
         set_no: str,
-        question_number: int
+        question_number: int,
     ) -> str:
 
         return (
@@ -22,4 +22,3 @@ class QuestionCodeGenerator:
             f"{set_no}_"
             f"Q{question_number:03}"
         )
-        

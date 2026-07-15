@@ -31,9 +31,7 @@ class ValidatorBase(ABC):
 
     def __init__(self):
 
-        self.logger = logging.getLogger(
-            self.__class__.__name__
-        )
+        self.logger = logging.getLogger(self.__class__.__name__)
 
     # ---------------------------------------------------------
     # Identity
@@ -65,6 +63,7 @@ class ValidatorBase(ABC):
         """
         Execute validation.
         """
+
     # ---------------------------------------------------------
     # Lifecycle Hooks
     # ---------------------------------------------------------
@@ -113,13 +112,9 @@ class ValidatorBase(ABC):
             self.name,
         )
 
-        self.before_validation(
-            batch
-        )
+        self.before_validation(batch)
 
-        result = self.validate(
-            batch
-        )
+        result = self.validate(batch)
 
         self.after_validation(
             batch,
@@ -168,6 +163,7 @@ class ValidatorBase(ABC):
         result.mark_failure()
 
         return result
+
     # ---------------------------------------------------------
     # Summary
     # ---------------------------------------------------------
@@ -202,9 +198,7 @@ class ValidatorBase(ABC):
 
         return {
             "component": self.__class__.__name__,
-            "summary": self.summary(
-                result
-            ),
+            "summary": self.summary(result),
             "statistics": result.statistics(),
         }
 
@@ -262,6 +256,7 @@ class ValidatorBase(ABC):
             "health_reporting": True,
             "summary": True,
         }
+
     # ---------------------------------------------------------
     # Execution Information
     # ---------------------------------------------------------
@@ -298,15 +293,11 @@ class ValidatorBase(ABC):
 
         if not self.name.strip():
 
-            raise ValueError(
-                "Validator name cannot be empty."
-            )
+            raise ValueError("Validator name cannot be empty.")
 
         if not self.rule_code.strip():
 
-            raise ValueError(
-                "Rule code cannot be empty."
-            )
+            raise ValueError("Rule code cannot be empty.")
 
     # ---------------------------------------------------------
     # Utility Methods
@@ -350,6 +341,7 @@ class ValidatorBase(ABC):
         """
 
         return True
+
     # ---------------------------------------------------------
     # Validator Information
     # ---------------------------------------------------------
@@ -366,9 +358,7 @@ class ValidatorBase(ABC):
             "rule_code": self.rule_code,
             "component": self.component_name,
             "version": self.version,
-            "execution": (
-                self.execution_information()
-            ),
+            "execution": (self.execution_information()),
         }
 
     # ---------------------------------------------------------
@@ -379,17 +369,10 @@ class ValidatorBase(ABC):
         self,
     ) -> str:
 
-        return (
-            "ValidatorBase("
-            f"name='{self.name}', "
-            f"rule='{self.rule_code}')"
-        )
+        return "ValidatorBase(" f"name='{self.name}', " f"rule='{self.rule_code}')"
 
     def __str__(
         self,
     ) -> str:
 
-        return (
-            f"{self.rule_code} - "
-            f"{self.name}"
-        )
+        return f"{self.rule_code} - " f"{self.name}"

@@ -22,9 +22,7 @@ class PromptBuilder:
 
     def __init__(self):
 
-        self.logger = logging.getLogger(
-            self.__class__.__name__
-        )
+        self.logger = logging.getLogger(self.__class__.__name__)
 
     # ---------------------------------------------------------
     # Public API
@@ -38,50 +36,27 @@ class PromptBuilder:
         Build the complete generation prompt.
         """
 
-        self.logger.info(
-            "Building generation prompt."
-        )
+        self.logger.info("Building generation prompt.")
 
         sections: List[str] = []
 
-        sections.append(
-            self._factory_context(
-                request
-            )
-        )
+        sections.append(self._factory_context(request))
 
-        sections.append(
-            self._production_context(
-                request
-            )
-        )
+        sections.append(self._production_context(request))
 
-        sections.append(
-            self._blueprint_rules(
-                request
-            )
-        )
+        sections.append(self._blueprint_rules(request))
 
-        sections.append(
-            self._runtime_context(
-                request
-            )
-        )
+        sections.append(self._runtime_context(request))
 
-        sections.append(
-            self._output_requirements(
-                request
-            )
-        )
+        sections.append(self._output_requirements(request))
 
         prompt = "\n\n".join(sections)
 
-        self.logger.info(
-            "Prompt successfully built."
-        )
+        self.logger.info("Prompt successfully built.")
 
         return prompt
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Factory Context
     # ---------------------------------------------------------
 
@@ -100,15 +75,9 @@ class PromptBuilder:
                 "### FACTORY CONTEXT",
                 f"Factory Name : {factory['name']}",
                 f"Factory Version : {factory['version']}",
-                (
-                    "Blueprint Version : "
-                    f"{factory['blueprint_version']}"
-                ),
+                ("Blueprint Version : " f"{factory['blueprint_version']}"),
                 "",
-                (
-                    "You are the manufacturing engine of "
-                    "Question Factory OS."
-                ),
+                ("You are the manufacturing engine of " "Question Factory OS."),
                 (
                     "Generate questions strictly according "
                     "to the supplied production request."
@@ -142,10 +111,7 @@ class PromptBuilder:
                 f"{production['question_start']} - "
                 f"{production['question_end']}"
             ),
-            (
-                "Questions Required : "
-                f"{production['question_count']}"
-            ),
+            ("Questions Required : " f"{production['question_count']}"),
         ]
 
         return "\n".join(lines)
@@ -180,9 +146,7 @@ class PromptBuilder:
 
         if not rules:
 
-            lines.append(
-                "No explicit manufacturing rules supplied."
-            )
+            lines.append("No explicit manufacturing rules supplied.")
 
         else:
 
@@ -195,16 +159,15 @@ class PromptBuilder:
         if archetypes:
 
             lines.append("")
-            lines.append(
-                "Available Archetype Sections:"
-            )
+            lines.append("Available Archetype Sections:")
 
             for name in sorted(archetypes.keys()):
 
                 lines.append(f"- {name}")
 
         return "\n".join(lines)
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Runtime Context
     # ---------------------------------------------------------
 
@@ -220,23 +183,11 @@ class PromptBuilder:
 
         lines = [
             "### RUNTIME CONTEXT",
-            (
-                f"Run ID : "
-                f"{runtime.get('run_id', 'UNKNOWN')}"
-            ),
-            (
-                "Repair Before Expand : "
-                f"{runtime.get('repair_before_expand', False)}"
-            ),
-            (
-                "Checkpoint Enabled : "
-                f"{runtime.get('checkpoint_enabled', False)}"
-            ),
+            (f"Run ID : " f"{runtime.get('run_id', 'UNKNOWN')}"),
+            ("Repair Before Expand : " f"{runtime.get('repair_before_expand', False)}"),
+            ("Checkpoint Enabled : " f"{runtime.get('checkpoint_enabled', False)}"),
             "",
-            (
-                "Follow the active runtime behaviour "
-                "during manufacturing."
-            ),
+            ("Follow the active runtime behaviour " "during manufacturing."),
         ]
 
         return "\n".join(lines)
@@ -258,17 +209,9 @@ class PromptBuilder:
         lines = [
             "### OUTPUT REQUIREMENTS",
             "",
-            (
-                "Return ONLY the generated questions."
-            ),
-            (
-                "Do not include explanations unless "
-                "explicitly requested."
-            ),
-            (
-                "Produce structured output that can be "
-                "parsed automatically."
-            ),
+            ("Return ONLY the generated questions."),
+            ("Do not include explanations unless " "explicitly requested."),
+            ("Produce structured output that can be " "parsed automatically."),
             (
                 "Follow the configured schema version: "
                 f"{generation.get('schema_version')}"
@@ -300,24 +243,14 @@ class PromptBuilder:
                     f"{production['question_count']} "
                     "high-quality questions."
                 ),
-                (
-                    "Maintain consistent difficulty for "
-                    "the requested set."
-                ),
-                (
-                    "Ensure every question is unique."
-                ),
-                (
-                    "Avoid duplicate concepts unless "
-                    "explicitly required."
-                ),
-                (
-                    "Return only the final manufactured "
-                    "question batch."
-                ),
+                ("Maintain consistent difficulty for " "the requested set."),
+                ("Ensure every question is unique."),
+                ("Avoid duplicate concepts unless " "explicitly required."),
+                ("Return only the final manufactured " "question batch."),
             ]
         )
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Prompt Validation
     # ---------------------------------------------------------
 
@@ -336,9 +269,7 @@ class PromptBuilder:
 
         if not prompt.strip():
 
-            raise ValueError(
-                "Generated prompt is empty."
-            )
+            raise ValueError("Generated prompt is empty.")
 
         required_sections = [
             "FACTORY CONTEXT",
@@ -353,13 +284,9 @@ class PromptBuilder:
 
             if section not in prompt:
 
-                raise ValueError(
-                    f"Missing prompt section: {section}"
-                )
+                raise ValueError(f"Missing prompt section: {section}")
 
-        self.logger.info(
-            "Prompt validation successful."
-        )
+        self.logger.info("Prompt validation successful.")
 
     # ---------------------------------------------------------
     # Lifecycle Hooks
@@ -438,7 +365,8 @@ class PromptBuilder:
             "summary": self.summary(prompt),
             "statistics": self.statistics(prompt),
         }
-            # ---------------------------------------------------------
+        # ---------------------------------------------------------
+
     # Component Information
     # ---------------------------------------------------------
 
@@ -525,14 +453,7 @@ class PromptBuilder:
     # ---------------------------------------------------------
 
     def __repr__(self) -> str:
-        return (
-            "PromptBuilder("
-            f"version='{self.version}')"
-        )
+        return "PromptBuilder(" f"version='{self.version}')"
 
     def __str__(self) -> str:
-        return (
-            f"{self.component_name} "
-            f"[v{self.version}]"
-        )
-        
+        return f"{self.component_name} " f"[v{self.version}]"

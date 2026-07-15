@@ -35,57 +35,28 @@ class BuildProcessor(PipelineProcessor):
 
         self.builder = QuestionBuilder()
 
-    def execute(
-        self,
-        context: PipelineContextModel
-    ) -> PipelineContextModel:
+    def execute(self, context: PipelineContextModel) -> PipelineContextModel:
 
         runtime = {
-
             #
             # Project Information
             #
-
-            "current_project":
-                context.production_order.unit,
-
-            "current_subject":
-                context.production_order.subject,
-
-            "current_unit":
-                context.production_order.unit,
-
-            "current_chapter":
-                context.production_order.chapter,
-
-            "current_subtopic":
-                context.production_order.subtopic,
-
-            "current_set":
-                context.production_order.set_no,
-
-            "current_batch":
-                context.production_order.batch_no,
-
+            "current_project": context.production_order.unit,
+            "current_subject": context.production_order.subject,
+            "current_unit": context.production_order.unit,
+            "current_chapter": context.production_order.chapter,
+            "current_subtopic": context.production_order.subtopic,
+            "current_set": context.production_order.set_no,
+            "current_batch": context.production_order.batch_no,
             #
             # Manufacturing Information
             #
-
-            "question_number":
-                context.production_order.question_start,
-
-            "difficulty":
-                "Blueprint"
-
+            "question_number": context.production_order.question_start,
+            "difficulty": "Blueprint",
         }
 
         context.question = self.builder.build(
-
-            runtime,
-
-            context.production_order.question_start
-
+            runtime, context.production_order.question_start
         )
 
         return context
-        
