@@ -2,17 +2,20 @@
 Question Factory OS v2.1
 ------------------------
 
-Prompt Template Registry
+Prompt Templates
+
+Central registry for all prompt templates used by
+the AI subsystem.
 
 Responsibilities
 ----------------
-• Store prompt templates
-• Version prompt assets
 • Register templates
-• Retrieve templates
-• Support future external template loading
+• Locate templates
+• Render templates
+• Validate variables
+• Manage template versions
 
-PromptBuilder consumes this module to render prompts.
+Provider agnostic.
 
 Author:
 Question Factory OS
@@ -21,16 +24,18 @@ Question Factory OS
 from __future__ import annotations
 
 import logging
+import re
+import time
 
 from dataclasses import dataclass
 from dataclasses import field
-
 from enum import Enum
-
+from string import Formatter
 from typing import Any
 from typing import Dict
 from typing import List
 from typing import Optional
+
 
 logger = logging.getLogger(__name__)
 
@@ -51,13 +56,13 @@ class PromptCategory(str, Enum):
 
     VALIDATION = "validation"
 
-    QUALITY_AUDIT = "quality_audit"
-
-    CSV_EXPORT = "csv_export"
-
     EXPLANATION = "explanation"
 
-    CUSTOM = "custom"
+    DISTRACTOR = "distractor"
+
+    BLUEPRINT = "blueprint"
+
+    REPORT = "report"
 
 
 # ----------------------------------------------------------------------
@@ -65,27 +70,150 @@ class PromptCategory(str, Enum):
 # ----------------------------------------------------------------------
 
 
-@dataclass(slots=True)
+@dataclass(slots=True, frozen=True)
 class PromptTemplate:
     """
-    Immutable prompt definition.
+    Immutable prompt template.
     """
 
     id: str
 
     name: str
 
-    category: PromptCategory
-
     version: str
+
+    category: PromptCategory
 
     description: str
 
     template: str
 
-    variables: List[str] = field(default_factory=list)
+    variables: List[str] = field(
+        default_factory=list
+    )
 
-    metadata: Dict[str, Any] = field(default_factory=dict)
+    metadata: Dict[str, Any] = field(
+        default_factory=dict
+    )
+
+    @property
+    def variable_count(
+        self,
+    ) -> int:
+        """
+        Number of declared variables.
+        """
+
+        return len(self.variables)
+
+    def to_dict(
+        self,
+    ) -> Dict[str, Any]:
+        """
+        Serialize template.
+        """
+
+        return {
+            "id": self.id,
+            "name": self.name,
+            "version": self.version,
+            "category": self.category.value,
+            "description": self.description,
+            "template": self.template,
+            "variables": list(self.variables),
+            "metadata": dict(self.metadata),
+        }
+
+    def summary(
+        self,
+    ) -> Dict[str, Any]:
+        """
+        Lightweight description.
+        """
+
+        return {
+            "id": self.id,
+            "version": self.version,
+            "category": self.category.value,
+            "variables": self.variable_count,
+        }
+
+
+# ----------------------------------------------------------------------
+# Prompt Render Result
+# ----------------------------------------------------------------------
+
+
+@dataclass(slots=True, frozen=True)
+class PromptRenderResult:
+    """
+    Result returned after rendering.
+    """
+
+    success: bool
+
+    rendered_prompt: str
+
+    missing_variables: List[str] = field(
+        default_factory=list
+    )
+
+    metadata: Dict[str, Any] = field(
+        default_factory=dict
+    )
+
+    render_duration_ms: float = 0.0
+
+    @property
+    def has_missing_variables(
+        self,
+    ) -> bool:
+        """
+        True if rendering failed because of
+        missing variables.
+        """
+
+        return bool(
+            self.missing_variables
+        )
+
+    def to_dict(
+        self,
+    ) -> Dict[str, Any]:
+        """
+        Serialize result.
+        """
+
+        return {
+            "success": self.success,
+            "rendered_prompt": self.rendered_prompt,
+            "missing_variables": list(
+                self.missing_variables
+            ),
+            "metadata": dict(
+                self.metadata
+            ),
+            "render_duration_ms": (
+                self.render_duration_ms
+            ),
+        }
+
+    def summary(
+        self,
+    ) -> Dict[str, Any]:
+        """
+        Lightweight render summary.
+        """
+
+        return {
+            "success": self.success,
+            "missing": len(
+                self.missing_variables
+            ),
+            "duration_ms": (
+                self.render_duration_ms
+            ),
+        }
 
 
 # ----------------------------------------------------------------------
@@ -95,20 +223,136 @@ class PromptTemplate:
 
 class PromptRegistry:
     """
-    Registry of prompt templates.
+    Central template registry.
 
-    Templates are versioned assets that may later be loaded
-    from Markdown, YAML, or a database.
+    Responsible for:
+
+    • Registration
+    • Lookup
+    • Rendering
+    • Validation
+    • Statistics
     """
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+    ) -> None:
 
         self._templates: Dict[
             str,
             PromptTemplate,
         ] = {}
 
-        logger.info("PromptRegistry initialized.")
+        logger.info(
+            "PromptRegistry initialized."
+        )
+    # ------------------------------------------------------------------
+    # Internal Helpers
+    # ------------------------------------------------------------------
+
+    def _version_key(
+        self,
+        version: str,
+    ) -> tuple[int, ...]:
+        """
+        Convert dotted version into a sortable tuple.
+
+        Example
+        -------
+        2.10 -> (2, 10)
+        """
+
+        try:
+            return tuple(
+                int(part)
+                for part in version.split(".")
+            )
+
+        except ValueError:
+
+            logger.warning(
+                "Invalid version '%s'.",
+                version,
+            )
+
+            return (0,)
+
+    def _extract_variables(
+        self,
+        template: str,
+    ) -> List[str]:
+        """
+        Extract placeholder names from
+        a format string.
+        """
+
+        formatter = Formatter()
+
+        variables: List[str] = []
+
+        for (
+            _,
+            field_name,
+            _,
+            _,
+        ) in formatter.parse(template):
+
+            if (
+                field_name
+                and field_name not in variables
+            ):
+                variables.append(field_name)
+
+        return variables
+
+    def _validate_template(
+        self,
+        template: PromptTemplate,
+    ) -> None:
+        """
+        Validate template integrity.
+        """
+
+        if not template.id.strip():
+            raise ValueError(
+                "Template id cannot be empty."
+            )
+
+        if not template.name.strip():
+            raise ValueError(
+                "Template name cannot be empty."
+            )
+
+        if not template.version.strip():
+            raise ValueError(
+                "Template version cannot be empty."
+            )
+
+        if not template.template.strip():
+            raise ValueError(
+                "Template body cannot be empty."
+            )
+
+        discovered = self._extract_variables(
+            template.template
+        )
+
+        missing = [
+            variable
+            for variable in discovered
+            if variable not in template.variables
+        ]
+
+        if missing:
+
+            raise ValueError(
+                "Template '%s' is missing "
+                "variable declarations: %s"
+                % (
+                    template.id,
+                    ", ".join(missing),
+                )
+            )
 
     # ------------------------------------------------------------------
     # Registration
@@ -117,94 +361,125 @@ class PromptRegistry:
     def register(
         self,
         template: PromptTemplate,
-        *,
-        replace: bool = False,
     ) -> None:
         """
         Register a prompt template.
         """
 
-        if not replace and template.id in self._templates:
-            raise ValueError(
-                f"Prompt template '{template.id}' " f"is already registered."
-            )
+        self._validate_template(
+            template
+        )
 
-        self._templates[template.id] = template
+        self._templates[
+            template.id
+        ] = template
 
-        logger.debug(
+        logger.info(
             "Registered prompt template '%s'.",
             template.id,
+        )
+
+    def unregister(
+        self,
+        template_id: str,
+    ) -> bool:
+        """
+        Remove a template.
+        """
+
+        if template_id not in self._templates:
+            return False
+
+        del self._templates[
+            template_id
+        ]
+
+        logger.info(
+            "Removed template '%s'.",
+            template_id,
+        )
+
+        return True
+
+    def clear(
+        self,
+    ) -> None:
+        """
+        Remove every template.
+        """
+
+        self._templates.clear()
+
+        logger.info(
+            "Prompt registry cleared."
         )
 
     # ------------------------------------------------------------------
     # Lookup
     # ------------------------------------------------------------------
 
+    def exists(
+        self,
+        template_id: str,
+    ) -> bool:
+        """
+        Return True if template exists.
+        """
+
+        return (
+            template_id
+            in self._templates
+        )
+
     def get(
         self,
         template_id: str,
     ) -> PromptTemplate:
         """
-        Retrieve a template by its identifier.
+        Return template by id.
+
+        Raises
+        ------
+        KeyError
         """
 
         try:
-            return self._templates[template_id]
+            return self._templates[
+                template_id
+            ]
 
         except KeyError as ex:
-            raise KeyError(f"Unknown prompt template '{template_id}'.") from ex
 
-    # ------------------------------------------------------------------
-    # Version Helpers
-    # ------------------------------------------------------------------
-
-    def _version_key(
-        self,
-        version: str,
-    ) -> tuple[int, ...]:
-        """
-        Convert a dotted version string into a sortable tuple.
-
-        Examples
-        --------
-        "2.1"   -> (2, 1)
-        "2.10"  -> (2, 10)
-        "10.0"  -> (10, 0)
-
-        Invalid versions sort before valid semantic versions.
-        """
-
-        try:
-            return tuple(int(part) for part in version.split("."))
-
-        except ValueError:
-
-            logger.warning(
-                "Invalid template version '%s'.",
-                version,
-            )
-
-            return (0,)
+            raise KeyError(
+                f"Unknown template "
+                f"'{template_id}'."
+            ) from ex
 
     def find(
         self,
         *,
         category: PromptCategory,
         version: Optional[str] = None,
-    ) -> Optional[PromptTemplate]:
+    ) -> Optional[
+        PromptTemplate
+    ]:
         """
-        Locate a template by category and optional version.
+        Locate a template.
 
-        If a version is supplied, an exact match is returned.
-
-        If version is omitted, the latest semantic version
-        is returned.
+        When version is omitted,
+        the newest version is returned.
         """
 
         matches = [
+
             template
-            for template in self._templates.values()
-            if template.category == category
+
+            for template
+            in self._templates.values()
+
+            if template.category
+            == category
+
         ]
 
         if not matches:
@@ -214,64 +489,157 @@ class PromptRegistry:
 
             for template in matches:
 
-                if template.version == version:
+                if (
+                    template.version
+                    == version
+                ):
                     return template
 
             return None
 
         return sorted(
             matches,
-            key=lambda item: self._version_key(item.version),
+            key=lambda item:
+            self._version_key(
+                item.version
+            ),
         )[-1]
-
     # ------------------------------------------------------------------
-    # Removal
+    # Rendering Helpers
     # ------------------------------------------------------------------
 
-    def unregister(
+    def _missing_variables(
         self,
-        template_id: str,
+        template: PromptTemplate,
+        values: Dict[str, Any],
+    ) -> List[str]:
+        """
+        Return the list of variables required by the
+        template but not supplied by the caller.
+        """
+
+        missing: List[str] = []
+
+        for variable in template.variables:
+
+            if variable not in values:
+                missing.append(variable)
+
+        return missing
+
+    def _render(
+        self,
+        template: PromptTemplate,
+        values: Dict[str, Any],
+    ) -> PromptRenderResult:
+        """
+        Render a template.
+        """
+
+        start = time.perf_counter()
+
+        missing = self._missing_variables(
+            template,
+            values,
+        )
+
+        if missing:
+
+            duration = (
+                time.perf_counter() - start
+            ) * 1000.0
+
+            return PromptRenderResult(
+                success=False,
+                rendered_prompt="",
+                missing_variables=missing,
+                metadata={
+                    "template_id": template.id,
+                    "template_name": template.name,
+                    "template_version": template.version,
+                },
+                render_duration_ms=duration,
+            )
+
+        rendered = template.template.format(
+            **values
+        )
+
+        duration = (
+            time.perf_counter() - start
+        ) * 1000.0
+
+        return PromptRenderResult(
+            success=True,
+            rendered_prompt=rendered,
+            missing_variables=[],
+            metadata={
+                "template_id": template.id,
+                "template_name": template.name,
+                "template_version": template.version,
+            },
+            render_duration_ms=duration,
+        )
+
+    # ------------------------------------------------------------------
+    # Rendering
+    # ------------------------------------------------------------------
+
+    def render_template(
+        self,
+        *,
+        category: PromptCategory,
+        values: Dict[str, Any],
+        version: Optional[str] = None,
+    ) -> PromptRenderResult:
+        """
+        Render a template by category.
+        """
+
+        template = self.find(
+            category=category,
+            version=version,
+        )
+
+        if template is None:
+
+            raise ValueError(
+                "No prompt template found for "
+                f"category '{category.value}'."
+            )
+
+        logger.debug(
+            "Rendering template '%s'.",
+            template.id,
+        )
+
+        return self._render(
+            template,
+            values,
+        )
+
+    # ------------------------------------------------------------------
+    # Validation
+    # ------------------------------------------------------------------
+
+    def validate(
+        self,
     ) -> bool:
         """
-        Remove a registered template.
+        Validate every registered template.
         """
 
-        if template_id not in self._templates:
-            return False
+        for template in self._templates.values():
 
-        del self._templates[template_id]
-
-        logger.info(
-            "Removed prompt template '%s'.",
-            template_id,
-        )
+            self._validate_template(
+                template
+            )
 
         return True
 
-    def clear(self) -> None:
-        """
-        Remove every registered template.
-
-        Primarily intended for testing.
-        """
-
-        self._templates.clear()
-
-        logger.info("Prompt registry cleared.")
-
     # ------------------------------------------------------------------
-    # Inspection
+    # Registry Inspection
     # ------------------------------------------------------------------
-
-    def contains(
-        self,
-        template_id: str,
-    ) -> bool:
-        """
-        Return True if the template exists.
-        """
-
-        return template_id in self._templates
 
     def templates(
         self,
@@ -284,7 +652,9 @@ class PromptRegistry:
             self._templates.values(),
             key=lambda item: (
                 item.category.value,
-                self._version_key(item.version),
+                self._version_key(
+                    item.version
+                ),
                 item.id,
             ),
         )
@@ -293,547 +663,307 @@ class PromptRegistry:
         self,
     ) -> List[PromptCategory]:
         """
-        Return all categories currently represented in the
-        registry.
+        Return registered categories.
         """
 
+        categories = {
+
+            template.category
+
+            for template
+            in self._templates.values()
+
+        }
+
         return sorted(
-            {template.category for template in self._templates.values()},
+            categories,
             key=lambda item: item.value,
         )
 
+    def size(
+        self,
+    ) -> int:
+        """
+        Number of registered templates.
+        """
+
+        return len(
+            self._templates
+        )
+
+    def is_empty(
+        self,
+    ) -> bool:
+        """
+        True if the registry contains
+        no templates.
+        """
+
+        return (
+            self.size() == 0
+        )
     # ------------------------------------------------------------------
-    # Validation
+    # Statistics
     # ------------------------------------------------------------------
 
-    def validate(self) -> bool:
+    def statistics(
+        self,
+    ) -> Dict[str, Any]:
         """
-        Validate the registry contents.
+        Return registry statistics.
         """
+
+        category_counts: Dict[str, int] = {}
+
+        latest_versions: Dict[str, str] = {}
 
         for template in self._templates.values():
 
-            if not template.id.strip():
-                return False
+            category = template.category.value
 
-            if not template.name.strip():
-                return False
-
-            if not template.template.strip():
-                return False
-
-        return True
-
-
-# ----------------------------------------------------------------------
-# Render Result
-# ----------------------------------------------------------------------
-
-
-@dataclass(slots=True)
-class PromptRenderResult:
-    """
-    Result of rendering a prompt template.
-    """
-
-    success: bool
-
-    rendered_prompt: str
-
-    missing_variables: List[str] = field(default_factory=list)
-
-    unused_variables: List[str] = field(default_factory=list)
-
-    metadata: Dict[str, Any] = field(default_factory=dict)
-
-    # ----------------------------------------------------------------------
-    # Rendering
-    # ----------------------------------------------------------------------
-
-    def render(
-        self,
-        template_id: str,
-        variables: Dict[str, Any],
-    ) -> PromptRenderResult:
-        """
-        Render a registered prompt template.
-        """
-
-        template = self.get(template_id)
-
-        missing = self._missing_variables(
-            template,
-            variables,
-        )
-
-        unused = self._unused_variables(
-            template,
-            variables,
-        )
-
-        if missing:
-
-            return PromptRenderResult(
-                success=False,
-                rendered_prompt="",
-                missing_variables=missing,
-                unused_variables=unused,
-                metadata={
-                    "template": template.id,
-                },
+            category_counts[category] = (
+                category_counts.get(category, 0)
+                + 1
             )
 
-        rendered = template.template.format(**variables)
+            current = latest_versions.get(category)
 
-        return PromptRenderResult(
-            success=True,
-            rendered_prompt=rendered,
-            unused_variables=unused,
-            metadata={
-                "template": template.id,
-                "version": template.version,
-                "category": template.category.value,
-            },
-        )
-
-    # ------------------------------------------------------------------
-    # Variable Validation
-    # ------------------------------------------------------------------
-
-    def _missing_variables(
-        self,
-        template: PromptTemplate,
-        variables: Dict[str, Any],
-    ) -> List[str]:
-        """
-        Return required variables that are absent.
-        """
-
-        missing: List[str] = []
-
-        for variable in template.variables:
-
-            if variable not in variables:
-
-                missing.append(variable)
-
-        return sorted(missing)
-
-    def _unused_variables(
-        self,
-        template: PromptTemplate,
-        variables: Dict[str, Any],
-    ) -> List[str]:
-        """
-        Return supplied variables that are not referenced
-        by the template definition.
-        """
-
-        unused = []
-
-        allowed = set(template.variables)
-
-        for variable in variables.keys():
-
-            if variable not in allowed:
-
-                unused.append(variable)
-
-        return sorted(unused)
-
-    # ------------------------------------------------------------------
-    # Template Inspection
-    # ------------------------------------------------------------------
-
-    def variables(
-        self,
-        template_id: str,
-    ) -> List[str]:
-        """
-        Return the variables required by a template.
-        """
-
-        return list(self.get(template_id).variables)
-
-    def description(
-        self,
-        template_id: str,
-    ) -> str:
-        """
-        Return the template description.
-        """
-
-        return self.get(template_id).description
-
-    def version(
-        self,
-        template_id: str,
-    ) -> str:
-        """
-        Return the template version.
-        """
-
-        return self.get(template_id).version
-
-    # ------------------------------------------------------------------
-    # Direct Template Rendering
-    # ------------------------------------------------------------------
-
-    def render_template(
-        self,
-        template: PromptTemplate,
-        variables: Dict[str, Any],
-    ) -> PromptRenderResult:
-        """
-        Render a PromptTemplate instance directly.
-
-        This avoids a second registry lookup when the caller
-        already has a template instance.
-        """
-
-        missing = self._missing_variables(
-            template,
-            variables,
-        )
-
-        unused = self._unused_variables(
-            template,
-            variables,
-        )
-
-        if missing:
-
-            return PromptRenderResult(
-                success=False,
-                rendered_prompt="",
-                missing_variables=missing,
-                unused_variables=unused,
-                metadata={
-                    "template": template.id,
-                    "version": template.version,
-                },
-            )
-
-        rendered = template.template.format(**variables)
-
-        return PromptRenderResult(
-            success=True,
-            rendered_prompt=rendered,
-            unused_variables=unused,
-            metadata={
-                "template": template.id,
-                "category": template.category.value,
-                "version": template.version,
-            },
-        )
-
-    # ------------------------------------------------------------------
-    # Category Helpers
-    # ------------------------------------------------------------------
-
-    def templates_by_category(
-        self,
-        category: PromptCategory,
-    ) -> List[PromptTemplate]:
-        """
-        Return all templates belonging to a category.
-        """
-
-        return sorted(
-            [
-                template
-                for template in self._templates.values()
-                if template.category == category
-            ],
-            key=lambda item: (
-                item.version,
-                item.id,
-            ),
-        )
-
-    def latest(
-        self,
-        category: PromptCategory,
-    ) -> Optional[PromptTemplate]:
-        """
-        Return the latest template for a category.
-        """
-
-        return self.find(
-            category=category,
-        )
-
-    # ------------------------------------------------------------------
-    # Registry Information
-    # ------------------------------------------------------------------
-
-    def size(self) -> int:
-        """
-        Return the number of registered templates.
-        """
-
-        return len(self._templates)
-
-    def empty(self) -> bool:
-        """
-        Return True if no templates are registered.
-        """
-
-        return self.size() == 0
-
-    # ------------------------------------------------------------------
-    # Diagnostics
-    # ------------------------------------------------------------------
-
-    def diagnostics(self) -> Dict[str, Any]:
-        """
-        Return registry diagnostics.
-        """
+            if (
+                current is None
+                or self._version_key(
+                    template.version
+                )
+                > self._version_key(current)
+            ):
+                latest_versions[
+                    category
+                ] = template.version
 
         return {
-            "template_count": self.size(),
-            "category_count": len(self.categories()),
-            "valid": self.validate(),
+            "template_count": len(
+                self._templates
+            ),
+            "category_count": len(
+                category_counts
+            ),
+            "categories": category_counts,
+            "latest_versions": latest_versions,
         }
 
-    def statistics(self) -> Dict[str, Any]:
-        """
-        Return template statistics grouped by category.
-        """
-
-        stats: Dict[str, int] = {}
-
-        for category in self.categories():
-
-            stats[category.value] = len(self.templates_by_category(category))
-
-        return stats
-
     # ------------------------------------------------------------------
-    # Introspection
+    # Description
     # ------------------------------------------------------------------
 
     def describe(
         self,
-    ) -> Dict[str, Dict[str, Any]]:
+    ) -> Dict[str, Any]:
         """
-        Return a serializable description of the registry.
+        Return a descriptive summary of the registry.
         """
 
-        description: Dict[str, Dict[str, Any]] = {}
-
-        for template in self.templates():
-
-            description[template.id] = {
-                "name": template.name,
-                "category": template.category.value,
-                "version": template.version,
-                "variables": list(template.variables),
-            }
-
-        return description
+        return {
+            "component": "PromptRegistry",
+            "statistics": self.statistics(),
+            "categories": [
+                category.value
+                for category in self.categories()
+            ],
+            "templates": [
+                template.summary()
+                for template in self.templates()
+            ],
+        }
 
     # ------------------------------------------------------------------
     # Built-in Templates
     # ------------------------------------------------------------------
 
-    def register_builtin_templates(self) -> None:
+    def register_builtin_templates(
+        self,
+    ) -> None:
         """
-        Register all built-in prompt templates.
+        Register the default Question Factory
+        prompt templates.
 
-        Safe to call multiple times. Existing templates are
-        replaced with the current built-in versions.
+        Safe to call multiple times.
         """
 
-        templates = [
-            # ----------------------------------------------------------
-            # Question Generation
-            # ----------------------------------------------------------
+        builtin_templates = [
+
             PromptTemplate(
                 id="question_generation_v2_1",
                 name="Question Generation",
-                category=PromptCategory.QUESTION_GENERATION,
                 version="2.1",
-                description="Generate questions from the manufacturing blueprint.",
+                category=PromptCategory.QUESTION_GENERATION,
+                description=(
+                    "Generate examination-quality "
+                    "questions."
+                ),
+                template="{instruction}",
                 variables=[
-                    "subject",
-                    "chapter",
-                    "subtopic",
-                    "difficulty",
-                    "blueprint",
-                    "batch",
-                    "question_count",
+                    "instruction",
                 ],
-                template="""
-You are Question Factory OS.
-
-Generate {question_count} high-quality questions.
-
-Subject:
-{subject}
-
-Chapter:
-{chapter}
-
-Subtopic:
-{subtopic}
-
-Difficulty:
-{difficulty}
-
-Blueprint:
-{blueprint}
-
-Batch:
-{batch}
-
-Return ONLY valid JSON.
-""".strip(),
             ),
-            # ----------------------------------------------------------
-            # Question Repair
-            # ----------------------------------------------------------
+
             PromptTemplate(
                 id="question_repair_v2_1",
                 name="Question Repair",
-                category=PromptCategory.QUESTION_REPAIR,
                 version="2.1",
-                description="Repair invalid generated questions.",
+                category=PromptCategory.QUESTION_REPAIR,
+                description=(
+                    "Repair existing questions."
+                ),
+                template="{instruction}",
                 variables=[
-                    "question_json",
-                    "validation_errors",
+                    "instruction",
                 ],
-                template="""
-Repair the supplied question.
-
-Question:
-{question_json}
-
-Validation Errors:
-{validation_errors}
-
-Return ONLY corrected JSON.
-""".strip(),
             ),
-            # ----------------------------------------------------------
-            # Validation
-            # ----------------------------------------------------------
+
             PromptTemplate(
                 id="validation_v2_1",
                 name="Validation",
+                version="2.1",
                 category=PromptCategory.VALIDATION,
-                version="2.1",
-                description="Validate generated question data.",
+                description=(
+                    "Validate generated content."
+                ),
+                template="{instruction}",
                 variables=[
-                    "question_json",
+                    "instruction",
                 ],
-                template="""
-Validate the following question.
-
-{question_json}
-
-Return validation results as JSON.
-""".strip(),
             ),
-            # ----------------------------------------------------------
-            # Quality Audit
-            # ----------------------------------------------------------
-            PromptTemplate(
-                id="quality_audit_v2_1",
-                name="Quality Audit",
-                category=PromptCategory.QUALITY_AUDIT,
-                version="2.1",
-                description="Audit overall question quality.",
-                variables=[
-                    "question_json",
-                    "blueprint",
-                ],
-                template="""
-Audit this question.
 
-Blueprint:
-{blueprint}
-
-Question:
-{question_json}
-
-Return an audit report in JSON.
-""".strip(),
-            ),
-            # ----------------------------------------------------------
-            # CSV Export
-            # ----------------------------------------------------------
-            PromptTemplate(
-                id="csv_export_v2_1",
-                name="CSV Export",
-                category=PromptCategory.CSV_EXPORT,
-                version="2.1",
-                description="Prepare question for CSV export.",
-                variables=[
-                    "question_json",
-                ],
-                template="""
-Transform the following question into the required
-CSV-compatible structure.
-
-{question_json}
-
-Return JSON only.
-""".strip(),
-            ),
-            # ----------------------------------------------------------
-            # Explanation
-            # ----------------------------------------------------------
             PromptTemplate(
                 id="explanation_v2_1",
                 name="Explanation",
-                category=PromptCategory.EXPLANATION,
                 version="2.1",
-                description="Generate a detailed explanation.",
+                category=PromptCategory.EXPLANATION,
+                description=(
+                    "Generate explanations."
+                ),
+                template="{instruction}",
                 variables=[
-                    "question_json",
+                    "instruction",
                 ],
-                template="""
-Generate a complete solution and explanation.
-
-Question:
-{question_json}
-
-Return JSON.
-""".strip(),
             ),
+
+            PromptTemplate(
+                id="distractor_v2_1",
+                name="Distractor Generation",
+                version="2.1",
+                category=PromptCategory.DISTRACTOR,
+                description=(
+                    "Generate distractors."
+                ),
+                template="{instruction}",
+                variables=[
+                    "instruction",
+                ],
+            ),
+
+            PromptTemplate(
+                id="blueprint_v2_1",
+                name="Blueprint",
+                version="2.1",
+                category=PromptCategory.BLUEPRINT,
+                description=(
+                    "Blueprint analysis."
+                ),
+                template="{instruction}",
+                variables=[
+                    "instruction",
+                ],
+            ),
+
+            PromptTemplate(
+                id="report_v2_1",
+                name="Report",
+                version="2.1",
+                category=PromptCategory.REPORT,
+                description=(
+                    "Generate reports."
+                ),
+                template="{instruction}",
+                variables=[
+                    "instruction",
+                ],
+            ),
+
         ]
 
-        for template in templates:
+        for template in builtin_templates:
 
-            self.register(
-                template,
-                replace=True,
-            )
+            if not self.exists(
+                template.id
+            ):
+                self.register(
+                    template
+                )
 
         logger.info(
-            "Registered %d built-in prompt templates.",
-            len(templates),
+            "%d built-in prompt templates "
+            "registered.",
+            len(builtin_templates),
         )
+    # ------------------------------------------------------------------
+    # Health
+    # ------------------------------------------------------------------
+
+    def health(
+        self,
+    ) -> Dict[str, Any]:
+        """
+        Return registry health information.
+        """
+
+        return {
+            "component": "PromptRegistry",
+            "status": "READY",
+            "registered_templates": self.size(),
+            "categories": len(
+                self.categories()
+            ),
+            "valid": self.validate(),
+        }
+
+    # ------------------------------------------------------------------
+    # Capabilities
+    # ------------------------------------------------------------------
+
+    def capabilities(
+        self,
+    ) -> Dict[str, bool]:
+        """
+        Return supported registry capabilities.
+        """
+
+        return {
+            "registration": True,
+            "lookup": True,
+            "rendering": True,
+            "validation": True,
+            "statistics": True,
+            "builtin_templates": True,
+            "versioning": True,
+        }
 
 
 # ----------------------------------------------------------------------
 # Factory Helper
 # ----------------------------------------------------------------------
 
-
 def create_prompt_registry(
     *,
     register_builtin: bool = True,
 ) -> PromptRegistry:
     """
-    Create a production-ready PromptRegistry.
+    Create a production-ready prompt registry.
 
     Parameters
     ----------
     register_builtin:
-        Automatically register the built-in Question Factory
-        templates.
+        Register the built-in Question Factory
+        prompt templates.
 
     Returns
     -------
@@ -843,9 +973,12 @@ def create_prompt_registry(
     registry = PromptRegistry()
 
     if register_builtin:
+
         registry.register_builtin_templates()
 
-    logger.info("Production PromptRegistry created.")
+    logger.info(
+        "Prompt registry created."
+    )
 
     return registry
 

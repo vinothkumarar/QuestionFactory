@@ -1,511 +1,559 @@
 """
 Question Factory OS v2.1
+------------------------
 
-Factory AI Engine
+AI Engine
 
-Central AI orchestration layer for the
-entire manufacturing system.
+Central orchestration engine for all AI operations.
 
-All factory components interact with this
-engine rather than directly with an LLM.
+Responsibilities
+----------------
+• Accept AIJob requests
+• Build PromptPackage objects
+• Execute AI requests
+• Parse AI responses
+• Coordinate provider-agnostic execution
+
+The AI Engine is the boundary between the
+Manufacturing Layer and AI providers.
+
+Author:
+Question Factory OS
 """
 
 from __future__ import annotations
 
 import logging
 from typing import Any
+from typing import Optional
+
+from factory.ai.ai_client import AIClient
+from factory.ai.models.ai_job import AIJob
+from factory.ai.models.prompt_package import PromptPackage
+from factory.ai.prompt_builder import PromptBuilder
+from factory.ai.response_parser import ResponseParser
+from factory.ai.ai_client import AIRequest
+
+
+logger = logging.getLogger(__name__)
+
+
+# ----------------------------------------------------------------------
+# AI Engine
+# ----------------------------------------------------------------------
 
 
 class AIEngine:
     """
     Central AI orchestration engine.
 
-    Responsible for coordinating all AI
-    operations used throughout the factory.
+    The engine coordinates prompt construction,
+    provider execution and response parsing.
     """
 
     def __init__(
         self,
-        ai_client,
-        prompt_router,
-        response_parser,
-    ):
-
-        self.logger = logging.getLogger(self.__class__.__name__)
-
-        self.ai_client = ai_client
-
-        self.prompt_router = prompt_router
-
-        self.response_parser = response_parser
-
-    # ---------------------------------------------------------
-    # Generation
-    # ---------------------------------------------------------
-
-    def generate_questions(
-        self,
-        request: Any,
-    ):
+        *,
+        ai_client: AIClient,
+        prompt_builder: PromptBuilder,
+        response_parser: ResponseParser,
+    ) -> None:
         """
-        Generate a new question batch.
+        Parameters
+        ----------
+        ai_client:
+            Provider implementation.
+
+        prompt_builder:
+            Builds PromptPackage instances.
+
+        response_parser:
+            Parses provider responses.
         """
 
-        return self._execute_job(
-            job_type="generation",
-            payload=request,
+        self._client = ai_client
+
+        self._prompt_builder = prompt_builder
+
+        self._response_parser = response_parser
+
+        logger.info(
+            "AIEngine initialized."
         )
+    # ------------------------------------------------------------------
+    # Public API
+    # ------------------------------------------------------------------
 
-    # ---------------------------------------------------------
-    # Academic Repair
-    # ---------------------------------------------------------
-
-    def repair_questions(
+    def execute(
         self,
-        request: Any,
-    ):
+        job: AIJob,
+    ) -> Any:
         """
-        Improve educational quality.
-        """
-
-        return self._execute_job(
-            job_type="repair",
-            payload=request,
-        )
-
-    # ---------------------------------------------------------
-    # Blueprint Analysis
-    # ---------------------------------------------------------
-
-    def analyze_blueprint(
-        self,
-        request: Any,
-    ):
-        """
-        Analyze blueprint compliance and
-        manufacturing quality.
-        """
-
-        return self._execute_job(
-            job_type="blueprint",
-            payload=request,
-        )
-
-    # ---------------------------------------------------------
-    # Explanation Enhancement
-    # ---------------------------------------------------------
-
-    def improve_explanation(
-        self,
-        request: Any,
-    ):
-        """
-        Generate an improved educational
-        explanation.
-        """
-
-        return self._execute_job(
-            job_type="explanation",
-            payload=request,
-        )
-
-    # ---------------------------------------------------------
-    # Distractor Enhancement
-    # ---------------------------------------------------------
-
-    def improve_distractors(
-        self,
-        request: Any,
-    ):
-        """
-        Improve distractor quality.
-        """
-
-        return self._execute_job(
-            job_type="distractor",
-            payload=request,
-        )
-
-    # ---------------------------------------------------------
-    # Packaging
-    # ---------------------------------------------------------
-
-    def package_summary(
-        self,
-        request: Any,
-    ):
-        """
-        Generate packaging summaries and
-        manufacturing notes.
-        """
-
-        return self._execute_job(
-            job_type="packaging",
-            payload=request,
-        )
-
-    # ---------------------------------------------------------
-    # Reporting
-    # ---------------------------------------------------------
-
-    def generate_report(
-        self,
-        request: Any,
-    ):
-        """
-        Generate production reports.
-        """
-
-        return self._execute_job(
-            job_type="report",
-            payload=request,
-        )
-
-    # ---------------------------------------------------------
-    # Internal Job Execution
-    # ---------------------------------------------------------
-
-    def _execute_job(
-        self,
-        job_type: str,
-        payload: Any,
-    ):
-        """
-        Execute a factory AI job.
+        Execute an AI job.
 
         Workflow
-
-        Request
+        --------
+        AIJob
             ↓
-        Prompt Router
+        PromptBuilder
             ↓
-        AI Client
+        PromptPackage
             ↓
-        Response Parser
+        AI Provider
             ↓
-        Typed Response
+        ResponseParser
         """
 
-        self.logger.info(
-            "Executing AI job: %s",
-            job_type,
+        job.validate()
+
+        package = self._prompt_builder.build(
+            job=job,
         )
 
-        #
-        # Build prompt
-        #
+        return self.execute_package(package)
 
-        prompt = self.prompt_router.build_prompt(
-            job_type=job_type,
-            payload=payload,
+    def execute_package(
+        self,
+        package: PromptPackage,
+    ) -> Any:
+        """
+        Execute an already prepared PromptPackage.
+
+        This method enables prompt replay,
+        retries and cached execution.
+        """
+
+        self._validate_package(package)
+
+        logger.info(
+            "Executing prompt package '%s'.",
+            package.template_id,
         )
 
-        #
-        # Submit request
-        #
-
-        raw_response = self.ai_client.execute(
-            prompt=prompt,
+        raw_response = self._execute_provider(
+            package,
         )
 
-        #
-        # Parse response
-        #
-
-        parsed_response = self.response_parser.parse(
-            job_type=job_type,
-            response=raw_response,
+        return self._parse_response(
+            package,
+            raw_response,
         )
 
-        self.logger.info(
-            "AI job '%s' completed.",
-            job_type,
+    # ------------------------------------------------------------------
+    # Internal Execution
+    # ------------------------------------------------------------------
+                
+    def _execute_provider(
+        self,
+        package: PromptPackage,
+    ) -> Any:
+        """
+        Execute the request using the configured
+        AI provider.
+        """
+
+        request = AIRequest(
+            prompt=package.prompt,
+            system_prompt=package.system_prompt,
+     )
+
+        return self._client.execute(
+            request,
+    )
+
+    
+    def _parse_response(
+        self,
+        package: PromptPackage,
+        raw_response: Any,
+    ) -> Any:
+        """
+        Parse the provider response.
+        """
+
+        _ = package
+
+        return self._response_parser.parse(
+            raw_response,
         )
+    # ------------------------------------------------------------------
+    # Validation
+    # ------------------------------------------------------------------
 
-        return parsed_response
+    def _validate_package(
+        self,
+        package: PromptPackage,
+    ) -> None:
+        """
+        Validate a PromptPackage before execution.
+        """
 
-    # ---------------------------------------------------------
+        if not package.is_valid:
+            raise ValueError(
+                "PromptPackage is invalid."
+            )
+
+        if not package.prompt.strip():
+            raise ValueError(
+                "PromptPackage contains an empty prompt."
+            )
+
+    def validate_configuration(
+        self,
+    ) -> None:
+        """
+        Validate AI Engine configuration.
+        """
+
+        if self._client is None:
+            raise ValueError(
+                "AI client has not been configured."
+            )
+
+        if self._prompt_builder is None:
+            raise ValueError(
+                "PromptBuilder has not been configured."
+            )
+
+        if self._response_parser is None:
+            raise ValueError(
+                "ResponseParser has not been configured."
+            )
+
+    @property
+    def is_ready(
+        self,
+    ) -> bool:
+        """
+        Return True if the engine is correctly configured.
+        """
+
+        try:
+            self.validate_configuration()
+            return True
+
+        except ValueError:
+            return False
+
+    # ------------------------------------------------------------------
     # Health
-    # ---------------------------------------------------------
+    # ------------------------------------------------------------------
 
     def health(
         self,
-    ) -> dict:
+    ) -> dict[str, Any]:
         """
-        Return AI Engine health.
+        Return AI Engine health information.
         """
 
         return {
-            "component": "Factory AI Engine",
-            "status": "READY",
-            "client": (self.ai_client.__class__.__name__),
-            "router": (self.prompt_router.__class__.__name__),
-            "parser": (self.response_parser.__class__.__name__),
+            "component": "AIEngine",
+            "status": (
+                "READY"
+                if self.is_ready
+                else "NOT_READY"
+            ),
+            "client": (
+                self._client.__class__.__name__
+            ),
+            "prompt_builder": (
+                self._prompt_builder.__class__.__name__
+            ),
+            "response_parser": (
+                self._response_parser.__class__.__name__
+            ),
         }
 
-    # ---------------------------------------------------------
+    # ------------------------------------------------------------------
     # Capabilities
-    # ---------------------------------------------------------
+    # ------------------------------------------------------------------
 
     def capabilities(
         self,
-    ) -> dict:
+    ) -> dict[str, bool]:
         """
-        Return supported AI operations.
+        Return supported engine capabilities.
         """
 
         return {
-            "generation": True,
-            "repair": True,
-            "blueprint": True,
-            "explanation": True,
-            "distractor": True,
-            "packaging": True,
-            "reporting": True,
+            "prompt_building": True,
+            "provider_execution": True,
+            "response_parsing": True,
+            "configuration_validation": True,
+            "prompt_package_execution": True,
         }
 
-    # ---------------------------------------------------------
+    # ------------------------------------------------------------------
     # Execution Information
-    # ---------------------------------------------------------
+    # ------------------------------------------------------------------
 
     def execution_information(
         self,
-    ) -> dict:
+    ) -> dict[str, Any]:
         """
-        Return AI Engine execution information.
+        Return engine execution information.
         """
 
         return {
-            "component": "Factory AI Engine",
+            "component": "AIEngine",
             "execution_mode": "SYNCHRONOUS",
             "framework_version": "2.1.0",
-            "supported_jobs": [
-                "generation",
-                "repair",
-                "blueprint",
-                "explanation",
-                "distractor",
-                "packaging",
-                "report",
-            ],
+            "provider": (
+                self._client.__class__.__name__
+            ),
         }
-
-    # ---------------------------------------------------------
+    # ------------------------------------------------------------------
     # Statistics
-    # ---------------------------------------------------------
+    # ------------------------------------------------------------------
 
     def statistics(
         self,
-    ) -> dict:
+    ) -> dict[str, Any]:
         """
-        Return engine statistics.
+        Return AI Engine statistics.
 
-        Runtime statistics will be expanded in
-        future versions.
+        Runtime counters will be introduced in a future
+        release. For now, this method reports the engine
+        configuration and component status.
         """
 
         return {
-            "registered_jobs": 7,
-            "client": (self.ai_client.__class__.__name__),
-            "router": (self.prompt_router.__class__.__name__),
-            "parser": (self.response_parser.__class__.__name__),
+            "provider": self._client.__class__.__name__,
+            "prompt_builder": (
+                self._prompt_builder.__class__.__name__
+            ),
+            "response_parser": (
+                self._response_parser.__class__.__name__
+            ),
+            "ready": self.is_ready,
         }
 
-    # ---------------------------------------------------------
+    # ------------------------------------------------------------------
+    # Provider Information
+    # ------------------------------------------------------------------
+
+    def provider_information(
+        self,
+    ) -> dict[str, Any]:
+        """
+        Return information about the configured AI provider.
+        """
+
+        return {
+            "provider": (
+                self._client.__class__.__name__
+            ),
+            "provider_type": (
+                type(self._client).__name__
+            ),
+        }
+
+    # ------------------------------------------------------------------
     # Diagnostics
-    # ---------------------------------------------------------
+    # ------------------------------------------------------------------
 
     def diagnostics(
         self,
-    ) -> dict:
+    ) -> dict[str, Any]:
         """
-        Return AI Engine diagnostics.
+        Return comprehensive engine diagnostics.
         """
 
         return {
             "health": self.health(),
-            "capabilities": (self.capabilities()),
-            "execution": (self.execution_information()),
-            "statistics": (self.statistics()),
+            "capabilities": self.capabilities(),
+            "execution": (
+                self.execution_information()
+            ),
+            "statistics": self.statistics(),
+            "provider": (
+                self.provider_information()
+            ),
         }
 
-    # ---------------------------------------------------------
-    # Configuration Validation
-    # ---------------------------------------------------------
+    # ------------------------------------------------------------------
+    # Runtime Summary
+    # ------------------------------------------------------------------
 
-    def validate_configuration(
+    def summary(
         self,
+    ) -> dict[str, Any]:
+        """
+        Return a concise summary suitable for
+        runtime dashboards and logging.
+        """
+
+        return {
+            "provider": (
+                self._client.__class__.__name__
+            ),
+            "ready": self.is_ready,
+            "execution_mode": "SYNCHRONOUS",
+            "framework_version": "2.1.0",
+        }
+
+    # ------------------------------------------------------------------
+    # Supported Operations
+    # ------------------------------------------------------------------
+
+    def supports_execution(
+        self,
+    ) -> bool:
+        """
+        Return True if the engine is capable of
+        executing AI jobs.
+        """
+
+        return self.is_ready
+
+    def supports_prompt_packages(
+        self,
+    ) -> bool:
+        """
+        Return True if PromptPackage execution
+        is supported.
+        """
+
+        return True
+    # ------------------------------------------------------------------
+    # Runtime Configuration
+    # ------------------------------------------------------------------
+
+    def set_client(
+        self,
+        client: AIClient,
     ) -> None:
         """
-        Validate AI Engine configuration.
+        Replace the configured AI client.
         """
 
-        if self.ai_client is None:
+        self._client = client
 
-            raise ValueError("AI client has not been " "configured.")
+        logger.info(
+            "AI provider updated to '%s'.",
+            client.__class__.__name__,
+        )
 
-        if self.prompt_router is None:
+    def set_prompt_builder(
+        self,
+        prompt_builder: PromptBuilder,
+    ) -> None:
+        """
+        Replace the configured PromptBuilder.
+        """
 
-            raise ValueError("Prompt router has not " "been configured.")
+        self._prompt_builder = prompt_builder
 
-        if self.response_parser is None:
+        logger.info(
+            "PromptBuilder updated."
+        )
 
-            raise ValueError("Response parser has not " "been configured.")
+    def set_response_parser(
+        self,
+        response_parser: ResponseParser,
+    ) -> None:
+        """
+        Replace the configured ResponseParser.
+        """
 
-    # ---------------------------------------------------------
-    # Utility Methods
-    # ---------------------------------------------------------
+        self._response_parser = response_parser
+
+        logger.info(
+            "ResponseParser updated."
+        )
+
+    # ------------------------------------------------------------------
+    # Runtime Utilities
+    # ------------------------------------------------------------------
 
     def reset(
         self,
     ) -> None:
         """
-        Reset engine state.
+        Reset runtime state.
 
-        Reserved for future runtime state
-        management.
+        Reserved for future execution statistics,
+        retry queues and runtime metrics.
         """
 
-        self.logger.info("Factory AI Engine reset.")
+        logger.info(
+            "AIEngine runtime reset."
+        )
 
-    def supports_job(
+    def configuration(
         self,
-        job_type: str,
-    ) -> bool:
+    ) -> dict[str, Any]:
         """
-        Determine whether a job type is
-        supported.
-        """
-
-        return job_type in {
-            "generation",
-            "repair",
-            "blueprint",
-            "explanation",
-            "distractor",
-            "packaging",
-            "report",
-        }
-
-    # ---------------------------------------------------------
-    # Execution Information
-    # ---------------------------------------------------------
-
-    def execution_information(
-        self,
-    ) -> dict:
-        """
-        Return AI Engine execution information.
+        Return the current runtime configuration.
         """
 
         return {
-            "component": "Factory AI Engine",
-            "execution_mode": "SYNCHRONOUS",
-            "framework_version": "2.1.0",
-            "supported_jobs": [
-                "generation",
-                "repair",
-                "blueprint",
-                "explanation",
-                "distractor",
-                "packaging",
-                "report",
-            ],
+            "provider": (
+                self._client.__class__.__name__
+            ),
+            "prompt_builder": (
+                self._prompt_builder.__class__.__name__
+            ),
+            "response_parser": (
+                self._response_parser.__class__.__name__
+            ),
         }
 
-    # ---------------------------------------------------------
-    # Statistics
-    # ---------------------------------------------------------
+    # ------------------------------------------------------------------
+    # Convenience Properties
+    # ------------------------------------------------------------------
 
-    def statistics(
+    @property
+    def provider_name(
         self,
-    ) -> dict:
+    ) -> str:
         """
-        Return engine statistics.
+        Return the configured provider name.
+        """
 
-        Runtime statistics will be expanded in
-        future versions.
+        return self._client.__class__.__name__
+
+    @property
+    def builder_name(
+        self,
+    ) -> str:
+        """
+        Return the configured PromptBuilder name.
+        """
+
+        return (
+            self._prompt_builder.__class__.__name__
+        )
+
+    @property
+    def parser_name(
+        self,
+    ) -> str:
+        """
+        Return the configured ResponseParser name.
+        """
+
+        return (
+            self._response_parser.__class__.__name__
+        )
+
+    # ------------------------------------------------------------------
+    # Engine Summary
+    # ------------------------------------------------------------------
+
+    def engine_summary(
+        self,
+    ) -> dict[str, Any]:
+        """
+        Return a compact engine summary.
         """
 
         return {
-            "registered_jobs": 7,
-            "client": (self.ai_client.__class__.__name__),
-            "router": (self.prompt_router.__class__.__name__),
-            "parser": (self.response_parser.__class__.__name__),
+            "provider": self.provider_name,
+            "builder": self.builder_name,
+            "parser": self.parser_name,
+            "ready": self.is_ready,
         }
+    
 
-    # ---------------------------------------------------------
-    # Diagnostics
-    # ---------------------------------------------------------
-
-    def diagnostics(
-        self,
-    ) -> dict:
-        """
-        Return AI Engine diagnostics.
-        """
-
-        return {
-            "health": self.health(),
-            "capabilities": (self.capabilities()),
-            "execution": (self.execution_information()),
-            "statistics": (self.statistics()),
-        }
-
-    # ---------------------------------------------------------
-    # Configuration Validation
-    # ---------------------------------------------------------
-
-    def validate_configuration(
-        self,
-    ) -> None:
-        """
-        Validate AI Engine configuration.
-        """
-
-        if self.ai_client is None:
-
-            raise ValueError("AI client has not been " "configured.")
-
-        if self.prompt_router is None:
-
-            raise ValueError("Prompt router has not " "been configured.")
-
-        if self.response_parser is None:
-
-            raise ValueError("Response parser has not " "been configured.")
-
-    # ---------------------------------------------------------
-    # Utility Methods
-    # ---------------------------------------------------------
-
-    def reset(
-        self,
-    ) -> None:
-        """
-        Reset engine state.
-
-        Reserved for future runtime state
-        management.
-        """
-
-        self.logger.info("Factory AI Engine reset.")
-
-    def supports_job(
-        self,
-        job_type: str,
-    ) -> bool:
-        """
-        Determine whether a job type is
-        supported.
-        """
-
-        return job_type in {
-            "generation",
-            "repair",
-            "blueprint",
-            "explanation",
-            "distractor",
-            "packaging",
-            "report",
-        }
+        

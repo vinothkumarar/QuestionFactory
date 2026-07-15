@@ -4,17 +4,20 @@ Question Factory OS v2.1
 
 Prompt Builder
 
+Responsible for constructing PromptPackage
+instances from AIJob objects using the
+PromptRegistry.
+
 Responsibilities
 ----------------
-• Select prompt templates
-• Build rendering variables
-• Render prompts
-• Assemble PromptPackage objects
-• Attach manufacturing metadata
-• Estimate prompt size
+• Template selection
+• Variable construction
+• Prompt rendering
+• PromptPackage creation
+• Metadata generation
+• Token estimation
 
-PromptBuilder is the bridge between the Manufacturing Layer
-and the AI Layer.
+Provider agnostic.
 
 Author:
 Question Factory OS
@@ -29,7 +32,7 @@ from typing import Any
 from typing import Dict
 from typing import Optional
 
-from factory.ai.ai_job import AIJob
+from factory.ai.models.ai_job import AIJob
 from factory.ai.models.prompt_package import (
     PromptPackage,
     create_prompt_package,
@@ -51,7 +54,13 @@ logger = logging.getLogger(__name__)
 
 class PromptBuilder:
     """
-    Builds PromptPackage objects from AIJob instances.
+    Builds PromptPackage objects from AIJob
+    instances.
+
+    PromptBuilder coordinates template lookup,
+    rendering and PromptPackage construction,
+    while PromptRegistry owns template storage
+    and rendering.
     """
 
     def __init__(
@@ -67,7 +76,23 @@ class PromptBuilder:
 
         self._registry = registry
 
-        logger.info("PromptBuilder initialized.")
+        logger.info(
+            "PromptBuilder initialized."
+        )
+
+    # ------------------------------------------------------------------
+    # Properties
+    # ------------------------------------------------------------------
+
+    @property
+    def registry(
+        self,
+    ) -> PromptRegistry:
+        """
+        Return the underlying prompt registry.
+        """
+
+        return self._registry
 
     # ------------------------------------------------------------------
     # Public API
@@ -77,9 +102,13 @@ class PromptBuilder:
         self,
         job: AIJob,
         *,
-        category: PromptCategory = (PromptCategory.QUESTION_GENERATION),
+        category: PromptCategory = (
+            PromptCategory.QUESTION_GENERATION
+        ),
         template_version: Optional[str] = None,
-        additional_variables: Optional[Dict[str, Any]] = None,
+        additional_variables: Optional[
+            Dict[str, Any]
+        ] = None,
     ) -> PromptPackage:
         """
         Build a PromptPackage from an AIJob.
@@ -87,20 +116,41 @@ class PromptBuilder:
 
         started = time.perf_counter()
 
-        template = self._select_template(
+        template = self._registry.find(
             category=category,
             version=template_version,
         )
+
+        if template is None:
+
+            raise ValueError(
+                "No prompt template found "
+                f"for category "
+                f"'{category.value}'."
+            )
 
         variables = self._build_variables(
             job=job,
             additional_variables=additional_variables,
         )
-
-        render_result = self._render(
-            template=template,
-            variables=variables,
+        render_result = (
+            self._registry.render_template(
+                category=category,
+                values=variables,
+                version=template_version,
+            )
         )
+
+        if not render_result.success:
+
+            missing = ", ".join(
+                render_result.missing_variables
+            )
+
+            raise ValueError(
+                "Prompt rendering failed. "
+                f"Missing variables: {missing}"
+            )
 
         metadata = self._build_metadata(
             job=job,
@@ -108,77 +158,28 @@ class PromptBuilder:
             render_result=render_result,
         )
 
-        elapsed_ms = (time.perf_counter() - started) * 1000.0
+        elapsed_ms = (
+            time.perf_counter() - started
+        ) * 1000.0
 
         return create_prompt_package(
             prompt=render_result.rendered_prompt,
-            system_prompt=metadata.get("system_prompt"),
+            system_prompt=metadata.get(
+                "system_prompt"
+            ),
             template_id=template.id,
             template_version=template.version,
             template_category=template.category.value,
             variables=variables,
             metadata=metadata,
-            estimated_tokens=self._estimate_tokens(render_result.rendered_prompt),
+            estimated_tokens=self._estimate_tokens(
+                render_result.rendered_prompt
+            ),
             render_duration_ms=round(
                 elapsed_ms,
                 2,
             ),
         )
-
-    # ------------------------------------------------------------------
-    # Template Selection
-    # ------------------------------------------------------------------
-
-    def _select_template(
-        self,
-        *,
-        category: PromptCategory,
-        version: Optional[str],
-    ) -> PromptTemplate:
-        """
-        Select the appropriate prompt template.
-        """
-
-        template = self._registry.find(
-            category=category,
-            version=version,
-        )
-
-        if template is None:
-            raise ValueError(
-                "No prompt template found for " f"category '{category.value}'."
-            )
-
-        return template
-
-    # ------------------------------------------------------------------
-    # Rendering
-    # ------------------------------------------------------------------
-
-    def _render(
-        self,
-        *,
-        template: PromptTemplate,
-        variables: Dict[str, Any],
-    ) -> PromptRenderResult:
-        """
-        Render the selected template.
-        """
-
-        result = self._registry.render_template(
-            template=template,
-            variables=variables,
-        )
-
-        if not result.success:
-
-            missing = ", ".join(result.missing_variables)
-
-            raise ValueError(
-                "Prompt rendering failed. " f"Missing variables: {missing}"
-            )
-
-        return result
 
     # ------------------------------------------------------------------
     # Variable Construction
@@ -188,19 +189,29 @@ class PromptBuilder:
         self,
         *,
         job: AIJob,
-        additional_variables: Optional[Dict[str, Any]],
+        additional_variables: Optional[
+            Dict[str, Any]
+        ],
     ) -> Dict[str, Any]:
         """
         Build the rendering variables.
 
-        Standard variables are extracted from the AIJob.
-        Caller-supplied variables override defaults.
+        Standard variables are extracted
+        from the AIJob.
+
+        Caller supplied variables override
+        defaults.
         """
 
-        variables = self._base_variables(job)
+        variables = self._base_variables(
+            job
+        )
 
         if additional_variables:
-            variables.update(additional_variables)
+
+            variables.update(
+                additional_variables
+            )
 
         return variables
 
@@ -209,9 +220,8 @@ class PromptBuilder:
         job: AIJob,
     ) -> Dict[str, Any]:
         """
-        Build the default variable dictionary from the AIJob.
-
-        This method intentionally remains provider-independent.
+        Build the provider-independent
+        variable dictionary.
         """
 
         variables: Dict[str, Any] = {}
@@ -287,7 +297,6 @@ class PromptBuilder:
             "batch",
             "",
         )
-
         variables["question_count"] = getattr(
             job,
             "question_count",
@@ -298,6 +307,58 @@ class PromptBuilder:
             job,
             "blueprint",
             "",
+        )
+
+        #
+        # Optional runtime information
+        #
+
+        variables["unit"] = getattr(
+            job,
+            "unit",
+            "",
+        )
+
+        variables["chapter_code"] = getattr(
+            job,
+            "chapter_code",
+            "",
+        )
+
+        variables["subtopic_code"] = getattr(
+            job,
+            "subtopic_code",
+            "",
+        )
+
+        variables["difficulty_level"] = getattr(
+            job,
+            "difficulty_level",
+            "",
+        )
+
+        variables["exam"] = getattr(
+            job,
+            "exam",
+            "",
+        )
+
+        variables["language"] = getattr(
+            job,
+            "language",
+            "en",
+        )
+
+        variables["tags"] = getattr(
+            job,
+            "tags",
+            [],
+        )
+
+        variables["metadata"] = getattr(
+            job,
+            "metadata",
+            {},
         )
 
         return variables
@@ -318,21 +379,32 @@ class PromptBuilder:
         """
 
         metadata: Dict[str, Any] = {
+            "builder": self.__class__.__name__,
             "template_id": template.id,
+            "template_name": template.name,
             "template_version": template.version,
             "template_category": template.category.value,
-            "builder": self.__class__.__name__,
+            "render_duration_ms": (
+                render_result.render_duration_ms
+            ),
         }
 
-        metadata.update(render_result.metadata)
+        metadata.update(
+            render_result.metadata
+        )
 
         #
         # Optional runtime identifiers
         #
 
-        job_id = getattr(job, "job_id", None)
+        job_id = getattr(
+            job,
+            "job_id",
+            None,
+        )
 
         if job_id:
+
             metadata["job_id"] = job_id
 
         request_id = getattr(
@@ -342,10 +414,20 @@ class PromptBuilder:
         )
 
         if request_id:
+
             metadata["request_id"] = request_id
 
-        return metadata
+        project = getattr(
+            job,
+            "project",
+            None,
+        )
 
+        if project:
+
+            metadata["project"] = project
+
+        return metadata
     # ------------------------------------------------------------------
     # Token Estimation
     # ------------------------------------------------------------------
@@ -357,8 +439,11 @@ class PromptBuilder:
         """
         Estimate prompt tokens.
 
-        This is intentionally a lightweight approximation.
-        A provider-specific tokenizer may replace this in
+        This is intentionally a lightweight
+        approximation.
+
+        Provider-specific tokenizers may
+        replace this implementation in
         future releases.
         """
 
@@ -379,36 +464,52 @@ class PromptBuilder:
         template: PromptTemplate,
     ) -> None:
         """
-        Validate a prompt template before rendering.
+        Validate a prompt template.
         """
 
         if not template.id.strip():
-            raise ValueError("Template identifier cannot be empty.")
+
+            raise ValueError(
+                "Template identifier cannot be empty."
+            )
 
         if not template.template.strip():
-            raise ValueError("Template content cannot be empty.")
+
+            raise ValueError(
+                "Template content cannot be empty."
+            )
 
     def validate_variables(
         self,
-        template: PromptTemplate,
+        *,
+        category: PromptCategory,
         variables: Dict[str, Any],
+        version: Optional[str] = None,
     ) -> None:
         """
         Validate rendering variables.
 
-        Delegates variable verification to the registry.
+        Delegates validation to the
+        PromptRegistry.
         """
 
         result = self._registry.render_template(
-            template=template,
-            variables=variables,
+            category=category,
+            values=variables,
+            version=version,
         )
 
-        if not result.success:
+        if result.success:
+            return
 
-            missing = ", ".join(result.missing_variables)
+        missing = ", ".join(
+            result.missing_variables
+        )
 
-            raise ValueError("Missing template variables: " f"{missing}")
+        raise ValueError(
+            "Missing template variables: "
+            f"{missing}"
+        )
 
     # ------------------------------------------------------------------
     # Convenience Builders
@@ -419,10 +520,12 @@ class PromptBuilder:
         job: AIJob,
         *,
         template_version: Optional[str] = None,
-        additional_variables: Optional[Dict[str, Any]] = None,
+        additional_variables: Optional[
+            Dict[str, Any]
+        ] = None,
     ) -> PromptPackage:
         """
-        Build a question-generation prompt.
+        Build a question generation prompt.
         """
 
         return self.build(
@@ -437,10 +540,12 @@ class PromptBuilder:
         job: AIJob,
         *,
         template_version: Optional[str] = None,
-        additional_variables: Optional[Dict[str, Any]] = None,
+        additional_variables: Optional[
+            Dict[str, Any]
+        ] = None,
     ) -> PromptPackage:
         """
-        Build a repair prompt.
+        Build a question repair prompt.
         """
 
         return self.build(
@@ -455,7 +560,9 @@ class PromptBuilder:
         job: AIJob,
         *,
         template_version: Optional[str] = None,
-        additional_variables: Optional[Dict[str, Any]] = None,
+        additional_variables: Optional[
+            Dict[str, Any]
+        ] = None,
     ) -> PromptPackage:
         """
         Build a validation prompt.
@@ -467,39 +574,56 @@ class PromptBuilder:
             template_version=template_version,
             additional_variables=additional_variables,
         )
-
     # ------------------------------------------------------------------
     # Diagnostics
     # ------------------------------------------------------------------
 
-    def diagnostics(self) -> Dict[str, Any]:
+    def diagnostics(
+        self,
+    ) -> Dict[str, Any]:
         """
         Return PromptBuilder diagnostics.
         """
 
         return {
-            "builder": self.__class__.__name__,
-            "registry_valid": self._registry.validate(),
-            "registered_templates": self._registry.size(),
-            "categories": [category.value for category in self._registry.categories()],
+            "component": self.__class__.__name__,
+            "healthy": self.healthy(),
+            "registry_valid": (
+                self._registry.validate()
+            ),
+            "registered_templates": (
+                self._registry.size()
+            ),
+            "categories": [
+                category.value
+                for category
+                in self._registry.categories()
+            ],
         }
 
     # ------------------------------------------------------------------
     # Summary
     # ------------------------------------------------------------------
 
-    def summary(self) -> Dict[str, Any]:
+    def summary(
+        self,
+    ) -> Dict[str, Any]:
         """
-        Return a concise summary of the builder.
+        Return a concise PromptBuilder summary.
         """
 
         return {
-            "registered_templates": self._registry.size(),
-            "registry_valid": self._registry.validate(),
+            "builder": self.__class__.__name__,
+            "registered_templates": (
+                self._registry.size()
+            ),
+            "registry_valid": (
+                self._registry.validate()
+            ),
         }
 
     # ------------------------------------------------------------------
-    # Registry Access
+    # Template Access
     # ------------------------------------------------------------------
 
     def template(
@@ -509,15 +633,25 @@ class PromptBuilder:
         version: Optional[str] = None,
     ) -> PromptTemplate:
         """
-        Return the selected prompt template.
+        Return the selected template.
         """
 
-        template = self._select_template(
+        template = self._registry.find(
             category=category,
             version=version,
         )
 
-        self.validate_template(template)
+        if template is None:
+
+            raise ValueError(
+                "No prompt template found "
+                f"for category "
+                f"'{category.value}'."
+            )
+
+        self.validate_template(
+            template
+        )
 
         return template
 
@@ -528,7 +662,8 @@ class PromptBuilder:
         version: Optional[str] = None,
     ) -> bool:
         """
-        Return True if a matching template exists.
+        Return True if a matching template
+        exists.
         """
 
         return (
@@ -543,13 +678,14 @@ class PromptBuilder:
         self,
     ) -> list[PromptCategory]:
         """
-        Return all registered template categories.
+        Return all registered prompt
+        categories.
         """
 
         return self._registry.categories()
 
     # ------------------------------------------------------------------
-    # Rendering Statistics
+    # Token Estimation
     # ------------------------------------------------------------------
 
     def estimate_prompt_tokens(
@@ -557,39 +693,52 @@ class PromptBuilder:
         prompt: str,
     ) -> int:
         """
-        Public wrapper around the internal token estimator.
+        Estimate the number of prompt tokens.
         """
 
-        return self._estimate_tokens(prompt)
+        return self._estimate_tokens(
+            prompt
+        )
 
     def estimate_package_tokens(
         self,
         package: PromptPackage,
     ) -> int:
         """
-        Estimate the token count for a PromptPackage.
+        Estimate the token count for a
+        PromptPackage.
         """
 
-        return self._estimate_tokens(package.prompt)
-
+        return self._estimate_tokens(
+            package.prompt
+        )
     # ------------------------------------------------------------------
     # Health
     # ------------------------------------------------------------------
 
-    def healthy(self) -> bool:
+    def healthy(
+        self,
+    ) -> bool:
         """
-        Return True if the PromptBuilder is operational.
+        Return True if the PromptBuilder is
+        operational.
         """
 
-        return self._registry.validate() and self._registry.size() > 0
+        return (
+            self._registry.validate()
+            and self._registry.size() > 0
+        )
 
     # ------------------------------------------------------------------
     # Registry Information
     # ------------------------------------------------------------------
 
-    def template_count(self) -> int:
+    def template_count(
+        self,
+    ) -> int:
         """
-        Return the number of registered templates.
+        Return the number of registered
+        templates.
         """
 
         return self._registry.size()
@@ -598,17 +747,17 @@ class PromptBuilder:
         self,
     ) -> Dict[str, Any]:
         """
-        Return prompt registry statistics.
+        Return PromptRegistry statistics.
         """
 
         return self._registry.statistics()
 
     def registry_description(
         self,
-    ) -> Dict[str, Dict[str, Any]]:
+    ) -> Dict[str, Any]:
         """
-        Return a serializable description of all
-        registered templates.
+        Return a serializable description of
+        the PromptRegistry.
         """
 
         return self._registry.describe()
@@ -624,22 +773,15 @@ def create_prompt_builder(
 ) -> PromptBuilder:
     """
     Create a production-ready PromptBuilder.
-
-    Parameters
-    ----------
-    registry:
-        Prompt template registry.
-
-    Returns
-    -------
-    PromptBuilder
     """
 
     builder = PromptBuilder(
         registry=registry,
     )
 
-    logger.info("Production PromptBuilder created.")
+    logger.info(
+        "Production PromptBuilder created."
+    )
 
     return builder
 

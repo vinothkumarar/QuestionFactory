@@ -4,41 +4,45 @@ Question Factory OS v2.1
 
 OpenAI Client
 
-Concrete implementation of the provider-agnostic AIClient
-interface for OpenAI-compatible APIs.
+Enterprise implementation of the provider-agnostic
+AIClient using the OpenAI Responses API.
 
 Responsibilities
 ----------------
 • Request normalization
 • OpenAI SDK interaction
 • Response normalization
-• Health checks
+• Streaming support
+• Health monitoring
 • Model discovery
 • Token estimation
-• Capability reporting
+• Diagnostics
+• Telemetry
 
-The rest of Question Factory OS communicates only with the
-AIClient abstraction and is unaware of OpenAI SDK details.
+Author
+------
+Question Factory OS Team
 """
 
 from __future__ import annotations
 
 import logging
 import time
+
+from collections.abc import Iterator
 from typing import Any
-from typing import Dict
-from typing import List
 from typing import Optional
+from typing import cast
 
 from openai import OpenAI
 
 from factory.ai.ai_client import (
+    AICapability,
     AIClient,
-    AIHealthResult,
     AIClientStatus,
+    AIHealthResult,
     AIModelInfo,
     AIProvider,
-    AICapability,
     AIRequest,
     AIResponse,
 )
@@ -49,6 +53,11 @@ logger = logging.getLogger(__name__)
 class OpenAIClient(AIClient):
     """
     OpenAI implementation of AIClient.
+
+    This class encapsulates all OpenAI SDK
+    interactions. The remainder of Question
+    Factory OS communicates only with the
+    provider-independent AIClient interface.
     """
 
     DEFAULT_MODEL = "gpt-5.5"
@@ -72,16 +81,18 @@ class OpenAIClient(AIClient):
             Default model.
 
         base_url:
-            Optional OpenAI-compatible endpoint.
+            Optional compatible endpoint.
 
         organization:
-            Optional organization identifier.
+            Optional organization id.
 
         timeout:
-            HTTP timeout in seconds.
+            HTTP timeout.
         """
 
-        super().__init__(AIProvider.OPENAI)
+        super().__init__(
+            AIProvider.OPENAI
+        )
 
         self._default_model = model
 
@@ -93,39 +104,102 @@ class OpenAIClient(AIClient):
         )
 
         logger.info(
-            "OpenAIClient initialized with model '%s'.",
+            "OpenAIClient initialized "
+            "(model=%s).",
             model,
         )
 
-    # ------------------------------------------------------------------
-    # Provider Information
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
+    # Lifecycle
+    # ---------------------------------------------------------
 
-    def default_model(self) -> str:
+    def initialize(
+        self,
+    ) -> None:
         """
-        Return the configured default model.
+        Initialize provider resources.
+        """
+
+        logger.debug(
+            "OpenAI provider initialized."
+        )
+
+    def shutdown(
+        self,
+    ) -> None:
+        """
+        Shutdown provider resources.
+        """
+
+        logger.debug(
+            "OpenAI provider shutdown."
+        )
+
+    # ---------------------------------------------------------
+    # Provider Information
+    # ---------------------------------------------------------
+
+    def default_model(
+        self,
+    ) -> str:
+        """
+        Return configured default model.
         """
 
         return self._default_model
 
-    def is_available(self) -> bool:
+    @property
+    def client(
+        self,
+    ) -> OpenAI:
         """
-        Return True if the provider is reachable.
-
-        This method delegates to the lightweight health check.
+        Return underlying SDK client.
         """
 
-        return self.health_check().healthy
+        return self._client
 
-    # ------------------------------------------------------------------
-    # Capability Discovery
-    # ------------------------------------------------------------------
+    @property
+    def configured_model(
+        self,
+    ) -> str:
+        """
+        Return configured default model.
+        """
+
+        return self._default_model
+
+    def set_default_model(
+        self,
+        model: str,
+    ) -> None:
+        """
+        Update default model.
+        """
+
+        model = model.strip()
+
+        if not model:
+
+            raise ValueError(
+                "Model name cannot be empty."
+            )
+
+        logger.info(
+            "Changing model '%s' -> '%s'.",
+            self._default_model,
+            model,
+        )
+
+        self._default_model = model
+    # ---------------------------------------------------------
+    # Capabilities
+    # ---------------------------------------------------------
 
     def capabilities(
         self,
-    ) -> List[AICapability]:
+    ) -> list[AICapability]:
         """
-        Return the capabilities supported by this client.
+        Return provider capabilities.
         """
 
         return [
@@ -137,24 +211,25 @@ class OpenAIClient(AIClient):
             AICapability.TEMPERATURE,
             AICapability.TOKEN_ESTIMATION,
             AICapability.VISION,
+            AICapability.REASONING,
+            AICapability.STRUCTURED_OUTPUT,
         ]
 
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
     # Model Discovery
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
     def list_models(
         self,
-    ) -> List[AIModelInfo]:
+    ) -> list[AIModelInfo]:
         """
-        Return available models.
+        Return available OpenAI models.
 
-        The implementation attempts to query the provider. If that
-        fails (permissions, network, etc.), it gracefully falls back
-        to the configured default model.
+        If discovery fails, gracefully fall
+        back to the configured default model.
         """
 
-        models: List[AIModelInfo] = []
+        models: list[AIModelInfo] = []
 
         try:
 
@@ -170,12 +245,15 @@ class OpenAIClient(AIClient):
                         supports_json=True,
                         supports_functions=True,
                         supports_vision=True,
+                        metadata={},
                     )
                 )
 
         except Exception:
 
-            logger.exception("Unable to retrieve OpenAI model list.")
+            logger.exception(
+                "Unable to retrieve model list."
+            )
 
             models.append(
                 AIModelInfo(
@@ -185,23 +263,49 @@ class OpenAIClient(AIClient):
                     supports_json=True,
                     supports_functions=True,
                     supports_vision=True,
+                    metadata={
+                        "fallback": True,
+                    },
                 )
             )
 
         return models
 
-    # ------------------------------------------------------------------
-    # Health Check
-    # ------------------------------------------------------------------
+    def supports_model(
+        self,
+        model: str,
+    ) -> bool:
+        """
+        Determine whether a model is
+        available.
+        """
+
+        try:
+
+            return any(
+                item.model_name == model
+                for item in self.list_models()
+            )
+
+        except Exception:
+
+            logger.exception(
+                "Unable to verify model '%s'.",
+                model,
+            )
+
+            return False
+
+    # ---------------------------------------------------------
+    # Health
+    # ---------------------------------------------------------
 
     def health_check(
         self,
     ) -> AIHealthResult:
         """
-        Perform a lightweight connectivity test.
-
-        The model listing endpoint is intentionally used because it
-        is inexpensive and verifies authentication.
+        Perform a lightweight provider
+        health check.
         """
 
         started = time.perf_counter()
@@ -210,33 +314,47 @@ class OpenAIClient(AIClient):
 
             self._client.models.list()
 
-            latency = (time.perf_counter() - started) * 1000
+            latency = (
+                time.perf_counter()
+                - started
+            ) * 1000
 
             return AIHealthResult(
                 healthy=True,
                 provider=AIProvider.OPENAI,
                 status=AIClientStatus.READY,
-                latency_ms=round(latency, 2),
+                latency_ms=round(
+                    latency,
+                    2,
+                ),
                 message="Provider reachable.",
             )
 
         except Exception as ex:
 
-            latency = (time.perf_counter() - started) * 1000
+            latency = (
+                time.perf_counter()
+                - started
+            ) * 1000
 
-            logger.exception("OpenAI health check failed.")
+            logger.exception(
+                "Health check failed."
+            )
 
             return AIHealthResult(
                 healthy=False,
                 provider=AIProvider.OPENAI,
                 status=AIClientStatus.UNAVAILABLE,
-                latency_ms=round(latency, 2),
+                latency_ms=round(
+                    latency,
+                    2,
+                ),
                 message=str(ex),
             )
 
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
     # Token Utilities
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
     def estimate_tokens(
         self,
@@ -245,9 +363,9 @@ class OpenAIClient(AIClient):
         """
         Estimate token count.
 
-        This implementation intentionally provides a lightweight
-        approximation. Future versions may integrate tiktoken for
-        model-specific tokenization.
+        This provides a lightweight
+        approximation. Future versions may
+        integrate tiktoken.
         """
 
         if not text:
@@ -263,114 +381,237 @@ class OpenAIClient(AIClient):
         model: Optional[str] = None,
     ) -> Optional[int]:
         """
-        Return the supported context window.
-
-        Future releases may maintain a provider-specific registry.
+        Return the supported context
+        window.
         """
 
         _ = model
 
         return 128_000
-
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
     # Core Generation
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
     def generate(
         self,
         request: AIRequest,
     ) -> AIResponse:
         """
-        Execute a non-streaming generation request.
+        Execute a non-streaming request.
         """
 
-        request = self.before_request(request)
+        request = self.before_request(
+            request
+        )
+
+        self.log_request(
+            request
+        )
+
+        started = time.perf_counter()
 
         try:
 
-            response = self._execute_response_request(request)
+            response = self._execute_response_request(
+                request
+            )
 
             result = self._map_response(
                 response=response,
                 request=request,
             )
 
-            return self.after_response(result)
+            result.response_time_ms = round(
+                (
+                    time.perf_counter()
+                    - started
+                )
+                * 1000,
+                2,
+            )
 
-        except Exception:
+            self.log_response(
+                result
+            )
 
-            logger.exception("OpenAI request execution failed.")
+            return self.after_response(
+                result
+            )
 
-            raise
+        except Exception as ex:
 
-    # ------------------------------------------------------------------
+            logger.exception(
+                "OpenAI request execution failed."
+            )
+
+            raise self.map_exception(
+                ex
+            ) from ex
+
+    # ---------------------------------------------------------
     # Streaming
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
     def stream(
         self,
         request: AIRequest,
-    ):
+    ) -> Iterator[Any]:
         """
         Execute a streaming request.
 
-        Yields provider SDK events directly for now.
-        Future versions may normalize streaming events into
-        provider-independent stream objects.
+        Yields provider SDK events.
         """
 
-        request = self.before_request(request)
+        request = self.before_request(
+            request
+        )
 
-        input_payload = self._build_input(request)
+        self.log_request(
+            request
+        )
+
+        input_payload = self._build_input(
+            request
+        )
 
         with self._client.responses.stream(
-            model=request.model,
-            input=input_payload,
-            temperature=request.temperature,
-            max_output_tokens=request.max_tokens,
+            model=self.normalize_model(
+                request.model
+            ),
+            input=cast(
+                Any,
+                input_payload,
+            ),
+            temperature=self.normalize_temperature(
+                request.temperature
+            ),
+            max_output_tokens=self.normalize_max_tokens(
+                request.max_tokens
+            ),
         ) as stream:
 
             for event in stream:
+
                 yield event
 
-    # ------------------------------------------------------------------
-    # Internal Request Execution
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
+    # Internal Execution
+    # ---------------------------------------------------------
 
     def _execute_response_request(
         self,
         request: AIRequest,
-    ):
+    ) -> Any:
         """
         Execute a Responses API request.
         """
 
-        input_payload = self._build_input(request)
-
-        return self._client.responses.create(
-            model=self._safe_model_name(request.model),
-            input=input_payload,
-            temperature=self._safe_temperature(request.temperature),
-            max_output_tokens=self._safe_max_tokens(request.max_tokens),
+        input_payload = self._build_input(
+            request
         )
 
-    # ------------------------------------------------------------------
-    # Input Builder
-    # ------------------------------------------------------------------
+        return self._client.responses.create(
+            model=self.normalize_model(
+                request.model
+            ),
+            input=cast(
+                Any,
+                input_payload,
+            ),
+            temperature=self.normalize_temperature(
+                request.temperature
+            ),
+            max_output_tokens=self.normalize_max_tokens(
+                request.max_tokens
+            ),
+        )
+
+    # ---------------------------------------------------------
+    # Request Validation
+    # ---------------------------------------------------------
+
+    def validate_request(
+        self,
+        request: AIRequest,
+    ) -> None:
+        """
+        Validate an OpenAI request.
+        """
+
+        super().validate_request(
+            request
+        )
+
+        if (
+            request.model is not None
+            and not request.model.strip()
+        ):
+            raise ValueError(
+                "Model name cannot be empty."
+            )
+
+        if (
+            request.temperature
+            > 2.0
+        ):
+            raise ValueError(
+                "Temperature cannot exceed 2.0."
+            )
+
+        if (
+            request.temperature
+            < 0.0
+        ):
+            raise ValueError(
+                "Temperature cannot be negative."
+            )
+
+    # ---------------------------------------------------------
+    # Lifecycle Hooks
+    # ---------------------------------------------------------
+
+    def before_request(
+        self,
+        request: AIRequest,
+    ) -> AIRequest:
+        """
+        Provider-specific preprocessing.
+        """
+
+        request = super().before_request(
+            request
+        )
+
+        return request
+
+    def after_response(
+        self,
+        response: AIResponse,
+    ) -> AIResponse:
+        """
+        Provider-specific postprocessing.
+        """
+
+        return super().after_response(
+            response
+        )
+    # ---------------------------------------------------------
+    # Request Builder
+    # ---------------------------------------------------------
 
     def _build_input(
         self,
         request: AIRequest,
-    ) -> list[dict]:
+    ) -> list[dict[str, Any]]:
         """
-        Build the Responses API input payload.
+        Build an OpenAI Responses API input payload.
         """
 
-        input_items: list[dict] = []
+        messages: list[dict[str, Any]] = []
 
-        if request.system_prompt:
+        if request.has_system_prompt:
 
-            input_items.append(
+            messages.append(
                 {
                     "role": "system",
                     "content": [
@@ -382,7 +623,7 @@ class OpenAIClient(AIClient):
                 }
             )
 
-        input_items.append(
+        messages.append(
             {
                 "role": "user",
                 "content": [
@@ -394,26 +635,25 @@ class OpenAIClient(AIClient):
             }
         )
 
-        return input_items
+        return messages
 
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
     # Response Mapping
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
     def _map_response(
         self,
+        *,
         response: Any,
         request: AIRequest,
     ) -> AIResponse:
         """
-        Convert an OpenAI Responses API object into the
-        provider-independent AIResponse.
+        Convert an OpenAI Responses API response
+        into a provider-independent AIResponse.
         """
 
-        output_text = getattr(
-            response,
-            "output_text",
-            "",
+        content = self._extract_text(
+            response
         )
 
         usage = getattr(
@@ -422,9 +662,9 @@ class OpenAIClient(AIClient):
             None,
         )
 
-        prompt_tokens = None
-        completion_tokens = None
-        total_tokens = None
+        prompt_tokens: Optional[int] = None
+        completion_tokens: Optional[int] = None
+        total_tokens: Optional[int] = None
 
         if usage is not None:
 
@@ -446,87 +686,128 @@ class OpenAIClient(AIClient):
                 None,
             )
 
+        finish_reason = getattr(
+            response,
+            "status",
+            None,
+        )
+
         return AIResponse(
             success=True,
             provider=AIProvider.OPENAI,
-            model=request.model or self.default_model(),
-            content=output_text,
-            finish_reason=getattr(
-                response,
-                "status",
-                None,
+            model=self.normalize_model(
+                request.model
             ),
+            content=content,
+            finish_reason=finish_reason,
             prompt_tokens=prompt_tokens,
             completion_tokens=completion_tokens,
             total_tokens=total_tokens,
             raw_response=response,
+            metadata={
+                "response_id": getattr(
+                    response,
+                    "id",
+                    None,
+                ),
+            },
         )
 
-    # ------------------------------------------------------------------
-    # Request Validation
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
+    # Response Extraction
+    # ---------------------------------------------------------
 
-    def validate_request(
+    def _extract_text(
         self,
-        request: AIRequest,
+        response: Any,
+    ) -> str:
+        """
+        Extract the generated text from the
+        OpenAI Responses API response.
+        """
+
+        text = getattr(
+            response,
+            "output_text",
+            None,
+        )
+
+        if isinstance(
+            text,
+            str,
+        ):
+            return text
+
+        if text is not None:
+            return str(text)
+
+        output = getattr(
+            response,
+            "output",
+            None,
+        )
+
+        if not output:
+            return ""
+
+        fragments: list[str] = []
+
+        for item in output:
+
+            contents = getattr(
+                item,
+                "content",
+                [],
+            )
+
+            for content in contents:
+
+                value = getattr(
+                    content,
+                    "text",
+                    None,
+                )
+
+                if value:
+                    fragments.append(
+                        value
+                    )
+
+        return "\n".join(
+            fragments
+        )
+
+    # ---------------------------------------------------------
+    # Response Validation
+    # ---------------------------------------------------------
+
+    def _validate_response(
+        self,
+        response: Any,
     ) -> None:
         """
-        Validate an OpenAI request.
-
-        Extends the base validation with provider-specific checks.
+        Validate the provider response.
         """
 
-        super().validate_request(request)
+        if response is None:
 
-        if request.model is None:
-            return
+            raise RuntimeError(
+                "OpenAI returned no response."
+            )
 
-        if not request.model.strip():
-            raise ValueError("Model name cannot be empty.")
-
-        if request.temperature > 2.0:
-            raise ValueError("OpenAI temperature cannot exceed 2.0.")
-
-    # ------------------------------------------------------------------
-    # Lifecycle Hooks
-    # ------------------------------------------------------------------
-
-    def before_request(
-        self,
-        request: AIRequest,
-    ) -> AIRequest:
-        """
-        Execute provider-specific preprocessing.
-        """
-
-        request = super().before_request(request)
-
-        logger.debug(
-            "Executing OpenAI request " "(model=%s, stream=%s)",
-            request.model,
-            request.stream,
-        )
-
-        return request
-
-    def after_response(
-        self,
-        response: AIResponse,
-    ) -> AIResponse:
-        """
-        Execute provider-specific postprocessing.
-        """
-
-        logger.debug(
-            "OpenAI request completed " "(tokens=%s)",
-            response.total_tokens,
-        )
-
-        return super().after_response(response)
-
-    # ------------------------------------------------------------------
+        if not hasattr(
+            response,
+            "output",
+        ) and not hasattr(
+            response,
+            "output_text",
+        ):
+            raise RuntimeError(
+                "Invalid OpenAI response."
+            )
+    # ---------------------------------------------------------
     # Retry Policy
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
     def should_retry(
         self,
@@ -534,12 +815,13 @@ class OpenAIClient(AIClient):
         attempt: int,
     ) -> bool:
         """
-        Determine whether the failed request should
+        Determine whether a failed request should
         be retried.
 
         Conservative retry policy:
-        - Maximum three attempts.
-        - Retry only transient failures.
+
+        • Maximum three attempts
+        • Retry transient failures only
         """
 
         if attempt >= self.max_retry_attempts():
@@ -550,200 +832,182 @@ class OpenAIClient(AIClient):
             ConnectionError,
         )
 
-        return isinstance(exception, retryable)
+        return isinstance(
+            exception,
+            retryable,
+        )
 
-    def max_retry_attempts(self) -> int:
+    def max_retry_attempts(
+        self,
+    ) -> int:
         """
-        Maximum retry attempts supported by this client.
+        Maximum retry attempts.
         """
 
         return 3
 
-    # ------------------------------------------------------------------
-    # Exception Mapping
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
+    # Configuration Validation
+    # ---------------------------------------------------------
 
-    def _map_exception(
+    def validate_configuration(
+        self,
+    ) -> None:
+        """
+        Validate provider configuration.
+        """
+
+        if not self._default_model.strip():
+
+            raise ValueError(
+                "Default model cannot be empty."
+            )
+
+        self.ensure_available()
+
+    # ---------------------------------------------------------
+    # Exception Mapping
+    # ---------------------------------------------------------
+
+    def map_exception(
         self,
         exception: Exception,
     ) -> RuntimeError:
         """
-        Convert provider-specific exceptions into a
-        provider-neutral runtime exception.
-
-        Future versions can introduce dedicated
-        Question Factory exception types without
-        changing callers.
+        Convert provider-specific exceptions
+        into provider-independent exceptions.
         """
 
-        logger.exception("OpenAI provider exception.")
+        logger.exception(
+            "OpenAI provider exception."
+        )
 
-        return RuntimeError(f"OpenAI request failed: {exception}")
+        return RuntimeError(
+            f"OpenAI request failed: "
+            f"{exception}"
+        )
 
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
     # Logging Helpers
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
-    def _log_request(
+    def log_request(
         self,
         request: AIRequest,
     ) -> None:
         """
         Log request metadata.
 
-        Prompt contents are intentionally excluded to
-        avoid logging potentially sensitive information.
+        Prompt contents are intentionally
+        excluded from logs.
         """
 
         logger.debug(
-            "OpenAI request " "(model=%s, temperature=%s, " "max_tokens=%s, stream=%s)",
-            request.model,
+            "OpenAI request "
+            "(model=%s, stream=%s, "
+            "temperature=%s, "
+            "max_tokens=%s)",
+            self.normalize_model(
+                request.model
+            ),
+            request.stream,
             request.temperature,
             request.max_tokens,
-            request.stream,
         )
 
-    def _log_response(
+    def log_response(
         self,
         response: AIResponse,
     ) -> None:
         """
-        Log normalized response metadata.
+        Log response metadata.
         """
 
         logger.debug(
-            "OpenAI response " "(success=%s, total_tokens=%s)",
+            "OpenAI response "
+            "(success=%s, "
+            "tokens=%s, "
+            "finish_reason=%s)",
             response.success,
             response.total_tokens,
+            response.finish_reason,
         )
 
-    # ------------------------------------------------------------------
-    # Telemetry
-    # ------------------------------------------------------------------
-
-    def telemetry(
-        self,
-        request: AIRequest,
-        response: AIResponse,
-    ) -> Dict[str, Any]:
-        """
-        Produce provider-independent telemetry data.
-
-        This information is suitable for runtime
-        metrics, dashboards, and audit logs.
-        """
-
-        return {
-            "provider": self.provider.value,
-            "model": response.model,
-            "stream": request.stream,
-            "temperature": request.temperature,
-            "prompt_tokens": response.prompt_tokens,
-            "completion_tokens": response.completion_tokens,
-            "total_tokens": response.total_tokens,
-            "finish_reason": response.finish_reason,
-        }
-
-    # ------------------------------------------------------------------
-    # Configuration
-    # ------------------------------------------------------------------
-
-    @property
-    def client(self) -> OpenAI:
-        """
-        Return the underlying OpenAI SDK client.
-
-        This property exists primarily for advanced scenarios
-        and integration testing. The rest of Question Factory OS
-        should interact through the AIClient interface instead.
-        """
-
-        return self._client
-
-    @property
-    def configured_model(self) -> str:
-        """
-        Return the configured default model.
-        """
-
-        return self._default_model
-
-    def set_default_model(
-        self,
-        model: str,
-    ) -> None:
-        """
-        Update the default model used for requests that do not
-        explicitly specify one.
-        """
-
-        if not model.strip():
-            raise ValueError("Model name cannot be empty.")
-
-        logger.info(
-            "Changing default model from '%s' to '%s'.",
-            self._default_model,
-            model,
-        )
-
-        self._default_model = model
-
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
     # Diagnostics
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
-    def diagnostics(self) -> Dict[str, Any]:
+    def diagnostics(
+        self,
+    ) -> dict[str, Any]:
         """
         Return provider diagnostics.
-
-        Extends the base AIClient diagnostics with OpenAI-
-        specific information.
         """
 
         diagnostics = super().diagnostics()
 
         diagnostics.update(
             {
-                "configured_model": self._default_model,
-                "supports_responses_api": True,
-                "sdk_client": self._client.__class__.__name__,
+                "configured_model":
+                    self._default_model,
+                "sdk_client":
+                    self._client.__class__.__name__,
+                "responses_api": True,
             }
         )
 
         return diagnostics
 
-    # ------------------------------------------------------------------
-    # Model Helpers
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
+    # Provider Summary
+    # ---------------------------------------------------------
 
-    def supports_model(
+    def provider_summary(
         self,
-        model: str,
-    ) -> bool:
+    ) -> dict[str, Any]:
         """
-        Determine whether the specified model is available.
-
-        If model discovery cannot be performed, False is returned.
+        Return an OpenAI-specific summary.
         """
 
-        try:
+        summary = super().provider_summary()
 
-            models = self.list_models()
+        summary.update(
+            {
+                "configured_model":
+                    self._default_model,
+                "responses_api": True,
+            }
+        )
 
-            return any(item.model_name == model for item in models)
+        return summary
 
-        except Exception:
+    # ---------------------------------------------------------
+    # Information
+    # ---------------------------------------------------------
 
-            logger.exception(
-                "Unable to verify model '%s'.",
-                model,
-            )
+    def info(
+        self,
+    ) -> dict[str, Any]:
+        """
+        Return detailed provider information.
+        """
 
-            return False
+        information = super().info()
 
-    # ------------------------------------------------------------------
-    # Response Helpers
-    # ------------------------------------------------------------------
+        information.update(
+            {
+                "configured_model":
+                    self._default_model,
+                "sdk":
+                    self._client.__class__.__name__,
+                "responses_api": True,
+            }
+        )
+
+        return information
+    # ---------------------------------------------------------
+    # Usage Helpers
+    # ---------------------------------------------------------
 
     def extract_text(
         self,
@@ -758,9 +1022,9 @@ class OpenAIClient(AIClient):
     def usage_summary(
         self,
         response: AIResponse,
-    ) -> Dict[str, Optional[int]]:
+    ) -> dict[str, Optional[int]]:
         """
-        Return a normalized usage summary.
+        Return normalized token usage information.
         """
 
         return {
@@ -769,15 +1033,20 @@ class OpenAIClient(AIClient):
             "total_tokens": response.total_tokens,
         }
 
-    # ------------------------------------------------------------------
-    # SDK Compatibility Helpers
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
+    # SDK Information
+    # ---------------------------------------------------------
 
-    def sdk_version(self) -> Optional[str]:
+    def sdk_version(
+        self,
+    ) -> Optional[str]:
         """
-        Attempt to determine the installed OpenAI SDK version.
+        Return the installed OpenAI SDK version.
 
-        Returns None if the version cannot be determined.
+        Returns
+        -------
+        Optional[str]
+            Installed version or None.
         """
 
         try:
@@ -788,163 +1057,362 @@ class OpenAIClient(AIClient):
 
         except Exception:
 
-            logger.debug("Unable to determine OpenAI SDK version.")
+            logger.debug(
+                "Unable to determine OpenAI SDK version."
+            )
 
             return None
 
-    # ------------------------------------------------------------------
-    # Provider Summary
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
+    # Model Utilities
+    # ---------------------------------------------------------
 
-    def provider_summary(self) -> Dict[str, Any]:
+    
+
+    def reset_default_model(
+        self,
+    ) -> None:
         """
-        Return an OpenAI-specific provider summary.
+        Reset to the library default model.
         """
 
-        summary = super().provider_summary()
+        self._default_model = self.DEFAULT_MODEL
 
-        summary.update(
-            {
-                "sdk_version": self.sdk_version(),
-                "responses_api": True,
-                "default_model": self._default_model,
-            }
+    # ---------------------------------------------------------
+    # Provider Utilities
+    # ---------------------------------------------------------
+
+    def supports_streaming(
+        self,
+    ) -> bool:
+        """
+        Return True if streaming is supported.
+        """
+
+        return True
+
+    def supports_json_mode(
+        self,
+    ) -> bool:
+        """
+        Return True if structured JSON output
+        is supported.
+        """
+
+        return True
+
+    def supports_function_calling(
+        self,
+    ) -> bool:
+        """
+        Return True if function calling
+        is supported.
+        """
+
+        return True
+
+    def supports_reasoning(
+        self,
+    ) -> bool:
+        """
+        Return True if reasoning models
+        are supported.
+        """
+
+        return True
+
+    def supports_vision(
+        self,
+    ) -> bool:
+        """
+        Return True if vision models
+        are supported.
+        """
+
+        return True
+
+    # ---------------------------------------------------------
+    # Telemetry
+    # ---------------------------------------------------------
+
+    def telemetry(
+        self,
+        request: AIRequest,
+        response: AIResponse,
+    ) -> dict[str, Any]:
+        """
+        Produce provider-independent telemetry.
+        """
+
+        telemetry = super().telemetry(
+            request,
+            response,
         )
 
-        return summary
-
-    # ------------------------------------------------------------------
-    # Operational Information
-    # ------------------------------------------------------------------
-
-    def info(self) -> Dict[str, Any]:
-        """
-        Return a comprehensive provider description.
-        """
-
-        info = super().info()
-
-        info.update(
+        telemetry.update(
             {
+                "sdk_version": self.sdk_version(),
                 "configured_model": self._default_model,
-                "sdk_version": self.sdk_version(),
-                "responses_api": True,
             }
         )
 
-        return info
+        return telemetry
 
-    # ------------------------------------------------------------------
-    # Lifecycle
-    # ------------------------------------------------------------------
-
-    def initialize(self) -> None:
-        """
-        Initialize the provider client.
-
-        The OpenAI SDK is initialized during construction, so this
-        method currently performs no additional work. It exists to
-        satisfy the AIClient lifecycle contract and to support future
-        initialization logic.
-        """
-
-        logger.debug("OpenAIClient initialized.")
-
-    def shutdown(self) -> None:
-        """
-        Release provider resources.
-
-        The OpenAI SDK manages its own HTTP resources internally.
-        Future SDK versions may expose explicit cleanup methods.
-        """
-
-        logger.debug("OpenAIClient shutdown.")
-
-    # ------------------------------------------------------------------
-    # Internal Utilities
-    # ------------------------------------------------------------------
-
-    def _safe_model_name(
-        self,
-        model: Optional[str],
-    ) -> str:
-        """
-        Return a valid model name.
-        """
-
-        if model and model.strip():
-            return model
-
-        return self._default_model
-
-    def _safe_temperature(
-        self,
-        temperature: float,
-    ) -> float:
-        """
-        Normalize temperature into the supported range.
-        """
-
-        return max(
-            0.0,
-            min(
-                2.0,
-                temperature,
-            ),
-        )
-
-    def _safe_max_tokens(
-        self,
-        max_tokens: Optional[int],
-    ) -> Optional[int]:
-        """
-        Normalize max output tokens.
-        """
-
-        if max_tokens is None:
-            return None
-
-        return max(
-            1,
-            max_tokens,
-        )
-
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
     # Readiness
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
     @property
-    def ready(self) -> bool:
+    def ready(
+        self,
+    ) -> bool:
         """
-        Return True if the client is operational.
+        Return True if the provider is
+        operational.
         """
 
         try:
-            return self.is_available()
+
+            return self.health_check().healthy
+
         except Exception:
+
+            return False
+    # ---------------------------------------------------------
+    # Operational Helpers
+    # ---------------------------------------------------------
+
+    def ping(
+        self,
+    ) -> bool:
+        """
+        Lightweight connectivity check.
+
+        Returns
+        -------
+        bool
+            True if the provider is reachable.
+        """
+
+        try:
+
+            return self.health_check().healthy
+
+        except Exception:
+
+            logger.exception(
+                "Provider ping failed."
+            )
+
             return False
 
-    # ------------------------------------------------------------------
-    # Representation
-    # ------------------------------------------------------------------
+    def refresh_models(
+        self,
+    ) -> list[AIModelInfo]:
+        """
+        Refresh and return the current model list.
 
-    def __repr__(self) -> str:
+        Future implementations may introduce
+        caching. For now this delegates directly
+        to model discovery.
+        """
+
+        return self.list_models()
+
+    # ---------------------------------------------------------
+    # Health Summary
+    # ---------------------------------------------------------
+
+    def health_summary(
+        self,
+    ) -> dict[str, Any]:
+        """
+        Return a concise health summary.
+        """
+
+        health = self.health_check()
+
+        return {
+            "provider": self.provider.value,
+            "healthy": health.healthy,
+            "status": health.status.value,
+            "latency_ms": health.latency_ms,
+            "message": health.message,
+        }
+
+    # ---------------------------------------------------------
+    # Configuration Summary
+    # ---------------------------------------------------------
+
+    def configuration(
+        self,
+    ) -> dict[str, Any]:
+        """
+        Return provider configuration.
+        """
+
+        return {
+            "provider": self.provider.value,
+            "default_model": self._default_model,
+            "sdk_version": self.sdk_version(),
+            "responses_api": True,
+        }
+
+    # ---------------------------------------------------------
+    # Statistics
+    # ---------------------------------------------------------
+
+    def statistics(
+        self,
+    ) -> dict[str, Any]:
+        """
+        Return provider statistics.
+
+        Reserved for future runtime metrics.
+        """
+
+        return {
+            "provider": self.provider.value,
+            "configured_model": self._default_model,
+            "available": self.ready,
+            "supports_streaming": True,
+            "supports_reasoning": True,
+            "supports_vision": True,
+        }
+
+    # ---------------------------------------------------------
+    # Representation
+    # ---------------------------------------------------------
+
+    def __repr__(
+        self,
+    ) -> str:
         """
         Developer-friendly representation.
         """
 
         return (
             f"{self.__class__.__name__}("
-            f"model='{self._default_model}', "
-            f"provider='{self.provider.value}')"
+            f"provider='{self.provider.value}', "
+            f"model='{self._default_model}')"
         )
 
     __str__ = __repr__
 
+    # ---------------------------------------------------------
+    # Equality
+    # ---------------------------------------------------------
 
-# ----------------------------------------------------------------------
+    def __eq__(
+        self,
+        other: object,
+    ) -> bool:
+
+        if not isinstance(
+            other,
+            OpenAIClient,
+        ):
+            return NotImplemented
+
+        return (
+            self._default_model
+            == other._default_model
+        )
+
+    def __hash__(
+        self,
+    ) -> int:
+
+        return hash(
+            (
+                self.provider,
+                self._default_model,
+            )
+        )
+    # ---------------------------------------------------------
+    # Factory Helpers
+    # ---------------------------------------------------------
+
+    @classmethod
+    def create(
+        cls,
+        api_key: str,
+        *,
+        model: str = DEFAULT_MODEL,
+        base_url: Optional[str] = None,
+        organization: Optional[str] = None,
+        timeout: float = 120.0,
+    ) -> "OpenAIClient":
+        """
+        Factory helper for constructing an
+        OpenAIClient.
+        """
+
+        return cls(
+            api_key=api_key,
+            model=model,
+            base_url=base_url,
+            organization=organization,
+            timeout=timeout,
+        )
+
+    # ---------------------------------------------------------
+    # Close
+    # ---------------------------------------------------------
+
+    def close(
+        self,
+    ) -> None:
+        """
+        Close the underlying SDK client if
+        supported by the installed version.
+        """
+
+        close = getattr(
+            self._client,
+            "close",
+            None,
+        )
+
+        if callable(close):
+
+            try:
+
+                close()
+
+            except Exception:
+
+                logger.exception(
+                    "Failed to close OpenAI client."
+                )
+
+    # ---------------------------------------------------------
+    # Context Manager Support
+    # ---------------------------------------------------------
+
+    def __enter__(
+        self,
+    ) -> "OpenAIClient":
+
+        self.initialize()
+
+        return self
+
+    def __exit__(
+        self,
+        exc_type,
+        exc,
+        traceback,
+    ) -> None:
+
+        self.shutdown()
+
+        self.close()
+
+
+# ---------------------------------------------------------
 # Module Exports
-# ----------------------------------------------------------------------
+# ---------------------------------------------------------
 
 __all__ = [
     "OpenAIClient",
