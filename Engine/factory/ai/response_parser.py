@@ -35,7 +35,7 @@ from typing import Dict
 from typing import List
 from typing import Optional
 
-from factory.ai.ai_client import AIResponse
+from Engine.factory.ai.ai_client import AIResponse
 
 logger = logging.getLogger(__name__)
 

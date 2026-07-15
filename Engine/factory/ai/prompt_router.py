@@ -41,7 +41,7 @@ from typing import Dict
 from typing import Optional
 from typing import Any
 
-from factory.ai.models.ai_job import AIJob
+from Engine.factory.ai.models.ai_job import AIJob
 
 logger = logging.getLogger(__name__)
 

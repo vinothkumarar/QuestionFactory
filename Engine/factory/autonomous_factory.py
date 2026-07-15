@@ -9,13 +9,18 @@ Release   : R3
 Runs an entire Production Plan automatically.
 """
 
-from scheduler.production_scheduler import ProductionScheduler
 
-from factory.factory_runner import FactoryRunner
+from Engine.factory.factory_runner import FactoryRunner
 
-from repositories.factory_state_repository import FactoryStateRepository
+from Engine.scheduler.production_scheduler import ProductionScheduler
 
-from models.production_plan_model import ProductionPlanModel
+from Engine.repositories.factory_state_repository import (
+    FactoryStateRepository,
+)
+
+from Engine.models.production_plan_model import (
+    ProductionPlanModel,
+)
 
 
 class AutonomousFactory:

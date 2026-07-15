@@ -32,12 +32,12 @@ from typing import Any
 from typing import Dict
 from typing import Optional
 
-from factory.ai.models.ai_job import AIJob
-from factory.ai.models.prompt_package import (
+from Engine.factory.ai.models.ai_job import AIJob
+from Engine.factory.ai.models.prompt_package import (
     PromptPackage,
     create_prompt_package,
 )
-from factory.ai.prompt_templates import (
+from Engine.factory.ai.prompt_templates import (
     PromptCategory,
     PromptRegistry,
     PromptTemplate,

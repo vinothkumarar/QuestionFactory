@@ -7,7 +7,7 @@ Sprint    : S1
 Release   : R3
 """
 
-from factory.factory_runner import FactoryRunner
+from Engine.factory.factory_runner import FactoryRunner
 
 from repositories.factory_state_repository import FactoryStateRepository
 

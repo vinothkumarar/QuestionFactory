@@ -27,12 +27,12 @@ import logging
 from typing import Any
 from typing import Optional
 
-from factory.ai.ai_client import AIClient
-from factory.ai.models.ai_job import AIJob
-from factory.ai.models.prompt_package import PromptPackage
-from factory.ai.prompt_builder import PromptBuilder
-from factory.ai.response_parser import ResponseParser
-from factory.ai.ai_client import AIRequest
+from Engine.factory.ai.ai_client import AIClient
+from Engine.factory.ai.models.ai_job import AIJob
+from Engine.factory.ai.models.prompt_package import PromptPackage
+from Engine.factory.ai.prompt_builder import PromptBuilder
+from Engine.factory.ai.response_parser import ResponseParser
+from Engine.factory.ai.ai_client import AIRequest
 
 
 logger = logging.getLogger(__name__)

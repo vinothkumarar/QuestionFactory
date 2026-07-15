@@ -29,8 +29,8 @@ from typing import Dict
 from typing import Optional
 from typing import Type
 
-from factory.ai.ai_client import AIClient
-from factory.ai.ai_client import AIProvider
+from Engine.factory.ai.ai_client import AIClient
+from Engine.factory.ai.ai_client import AIProvider
 
 logger = logging.getLogger(__name__)
 

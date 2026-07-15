@@ -36,7 +36,7 @@ from typing import cast
 
 from openai import OpenAI
 
-from factory.ai.ai_client import (
+from Engine.factory.ai.ai_client import (
     AICapability,
     AIClient,
     AIClientStatus,
