@@ -34,6 +34,7 @@ from typing import Any
 from typing import Dict
 from typing import List
 from typing import Optional
+from typing import cast
 
 from Engine.factory.ai.ai_client import AIResponse
 
@@ -226,7 +227,7 @@ class ResponseParser:
             raise ValueError("Response is empty.")
 
         try:
-            return json.loads(text)
+            return cast(Dict[str, Any], json.loads(text))
 
         except json.JSONDecodeError:
             pass
@@ -239,7 +240,7 @@ class ResponseParser:
 
         candidate = text[start : end + 1]
 
-        return json.loads(candidate)
+        return cast(Dict[str, Any], json.loads(candidate))
 
     # ------------------------------------------------------------------
     # Field Population
@@ -400,13 +401,13 @@ class ResponseParser:
         """
 
         try:
-            return json.loads(text)
+            return cast(Dict[str, Any], json.loads(text))
 
         except json.JSONDecodeError:
 
             repaired = self._repair_json(text)
 
-            return json.loads(repaired)
+            return cast(Dict[str, Any], json.loads(repaired))
 
     # ------------------------------------------------------------------
     # Validation Helpers

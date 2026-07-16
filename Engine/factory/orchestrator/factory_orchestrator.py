@@ -522,7 +522,8 @@ class FactoryOrchestrator:
             "validator": (
                 not self._validator.is_empty()
             ),
+            
             "repair_engine": (
-                not self._repair_engine.is_empty()
+                not self._repair_engine.is_empty
             ),
         }
