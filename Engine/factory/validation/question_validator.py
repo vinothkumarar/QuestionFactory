@@ -18,6 +18,10 @@ import logging
 from abc import ABC, abstractmethod
 from typing import List
 
+from Engine.factory.validation.validation_result_model import (
+    ValidationResultModel,
+)
+
 from Engine.models.question_batch_model import (
     QuestionBatchModel,
 )
@@ -40,10 +44,11 @@ class Validator(ABC):
         """
 
     @abstractmethod
+    
     def validate(
         self,
         batch: QuestionBatchModel,
-    ):
+    ) -> ValidationResultModel:
         """
         Validate the supplied batch.
         """
@@ -69,17 +74,18 @@ class QuestionValidator:
     # Public API
     # ---------------------------------------------------------
 
+    
     def validate(
         self,
         batch: QuestionBatchModel,
-    ):
+    ) -> list[ValidationResultModel]:
         """
         Execute every registered validator.
         """
 
         self.logger.info("Starting validation.")
 
-        results = []
+        results: list[ValidationResultModel] = []
 
         for validator in self._validators:
 
@@ -232,7 +238,7 @@ class QuestionValidator:
     def after_validation(
         self,
         batch: QuestionBatchModel,
-        results: List,
+        results: list[ValidationResultModel],
     ) -> None:
         """
         Executed immediately after validation
@@ -250,7 +256,7 @@ class QuestionValidator:
     def execute(
         self,
         batch: QuestionBatchModel,
-    ) -> List:
+    ) -> list[ValidationResultModel]:
         """
         Execute the complete validation workflow.
         """
@@ -272,7 +278,7 @@ class QuestionValidator:
 
     def summary(
         self,
-        results: List,
+        results: list[ValidationResultModel],
     ) -> dict:
         """
         Return a concise validation summary.
@@ -289,7 +295,7 @@ class QuestionValidator:
 
     def diagnostics(
         self,
-        results: List,
+        results: list[ValidationResultModel],
     ) -> dict:
         """
         Return validation diagnostics.

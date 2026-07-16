@@ -985,9 +985,9 @@ class R03Validator(ValidatorBase):
     # Summary
     # ---------------------------------------------------------
 
+    
     def summary(
         self,
-        batch: QuestionBatchModel,
         result: ValidationResultModel,
     ) -> dict:
         """
@@ -997,29 +997,24 @@ class R03Validator(ValidatorBase):
         return {
             "validator": self.name,
             "rule_code": self.rule_code,
-            "questions_checked": (batch.question_count),
-            "quality_grade": (
-                result.get_metadata(
-                    "quality_grade",
-                    "",
-                )
+            "quality_grade": result.get_metadata(
+                "quality_grade",
+                "",
             ),
-            "production_decision": (
-                result.get_metadata(
-                    "production_decision",
-                    "",
-                )
+            "production_decision": result.get_metadata(
+                "production_decision",
+                "",
             ),
-            "success": (result.is_successful()),
+            "success": result.is_successful(),
         }
 
     # ---------------------------------------------------------
     # Diagnostics
     # ---------------------------------------------------------
 
+    
     def diagnostics(
         self,
-        batch: QuestionBatchModel,
         result: ValidationResultModel,
     ) -> dict:
         """
@@ -1027,32 +1022,10 @@ class R03Validator(ValidatorBase):
         """
 
         return {
-            "summary": self.summary(
-                batch,
-                result,
-            ),
-            "statistics": self.statistics(
-                batch,
-                result,
-            ),
-            "manufacturing_report": (
-                result.get_metadata(
-                    "manufacturing_report",
-                    {},
-                )
-            ),
-            "blueprint_summary": (
-                result.get_metadata(
-                    "blueprint_summary",
-                    {},
-                )
-            ),
-            "quality_indicators": (
-                result.get_metadata(
-                    "quality_indicators",
-                    {},
-                )
-            ),
+            "component": self.__class__.__name__,
+            "summary": self.summary(result),
+            "statistics": result.statistics(),
+            "metadata": dict(result.metadata),
         }
 
     # ---------------------------------------------------------
@@ -1114,166 +1087,4 @@ class R03Validator(ValidatorBase):
             "framework_version": self.version,
         }
 
-    # ---------------------------------------------------------
-    # Statistics
-    # ---------------------------------------------------------
-
-    def statistics(
-        self,
-        batch: QuestionBatchModel,
-        result: ValidationResultModel,
-    ) -> dict:
-        """
-        Return manufacturing statistics.
-        """
-
-        return {
-            "questions_checked": (batch.question_count),
-            "errors": (result.error_count),
-            "warnings": (result.warning_count),
-            "manufacturing_score": (
-                result.get_metadata(
-                    "manufacturing_score",
-                    0,
-                )
-            ),
-            "coverage_score": (
-                result.get_metadata(
-                    "coverage_score",
-                    0,
-                )
-            ),
-        }
-
-    # ---------------------------------------------------------
-    # Summary
-    # ---------------------------------------------------------
-
-    def summary(
-        self,
-        batch: QuestionBatchModel,
-        result: ValidationResultModel,
-    ) -> dict:
-        """
-        Return a concise manufacturing summary.
-        """
-
-        return {
-            "validator": self.name,
-            "rule_code": self.rule_code,
-            "questions_checked": (batch.question_count),
-            "quality_grade": (
-                result.get_metadata(
-                    "quality_grade",
-                    "",
-                )
-            ),
-            "production_decision": (
-                result.get_metadata(
-                    "production_decision",
-                    "",
-                )
-            ),
-            "success": (result.is_successful()),
-        }
-
-    # ---------------------------------------------------------
-    # Diagnostics
-    # ---------------------------------------------------------
-
-    def diagnostics(
-        self,
-        batch: QuestionBatchModel,
-        result: ValidationResultModel,
-    ) -> dict:
-        """
-        Return complete R03 diagnostics.
-        """
-
-        return {
-            "summary": self.summary(
-                batch,
-                result,
-            ),
-            "statistics": self.statistics(
-                batch,
-                result,
-            ),
-            "manufacturing_report": (
-                result.get_metadata(
-                    "manufacturing_report",
-                    {},
-                )
-            ),
-            "blueprint_summary": (
-                result.get_metadata(
-                    "blueprint_summary",
-                    {},
-                )
-            ),
-            "quality_indicators": (
-                result.get_metadata(
-                    "quality_indicators",
-                    {},
-                )
-            ),
-        }
-
-    # ---------------------------------------------------------
-    # Health
-    # ---------------------------------------------------------
-
-    def health(self) -> dict:
-        """
-        Return validator health information.
-        """
-
-        return {
-            "validator": self.name,
-            "rule_code": self.rule_code,
-            "version": self.version,
-            "validation_scope": ("BLUEPRINT_QUALITY"),
-            "status": "READY",
-        }
-
-    # ---------------------------------------------------------
-    # Capabilities
-    # ---------------------------------------------------------
-
-    def capabilities(self) -> dict:
-        """
-        Describe validator capabilities.
-        """
-
-        return {
-            "blueprint_validation": True,
-            "difficulty_validation": True,
-            "concept_validation": True,
-            "archetype_validation": True,
-            "quality_analysis": True,
-            "jee_quality": True,
-            "manufacturing_scoring": True,
-            "readiness_evaluation": True,
-            "report_generation": True,
-            "diagnostics": True,
-            "health_reporting": True,
-        }
-
-    # ---------------------------------------------------------
-    # Execution Information
-    # ---------------------------------------------------------
-
-    def execution_information(
-        self,
-    ) -> dict:
-        """
-        Return execution information.
-        """
-
-        return {
-            "validator": self.name,
-            "rule_code": self.rule_code,
-            "execution_mode": "SEQUENTIAL",
-            "validation_scope": ("BLUEPRINT_AND_QUALITY"),
-            "framework_version": self.version,
-        }
+    

@@ -315,9 +315,9 @@ class R02Validator(ValidatorBase):
     # Summary
     # ---------------------------------------------------------
 
+    
     def summary(
         self,
-        batch: QuestionBatchModel,
         result: ValidationResultModel,
     ) -> dict:
         """
@@ -327,7 +327,6 @@ class R02Validator(ValidatorBase):
         return {
             "validator": self.name,
             "rule_code": self.rule_code,
-            "questions_checked": (batch.question_count),
             "success": (result.is_successful()),
             "errors": (result.error_count),
             "warnings": (result.warning_count),
@@ -337,9 +336,9 @@ class R02Validator(ValidatorBase):
     # Diagnostics
     # ---------------------------------------------------------
 
+    
     def diagnostics(
         self,
-        batch: QuestionBatchModel,
         result: ValidationResultModel,
     ) -> dict:
         """
@@ -347,15 +346,10 @@ class R02Validator(ValidatorBase):
         """
 
         return {
-            "summary": self.summary(
-                batch,
-                result,
-            ),
-            "statistics": self.statistics(
-                batch,
-                result,
-            ),
-            "batch": batch.summary(),
+            "component": self.__class__.__name__,
+            "summary": self.summary(result),
+            "statistics": result.statistics(),
+            "metadata": dict(result.metadata),
         }
 
     # ---------------------------------------------------------
