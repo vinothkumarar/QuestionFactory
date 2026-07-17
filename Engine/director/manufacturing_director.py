@@ -1,77 +1,94 @@
 """
-Question Factory OS v2.0
-Autonomous Manufacturing
+Question Factory OS v2.1
 
-File:
-    Engine/director/manufacturing_director.py
+Manufacturing Director
 
-Description
------------
-The Manufacturing Director is the single orchestration authority for
-Question Factory OS.
+Central orchestration layer responsible for executing one
+complete manufacturing cycle.
 
-It coordinates the complete manufacturing lifecycle but never performs
-business logic itself.
-
-Responsibilities
-----------------
-* Load runtime state
-* Initialize factory services
-* Execute manufacturing cycle
-* Coordinate scheduler
-* Coordinate manufacturing engine
-* Coordinate QA
-* Coordinate repair
-* Coordinate packaging
-* Update runtime
-* Write production logs
-
-This module intentionally delegates all domain logic to specialized
-components.
+Pipeline
+--------
+Runtime
+    ↓
+Blueprint
+    ↓
+Production Scheduler
+    ↓
+Question Generator
+    ↓
+R01 Validation
+    ↓
+R02 Validation
+    ↓
+R03 Validation
+    ↓
+Repair (if required)
+    ↓
+Production Report
+    ↓
+Runtime Update
 """
 
 from __future__ import annotations
 
 import logging
+
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
-from typing import Any, Dict, Optional
+from typing import Any
 
-# Director
-from Engine.director.runtime_controller import RuntimeController
-from Engine.director.production_scheduler import ProductionScheduler
-
-# Blueprint
 from Engine.blueprint.blueprint_loader import BlueprintLoader
+from Engine.director.production_scheduler import ProductionScheduler
+from Engine.director.runtime_controller import RuntimeController
 
-# Manufacturing
-from Engine.manufacturing.manufacturing_engine import ManufacturingEngine
+from Engine.factory.generation.question_generator import (
+    QuestionGenerator,
+)
 
-# QA
-from Engine.qa.quality_lab import QualityLab
+from Engine.factory.repair.repair_engine import (
+    RepairEngine,
+)
 
-# Repair
-from Engine.repair.repair_engine import RepairEngine
+from Engine.factory.validation.r01_validator import (
+    R01Validator,
+)
 
-# Packaging
-from Engine.packaging.packaging_engine import PackagingEngine
+from Engine.factory.validation.r02_validator import (
+    R02Validator,
+)
 
-# Logging
-from Engine.logging.production_logger import ProductionLogger
+from Engine.factory.validation.r03_validator import (
+    R03Validator,
+)
+
+from Engine.reporting.production_report import (
+    ProductionReport,
+)
+
+from Engine.models.generated_question_model import (
+    GeneratedQuestionModel,
+)
+
+from Engine.models.question_batch_model import (
+    QuestionBatchModel,
+)
 
 
 class FactoryState(Enum):
-    """Factory execution states."""
+    """
+    Manufacturing lifecycle state.
+    """
 
     IDLE = "IDLE"
     INITIALIZING = "INITIALIZING"
+    LOADING_RUNTIME = "LOADING_RUNTIME"
     LOADING_BLUEPRINT = "LOADING_BLUEPRINT"
-    PLANNING = "PLANNING"
-    MANUFACTURING = "MANUFACTURING"
-    VERIFYING = "VERIFYING"
+    SCHEDULING = "SCHEDULING"
+    GENERATING = "GENERATING"
+    VALIDATING = "VALIDATING"
     REPAIRING = "REPAIRING"
-    PACKAGING = "PACKAGING"
+    REPORTING = "REPORTING"
     UPDATING_RUNTIME = "UPDATING_RUNTIME"
     COMPLETED = "COMPLETED"
     FAILED = "FAILED"
@@ -80,119 +97,162 @@ class FactoryState(Enum):
 @dataclass(slots=True)
 class ManufacturingContext:
     """
-    Shared context passed through the manufacturing lifecycle.
+    Shared execution context for one manufacturing cycle.
     """
 
-    runtime: Dict[str, Any] = field(default_factory=dict)
+    runtime: Any | None = None
 
-    blueprint: Optional[Any] = None
+    blueprint: Any | None = None
 
-    production_node: Optional[Any] = None
+    production_node: Any | None = None
 
-    manufactured_batch: Optional[Any] = None
+    question_batch: Any | None = None
 
-    qa_report: Optional[Any] = None
+    validation_results: list[Any] = field(
+        default_factory=list,
+    )
 
-    repair_report: Optional[Any] = None
+    repair_results: list[Any] = field(
+        default_factory=list,
+    )
 
-    package_result: Optional[Any] = None
+    report: Any | None = None
 
-    started_at: datetime = field(default_factory=datetime.utcnow)
+    started_at: datetime = field(
+        default_factory=datetime.utcnow,
+    )
 
-    metadata: Dict[str, Any] = field(default_factory=dict)
+    metadata: dict[str, Any] = field(
+        default_factory=dict,
+    )
 
 
 class ManufacturingDirector:
     """
-    Central orchestration engine.
+    Factory OS v2.1 Manufacturing Director.
 
-    The director contains NO question generation logic.
+    This class contains no business logic.
 
-    It only coordinates specialized factory departments.
+    It coordinates every subsystem required to
+    manufacture one validated question batch.
     """
 
     def __init__(self) -> None:
 
-        self.logger = logging.getLogger(self.__class__.__name__)
+        self._logger = logging.getLogger(
+            self.__class__.__name__,
+        )
 
-        self.state = FactoryState.IDLE
+        self._state = FactoryState.IDLE
+
+        #
+        # Core Services
+        #
 
         self.runtime_controller = RuntimeController()
 
-        self.scheduler = ProductionScheduler()
-
         self.blueprint_loader = BlueprintLoader()
 
-        self.manufacturing_engine = ManufacturingEngine()
+        self.scheduler = ProductionScheduler()
 
-        self.quality_lab = QualityLab()
+        self.question_generator = QuestionGenerator()
+
+        #
+        # Validation
+        #
+
+        self.r01_validator = R01Validator()
+
+        self.r02_validator = R02Validator()
+
+        self.r03_validator = R03Validator()
+
+        #
+        # Repair
+        #
 
         self.repair_engine = RepairEngine()
 
-        self.packaging_engine = PackagingEngine()
+        #
+        # Reporting
+        #
 
-        self.production_logger = ProductionLogger()
+        self.production_report = ProductionReport()
 
     # ---------------------------------------------------------
     # Public API
     # ---------------------------------------------------------
 
-    def start_factory(self) -> None:
+    def run(self) -> ManufacturingContext:
         """
-        Factory bootstrap.
-
-        Initializes every subsystem required to begin production.
-        """
-
-        self.logger.info("Initializing Manufacturing Director")
-
-        self.state = FactoryState.INITIALIZING
-
-        self.production_logger.factory_started()
-
-        self.logger.info("Factory initialized successfully")
-
-    def execute(self) -> None:
-        """
-        Execute one autonomous manufacturing cycle.
-
-        A single cycle produces one approved batch.
+        Execute one complete manufacturing cycle.
         """
 
         context = ManufacturingContext()
 
         try:
 
-            self._load_runtime(context)
+            self.initialize()
 
-            self._load_blueprint(context)
+            self._load_runtime(
+                context,
+            )
 
-            self._plan_production(context)
+            self._load_blueprint(
+                context,
+            )
 
-            self._manufacture(context)
+            self._schedule(
+                context,
+            )
 
-            self._quality_verification(context)
+            self._generate(
+                context,
+            )
 
-            self._repair_if_required(context)
+            self._validate(
+                context,
+            )
 
-            self._package(context)
+            self._repair(
+                context,
+            )
 
-            self._update_runtime(context)
+            self._report(
+                context,
+            )
 
-            self._finalize(context)
+            self._update_runtime(
+                context,
+            )
 
-        except Exception as ex:
+            self._state = FactoryState.COMPLETED
 
-            self.state = FactoryState.FAILED
+            return context
 
-            self.production_logger.factory_failed(str(ex))
+        except Exception:
 
-            self.logger.exception(ex)
+            self._state = FactoryState.FAILED
+
+            self._logger.exception(
+                "Manufacturing cycle failed."
+            )
 
             raise
-            # ---------------------------------------------------------
 
-    # Private Lifecycle
+    def initialize(self) -> None:
+        """
+        Prepare the Manufacturing Director
+        for execution.
+        """
+
+        self._state = FactoryState.INITIALIZING
+
+        self._logger.info(
+            "Manufacturing Director initialized."
+        )
+    # ---------------------------------------------------------
+    # Runtime
     # ---------------------------------------------------------
 
     def _load_runtime(
@@ -200,471 +260,514 @@ class ManufacturingDirector:
         context: ManufacturingContext,
     ) -> None:
         """
-        Load the persisted runtime state.
-
-        The runtime is the factory's single source of truth for
-        determining the current manufacturing position.
+        Load the current manufacturing runtime.
         """
 
-        self.logger.info("Loading runtime state")
+        self._state = FactoryState.LOADING_RUNTIME
 
-        self.state = FactoryState.INITIALIZING
+        runtime = self.runtime_controller.load()
 
-        runtime_state = self.runtime_controller.load()
+        context.runtime = runtime
 
-        context.runtime = runtime_state
+        self._logger.info(
+            "Runtime loaded successfully."
+        )
 
-        self.production_logger.runtime_loaded(runtime_state)
+    # ---------------------------------------------------------
+    # Blueprint
+    # ---------------------------------------------------------
 
     def _load_blueprint(
         self,
         context: ManufacturingContext,
     ) -> None:
         """
-        Load the frozen blueprint.
-
-        The blueprint defines manufacturing rules, quality
-        constraints, schema requirements, and production policies.
+        Load the frozen production blueprint.
         """
 
-        self.logger.info("Loading frozen blueprint")
+        self._state = FactoryState.LOADING_BLUEPRINT
 
-        self.state = FactoryState.LOADING_BLUEPRINT
+        if context.runtime is None:
+
+            raise RuntimeError(
+                "Runtime must be loaded before loading the blueprint."
+            )
+
+        #
+        # Verified API:
+        # BlueprintLoader.load()
+        #
 
         blueprint = self.blueprint_loader.load()
 
         context.blueprint = blueprint
 
-        self.production_logger.blueprint_loaded()
-
-    def _plan_production(
-        self,
-        context: ManufacturingContext,
-    ) -> None:
-        """
-        Ask the scheduler to determine the next production node.
-
-        The scheduler decides:
-            - Unit
-            - Chapter
-            - Subtopic
-            - Set
-            - Batch
-            - Question Range
-
-        The Manufacturing Director never makes these decisions.
-        """
-
-        self.logger.info("Planning next manufacturing node")
-
-        self.state = FactoryState.PLANNING
-
-        node = self.scheduler.get_next_node(
-            runtime=context.runtime,
-            blueprint=context.blueprint,
+        self._logger.info(
+            "Blueprint loaded successfully."
         )
 
-        context.production_node = node
+    # ---------------------------------------------------------
+    # Scheduling
+    # ---------------------------------------------------------
 
-        self.production_logger.production_planned(node)
-
-    def _manufacture(
+    def _schedule(
         self,
         context: ManufacturingContext,
     ) -> None:
         """
-        Produce one candidate batch.
-
-        The manufacturing engine performs the complete generation
-        process and returns an unapproved batch.
+        Ask the Production Scheduler for the
+        next manufacturing node.
         """
 
-        self.logger.info("Starting manufacturing")
+        self._state = FactoryState.SCHEDULING
 
-        self.state = FactoryState.MANUFACTURING
+        if context.runtime is None:
 
-        batch = self.manufacturing_engine.manufacture(
+            raise RuntimeError(
+                "Runtime unavailable."
+            )
+
+        if context.blueprint is None:
+
+            raise RuntimeError(
+                "Blueprint unavailable."
+            )
+
+        #
+        # Verified API:
+        #
+        # get_next_node(
+        #     runtime,
+        #     blueprint,
+        # )
+        #
+
+        production_node = (
+            self.scheduler.get_next_node(
+                runtime=context.runtime,
+                blueprint=context.blueprint,
+            )
+        )
+
+        context.production_node = (
+            production_node
+        )
+
+        self._logger.info(
+            "Production node selected."
+        )
+
+        self._logger.debug(
+            "Production node: %s",
+            production_node,
+        )
+ 
+    # ---------------------------------------------------------
+    # Generation
+    # ---------------------------------------------------------
+
+    def _generate(
+        self,
+        context: ManufacturingContext,
+    ) -> None:
+        """
+        Generate one manufacturing batch.
+        """
+
+        self._state = FactoryState.GENERATING
+
+        if context.runtime is None:
+            raise RuntimeError(
+                "Runtime unavailable."
+            )
+
+        if context.blueprint is None:
+            raise RuntimeError(
+                "Blueprint unavailable."
+            )
+
+        if context.production_node is None:
+            raise RuntimeError(
+                "Production node unavailable."
+            )
+
+        #
+        # Verified API:
+        #
+        # generate(
+        #     node,
+        #     blueprint,
+        #     runtime,
+        # )
+        #
+
+        generated = self.question_generator.generate(
             node=context.production_node,
             blueprint=context.blueprint,
-        )
-
-        context.manufactured_batch = batch
-
-        self.production_logger.batch_manufactured(batch)
-
-    def _quality_verification(
-        self,
-        context: ManufacturingContext,
-    ) -> None:
-        """
-        Execute Quality Assurance.
-
-        The Quality Lab performs all verification including:
-
-            • R01
-            • R02
-            • R03
-            • Mathematical validation
-            • Ambiguity detection
-            • Distractor validation
-            • Difficulty validation
-            • Coverage validation
-            • CSV schema validation
-        """
-
-        self.logger.info("Running quality verification")
-
-        self.state = FactoryState.VERIFYING
-
-        qa_report = self.quality_lab.verify(
-            batch=context.manufactured_batch,
-            blueprint=context.blueprint,
-        )
-
-        context.qa_report = qa_report
-
-        self.production_logger.quality_completed(qa_report)
-
-    def _repair_if_required(
-        self,
-        context: ManufacturingContext,
-    ) -> None:
-        """
-        Execute automatic repair when QA identifies defects.
-
-        Repair-before-expand is a core manufacturing principle.
-        """
-
-        if context.qa_report.is_success:
-            return
-
-        self.logger.info("Repair cycle required")
-
-        self.state = FactoryState.REPAIRING
-
-        repair_report = self.repair_engine.repair(
-            batch=context.manufactured_batch,
-            qa_report=context.qa_report,
-            blueprint=context.blueprint,
-        )
-
-        context.repair_report = repair_report
-
-        self.production_logger.repair_completed(repair_report)
-
-        if not repair_report.is_success:
-
-            raise RuntimeError(
-                "Automatic repair failed. " "Manufacturing cycle aborted."
-            )
-
-        self.logger.info("Re-running QA after repair")
-
-        qa_report = self.quality_lab.verify(
-            batch=context.manufactured_batch,
-            blueprint=context.blueprint,
-        )
-
-        context.qa_report = qa_report
-
-        if not qa_report.is_success:
-
-            raise RuntimeError(
-                "Batch failed quality verification " "after repair cycle."
-            )
-
-    def _package(
-        self,
-        context: ManufacturingContext,
-    ) -> None:
-        """
-        Package the approved manufacturing output.
-
-        The Packaging Engine is responsible for creating all
-        production deliverables (CSV, JSON, manifests, reports,
-        upload bundles, etc.).
-        """
-
-        self.logger.info("Packaging approved batch")
-
-        self.state = FactoryState.PACKAGING
-
-        package_result = self.packaging_engine.package(
-            batch=context.manufactured_batch,
-            qa_report=context.qa_report,
-            production_node=context.production_node,
             runtime=context.runtime,
         )
 
-        context.package_result = package_result
+        batch = QuestionBatchModel()
 
-        self.production_logger.packaging_completed(package_result)
+        for item in generated:
+
+            question = GeneratedQuestionModel.from_dict(
+                item,
+            )
+
+            batch.add_question(
+                question,
+            )
+
+        context.question_batch = batch
+
+        self._logger.info(
+            "Generated %d question(s).",
+            batch.question_count,
+        )
+
+    # ---------------------------------------------------------
+    # Validation
+    # ---------------------------------------------------------
+
+    def _validate(
+        self,
+        context: ManufacturingContext,
+    ) -> None:
+        """
+        Execute the complete validation pipeline.
+        """
+
+        self._state = FactoryState.VALIDATING
+
+        batch = context.question_batch
+
+        if batch is None:
+
+            raise RuntimeError(
+                "Question batch unavailable."
+            )
+
+        if batch.is_empty():
+
+            raise RuntimeError(
+                "Generated batch is empty."
+            )
+
+        validators = (
+            self.r01_validator,
+            self.r02_validator,
+            self.r03_validator,
+        )
+
+        results: list[Any] = []
+
+        for validator in validators:
+
+            result = validator.validate(
+                batch,
+            )
+
+            results.append(
+                result,
+            )
+
+            self._logger.info(
+                "%s completed.",
+                validator.rule_code,
+            )
+
+            if not result.is_successful():
+
+                break
+
+        context.validation_results = results
+    # ---------------------------------------------------------
+    # Repair
+    # ---------------------------------------------------------
+
+    def _repair(
+        self,
+        context: ManufacturingContext,
+    ) -> None:
+        """
+        Execute structural repair when validation
+        identifies repairable issues.
+        """
+
+        self._state = FactoryState.REPAIRING
+
+        batch = context.question_batch
+
+        if batch is None:
+            raise RuntimeError(
+                "Question batch unavailable."
+            )
+
+        validation_results = context.validation_results
+
+        #
+        # If every validator passed,
+        # repair is unnecessary.
+        #
+
+        if validation_results and all(
+            result.is_successful()
+            for result in validation_results
+        ):
+
+            self._logger.info(
+                "Repair skipped. Batch passed validation."
+            )
+
+            context.repair_results = []
+
+            return
+
+        self._logger.info(
+            "Repair pipeline started."
+        )
+
+        repair_results = self.repair_engine.execute(
+            batch,
+        )
+
+        context.repair_results = repair_results
+
+        self._logger.info(
+            "Repair completed (%d repair result(s)).",
+            len(repair_results),
+        )
+
+    # ---------------------------------------------------------
+    # Reporting
+    # ---------------------------------------------------------
+
+    def _report(
+        self,
+        context: ManufacturingContext,
+    ) -> None:
+        """
+        Produce the manufacturing report.
+        """
+
+        self._state = FactoryState.REPORTING
+
+        batch = context.question_batch
+
+        if batch is None:
+            raise RuntimeError(
+                "Question batch unavailable."
+            )
+
+        validation_result = (
+            context.validation_results[-1]
+            if context.validation_results
+            else None
+        )
+
+        #
+        # Current ProductionReport API:
+        #
+        # print_report(
+        #     request,
+        #     batch_result,
+        #     validation_result,
+        #     csv_file,
+        # )
+        #
+
+        self.production_report.print_report(
+            request=context.production_node,
+            batch_result=batch,
+            validation_result=validation_result,
+            csv_file=None,
+        )
+
+        context.report = {
+            "generated": True,
+        }
+
+        self._logger.info(
+            "Production report generated."
+        )
+
+    # ---------------------------------------------------------
+    # Runtime Update
+    # ---------------------------------------------------------
 
     def _update_runtime(
         self,
         context: ManufacturingContext,
     ) -> None:
         """
-        Persist the next runtime position.
-
-        Runtime is only updated after successful packaging to
-        guarantee recoverable manufacturing.
+        Persist runtime progression after a
+        successful manufacturing cycle.
         """
 
-        self.logger.info("Updating runtime")
+        self._state = FactoryState.UPDATING_RUNTIME
 
-        self.state = FactoryState.UPDATING_RUNTIME
+        if context.runtime is None:
+            raise RuntimeError(
+                "Runtime unavailable."
+            )
 
-        next_runtime = self.runtime_controller.build_next_runtime(
-            current_runtime=context.runtime,
-            production_node=context.production_node,
-            package_result=context.package_result,
+        if context.production_node is None:
+            raise RuntimeError(
+                "Production node unavailable."
+            )
+
+        next_runtime = (
+            self.runtime_controller.build_next_runtime(
+                current_runtime=context.runtime,
+                production_node=context.production_node,
+                package_result=context.question_batch,
+            )
         )
 
-        self.runtime_controller.save(next_runtime)
+        self.runtime_controller.save(
+            next_runtime,
+        )
 
         context.runtime = next_runtime
 
-        self.production_logger.runtime_updated(next_runtime)
-
-    def _finalize(
-        self,
-        context: ManufacturingContext,
-    ) -> None:
-        """
-        Finalize a successful manufacturing cycle.
-        """
-
-        self.state = FactoryState.COMPLETED
-
-        completed_at = datetime.utcnow()
-
-        duration = (completed_at - context.started_at).total_seconds()
-
-        summary = {
-            "state": self.state.value,
-            "duration_seconds": duration,
-            "completed_at": completed_at.isoformat(),
-            "production_node": context.production_node,
-        }
-
-        self.production_logger.factory_completed(summary)
-
-        self.logger.info(
-            "Manufacturing cycle completed successfully " "(%.2f seconds)",
-            duration,
+        self._logger.info(
+            "Runtime updated successfully."
         )
-
     # ---------------------------------------------------------
-    # State Helpers
-    # ---------------------------------------------------------
-
-    @property
-    def current_state(self) -> FactoryState:
-        """
-        Return the current factory execution state.
-        """
-
-        return self.state
-
-    @property
-    def is_running(self) -> bool:
-        """
-        True while the factory is actively processing a cycle.
-        """
-
-        return self.state not in (
-            FactoryState.IDLE,
-            FactoryState.COMPLETED,
-            FactoryState.FAILED,
-        )
-
-    @property
-    def has_failed(self) -> bool:
-        """
-        Indicates whether the previous manufacturing cycle failed.
-        """
-
-        return self.state == FactoryState.FAILED
-
-    @property
-    def is_completed(self) -> bool:
-        """
-        Indicates whether the current manufacturing cycle
-        completed successfully.
-        """
-
-        return self.state == FactoryState.COMPLETED
-
-    # ---------------------------------------------------------
-    # Convenience Operations
-    # ---------------------------------------------------------
-
-    def run(self) -> None:
-        """
-        Execute one complete manufacturing cycle.
-
-        This is the primary entry point for the autonomous
-        manufacturing system.
-        """
-
-        self.start_factory()
-
-        self.execute()
-
-    def shutdown(self) -> None:
-        """
-        Gracefully stop the Manufacturing Director.
-        """
-
-        self.logger.info("Stopping Manufacturing Director")
-
-        self.state = FactoryState.IDLE
-
-        self.production_logger.factory_stopped()
-
-        self.logger.info("Manufacturing Director stopped")
-        # ---------------------------------------------------------
-
-    # Health & Diagnostics
-    # ---------------------------------------------------------
-
-    def health(self) -> Dict[str, Any]:
-        """
-        Return the current health status of the Manufacturing Director.
-
-        This method is intended for dashboards, monitoring, CLI tools,
-        and future REST endpoints.
-        """
-
-        return {
-            "component": self.__class__.__name__,
-            "state": self.state.value,
-            "running": self.is_running,
-            "completed": self.is_completed,
-            "failed": self.has_failed,
-            "timestamp": datetime.utcnow().isoformat(),
-        }
-
-    def validate_dependencies(self) -> None:
-        """
-        Validate that all required factory services are available.
-
-        This check runs before production begins to detect missing
-        components early.
-        """
-
-        required_services = {
-            "RuntimeController": self.runtime_controller,
-            "ProductionScheduler": self.scheduler,
-            "BlueprintLoader": self.blueprint_loader,
-            "ManufacturingEngine": self.manufacturing_engine,
-            "QualityLab": self.quality_lab,
-            "RepairEngine": self.repair_engine,
-            "PackagingEngine": self.packaging_engine,
-            "ProductionLogger": self.production_logger,
-        }
-
-        missing = [
-            name for name, service in required_services.items() if service is None
-        ]
-
-        if missing:
-            raise RuntimeError(
-                "Manufacturing Director initialization failed. "
-                f"Missing services: {', '.join(missing)}"
-            )
-
-        self.logger.info(
-            "Dependency validation successful (%d services)",
-            len(required_services),
-        )
-
-    # ---------------------------------------------------------
-    # Extension Hooks
-    # ---------------------------------------------------------
-
-    def before_cycle(
-        self,
-        context: ManufacturingContext,
-    ) -> None:
-        """
-        Hook executed immediately before a manufacturing cycle starts.
-
-        Override in derived implementations if additional behavior is
-        required.
-        """
-
-        return
-
-    def after_cycle(
-        self,
-        context: ManufacturingContext,
-    ) -> None:
-        """
-        Hook executed after a successful manufacturing cycle.
-
-        Override in derived implementations if additional behavior is
-        required.
-        """
-
-        return
-
-    def on_failure(
-        self,
-        exception: Exception,
-        context: Optional[ManufacturingContext] = None,
-    ) -> None:
-        """
-        Hook executed when a manufacturing cycle fails.
-
-        Override for custom notification, alerting, telemetry,
-        or recovery logic.
-        """
-
-        self.logger.error(
-            "Manufacturing cycle failed: %s",
-            exception,
-        )
-
-    # ---------------------------------------------------------
-    # Metadata
+    # Properties
     # ---------------------------------------------------------
 
     @property
-    def version(self) -> str:
+    def state(self) -> FactoryState:
         """
-        Manufacturing Director version.
+        Return the current manufacturing state.
         """
 
-        return "2.0.0"
+        return self._state
 
     @property
     def component_name(self) -> str:
         """
-        Component identifier.
+        Component name.
         """
 
         return "Manufacturing Director"
 
     @property
-    def architecture(self) -> str:
+    def version(self) -> str:
         """
-        Architecture identifier.
+        Component version.
         """
 
-        return "Question Factory OS v2.0"
+        return "2.1.0"
+
+    # ---------------------------------------------------------
+    # Diagnostics
+    # ---------------------------------------------------------
+
+    def diagnostics(self) -> dict[str, Any]:
+        """
+        Return runtime diagnostics.
+        """
+
+        return {
+            "component": self.component_name,
+            "version": self.version,
+            "state": self._state.value,
+            "services": {
+                "runtime_controller": (
+                    self.runtime_controller.__class__.__name__
+                ),
+                "blueprint_loader": (
+                    self.blueprint_loader.__class__.__name__
+                ),
+                "scheduler": (
+                    self.scheduler.__class__.__name__
+                ),
+                "question_generator": (
+                    self.question_generator.__class__.__name__
+                ),
+                "r01_validator": (
+                    self.r01_validator.__class__.__name__
+                ),
+                "r02_validator": (
+                    self.r02_validator.__class__.__name__
+                ),
+                "r03_validator": (
+                    self.r03_validator.__class__.__name__
+                ),
+                "repair_engine": (
+                    self.repair_engine.__class__.__name__
+                ),
+                "production_report": (
+                    self.production_report.__class__.__name__
+                ),
+            },
+        }
+
+    # ---------------------------------------------------------
+    # Health
+    # ---------------------------------------------------------
+
+    def health(self) -> dict[str, Any]:
+        """
+        Return component health.
+        """
+
+        return {
+            "component": self.component_name,
+            "version": self.version,
+            "status": (
+                "READY"
+                if self._state != FactoryState.FAILED
+                else "FAILED"
+            ),
+            "state": self._state.value,
+        }
+
+    # ---------------------------------------------------------
+    # Capabilities
+    # ---------------------------------------------------------
+
+    def capabilities(self) -> dict[str, bool]:
+        """
+        Return supported capabilities.
+        """
+
+        return {
+            "runtime_management": True,
+            "blueprint_loading": True,
+            "production_scheduling": True,
+            "question_generation": True,
+            "validation_pipeline": True,
+            "automatic_repair": True,
+            "production_reporting": True,
+            "runtime_progression": True,
+        }
 
     # ---------------------------------------------------------
     # Representation
     # ---------------------------------------------------------
 
     def __repr__(self) -> str:
+
         return (
-            f"{self.component_name}("
-            f"version={self.version}, "
-            f"state={self.state.value})"
+            "ManufacturingDirector("
+            f"state='{self._state.value}')"
         )
 
     def __str__(self) -> str:
-        return f"{self.component_name} " f"[{self.state.value}]"
+
+        return (
+            f"{self.component_name} "
+            f"v{self.version} "
+            f"[{self._state.value}]"
+        )
+
+
+__all__ = [
+    "FactoryState",
+    "ManufacturingContext",
+    "ManufacturingDirector",
+]

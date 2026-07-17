@@ -3,9 +3,9 @@ Question Factory OS
 Production Queue Test
 """
 
-from repositories.factory_state_repository import FactoryStateRepository
-from planning.production_planner import ProductionPlanner
-from planning.production_queue import ProductionQueue
+from Engine.repositories.factory_state_repository import FactoryStateRepository
+from Engine.planning.production_planner import ProductionPlanner
+from Engine.planning.production_queue import ProductionQueue
 
 repository = FactoryStateRepository()
 

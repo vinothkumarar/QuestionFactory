@@ -5,8 +5,10 @@ AUTORUN Engine
 Entry point for the Question Factory Engine.
 """
 
-from config import FACTORY_NAME, FACTORY_VERSION
-from core.question_factory_engine import QuestionFactoryEngine
+from Engine.config import FACTORY_NAME, FACTORY_VERSION
+from Engine.core.question_factory_engine import (
+    QuestionFactoryEngine,
+)
 
 
 def print_header():

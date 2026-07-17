@@ -7,8 +7,9 @@ Sprint    : S5
 Release   : R1
 """
 
-from Engine.builders.question_merger import QuestionMerger
+from __future__ import annotations
 
+from Engine.builders.question_merger import QuestionMerger
 from Engine.models.pipeline_context_model import PipelineContextModel
 
 from .pipeline_processor import PipelineProcessor
@@ -16,23 +17,46 @@ from .pipeline_processor import PipelineProcessor
 
 class MergeProcessor(PipelineProcessor):
     """
-    Merges the AI-generated educational
-    content into the factory question
-    skeleton.
+    Pipeline stage responsible for merging the structured
+    AI response into the question skeleton.
+
+    This stage produces the complete Question model by
+    combining the factory-generated metadata with the
+    AI-generated educational content.
     """
 
-    stage_id = "MERGE"
+    stage_id: str = "MERGE"
 
-    name = "Merge Processor"
+    name: str = "Merge Processor"
 
-    description = "Creates the final Question object."
+    description: str = "Creates the final Question object."
 
-    def __init__(self):
+    def __init__(self) -> None:
+        self._merger = QuestionMerger()
 
-        self.merger = QuestionMerger()
+    def execute(
+        self,
+        context: PipelineContextModel,
+    ) -> PipelineContextModel:
+        """
+        Merge the parsed AI response into the existing
+        question skeleton.
+        """
 
-    def execute(self, context: PipelineContextModel) -> PipelineContextModel:
+        
+        if context.question is None:
+            raise RuntimeError(
+                "Question skeleton has not been generated."
+            )
 
-        context.question = self.merger.merge(context.question, context.parsed_response)
+        if context.parsed_response is None:
+            raise RuntimeError(
+                "Parsed AI response is unavailable."
+            )
+
+        context.question = self._merger.merge(
+            context.question,
+            context.parsed_response,
+        )
 
         return context

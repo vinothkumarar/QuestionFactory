@@ -7,9 +7,9 @@ Sprint    : S1
 Release   : R2
 """
 
-from core.factory_state_manager import FactoryStateManager
+from Engine.core.factory_state_manager import FactoryStateManager
 
-from repositories.factory_state_repository import FactoryStateRepository
+from Engine.repositories.factory_state_repository import FactoryStateRepository
 
 manager = FactoryStateManager()
 

@@ -6,6 +6,7 @@ Milestone : M12
 Sprint    : S5
 Release   : R1
 """
+from typing import Any, cast
 
 from Engine.planning.queue_builder import QueueBuilder
 from Engine.batch.batch_execution_engine import BatchExecutionEngine
@@ -53,17 +54,20 @@ class FactoryRunner:
 
         self.state_repository.update(state)
 
-        for order in PRODUCTION_ORDERS:
+        
+        for raw_order in PRODUCTION_ORDERS:
+
+            order = cast(dict[str, Any], raw_order)
 
             request = ProductionRequestModel(
-                request_id=order["order_id"],
-                subject=order["subject"],
-                unit=order["unit"],
-                chapter=order["chapter"],
-                subtopic=order["subtopic"],
-                set_no=order["set_no"],
-                total_questions=order["question_count"],
-            )
+                request_id=str(order["order_id"]),
+                subject=str(order["subject"]),
+                unit=str(order["unit"]),
+                chapter=str(order["chapter"]),
+                subtopic=str(order["subtopic"]),
+                set_no=str(order["set_no"]),
+                total_questions=int(order["question_count"]),
+            )    
 
             queue = self.queue_builder.build(request)
 

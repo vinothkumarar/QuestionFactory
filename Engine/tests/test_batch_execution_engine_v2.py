@@ -7,9 +7,9 @@ Sprint    : S3
 Release   : R1
 """
 
-from batch.batch_execution_engine import BatchExecutionEngine
+from Engine.batch.batch_execution_engine import BatchExecutionEngine
 
-from models.production_order_model import ProductionOrderModel
+from Engine.models.production_order_model import ProductionOrderModel
 
 queue = [
     ProductionOrderModel(

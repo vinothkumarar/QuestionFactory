@@ -1,0 +1,214 @@
+Engine/test_csv_writer.py:1: error: Cannot find implementation or library stub
+for module named "core.resource_manager"  [import-not-found]
+    from core.resource_manager import ResourceManager
+    ^
+Engine/test_csv_writer.py:2: error: Cannot find implementation or library stub
+for module named "core.csv_writer"  [import-not-found]
+    from core.csv_writer import CSVWriter
+    ^
+Engine/database/database_engine.py:6: error: Cannot find implementation or
+library stub for module named "Engine.database.supabase_adapter" 
+[import-not-found]
+    from Engine.database.supabase_adapter import (
+    ^
+Engine/database/database_engine.py:6: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+Engine/tests/test_factory_state_manager.py:10: error: Cannot find
+implementation or library stub for module named
+"Engine.core.factory_state_manager"  [import-not-found]
+    from Engine.core.factory_state_manager import FactoryStateManager
+    ^
+Engine/tests/test_factory_state_manager.py:10: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+Engine/tests/test_execution_pipeline.py:20: error: Argument 1 to "add_stage" of
+"ExecutionPipeline" has incompatible type "DummyStage"; expected "PipelineStage"
+ [arg-type]
+    pipeline.add_stage(DummyStage())
+                       ^~~~~~~~~~~~
+Engine/tests/test_execution_pipeline.py:22: error: Argument 1 to "add_stage" of
+"ExecutionPipeline" has incompatible type "DummyStage"; expected "PipelineStage"
+ [arg-type]
+    pipeline.add_stage(DummyStage())
+                       ^~~~~~~~~~~~
+Engine/tests/test_execution_pipeline.py:24: error: Argument 1 to "add_stage" of
+"ExecutionPipeline" has incompatible type "DummyStage"; expected "PipelineStage"
+ [arg-type]
+    pipeline.add_stage(DummyStage())
+                       ^~~~~~~~~~~~
+Engine/tests/test_execution_pipeline.py:27: error: Argument 1 to "run" of
+"ExecutionPipeline" has incompatible type "list[Never]"; expected
+"PipelineContextModel"  [arg-type]
+    result = pipeline.run([])
+                          ^~
+Engine/tests/test_prompt_processor.py:38: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Question Code :", context.question["question_code"])
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_prompt_processor.py:45: error: Value of type "str | None" is
+not indexable  [index]
+    print(context.prompt[:500])
+          ^~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_prompt_processor.py:49: error: Argument 1 to "len" has
+incompatible type "str | None"; expected "Sized"  [arg-type]
+    print("Prompt Length :", len(context.prompt))
+                                 ^~~~~~~~~~~~~~
+Engine/tests/test_build_processor.py:41: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Question Code:", context.question["question_code"])
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_build_processor.py:42: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Subject      :", context.question["subject_name"])
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_build_processor.py:43: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Chapter      :", context.question["chapter_name"])
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_build_processor.py:44: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Subtopic     :", context.question["subtopic_name"])
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_build_processor.py:45: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Batch        :", context.question["batch_no"])
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_build_processor.py:46: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Marks        :", context.question["marks"])
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_build_processor.py:47: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Language     :", context.question["language"])
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_validation_processor.py:52: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Question Code :", context.question["question_code"])
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_validation_processor.py:62: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Question Status :", context.question["status"])
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_parse_processor.py:44: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Question Code :", context.question["question_code"])
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_parse_processor.py:51: error: Item "None" of
+"dict[Any, Any] | None" has no attribute "keys"  [union-attr]
+    for key in sorted(context.parsed_response.keys()):
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_parse_processor.py:59: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print(context.parsed_response["question_text"])
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_parse_processor.py:63: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Correct Option :", context.parsed_response["correct_option"])
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_merge_processor.py:47: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Question Code :", context.question["question_code"])
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_merge_processor.py:49: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Difficulty    :", context.question["difficulty"])
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_merge_processor.py:51: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Question Type :", context.question["question_type"])
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_merge_processor.py:59: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print(context.question["question_text"])
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_merge_processor.py:67: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("A.", context.question["option_a"])
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_merge_processor.py:69: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("B.", context.question["option_b"])
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_merge_processor.py:71: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("C.", context.question["option_c"])
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_merge_processor.py:73: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("D.", context.question["option_d"])
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_merge_processor.py:77: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Correct Option :", context.question["correct_option"])
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_merge_processor.py:79: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Marks          :", context.question["marks"])
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_merge_processor.py:81: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Batch          :", context.question["batch_no"])
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_merge_processor.py:83: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Language       :", context.question["language"])
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_ai_processor.py:50: error: Value of type "str | None" is not
+indexable  [index]
+    print(context.raw_response[:500])
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_ai_processor.py:54: error: Argument 1 to "len" has
+incompatible type "str | None"; expected "Sized"  [arg-type]
+    print("Response Length :", len(context.raw_response))
+                                   ^~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_execution_pipeline_builder.py:30: error: "ExecutionPipeline"
+has no attribute "processors"; maybe "add_processor"?  [attr-defined]
+    for index, processor in enumerate(pipeline.processors, start=1):
+                                      ^~~~~~~~~~~~~~~~~~~
+Engine/tests/test_production_worker_pipeline.py:44: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Question Code   :", result.question["question_code"])
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_production_worker_pipeline.py:46: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Difficulty      :", result.question["difficulty"])
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_production_worker_pipeline.py:48: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Question Type   :", result.question["question_type"])
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_production_worker_pipeline.py:56: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print(result.question["question_text"])
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_production_worker_pipeline.py:60: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print("Correct Option  :", result.question["correct_option"])
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_production_worker.py:34: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+    print(result.question["question_code"])
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_production_worker.py:42: error: Argument 1 to "len" has
+incompatible type "str | None"; expected "Sized"  [arg-type]
+    print(len(result.prompt))
+              ^~~~~~~~~~~~~
+Engine/tests/test_production_worker.py:50: error: Value of type "str | None" is
+not indexable  [index]
+    print(result.prompt[:800])
+          ^~~~~~~~~~~~~~~~~~~
+Engine/tests/test_batch_execution_engine_v2.py:67: error: Value of type
+"dict[Any, Any] | None" is not indexable  [index]
+        print(f"{index}. {result.question['question_code']}  [{result.stat...
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_batch_execution_engine.py:49: error: Argument 1 to "len" has
+incompatible type "BatchResultModel"; expected "Sized"  [arg-type]
+    print("Orders Executed :", len(results))
+                                   ^~~~~~~
+Engine/tests/test_batch_execution_engine.py:53: error: Need type annotation for
+"result"  [var-annotated]
+    for index, result in enumerate(results, start=1):
+    ^
+Engine/tests/test_batch_execution_engine.py:53: error: Argument 1 to
+"enumerate" has incompatible type "BatchResultModel"; expected "Iterable[Never]"
+ [arg-type]
+    for index, result in enumerate(results, start=1):
+                                   ^~~~~~~
+Found 51 errors in 15 files (checked 193 source files)

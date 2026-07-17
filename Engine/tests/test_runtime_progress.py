@@ -3,8 +3,8 @@ Question Factory OS
 Runtime Progress Test
 """
 
-from core.runtime_manager import RuntimeManager
-from core.batch_progress_manager import BatchProgressManager
+from Engine.core.runtime_manager import RuntimeManager
+from Engine.core.batch_progress_manager import BatchProgressManager
 
 runtime_manager = RuntimeManager()
 

@@ -7,8 +7,9 @@ Sprint    : S4
 Release   : R1
 """
 
-from Engine.ai.response_parser import ResponseParser
+from __future__ import annotations
 
+from Engine.ai.response_parser import ResponseParser
 from Engine.models.pipeline_context_model import PipelineContextModel
 
 from .pipeline_processor import PipelineProcessor
@@ -16,22 +17,40 @@ from .pipeline_processor import PipelineProcessor
 
 class ParseProcessor(PipelineProcessor):
     """
-    Converts the raw AI response into
-    a Python dictionary.
+    Pipeline stage responsible for converting the raw AI
+    response into a structured Python object suitable for
+    downstream processing.
+
+    The parsed response is stored in the shared pipeline
+    context for subsequent merge and validation stages.
     """
 
-    stage_id = "PARSE"
+    stage_id: str = "PARSE"
 
-    name = "Parse Processor"
+    name: str = "Parse Processor"
 
-    description = "Parses AI JSON response."
+    description: str = "Parses AI JSON response."
 
-    def __init__(self):
+    def __init__(self) -> None:
+        self._parser = ResponseParser()
 
-        self.parser = ResponseParser()
+    def execute(
+        self,
+        context: PipelineContextModel,
+    ) -> PipelineContextModel:
+        """
+        Parse the raw AI response into a structured
+        representation.
+        """
 
-    def execute(self, context: PipelineContextModel) -> PipelineContextModel:
+        
+        if context.raw_response is None:
+            raise RuntimeError(
+                "AI response has not been generated."
+            )
 
-        context.parsed_response = self.parser.parse(context.raw_response)
+        context.parsed_response = self._parser.parse(
+            context.raw_response,
+        )
 
         return context

@@ -7,10 +7,10 @@ Sprint    : S1
 Patch      : P1
 """
 
-from pipeline.processors.pipeline_processor import PipelineProcessor
+from Engine.pipeline.processors.pipeline_processor import PipelineProcessor
 
-from models.pipeline_context_model import PipelineContextModel
-from models.production_order_model import ProductionOrderModel
+from Engine.models.pipeline_context_model import PipelineContextModel
+from Engine.models.production_order_model import ProductionOrderModel
 
 
 class DummyProcessor(PipelineProcessor):

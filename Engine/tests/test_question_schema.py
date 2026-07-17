@@ -7,9 +7,9 @@ Sprint    : S1
 Release   : R1
 """
 
-from schema.question_schema import QUESTION_COLUMNS
-from schema.question_schema import SYSTEM_COLUMNS
-from schema.question_schema import EXPORT_COLUMNS
+from Engine.schema.question_schema import QUESTION_COLUMNS
+from Engine.schema.question_schema import SYSTEM_COLUMNS
+from Engine.schema.question_schema import EXPORT_COLUMNS
 
 print("=" * 80)
 print("QUESTION SCHEMA")

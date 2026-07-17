@@ -2,7 +2,7 @@
 Pipeline Test
 """
 
-from core.pipeline_engine import PipelineEngine
+from Engine.core.pipeline_engine import PipelineEngine
 
 runtime = {
     "current_project": "P1",

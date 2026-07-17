@@ -3,7 +3,7 @@ Question Factory OS
 Production Order Model Test
 """
 
-from models.production_order_model import ProductionOrderModel
+from Engine.models.production_order_model import ProductionOrderModel
 
 order = ProductionOrderModel(
     order_id="ORDER_P1_CH1_ST4_S1_B3_Q201_300",

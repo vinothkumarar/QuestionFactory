@@ -7,7 +7,7 @@ Sprint    : S1
 Release   : R1
 """
 
-from models.production_request_model import ProductionRequestModel
+from Engine.models.production_request_model import ProductionRequestModel
 
 request = ProductionRequestModel(
     request_id="REQ_001",

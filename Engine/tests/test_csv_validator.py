@@ -7,7 +7,7 @@ Sprint    : S3
 Release   : R1
 """
 
-from validators.csv_validator import CSVValidator
+from Engine.validators.csv_validator import CSVValidator
 
 validator = CSVValidator()
 

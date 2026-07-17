@@ -3,8 +3,8 @@ Question Factory OS
 Worker Result Model Test
 """
 
-from models.production_order_model import ProductionOrderModel
-from models.worker_result_model import WorkerResultModel
+from Engine.models.production_order_model import ProductionOrderModel
+from Engine.models.worker_result_model import WorkerResultModel
 
 order = ProductionOrderModel(
     order_id="ORDER_P1_CH1_ST4_S1_B6_Q501_600",

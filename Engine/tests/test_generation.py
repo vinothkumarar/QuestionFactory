@@ -3,9 +3,9 @@ Question Factory OS
 End-to-End Generation Test
 """
 
-from builders.question_builder import QuestionBuilder
-from ai.prompt_builder import PromptBuilder
-from ai.provider_factory import ProviderFactory
+from Engine.builders.question_builder import QuestionBuilder
+from Engine.ai.prompt_builder import PromptBuilder
+from Engine.ai.provider_factory import ProviderFactory
 
 runtime = {
     "current_project": "P1",
@@ -39,8 +39,8 @@ print("GENERATING...")
 print("=" * 80)
 
 response = provider.generate(prompt)
-from ai.response_parser import ResponseParser
-from builders.question_merger import QuestionMerger
+from Engine.ai.response_parser import ResponseParser
+from Engine.builders.question_merger import QuestionMerger
 
 parser = ResponseParser()
 

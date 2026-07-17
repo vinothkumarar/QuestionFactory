@@ -3,7 +3,7 @@ Question Factory OS
 Execution Pipeline Test
 """
 
-from pipeline.execution_pipeline import ExecutionPipeline
+from Engine.pipeline.execution_pipeline import ExecutionPipeline
 
 
 class DummyStage:

@@ -7,10 +7,10 @@ Sprint    : S1
 Release   : R1
 """
 
-from config.factory_config import FACTORY_NAME
-from config.factory_config import VERSION
-from config.factory_config import OUTPUT_FILE
-from config.factory_config import PRODUCTION_ORDERS
+from Engine.config.factory_config import FACTORY_NAME
+from Engine.config.factory_config import VERSION
+from Engine.config.factory_config import OUTPUT_FILE
+from Engine.config.factory_config import PRODUCTION_ORDERS
 
 print("=" * 80)
 print("FACTORY CONFIGURATION")

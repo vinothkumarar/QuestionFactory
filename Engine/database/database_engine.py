@@ -3,7 +3,9 @@ Question Factory OS
 Database Engine
 """
 
-from database.supabase_adapter import SupabaseAdapter
+from Engine.database.supabase_adapter import (
+    SupabaseAdapter,
+)
 
 
 class DatabaseEngine:

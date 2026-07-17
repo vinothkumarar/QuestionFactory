@@ -7,7 +7,7 @@ Sprint    : S1
 Release   : R1
 """
 
-from pipeline.execution_pipeline_builder import ExecutionPipelineBuilder
+from Engine.pipeline.execution_pipeline_builder import ExecutionPipelineBuilder
 
 builder = ExecutionPipelineBuilder()
 

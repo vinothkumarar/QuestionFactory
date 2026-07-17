@@ -3,7 +3,7 @@ Question Factory OS
 Generation Status Test
 """
 
-from constants.generation_status import GenerationStatus
+from Engine.constants.generation_status import GenerationStatus
 
 print("=" * 80)
 print("GENERATION STATUS")

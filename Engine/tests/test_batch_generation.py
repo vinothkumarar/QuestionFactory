@@ -3,8 +3,8 @@ Question Factory OS
 Batch Generation Test
 """
 
-from jobs.generation_job import GenerationJob
-from core.batch_generation_engine import BatchGenerationEngine
+from Engine.jobs.generation_job import GenerationJob
+from Engine.core.batch_generation_engine import BatchGenerationEngine
 
 runtime = {
     "current_project": "P1",

@@ -3,8 +3,8 @@ Question Factory OS
 Question Merger Test
 """
 
-from builders.question_builder import QuestionBuilder
-from builders.question_merger import QuestionMerger
+from Engine.builders.question_builder import QuestionBuilder
+from Engine.builders.question_merger import QuestionMerger
 
 runtime = {
     "current_project": "P1",

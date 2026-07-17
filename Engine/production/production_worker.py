@@ -114,4 +114,10 @@ class ProductionWorker:
 
         print(f"FAILED AFTER {MAX_RETRY_COUNT} ATTEMPTS")
 
+        
+        if last_result is None:
+            raise RuntimeError(
+                "Production worker completed without producing a result."
+            )
+
         return last_result

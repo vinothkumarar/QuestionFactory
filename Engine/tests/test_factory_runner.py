@@ -9,7 +9,7 @@ Release   : R3
 
 from Engine.factory.factory_runner import FactoryRunner
 
-from repositories.factory_state_repository import FactoryStateRepository
+from Engine.repositories.factory_state_repository import FactoryStateRepository
 
 
 def main():

@@ -7,9 +7,9 @@ Sprint    : S3
 Release   : R1
 """
 
-from production.production_worker import ProductionWorker
+from Engine.production.production_worker import ProductionWorker
 
-from models.production_order_model import ProductionOrderModel
+from Engine.models.production_order_model import ProductionOrderModel
 
 order = ProductionOrderModel(
     order_id="ORDER_TEST",

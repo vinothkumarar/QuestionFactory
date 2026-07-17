@@ -3,7 +3,7 @@ Question Factory OS
 Runtime Repository Test
 """
 
-from repositories.runtime_repository import RuntimeRepository
+from Engine.repositories.runtime_repository import RuntimeRepository
 
 repo = RuntimeRepository()
 

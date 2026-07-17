@@ -7,8 +7,11 @@ Sprint    : S3
 Release   : R1
 """
 
-from Engine.builders.question_builder import QuestionBuilder
+from __future__ import annotations
 
+from typing import Any
+
+from Engine.builders.question_builder import QuestionBuilder
 from Engine.models.pipeline_context_model import PipelineContextModel
 
 from .pipeline_processor import PipelineProcessor
@@ -16,47 +19,54 @@ from .pipeline_processor import PipelineProcessor
 
 class BuildProcessor(PipelineProcessor):
     """
-    Stage 1
+    Pipeline stage responsible for constructing the initial
+    Question Factory skeleton.
 
-    Builds the Question Skeleton.
-
-    The generated skeleton contains all
-    production metadata required by the
-    downstream AI pipeline.
+    The generated skeleton contains all production metadata
+    required by downstream AI and validation stages.
     """
 
-    stage_id = "BUILD"
+    stage_id: str = "BUILD"
 
-    name = "Build Processor"
+    name: str = "Build Processor"
 
-    description = "Creates the Question Skeleton."
+    description: str = "Creates the Question Skeleton."
 
-    def __init__(self):
+    def __init__(self) -> None:
+        self._builder = QuestionBuilder()
 
-        self.builder = QuestionBuilder()
+    def execute(
+        self,
+        context: PipelineContextModel,
+    ) -> PipelineContextModel:
+        """
+        Build the initial question skeleton from the
+        production order.
+        """
 
-    def execute(self, context: PipelineContextModel) -> PipelineContextModel:
+        production_order = context.production_order
 
-        runtime = {
+        runtime: dict[str, Any] = {
             #
             # Project Information
             #
-            "current_project": context.production_order.unit,
-            "current_subject": context.production_order.subject,
-            "current_unit": context.production_order.unit,
-            "current_chapter": context.production_order.chapter,
-            "current_subtopic": context.production_order.subtopic,
-            "current_set": context.production_order.set_no,
-            "current_batch": context.production_order.batch_no,
+            "current_project": production_order.unit,
+            "current_subject": production_order.subject,
+            "current_unit": production_order.unit,
+            "current_chapter": production_order.chapter,
+            "current_subtopic": production_order.subtopic,
+            "current_set": production_order.set_no,
+            "current_batch": production_order.batch_no,
             #
             # Manufacturing Information
             #
-            "question_number": context.production_order.question_start,
+            "question_number": production_order.question_start,
             "difficulty": "Blueprint",
         }
 
-        context.question = self.builder.build(
-            runtime, context.production_order.question_start
+        context.question = self._builder.build(
+            runtime=runtime,
+            question_number=production_order.question_start,
         )
 
         return context

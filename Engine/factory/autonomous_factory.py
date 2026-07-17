@@ -73,14 +73,14 @@ class AutonomousFactory:
             print()
 
             print("=" * 80)
-            print(f"Starting Batch {request.batch_no}")
+            print(f"Starting Request {request.request_id}")
             print("=" * 80)
 
             #
             # Execute Factory
             #
 
-            generated = self.runner.run(production_request=request)
+            generated = self.runner.run()
 
             total_questions += generated
 
@@ -94,7 +94,7 @@ class AutonomousFactory:
 
                 print()
 
-                print(f"Batch {request.batch_no} failed.")
+                print(f"Request {request.request_id} failed.")
 
                 if plan.stop_on_failure:
 
