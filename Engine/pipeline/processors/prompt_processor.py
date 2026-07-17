@@ -7,11 +7,11 @@ Sprint    : S2
 Release   : R1
 """
 
-from ai.prompt_builder import PromptBuilder
+from Engine.ai.prompt_builder import PromptBuilder
 
-from models.pipeline_context_model import PipelineContextModel
+from Engine.models.pipeline_context_model import PipelineContextModel
 
-from pipeline.processors.pipeline_processor import PipelineProcessor
+from .pipeline_processor import PipelineProcessor
 
 
 class PromptProcessor(PipelineProcessor):

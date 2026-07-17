@@ -6,14 +6,14 @@ Creates a complete Question object
 using the central schema.
 """
 
-from core.schema_manager import SchemaManager
+from typing import Any
+
+from Engine.core.schema_manager import SchemaManager
 
 
 class QuestionObjectFactory:
-
-    def create(self):
-
-        question = {}
+    def create(self) -> dict[str, Any]:
+        question: dict[str, Any] = {}
 
         for field in SchemaManager.get_schema():
             question[field] = None
@@ -21,3 +21,4 @@ class QuestionObjectFactory:
         question.update(SchemaManager.get_defaults())
 
         return question
+        

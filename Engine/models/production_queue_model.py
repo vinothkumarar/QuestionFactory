@@ -10,8 +10,13 @@ Release   : R1
 from dataclasses import dataclass
 from dataclasses import field
 
-from models.production_order_model import ProductionOrderModel
-from models.production_request_model import ProductionRequestModel
+from Engine.models.production_order_model import (
+    ProductionOrderModel,
+)
+
+from Engine.models.production_request_model import (
+    ProductionRequestModel,
+)
 
 
 @dataclass

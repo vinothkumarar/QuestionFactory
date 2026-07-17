@@ -7,27 +7,26 @@ Builds the final AI prompt.
 
 from pathlib import Path
 
-from core.qgs_builder import QGSBuilder
-from core.contract_manager import ContractManager
+from Engine.core.contract_manager import ContractManager
+from Engine.core.qgs_builder import QGSBuilder
 
 
 class PromptBuilder:
-
-    def __init__(self):
-
+    def __init__(self) -> None:
         self.qgs_builder = QGSBuilder()
-
         self.contract_manager = ContractManager()
 
         self.template_path = (
-            Path(__file__).parent.parent / "prompts" / "templates" / "jee_mcq_v1.txt"
+            Path(__file__).parent.parent
+            / "prompts"
+            / "templates"
+            / "jee_mcq_v1.txt"
         )
 
     def build(self, question: dict) -> str:
+        qgs = str(self.qgs_builder.build())
 
-        qgs = self.qgs_builder.build()
-
-        contract = self.contract_manager.required_json_contract()
+        contract = str(self.contract_manager.required_json_contract())
 
         template = self.template_path.read_text(encoding="utf-8")
 
@@ -39,3 +38,4 @@ class PromptBuilder:
         )
 
         return qgs + "\n\n" + contract + "\n\n" + rendered_template
+        

@@ -7,7 +7,8 @@ Manage the QuestionBank folder structure.
 """
 
 from pathlib import Path
-from config import QUESTIONBANK_DIR
+
+from Engine.config import QUESTIONBANK_DIR
 
 
 class ResourceManager:
@@ -21,9 +22,9 @@ class ResourceManager:
         chapter: str,
         subtopic: str,
     ) -> Path:
-
-        folder = QUESTIONBANK_DIR / project / chapter / subtopic
+        folder: Path = QUESTIONBANK_DIR / project / chapter / subtopic
 
         folder.mkdir(parents=True, exist_ok=True)
 
         return folder
+        

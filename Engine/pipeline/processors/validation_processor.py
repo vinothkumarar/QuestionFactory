@@ -7,13 +7,13 @@ Sprint    : S3
 Release   : R1
 """
 
-from builders.boolean_normalizer import BooleanNormalizer
+from Engine.builders.boolean_normalizer import BooleanNormalizer
 
-from core.validation_engine import ValidationEngine
+from Engine.core.validation_engine import ValidationEngine
 
-from models.pipeline_context_model import PipelineContextModel
+from Engine.models.pipeline_context_model import PipelineContextModel
 
-from pipeline.processors.pipeline_processor import PipelineProcessor
+from .pipeline_processor import PipelineProcessor
 
 
 class ValidationProcessor(PipelineProcessor):

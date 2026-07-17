@@ -1,20 +1,34 @@
 """
 Question Factory OS
+
 Logging Module
 
-Purpose:
-Centralized logging for the Automation Engine.
+Provides centralized logging for the
+Question Factory Automation Engine.
 """
 
+from __future__ import annotations
+
 import logging
-from pathlib import Path
 
-from config import LOG_DIR
+from Engine.config import LOG_DIR
 
-LOG_DIR.mkdir(exist_ok=True)
+
+#
+# Ensure log directory exists
+#
+
+LOG_DIR.mkdir(
+    parents=True,
+    exist_ok=True,
+)
 
 LOG_FILE = LOG_DIR / "generation.log"
 
+
+#
+# Configure root logging
+#
 
 logging.basicConfig(
     filename=LOG_FILE,
@@ -23,5 +37,9 @@ logging.basicConfig(
 )
 
 
-def get_logger():
+def get_logger() -> logging.Logger:
+    """
+    Return the shared Question Factory logger.
+    """
+
     return logging.getLogger("QuestionFactory")

@@ -10,37 +10,37 @@ Validates mandatory educational fields and
 basic question quality.
 """
 
-from core.schema import QUESTION_REQUIRED_FIELDS
+from typing import Any
+
+from Engine.core.schema import QUESTION_REQUIRED_FIELDS
 
 
 class RequiredFieldValidator:
-
     MIN_QUESTION_LENGTH = 25
-
     MIN_EXPLANATION_LENGTH = 40
 
-    OPTION_FIELDS = ["option_a", "option_b", "option_c", "option_d"]
+    OPTION_FIELDS = [
+        "option_a",
+        "option_b",
+        "option_c",
+        "option_d",
+    ]
 
-    def validate(self, question: dict):
-
-        errors = []
+    def validate(self, question: dict[str, Any]) -> dict[str, Any]:
+        errors: list[str] = []
 
         #
         # Required Fields
         #
 
         for field in QUESTION_REQUIRED_FIELDS:
-
             value = question.get(field)
 
             if value is None:
-
                 errors.append(f"{field} is required")
 
             elif isinstance(value, str):
-
                 if value.strip() == "":
-
                     errors.append(f"{field} is required")
 
         #
@@ -50,7 +50,6 @@ class RequiredFieldValidator:
         question_text = question.get("question_text", "")
 
         if len(question_text.strip()) < self.MIN_QUESTION_LENGTH:
-
             errors.append("Question text is too short.")
 
         #
@@ -60,7 +59,6 @@ class RequiredFieldValidator:
         explanation = question.get("explanation", "")
 
         if len(explanation.strip()) < self.MIN_EXPLANATION_LENGTH:
-
             errors.append("Explanation is too short.")
 
         #
@@ -70,7 +68,6 @@ class RequiredFieldValidator:
         concept = question.get("concept_tested", "")
 
         if concept.strip() == "":
-
             errors.append("concept_tested is empty.")
 
         #
@@ -80,23 +77,19 @@ class RequiredFieldValidator:
         correct = question.get("correct_option")
 
         if correct not in {"A", "B", "C", "D"}:
-
             errors.append("Invalid correct_option.")
 
         #
         # Duplicate Options
         #
 
-        options = []
+        options: list[str] = []
 
         for field in self.OPTION_FIELDS:
-
-            option = question.get(field, "").strip()
-
+            option = str(question.get(field, "")).strip()
             options.append(option)
 
         if len(set(options)) != 4:
-
             errors.append("Duplicate answer options detected.")
 
         return {
@@ -104,3 +97,4 @@ class RequiredFieldValidator:
             "passed": len(errors) == 0,
             "errors": errors,
         }
+        

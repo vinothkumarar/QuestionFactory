@@ -15,7 +15,7 @@ Authoritative runtime files:
 import json
 from pathlib import Path
 
-from config import PROGRESS_FILE, METADATA_FILE, MANIFEST_FILE
+from Engine.config import PROGRESS_FILE, METADATA_FILE, MANIFEST_FILE
 
 # --------------------------------------------------
 # Generic Helpers

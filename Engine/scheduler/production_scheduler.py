@@ -11,9 +11,13 @@ Builds Production Requests from a Production Plan.
 
 from typing import List
 
-from models.production_plan_model import ProductionPlanModel
+from Engine.models.production_plan_model import (
+    ProductionPlanModel,
+)
 
-from models.production_request_model import ProductionRequestModel
+from Engine.models.production_request_model import (
+    ProductionRequestModel,
+)
 
 
 class ProductionScheduler:
@@ -51,10 +55,6 @@ class ProductionScheduler:
             #
             # Runtime Information
             #
-
-            request.batch_no = batch_no
-
-            request.question_start = question_start
 
             requests.append(request)
 

@@ -7,11 +7,11 @@ Sprint    : S3
 Release   : R1
 """
 
-from builders.question_builder import QuestionBuilder
+from Engine.builders.question_builder import QuestionBuilder
 
-from models.pipeline_context_model import PipelineContextModel
+from Engine.models.pipeline_context_model import PipelineContextModel
 
-from pipeline.processors.pipeline_processor import PipelineProcessor
+from .pipeline_processor import PipelineProcessor
 
 
 class BuildProcessor(PipelineProcessor):

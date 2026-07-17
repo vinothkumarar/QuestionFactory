@@ -10,7 +10,9 @@ Release   : R2
 import json
 from pathlib import Path
 
-from models.factory_state_model import FactoryStateModel
+from Engine.models.factory_state_model import (
+    FactoryStateModel,
+)
 
 
 class FactoryStateRepository:

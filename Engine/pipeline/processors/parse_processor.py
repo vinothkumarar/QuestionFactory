@@ -7,11 +7,11 @@ Sprint    : S4
 Release   : R1
 """
 
-from ai.response_parser import ResponseParser
+from Engine.ai.response_parser import ResponseParser
 
-from models.pipeline_context_model import PipelineContextModel
+from Engine.models.pipeline_context_model import PipelineContextModel
 
-from pipeline.processors.pipeline_processor import PipelineProcessor
+from .pipeline_processor import PipelineProcessor
 
 
 class ParseProcessor(PipelineProcessor):

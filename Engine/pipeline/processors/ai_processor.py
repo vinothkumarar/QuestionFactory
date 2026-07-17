@@ -9,11 +9,11 @@ Release   : R1
 
 import time
 
-from ai.provider_factory import ProviderFactory
+from Engine.ai.provider_factory import ProviderFactory
 
-from models.pipeline_context_model import PipelineContextModel
+from Engine.models.pipeline_context_model import PipelineContextModel
 
-from pipeline.processors.pipeline_processor import PipelineProcessor
+from .pipeline_processor import PipelineProcessor
 
 
 class AIProcessor(PipelineProcessor):

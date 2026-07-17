@@ -5,11 +5,14 @@ Schema Manager
 Provides access to the Question schema.
 """
 
-from core.schema import QUESTION_SCHEMA, QUESTION_DEFAULTS, QUESTION_FIELD_GROUPS
+from .schema import (
+    QUESTION_DEFAULTS,
+    QUESTION_FIELD_GROUPS,
+    QUESTION_SCHEMA,
+)
 
 
 class SchemaManager:
-
     @staticmethod
     def get_schema():
         return QUESTION_SCHEMA
@@ -45,3 +48,4 @@ class SchemaManager:
     @staticmethod
     def get_media_fields():
         return QUESTION_FIELD_GROUPS["media"]
+        

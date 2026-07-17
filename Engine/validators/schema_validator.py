@@ -5,17 +5,16 @@ Schema Validator
 Ensures every schema field exists.
 """
 
-from core.schema_manager import SchemaManager
+from typing import Any
+
+from Engine.core.schema_manager import SchemaManager
 
 
 class SchemaValidator:
-
-    def validate(self, question: dict):
-
-        missing = []
+    def validate(self, question: dict[str, Any]) -> dict[str, Any]:
+        missing: list[str] = []
 
         for field in SchemaManager.get_schema():
-
             if field not in question:
                 missing.append(field)
 
@@ -24,3 +23,4 @@ class SchemaValidator:
             "passed": len(missing) == 0,
             "errors": missing,
         }
+        

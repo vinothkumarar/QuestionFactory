@@ -11,7 +11,7 @@ import csv
 import os
 from pathlib import Path
 
-from schema.question_schema import EXPORT_COLUMNS
+from Engine.schema.question_schema import EXPORT_COLUMNS
 
 
 class QuestionCSVExporter:

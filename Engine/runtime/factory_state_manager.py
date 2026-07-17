@@ -7,7 +7,7 @@ Sprint    : S1
 Release   : R2
 """
 
-from models.factory_state_model import FactoryStateModel
+from Engine.models.factory_state_model import FactoryStateModel
 
 
 class FactoryStateManager:

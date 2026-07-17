@@ -6,8 +6,8 @@ Smart CSV Exporter
 import csv
 from pathlib import Path
 
-from core.folder_manager import FolderManager
-from core.file_name_generator import FileNameGenerator
+from Engine.core.file_name_generator import FileNameGenerator
+from Engine.core.folder_manager import FolderManager
 
 
 class CSVExporter:

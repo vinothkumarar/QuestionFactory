@@ -7,11 +7,11 @@ Sprint    : S5
 Release   : R1
 """
 
-from builders.question_merger import QuestionMerger
+from Engine.builders.question_merger import QuestionMerger
 
-from models.pipeline_context_model import PipelineContextModel
+from Engine.models.pipeline_context_model import PipelineContextModel
 
-from pipeline.processors.pipeline_processor import PipelineProcessor
+from .pipeline_processor import PipelineProcessor
 
 
 class MergeProcessor(PipelineProcessor):

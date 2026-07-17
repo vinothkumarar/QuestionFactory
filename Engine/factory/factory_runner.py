@@ -14,7 +14,7 @@ from Engine.validators.csv_validator import CSVValidator
 from Engine.reporting.production_report import ProductionReport
 from Engine.models.production_request_model import ProductionRequestModel
 from Engine.repositories.factory_state_repository import FactoryStateRepository
-from Engine.core.factory_state_manager import FactoryStateManager
+from Engine.runtime.factory_state_manager import FactoryStateManager
 from Engine.config.factory_config import (
     OUTPUT_FILE,
     PRODUCTION_ORDERS,

@@ -7,12 +7,17 @@ Sprint    : S1
 Rollback  : Restore Original Design
 """
 
-from models.production_order_model import ProductionOrderModel
-from models.production_queue_model import ProductionQueueModel
-from models.production_request_model import ProductionRequestModel
+from Engine.models.production_order_model import ProductionOrderModel
+from Engine.models.production_queue_model import ProductionQueueModel
+from Engine.models.production_request_model import ProductionRequestModel
 
-from repositories.factory_state_repository import FactoryStateRepository
-from core.factory_state_manager import FactoryStateManager
+from Engine.repositories.factory_state_repository import (
+    FactoryStateRepository,
+)
+
+from Engine.runtime.factory_state_manager import (
+    FactoryStateManager,
+)
 
 
 class QueueBuilder:

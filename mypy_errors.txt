@@ -1,0 +1,906 @@
+
+Engine/test_csv_writer.py:1: error: Cannot find implementation or library stub
+for module named "core.resource_manager"  [import-not-found]
+    from core.resource_manager import ResourceManager
+    ^
+Engine/test_csv_writer.py:2: error: Cannot find implementation or library stub
+for module named "core.csv_writer"  [import-not-found]
+    from core.csv_writer import CSVWriter
+    ^
+Engine/autorun.py:8: error: Cannot find implementation or library stub for
+module named "config"  [import-not-found]
+    from config import FACTORY_NAME, FACTORY_VERSION
+    ^
+Engine/autorun.py:9: error: Cannot find implementation or library stub for
+module named "core.question_factory_engine"  [import-not-found]
+    from core.question_factory_engine import QuestionFactoryEngine
+    ^
+Engine/validators/schema_validator.py:8: error: Cannot find implementation or
+library stub for module named "core.schema_manager"  [import-not-found]
+    from core.schema_manager import SchemaManager
+    ^
+Engine/validators/required_field_validator.py:13: error: Cannot find
+implementation or library stub for module named "core.schema" 
+[import-not-found]
+    from core.schema import QUESTION_REQUIRED_FIELDS
+    ^
+Engine/validators/registry.py:8: error: Cannot find implementation or library
+stub for module named "validators.schema_validator"  [import-not-found]
+    from validators.schema_validator import SchemaValidator
+    ^
+Engine/validators/registry.py:9: error: Cannot find implementation or library
+stub for module named "validators.required_field_validator"  [import-not-found]
+    from validators.required_field_validator import RequiredFieldValidator
+    ^
+Engine/validators/registry.py:10: error: Cannot find implementation or library
+stub for module named "validators.metadata_validator"  [import-not-found]
+    from validators.metadata_validator import MetadataValidator
+    ^
+Engine/validators/registry.py:11: error: Cannot find implementation or library
+stub for module named "validators.identity_validator"  [import-not-found]
+    from validators.identity_validator import IdentityValidator
+    ^
+Engine/validators/difficulty_validator.py:10: error: Cannot find implementation
+or library stub for module named "core.rule_manager"  [import-not-found]
+    from core.rule_manager import RuleManager
+    ^
+Engine/tests/test_worker_result_model.py:6: error: Cannot find implementation
+or library stub for module named "models.production_order_model" 
+[import-not-found]
+    from models.production_order_model import ProductionOrderModel
+    ^
+Engine/tests/test_worker_result_model.py:7: error: Cannot find implementation
+or library stub for module named "models.worker_result_model" 
+[import-not-found]
+    from models.worker_result_model import WorkerResultModel
+    ^
+Engine/tests/test_validation_processor.py:10: error: Cannot find implementation
+or library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/tests/test_validation_processor.py:11: error: Cannot find implementation
+or library stub for module named "models.production_order_model" 
+[import-not-found]
+    from models.production_order_model import ProductionOrderModel
+    ^
+Engine/tests/test_validation_processor.py:13: error: Cannot find implementation
+or library stub for module named "pipeline.processors.build_processor" 
+[import-not-found]
+    from pipeline.processors.build_processor import BuildProcessor
+    ^
+Engine/tests/test_validation_processor.py:14: error: Cannot find implementation
+or library stub for module named "pipeline.processors.prompt_processor" 
+[import-not-found]
+    from pipeline.processors.prompt_processor import PromptProcessor
+    ^
+Engine/tests/test_validation_processor.py:15: error: Cannot find implementation
+or library stub for module named "pipeline.processors.ai_processor" 
+[import-not-found]
+    from pipeline.processors.ai_processor import AIProcessor
+    ^
+Engine/tests/test_validation_processor.py:16: error: Cannot find implementation
+or library stub for module named "pipeline.processors.parse_processor" 
+[import-not-found]
+    from pipeline.processors.parse_processor import ParseProcessor
+    ^
+Engine/tests/test_validation_processor.py:17: error: Cannot find implementation
+or library stub for module named "pipeline.processors.merge_processor" 
+[import-not-found]
+    from pipeline.processors.merge_processor import MergeProcessor
+    ^
+Engine/tests/test_validation_processor.py:18: error: Cannot find implementation
+or library stub for module named "pipeline.processors.validation_processor" 
+[import-not-found]
+    from pipeline.processors.validation_processor import ValidationProcess...
+    ^
+Engine/tests/test_schema.py:6: error: Cannot find implementation or library
+stub for module named "knowledge.schema"  [import-not-found]
+    from knowledge.schema import KnowledgeSchema
+    ^
+Engine/tests/test_runtime_repository.py:6: error: Cannot find implementation or
+library stub for module named "repositories.runtime_repository" 
+[import-not-found]
+    from repositories.runtime_repository import RuntimeRepository
+    ^
+Engine/tests/test_runtime_progress.py:6: error: Cannot find implementation or
+library stub for module named "core.runtime_manager"  [import-not-found]
+    from core.runtime_manager import RuntimeManager
+    ^
+Engine/tests/test_runtime_progress.py:7: error: Cannot find implementation or
+library stub for module named "core.batch_progress_manager"  [import-not-found]
+    from core.batch_progress_manager import BatchProgressManager
+    ^
+Engine/tests/test_queue_builder.py:10: error: Cannot find implementation or
+library stub for module named "planning.queue_builder"  [import-not-found]
+    from planning.queue_builder import QueueBuilder
+    ^
+Engine/tests/test_queue_builder.py:12: error: Cannot find implementation or
+library stub for module named "models.production_request_model" 
+[import-not-found]
+    from models.production_request_model import ProductionRequestModel
+    ^
+Engine/tests/test_question_schema.py:10: error: Cannot find implementation or
+library stub for module named "schema.question_schema"  [import-not-found]
+    from schema.question_schema import QUESTION_COLUMNS
+    ^
+Engine/tests/test_question_merger.py:6: error: Cannot find implementation or
+library stub for module named "builders.question_builder"  [import-not-found]
+    from builders.question_builder import QuestionBuilder
+    ^
+Engine/tests/test_question_merger.py:7: error: Cannot find implementation or
+library stub for module named "builders.question_merger"  [import-not-found]
+    from builders.question_merger import QuestionMerger
+    ^
+Engine/tests/test_question_csv_exporter.py:10: error: Cannot find
+implementation or library stub for module named "batch.batch_execution_engine" 
+[import-not-found]
+    from batch.batch_execution_engine import BatchExecutionEngine
+    ^
+Engine/tests/test_question_csv_exporter.py:12: error: Cannot find
+implementation or library stub for module named
+"exporters.question_csv_exporter"  [import-not-found]
+    from exporters.question_csv_exporter import QuestionCSVExporter
+    ^
+Engine/tests/test_question_csv_exporter.py:14: error: Cannot find
+implementation or library stub for module named "models.production_order_model" 
+[import-not-found]
+    from models.production_order_model import ProductionOrderModel
+    ^
+Engine/tests/test_prompt_processor.py:10: error: Cannot find implementation or
+library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/tests/test_prompt_processor.py:11: error: Cannot find implementation or
+library stub for module named "models.production_order_model" 
+[import-not-found]
+    from models.production_order_model import ProductionOrderModel
+    ^
+Engine/tests/test_prompt_processor.py:13: error: Cannot find implementation or
+library stub for module named "pipeline.processors.build_processor" 
+[import-not-found]
+    from pipeline.processors.build_processor import BuildProcessor
+    ^
+Engine/tests/test_prompt_processor.py:14: error: Cannot find implementation or
+library stub for module named "pipeline.processors.prompt_processor" 
+[import-not-found]
+    from pipeline.processors.prompt_processor import PromptProcessor
+    ^
+Engine/tests/test_production_worker_pipeline.py:10: error: Cannot find
+implementation or library stub for module named "production.production_worker" 
+[import-not-found]
+    from production.production_worker import ProductionWorker
+    ^
+Engine/tests/test_production_worker_pipeline.py:12: error: Cannot find
+implementation or library stub for module named "models.production_order_model" 
+[import-not-found]
+    from models.production_order_model import ProductionOrderModel
+    ^
+Engine/tests/test_production_worker.py:6: error: Cannot find implementation or
+library stub for module named "repositories.factory_state_repository" 
+[import-not-found]
+    from repositories.factory_state_repository import FactoryStateReposito...
+    ^
+Engine/tests/test_production_worker.py:7: error: Cannot find implementation or
+library stub for module named "planning.production_planner"  [import-not-found]
+    from planning.production_planner import ProductionPlanner
+    ^
+Engine/tests/test_production_worker.py:8: error: Cannot find implementation or
+library stub for module named "production.production_worker"  [import-not-found]
+    from production.production_worker import ProductionWorker
+    ^
+Engine/tests/test_production_request_model.py:10: error: Cannot find
+implementation or library stub for module named
+"models.production_request_model"  [import-not-found]
+    from models.production_request_model import ProductionRequestModel
+    ^
+Engine/tests/test_production_order_model.py:6: error: Cannot find
+implementation or library stub for module named "models.production_order_model" 
+[import-not-found]
+    from models.production_order_model import ProductionOrderModel
+    ^
+Engine/tests/test_pipeline_status.py:8: error: Cannot find implementation or
+library stub for module named "constants.pipeline_status"  [import-not-found]
+    from constants.pipeline_status import PipelineStatus
+    ^
+Engine/tests/test_pipeline_processor.py:10: error: Cannot find implementation
+or library stub for module named "pipeline.processors.pipeline_processor" 
+[import-not-found]
+    from pipeline.processors.pipeline_processor import PipelineProcessor
+    ^
+Engine/tests/test_pipeline_processor.py:12: error: Cannot find implementation
+or library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/tests/test_pipeline_processor.py:13: error: Cannot find implementation
+or library stub for module named "models.production_order_model" 
+[import-not-found]
+    from models.production_order_model import ProductionOrderModel
+    ^
+Engine/tests/test_pipeline_context_model.py:6: error: Cannot find
+implementation or library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/tests/test_pipeline_context_model.py:7: error: Cannot find
+implementation or library stub for module named "models.production_order_model" 
+[import-not-found]
+    from models.production_order_model import ProductionOrderModel
+    ^
+Engine/tests/test_pipeline.py:5: error: Cannot find implementation or library
+stub for module named "core.pipeline_engine"  [import-not-found]
+    from core.pipeline_engine import PipelineEngine
+    ^
+Engine/tests/test_parse_processor.py:10: error: Cannot find implementation or
+library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/tests/test_parse_processor.py:11: error: Cannot find implementation or
+library stub for module named "models.production_order_model" 
+[import-not-found]
+    from models.production_order_model import ProductionOrderModel
+    ^
+Engine/tests/test_parse_processor.py:13: error: Cannot find implementation or
+library stub for module named "pipeline.processors.build_processor" 
+[import-not-found]
+    from pipeline.processors.build_processor import BuildProcessor
+    ^
+Engine/tests/test_parse_processor.py:14: error: Cannot find implementation or
+library stub for module named "pipeline.processors.prompt_processor" 
+[import-not-found]
+    from pipeline.processors.prompt_processor import PromptProcessor
+    ^
+Engine/tests/test_parse_processor.py:15: error: Cannot find implementation or
+library stub for module named "pipeline.processors.ai_processor" 
+[import-not-found]
+    from pipeline.processors.ai_processor import AIProcessor
+    ^
+Engine/tests/test_parse_processor.py:16: error: Cannot find implementation or
+library stub for module named "pipeline.processors.parse_processor" 
+[import-not-found]
+    from pipeline.processors.parse_processor import ParseProcessor
+    ^
+Engine/tests/test_merge_processor.py:10: error: Cannot find implementation or
+library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/tests/test_merge_processor.py:11: error: Cannot find implementation or
+library stub for module named "models.production_order_model" 
+[import-not-found]
+    from models.production_order_model import ProductionOrderModel
+    ^
+Engine/tests/test_merge_processor.py:13: error: Cannot find implementation or
+library stub for module named "pipeline.processors.build_processor" 
+[import-not-found]
+    from pipeline.processors.build_processor import BuildProcessor
+    ^
+Engine/tests/test_merge_processor.py:14: error: Cannot find implementation or
+library stub for module named "pipeline.processors.prompt_processor" 
+[import-not-found]
+    from pipeline.processors.prompt_processor import PromptProcessor
+    ^
+Engine/tests/test_merge_processor.py:15: error: Cannot find implementation or
+library stub for module named "pipeline.processors.ai_processor" 
+[import-not-found]
+    from pipeline.processors.ai_processor import AIProcessor
+    ^
+Engine/tests/test_merge_processor.py:16: error: Cannot find implementation or
+library stub for module named "pipeline.processors.parse_processor" 
+[import-not-found]
+    from pipeline.processors.parse_processor import ParseProcessor
+    ^
+Engine/tests/test_merge_processor.py:17: error: Cannot find implementation or
+library stub for module named "pipeline.processors.merge_processor" 
+[import-not-found]
+    from pipeline.processors.merge_processor import MergeProcessor
+    ^
+Engine/tests/test_job_queue.py:6: error: Cannot find implementation or library
+stub for module named "repositories.factory_state_repository" 
+[import-not-found]
+    from repositories.factory_state_repository import FactoryStateReposito...
+    ^
+Engine/tests/test_job_queue.py:7: error: Cannot find implementation or library
+stub for module named "planning.production_planner"  [import-not-found]
+    from planning.production_planner import ProductionPlanner
+    ^
+Engine/tests/test_job_queue.py:8: error: Cannot find implementation or library
+stub for module named "planning.production_queue"  [import-not-found]
+    from planning.production_queue import ProductionQueue
+    ^
+Engine/tests/test_job_factory.py:6: error: Cannot find implementation or
+library stub for module named "repositories.factory_state_repository" 
+[import-not-found]
+    from repositories.factory_state_repository import FactoryStateReposito...
+    ^
+Engine/tests/test_job_factory.py:8: error: Cannot find implementation or
+library stub for module named "planning.production_planner"  [import-not-found]
+    from planning.production_planner import ProductionPlanner
+    ^
+Engine/tests/test_generation_status.py:6: error: Cannot find implementation or
+library stub for module named "constants.generation_status"  [import-not-found]
+    from constants.generation_status import GenerationStatus
+    ^
+Engine/tests/test_generation.py:6: error: Cannot find implementation or library
+stub for module named "builders.question_builder"  [import-not-found]
+    from builders.question_builder import QuestionBuilder
+    ^
+Engine/tests/test_generation.py:7: error: Cannot find implementation or library
+stub for module named "ai.prompt_builder"  [import-not-found]
+    from ai.prompt_builder import PromptBuilder
+    ^
+Engine/tests/test_generation.py:8: error: Cannot find implementation or library
+stub for module named "ai.provider_factory"  [import-not-found]
+    from ai.provider_factory import ProviderFactory
+    ^
+Engine/tests/test_generation.py:42: error: Cannot find implementation or
+library stub for module named "ai.response_parser"  [import-not-found]
+    from ai.response_parser import ResponseParser
+    ^
+Engine/tests/test_generation.py:43: error: Cannot find implementation or
+library stub for module named "builders.question_merger"  [import-not-found]
+    from builders.question_merger import QuestionMerger
+    ^
+Engine/tests/test_factory_state_repository.py:6: error: Cannot find
+implementation or library stub for module named
+"repositories.factory_state_repository"  [import-not-found]
+    from repositories.factory_state_repository import FactoryStateReposito...
+    ^
+Engine/tests/test_factory_state_model.py:6: error: Cannot find implementation
+or library stub for module named "models.factory_state_model" 
+[import-not-found]
+    from models.factory_state_model import FactoryStateModel
+    ^
+Engine/tests/test_factory_state_manager.py:10: error: Cannot find
+implementation or library stub for module named "core.factory_state_manager" 
+[import-not-found]
+    from core.factory_state_manager import FactoryStateManager
+    ^
+Engine/tests/test_factory_state_manager.py:12: error: Cannot find
+implementation or library stub for module named
+"repositories.factory_state_repository"  [import-not-found]
+    from repositories.factory_state_repository import FactoryStateReposito...
+    ^
+Engine/tests/test_factory_config.py:10: error: Cannot find implementation or
+library stub for module named "config.factory_config"  [import-not-found]
+    from config.factory_config import FACTORY_NAME
+    ^
+Engine/tests/test_execution_pipeline_builder.py:10: error: Cannot find
+implementation or library stub for module named
+"pipeline.execution_pipeline_builder"  [import-not-found]
+    from pipeline.execution_pipeline_builder import ExecutionPipelineBuild...
+    ^
+Engine/tests/test_execution_pipeline.py:6: error: Cannot find implementation or
+library stub for module named "pipeline.execution_pipeline"  [import-not-found]
+    from pipeline.execution_pipeline import ExecutionPipeline
+    ^
+Engine/tests/test_csv_validator.py:10: error: Cannot find implementation or
+library stub for module named "validators.csv_validator"  [import-not-found]
+    from validators.csv_validator import CSVValidator
+    ^
+Engine/tests/test_csv_export.py:6: error: Cannot find implementation or library
+stub for module named "core.batch_generation_engine"  [import-not-found]
+    from core.batch_generation_engine import BatchGenerationEngine
+    ^
+Engine/tests/test_csv_export.py:7: error: Cannot find implementation or library
+stub for module named "core.export_engine"  [import-not-found]
+    from core.export_engine import ExportEngine
+    ^
+Engine/tests/test_csv_export.py:8: error: Cannot find implementation or library
+stub for module named "jobs.generation_job"  [import-not-found]
+    from jobs.generation_job import GenerationJob
+    ^
+Engine/tests/test_build_processor.py:10: error: Cannot find implementation or
+library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/tests/test_build_processor.py:11: error: Cannot find implementation or
+library stub for module named "models.production_order_model" 
+[import-not-found]
+    from models.production_order_model import ProductionOrderModel
+    ^
+Engine/tests/test_build_processor.py:13: error: Cannot find implementation or
+library stub for module named "pipeline.processors.build_processor" 
+[import-not-found]
+    from pipeline.processors.build_processor import BuildProcessor
+    ^
+Engine/tests/test_batch_result_model.py:10: error: Cannot find implementation
+or library stub for module named "models.batch_result_model"  [import-not-found]
+    from models.batch_result_model import BatchResultModel
+    ^
+Engine/tests/test_batch_generation.py:6: error: Cannot find implementation or
+library stub for module named "jobs.generation_job"  [import-not-found]
+    from jobs.generation_job import GenerationJob
+    ^
+Engine/tests/test_batch_generation.py:7: error: Cannot find implementation or
+library stub for module named "core.batch_generation_engine"  [import-not-found]
+    from core.batch_generation_engine import BatchGenerationEngine
+    ^
+Engine/tests/test_batch_execution_engine_v2.py:10: error: Cannot find
+implementation or library stub for module named "batch.batch_execution_engine" 
+[import-not-found]
+    from batch.batch_execution_engine import BatchExecutionEngine
+    ^
+Engine/tests/test_batch_execution_engine_v2.py:12: error: Cannot find
+implementation or library stub for module named "models.production_order_model" 
+[import-not-found]
+    from models.production_order_model import ProductionOrderModel
+    ^
+Engine/tests/test_batch_execution_engine.py:10: error: Cannot find
+implementation or library stub for module named "batch.batch_execution_engine" 
+[import-not-found]
+    from batch.batch_execution_engine import BatchExecutionEngine
+    ^
+Engine/tests/test_batch_execution_engine.py:12: error: Cannot find
+implementation or library stub for module named "models.production_order_model" 
+[import-not-found]
+    from models.production_order_model import ProductionOrderModel
+    ^
+Engine/tests/test_ai_processor.py:10: error: Cannot find implementation or
+library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/tests/test_ai_processor.py:11: error: Cannot find implementation or
+library stub for module named "models.production_order_model" 
+[import-not-found]
+    from models.production_order_model import ProductionOrderModel
+    ^
+Engine/tests/test_ai_processor.py:13: error: Cannot find implementation or
+library stub for module named "pipeline.processors.build_processor" 
+[import-not-found]
+    from pipeline.processors.build_processor import BuildProcessor
+    ^
+Engine/tests/test_ai_processor.py:14: error: Cannot find implementation or
+library stub for module named "pipeline.processors.prompt_processor" 
+[import-not-found]
+    from pipeline.processors.prompt_processor import PromptProcessor
+    ^
+Engine/tests/test_ai_processor.py:15: error: Cannot find implementation or
+library stub for module named "pipeline.processors.ai_processor" 
+[import-not-found]
+    from pipeline.processors.ai_processor import AIProcessor
+    ^
+Engine/repositories/runtime_repository.py:6: error: Cannot find implementation
+or library stub for module named "core.runtime_manager"  [import-not-found]
+    from core.runtime_manager import RuntimeManager
+    ^
+Engine/pipeline/processors/validation_processor.py:10: error: Cannot find
+implementation or library stub for module named "builders.boolean_normalizer" 
+[import-not-found]
+    from builders.boolean_normalizer import BooleanNormalizer
+    ^
+Engine/pipeline/processors/validation_processor.py:12: error: Cannot find
+implementation or library stub for module named "core.validation_engine" 
+[import-not-found]
+    from core.validation_engine import ValidationEngine
+    ^
+Engine/pipeline/processors/validation_processor.py:14: error: Cannot find
+implementation or library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/pipeline/processors/validation_processor.py:16: error: Cannot find
+implementation or library stub for module named
+"pipeline.processors.pipeline_processor"  [import-not-found]
+    from pipeline.processors.pipeline_processor import PipelineProcessor
+    ^
+Engine/pipeline/processors/prompt_processor.py:10: error: Cannot find
+implementation or library stub for module named "ai.prompt_builder" 
+[import-not-found]
+    from ai.prompt_builder import PromptBuilder
+    ^
+Engine/pipeline/processors/prompt_processor.py:12: error: Cannot find
+implementation or library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/pipeline/processors/prompt_processor.py:14: error: Cannot find
+implementation or library stub for module named
+"pipeline.processors.pipeline_processor"  [import-not-found]
+    from pipeline.processors.pipeline_processor import PipelineProcessor
+    ^
+Engine/pipeline/processors/pipeline_processor.py:13: error: Cannot find
+implementation or library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/pipeline/processors/parse_processor.py:10: error: Cannot find
+implementation or library stub for module named "ai.response_parser" 
+[import-not-found]
+    from ai.response_parser import ResponseParser
+    ^
+Engine/pipeline/processors/parse_processor.py:12: error: Cannot find
+implementation or library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/pipeline/processors/parse_processor.py:14: error: Cannot find
+implementation or library stub for module named
+"pipeline.processors.pipeline_processor"  [import-not-found]
+    from pipeline.processors.pipeline_processor import PipelineProcessor
+    ^
+Engine/pipeline/processors/merge_processor.py:10: error: Cannot find
+implementation or library stub for module named "builders.question_merger" 
+[import-not-found]
+    from builders.question_merger import QuestionMerger
+    ^
+Engine/pipeline/processors/merge_processor.py:12: error: Cannot find
+implementation or library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/pipeline/processors/merge_processor.py:14: error: Cannot find
+implementation or library stub for module named
+"pipeline.processors.pipeline_processor"  [import-not-found]
+    from pipeline.processors.pipeline_processor import PipelineProcessor
+    ^
+Engine/pipeline/processors/build_processor.py:10: error: Cannot find
+implementation or library stub for module named "builders.question_builder" 
+[import-not-found]
+    from builders.question_builder import QuestionBuilder
+    ^
+Engine/pipeline/processors/build_processor.py:12: error: Cannot find
+implementation or library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/pipeline/processors/build_processor.py:14: error: Cannot find
+implementation or library stub for module named
+"pipeline.processors.pipeline_processor"  [import-not-found]
+    from pipeline.processors.pipeline_processor import PipelineProcessor
+    ^
+Engine/models/batch_result_model.py:13: error: Cannot find implementation or
+library stub for module named "models.worker_result_model"  [import-not-found]
+    from models.worker_result_model import WorkerResultModel
+    ^
+Engine/models/batch_report.py:36: error: Incompatible types in assignment
+(expression has type "float", variable has type "int")  [assignment]
+                success_rate = (self.passed / self.total) * 100
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/database/database_engine.py:6: error: Cannot find implementation or
+library stub for module named "database.supabase_adapter"  [import-not-found]
+    from database.supabase_adapter import SupabaseAdapter
+    ^
+Engine/core/validation_engine.py:6: error: Cannot find implementation or
+library stub for module named "validators.schema_validator"  [import-not-found]
+    from validators.schema_validator import SchemaValidator
+    ^
+Engine/core/validation_engine.py:7: error: Cannot find implementation or
+library stub for module named "validators.required_field_validator" 
+[import-not-found]
+    from validators.required_field_validator import RequiredFieldValidator
+    ^
+Engine/core/validation_engine.py:8: error: Cannot find implementation or
+library stub for module named "validators.metadata_validator" 
+[import-not-found]
+    from validators.metadata_validator import MetadataValidator
+    ^
+Engine/core/validation_engine.py:9: error: Cannot find implementation or
+library stub for module named "validators.identity_validator" 
+[import-not-found]
+    from validators.identity_validator import IdentityValidator
+    ^
+Engine/core/validation_engine.py:10: error: Cannot find implementation or
+library stub for module named "validators.difficulty_validator" 
+[import-not-found]
+    from validators.difficulty_validator import DifficultyValidator
+    ^
+Engine/core/validation_engine.py:41: error: Unsupported operand types for +
+("object" and "int")  [operator]
+                    report["passed_validators"] += 1
+                    ^
+Engine/core/validation_engine.py:47: error: Unsupported operand types for +
+("object" and "int")  [operator]
+                    report["failed_validators"] += 1
+                    ^
+Engine/core/validation_engine.py:49: error: "object" has no attribute "extend" 
+[attr-defined]
+                    report["errors"].extend(result["errors"])
+                    ^~~~~~~~~~~~~~~~~~~~~~~
+Engine/core/schema_manager.py:8: error: Cannot find implementation or library
+stub for module named "core.schema"  [import-not-found]
+    from core.schema import QUESTION_SCHEMA, QUESTION_DEFAULTS, QUESTION_F...
+    ^
+Engine/core/retry_engine.py:6: error: Cannot find implementation or library
+stub for module named "ai.repair_prompt_builder"  [import-not-found]
+    from ai.repair_prompt_builder import RepairPromptBuilder
+    ^
+Engine/core/retry_engine.py:7: error: Cannot find implementation or library
+stub for module named "ai.provider_factory"  [import-not-found]
+    from ai.provider_factory import ProviderFactory
+    ^
+Engine/core/retry_engine.py:8: error: Cannot find implementation or library
+stub for module named "ai.response_parser"  [import-not-found]
+    from ai.response_parser import ResponseParser
+    ^
+Engine/core/resource_manager.py:10: error: Cannot find implementation or
+library stub for module named "config"  [import-not-found]
+    from config import QUESTIONBANK_DIR
+    ^
+Engine/core/resource_manager.py:29: error: Returning Any from function declared
+to return "Path"  [no-any-return]
+            return folder
+            ^~~~~~~~~~~~~
+Engine/core/question_factory_engine.py:12: error: Cannot find implementation or
+library stub for module named "core.runtime_manager"  [import-not-found]
+    from core.runtime_manager import RuntimeManager
+    ^
+Engine/core/question_factory_engine.py:13: error: Cannot find implementation or
+library stub for module named "core.resource_manager"  [import-not-found]
+    from core.resource_manager import ResourceManager
+    ^
+Engine/core/question_factory_engine.py:14: error: Cannot find implementation or
+library stub for module named "core.csv_writer"  [import-not-found]
+    from core.csv_writer import CSVWriter
+    ^
+Engine/core/pipeline_engine.py:6: error: Cannot find implementation or library
+stub for module named "builders.question_builder"  [import-not-found]
+    from builders.question_builder import QuestionBuilder
+    ^
+Engine/core/pipeline_engine.py:7: error: Cannot find implementation or library
+stub for module named "builders.question_merger"  [import-not-found]
+    from builders.question_merger import QuestionMerger
+    ^
+Engine/core/pipeline_engine.py:9: error: Cannot find implementation or library
+stub for module named "ai.prompt_builder"  [import-not-found]
+    from ai.prompt_builder import PromptBuilder
+    ^
+Engine/core/pipeline_engine.py:10: error: Cannot find implementation or library
+stub for module named "ai.provider_factory"  [import-not-found]
+    from ai.provider_factory import ProviderFactory
+    ^
+Engine/core/pipeline_engine.py:11: error: Cannot find implementation or library
+stub for module named "ai.response_parser"  [import-not-found]
+    from ai.response_parser import ResponseParser
+    ^
+Engine/core/pipeline_engine.py:13: error: Cannot find implementation or library
+stub for module named "core.validation_engine"  [import-not-found]
+    from core.validation_engine import ValidationEngine
+    ^
+Engine/core/generation_engine.py:8: error: Cannot find implementation or
+library stub for module named "ai.prompt_builder"  [import-not-found]
+    from ai.prompt_builder import PromptBuilder
+    ^
+Engine/core/generation_engine.py:9: error: Cannot find implementation or
+library stub for module named "ai.mock_provider"  [import-not-found]
+    from ai.mock_provider import MockProvider
+    ^
+Engine/core/export_engine.py:6: error: Cannot find implementation or library
+stub for module named "exporters.csv_exporter"  [import-not-found]
+    from exporters.csv_exporter import CSVExporter
+    ^
+Engine/core/batch_generation_engine.py:6: error: Cannot find implementation or
+library stub for module named "core.pipeline_engine"  [import-not-found]
+    from core.pipeline_engine import PipelineEngine
+    ^
+Engine/core/batch_generation_engine.py:7: error: Cannot find implementation or
+library stub for module named "models.batch_report"  [import-not-found]
+    from models.batch_report import BatchReport
+    ^
+Engine/builders/question_object_factory.py:9: error: Cannot find implementation
+or library stub for module named "core.schema_manager"  [import-not-found]
+    from core.schema_manager import SchemaManager
+    ^
+Engine/builders/question_object_factory.py:16: error: Need type annotation for
+"question" (hint: "question: dict[<type>, <type>] = ...")  [var-annotated]
+            question = {}
+            ^~~~~~~~
+Engine/builders/question_builder.py:8: error: Cannot find implementation or
+library stub for module named "builders.question_object_factory" 
+[import-not-found]
+    from builders.question_object_factory import QuestionObjectFactory
+    ^
+Engine/builders/question_builder.py:9: error: Cannot find implementation or
+library stub for module named "builders.metadata_enricher"  [import-not-found]
+    from builders.metadata_enricher import MetadataEnricher
+    ^
+Engine/builders/question_builder.py:10: error: Cannot find implementation or
+library stub for module named "builders.identity_enricher"  [import-not-found]
+    from builders.identity_enricher import IdentityEnricher
+    ^
+Engine/builders/metadata_enricher.py:10: error: Cannot find implementation or
+library stub for module named "metadata.metadata_loader"  [import-not-found]
+    from metadata.metadata_loader import MetadataLoader
+    ^
+Engine/builders/identity_enricher.py:8: error: Cannot find implementation or
+library stub for module named "core.question_code_generator"  [import-not-found]
+    from core.question_code_generator import QuestionCodeGenerator
+    ^
+Engine/ai/provider_factory.py:6: error: Cannot find implementation or library
+stub for module named "core.config_manager"  [import-not-found]
+    from core.config_manager import ConfigManager
+    ^
+Engine/ai/provider_factory.py:7: error: Cannot find implementation or library
+stub for module named "ai.mock_provider"  [import-not-found]
+    from ai.mock_provider import MockProvider
+    ^
+Engine/ai/provider_factory.py:23: error: Cannot find implementation or library
+stub for module named "ai.openai_provider"  [import-not-found]
+                from ai.openai_provider import OpenAIProvider
+    ^
+Engine/ai/prompt_builder.py:10: error: Cannot find implementation or library
+stub for module named "core.qgs_builder"  [import-not-found]
+    from core.qgs_builder import QGSBuilder
+    ^
+Engine/ai/prompt_builder.py:11: error: Cannot find implementation or library
+stub for module named "core.contract_manager"  [import-not-found]
+    from core.contract_manager import ContractManager
+    ^
+Engine/ai/prompt_builder.py:41: error: Returning Any from function declared to
+return "str"  [no-any-return]
+            return qgs + "\n\n" + contract + "\n\n" + rendered_template
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/ai/mock_provider.py:8: error: Cannot find implementation or library stub
+for module named "ai.provider"  [import-not-found]
+    from ai.provider import AIProvider
+    ^
+Engine/ai/mock_provider.py:8: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+Engine/validators/csv_validator.py:12: error: Cannot find implementation or
+library stub for module named "models.csv_validation_result_model" 
+[import-not-found]
+    from models.csv_validation_result_model import CSVValidationResultMode...
+    ^
+Engine/validators/csv_validator.py:14: error: Cannot find implementation or
+library stub for module named "schema.question_schema"  [import-not-found]
+    from schema.question_schema import EXPORT_COLUMNS
+    ^
+Engine/exporters/question_csv_exporter.py:14: error: Cannot find implementation
+or library stub for module named "schema.question_schema"  [import-not-found]
+    from schema.question_schema import EXPORT_COLUMNS
+    ^
+Engine/exporters/csv_exporter.py:9: error: Cannot find implementation or
+library stub for module named "core.folder_manager"  [import-not-found]
+    from core.folder_manager import FolderManager
+    ^
+Engine/exporters/csv_exporter.py:10: error: Cannot find implementation or
+library stub for module named "core.file_name_generator"  [import-not-found]
+    from core.file_name_generator import FileNameGenerator
+    ^
+Engine/core/csv_writer.py:11: error: Cannot find implementation or library stub
+for module named "core.schema"  [import-not-found]
+    from core.schema import QUESTION_SCHEMA
+    ^
+Engine/pipeline/processors/ai_processor.py:12: error: Cannot find
+implementation or library stub for module named "ai.provider_factory" 
+[import-not-found]
+    from ai.provider_factory import ProviderFactory
+    ^
+Engine/pipeline/processors/ai_processor.py:14: error: Cannot find
+implementation or library stub for module named "models.pipeline_context_model" 
+[import-not-found]
+    from models.pipeline_context_model import PipelineContextModel
+    ^
+Engine/pipeline/processors/ai_processor.py:16: error: Cannot find
+implementation or library stub for module named
+"pipeline.processors.pipeline_processor"  [import-not-found]
+    from pipeline.processors.pipeline_processor import PipelineProcessor
+    ^
+Engine/core/state_manager.py:18: error: Cannot find implementation or library
+stub for module named "config"  [import-not-found]
+    from config import PROGRESS_FILE, METADATA_FILE, MANIFEST_FILE
+    ^
+Engine/ai/response_parser.py:15: error: Returning Any from function declared to
+return "dict[Any, Any]"  [no-any-return]
+                return json.loads(response)
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/core/logger.py:14: error: Module "Engine.config" has no attribute
+"LOG_DIR"  [attr-defined]
+    from Engine.config import LOG_DIR
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/production/production_worker.py:117: error: Incompatible return value
+type (got "WorkerResultModel | None", expected "WorkerResultModel") 
+[return-value]
+            return last_result
+                   ^~~~~~~~~~~
+Engine/director/manufacturing_director.py:49: error: Cannot find implementation
+or library stub for module named "Engine.manufacturing.manufacturing_engine" 
+[import-not-found]
+    from Engine.manufacturing.manufacturing_engine import ManufacturingEng...
+    ^
+Engine/director/manufacturing_director.py:52: error: Cannot find implementation
+or library stub for module named "Engine.qa.quality_lab"  [import-not-found]
+    from Engine.qa.quality_lab import QualityLab
+    ^
+Engine/director/manufacturing_director.py:55: error: Cannot find implementation
+or library stub for module named "Engine.repair.repair_engine" 
+[import-not-found]
+    from Engine.repair.repair_engine import RepairEngine
+    ^
+Engine/director/manufacturing_director.py:58: error: Cannot find implementation
+or library stub for module named "Engine.packaging.packaging_engine" 
+[import-not-found]
+    from Engine.packaging.packaging_engine import PackagingEngine
+    ^
+Engine/director/manufacturing_director.py:61: error: Cannot find implementation
+or library stub for module named "Engine.logging.production_logger" 
+[import-not-found]
+    from Engine.logging.production_logger import ProductionLogger
+    ^
+Engine/director/manufacturing_director.py:215: error: Incompatible types in
+assignment (expression has type "RuntimeModel", variable has type
+"dict[str, Any]")  [assignment]
+            context.runtime = runtime_state
+                              ^~~~~~~~~~~~~
+Engine/director/manufacturing_director.py:263: error: Argument "runtime" to
+"get_next_node" of "ProductionScheduler" has incompatible type "dict[str, Any]";
+expected "RuntimeModel"  [arg-type]
+                runtime=context.runtime,
+                        ^~~~~~~~~~~~~~~
+Engine/director/manufacturing_director.py:338: error: Item "None" of
+"Any | None" has no attribute "is_success"  [union-attr]
+            if context.qa_report.is_success:
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/director/manufacturing_director.py:419: error: Argument
+"current_runtime" to "build_next_runtime" of "RuntimeController" has
+incompatible type "dict[str, Any]"; expected "RuntimeModel"  [arg-type]
+                current_runtime=context.runtime,
+                                ^~~~~~~~~~~~~~~
+Engine/director/manufacturing_director.py:426: error: Incompatible types in
+assignment (expression has type "RuntimeModel", variable has type
+"dict[str, Any]")  [assignment]
+            context.runtime = next_runtime
+                              ^~~~~~~~~~~~
+Engine/factory/factory_runner.py:59: error: Argument "request_id" to
+"ProductionRequestModel" has incompatible type "object"; expected "str" 
+[arg-type]
+                    request_id=order["order_id"],
+                               ^~~~~~~~~~~~~~~~~
+Engine/factory/factory_runner.py:60: error: Argument "subject" to
+"ProductionRequestModel" has incompatible type "object"; expected "str" 
+[arg-type]
+                    subject=order["subject"],
+                            ^~~~~~~~~~~~~~~~
+Engine/factory/factory_runner.py:61: error: Argument "unit" to
+"ProductionRequestModel" has incompatible type "object"; expected "str" 
+[arg-type]
+                    unit=order["unit"],
+                         ^~~~~~~~~~~~~
+Engine/factory/factory_runner.py:62: error: Argument "chapter" to
+"ProductionRequestModel" has incompatible type "object"; expected "str" 
+[arg-type]
+                    chapter=order["chapter"],
+                            ^~~~~~~~~~~~~~~~
+Engine/factory/factory_runner.py:63: error: Argument "subtopic" to
+"ProductionRequestModel" has incompatible type "object"; expected "str" 
+[arg-type]
+                    subtopic=order["subtopic"],
+                             ^~~~~~~~~~~~~~~~~
+Engine/factory/factory_runner.py:64: error: Argument "set_no" to
+"ProductionRequestModel" has incompatible type "object"; expected "str" 
+[arg-type]
+                    set_no=order["set_no"],
+                           ^~~~~~~~~~~~~~~
+Engine/factory/factory_runner.py:65: error: Argument "total_questions" to
+"ProductionRequestModel" has incompatible type "object"; expected "int" 
+[arg-type]
+                    total_questions=order["question_count"],
+                                    ^~~~~~~~~~~~~~~~~~~~~~~
+Engine/tests/test_factory_runner.py:12: error: Cannot find implementation or
+library stub for module named "repositories.factory_state_repository" 
+[import-not-found]
+    from repositories.factory_state_repository import FactoryStateReposito...
+    ^
+Engine/tests/test_factory_runner.py:12: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+Engine/factory/autonomous_factory.py:76: error: "ProductionRequestModel" has no
+attribute "batch_no"  [attr-defined]
+                print(f"Starting Batch {request.batch_no}")
+                                       ^~~~~~~~~~~~~~~~~
+Engine/factory/autonomous_factory.py:83: error: Unexpected keyword argument
+"production_request" for "run"  [call-arg]
+                generated = self.runner.run(production_request=request)
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Engine/factory/factory_runner.py:42: note: "run" defined here
+Engine/factory/autonomous_factory.py:97: error: "ProductionRequestModel" has no
+attribute "batch_no"  [attr-defined]
+                    print(f"Batch {request.batch_no} failed.")
+                                  ^~~~~~~~~~~~~~~~~
+Engine/ai/openai_provider.py:14: error: Cannot find implementation or library
+stub for module named "core.config_manager"  [import-not-found]
+    from core.config_manager import ConfigManager
+    ^
+Found 199 errors in 84 files (checked 193 source files)

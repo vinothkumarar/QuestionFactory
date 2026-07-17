@@ -7,35 +7,37 @@ Sprint    : S1
 Release   : R1
 """
 
-from abc import ABC
+from __future__ import annotations
+
 from abc import abstractmethod
 
-from models.pipeline_context_model import PipelineContextModel
+from Engine.models.pipeline_context_model import (
+    PipelineContextModel,
+)
+from Engine.pipeline.execution_pipeline import (
+    PipelineStage,
+)
 
 
-class PipelineProcessor(ABC):
+class PipelineProcessor(PipelineStage):
     """
     Base class for every processor
     executed by the Execution Pipeline.
     """
 
-    stage_id = "BASE"
+    stage_id: str = "BASE"
 
-    name = "Base Processor"
+    name: str = "Base Processor"
 
-    description = ""
+    description: str = ""
 
     @abstractmethod
-    def execute(self, context: PipelineContextModel) -> PipelineContextModel:
+    def execute(
+        self,
+        context: PipelineContextModel,
+    ) -> PipelineContextModel:
         """
         Execute the processor.
-
-        Parameters
-        ----------
-        context : PipelineContextModel
-
-        Returns
-        -------
-        PipelineContextModel
         """
-        pass
+        raise NotImplementedError
+        

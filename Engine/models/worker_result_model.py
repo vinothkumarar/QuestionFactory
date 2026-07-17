@@ -5,7 +5,9 @@ Worker Result Model
 
 from dataclasses import dataclass
 from typing import Optional
-from constants.generation_status import GenerationStatus
+from Engine.constants.generation_status import (
+    GenerationStatus,
+)
 
 
 @dataclass
@@ -23,7 +25,7 @@ class WorkerResultModel:
 
     validation: Optional[dict] = None
 
-    provider: str = ""
+    provider: str | None = None
 
     execution_time_ms: int = 0
 

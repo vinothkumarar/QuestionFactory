@@ -1,5 +1,5 @@
 """
-Question Factory OS v2.0
+Question Factory OS v2.1
 
 Execution Pipeline
 
@@ -14,29 +14,38 @@ manufacturing responsibility.
 from __future__ import annotations
 
 import logging
-from abc import ABC, abstractmethod
-from typing import List
+from abc import ABC
+from abc import abstractmethod
+from typing import Any
 
 from Engine.models.pipeline_context_model import (
     PipelineContextModel,
 )
 
-# ---------------------------------------------------------
+
+# ==========================================================
 # Pipeline Stage
-# ---------------------------------------------------------
+# ==========================================================
 
 
 class PipelineStage(ABC):
     """
-    Base class for every manufacturing stage.
+    Base class for every execution stage.
     """
 
-    @property
-    @abstractmethod
-    def name(self) -> str:
-        """
-        Stage name.
-        """
+    #
+    # Metadata
+    #
+
+    stage_id: str = "BASE"
+
+    name: str = "Pipeline Stage"
+
+    description: str = ""
+
+    #
+    # Execution
+    #
 
     @abstractmethod
     def execute(
@@ -44,36 +53,46 @@ class PipelineStage(ABC):
         context: PipelineContextModel,
     ) -> PipelineContextModel:
         """
-        Execute one pipeline stage.
+        Execute the stage.
         """
+        raise NotImplementedError
 
 
-# ---------------------------------------------------------
+# ==========================================================
 # Execution Pipeline
-# ---------------------------------------------------------
+# ==========================================================
 
 
 class ExecutionPipeline:
     """
-    Executes manufacturing stages sequentially.
+    Sequential execution pipeline.
+
+    Stages are executed in the order
+    they are registered.
     """
 
-    def __init__(self):
+    VERSION = "2.1.0"
 
-        self.logger = logging.getLogger(self.__class__.__name__)
+    COMPONENT_NAME = "Execution Pipeline"
 
-        self._stages: List[PipelineStage] = []
-        # ---------------------------------------------------------
+    def __init__(self) -> None:
 
-    # Stage Management
-    # ---------------------------------------------------------
+        self.logger = logging.getLogger(
+            self.__class__.__name__
+        )
+
+        self._stages: list[PipelineStage] = []
+
+    # ------------------------------------------------------
+    # Registration
+    # ------------------------------------------------------
 
     def add_stage(
         self,
         stage: PipelineStage,
     ) -> None:
         """
-        Register a pipeline stage.
+        Register a stage.
         """
 
         self._stages.append(stage)
@@ -83,19 +102,16 @@ class ExecutionPipeline:
             stage.name,
         )
 
-    # ---------------------------------------------------------
-    # Backward Compatibility
-    # ---------------------------------------------------------
+    #
+    # Backward compatibility
+    #
 
     def add_processor(
         self,
         processor: PipelineStage,
     ) -> None:
         """
-        Backward-compatible wrapper.
-
-        Legacy code using add_processor() will continue
-        to work without modification.
+        Legacy wrapper.
         """
 
         self.add_stage(processor)
@@ -105,15 +121,10 @@ class ExecutionPipeline:
         stage_name: str,
     ) -> bool:
         """
-        Remove a stage by name.
-
-        Returns
-        -------
-        bool
-            True if removed.
+        Remove a registered stage.
         """
 
-        for stage in self._stages:
+        for stage in list(self._stages):
 
             if stage.name == stage_name:
 
@@ -130,71 +141,71 @@ class ExecutionPipeline:
 
     def clear(self) -> None:
         """
-        Remove every registered stage.
+        Remove every stage.
         """
 
         self._stages.clear()
 
-        self.logger.info("Pipeline cleared.")
+        self.logger.info(
+            "Pipeline cleared."
+        )
 
-    # ---------------------------------------------------------
+    # ------------------------------------------------------
     # Information
-    # ---------------------------------------------------------
+    # ------------------------------------------------------
 
     @property
-    def stage_count(self) -> int:
-        """
-        Number of registered stages.
-        """
+    def stage_count(
+        self,
+    ) -> int:
 
         return len(self._stages)
 
-    #
-    # Backward compatibility
-    #
-
-    def size(self) -> int:
+    def size(
+        self,
+    ) -> int:
         """
         Legacy API.
-
-        Equivalent to stage_count.
         """
 
         return self.stage_count
 
-    def stage_names(self) -> List[str]:
-        """
-        Return registered stage names.
-        """
+    def is_empty(
+        self,
+    ) -> bool:
 
-        return [stage.name for stage in self._stages]
+        return self.stage_count == 0
+
+    def stage_names(
+        self,
+    ) -> list[str]:
+
+        return [
+            stage.name
+            for stage in self._stages
+        ]
 
     def has_stage(
         self,
         stage_name: str,
     ) -> bool:
-        """
-        Determine whether a stage exists.
-        """
 
         return stage_name in self.stage_names()
-        # ---------------------------------------------------------
-
+    # ------------------------------------------------------
     # Execution
-    # ---------------------------------------------------------
+    # ------------------------------------------------------
 
     def run(
         self,
         context: PipelineContextModel,
     ) -> PipelineContextModel:
         """
-        Execute every registered pipeline stage.
-
-        Stages are executed sequentially in the order they
-        were registered.
+        Execute every registered stage.
         """
 
-        self.logger.info("Pipeline execution started.")
+        self.logger.info(
+            "Pipeline execution started."
+        )
 
         self.before_pipeline(context)
 
@@ -217,7 +228,7 @@ class ExecutionPipeline:
             except Exception:
 
                 self.logger.exception(
-                    "Stage '%s' failed.",
+                    "Pipeline stage '%s' failed.",
                     stage.name,
                 )
 
@@ -230,23 +241,25 @@ class ExecutionPipeline:
 
         self.after_pipeline(context)
 
-        self.logger.info("Pipeline execution completed.")
+        self.logger.info(
+            "Pipeline execution completed."
+        )
 
         return context
 
-    # ---------------------------------------------------------
+    # ------------------------------------------------------
     # Lifecycle Hooks
-    # ---------------------------------------------------------
+    # ------------------------------------------------------
 
     def before_pipeline(
         self,
         context: PipelineContextModel,
     ) -> None:
         """
-        Executed before pipeline execution begins.
+        Executed immediately before the
+        pipeline starts.
 
-        Override in derived implementations to perform
-        initialization, metrics collection or checkpointing.
+        Override in derived classes if required.
         """
 
         return
@@ -256,9 +269,8 @@ class ExecutionPipeline:
         context: PipelineContextModel,
     ) -> None:
         """
-        Executed after pipeline execution completes.
-
-        Override for reporting or cleanup.
+        Executed immediately after the
+        pipeline completes.
         """
 
         return
@@ -269,7 +281,7 @@ class ExecutionPipeline:
         context: PipelineContextModel,
     ) -> None:
         """
-        Executed immediately before a stage runs.
+        Hook executed before every stage.
         """
 
         return
@@ -280,14 +292,14 @@ class ExecutionPipeline:
         context: PipelineContextModel,
     ) -> None:
         """
-        Executed immediately after a stage completes.
+        Hook executed after every stage.
         """
 
         return
-        # ---------------------------------------------------------
 
+    # ------------------------------------------------------
     # Stage Lookup
-    # ---------------------------------------------------------
+    # ------------------------------------------------------
 
     def get_stage(
         self,
@@ -295,15 +307,6 @@ class ExecutionPipeline:
     ) -> PipelineStage | None:
         """
         Return a registered stage by name.
-
-        Parameters
-        ----------
-        stage_name
-            Name of the stage.
-
-        Returns
-        -------
-        PipelineStage | None
         """
 
         for stage in self._stages:
@@ -313,21 +316,31 @@ class ExecutionPipeline:
 
         return None
 
-    def stages(self) -> List[PipelineStage]:
+    def stages(
+        self,
+    ) -> list[PipelineStage]:
         """
-        Return all registered stages.
-
-        A shallow copy is returned to prevent callers from
-        modifying the internal stage collection.
+        Return a copy of the registered stages.
         """
 
         return list(self._stages)
 
-    # ---------------------------------------------------------
-    # Diagnostics
-    # ---------------------------------------------------------
+    def contains(
+        self,
+        stage_name: str,
+    ) -> bool:
+        """
+        Backward-compatible convenience wrapper.
+        """
 
-    def summary(self) -> dict:
+        return self.has_stage(stage_name)
+    # ------------------------------------------------------
+    # Diagnostics
+    # ------------------------------------------------------
+
+    def summary(
+        self,
+    ) -> dict[str, Any]:
         """
         Return a concise pipeline summary.
         """
@@ -337,38 +350,51 @@ class ExecutionPipeline:
             "stages": self.stage_names(),
         }
 
-    def diagnostics(self) -> dict:
+    def diagnostics(
+        self,
+    ) -> dict[str, Any]:
         """
-        Return detailed pipeline diagnostics.
+        Return detailed diagnostic information.
         """
 
         return {
-            "component": self.__class__.__name__,
+            "component": self.component_name,
+            "version": self.version,
             "summary": self.summary(),
             "health": self.health(),
         }
 
-    # ---------------------------------------------------------
-    # Health
-    # ---------------------------------------------------------
+    # ------------------------------------------------------
+    # Version Information
+    # ------------------------------------------------------
 
     @property
-    def version(self) -> str:
+    def version(
+        self,
+    ) -> str:
         """
         Pipeline version.
         """
 
-        return "2.0.0"
+        return self.VERSION
 
     @property
-    def component_name(self) -> str:
+    def component_name(
+        self,
+    ) -> str:
         """
-        Pipeline component name.
+        Human-readable component name.
         """
 
-        return "Execution Pipeline"
+        return self.COMPONENT_NAME
 
-    def health(self) -> dict:
+    # ------------------------------------------------------
+    # Health
+    # ------------------------------------------------------
+
+    def health(
+        self,
+    ) -> dict[str, Any]:
         """
         Return pipeline health information.
         """
@@ -380,64 +406,15 @@ class ExecutionPipeline:
             "status": "READY",
         }
 
-    # ---------------------------------------------------------
-    # Utility Methods
-    # ---------------------------------------------------------
-
-    def is_empty(self) -> bool:
-        """
-        Determine whether the pipeline has any stages.
-        """
-
-        return self.stage_count == 0
-
-    def contains(
-        self,
-        stage_name: str,
-    ) -> bool:
-        """
-        Determine whether a stage exists.
-
-        Backward-compatible convenience wrapper.
-        """
-
-        return self.has_stage(stage_name)
-        # ---------------------------------------------------------
-
-    # Pipeline Information
-    # ---------------------------------------------------------
-
-    def supported_execution_model(self) -> str:
-        """
-        Return the execution model used by the pipeline.
-        """
-
-        return "SEQUENTIAL"
-
-    def capabilities(self) -> dict:
-        """
-        Describe the capabilities supported by this pipeline.
-        """
-
-        return {
-            "sequential_execution": True,
-            "stage_registration": True,
-            "stage_removal": True,
-            "stage_lookup": True,
-            "pipeline_lifecycle": True,
-            "stage_lifecycle": True,
-            "diagnostics": True,
-            "health_reporting": True,
-            "backward_compatible": True,
-        }
-
-    # ---------------------------------------------------------
+    # ------------------------------------------------------
     # Validation
-    # ---------------------------------------------------------
+    # ------------------------------------------------------
 
-    def validate(self) -> None:
+    def validate(
+        self,
+    ) -> None:
         """
-        Validate pipeline configuration.
+        Validate the pipeline configuration.
 
         Raises
         ------
@@ -447,24 +424,160 @@ class ExecutionPipeline:
 
         stage_names = self.stage_names()
 
-        duplicates = {name for name in stage_names if stage_names.count(name) > 1}
+        duplicates = {
+            name
+            for name in stage_names
+            if stage_names.count(name) > 1
+        }
 
         if duplicates:
 
-            duplicate_list = ", ".join(sorted(duplicates))
+            duplicate_list = ", ".join(
+                sorted(duplicates)
+            )
 
-            raise ValueError("Duplicate pipeline stages detected: " f"{duplicate_list}")
+            raise ValueError(
+                "Duplicate pipeline stages detected: "
+                f"{duplicate_list}"
+            )
+    # ------------------------------------------------------
+    # Capabilities
+    # ------------------------------------------------------
 
-    # ---------------------------------------------------------
+    def supported_execution_model(
+        self,
+    ) -> str:
+        """
+        Return the execution model used by the pipeline.
+        """
+
+        return "SEQUENTIAL"
+
+    def capabilities(
+        self,
+    ) -> dict[str, Any]:
+        """
+        Return the capabilities supported by this pipeline.
+        """
+
+        return {
+            "sequential_execution": True,
+            "stage_registration": True,
+            "stage_removal": True,
+            "stage_lookup": True,
+            "pipeline_lifecycle": True,
+            "stage_lifecycle": True,
+            "validation": True,
+            "diagnostics": True,
+            "health_reporting": True,
+            "backward_compatible": True,
+        }
+
+    # ------------------------------------------------------
+    # Export
+    # ------------------------------------------------------
+
+    def to_dict(
+        self,
+    ) -> dict[str, Any]:
+        """
+        Export pipeline metadata.
+        """
+
+        return {
+            "component": self.component_name,
+            "version": self.version,
+            "execution_model": self.supported_execution_model(),
+            "stage_count": self.stage_count,
+            "stages": self.stage_names(),
+            "health": self.health(),
+            "capabilities": self.capabilities(),
+        }
+
+    # ------------------------------------------------------
+    # Debug
+    # ------------------------------------------------------
+
+    def dump(
+        self,
+    ) -> dict[str, Any]:
+        """
+        Backward-compatible diagnostic dump.
+        """
+
+        return self.to_dict()
+
+    # ------------------------------------------------------
     # Representation
-    # ---------------------------------------------------------
+    # ------------------------------------------------------
 
-    def __repr__(self) -> str:
+    def __repr__(
+        self,
+    ) -> str:
         return (
             "ExecutionPipeline("
             f"stages={self.stage_count}, "
             f"version='{self.version}')"
         )
 
-    def __str__(self) -> str:
-        return f"{self.component_name} " f"[{self.stage_count} stage(s)]"
+    def __str__(
+        self,
+    ) -> str:
+        return (
+            f"{self.component_name} "
+            f"[{self.stage_count} stage(s)]"
+        )
+#
+# ==========================================================================
+# End of File
+# ==========================================================================
+
+# The implementation intentionally preserves the original public API
+# while modernizing the internal typing for Question Factory OS v2.1.
+#
+# Public API preserved:
+#
+#   • add_stage()
+#   • add_processor()
+#   • remove_stage()
+#   • clear()
+#   • run()
+#   • stage_count
+#   • size()
+#   • stage_names()
+#   • has_stage()
+#   • contains()
+#   • get_stage()
+#   • stages()
+#   • before_pipeline()
+#   • after_pipeline()
+#   • before_stage()
+#   • after_stage()
+#   • validate()
+#   • health()
+#   • summary()
+#   • diagnostics()
+#   • capabilities()
+#   • dump()
+#   • to_dict()
+#
+# Design Notes
+# ------------
+#
+# PipelineStage now exposes metadata
+#
+#     stage_id
+#     name
+#     description
+#
+# as normal class attributes instead of abstract properties.
+#
+# This aligns with every existing processor implementation
+# (BuildProcessor, PromptProcessor, AIProcessor,
+# ParseProcessor, MergeProcessor, ValidationProcessor),
+# eliminating the previous mypy inheritance conflict while
+# preserving backward compatibility.
+#
+# No business logic has been changed.
+#
+# ==========================================================================

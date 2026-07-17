@@ -3,7 +3,9 @@ Question Factory OS
 Production Order ID Generator
 """
 
-from models.factory_state_model import FactoryStateModel
+from Engine.models.factory_state_model import (
+    FactoryStateModel,
+)
 
 
 class ProductionOrderIdGenerator:

@@ -9,21 +9,21 @@ Responsibilities:
 - Coordinate future modules
 """
 
-from core.runtime_manager import RuntimeManager
-from core.resource_manager import ResourceManager
-from core.csv_writer import CSVWriter
+from pathlib import Path
+
+from Engine.core.csv_writer import CSVWriter
+from Engine.core.resource_manager import ResourceManager
+from Engine.core.runtime_manager import RuntimeManager
 
 
 class QuestionFactoryEngine:
-
-    def __init__(self):
+    def __init__(self) -> None:
         self.resource_manager = ResourceManager()
         self.runtime = RuntimeManager()
         self.csv_writer = CSVWriter()
-        self.folder = None
+        self.folder: Path | None = None
 
-    def execute(self):
-
+    def execute(self) -> None:
         progress = self.runtime.progress
 
         self.folder = self.resource_manager.ensure_questionbank_path(
@@ -40,7 +40,12 @@ class QuestionFactoryEngine:
             f"{progress['current_batch']}.csv"
         )
 
-        csv_file = self.csv_writer.create_batch_file(self.folder, filename)
+        assert self.folder is not None
+
+        csv_file = self.csv_writer.create_batch_file(
+            self.folder,
+            filename,
+        )
 
         print()
         print("=" * 50)
