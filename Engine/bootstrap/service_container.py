@@ -22,6 +22,8 @@ from Engine.factory.orchestrator.factory_orchestrator import (
     FactoryOrchestrator,
 )
 
+from functools import cached_property
+
 import logging
 
 LOGGER = logging.getLogger(__name__)
@@ -47,14 +49,14 @@ class ServiceContainer:
         self._ai_client: AIClient | None = None
         self._prompt_builder: PromptBuilder | None = None
         self._response_parser: ResponseParser | None = None
-        self._ai_engine: AIEngine | None = None
+        
 
         #
         # Manufacturing Services
         #
 
-        self._ai_job_builder: AIJobBuilder | None = None
-        self._factory_orchestrator: FactoryOrchestrator | None = None
+        
+        
        
     # ---------------------------------------------------------
     # Registration
@@ -146,10 +148,10 @@ class ServiceContainer:
             "ai_client": self._ai_client is not None,
             "prompt_builder": self._prompt_builder is not None,
             "response_parser": self._response_parser is not None,
-            "ai_engine": self._ai_engine is not None,
-            "ai_job_builder": self._ai_job_builder is not None,
+            "ai_engine": "ai_engine" in self.__dict__,
+            "ai_job_builder": "ai_job_builder" in self.__dict__,
             "factory_orchestrator": (
-                self._factory_orchestrator is not None
+                "factory_orchestrator" in self.__dict__
             ),
         }
 
@@ -169,7 +171,58 @@ class ServiceContainer:
     def __str__(self) -> str:
         return "Question Factory ServiceContainer"
 
+    # ---------------------------------------------------------
+    # Lazy Construction
+    # ---------------------------------------------------------
+
+    @cached_property
+    def ai_job_builder(self) -> AIJobBuilder:
+        """
+        Lazily construct the shared AIJobBuilder.
+        """
+
+        self._logger.info(
+            "Creating AIJobBuilder."
+        )
+
+        return AIJobBuilder()
+
+    @cached_property
+    def ai_engine(self) -> AIEngine:
+        """
+        Lazily construct the shared AIEngine.
+        """
+
+        self._logger.info(
+            "Creating AIEngine."
+        )
+
+        return AIEngine(
+            ai_client=self.ai_client,
+            prompt_builder=self.prompt_builder,
+            response_parser=self.response_parser,
+        )
+
+    @cached_property
+    def factory_orchestrator(self) -> FactoryOrchestrator:
+        """
+        Lazily construct the shared FactoryOrchestrator.
+        """
+
+        self._logger.info(
+            "Creating FactoryOrchestrator."
+        )
+
+        return FactoryOrchestrator(
+            ai_engine=self.ai_engine,
+            prompt_builder=self.prompt_builder,
+            response_parser=self.response_parser,
+        )
+
 
 __all__ = [
     "ServiceContainer",
 ]
+
+    
+
