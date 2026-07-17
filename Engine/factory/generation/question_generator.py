@@ -27,6 +27,8 @@ from Engine.models.runtime_model import (
 )
 
 
+
+
 class QuestionGenerator:
     """
     Manufactures raw question batches.
@@ -35,6 +37,8 @@ class QuestionGenerator:
     def __init__(self):
 
         self.logger = logging.getLogger(self.__class__.__name__)
+
+        
 
     # ---------------------------------------------------------
     # Public API
