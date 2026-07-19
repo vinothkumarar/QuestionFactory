@@ -11,6 +11,7 @@ PromptRegistry.
 Responsibilities
 ----------------
 • Template selection
+• Manufacturing instruction generation
 • Variable construction
 • Prompt rendering
 • PromptPackage creation
@@ -26,6 +27,7 @@ Question Factory OS
 from __future__ import annotations
 
 import logging
+import textwrap
 import time
 
 from typing import Any
@@ -40,8 +42,8 @@ from Engine.factory.ai.models.prompt_package import (
 from Engine.factory.ai.prompt_templates import (
     PromptCategory,
     PromptRegistry,
-    PromptTemplate,
     PromptRenderResult,
+    PromptTemplate,
 )
 
 logger = logging.getLogger(__name__)
@@ -54,13 +56,19 @@ logger = logging.getLogger(__name__)
 
 class PromptBuilder:
     """
-    Builds PromptPackage objects from AIJob
-    instances.
+    Builds PromptPackage instances from AIJob.
 
-    PromptBuilder coordinates template lookup,
-    rendering and PromptPackage construction,
-    while PromptRegistry owns template storage
-    and rendering.
+    The PromptBuilder is responsible for:
+
+    • Selecting the correct prompt template.
+    • Building the manufacturing instruction.
+    • Constructing template variables.
+    • Rendering the prompt.
+    • Producing a PromptPackage.
+
+    The PromptRegistry owns templates.
+
+    PromptBuilder owns prompt composition.
     """
 
     def __init__(
@@ -79,20 +87,6 @@ class PromptBuilder:
         logger.info(
             "PromptBuilder initialized."
         )
-
-    # ------------------------------------------------------------------
-    # Properties
-    # ------------------------------------------------------------------
-
-    @property
-    def registry(
-        self,
-    ) -> PromptRegistry:
-        """
-        Return the underlying prompt registry.
-        """
-
-        return self._registry
 
     # ------------------------------------------------------------------
     # Public API
@@ -133,6 +127,19 @@ class PromptBuilder:
             job=job,
             additional_variables=additional_variables,
         )
+
+        #
+        # Build manufacturing instruction.
+        #
+
+        variables["instruction"] = (
+            self._build_instruction(
+                job=job,
+                category=category,
+                variables=variables,
+            )
+        )
+
         render_result = (
             self._registry.render_template(
                 category=category,
@@ -164,7 +171,7 @@ class PromptBuilder:
 
         return create_prompt_package(
             prompt=render_result.rendered_prompt,
-            system_prompt=metadata.get(
+            system_prompt=variables.get(
                 "system_prompt"
             ),
             template_id=template.id,
@@ -182,6 +189,93 @@ class PromptBuilder:
         )
 
     # ------------------------------------------------------------------
+    # Instruction Builder
+    # ------------------------------------------------------------------
+
+    def _build_instruction(
+        self,
+        *,
+        job: AIJob,
+        category: PromptCategory,
+        variables: Dict[str, Any],
+    ) -> str:
+        """
+        Build the manufacturing instruction
+        consumed by PromptRegistry.
+
+        This converts an AIJob into a single
+        provider-independent prompt.
+        """
+
+        existing_prompt = (
+            getattr(job, "prompt", "") or ""
+        ).strip()
+
+        #
+        # Respect explicitly supplied prompts.
+        #
+
+        if existing_prompt:
+            return existing_prompt
+
+        if (
+            category
+            != PromptCategory.QUESTION_GENERATION
+        ):
+            return ""
+
+        blueprint = variables.get(
+            "blueprint",
+            "",
+        )
+
+        metadata = variables.get(
+            "metadata",
+            {},
+        )
+
+        return textwrap.dedent(
+            f"""
+            You are an expert examination
+            question setter.
+
+            Generate exactly
+            {variables.get("question_count", 1)}
+            multiple-choice questions.
+
+            Subject:
+            {variables.get("subject", "")}
+
+            Unit:
+            {variables.get("unit", "")}
+
+            Chapter:
+            {variables.get("chapter", "")}
+
+            Subtopic:
+            {variables.get("subtopic", "")}
+
+            Difficulty:
+            {variables.get("difficulty", "")}
+
+            Blueprint:
+            {blueprint}
+
+            Metadata:
+            {metadata}
+
+            Requirements
+
+            - Follow the supplied blueprint.
+            - Produce original questions.
+            - Provide four options.
+            - Exactly one correct answer.
+            - Include explanation.
+            - Return valid JSON only.
+            """
+        ).strip()
+
+    # ------------------------------------------------------------------
     # Variable Construction
     # ------------------------------------------------------------------
 
@@ -194,13 +288,11 @@ class PromptBuilder:
         ],
     ) -> Dict[str, Any]:
         """
-        Build the rendering variables.
+        Build template variables.
 
-        Standard variables are extracted
-        from the AIJob.
-
-        Caller supplied variables override
-        defaults.
+        Variables originate from the AIJob and
+        may be overridden by caller supplied
+        values.
         """
 
         variables = self._base_variables(
@@ -208,10 +300,29 @@ class PromptBuilder:
         )
 
         if additional_variables:
-
             variables.update(
                 additional_variables
             )
+
+        #
+        # Ensure mandatory prompt variables
+        # always exist.
+        #
+
+        variables.setdefault(
+            "instruction",
+            "",
+        )
+
+        variables.setdefault(
+            "system_prompt",
+            "",
+        )
+
+        variables.setdefault(
+            "prompt",
+            "",
+        )
 
         return variables
 
@@ -221,145 +332,151 @@ class PromptBuilder:
     ) -> Dict[str, Any]:
         """
         Build the provider-independent
-        variable dictionary.
+        variable dictionary from AIJob.
         """
 
-        variables: Dict[str, Any] = {}
+        variables: Dict[str, Any] = {
 
-        #
-        # Common identifiers
-        #
+            #
+            # Runtime identifiers
+            #
 
-        variables["job_id"] = getattr(
-            job,
-            "job_id",
-            "",
-        )
+            "job_id": getattr(
+                job,
+                "job_id",
+                "",
+            ),
 
-        variables["request_id"] = getattr(
-            job,
-            "request_id",
-            "",
-        )
+            "request_id": getattr(
+                job,
+                "request_id",
+                "",
+            ),
 
-        variables["project"] = getattr(
-            job,
-            "project",
-            "",
-        )
+            "project": getattr(
+                job,
+                "project",
+                "",
+            ),
 
-        #
-        # Prompt information
-        #
+            #
+            # Existing prompts
+            #
 
-        variables["prompt"] = getattr(
-            job,
-            "prompt",
-            "",
-        )
+            "prompt": getattr(
+                job,
+                "prompt",
+                "",
+            ),
 
-        variables["system_prompt"] = getattr(
-            job,
-            "system_prompt",
-            "",
-        )
+            "system_prompt": getattr(
+                job,
+                "system_prompt",
+                "",
+            ),
 
-        #
-        # Manufacturing context
-        #
+            #
+            # Manufacturing context
+            #
 
-        variables["subject"] = getattr(
-            job,
-            "subject",
-            "",
-        )
+            "subject": getattr(
+                job,
+                "subject",
+                "",
+            ),
 
-        variables["chapter"] = getattr(
-            job,
-            "chapter",
-            "",
-        )
+            "unit": getattr(
+                job,
+                "unit",
+                "",
+            ),
 
-        variables["subtopic"] = getattr(
-            job,
-            "subtopic",
-            "",
-        )
+            "chapter": getattr(
+                job,
+                "chapter",
+                "",
+            ),
 
-        variables["difficulty"] = getattr(
-            job,
-            "difficulty",
-            "",
-        )
+            "subtopic": getattr(
+                job,
+                "subtopic",
+                "",
+            ),
 
-        variables["batch"] = getattr(
-            job,
-            "batch",
-            "",
-        )
-        variables["question_count"] = getattr(
-            job,
-            "question_count",
-            1,
-        )
+            "difficulty": getattr(
+                job,
+                "difficulty",
+                "",
+            ),
 
-        variables["blueprint"] = getattr(
-            job,
-            "blueprint",
-            "",
-        )
+            "difficulty_level": getattr(
+                job,
+                "difficulty_level",
+                "",
+            ),
 
-        #
-        # Optional runtime information
-        #
+            "batch": getattr(
+                job,
+                "batch",
+                "",
+            ),
 
-        variables["unit"] = getattr(
-            job,
-            "unit",
-            "",
-        )
+            "question_count": getattr(
+                job,
+                "question_count",
+                1,
+            ),
 
-        variables["chapter_code"] = getattr(
-            job,
-            "chapter_code",
-            "",
-        )
+            #
+            # Blueprint
+            #
 
-        variables["subtopic_code"] = getattr(
-            job,
-            "subtopic_code",
-            "",
-        )
+            "blueprint": getattr(
+                job,
+                "blueprint",
+                "",
+            ),
 
-        variables["difficulty_level"] = getattr(
-            job,
-            "difficulty_level",
-            "",
-        )
+            #
+            # Optional identifiers
+            #
 
-        variables["exam"] = getattr(
-            job,
-            "exam",
-            "",
-        )
+            "chapter_code": getattr(
+                job,
+                "chapter_code",
+                "",
+            ),
 
-        variables["language"] = getattr(
-            job,
-            "language",
-            "en",
-        )
+            "subtopic_code": getattr(
+                job,
+                "subtopic_code",
+                "",
+            ),
 
-        variables["tags"] = getattr(
-            job,
-            "tags",
-            [],
-        )
+            "exam": getattr(
+                job,
+                "exam",
+                "",
+            ),
 
-        variables["metadata"] = getattr(
-            job,
-            "metadata",
-            {},
-        )
+            "language": getattr(
+                job,
+                "language",
+                "en",
+            ),
+
+            "tags": getattr(
+                job,
+                "tags",
+                [],
+            ),
+
+            "metadata": getattr(
+                job,
+                "metadata",
+                {},
+            ),
+        }
 
         return variables
 
@@ -376,59 +493,112 @@ class PromptBuilder:
     ) -> Dict[str, Any]:
         """
         Build PromptPackage metadata.
+
+        Metadata is intentionally provider
+        independent and useful for diagnostics.
         """
 
         metadata: Dict[str, Any] = {
+
+            #
+            # Builder
+            #
+
             "builder": self.__class__.__name__,
+
+            #
+            # Template
+            #
+
             "template_id": template.id,
             "template_name": template.name,
             "template_version": template.version,
-            "template_category": template.category.value,
+            "template_category": (
+                template.category.value
+            ),
+
+            #
+            # Rendering
+            #
+
             "render_duration_ms": (
                 render_result.render_duration_ms
             ),
+
+            #
+            # Prompt statistics
+            #
+
+            "prompt_length": len(
+                render_result.rendered_prompt
+            ),
+
+            "estimated_tokens": (
+                self._estimate_tokens(
+                    render_result.rendered_prompt
+                )
+            ),
         }
+
+        #
+        # Merge renderer metadata.
+        #
 
         metadata.update(
             render_result.metadata
         )
 
         #
-        # Optional runtime identifiers
+        # Runtime identifiers.
         #
 
-        job_id = getattr(
-            job,
+        for field in (
             "job_id",
-            None,
-        )
-
-        if job_id:
-
-            metadata["job_id"] = job_id
-
-        request_id = getattr(
-            job,
             "request_id",
-            None,
-        )
-
-        if request_id:
-
-            metadata["request_id"] = request_id
-
-        project = getattr(
-            job,
             "project",
+            "subject",
+            "unit",
+            "chapter",
+            "subtopic",
+            "difficulty",
+            "batch",
+            "question_count",
+        ):
+
+            value = getattr(
+                job,
+                field,
+                None,
+            )
+
+            if value not in (
+                None,
+                "",
+            ):
+                metadata[field] = value
+
+        #
+        # Merge custom metadata supplied
+        # by the AIJob.
+        #
+
+        job_metadata = getattr(
+            job,
+            "metadata",
             None,
         )
 
-        if project:
-
-            metadata["project"] = project
+        if isinstance(
+            job_metadata,
+            dict,
+        ):
+            metadata.update(
+                job_metadata
+            )
 
         return metadata
-    # ------------------------------------------------------------------
+
+        # ------------------------------------------------------------------
     # Token Estimation
     # ------------------------------------------------------------------
 
@@ -441,10 +611,6 @@ class PromptBuilder:
 
         This is intentionally a lightweight
         approximation.
-
-        Provider-specific tokenizers may
-        replace this implementation in
-        future releases.
         """
 
         if not prompt:
@@ -488,9 +654,6 @@ class PromptBuilder:
     ) -> None:
         """
         Validate rendering variables.
-
-        Delegates validation to the
-        PromptRegistry.
         """
 
         result = self._registry.render_template(
@@ -512,69 +675,6 @@ class PromptBuilder:
         )
 
     # ------------------------------------------------------------------
-    # Convenience Builders
-    # ------------------------------------------------------------------
-
-    def build_generation_prompt(
-        self,
-        job: AIJob,
-        *,
-        template_version: Optional[str] = None,
-        additional_variables: Optional[
-            Dict[str, Any]
-        ] = None,
-    ) -> PromptPackage:
-        """
-        Build a question generation prompt.
-        """
-
-        return self.build(
-            job=job,
-            category=PromptCategory.QUESTION_GENERATION,
-            template_version=template_version,
-            additional_variables=additional_variables,
-        )
-
-    def build_repair_prompt(
-        self,
-        job: AIJob,
-        *,
-        template_version: Optional[str] = None,
-        additional_variables: Optional[
-            Dict[str, Any]
-        ] = None,
-    ) -> PromptPackage:
-        """
-        Build a question repair prompt.
-        """
-
-        return self.build(
-            job=job,
-            category=PromptCategory.QUESTION_REPAIR,
-            template_version=template_version,
-            additional_variables=additional_variables,
-        )
-
-    def build_validation_prompt(
-        self,
-        job: AIJob,
-        *,
-        template_version: Optional[str] = None,
-        additional_variables: Optional[
-            Dict[str, Any]
-        ] = None,
-    ) -> PromptPackage:
-        """
-        Build a validation prompt.
-        """
-
-        return self.build(
-            job=job,
-            category=PromptCategory.VALIDATION,
-            template_version=template_version,
-            additional_variables=additional_variables,
-        )
-    # ------------------------------------------------------------------
     # Diagnostics
     # ------------------------------------------------------------------
 
@@ -588,11 +688,11 @@ class PromptBuilder:
         return {
             "component": self.__class__.__name__,
             "healthy": self.healthy(),
-            "registry_valid": (
-                self._registry.validate()
-            ),
             "registered_templates": (
                 self._registry.size()
+            ),
+            "registry_valid": (
+                self._registry.validate()
             ),
             "categories": [
                 category.value
@@ -614,9 +714,8 @@ class PromptBuilder:
 
         return {
             "builder": self.__class__.__name__,
-            "registered_templates": (
-                self._registry.size()
-            ),
+            "healthy": self.healthy(),
+            "templates": self._registry.size(),
             "registry_valid": (
                 self._registry.validate()
             ),
@@ -633,7 +732,7 @@ class PromptBuilder:
         version: Optional[str] = None,
     ) -> PromptTemplate:
         """
-        Return the selected template.
+        Return a validated template.
         """
 
         template = self._registry.find(
@@ -662,8 +761,7 @@ class PromptBuilder:
         version: Optional[str] = None,
     ) -> bool:
         """
-        Return True if a matching template
-        exists.
+        Return True if template exists.
         """
 
         return (
@@ -678,14 +776,13 @@ class PromptBuilder:
         self,
     ) -> list[PromptCategory]:
         """
-        Return all registered prompt
-        categories.
+        Return registered categories.
         """
 
         return self._registry.categories()
 
     # ------------------------------------------------------------------
-    # Token Estimation
+    # Token Helpers
     # ------------------------------------------------------------------
 
     def estimate_prompt_tokens(
@@ -693,7 +790,7 @@ class PromptBuilder:
         prompt: str,
     ) -> int:
         """
-        Estimate the number of prompt tokens.
+        Estimate prompt tokens.
         """
 
         return self._estimate_tokens(
@@ -705,13 +802,13 @@ class PromptBuilder:
         package: PromptPackage,
     ) -> int:
         """
-        Estimate the token count for a
-        PromptPackage.
+        Estimate PromptPackage tokens.
         """
 
         return self._estimate_tokens(
             package.prompt
         )
+
     # ------------------------------------------------------------------
     # Health
     # ------------------------------------------------------------------
@@ -720,8 +817,7 @@ class PromptBuilder:
         self,
     ) -> bool:
         """
-        Return True if the PromptBuilder is
-        operational.
+        Return builder health.
         """
 
         return (
@@ -737,8 +833,7 @@ class PromptBuilder:
         self,
     ) -> int:
         """
-        Return the number of registered
-        templates.
+        Number of registered templates.
         """
 
         return self._registry.size()
@@ -747,7 +842,7 @@ class PromptBuilder:
         self,
     ) -> Dict[str, Any]:
         """
-        Return PromptRegistry statistics.
+        Return registry statistics.
         """
 
         return self._registry.statistics()
@@ -756,8 +851,7 @@ class PromptBuilder:
         self,
     ) -> Dict[str, Any]:
         """
-        Return a serializable description of
-        the PromptRegistry.
+        Return registry description.
         """
 
         return self._registry.describe()
@@ -772,7 +866,7 @@ def create_prompt_builder(
     registry: PromptRegistry,
 ) -> PromptBuilder:
     """
-    Create a production-ready PromptBuilder.
+    Create a production PromptBuilder.
     """
 
     builder = PromptBuilder(

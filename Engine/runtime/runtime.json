@@ -1,0 +1,58 @@
+{
+    "factory": {
+        "version": "2.0.0",
+        "status": "IDLE",
+        "started_at": "",
+        "completed_at": "",
+        "last_updated": "2026-07-19T05:43:09.981346",
+        "current_cycle_id": ""
+    },
+    "production": {
+        "subject": "",
+        "unit": "",
+        "chapter": "",
+        "subtopic": "",
+        "set_number": 1,
+        "batch_number": 1,
+        "question_from": 1,
+        "question_to": 10,
+        "next_question_number": 1,
+        "production_node": "",
+        "batch_id": ""
+    },
+    "statistics": {
+        "total_questions": 0,
+        "total_batches": 0,
+        "successful_batches": 0,
+        "failed_batches": 0,
+        "repaired_batches": 0,
+        "total_repair_cycles": 0,
+        "total_runtime_seconds": 0.0,
+        "average_batch_time_seconds": 0.0,
+        "last_batch_duration_seconds": 0.0
+    },
+    "history": {
+        "last_subject": "",
+        "last_unit": "",
+        "last_chapter": "",
+        "last_subtopic": "",
+        "last_set_number": 0,
+        "last_batch_number": 0,
+        "last_batch_id": "",
+        "last_production_node": "",
+        "last_completed_at": "",
+        "last_status": ""
+    },
+    "recovery": {
+        "checkpoint_id": "",
+        "checkpoint_time": "",
+        "last_successful_stage": "",
+        "resume_from_stage": "",
+        "recovery_required": false,
+        "interrupted": false,
+        "interruption_reason": "",
+        "retry_count": 0
+    },
+    "created_at": "2026-07-19T05:43:09.981326",
+    "updated_at": "2026-07-19T05:43:09.981346"
+}

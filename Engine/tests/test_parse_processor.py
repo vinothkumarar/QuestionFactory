@@ -37,6 +37,9 @@ context = AIProcessor().execute(context)
 
 context = ParseProcessor().execute(context)
 
+assert context.question is not None
+assert context.parsed_response is not None
+
 print("=" * 80)
 print("PARSE PROCESSOR")
 print("=" * 80)

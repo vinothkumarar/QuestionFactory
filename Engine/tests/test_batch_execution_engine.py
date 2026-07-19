@@ -8,7 +8,6 @@ Release   : R1
 """
 
 from Engine.batch.batch_execution_engine import BatchExecutionEngine
-
 from Engine.models.production_order_model import ProductionOrderModel
 
 queue = [
@@ -38,7 +37,7 @@ queue = [
 
 engine = BatchExecutionEngine()
 
-results = engine.execute(queue)
+batch = engine.execute(queue)
 
 print("=" * 80)
 print("BATCH EXECUTION ENGINE")
@@ -46,11 +45,14 @@ print("=" * 80)
 
 print()
 
-print("Orders Executed :", len(results))
+print("Orders Executed :", batch.total_orders)
 
 print()
 
-for index, result in enumerate(results, start=1):
+for index, result in enumerate(batch.worker_results, start=1):
+
+    assert result.question is not None
+    assert result.validation is not None
 
     print("-" * 80)
 

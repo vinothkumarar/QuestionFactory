@@ -15,7 +15,7 @@ from __future__ import annotations
 from collections import Counter
 
 from Engine.factory.validation.validator_base import (
-    ValidatorBase,
+    ValidationModule,
 )
 
 from Engine.factory.validation.validation_result_model import (
@@ -27,7 +27,7 @@ from Engine.models.question_batch_model import (
 )
 
 
-class R01Validator(ValidatorBase):
+class R01Validator(ValidationModule):
     """
     Structural validator.
     """
@@ -38,7 +38,7 @@ class R01Validator(ValidatorBase):
         return "R01 Structural Validator"
 
     @property
-    def rule_code(self) -> str:
+    def validation_code(self) -> str:
 
         return "R01"
 
@@ -53,8 +53,12 @@ class R01Validator(ValidatorBase):
         """
         Execute structural validation.
         """
-
-        result = self.create_success_result()
+        
+        result = ValidationResultModel(
+            validator_name=self.name,
+            rule_code=self.validation_code,
+            success=True,
+        )
 
         self._validate_batch(
             batch,
@@ -254,7 +258,7 @@ class R01Validator(ValidatorBase):
         self,
         batch: QuestionBatchModel,
         result: ValidationResultModel,
-    ) -> dict:
+    ) -> dict[str, object]:
         """
         Return R01 validation statistics.
         """
@@ -269,19 +273,18 @@ class R01Validator(ValidatorBase):
     # ---------------------------------------------------------
     # Summary
     # ---------------------------------------------------------
-
     
     def summary(
         self,
         result: ValidationResultModel,
-    ) -> dict:
+    ) -> dict[str, object]:
         """
         Return a concise R01 validation summary.
         """
 
         return {
             "validator": self.name,
-            "rule_code": self.rule_code,
+            "rule_code": self.validation_code,
             "success": (result.is_successful()),
             "errors": (result.error_count),
             "warnings": (result.warning_count),
@@ -290,36 +293,42 @@ class R01Validator(ValidatorBase):
     # ---------------------------------------------------------
     # Diagnostics
     # ---------------------------------------------------------
-
     
     def diagnostics(
         self,
-        result: ValidationResultModel,
-    ) -> dict:
+        result: ValidationResultModel | None = None,
+    ) -> dict[str, object]:
         """
         Return detailed R01 diagnostics.
         """
 
-        return {
+        diagnostics: dict[str, object] = {
             "component": self.__class__.__name__,
-            "summary": self.summary(result),
-            "statistics": result.statistics(),
-            "metadata": dict(result.metadata),
         }
 
+        if result is not None:
+            diagnostics.update(
+                {
+                    "summary": self.summary(result),
+                    "statistics": result.statistics(),
+                    "metadata": dict(result.metadata),
+                }
+            )
+
+        return diagnostics
     # ---------------------------------------------------------
     # Health
     # ---------------------------------------------------------
 
-    def health(self) -> dict:
+    def health(self) -> dict[str, object]:
         """
         Return validator health information.
         """
 
         return {
             "validator": self.name,
-            "rule_code": self.rule_code,
-            "version": self.version,
+            "rule_code": self.validation_code,
+            "version": "2.1.0",
             "status": "READY",
         }
 
@@ -327,7 +336,7 @@ class R01Validator(ValidatorBase):
     # Capabilities
     # ---------------------------------------------------------
 
-    def capabilities(self) -> dict:
+    def capabilities(self) -> dict[str, object]:
         """
         Describe R01 validator capabilities.
         """
@@ -346,17 +355,17 @@ class R01Validator(ValidatorBase):
     # Execution Information
     # ---------------------------------------------------------
 
-    def execution_information(self) -> dict:
+    def execution_information(self) -> dict[str, object]:
         """
         Return execution information.
         """
 
         return {
             "validator": self.name,
-            "rule_code": self.rule_code,
+            "rule_code": self.validation_code,
             "execution_mode": "SEQUENTIAL",
             "validation_scope": "STRUCTURAL",
-            "framework_version": self.version,
+            "framework_version": "2.1.0",
         }
 
     # ---------------------------------------------------------
@@ -365,16 +374,16 @@ class R01Validator(ValidatorBase):
 
     def validator_information(
         self,
-    ) -> dict:
+    ) -> dict[str, object]:
         """
         Return validator information.
         """
 
         return {
             "name": self.name,
-            "rule_code": self.rule_code,
+            "rule_code": self.validation_code,
             "validation_scope": "STRUCTURAL",
-            "version": self.version,
+            "version": "2.1.0",
             "execution": (self.execution_information()),
         }
 
@@ -386,10 +395,13 @@ class R01Validator(ValidatorBase):
         self,
     ) -> str:
 
-        return "R01Validator(" f"rule='{self.rule_code}')"
+        return (
+            "R01Validator("
+            f"rule='{self.validation_code}')"
+        )
 
     def __str__(
         self,
     ) -> str:
 
-        return f"{self.rule_code} - " "Structural Validation"
+        return f"{self.validation_code} - " "Structural Validation"

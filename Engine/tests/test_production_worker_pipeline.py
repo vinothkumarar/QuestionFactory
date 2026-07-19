@@ -27,6 +27,8 @@ worker = ProductionWorker()
 
 result = worker.execute(order)
 
+assert result.question is not None
+
 print("=" * 80)
 print("PRODUCTION WORKER")
 print("=" * 80)

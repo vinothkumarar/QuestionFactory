@@ -30,6 +30,8 @@ processor = BuildProcessor()
 
 context = processor.execute(context)
 
+assert context.question is not None
+
 print("=" * 80)
 print("BUILD PROCESSOR")
 print("=" * 80)

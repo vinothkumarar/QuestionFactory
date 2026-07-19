@@ -1,56 +1,58 @@
 """
-Question Factory OS v2.0
+Question Factory OS v2.1
 
 Validator Base
 
-Provides the common implementation shared by
-all validation rules.
+Defines the abstract interface implemented by every
+validation module.
 
-Concrete validators should inherit from this
-class and implement only the validation logic.
+All validation rules (R01, R02, R03, QuestionValidator,
+future validators, etc.) must inherit from this class.
 """
 
 from __future__ import annotations
 
-import logging
-from abc import ABC, abstractmethod
+from abc import ABC
+from abc import abstractmethod
+from typing import Any
 
 from Engine.factory.validation.validation_result_model import (
     ValidationResultModel,
 )
 
-from Engine.models.question_batch_model import (
-    QuestionBatchModel,
-)
 
-
-class ValidatorBase(ABC):
+class ValidationModule(ABC):
     """
-    Base class for all validators.
+    Base interface implemented by every
+    validation module.
     """
-
-    def __init__(self):
-
-        self.logger = logging.getLogger(self.__class__.__name__)
 
     # ---------------------------------------------------------
-    # Identity
+    # Identification
     # ---------------------------------------------------------
 
     @property
     @abstractmethod
     def name(self) -> str:
         """
-        Validator name.
+        Human-readable validator name.
         """
 
     @property
     @abstractmethod
-    def rule_code(self) -> str:
+    def validation_code(self) -> str:
         """
-        Validation rule identifier.
-        """
+        Unique validation rule identifier.
 
+        Examples
+        --------
+        R01
+        R02
+        R03
+        SCHEMA
+        METADATA
+        """
+    
     # ---------------------------------------------------------
     # Validation
     # ---------------------------------------------------------
@@ -58,10 +60,19 @@ class ValidatorBase(ABC):
     @abstractmethod
     def validate(
         self,
-        batch: QuestionBatchModel,
+        question: Any,
     ) -> ValidationResultModel:
         """
-        Execute validation.
+        Validate a single question.
+
+        Parameters
+        ----------
+        question:
+            Question object or dictionary.
+
+        Returns
+        -------
+        ValidationResultModel
         """
 
     # ---------------------------------------------------------
@@ -70,210 +81,49 @@ class ValidatorBase(ABC):
 
     def before_validation(
         self,
-        batch: QuestionBatchModel,
+        question: Any,
     ) -> None:
         """
         Executed immediately before validation.
 
-        Override in derived validators when
-        custom preprocessing is required.
+        Subclasses may override.
         """
-
         return
 
     def after_validation(
         self,
-        batch: QuestionBatchModel,
+        question: Any,
         result: ValidationResultModel,
     ) -> None:
         """
         Executed immediately after validation.
 
-        Override for reporting, telemetry or
-        custom post-processing.
+        Subclasses may override.
         """
-
         return
 
     # ---------------------------------------------------------
-    # Execution
+    # Execution Wrapper
     # ---------------------------------------------------------
 
     def execute(
         self,
-        batch: QuestionBatchModel,
+        question: Any,
     ) -> ValidationResultModel:
         """
-        Execute the complete validation workflow.
+        Execute the complete validation lifecycle.
         """
 
-        self.logger.info(
-            "Executing validator: %s",
-            self.name,
-        )
+        self.before_validation(question)
 
-        self.before_validation(batch)
-
-        result = self.validate(batch)
+        result = self.validate(question)
 
         self.after_validation(
-            batch,
+            question,
             result,
         )
 
-        self.logger.info(
-            "Validator '%s' completed.",
-            self.name,
-        )
-
         return result
-
-    # ---------------------------------------------------------
-    # Result Helpers
-    # ---------------------------------------------------------
-
-    def create_success_result(
-        self,
-    ) -> ValidationResultModel:
-        """
-        Create a successful validation result.
-        """
-
-        result = ValidationResultModel(
-            validator_name=self.name,
-            rule_code=self.rule_code,
-        )
-
-        result.mark_success()
-
-        return result
-
-    def create_failure_result(
-        self,
-    ) -> ValidationResultModel:
-        """
-        Create a failed validation result.
-        """
-
-        result = ValidationResultModel(
-            validator_name=self.name,
-            rule_code=self.rule_code,
-        )
-
-        result.mark_failure()
-
-        return result
-
-    # ---------------------------------------------------------
-    # Summary
-    # ---------------------------------------------------------
-
-    def summary(
-        self,
-        result: ValidationResultModel,
-    ) -> dict:
-        """
-        Return a concise validation summary.
-        """
-
-        return {
-            "validator": self.name,
-            "rule_code": self.rule_code,
-            "success": result.is_successful(),
-            "errors": result.error_count,
-            "warnings": result.warning_count,
-        }
-
-    # ---------------------------------------------------------
-    # Diagnostics
-    # ---------------------------------------------------------
-
-    def diagnostics(
-        self,
-        result: ValidationResultModel,
-    ) -> dict:
-        """
-        Return validator diagnostics.
-        """
-
-        return {
-            "component": self.__class__.__name__,
-            "summary": self.summary(result),
-            "statistics": result.statistics(),
-        }
-
-    # ---------------------------------------------------------
-    # Component Information
-    # ---------------------------------------------------------
-
-    @property
-    def version(self) -> str:
-        """
-        Validator framework version.
-        """
-
-        return "2.0.0"
-
-    @property
-    def component_name(self) -> str:
-        """
-        Component name.
-        """
-
-        return "Validator Base"
-
-    # ---------------------------------------------------------
-    # Health
-    # ---------------------------------------------------------
-
-    def health(self) -> dict:
-        """
-        Return validator health information.
-        """
-
-        return {
-            "component": self.component_name,
-            "validator": self.name,
-            "rule_code": self.rule_code,
-            "version": self.version,
-            "status": "READY",
-        }
-
-    # ---------------------------------------------------------
-    # Capabilities
-    # ---------------------------------------------------------
-
-    def capabilities(self) -> dict:
-        """
-        Describe validator capabilities.
-        """
-
-        return {
-            "execution_pipeline": True,
-            "lifecycle_hooks": True,
-            "result_helpers": True,
-            "diagnostics": True,
-            "health_reporting": True,
-            "summary": True,
-        }
-
-    # ---------------------------------------------------------
-    # Execution Information
-    # ---------------------------------------------------------
-
-    def execution_information(
-        self,
-    ) -> dict:
-        """
-        Return validator execution information.
-        """
-
-        return {
-            "validator": self.name,
-            "rule_code": self.rule_code,
-            "execution_mode": "SEQUENTIAL",
-            "framework_version": self.version,
-        }
 
     # ---------------------------------------------------------
     # Configuration
@@ -283,83 +133,92 @@ class ValidatorBase(ABC):
         self,
     ) -> None:
         """
-        Validate the validator configuration.
-
-        Raises
-        ------
-        ValueError
-            If required properties are invalid.
+        Validate validator configuration.
         """
 
         if not self.name.strip():
+            raise ValueError(
+                "Validator name cannot be empty."
+            )
 
-            raise ValueError("Validator name cannot be empty.")
-
-        if not self.rule_code.strip():
-
-            raise ValueError("Rule code cannot be empty.")
+        if not self.validation_code.strip():
+            raise ValueError(
+                "Validation code cannot be empty."
+            )
 
     # ---------------------------------------------------------
-    # Utility Methods
+    # Diagnostics
     # ---------------------------------------------------------
 
-    def create_metadata(
+    def diagnostics(
         self,
-    ) -> dict:
+        result: ValidationResultModel | None = None,
+    ) -> dict[str, object]:
         """
-        Create the default validator metadata.
+        Return validator diagnostics.
+        """
+
+        diagnostics: dict[str, object] = {
+            "component": self.__class__.__name__,
+            "name": self.name,
+            "validation_code": self.validation_code,
+        }
+
+        if result is not None:
+            diagnostics["result"] = result.summary()
+
+        return diagnostics
+
+    # ---------------------------------------------------------
+    # Health
+    # ---------------------------------------------------------
+
+    def health(
+        self,
+    ) -> dict[str, object]:
+        """
+        Return validator health.
         """
 
         return {
-            "validator": self.name,
-            "rule_code": self.rule_code,
-            "framework_version": self.version,
+            "component": self.__class__.__name__,
+            "status": "READY",
+            "validation_code": self.validation_code,
         }
 
-    def reset_result(
+    # ---------------------------------------------------------
+    # Capabilities
+    # ---------------------------------------------------------
+
+    def capabilities(
         self,
-        result: ValidationResultModel,
+    ) -> dict[str, object]:
+        """
+        Supported validator capabilities.
+        """
+
+        return {
+            "single_question_validation": True,
+            "lifecycle_hooks": True,
+            "configuration_validation": True,
+            "diagnostics": True,
+            "health_reporting": True,
+        }
+
+    # ---------------------------------------------------------
+    # Runtime
+    # ---------------------------------------------------------
+
+    def reset(
+        self,
     ) -> None:
         """
-        Reset a validation result.
+        Reset validator runtime state.
+
+        Reserved for future implementations.
         """
 
-        result.reset()
-
-        result.validator_name = self.name
-        result.rule_code = self.rule_code
-
-    def supports_batch_validation(
-        self,
-    ) -> bool:
-        """
-        Indicates whether this validator operates
-        on complete batches.
-
-        Override in derived validators if a rule
-        validates individual questions instead.
-        """
-
-        return True
-
-    # ---------------------------------------------------------
-    # Validator Information
-    # ---------------------------------------------------------
-
-    def validator_information(
-        self,
-    ) -> dict:
-        """
-        Return validator information.
-        """
-
-        return {
-            "name": self.name,
-            "rule_code": self.rule_code,
-            "component": self.component_name,
-            "version": self.version,
-            "execution": (self.execution_information()),
-        }
+        return
 
     # ---------------------------------------------------------
     # Representation
@@ -369,10 +228,17 @@ class ValidatorBase(ABC):
         self,
     ) -> str:
 
-        return "ValidatorBase(" f"name='{self.name}', " f"rule='{self.rule_code}')"
+        return (
+            f"{self.__class__.__name__}"
+            "("
+            f"name='{self.name}', "
+            f"code='{self.validation_code}'"
+            ")"
+        )
 
-    def __str__(
-        self,
-    ) -> str:
+    __str__ = __repr__
 
-        return f"{self.rule_code} - " f"{self.name}"
+
+__all__ = [
+    "ValidationModule",
+]

@@ -34,6 +34,8 @@ context = PromptProcessor().execute(context)
 
 context = AIProcessor().execute(context)
 
+assert context.raw_response is not None
+
 print("=" * 80)
 print("AI PROCESSOR")
 print("=" * 80)

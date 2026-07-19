@@ -3,44 +3,38 @@ Question Factory OS v2.1
 
 Batch Adapter
 
-Converts AI ParsedResponse objects into
-QuestionBatchModel instances.
-
-The adapter is the bridge between the
-AI subsystem and the manufacturing
-subsystem.
+Bridges the AI subsystem and the manufacturing
+subsystem by converting ParsedResponse objects
+into QuestionBatchModel instances.
 
 Responsibilities
 ----------------
-• Convert ParsedResponse to QuestionBatchModel
-• Convert parsed question dictionaries to
-  GeneratedQuestionModel objects
+• Extract normalized payloads from ParsedResponse
+• Build GeneratedQuestionModel objects
+• Populate QuestionBatchModel
 • Preserve metadata
-• Perform structural mapping only
 
-The adapter intentionally performs no
+The adapter intentionally performs NO
 validation or repair.
 """
 
 from __future__ import annotations
 
 import logging
+
 from typing import Any
 
-from Engine.factory.ai.response_parser import ParsedResponse
-from Engine.models.generated_question_model import (
-    GeneratedQuestionModel,
+from Engine.factory.ai.response_parser import (
+    ParsedResponse,
+)
+from Engine.factory.generation.generated_question_builder import (
+    GeneratedQuestionBuilder,
 )
 from Engine.models.question_batch_model import (
     QuestionBatchModel,
 )
 
-logger = logging.getLogger(__name__)
-
-
-# ----------------------------------------------------------------------
-# Batch Adapter
-# ----------------------------------------------------------------------
+LOGGER = logging.getLogger(__name__)
 
 
 class BatchAdapter:
@@ -48,45 +42,53 @@ class BatchAdapter:
     Converts ParsedResponse objects into
     QuestionBatchModel instances.
 
-    The adapter performs structural mapping
-    only and contains no business rules.
+    This class performs only deterministic
+    structural mapping.
     """
 
-    def __init__(self) -> None:
+    VERSION = "2.1.0"
 
-        logger.info(
-            "BatchAdapter initialized."
+    COMPONENT_NAME = "Batch Adapter"
+
+    # ---------------------------------------------------------
+    # Construction
+    # ---------------------------------------------------------
+
+    def __init__(
+        self,
+    ) -> None:
+
+        self._logger = LOGGER
+
+        self._builder = (
+            GeneratedQuestionBuilder()
         )
-    # ------------------------------------------------------------------
+
+        self._logger.info(
+            "%s initialized.",
+            self.COMPONENT_NAME,
+        )
+
+    # ---------------------------------------------------------
     # Public API
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
     def build(
         self,
         parsed: ParsedResponse,
     ) -> QuestionBatchModel:
         """
-        Build a QuestionBatchModel from a
-        ParsedResponse.
-
-        Parameters
-        ----------
-        parsed:
-            Parsed AI response.
-
-        Returns
-        -------
-        QuestionBatchModel
+        Convert a ParsedResponse into a
+        QuestionBatchModel.
         """
 
         if not parsed.success:
 
             raise ValueError(
-                "Cannot build batch from "
-                "unsuccessful ParsedResponse."
+                "ParsedResponse was not successful."
             )
 
-        payload = self._payload(
+        payload = self._extract_payload(
             parsed,
         )
 
@@ -103,16 +105,17 @@ class BatchAdapter:
         )
 
         return batch
-    # ------------------------------------------------------------------
-    # Payload Extraction
-    # ------------------------------------------------------------------
 
-    def _payload(
+    # ---------------------------------------------------------
+    # Payload Extraction
+    # ---------------------------------------------------------
+
+    def _extract_payload(
         self,
         parsed: ParsedResponse,
     ) -> dict[str, Any]:
         """
-        Return the parsed JSON payload.
+        Extract the normalized JSON payload.
         """
 
         if parsed.raw_json is None:
@@ -122,10 +125,19 @@ class BatchAdapter:
                 "contain JSON."
             )
 
+        if not isinstance(
+            parsed.raw_json,
+            dict,
+        ):
+            raise TypeError(
+                "ParsedResponse JSON "
+                "must be a dictionary."
+            )
+
         return parsed.raw_json
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
     # Batch Population
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
     def _populate_batch(
         self,
@@ -141,28 +153,28 @@ class BatchAdapter:
                 "batch_id",
                 "",
             )
-        )
+        ).strip()
 
         batch.unit_code = str(
             payload.get(
                 "unit_code",
                 "",
             )
-        )
+        ).strip()
 
         batch.chapter_code = str(
             payload.get(
                 "chapter_code",
                 "",
             )
-        )
+        ).strip()
 
         batch.subtopic_code = str(
             payload.get(
                 "subtopic_code",
                 "",
             )
-        )
+        ).strip()
 
         batch.set_number = int(
             payload.get(
@@ -183,7 +195,7 @@ class BatchAdapter:
                 "status",
                 "CREATED",
             )
-        )
+        ).strip()
 
         metadata = payload.get(
             "metadata",
@@ -197,9 +209,10 @@ class BatchAdapter:
             batch.metadata.update(
                 metadata,
             )
-    # ------------------------------------------------------------------
+
+    # ---------------------------------------------------------
     # Question Population
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
     def _populate_questions(
         self,
@@ -207,8 +220,7 @@ class BatchAdapter:
         payload: dict[str, Any],
     ) -> None:
         """
-        Populate all questions contained in the
-        payload.
+        Populate all generated questions.
         """
 
         questions = payload.get(
@@ -220,7 +232,7 @@ class BatchAdapter:
             questions,
             list,
         ):
-            raise ValueError(
+            raise TypeError(
                 "'questions' must be a list."
             )
 
@@ -232,372 +244,268 @@ class BatchAdapter:
             ):
                 continue
 
+            question = self._builder.build(
+                item,
+            )
+
             batch.add_question(
-                self._create_question(
-                    item,
-                )
+                question,
             )
-    # ------------------------------------------------------------------
-    # Question Construction
-    # ------------------------------------------------------------------
-
-    def _create_question(
-        self,
-        data: dict[str, Any],
-    ) -> GeneratedQuestionModel:
-        """
-        Create a GeneratedQuestionModel from
-        a parsed dictionary.
-        """
-
-        question = GeneratedQuestionModel()
-
-        question.question_code = str(
-            data.get(
-                "question_code",
-                "",
-            )
-        )
-
-        question.unit_code = str(
-            data.get(
-                "unit_code",
-                "",
-            )
-        )
-
-        question.chapter_code = str(
-            data.get(
-                "chapter_code",
-                "",
-            )
-        )
-
-        question.subtopic_code = str(
-            data.get(
-                "subtopic_code",
-                "",
-            )
-        )
-
-        question.set_number = int(
-            data.get(
-                "set_number",
-                1,
-            )
-        )
-
-        question.batch_number = int(
-            data.get(
-                "batch_number",
-                1,
-            )
-        )
-
-        question.question_text = str(
-            data.get(
-                "question_text",
-                "",
-            )
-        )
-        #
-        # Options
-        #
-
-        options = data.get(
-            "options",
-            [],
-        )
-
-        if isinstance(
-            options,
-            list,
-        ):
-            question.options.extend(
-                str(option)
-                for option in options
-            )
-
-        question.correct_option = str(
-            data.get(
-                "correct_option",
-                "",
-            )
-        )
-
-        question.explanation = str(
-            data.get(
-                "explanation",
-                "",
-            )
-        )
-
-        #
-        # Academic metadata
-        #
-
-        question.difficulty = str(
-            data.get(
-                "difficulty",
-                "",
-            )
-        )
-
-        question.archetype = str(
-            data.get(
-                "archetype",
-                "",
-            )
-        )
-
-        question.concept = str(
-            data.get(
-                "concept",
-                "",
-            )
-        )
-
-        #
-        # Tags
-        #
-
-        tags = data.get(
-            "tags",
-            [],
-        )
-
-        if isinstance(
-            tags,
-            list,
-        ):
-            question.tags.extend(
-                str(tag)
-                for tag in tags
-            )
-
-        #
-        # Metadata
-        #
-
-        metadata = data.get(
-            "metadata",
-            {},
-        )
-
-        if isinstance(
-            metadata,
-            dict,
-        ):
-            question.metadata.update(
-                metadata,
-            )
-
-        return question
-
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
     # Statistics
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
     def statistics(
         self,
         batch: QuestionBatchModel,
     ) -> dict[str, Any]:
         """
-        Return adapter statistics for the
-        supplied batch.
+        Return adapter statistics.
         """
 
         return {
-            "question_count": (
-                batch.question_count
+            "batch_id": batch.batch_id,
+            "question_count": len(
+                batch.questions,
             ),
-            "complete_questions": (
-                batch.complete_question_count
-            ),
-            "incomplete_questions": (
-                batch.incomplete_question_count
-            ),
+            "status": batch.status,
+            "unit_code": batch.unit_code,
+            "chapter_code": batch.chapter_code,
+            "subtopic_code": batch.subtopic_code,
         }
 
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
     # Diagnostics
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
     def diagnostics(
         self,
-        batch: QuestionBatchModel,
     ) -> dict[str, Any]:
         """
         Return adapter diagnostics.
         """
 
         return {
-            "component": (
-                self.__class__.__name__
-            ),
-            "batch": (
-                batch.summary()
-            ),
-            "statistics": (
-                self.statistics(batch)
-            ),
+            "component": self.COMPONENT_NAME,
+            "version": self.VERSION,
+            "builder": self._builder.component_name,
+            "supports_batch_mapping": True,
+            "supports_question_mapping": True,
+            "supports_metadata": True,
+            "validation": "EXTERNAL",
+            "repair": "EXTERNAL",
         }
 
-    # ------------------------------------------------------------------
-    # Health
-    # ------------------------------------------------------------------
+    def configuration(
+        self,
+    ) -> dict[str, Any]:
+        """
+        Return adapter configuration.
+        """
+
+        return {
+            "component": self.COMPONENT_NAME,
+            "version": self.VERSION,
+            "mapping_mode": "STRUCTURAL",
+            "payload_source": "ParsedResponse.raw_json",
+        }
 
     def health(
         self,
     ) -> dict[str, Any]:
         """
-        Return adapter health information.
+        Return runtime health.
         """
 
         return {
-            "component": (
-                self.__class__.__name__
-            ),
+            "component": self.COMPONENT_NAME,
+            "version": self.VERSION,
             "status": "READY",
-            "version": "2.1.0",
         }
-    # ------------------------------------------------------------------
-    # Configuration
-    # ------------------------------------------------------------------
-
-    def validate_configuration(
-        self,
-    ) -> None:
-        """
-        Validate adapter configuration.
-
-        The BatchAdapter is currently stateless,
-        therefore there is no runtime configuration
-        to validate.
-        """
-
-        return
-
-    @property
-    def is_ready(
-        self,
-    ) -> bool:
-        """
-        Return True if the adapter is ready.
-        """
-
-        return True
-
-    # ------------------------------------------------------------------
-    # Capabilities
-    # ------------------------------------------------------------------
 
     def capabilities(
         self,
     ) -> dict[str, bool]:
         """
-        Return adapter capabilities.
+        Return supported capabilities.
         """
 
         return {
-            "batch_conversion": True,
-            "question_conversion": True,
+            "build_batch": True,
+            "build_questions": True,
+            "payload_extraction": True,
             "metadata_mapping": True,
-            "diagnostics": True,
-            "health_reporting": True,
+            "structural_mapping_only": True,
         }
+    # ---------------------------------------------------------
+    # Component Information
+    # ---------------------------------------------------------
 
-    def supports_batch_conversion(
+    @property
+    def version(
         self,
-    ) -> bool:
+    ) -> str:
         """
-        Return True if batch conversion is
-        supported.
+        Adapter version.
         """
 
-        return True
+        return self.VERSION
 
-    def supports_metadata(
+    @property
+    def component_name(
         self,
-    ) -> bool:
+    ) -> str:
         """
-        Return True if metadata mapping is
-        supported.
+        Human-readable component name.
         """
 
-        return True
+        return self.COMPONENT_NAME
 
-    # ------------------------------------------------------------------
-    # Summary
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
+    # Runtime Summary
+    # ---------------------------------------------------------
 
-    def summary(
+    def runtime_summary(
         self,
     ) -> dict[str, Any]:
         """
-        Return a concise adapter summary.
+        Return a concise runtime summary.
         """
 
         return {
-            "component": self.__class__.__name__,
-            "version": "2.1.0",
-            "ready": self.is_ready,
+            "component": self.component_name,
+            "version": self.version,
+            "status": "READY",
+            "builder": (
+                self._builder.component_name
+            ),
         }
 
-    # ------------------------------------------------------------------
-    # Factory
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
+    # Logging Helpers
+    # ---------------------------------------------------------
 
-    @classmethod
-    def create(
-        cls,
-    ) -> "BatchAdapter":
+    def _log_build_start(
+        self,
+    ) -> None:
         """
-        Create a production-ready BatchAdapter.
+        Log the start of a batch build.
         """
 
-        adapter = cls()
-
-        logger.info(
-            "Production BatchAdapter created."
+        self._logger.debug(
+            "Building QuestionBatchModel."
         )
 
-        return adapter
+    def _log_build_complete(
+        self,
+        batch: QuestionBatchModel,
+    ) -> None:
+        """
+        Log successful batch creation.
+        """
 
-    # ------------------------------------------------------------------
+        self._logger.debug(
+            "QuestionBatchModel built successfully "
+            "(batch_id=%s, questions=%d).",
+            batch.batch_id,
+            len(
+                batch.questions,
+            ),
+        )
+
+    def _log_build_failure(
+        self,
+        exc: Exception,
+    ) -> None:
+        """
+        Log build failure.
+        """
+
+        self._logger.exception(
+            "Failed to build QuestionBatchModel: %s",
+            exc,
+        )
+    # ---------------------------------------------------------
     # Representation
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
     def __repr__(
         self,
     ) -> str:
+        """
+        Developer representation.
+        """
 
         return (
-            f"{self.__class__.__name__}"
-            "(ready=True)"
+            f"{self.COMPONENT_NAME}"
+            f"(version='{self.VERSION}')"
         )
 
-    __str__ = __repr__
+    def __str__(
+        self,
+    ) -> str:
+        """
+        Human-readable representation.
+        """
 
+        return (
+            f"{self.COMPONENT_NAME} "
+            f"v{self.VERSION}"
+        )
 
-# ----------------------------------------------------------------------
-# Factory Helper
-# ----------------------------------------------------------------------
+    # ---------------------------------------------------------
+    # Convenience API
+    # ---------------------------------------------------------
 
+    def build_from_json(
+        self,
+        payload: dict[str, Any],
+    ) -> QuestionBatchModel:
+        """
+        Build a QuestionBatchModel directly from a
+        normalized JSON payload.
 
-def create_batch_adapter() -> BatchAdapter:
-    """
-    Create a production-ready BatchAdapter.
-    """
+        Useful for testing and offline execution.
+        """
 
-    return BatchAdapter.create()
+        if not isinstance(
+            payload,
+            dict,
+        ):
+            raise TypeError(
+                "Payload must be a dictionary."
+            )
 
+        batch = QuestionBatchModel()
 
-# ----------------------------------------------------------------------
-# Module Exports
-# ----------------------------------------------------------------------
+        self._populate_batch(
+            batch,
+            payload,
+        )
 
-__all__ = [
-    "BatchAdapter",
-    "create_batch_adapter",
-]
+        self._populate_questions(
+            batch,
+            payload,
+        )
+
+        return batch
+
+    # ---------------------------------------------------------
+    # Reset
+    # ---------------------------------------------------------
+
+    def reset(
+        self,
+    ) -> None:
+        """
+        Reset the adapter state.
+
+        Currently stateless, retained for
+        lifecycle consistency.
+        """
+
+        self._logger.debug(
+            "%s reset.",
+            self.COMPONENT_NAME,
+        )
+

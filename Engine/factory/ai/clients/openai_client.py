@@ -474,20 +474,38 @@ class OpenAIClient(AIClient):
             request
         )
 
-        with self._client.responses.stream(
-            model=self.normalize_model(
+        
+
+        kwargs: dict[str, Any] = {
+            "model": self.normalize_model(
                 request.model
             ),
-            input=cast(
+            "input": cast(
                 Any,
                 input_payload,
             ),
-            temperature=self.normalize_temperature(
-                request.temperature
-            ),
-            max_output_tokens=self.normalize_max_tokens(
-                request.max_tokens
-            ),
+        }
+
+        max_tokens = self.normalize_max_tokens(
+            request.max_tokens
+        )
+
+        if max_tokens is not None:
+            kwargs["max_output_tokens"] = max_tokens
+
+        model = self.normalize_model(
+            request.model
+        )
+
+        if not model.startswith("gpt-5"):
+            kwargs["temperature"] = (
+                self.normalize_temperature(
+                    request.temperature
+                )
+            )
+
+        with self._client.responses.stream(
+            **kwargs
         ) as stream:
 
             for event in stream:
@@ -497,7 +515,6 @@ class OpenAIClient(AIClient):
     # ---------------------------------------------------------
     # Internal Execution
     # ---------------------------------------------------------
-
     def _execute_response_request(
         self,
         request: AIRequest,
@@ -510,22 +527,41 @@ class OpenAIClient(AIClient):
             request
         )
 
-        return self._client.responses.create(
-            model=self.normalize_model(
+        kwargs: dict[str, Any] = {
+            "model": self.normalize_model(
                 request.model
             ),
-            input=cast(
+            "input": cast(
                 Any,
                 input_payload,
             ),
-            temperature=self.normalize_temperature(
-                request.temperature
-            ),
-            max_output_tokens=self.normalize_max_tokens(
-                request.max_tokens
-            ),
+        }
+
+        max_tokens = self.normalize_max_tokens(
+            request.max_tokens
         )
 
+        if max_tokens is not None:
+            kwargs["max_output_tokens"] = max_tokens
+
+        model = self.normalize_model(
+            request.model
+        )
+
+        #
+        # GPT-5 Responses API does not support
+        # temperature.
+        #
+        if not model.startswith("gpt-5"):
+            kwargs["temperature"] = (
+                self.normalize_temperature(
+                    request.temperature
+                )
+            )
+
+        return self._client.responses.create(
+            **kwargs
+        )
     # ---------------------------------------------------------
     # Request Validation
     # ---------------------------------------------------------

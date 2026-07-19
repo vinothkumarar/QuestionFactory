@@ -194,15 +194,7 @@ class AIJob:
                 "Job type cannot be empty."
             )
 
-        if not self.system_prompt.strip():
-            raise ValueError(
-                "System prompt cannot be empty."
-            )
-
-        if not self.user_prompt.strip():
-            raise ValueError(
-                "User prompt cannot be empty."
-            )
+        
 
         if self.temperature < 0.0:
             raise ValueError(

@@ -44,7 +44,6 @@ class Validator(ABC):
         """
 
     @abstractmethod
-    
     def validate(
         self,
         batch: QuestionBatchModel,
@@ -73,7 +72,6 @@ class QuestionValidator:
     # ---------------------------------------------------------
     # Public API
     # ---------------------------------------------------------
-
     
     def validate(
         self,
@@ -279,7 +277,7 @@ class QuestionValidator:
     def summary(
         self,
         results: list[ValidationResultModel],
-    ) -> dict:
+    ) -> dict[str, object]:
         """
         Return a concise validation summary.
         """
@@ -296,7 +294,7 @@ class QuestionValidator:
     def diagnostics(
         self,
         results: list[ValidationResultModel],
-    ) -> dict:
+    ) -> dict[str, object]:
         """
         Return validation diagnostics.
         """
@@ -317,7 +315,7 @@ class QuestionValidator:
         Validator version.
         """
 
-        return "2.0.0"
+        return "2.1.0"
 
     @property
     def component_name(self) -> str:
@@ -331,7 +329,7 @@ class QuestionValidator:
     # Health
     # ---------------------------------------------------------
 
-    def health(self) -> dict:
+    def health(self) -> dict[str, object]:
         """
         Return validator health information.
         """
@@ -347,7 +345,7 @@ class QuestionValidator:
     # Capabilities
     # ---------------------------------------------------------
 
-    def capabilities(self) -> dict:
+    def capabilities(self) -> dict[str, object]:
         """
         Describe validator capabilities.
         """
@@ -395,7 +393,7 @@ class QuestionValidator:
 
             raise ValueError("Duplicate validators detected: " f"{duplicate_list}")
 
-    def execution_information(self) -> dict:
+    def execution_information(self) -> dict[str, object]:
         """
         Return execution information.
         """
@@ -412,7 +410,7 @@ class QuestionValidator:
 
     def validator_information(
         self,
-    ) -> dict:
+    ) -> dict[str, object]:
         """
         Return validator information.
         """

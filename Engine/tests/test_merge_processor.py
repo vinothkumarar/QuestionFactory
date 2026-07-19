@@ -40,6 +40,8 @@ context = ParseProcessor().execute(context)
 
 context = MergeProcessor().execute(context)
 
+assert context.question is not None
+
 print("=" * 80)
 print("MERGE PROCESSOR")
 print("=" * 80)

@@ -1,13 +1,11 @@
 """
 Question Factory OS
 Execution Pipeline Builder Test
-
-Milestone : M5
-Sprint    : S1
-Release   : R1
 """
 
-from Engine.pipeline.execution_pipeline_builder import ExecutionPipelineBuilder
+from Engine.pipeline.execution_pipeline_builder import (
+    ExecutionPipelineBuilder,
+)
 
 builder = ExecutionPipelineBuilder()
 
@@ -19,14 +17,16 @@ print("=" * 80)
 
 print()
 
-print("Total Processors :", pipeline.size())
+print("Total Stages :", pipeline.size())
 
 print()
 
-print("Registered Processors")
+print("Registered Stages")
 
 print("-" * 80)
 
-for index, processor in enumerate(pipeline.processors, start=1):
-
-    print(f"{index}. {processor.name}")
+for index, stage in enumerate(
+    pipeline.stages(),
+    start=1,
+):
+    print(f"{index}. {stage.name}")

@@ -13,7 +13,7 @@ JEE quality standards and manufacturing rules.
 from __future__ import annotations
 
 from Engine.factory.validation.validator_base import (
-    ValidatorBase,
+    ValidationModule,
 )
 
 from Engine.factory.validation.validation_result_model import (
@@ -25,7 +25,7 @@ from Engine.models.question_batch_model import (
 )
 
 
-class R03Validator(ValidatorBase):
+class R03Validator(ValidationModule):
     """
     Blueprint and quality validator.
 
@@ -40,7 +40,7 @@ class R03Validator(ValidatorBase):
         return "R03 Blueprint Validator"
 
     @property
-    def rule_code(self) -> str:
+    def validation_code(self) -> str:
 
         return "R03"
 
@@ -56,7 +56,11 @@ class R03Validator(ValidatorBase):
         Execute blueprint validation.
         """
 
-        result = self.create_success_result()
+        result = ValidationResultModel(
+            validator_name=self.name,
+            rule_code=self.validation_code,
+            success=True,
+        )
 
         self._validate_blueprint(
             batch,
@@ -958,7 +962,7 @@ class R03Validator(ValidatorBase):
         self,
         batch: QuestionBatchModel,
         result: ValidationResultModel,
-    ) -> dict:
+    ) -> dict[str, object]:
         """
         Return manufacturing statistics.
         """
@@ -984,19 +988,18 @@ class R03Validator(ValidatorBase):
     # ---------------------------------------------------------
     # Summary
     # ---------------------------------------------------------
-
     
     def summary(
         self,
         result: ValidationResultModel,
-    ) -> dict:
+    ) -> dict[str, object]:
         """
         Return a concise manufacturing summary.
         """
 
         return {
             "validator": self.name,
-            "rule_code": self.rule_code,
+            "rule_code": self.validation_code,
             "quality_grade": result.get_metadata(
                 "quality_grade",
                 "",
@@ -1010,37 +1013,43 @@ class R03Validator(ValidatorBase):
 
     # ---------------------------------------------------------
     # Diagnostics
-    # ---------------------------------------------------------
-
+      # ---------------------------------------------------------
     
     def diagnostics(
         self,
-        result: ValidationResultModel,
-    ) -> dict:
+        result: ValidationResultModel | None = None,
+    ) -> dict[str, object]:
         """
-        Return complete R03 diagnostics.
+        Return detailed R01 diagnostics.
         """
 
-        return {
+        diagnostics: dict[str, object] = {
             "component": self.__class__.__name__,
-            "summary": self.summary(result),
-            "statistics": result.statistics(),
-            "metadata": dict(result.metadata),
         }
 
+        if result is not None:
+            diagnostics.update(
+                {
+                    "summary": self.summary(result),
+                    "statistics": result.statistics(),
+                    "metadata": dict(result.metadata),
+                }
+            )
+
+        return diagnostics
     # ---------------------------------------------------------
     # Health
     # ---------------------------------------------------------
 
-    def health(self) -> dict:
+    def health(self) -> dict[str, object]:
         """
         Return validator health information.
         """
 
         return {
             "validator": self.name,
-            "rule_code": self.rule_code,
-            "version": self.version,
+            "rule_code": self.validation_code,
+            "version": "2.1.0",
             "validation_scope": ("BLUEPRINT_QUALITY"),
             "status": "READY",
         }
@@ -1049,7 +1058,7 @@ class R03Validator(ValidatorBase):
     # Capabilities
     # ---------------------------------------------------------
 
-    def capabilities(self) -> dict:
+    def capabilities(self) -> dict[str, object]:
         """
         Describe validator capabilities.
         """
@@ -1074,17 +1083,17 @@ class R03Validator(ValidatorBase):
 
     def execution_information(
         self,
-    ) -> dict:
+    ) -> dict[str, object]:
         """
         Return execution information.
         """
 
         return {
             "validator": self.name,
-            "rule_code": self.rule_code,
+            "rule_code": self.validation_code,
             "execution_mode": "SEQUENTIAL",
             "validation_scope": ("BLUEPRINT_AND_QUALITY"),
-            "framework_version": self.version,
+            "framework_version": "2.1.0",
         }
 
     

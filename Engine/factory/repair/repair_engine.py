@@ -21,6 +21,9 @@ import logging
 from abc import ABC
 from abc import abstractmethod
 
+from Engine.factory.repair.models.batch_repair_result import (
+    BatchRepairResult,
+)
 from Engine.factory.repair.repair_result_model import (
     RepairResultModel,
 )
@@ -81,11 +84,15 @@ class RepairEngine:
     performs its own specialised repair.
     """
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+    ) -> None:
 
         self._logger = logger
 
-        self._modules: list[RepairModule] = []
+        self._modules: list[
+            RepairModule
+        ] = []
 
         self._logger.info(
             "RepairEngine initialized."
@@ -103,7 +110,9 @@ class RepairEngine:
         Register a repair module.
         """
 
-        if self.contains(module.name):
+        if self.contains(
+            module.name,
+        ):
 
             raise ValueError(
                 f"Repair module "
@@ -111,7 +120,9 @@ class RepairEngine:
                 f"is already registered."
             )
 
-        self._modules.append(module)
+        self._modules.append(
+            module,
+        )
 
         self._logger.info(
             "Registered repair module: %s",
@@ -136,7 +147,9 @@ class RepairEngine:
             if module.name != module_name:
                 continue
 
-            self._modules.remove(module)
+            self._modules.remove(
+                module,
+            )
 
             self._logger.info(
                 "Removed repair module: %s",
@@ -172,7 +185,9 @@ class RepairEngine:
         Number of registered modules.
         """
 
-        return len(self._modules)
+        return len(
+            self._modules,
+        )
 
     @property
     def modules(
@@ -182,7 +197,9 @@ class RepairEngine:
         Return registered modules.
         """
 
-        return list(self._modules)
+        return list(
+            self._modules,
+        )
 
     def module_names(
         self,
@@ -256,8 +273,7 @@ class RepairEngine:
 
     def after_repair(
         self,
-        batch: QuestionBatchModel,
-        results: list[RepairResultModel],
+        result: BatchRepairResult,
     ) -> None:
         """
         Executed after every repair module
@@ -275,7 +291,7 @@ class RepairEngine:
     def repair(
         self,
         batch: QuestionBatchModel,
-    ) -> list[RepairResultModel]:
+    ) -> BatchRepairResult:
         """
         Execute every registered repair
         module sequentially.
@@ -285,9 +301,9 @@ class RepairEngine:
             "Starting repair cycle."
         )
 
-        results: list[
-            RepairResultModel
-        ] = []
+        batch_result = BatchRepairResult(
+            batch=batch,
+        )
 
         for module in self._modules:
 
@@ -300,18 +316,22 @@ class RepairEngine:
                 batch,
             )
 
-            results.append(result)
+            batch_result.add_result(
+                result,
+            )
+
+        batch_result.update_statistics()
 
         self._logger.info(
             "Repair cycle completed."
         )
 
-        return results
+        return batch_result
 
     def execute(
         self,
         batch: QuestionBatchModel,
-    ) -> list[RepairResultModel]:
+    ) -> BatchRepairResult:
         """
         Execute the complete repair
         workflow.
@@ -321,57 +341,28 @@ class RepairEngine:
             batch,
         )
 
-        results = self.repair(
+        result = self.repair(
             batch,
         )
 
         self.after_repair(
-            batch,
-            results,
+            result,
         )
 
-        return results
+        return result
     # -----------------------------------------------------
     # Summary
     # -----------------------------------------------------
 
     def summary(
         self,
-        results: list[RepairResultModel],
-    ) -> dict[str, int]:
+        result: BatchRepairResult,
+    ) -> dict[str, int | bool]:
         """
         Return a concise repair summary.
         """
 
-        repaired = sum(
-            result.repaired_count
-            for result in results
-        )
-
-        failed = sum(
-            result.failed_count
-            for result in results
-        )
-
-        warnings = sum(
-            result.warning_count
-            for result in results
-        )
-
-        regeneration = sum(
-            1
-            for result in results
-            if result.regeneration_required
-        )
-
-        return {
-            "module_count": self.module_count,
-            "result_count": len(results),
-            "repaired_items": repaired,
-            "failed_repairs": failed,
-            "warnings": warnings,
-            "regeneration_required": regeneration,
-        }
+        return result.summary()
 
     # -----------------------------------------------------
     # Diagnostics
@@ -379,7 +370,7 @@ class RepairEngine:
 
     def diagnostics(
         self,
-        results: list[RepairResultModel],
+        result: BatchRepairResult,
     ) -> dict[str, object]:
         """
         Return repair diagnostics.
@@ -388,7 +379,10 @@ class RepairEngine:
         return {
             "component": self.__class__.__name__,
             "registered_modules": self.module_names(),
-            "summary": self.summary(results),
+            "summary": result.summary(),
+            "metadata": dict(
+                result.metadata,
+            ),
         }
 
     # -----------------------------------------------------
@@ -429,6 +423,7 @@ class RepairEngine:
             "health_reporting": True,
             "summary": True,
         }
+
     # -----------------------------------------------------
     # Execution Information
     # -----------------------------------------------------
@@ -446,7 +441,6 @@ class RepairEngine:
             "framework_version": "2.1.0",
             "registered_modules": self.module_count,
         }
-
     # -----------------------------------------------------
     # Configuration
     # -----------------------------------------------------
@@ -498,6 +492,28 @@ class RepairEngine:
 
         return self.module_count == 0
 
+    @property
+    def has_modules(
+        self,
+    ) -> bool:
+        """
+        Return True when at least one repair
+        module is registered.
+        """
+
+        return not self.is_empty
+
+    @property
+    def is_ready(
+        self,
+    ) -> bool:
+        """
+        Return True when the Repair Engine
+        is ready for execution.
+        """
+
+        return self.has_modules
+
     # -----------------------------------------------------
     # Representation
     # -----------------------------------------------------
@@ -517,6 +533,14 @@ class RepairEngine:
             module_name,
         )
 
+    def __iter__(
+        self,
+    ):
+
+        return iter(
+            self._modules,
+        )
+
     def __repr__(
         self,
     ) -> str:
@@ -525,11 +549,13 @@ class RepairEngine:
             f"{self.__class__.__name__}"
             "("
             f"modules={self.module_count}"
+            ", "
+            f"ready={self.is_ready}"
             ")"
         )
 
     __str__ = __repr__
-    # ---------------------------------------------------------
+# ---------------------------------------------------------
 # Factory Helper
 # ---------------------------------------------------------
 

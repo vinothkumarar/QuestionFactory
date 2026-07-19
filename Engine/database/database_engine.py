@@ -1,39 +1,47 @@
 """
 Question Factory OS
 Database Engine
+
+Current Architecture:
+AI -> Validation -> Repair -> CSV Export -> Manual Upload
+
+This class is intentionally kept as a placeholder.
+The Question Factory does not write directly to any database.
 """
 
-from Engine.database.supabase_adapter import (
-    SupabaseAdapter,
-)
+from __future__ import annotations
+
+from typing import Any
 
 
 class DatabaseEngine:
+    """
+    Placeholder database engine.
 
-    def __init__(self):
+    The Question Factory generates validated CSV output.
+    Uploading questions into Supabase (or any other database)
+    is performed manually outside the manufacturing pipeline.
+    """
 
-        self.adapter = SupabaseAdapter()
+    def __init__(self) -> None:
+        pass
 
-    def save_question(self, question):
+    def save_question(self, question: dict[str, Any]) -> bool:
+        """
+        No-op.
 
-        return self.adapter.insert_question(question)
+        Questions are exported to CSV instead of being written
+        directly to a database.
+        """
+        return True
 
-    def save_batch(self, report):
+    def save_batch(self, report: Any) -> dict[str, int]:
+        """
+        Simulate a successful save for compatibility with older code.
+        """
+        inserted = len(getattr(report, "results", []))
 
-        inserted = 0
-
-        skipped = 0
-
-        for result in report.results:
-
-            success = self.save_question(result["question"])
-
-            if success:
-
-                inserted += 1
-
-            else:
-
-                skipped += 1
-
-        return {"inserted": inserted, "skipped": skipped}
+        return {
+            "inserted": inserted,
+            "skipped": 0,
+        }

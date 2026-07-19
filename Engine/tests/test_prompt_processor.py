@@ -31,6 +31,9 @@ context = BuildProcessor().execute(context)
 
 context = PromptProcessor().execute(context)
 
+assert context.question is not None
+assert context.prompt is not None
+
 print("=" * 80)
 print("PROMPT PROCESSOR")
 print("=" * 80)

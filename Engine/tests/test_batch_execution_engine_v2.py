@@ -8,7 +8,6 @@ Release   : R1
 """
 
 from Engine.batch.batch_execution_engine import BatchExecutionEngine
-
 from Engine.models.production_order_model import ProductionOrderModel
 
 queue = [
@@ -63,5 +62,7 @@ print("Worker Results")
 print("-" * 80)
 
 for index, result in enumerate(batch.worker_results, start=1):
+
+    assert result.question is not None
 
     print(f"{index}. {result.question['question_code']}  [{result.status}]")

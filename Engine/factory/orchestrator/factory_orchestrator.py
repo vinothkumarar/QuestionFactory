@@ -1,529 +1,429 @@
 """
+Question Factory OS v2.1
+
 Factory Orchestrator
 
-Coordinates the complete Question Factory generation workflow.
+Coordinates the complete autonomous
+question manufacturing pipeline.
 
-Responsibilities
-----------------
-- Accept generation requests
-- Coordinate runtime state
-- Load blueprints
-- Build prompts
-- Execute AI generation
-- Parse responses
-- Run validation and repair
-- Persist generated questions
-- Return generation results
-
-The orchestrator intentionally contains orchestration logic only.
-Generation, parsing, validation and persistence are delegated to
-their respective subsystems.
+Pipeline
+--------
+Blueprint
+    ↓
+AI Engine
+    ↓
+Batch Adapter
+    ↓
+Validation
+    ↓
+Repair (if required)
+    ↓
+Statistics
+    ↓
+Orchestration Result
 """
 
 from __future__ import annotations
 
 import logging
-import time
-from pathlib import Path
-from typing import Any
 
 from Engine.factory.ai.ai_engine import AIEngine
-from Engine.factory.ai.models.prompt_package import PromptPackage
-from Engine.factory.ai.response_parser import ResponseParser
-from Engine.factory.ai.prompt_builder import PromptBuilder
+from Engine.factory.ai.models.ai_job import AIJob
+from Engine.factory.orchestrator.batch_adapter import BatchAdapter
+from Engine.factory.orchestrator.generation_statistics import (
+    GenerationStatistics,
+)
+from Engine.factory.orchestrator.orchestration_result import (
+    OrchestrationResult,
+)
+
 from Engine.factory.repair.repair_engine import RepairEngine
-from Engine.factory.validation.question_validator import QuestionValidator
-
-
-LOGGER = logging.getLogger(__name__)
+from Engine.factory.validation.validation_engine import (
+    ValidationEngine,
+)
+from Engine.models.question_batch_model import (
+    QuestionBatchModel,
+)
 
 
 class FactoryOrchestrator:
     """
-    Coordinates the complete Question Factory pipeline.
-
-    The orchestrator owns workflow sequencing but delegates all
-    domain-specific work to specialized components.
+    Coordinates the complete autonomous
+    manufacturing workflow.
     """
 
-    
+    VERSION = "2.1.0"
+
+    COMPONENT_NAME = "Factory Orchestrator"
 
     def __init__(
         self,
-        *,
         ai_engine: AIEngine,
-        prompt_builder: PromptBuilder,
-        response_parser: ResponseParser,
-        validator: QuestionValidator,
+        validation_engine: ValidationEngine,
         repair_engine: RepairEngine,
-        workspace: Path | None = None,
-        logger: logging.Logger | None = None,
+        batch_adapter: BatchAdapter,
     ) -> None:
         """
-        Create a new orchestrator.
-
-        Parameters
-        ----------
-        ai_engine:
-            AI execution engine.
-
-        prompt_builder:
-            Builds prompt packages.
-
-        response_parser:
-            Converts raw AI responses into structured objects.
-
-        workspace:
-            Optional workspace used for temporary artifacts.
-
-        logger:
-            Optional logger.
+        Initialize orchestrator.
         """
+
+        self._logger = logging.getLogger(
+            self.__class__.__name__,
+        )
 
         self._ai_engine = ai_engine
-        self._prompt_builder = prompt_builder
-        self._response_parser = response_parser
-
-        self._validator = validator
+        self._validation_engine = validation_engine
         self._repair_engine = repair_engine
+        self._batch_adapter = batch_adapter
 
-        self._workspace = workspace or Path.cwd()
-
-        self._logger = logger or LOGGER
-
-        self._started_at = time.monotonic()
-
-        self._generation_count = 0
-
-        self._shutdown = False
-
-        self._logger.debug(
-            "FactoryOrchestrator initialized "
-            "(workspace=%s)",
-            self._workspace,
+        self._statistics = (
+            GenerationStatistics()
         )
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
     # Public API
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
-    def generate(
+    def orchestrate(
         self,
-        job: Any,
-    ) -> Any:
+        job: AIJob,
+    ) -> OrchestrationResult:
         """
-        Execute a complete generation workflow.
+        Execute a complete manufacturing cycle.
 
-        Parameters
-        ----------
-        job:
-            AI job describing the requested generation.
-
-        Returns
-        -------
-        Any
-            Parsed generation result.
+        Steps
+        -----
+        1. AI Generation
+        2. Batch Construction
+        3. Validation
+        4. Repair (if required)
+        5. Statistics
+        6. Result Construction
         """
 
-        self._ensure_running()
-
-        self._generation_count += 1
+        self._statistics.reset()
+        self._statistics.start()
 
         self._logger.info(
-            "Starting generation #%d",
-            self._generation_count,
+            "Starting manufacturing pipeline."
         )
 
-        return self._run_pipeline(job)
+        try:
 
-    def generate_batch(
-        self,
-        jobs: list[Any],
-    ) -> list[Any]:
-        """
-        Execute multiple generation jobs sequentially.
-        """
-
-        self._ensure_running()
-
-        results: list[Any] = []
-
-        self._logger.info(
-            "Generating %d job(s).",
-            len(jobs),
-        )
-
-        for job in jobs:
-            results.append(
-                self.generate(job)
+            parsed_response = (
+                self._ai_engine.execute(
+                    job,
+                )
             )
 
-        return results
-
-    def resume(
-        self,
-        job: Any,
-    ) -> Any:
-        """
-        Resume an interrupted generation.
-
-        Current implementation resumes by
-        executing the standard pipeline.
-        """
-
-        self._logger.info(
-            "Resuming generation."
-        )
-
-        return self.generate(job)
-
-    def shutdown(
-        self,
-    ) -> None:
-        """
-        Shut down the orchestrator.
-
-        After shutdown no additional
-        generation requests are accepted.
-        """
-
-        if self._shutdown:
-            return
-
-        self._shutdown = True
-
-        elapsed = (
-            time.monotonic()
-            - self._started_at
-        )
-
-        self._logger.info(
-            "FactoryOrchestrator shutdown "
-            "(generations=%d, uptime=%.2fs)",
-            self._generation_count,
-            elapsed,
-        )
-
-    # ------------------------------------------------------------------
-    # Internal lifecycle
-    # ------------------------------------------------------------------
-
-    def _ensure_running(
-        self,
-    ) -> None:
-        """
-        Ensure the orchestrator
-        has not been shut down.
-        """
-
-        if self._shutdown:
-
-            raise RuntimeError(
-                "FactoryOrchestrator "
-                "has been shut down."
+            batch = self._batch_adapter.build(
+                parsed_response,
             )
-    # ------------------------------------------------------------------
-    # Core Pipeline
-    # ------------------------------------------------------------------
 
-    def _run_pipeline(
+            self._statistics.batch_id = (
+                batch.batch_id
+            )
+
+            self._statistics.unit_code = (
+                batch.unit_code
+            )
+
+            self._statistics.chapter_code = (
+                batch.chapter_code
+            )
+
+            self._statistics.subtopic_code = (
+                batch.subtopic_code
+            )
+
+            self._statistics.requested_questions = (
+                len(batch.questions)
+            )
+
+            self._statistics.generated_questions = (
+                len(batch.questions)
+            )
+
+            validated_batch = (
+                self._validate_batch(
+                    batch,
+                )
+            )
+
+            repaired_batch = (
+                self._repair_batch(
+                    validated_batch,
+                )
+            )
+
+            return self._build_success_result(
+                repaired_batch,
+            )
+
+        except Exception as exc:
+
+            self._logger.exception(
+                "Manufacturing pipeline failed."
+            )
+
+            return self._build_failure_result(
+                exc,
+            )
+
+        finally:
+
+            self._statistics.finish()
+    # ---------------------------------------------------------
+    # Internal Pipeline
+    # ---------------------------------------------------------
+
+    def _validate_batch(
         self,
-        job: Any,
-    ) -> Any:
+        batch: QuestionBatchModel,
+    ) -> QuestionBatchModel:
         """
-        Execute the complete manufacturing pipeline.
-
-        Workflow
-        --------
-            AI Job
-               │
-               ▼
-           AI Engine
-               │
-               ▼
-        Parsed Generation
-               │
-               ▼
-          Validation
-               │
-               ▼
-            Repair
-               │
-               ▼
-          Final Result
+        Execute the validation pipeline.
         """
 
-        self._logger.info(
-            "Executing generation pipeline."
-        )
-
-        parsed_result = self._execute_ai(
-            job,
-        )
-
-        batch = self._extract_batch(
-            parsed_result,
-        )
-
-        validation_results = (
-            self._run_validation(
+        validation_result = (
+            self._validation_engine.validate(
                 batch,
             )
         )
 
-        repair_results = (
-            self._run_repair(
+        self._statistics.validated_questions = (
+            validation_result.valid_question_count
+        )
+
+        self._statistics.failed_questions = (
+            validation_result.invalid_question_count
+        )
+
+        self._statistics.add_metadata(
+            "validation_passed",
+            validation_result.is_valid,
+        )
+
+        self._statistics.add_metadata(
+            "validation_errors",
+            validation_result.error_count,
+        )
+
+        return validation_result.batch
+
+    def _repair_batch(
+        self,
+        batch: QuestionBatchModel,
+    ) -> QuestionBatchModel:
+        """
+        Execute the repair pipeline if required.
+        """
+
+        repair_result = (
+            self._repair_engine.repair(
                 batch,
             )
         )
 
-        return self._build_result(
-            parsed_result=parsed_result,
-            validation_results=validation_results,
-            repair_results=repair_results,
+        self._statistics.repaired_questions = (
+            repair_result.repaired_question_count
         )
 
-    # ------------------------------------------------------------------
-    # AI Execution
-    # ------------------------------------------------------------------
+        self._statistics.add_metadata(
+            "repair_executed",
+            repair_result.repair_executed,
+        )
 
-    def _execute_ai(
+        self._statistics.add_metadata(
+            "repair_success",
+            repair_result.success,
+        )
+
+        return repair_result.batch
+
+    # ---------------------------------------------------------
+    # Result Builders
+    # ---------------------------------------------------------
+
+    def _build_success_result(
         self,
-        job: Any,
-    ) -> Any:
+        batch: QuestionBatchModel,
+    ) -> OrchestrationResult:
         """
-        Execute the AI engine.
+        Build a successful orchestration result.
         """
 
-        self._logger.info(
-            "Executing AI engine."
+        self._statistics.finish()
+
+        return OrchestrationResult(
+            success=True,
+            batch=batch,
+            statistics=self._statistics,
+            message="Manufacturing completed successfully.",
         )
-
-        return self._ai_engine.execute(
-            job,
-        )
-
-    # ------------------------------------------------------------------
-    # Batch Extraction
-    # ------------------------------------------------------------------
-
-    def _extract_batch(
-        self,
-        parsed_result: Any,
-    ) -> Any:
-        """
-        Extract the generated question batch.
-
-        Current implementation expects the parsed
-        response to expose the generated batch.
-
-        This method provides a single extension
-        point for future runtime models.
-        """
-
-        if hasattr(
-            parsed_result,
-            "batch",
-        ):
-            return parsed_result.batch
-
-        return parsed_result
-
-    # ------------------------------------------------------------------
-    # Validation
-    # ------------------------------------------------------------------
-
-    def _run_validation(
-        self,
-        batch: Any,
-    ) -> list[Any]:
-        """
-        Execute the validator pipeline.
-        """
-
-        self._logger.info(
-            "Running validation."
-        )
-
-        return self._validator.execute(
-            batch,
-        )
-
-    # ------------------------------------------------------------------
-    # Repair
-    # ------------------------------------------------------------------
-
-    def _run_repair(
-        self,
-        batch: Any,
-    ) -> list[Any]:
-        """
-        Execute every registered repair module.
-        """
-
-        self._logger.info(
-            "Running repair pipeline."
-        )
-
-        return self._repair_engine.execute(
-            batch,
-        )
-    # ------------------------------------------------------------------
-    # Result Construction
-    # ------------------------------------------------------------------
-
-    def _build_result(
-        self,
-        *,
-        parsed_result: Any,
-        validation_results: list[Any],
-        repair_results: list[Any],
-    ) -> dict[str, Any]:
-        """
-        Build the final orchestration result.
-
-        The orchestrator currently returns a
-        serializable dictionary. A dedicated
-        GenerationResult model will replace this
-        structure in a future release.
-        """
-
-        return {
-            "parsed_result": parsed_result,
-            "validation_results": validation_results,
-            "repair_results": repair_results,
-            "generation_number": self._generation_count,
-            "status": "SUCCESS",
-        }
-
-    # ------------------------------------------------------------------
-    # Logging Helpers
-    # ------------------------------------------------------------------
-
-    def _log_pipeline_start(
-        self,
-        job: Any,
-    ) -> None:
-        """
-        Log pipeline start information.
-        """
-
-        self._logger.info(
-            "Pipeline started for job '%s'.",
-            getattr(
-                job,
-                "job_id",
-                "<unknown>",
-            ),
-        )
-
-    def _log_pipeline_complete(
-        self,
-        result: dict[str, Any],
-    ) -> None:
-        """
-        Log pipeline completion.
-        """
-
-        self._logger.info(
-            "Pipeline completed successfully "
-            "(generation=%d).",
-            result["generation_number"],
-        )
-
-    def _log_pipeline_failure(
+    def _build_failure_result(
         self,
         exc: Exception,
-    ) -> None:
+    ) -> OrchestrationResult:
         """
-        Log pipeline failure.
+        Build a failed orchestration result.
         """
 
-        self._logger.exception(
-            "Pipeline execution failed: %s",
-            exc,
+        self._statistics.finish()
+
+        self._statistics.add_metadata(
+            "exception_type",
+            exc.__class__.__name__,
         )
 
-    # ------------------------------------------------------------------
+        self._statistics.add_metadata(
+            "exception_message",
+            str(exc),
+        )
+
+        return OrchestrationResult(
+            success=False,
+            batch=None,
+            statistics=self._statistics,
+            message=str(exc),
+        )
+
+    # ---------------------------------------------------------
     # Runtime Information
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------
 
-    def uptime_seconds(
-        self,
-    ) -> float:
-        """
-        Return orchestrator uptime.
-        """
-
-        return (
-            time.monotonic()
-            - self._started_at
-        )
-
+    @property
     def statistics(
         self,
-    ) -> dict[str, Any]:
+    ) -> GenerationStatistics:
         """
-        Return runtime statistics.
+        Return the current generation statistics.
         """
 
-        return {
-            "generation_count": (
-                self._generation_count
-            ),
-            "uptime_seconds": round(
-                self.uptime_seconds(),
-                2,
-            ),
-            "shutdown": self._shutdown,
-        }
+        return self._statistics
 
-    def diagnostics(
+    @property
+    def component_name(
         self,
-    ) -> dict[str, Any]:
+    ) -> str:
         """
-        Return orchestrator diagnostics.
+        Human-readable component name.
+        """
+
+        return self.COMPONENT_NAME
+
+    @property
+    def version(
+        self,
+    ) -> str:
+        """
+        Component version.
+        """
+
+        return self.VERSION
+
+    def runtime_summary(
+        self,
+    ) -> dict[str, object]:
+        """
+        Return a concise runtime summary.
         """
 
         return {
-            "component": (
-                self.__class__.__name__
-            ),
+            "component": self.component_name,
+            "version": self.version,
+            "status": "READY",
             "statistics": (
-                self.statistics()
-            ),
-            "workspace": str(
-                self._workspace,
+                self._statistics.runtime_summary()
             ),
         }
-
-    # ------------------------------------------------------------------
-    # Health
-    # ------------------------------------------------------------------
 
     def health(
         self,
-    ) -> dict[str, Any]:
+    ) -> dict[str, object]:
         """
-        Return orchestrator health.
+        Return orchestrator health information.
         """
 
         return {
-            "component": (
-                "FactoryOrchestrator"
+            "component": self.component_name,
+            "version": self.version,
+            "healthy": True,
+            "ai_engine": True,
+            "batch_adapter": True,
+            "validation_engine": True,
+            "repair_engine": True,
+        }
+    # ---------------------------------------------------------
+    # Diagnostics
+    # ---------------------------------------------------------
+
+    def diagnostics(
+        self,
+    ) -> dict[str, object]:
+        """
+        Return detailed diagnostics for the orchestrator.
+        """
+
+        return {
+            "component": self.component_name,
+            "version": self.version,
+            "ai_engine": self._ai_engine.__class__.__name__,
+            "validation_engine": (
+                self._validation_engine.__class__.__name__
             ),
-            "status": (
-                "READY"
-                if not self._shutdown
-                else "SHUTDOWN"
-            ),
-            "ai_engine": (
-                self._ai_engine.is_ready
-            ),
-            "validator": (
-                not self._validator.is_empty()
-            ),
-            
             "repair_engine": (
-                not self._repair_engine.is_empty
+                self._repair_engine.__class__.__name__
+            ),
+            "batch_adapter": (
+                self._batch_adapter.__class__.__name__
+            ),
+            "statistics": (
+                self._statistics.to_dict()
             ),
         }
+
+    # ---------------------------------------------------------
+    # Lifecycle
+    # ---------------------------------------------------------
+
+    def reset(
+        self,
+    ) -> None:
+        """
+        Reset the orchestrator state.
+        """
+
+        self._statistics.reset()
+
+        self._logger.debug(
+            "%s reset completed.",
+            self.COMPONENT_NAME,
+        )
+
+    # ---------------------------------------------------------
+    # Representation
+    # ---------------------------------------------------------
+
+    def __repr__(
+        self,
+    ) -> str:
+        """
+        Developer representation.
+        """
+
+        return (
+            f"{self.COMPONENT_NAME}"
+            f"(version='{self.VERSION}')"
+        )
+
+    def __str__(
+        self,
+    ) -> str:
+        """
+        Human-readable representation.
+        """
+
+        return (
+            f"{self.COMPONENT_NAME} "
+            f"v{self.VERSION}"
+        )

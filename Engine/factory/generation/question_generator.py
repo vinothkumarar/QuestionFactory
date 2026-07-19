@@ -1,18 +1,26 @@
 """
-Question Factory OS v2.0
+Question Factory OS v2.1
 
 Question Generator
 
-Responsible for manufacturing raw questions.
+Coordinates the manufacturing of question batches.
 
-The generator orchestrates AI-based question generation
-but performs no validation, repair or packaging.
+The QuestionGenerator is intentionally lightweight.
+Its responsibilities are:
+
+    • Build an AIJob
+    • Delegate execution to FactoryOrchestrator
+    • Return the generated questions
+
+All AI execution, validation and repair are delegated
+to the orchestration subsystem.
 """
 
 from __future__ import annotations
 
 import logging
-from typing import List
+
+from typing import Any
 
 from Engine.blueprint.blueprint_model import (
     BlueprintModel,
@@ -26,19 +34,74 @@ from Engine.models.runtime_model import (
     RuntimeModel,
 )
 
+from Engine.factory.generation.ai_job_builder import (
+    AIJobBuilder,
+)
 
+from Engine.factory.orchestrator.factory_orchestrator import (
+    FactoryOrchestrator,
+)
 
+from Engine.factory.orchestrator.orchestration_result import (
+    OrchestrationResult,
+)
 
 class QuestionGenerator:
+    VERSION = "2.1.0"
+    COMPONENT_NAME = "Question Generator"
+
+
     """
-    Manufactures raw question batches.
+    Coordinates question generation.
+
+    The QuestionGenerator performs no AI execution.
+
+    Workflow
+    --------
+        Production Node
+                │
+                ▼
+          AIJobBuilder
+                │
+                ▼
+             AIJob
+                │
+                ▼
+      FactoryOrchestrator
+                │
+                ▼
+        Generated Questions
     """
 
-    def __init__(self):
+    def __init__(
+        self,
+        *,
+        ai_job_builder: AIJobBuilder,
+        orchestrator: FactoryOrchestrator,
+    ) -> None:
+        """
+        Create a QuestionGenerator.
 
-        self.logger = logging.getLogger(self.__class__.__name__)
+        Parameters
+        ----------
+        ai_job_builder
+            Builds AIJob instances from production inputs.
 
-        
+        orchestrator
+            Executes the complete AI generation pipeline.
+        """
+
+        self._logger = logging.getLogger(
+            self.__class__.__name__,
+        )
+
+        self._ai_job_builder = ai_job_builder
+
+        self._orchestrator = orchestrator
+
+        self._logger.info(
+            "QuestionGenerator initialized."
+        )
 
     # ---------------------------------------------------------
     # Public API
@@ -46,177 +109,56 @@ class QuestionGenerator:
 
     def generate(
         self,
+        *,
         node: ProductionNodeModel,
         blueprint: BlueprintModel,
         runtime: RuntimeModel,
-    ) -> List[dict]:
+    ) -> Any:
         """
-        Generate a batch of raw questions.
+        Generate one question batch.
 
-        Parameters
-        ----------
-        node
-            Current production node.
-
-        blueprint
-            Factory blueprint.
-
-        runtime
-            Current runtime state.
-
-        Returns
-        -------
-        List[dict]
-            Raw generated questions.
+        The QuestionGenerator builds an AIJob and
+        delegates the complete execution to the
+        FactoryOrchestrator.
         """
-
-        self.logger.info("Starting question generation.")
-
-        generation_request = self._build_request(
-            node,
-            blueprint,
-            runtime,
+        self._logger.info(
+            "Starting question generation."
         )
 
-        questions = self._invoke_ai(generation_request)
+        #
+        # Build the strongly typed AIJob.
+        #
 
-        self.logger.info(
-            "Generated %d question(s).",
-            len(questions),
+        job = self._ai_job_builder.build(
+            node=node,
+            blueprint=blueprint,
+            runtime=runtime,
         )
 
-        return questions
-        # ---------------------------------------------------------
-
-    # Request Building
-    # ---------------------------------------------------------
-
-    def _build_request(
-        self,
-        node: ProductionNodeModel,
-        blueprint: BlueprintModel,
-        runtime: RuntimeModel,
-    ) -> dict:
-        """
-        Build a generation request.
-
-        This method converts the current production state
-        into a provider-independent request that can later
-        be consumed by any supported AI client.
-        """
-
-        request = {
-            "factory": {
-                "name": blueprint.factory.name,
-                "version": blueprint.factory.version,
-                "blueprint_version": (blueprint.blueprint_version),
-            },
-            "production": {
-                "unit_code": node.location.unit,
-                "chapter_code": node.location.chapter,
-                "subtopic_code": node.location.subtopic,
-                "set_number": node.location.set_number,
-                "batch_number": node.location.batch_number,
-                "question_start": node.question_range.question_from,
-                "question_end": node.question_range.question_to,
-                "question_count": node.question_count,
-            },
-            
-            "runtime": {
-                "current_node": runtime.current_node,
-                "current_batch": runtime.current_batch,
-                "repair_before_expand": node.quality.repair_before_expand,
-                "checkpoint_enabled": runtime.is_recovery_required,
-            },
-            "generation": {
-                "rules": blueprint.rules.rules,
-                "archetypes": (blueprint.archetypes.archetypes),
-                "schema_version": (blueprint.schema_version),
-            },
-        }
-
-        self.logger.info("Generation request created.")
-
-        return request
-
-    # ---------------------------------------------------------
-    # AI Invocation
-    # ---------------------------------------------------------
-
-    def _invoke_ai(
-        self,
-        request: dict,
-    ) -> List[dict]:
-        """
-        Invoke the AI generation backend.
-
-        This placeholder implementation returns an empty
-        collection. A future AI client will replace this
-        implementation.
-        """
-
-        self.logger.info("Invoking AI generation backend.")
+        self.before_generation(
+            job,
+        )
 
         #
-        # Future implementation:
-        #
-        # PromptBuilder
-        #        │
-        #        ▼
-        # AIClient
-        #        │
-        #        ▼
-        # Parsed Questions
+        # Execute the manufacturing pipeline.
         #
 
-        return []
-        # ---------------------------------------------------------
+        orchestration_result = (
+            self._orchestrator.orchestrate(
+                job,
+            )
+        )
 
-    # Request Validation
-    # ---------------------------------------------------------
+        self.after_generation(
+            job,
+            orchestration_result,
+        )
 
-    def validate_request(
-        self,
-        request: dict,
-    ) -> None:
-        """
-        Validate the generation request before it is sent
-        to the AI provider.
-        """
+        self._logger.info(
+            "Question generation completed."
+        )
 
-        required_sections = [
-            "factory",
-            "production",
-            "runtime",
-            "generation",
-        ]
-
-        for section in required_sections:
-
-            if section not in request:
-
-                raise ValueError(f"Missing request section: {section}")
-
-        production = request["production"]
-
-        required_fields = [
-            "unit_code",
-            "chapter_code",
-            "subtopic_code",
-            "set_number",
-            "batch_number",
-            "question_start",
-            "question_end",
-            "question_count",
-        ]
-
-        for field in required_fields:
-
-            if field not in production:
-
-                raise ValueError(f"Missing production field: {field}")
-
-        self.logger.info("Generation request validated.")
+        return orchestration_result
 
     # ---------------------------------------------------------
     # Lifecycle Hooks
@@ -224,204 +166,81 @@ class QuestionGenerator:
 
     def before_generation(
         self,
-        request: dict,
+        job: Any,
     ) -> None:
         """
-        Executed immediately before AI generation.
-
-        Override in derived implementations to perform
-        telemetry, auditing or request enrichment.
+        Hook executed immediately before the
+        orchestration pipeline starts.
         """
 
         return
 
+    
     def after_generation(
         self,
-        request: dict,
-        questions: List[dict],
+        job: Any,
+        orchestration_result: OrchestrationResult,
     ) -> None:
         """
-        Executed immediately after AI generation.
-
-        Override for custom reporting, metrics or
-        downstream integrations.
+        Hook executed after the orchestration
+        pipeline completes.
         """
 
         return
-
     # ---------------------------------------------------------
     # Diagnostics
     # ---------------------------------------------------------
 
     def summary(
         self,
-        request: dict,
-        questions: List[dict],
-    ) -> dict:
+        *,
+        node: ProductionNodeModel,
+        questions: list[dict[str, Any]],
+    ) -> dict[str, Any]:
         """
         Return a concise generation summary.
         """
 
-        production = request["production"]
-
         return {
-            "unit": production["unit_code"],
-            "chapter": production["chapter_code"],
-            "subtopic": production["subtopic_code"],
-            "set": production["set_number"],
-            "batch": production["batch_number"],
-            "requested_questions": (production["question_count"]),
-            "generated_questions": len(questions),
+            "unit": node.location.unit,
+            "chapter": node.location.chapter,
+            "subtopic": node.location.subtopic,
+            "set": node.location.set_number,
+            "batch": node.location.batch_number,
+            "requested_questions": node.question_count,
+            "generated_questions": len(
+                questions,
+            ),
         }
 
     def diagnostics(
         self,
-        request: dict,
-        questions: List[dict],
-    ) -> dict:
-        """
-        Return detailed generation diagnostics.
-        """
-
-        return {
-            "component": self.__class__.__name__,
-            "summary": self.summary(
-                request,
-                questions,
-            ),
-            "factory": request["factory"],
-            "runtime": request["runtime"],
-        }
-        # ---------------------------------------------------------
-
-    # Generator Information
-    # ---------------------------------------------------------
-
-    @property
-    def version(self) -> str:
-        """
-        Generator version.
-        """
-
-        return "2.0.0"
-
-    @property
-    def component_name(self) -> str:
-        """
-        Generator component name.
-        """
-
-        return "Question Generator"
-
-    # ---------------------------------------------------------
-    # AI Provider
-    # ---------------------------------------------------------
-
-    def supported_providers(self) -> List[str]:
-        """
-        Return the AI providers supported by the
-        generation framework.
-
-        The QuestionGenerator itself remains provider
-        independent. Actual provider implementations
-        will be introduced through dedicated AI clients.
-        """
-
-        return [
-            "OpenAI",
-            "Anthropic",
-            "Google Gemini",
-            "Local LLM",
-        ]
-
-    def default_provider(self) -> str:
-        """
-        Return the default AI provider.
-        """
-
-        return "OpenAI"
-
-    # ---------------------------------------------------------
-    # Health
-    # ---------------------------------------------------------
-
-    def health(self) -> dict:
-        """
-        Return generator health information.
-        """
-
-        return {
-            "component": self.component_name,
-            "version": self.version,
-            "default_provider": (self.default_provider()),
-            "supported_providers": (self.supported_providers()),
-            "status": "READY",
-        }
-
-    # ---------------------------------------------------------
-    # Capabilities
-    # ---------------------------------------------------------
-
-    def capabilities(self) -> dict:
-        """
-        Describe generator capabilities.
-        """
-
-        return {
-            "provider_independent": True,
-            "request_validation": True,
-            "lifecycle_hooks": True,
-            "diagnostics": True,
-            "health_reporting": True,
-            "multi_provider_ready": True,
-            "runtime_aware": True,
-            "blueprint_aware": True,
-        }
-
-    # ---------------------------------------------------------
-    # Utility Methods
-    # ---------------------------------------------------------
-
-    def is_provider_supported(
-        self,
-        provider: str,
-    ) -> bool:
-        """
-        Determine whether a provider is supported.
-        """
-
-        return provider in self.supported_providers()
-
-    def create_empty_result(self) -> List[dict]:
-        """
-        Create an empty generation result.
-
-        Useful for testing and fallback scenarios.
-        """
-
-        return []
-        # ---------------------------------------------------------
-
-    # Execution Helpers
-    # ---------------------------------------------------------
-
-    def execute(
-        self,
+        *,
         node: ProductionNodeModel,
-        blueprint: BlueprintModel,
-        runtime: RuntimeModel,
-    ) -> List[dict]:
+        questions: list[dict[str, Any]],
+    ) -> dict[str, Any]:
         """
-        Convenience wrapper used by pipeline stages.
-
-        Equivalent to generate().
+        Return generator diagnostics.
         """
 
-        return self.generate(
-            node=node,
-            blueprint=blueprint,
-            runtime=runtime,
-        )
+        return {
+            "component": (
+                self.component_name
+            ),
+            "version": (
+                self.version
+            ),
+            "summary": self.summary(
+                node=node,
+                questions=questions,
+            ),
+            "orchestrator": (
+                self._orchestrator.__class__.__name__
+            ),
+            "ai_job_builder": (
+                self._ai_job_builder.__class__.__name__
+            ),
+        }
 
     # ---------------------------------------------------------
     # Statistics
@@ -429,23 +248,182 @@ class QuestionGenerator:
 
     def generation_statistics(
         self,
-        questions: List[dict],
-    ) -> dict:
+        questions: list[dict[str, Any]],
+    ) -> dict[str, Any]:
         """
-        Return basic generation statistics.
+        Return generation statistics.
+        """
+
+        generated = len(
+            questions,
+        )
+
+        return {
+            "generated_questions": generated,
+            "empty_result": generated == 0,
+        }
+
+    # ---------------------------------------------------------
+    # Health
+    # ---------------------------------------------------------
+
+    def health(
+        self,
+    ) -> dict[str, Any]:
+        """
+        Return component health.
         """
 
         return {
-            "generated_questions": len(questions),
-            "empty_result": len(questions) == 0,
+            "component": self.component_name,
+            "version": self.version,
+            "status": "READY",
+            "orchestrator": (
+                self._orchestrator.__class__.__name__
+            ),
+            "ai_job_builder": (
+                self._ai_job_builder.__class__.__name__
+            ),
         }
 
+    # ---------------------------------------------------------
+    # Capabilities
+    # ---------------------------------------------------------
+
+    def capabilities(
+        self,
+    ) -> dict[str, bool]:
+        """
+        Return supported capabilities.
+        """
+
+        return {
+            "ai_job_generation": True,
+            "factory_orchestration": True,
+            "provider_independent": True,
+            "diagnostics": True,
+            "health_reporting": True,
+            "lifecycle_hooks": True,
+        }
+    # ---------------------------------------------------------
+    # Component Information
+    # ---------------------------------------------------------
+
+    @property
+    def version(
+        self,
+    ) -> str:
+        """
+        Component version.
+        """
+
+        return self.VERSION
+
+    @property
+    def component_name(
+        self,
+    ) -> str:
+        """
+        Human-readable component name.
+        """
+
+        return self.COMPONENT_NAME
+
+    # ---------------------------------------------------------
+    # Configuration
+    # ---------------------------------------------------------
+
+    def configuration(
+        self,
+    ) -> dict[str, Any]:
+        """
+        Return the current component configuration.
+        """
+
+        return {
+            "component": self.component_name,
+            "version": self.version,
+            "ai_job_builder": (
+                self._ai_job_builder.__class__.__name__
+            ),
+            "orchestrator": (
+                self._orchestrator.__class__.__name__
+            ),
+        }
+
+    # ---------------------------------------------------------
+    # Runtime Summary
+    # ---------------------------------------------------------
+
+    def runtime_summary(
+        self,
+    ) -> dict[str, Any]:
+        """
+        Return a concise runtime summary.
+        """
+
+        return {
+            "component": self.component_name,
+            "status": "READY",
+            "version": self.version,
+        }
+
+    # ---------------------------------------------------------
+    # Supported Operations
+    # ---------------------------------------------------------
+
+    def supports_generation(
+        self,
+    ) -> bool:
+        """
+        Return True when generation is supported.
+        """
+
+        return True
+
+    def supports_orchestration(
+        self,
+    ) -> bool:
+        """
+        Return True when orchestration is available.
+        """
+
+        return True
+   
     # ---------------------------------------------------------
     # Representation
     # ---------------------------------------------------------
 
-    def __repr__(self) -> str:
-        return "QuestionGenerator(" f"version='{self.version}')"
+    def __repr__(
+        self,
+    ) -> str:
+        """
+        Developer-friendly representation.
+        """
 
-    def __str__(self) -> str:
-        return f"{self.component_name} " f"[v{self.version}]"
+        return (
+            "QuestionGenerator("
+            f"version='{self.version}')"
+        )
+
+    def __str__(
+        self,
+    ) -> str:
+        """
+        Human-readable representation.
+        """
+
+        return (
+            f"{self.component_name} "
+            f"[v{self.version}]"
+        )
+
+
+# ---------------------------------------------------------
+# Module Exports
+# ---------------------------------------------------------
+
+__all__ = [
+    "QuestionGenerator",
+]
+

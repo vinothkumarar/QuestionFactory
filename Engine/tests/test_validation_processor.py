@@ -43,6 +43,8 @@ context = MergeProcessor().execute(context)
 
 context = ValidationProcessor().execute(context)
 
+assert context.question is not None
+
 print("=" * 80)
 print("VALIDATION PROCESSOR")
 print("=" * 80)
