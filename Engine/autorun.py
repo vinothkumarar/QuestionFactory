@@ -6,8 +6,8 @@ Entry point for the Question Factory Engine.
 """
 
 from Engine.config import FACTORY_NAME, FACTORY_VERSION
-from Engine.core.question_factory_engine import (
-    QuestionFactoryEngine,
+from Engine.factory.factory_runner import (
+    FactoryRunner,
 )
 
 
@@ -22,9 +22,11 @@ def main():
 
     print_header()
 
-    engine = QuestionFactoryEngine()
+    runner = FactoryRunner()
 
-    engine.execute()
+    raise SystemExit(
+        runner.run()
+    )
 
 
 if __name__ == "__main__":

@@ -184,6 +184,210 @@ class GeneratedQuestionModel:
 
         return GeneratedQuestionModel.from_dict(self.to_dict())
 
+    def to_export_dict(self) -> Dict:
+        """
+        Convert the question into the canonical CSV
+        export schema used by Question Factory.
+        """
+
+        options = list(self.options)
+
+        while len(options) < 4:
+            options.append("")
+
+        metadata = dict(self.metadata)
+
+        return {
+            # -------------------------------------------------
+            # Foreign Keys
+            # -------------------------------------------------
+            "subject_id": metadata.get("subject_id", ""),
+            "chapter_id": self.chapter_code,
+            "unit_id": self.unit_code,
+            "subtopic_id": self.subtopic_code,
+
+            # -------------------------------------------------
+            # AI Generated Content
+            # -------------------------------------------------
+            "difficulty": self.difficulty,
+            "question_type": metadata.get(
+                "question_type",
+                "MCQ",
+            ),
+            "question_text": self.question_text,
+
+            "option_a": options[0],
+            "option_b": options[1],
+            "option_c": options[2],
+            "option_d": options[3],
+
+            "answer": self.correct_option,
+            "explanation": self.explanation,
+            "more_explanation": metadata.get(
+                "more_explanation",
+                "",
+            ),
+
+            "correct_option": self.correct_option,
+
+            "difficulty_score": metadata.get(
+                "difficulty_score",
+                "",
+            ),
+
+            "answer_type": metadata.get(
+                "answer_type",
+                "single",
+            ),
+
+            "concept_tested": self.concept,
+            "question_archetype": self.archetype,
+
+            "exam_level": metadata.get(
+                "exam_level",
+                "",
+            ),
+
+            "source_type": metadata.get(
+                "source_type",
+                "AI",
+            ),
+
+            "tags": ",".join(self.tags),
+
+            "estimated_time_sec": metadata.get(
+                "estimated_time_sec",
+                "",
+            ),
+
+            "marks": metadata.get(
+                "marks",
+                "",
+            ),
+
+            "negative_marks": metadata.get(
+                "negative_marks",
+                "",
+            ),
+
+            "bloom_level": metadata.get(
+                "bloom_level",
+                "",
+            ),
+
+            "chapter_weightage": metadata.get(
+                "chapter_weightage",
+                "",
+            ),
+
+            "exam_relevance": metadata.get(
+                "exam_relevance",
+                "",
+            ),
+
+            "pyq_inspired": metadata.get(
+                "pyq_inspired",
+                "",
+            ),
+
+            "pyq_exam": metadata.get(
+                "pyq_exam",
+                "",
+            ),
+
+            "pyq_year": metadata.get(
+                "pyq_year",
+                "",
+            ),
+
+            "pyq_topic": metadata.get(
+                "pyq_topic",
+                "",
+            ),
+
+            "status": metadata.get(
+                "status",
+                "ACTIVE",
+            ),
+
+            "version": metadata.get(
+                "version",
+                "1.0",
+            ),
+
+            "is_verified": metadata.get(
+                "is_verified",
+                False,
+            ),
+
+            "reviewed_by": metadata.get(
+                "reviewed_by",
+                "",
+            ),
+
+            "review_date": metadata.get(
+                "review_date",
+                "",
+            ),
+
+            "image_required": metadata.get(
+                "image_required",
+                False,
+            ),
+
+            "has_diagram": metadata.get(
+                "has_diagram",
+                False,
+            ),
+
+            "latex_required": metadata.get(
+                "latex_required",
+                False,
+            ),
+
+            "language": metadata.get(
+                "language",
+                "English",
+            ),
+
+            "question_image_url": metadata.get(
+                "question_image_url",
+                "",
+            ),
+
+            "solution_image_url": metadata.get(
+                "solution_image_url",
+                "",
+            ),
+
+            # -------------------------------------------------
+            # Factory Metadata
+            # -------------------------------------------------
+            "question_code": self.question_code,
+
+            "subject_name": metadata.get(
+                "subject_name",
+                "",
+            ),
+
+            "unit_name": metadata.get(
+                "unit_name",
+                "",
+            ),
+
+            "chapter_name": metadata.get(
+                "chapter_name",
+                "",
+            ),
+
+            "subtopic_name": metadata.get(
+                "subtopic_name",
+                "",
+            ),
+
+            "set_no": self.set_number,
+        }
+
     # ---------------------------------------------------------
     # Metadata Helpers
     # ---------------------------------------------------------
@@ -212,6 +416,8 @@ class GeneratedQuestionModel:
             key,
             default,
         )
+    
+    
         # ---------------------------------------------------------
 
     # State Inspection

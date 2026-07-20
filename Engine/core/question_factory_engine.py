@@ -14,6 +14,7 @@ from pathlib import Path
 from Engine.core.csv_writer import CSVWriter
 from Engine.core.resource_manager import ResourceManager
 from Engine.core.runtime_manager import RuntimeManager
+from Engine.factory.factory_runner import FactoryRunner
 
 
 class QuestionFactoryEngine:
@@ -57,4 +58,10 @@ class QuestionFactoryEngine:
         print(f"CSV File     : {csv_file}")
 
         print()
-        print("Engine executed successfully.")
+        print("Starting manufacturing pipeline...")
+
+        factory_runner = FactoryRunner()
+        exit_code = factory_runner.run()
+
+        print()
+        print(f"Manufacturing finished with exit code: {exit_code}")

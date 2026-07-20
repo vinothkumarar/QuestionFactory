@@ -562,6 +562,8 @@ class OpenAIClient(AIClient):
         return self._client.responses.create(
             **kwargs
         )
+
+        return response
     # ---------------------------------------------------------
     # Request Validation
     # ---------------------------------------------------------
