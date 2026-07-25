@@ -5,7 +5,7 @@ Retry Engine
 
 from Engine.ai.provider_factory import ProviderFactory
 from Engine.ai.repair_prompt_builder import RepairPromptBuilder
-from Engine.ai.response_parser import ResponseParser
+from Engine.factory.ai.response_parser import ResponseParser
 
 
 class RetryEngine:

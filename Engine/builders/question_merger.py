@@ -5,10 +5,22 @@ Question Merger
 
 
 class QuestionMerger:
+  
+    from typing import Any
 
-    def merge(self, skeleton: dict, ai_question: dict) -> dict:
+    def merge(self, skeleton: dict, ai_question: Any) -> dict:
 
         question = skeleton.copy()
+
+        # Support both legacy dict parser and production ParsedResponse
+        if hasattr(ai_question, "fields"):
+            parsed = {}
+
+            for name, field in ai_question.fields.items():
+                value = getattr(field, "value", None)
+                parsed[name] = value
+
+            ai_question = parsed
 
         # Only AI-generated educational fields
         allowed_fields = [

@@ -64,6 +64,20 @@ class CSVExporter:
 
             writer.writeheader()
 
+            print("\n========== AFTER MERGE ==========")
+            if rows:
+                first_question = rows[0]
+                print(
+                    {
+                        "question_text": first_question.get("question_text"),
+                        "subject_id": first_question.get("subject_id"),
+                        "unit_id": first_question.get("unit_id"),
+                        "chapter_id": first_question.get("chapter_id"),
+                        "subtopic_id": first_question.get("subtopic_id"),
+                        "question_code": first_question.get("question_code"),
+                    }
+                )
+          
             writer.writerows(rows)
 
         print()

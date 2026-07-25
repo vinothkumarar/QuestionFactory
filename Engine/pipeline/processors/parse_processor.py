@@ -9,7 +9,7 @@ Release   : R1
 
 from __future__ import annotations
 
-from Engine.ai.response_parser import ResponseParser
+from Engine.factory.ai.response_parser import ResponseParser
 from Engine.models.pipeline_context_model import PipelineContextModel
 
 from .pipeline_processor import PipelineProcessor
@@ -49,7 +49,7 @@ class ParseProcessor(PipelineProcessor):
                 "AI response has not been generated."
             )
 
-        context.parsed_response = self._parser.parse(
+        context.parsed_response = self._parser.parse_legacy(
             context.raw_response,
         )
 

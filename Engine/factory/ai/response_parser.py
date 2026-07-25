@@ -38,6 +38,8 @@ from typing import cast
 
 from Engine.factory.ai.ai_client import AIResponse
 
+from Engine.factory.ai.ai_client import AIProvider
+
 logger = logging.getLogger(__name__)
 
 
@@ -184,6 +186,36 @@ class ResponseParser:
                 errors=[str(ex)],
             )
 
+    def parse_legacy(self, response: str) -> dict[str, Any]:
+        """
+        Compatibility wrapper for legacy callers.
+
+        Converts a raw JSON string into an AIResponse and
+        returns a plain dict compatible with the old parser.
+        """
+
+        ai_response = AIResponse(
+            success=True,
+            provider=AIProvider.OPENAI,
+            model="legacy",
+            content=response,
+            raw_response=response,
+            finish_reason=None,
+            metadata={},
+        )
+
+        parsed = self.parse(ai_response)
+
+        if hasattr(parsed, "fields"):
+            result: dict[str, Any] = {}
+
+            for key, field in parsed.fields.items():
+                result[key] = getattr(field, "value", None)
+
+            return result
+
+        return {}
+
     # ------------------------------------------------------------------
     # Preprocessing
     # ------------------------------------------------------------------
@@ -208,52 +240,126 @@ class ResponseParser:
     # ------------------------------------------------------------------
     # JSON Extraction
     # ------------------------------------------------------------------
-
     def _extract_json(
         self,
         text: str,
-    ) -> Dict[str, Any]:
+    ) -> Any:
         """
-        Extract a JSON object from the response.
+        Extract JSON payload from the AI response.
 
         Supports:
-
-        • Pure JSON
-        • ```json fenced blocks
-        • Leading/trailing whitespace
+        • JSON object
+        • JSON array
+        • Markdown fenced JSON
         """
 
         if not text:
             raise ValueError("Response is empty.")
 
         try:
-            return cast(Dict[str, Any], json.loads(text))
+            return json.loads(text)
 
         except json.JSONDecodeError:
             pass
 
+        # --------------------------------------------------
+        # Try JSON Object
+        # --------------------------------------------------
+
         start = text.find("{")
         end = text.rfind("}")
 
-        if start == -1 or end == -1:
-            raise ValueError("No JSON object found.")
+        if start != -1 and end != -1 and end > start:
 
-        candidate = text[start : end + 1]
+            candidate = text[start : end + 1]
 
-        return cast(Dict[str, Any], json.loads(candidate))
+            try:
+                return json.loads(candidate)
 
-    # ------------------------------------------------------------------
-    # Field Population
-    # ------------------------------------------------------------------
+            except json.JSONDecodeError:
+                pass
 
+        # --------------------------------------------------
+        # Try JSON Array
+        # --------------------------------------------------
+
+        start = text.find("[")
+        end = text.rfind("]")
+
+        if start != -1 and end != -1 and end > start:
+
+            candidate = text[start : end + 1]
+
+            try:
+                return json.loads(candidate)
+
+            except json.JSONDecodeError:
+                pass
+
+        raise ValueError("No valid JSON payload found.")
+    
+        # ------------------------------------------------------------------
+        # Field Population
+        # ------------------------------------------------------------------
     def _populate_fields(
         self,
         parsed: ParsedResponse,
-        payload: Dict[str, Any],
+        payload: Any,
     ) -> None:
         """
-        Populate ParsedField objects from JSON.
+        Populate ParsedField objects from the parsed JSON.
+
+        Supported payloads:
+
+        1. JSON Object
+            {
+                ...
+            }
+
+        2. Single-item JSON Array
+            [
+                {
+                    ...
+                }
+            ]
         """
+
+        # --------------------------------------------------
+        # Handle array payloads
+        # --------------------------------------------------
+
+        if isinstance(payload, list):
+
+            if not payload:
+                raise ValueError("AI returned an empty JSON array.")
+
+            if len(payload) != 1:
+                raise ValueError(
+                    f"Expected exactly one question object, "
+                    f"received {len(payload)}."
+                )
+
+            payload = payload[0]
+
+        # --------------------------------------------------
+        # Validate payload
+        # --------------------------------------------------
+
+        if not isinstance(payload, dict):
+            raise TypeError(
+                "Top-level JSON must be an object "
+                f"(received {type(payload).__name__})."
+            )
+
+        # --------------------------------------------------
+        # Store original payload
+        # --------------------------------------------------
+
+        parsed.raw_json = payload
+
+        # --------------------------------------------------
+        # Populate fields
+        # --------------------------------------------------
 
         for name, value in payload.items():
 
@@ -261,10 +367,9 @@ class ResponseParser:
                 name=name,
                 value=value,
             )
-
-    # ------------------------------------------------------------------
-    # Markdown Helpers
-    # ------------------------------------------------------------------
+        # ------------------------------------------------------------------
+        # Markdown Helpers
+        # ------------------------------------------------------------------
 
     def _strip_markdown_fences(
         self,

@@ -234,6 +234,10 @@ class PromptBuilder:
             {},
         )
 
+        print("=" * 80)
+        print("PROMPT QUESTION COUNT:", variables.get("question_count"))
+        print("=" * 80)
+
         return textwrap.dedent(
             f"""
             You are an expert examination

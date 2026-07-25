@@ -14,7 +14,7 @@ print("CURRENT RUNTIME")
 print("=" * 80)
 print(runtime)
 
-runtime["current_batch"] += 1
+runtime.production.batch_id = "TEST_BATCH_2"
 
 repo.save_runtime(runtime)
 
