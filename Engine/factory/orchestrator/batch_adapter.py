@@ -20,6 +20,8 @@ validation or repair.
 
 from __future__ import annotations
 
+import json
+
 import logging
 
 from typing import Any
@@ -236,21 +238,60 @@ class BatchAdapter:
                 "'questions' must be a list."
             )
 
-        for item in questions:
+        for index, item in enumerate(questions, start=1):
 
-            if not isinstance(
-                item,
-                dict,
-            ):
+            if not isinstance(item, dict):
                 continue
 
-            question = self._builder.build(
-                item,
+            self._logger.info("=" * 80)
+            self._logger.info("QUESTION %d PAYLOAD BEFORE BUILDER", index)
+            self._logger.info(
+                "\n%s",
+                json.dumps(item, indent=4, default=str)
+            )
+            self._logger.info("=" * 80)
+
+            question_data = dict(item)
+
+            question_data.setdefault(
+                "unit_code",
+                batch.unit_code,
             )
 
-            batch.add_question(
-                question,
+            question_data.setdefault(
+                "chapter_code",
+                batch.chapter_code,
             )
+
+            question_data.setdefault(
+                "subtopic_code",
+                batch.subtopic_code,
+            )
+
+            question_data.setdefault(
+                "set_number",
+                batch.set_number,
+            )
+
+            question_data.setdefault(
+                "batch_number",
+                batch.batch_number,
+            )
+
+            question = self._builder.build(
+                question_data,
+            )
+
+            self._logger.info(
+                "BUILT QUESTION: code=%s, options=%s, correct=%s",
+                question.question_code,
+                question.options,
+                question.correct_option,
+            )
+
+            batch.add_question(question)
+
+           
     # ---------------------------------------------------------
     # Statistics
     # ---------------------------------------------------------

@@ -134,6 +134,7 @@ class FactoryRunner:
         self,
     ) -> int:
         """
+    
         Execute one complete manufacturing cycle.
         """
 
@@ -342,7 +343,7 @@ class FactoryRunner:
 
             print()
 
-            return 0
+            return len(batch.questions)
 
         except Exception:
 

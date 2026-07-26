@@ -196,6 +196,17 @@ class GeneratedQuestionModel:
             options.append("")
 
         metadata = dict(self.metadata)
+        option_map = {
+            "A": options[0],
+            "B": options[1],
+            "C": options[2],
+            "D": options[3],
+        }
+
+        answer_text = option_map.get(
+            self.correct_option.upper(),
+            self.correct_option,
+        )
 
         return {
             # -------------------------------------------------
@@ -221,7 +232,7 @@ class GeneratedQuestionModel:
             "option_c": options[2],
             "option_d": options[3],
 
-            "answer": self.correct_option,
+            "answer": answer_text,
             "explanation": self.explanation,
             "more_explanation": metadata.get(
                 "more_explanation",

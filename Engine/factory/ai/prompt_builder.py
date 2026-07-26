@@ -237,6 +237,32 @@ class PromptBuilder:
         print("=" * 80)
         print("PROMPT QUESTION COUNT:", variables.get("question_count"))
         print("=" * 80)
+        json_schema = textwrap.dedent("""
+        {
+            "batch_id": "string",
+            "unit_code": "string",
+            "chapter_code": "string",
+            "subtopic_code": "string",
+            "set_number": 1,
+            "batch_number": 1,
+            "questions": [
+                {
+                    "question_code": "string",
+                    "question_text": "string",
+                    "difficulty": "Foundation | Easy | Medium | Hard | Elite",
+                    "options": [
+                        "Option A",
+                        "Option B",
+                        "Option C",
+                        "Option D"
+                    ],
+                    "correct_option": "A",
+                    "explanation": "string",
+                    "metadata": {}
+                }
+            ]
+        }
+        """)
 
         return textwrap.dedent(
             f"""
@@ -259,6 +285,13 @@ class PromptBuilder:
             Subtopic:
             {variables.get("subtopic", "")}
 
+            Use these identifiers exactly in the generated JSON.
+
+            subject_code = {variables.get("subject", "")}
+            unit_code = {variables.get("unit", "")}
+            chapter_code = {variables.get("chapter_code", variables.get("chapter", ""))}
+            subtopic_code = {variables.get("subtopic_code", variables.get("subtopic", ""))}
+
             Difficulty:
             {variables.get("difficulty", "")}
 
@@ -276,6 +309,59 @@ class PromptBuilder:
             - Exactly one correct answer.
             - Include explanation.
             - Return valid JSON only.
+            IMPORTANT OUTPUT FORMAT
+
+            Return ONLY a single JSON object.
+
+            Do not return Markdown.
+
+            Do not return explanations outside JSON.
+
+            The JSON MUST exactly match this schema.
+
+            {json_schema}
+
+            RULES
+
+            1. question_text is mandatory.
+
+            2. Use question_text.
+            Never use "question".
+
+            3. Use correct_option.
+            Never use correct_answer.
+
+            4. correct_option MUST contain ONLY one letter:
+            A
+            B
+            C
+            or D
+
+            5. options MUST be an array of FOUR STRINGS.
+
+            Correct:
+
+            "options":[
+            "A",
+            "B",
+            "C",
+            "D"
+            ]
+
+            Incorrect:
+
+            "options":[
+            {            {
+            "label":"A",
+            "text":"..."
+            }}
+            ]
+
+            6. Every question must include question_code.
+
+            7. Never invent additional JSON fields.
+
+            8. Return ONLY the JSON object.
             """
         ).strip()
 

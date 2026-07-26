@@ -345,24 +345,10 @@ class GeneratedQuestionBuilder:
 
         upper = answer.upper()
 
-        if upper in option_index:
+        if upper in {"A", "B", "C", "D"}:
+            question.correct_option = upper
+            return
 
-            index = option_index[
-                upper
-            ]
-
-            if (
-                index
-                < len(question.options)
-            ):
-
-                question.correct_option = (
-                    question.options[
-                        index
-                    ]
-                )
-
-                return
 
         #
         # Already supplied as option text

@@ -9,62 +9,58 @@ Release   : R1
 
 QUESTION_COLUMNS = [
     # -------------------------------------------------
-    # Foreign Keys
+    # Identity
     # -------------------------------------------------
+    "question_code",
     "subject_id",
-    "chapter_id",
     "unit_id",
+    "chapter_id",
     "subtopic_id",
+
     # -------------------------------------------------
-    # AI Generated Content
+    # Question
     # -------------------------------------------------
     "difficulty",
     "question_type",
+    "answer_type",
     "question_text",
+
     "option_a",
     "option_b",
     "option_c",
     "option_d",
+
+    "correct_option",
     "answer",
+
+    # -------------------------------------------------
+    # Learning
+    # -------------------------------------------------
     "explanation",
     "more_explanation",
-    "correct_option",
-    "difficulty_score",
-    "answer_type",
     "concept_tested",
     "question_archetype",
+
+    # -------------------------------------------------
+    # Classification
+    # -------------------------------------------------
     "exam_level",
     "source_type",
     "tags",
+
+    # -------------------------------------------------
+    # Runtime
+    # -------------------------------------------------
     "estimated_time_sec",
     "marks",
     "negative_marks",
-    "bloom_level",
-    "chapter_weightage",
-    "exam_relevance",
-    "pyq_inspired",
-    "pyq_exam",
-    "pyq_year",
-    "pyq_topic",
+    "language",
     "status",
     "version",
-    "is_verified",
-    "reviewed_by",
-    "review_date",
-    "image_required",
-    "has_diagram",
-    "latex_required",
-    "language",
-    "question_image_url",
-    "solution_image_url",
+
     # -------------------------------------------------
-    # Factory Metadata
+    # Factory
     # -------------------------------------------------
-    "question_code",
-    "subject_name",
-    "unit_name",
-    "chapter_name",
-    "subtopic_name",
     "set_no",
 ]
 

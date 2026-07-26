@@ -463,6 +463,85 @@ class ProductionScheduler:
         node: ProductionNodeModel,
     ) -> None:
         """
+    # ---------------------------------------------------------
+    # Runtime Progression
+    # ---------------------------------------------------------
+
+    def has_next(
+        self,
+        runtime: RuntimeModel,
+    ) -> bool:
+        """
+        Determine whether additional manufacturing work exists.
+
+        Current implementation assumes manufacturing continues
+        until the runtime is explicitly marked as completed.
+
+        Future versions will consult the Blueprint to determine
+        the true end of production.
+        """
+
+        return runtime.status != "COMPLETED"
+
+    def is_complete(
+        self,
+        runtime: RuntimeModel,
+    ) -> bool:
+        """
+        Returns True when manufacturing has completed.
+        """
+
+        return not self.has_next(runtime)
+
+    def advance(
+        self,
+        runtime: RuntimeModel,
+    ) -> RuntimeModel:
+        """
+        Advance the runtime to the next production position.
+
+        Version 1 advances only the batch.
+
+        Future versions will automatically advance through
+        Batch, Set, Subtopic, Chapter, Unit and Subject.
+        """
+
+        production = runtime.production
+
+        production.batch_number += 1
+
+        question_count = (
+            production.question_to
+            - production.question_from
+            + 1
+        )
+
+        production.question_from += question_count
+
+        production.question_to += question_count
+
+        self.logger.info(
+            "Advanced to Batch %d",
+            production.batch_number,
+        )
+
+        return runtime
+
+    def complete(
+        self,
+        runtime: RuntimeModel,
+    ) -> RuntimeModel:
+        """
+        Mark manufacturing as completed.
+        """
+
+        runtime.status = "COMPLETED"
+
+        self.logger.info(
+            "Manufacturing completed."
+        )
+
+        return runtime
         Hook executed after a production node has been created.
 
         Override for custom scheduling workflows.
