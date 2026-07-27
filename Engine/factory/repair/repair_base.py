@@ -13,7 +13,7 @@ this class and implement only repair logic.
 from __future__ import annotations
 
 import logging
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 from Engine.factory.repair.repair_result_model import (
     RepairResultModel,
@@ -23,8 +23,12 @@ from Engine.models.question_batch_model import (
     QuestionBatchModel,
 )
 
+from Engine.factory.repair.repair_engine import (
+    RepairModule,
+)
 
-class RepairBase(ABC):
+
+class RepairBase(RepairModule):
     """
     Base class for all repair modules.
     """

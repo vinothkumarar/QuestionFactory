@@ -18,7 +18,8 @@ class ProductionOrderIdGenerator:
 
         return (
             f"ORDER_"
-            f"{state.project}_"
+            f"{state.subject}_"
+            f"{state.unit}_"
             f"{state.chapter}_"
             f"{state.subtopic}_"
             f"{state.set_no}_"

@@ -10,23 +10,26 @@ Release   : R2
 import json
 from pathlib import Path
 
-from Engine.models.factory_state_model import (
-    FactoryStateModel,
-)
+from Engine.models.factory_state_model import FactoryStateModel
 
 
 class FactoryStateRepository:
 
     def __init__(self):
 
-        self.path = Path(__file__).parent.parent / "runtime" / "factory_state.json"
+        self.path = (
+            Path(__file__).parent.parent
+            / "runtime"
+            / "factory_state.json"
+        )
 
     def load(self) -> FactoryStateModel:
 
         data = json.loads(self.path.read_text(encoding="utf-8"))
 
         return FactoryStateModel(
-            project=data["project"],
+            subject=data["subject"],
+            unit=data["unit"],
             chapter=data["chapter"],
             subtopic=data["subtopic"],
             set_no=data["set_no"],
@@ -38,7 +41,8 @@ class FactoryStateRepository:
     def save(self, state: FactoryStateModel):
 
         data = {
-            "project": state.project,
+            "subject": state.subject,
+            "unit": state.unit,
             "chapter": state.chapter,
             "subtopic": state.subtopic,
             "set_no": state.set_no,
@@ -47,7 +51,10 @@ class FactoryStateRepository:
             "status": state.status,
         }
 
-        self.path.write_text(json.dumps(data, indent=4), encoding="utf-8")
+        self.path.write_text(
+            json.dumps(data, indent=4),
+            encoding="utf-8",
+        )
 
     def update(self, state: FactoryStateModel) -> FactoryStateModel:
         """
@@ -65,7 +72,8 @@ class FactoryStateRepository:
         """
 
         state = FactoryStateModel(
-            project="",
+            subject="",
+            unit="",
             chapter="",
             subtopic="",
             set_no="",

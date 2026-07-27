@@ -36,8 +36,8 @@ class ProductionPlanner:
 
         return ProductionOrderModel(
             order_id=order_id,
-            subject="Physics",
-            unit=state.project,
+            subject=state.subject,
+            unit=state.unit,
             chapter=state.chapter,
             subtopic=state.subtopic,
             set_no=state.set_no,

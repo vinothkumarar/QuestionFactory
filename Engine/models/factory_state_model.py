@@ -11,7 +11,9 @@ from dataclasses import dataclass
 @dataclass
 class FactoryStateModel:
 
-    project: str
+    subject: str
+
+    unit: str
 
     chapter: str
 

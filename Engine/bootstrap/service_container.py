@@ -64,6 +64,13 @@ from Engine.factory.validation.validation_engine import (
     ValidationEngine,
 )
 
+from Engine.factory.repair.structural_repair import (
+    StructuralRepair,
+)
+from Engine.factory.repair.academic_repair import (
+    AcademicRepair,
+)
+
 LOGGER = logging.getLogger(__name__)
 
 
@@ -302,6 +309,18 @@ class ServiceContainer:
         )
 
         repair_engine = RepairEngine()
+
+        # ---------------------------------------------------------
+        # Register Production Repair Modules
+        # ---------------------------------------------------------
+
+        repair_engine.register(
+            StructuralRepair(),
+        )
+
+        repair_engine.register(
+            AcademicRepair(),
+        )
 
         batch_adapter = BatchAdapter()
 

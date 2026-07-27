@@ -143,20 +143,55 @@ class FactoryOrchestrator:
                 len(batch.questions)
             )
 
-            validated_batch = (
+            validation_result = (
                 self._validate_batch(
                     batch,
                 )
             )
 
+            #
+            # Already valid
+            #
+
+            if validation_result.is_valid:
+
+                self._statistics.add_metadata(
+                    "repair_skipped",
+                    True,
+                )
+
+                return self._build_success_result(
+                    validation_result.batch,
+                )
+
+            #
+            # Execute Repair
+            #
+
             repaired_batch = (
                 self._repair_batch(
-                    validated_batch,
+                    validation_result.batch,
                 )
             )
 
+            #
+            # Validate Again
+            #
+
+            final_validation = (
+                self._validate_batch(
+                    repaired_batch,
+                )
+            )
+
+            if not final_validation.is_valid:
+
+                raise RuntimeError(
+                    "Batch failed validation after repair."
+                )
+
             return self._build_success_result(
-                repaired_batch,
+                final_validation.batch,
             )
 
         except Exception as exc:
@@ -179,7 +214,7 @@ class FactoryOrchestrator:
     def _validate_batch(
         self,
         batch: QuestionBatchModel,
-    ) -> QuestionBatchModel:
+    ):
         """
         Execute the validation pipeline.
         """
@@ -208,7 +243,7 @@ class FactoryOrchestrator:
             validation_result.error_count,
         )
 
-        return validation_result.batch
+        return validation_result
 
     def _repair_batch(
         self,
@@ -219,7 +254,7 @@ class FactoryOrchestrator:
         """
 
         repair_result = (
-            self._repair_engine.repair(
+            self._repair_engine.execute(
                 batch,
             )
         )
