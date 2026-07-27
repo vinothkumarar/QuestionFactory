@@ -463,6 +463,13 @@ class ProductionScheduler:
         node: ProductionNodeModel,
     ) -> None:
         """
+        Hook executed after a production node has been scheduled.
+
+        Override in derived schedulers if post-scheduling
+        actions are required.
+        """
+       
+        return
     # ---------------------------------------------------------
     # Runtime Progression
     # ---------------------------------------------------------
@@ -481,7 +488,7 @@ class ProductionScheduler:
         the true end of production.
         """
 
-        return runtime.status != "COMPLETED"
+        return runtime.factory.status != "COMPLETED"
 
     def is_complete(
         self,
@@ -535,20 +542,14 @@ class ProductionScheduler:
         Mark manufacturing as completed.
         """
 
-        runtime.status = "COMPLETED"
+        runtime.complete_cycle()
 
         self.logger.info(
             "Manufacturing completed."
         )
 
         return runtime
-        Hook executed after a production node has been created.
-
-        Override for custom scheduling workflows.
-        """
-
-        return
-
+        
     # ---------------------------------------------------------
     # Diagnostics
     # ---------------------------------------------------------

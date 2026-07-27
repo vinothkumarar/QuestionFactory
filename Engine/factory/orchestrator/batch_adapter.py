@@ -198,6 +198,7 @@ class BatchAdapter:
                 "CREATED",
             )
         ).strip()
+        
 
         metadata = payload.get(
             "metadata",
@@ -243,15 +244,45 @@ class BatchAdapter:
             if not isinstance(item, dict):
                 continue
 
-            self._logger.info("=" * 80)
-            self._logger.info("QUESTION %d PAYLOAD BEFORE BUILDER", index)
-            self._logger.info(
-                "\n%s",
-                json.dumps(item, indent=4, default=str)
-            )
-            self._logger.info("=" * 80)
+            
 
             question_data = dict(item)
+
+            question_metadata = dict(
+                question_data.get("metadata", {})
+            )
+
+            question_metadata.setdefault(
+                "batch_id",
+                batch.batch_id,
+            )
+
+            question_metadata.setdefault(
+                "unit_code",
+                batch.unit_code,
+            )
+
+            question_metadata.setdefault(
+                "chapter_code",
+                batch.chapter_code,
+            )
+
+            question_metadata.setdefault(
+                "subtopic_code",
+                batch.subtopic_code,
+            )
+
+            question_metadata.setdefault(
+                "set_number",
+                batch.set_number,
+            )
+
+            question_metadata.setdefault(
+                "batch_number",
+                batch.batch_number,
+            )
+
+            question_data["metadata"] = question_metadata
 
             question_data.setdefault(
                 "unit_code",
@@ -278,6 +309,7 @@ class BatchAdapter:
                 batch.batch_number,
             )
 
+            
             question = self._builder.build(
                 question_data,
             )

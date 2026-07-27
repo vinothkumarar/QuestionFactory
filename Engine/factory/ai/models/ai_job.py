@@ -82,9 +82,35 @@ class AIJob:
 
     subject: str = ""
 
+    unit: str = ""
+
     chapter: str = ""
 
     subtopic: str = ""
+
+    #
+    # Manufacturing Identifiers
+    #
+
+    subject_code: str = ""
+
+    unit_code: str = ""
+
+    chapter_code: str = ""
+
+    subtopic_code: str = ""
+
+    #
+    # Repository Identifiers
+    #
+
+    subject_id: str = ""
+
+    unit_id: str = ""
+
+    chapter_id: str = ""
+
+    subtopic_id: str = ""
 
     difficulty: str = ""
 
@@ -358,6 +384,15 @@ class AIJob:
             temperature=self.temperature,
             max_tokens=self.max_tokens,
             subject=self.subject,
+            unit=self.unit,
+            subject_code=self.subject_code,
+            unit_code=self.unit_code,
+            chapter_code=self.chapter_code,
+            subtopic_code=self.subtopic_code,
+            subject_id=self.subject_id,
+            unit_id=self.unit_id,
+            chapter_id=self.chapter_id,
+            subtopic_id=self.subtopic_id,
             chapter=self.chapter,
             subtopic=self.subtopic,
             difficulty=self.difficulty,
@@ -389,6 +424,15 @@ class AIJob:
             "temperature": self.temperature,
             "max_tokens": self.max_tokens,
             "subject": self.subject,
+            "unit": self.unit,
+            "subject_code": self.subject_code,
+            "unit_code": self.unit_code,
+            "chapter_code": self.chapter_code,
+            "subtopic_code": self.subtopic_code,
+            "subject_id": self.subject_id,
+            "unit_id": self.unit_id,
+            "chapter_id": self.chapter_id,
+            "subtopic_id": self.subtopic_id,
             "chapter": self.chapter,
             "subtopic": self.subtopic,
             "difficulty": self.difficulty,
@@ -446,6 +490,50 @@ class AIJob:
             ),
             subject=data.get(
                 "subject",
+                "",
+            ),
+            unit=data.get(
+                "unit",
+                "",
+            ),
+
+            subject_code=data.get(
+                "subject_code",
+                "",
+            ),
+
+            unit_code=data.get(
+                "unit_code",
+                "",
+            ),
+
+            chapter_code=data.get(
+                "chapter_code",
+                "",
+            ),
+
+            subtopic_code=data.get(
+                "subtopic_code",
+                "",
+            ),
+
+            subject_id=data.get(
+                "subject_id",
+                "",
+            ),
+
+            unit_id=data.get(
+                "unit_id",
+                "",
+            ),
+
+            chapter_id=data.get(
+                "chapter_id",
+                "",
+            ),
+
+            subtopic_id=data.get(
+                "subtopic_id",
                 "",
             ),
             chapter=data.get(
@@ -545,6 +633,15 @@ class AIJob:
             "batch": self.batch,
             "question_count": self.question_count,
             "blueprint": self.blueprint,
+            "unit": self.unit,
+            "subject_code": self.subject_code,
+            "unit_code": self.unit_code,
+            "chapter_code": self.chapter_code,
+            "subtopic_code": self.subtopic_code,
+            "subject_id": self.subject_id,
+            "unit_id": self.unit_id,
+            "chapter_id": self.chapter_id,
+            "subtopic_id": self.subtopic_id,
         }
 
     def has_manufacturing_context(
@@ -588,6 +685,10 @@ class AIJob:
             "difficulty": self.difficulty,
             "question_count": self.question_count,
             "prompt_length": self.prompt_length,
+            "unit": self.unit,
+            "unit_code": self.unit_code,
+            "chapter_code": self.chapter_code,
+            "subtopic_code": self.subtopic_code,
         }
 
     # ------------------------------------------------------------------
@@ -636,8 +737,19 @@ def create_ai_job(
     request_id: str = "",
     project: str = "",
     subject: str = "",
+    unit: str = "",
     chapter: str = "",
     subtopic: str = "",
+
+    subject_code: str = "",
+    unit_code: str = "",
+    chapter_code: str = "",
+    subtopic_code: str = "",
+
+    subject_id: str = "",
+    unit_id: str = "",
+    chapter_id: str = "",
+    subtopic_id: str = "",
     difficulty: str = "",
     batch: str = "",
     question_count: int = 1,
@@ -662,6 +774,17 @@ def create_ai_job(
         temperature=temperature,
         max_tokens=max_tokens,
         subject=subject,
+        unit=unit,
+
+        subject_code=subject_code,
+        unit_code=unit_code,
+        chapter_code=chapter_code,
+        subtopic_code=subtopic_code,
+
+        subject_id=subject_id,
+        unit_id=unit_id,
+        chapter_id=chapter_id,
+        subtopic_id=subtopic_id,
         chapter=chapter,
         subtopic=subtopic,
         difficulty=difficulty,

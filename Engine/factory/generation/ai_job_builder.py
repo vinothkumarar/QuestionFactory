@@ -92,10 +92,11 @@ class AIJobBuilder:
             project=getattr(runtime, "project", ""),
             job_type="QUESTION_GENERATION",
 
-            subject=node.location.unit,
+            subject=node.location.subject,
+            unit=node.location.unit,
             chapter=node.location.chapter,
             subtopic=node.location.subtopic,
-            batch=str(node.location.batch_number),
+            batch=node.metadata.batch_id,
             question_count=node.question_count,
 
             blueprint=blueprint.blueprint_version,
@@ -109,6 +110,8 @@ class AIJobBuilder:
         self._logger.info(
             "AIJob successfully created."
         )
+
+        
 
         return job
     # ---------------------------------------------------------
@@ -135,9 +138,18 @@ class AIJobBuilder:
             "factory_version": blueprint.factory.version,
             "blueprint_version": blueprint.blueprint_version,
             "runtime_node": runtime.current_node,
+            
+            # Manufacturing Location
+            "subject": node.location.subject,
             "unit": node.location.unit,
             "chapter": node.location.chapter,
             "subtopic": node.location.subtopic,
+
+            # Manufacturing Identity
+            "batch_id": node.metadata.batch_id,
+            "production_node": node.metadata.production_node,
+
+            # Production Sequence
             "set": node.location.set_number,
             "batch": node.location.batch_number,
         }
