@@ -1,26 +1,32 @@
 """
-Question Factory OS v2.2
+Question Factory OS v2.5
 
 Factory Runner
 
-Production entry point for the autonomous
-manufacturing pipeline.
+Unified production entry point for both:
 
-Pipeline
---------
-ServiceContainer
+1. Autonomous Manufacturing
+2. Curriculum Manufacturing
+
+Autonomous Flow
+---------------
+FactoryStateRepository
         ↓
-Production Planner
+ProductionPlanner
         ↓
-Question Generator
+ProductionOrderModel
         ↓
-Factory Orchestrator
+_execute_production_order()
         ↓
-Question CSV Exporter
+Advance Factory State
+
+Curriculum Flow
+---------------
+ProductionOrderModel
         ↓
-Runtime Persistence
+run_production_order()
         ↓
-Factory State Advancement
+_execute_production_order()
 """
 
 from __future__ import annotations
@@ -47,6 +53,14 @@ from Engine.factory.generation.production_node_factory import (
     ProductionNodeFactory,
 )
 
+from Engine.models.production_order_model import (
+    ProductionOrderModel,
+)
+
+from Engine.models.question_batch_model import (
+    QuestionBatchModel,
+)
+
 from Engine.planning.production_planner import (
     ProductionPlanner,
 )
@@ -62,15 +76,20 @@ from Engine.repositories.runtime_repository import (
 
 class FactoryRunner:
     """
-    Executes one complete autonomous
-    manufacturing cycle.
+    Executes Question Factory production.
+
+    Supports both:
+
+    • Autonomous production
+    • Curriculum production
+
+    All manufacturing logic is centralized in
+    _execute_production_order().
     """
 
-    VERSION = "2.2.0"
+    VERSION = "2.5.0"
 
-    def __init__(
-        self,
-    ) -> None:
+    def __init__(self) -> None:
 
         self._logger = logging.getLogger(
             self.__class__.__name__
@@ -125,32 +144,39 @@ class FactoryRunner:
         self._logger.info(
             "FactoryRunner initialized."
         )
-
     # ---------------------------------------------------------
-    # Manufacturing
+    # Autonomous Manufacturing
     # ---------------------------------------------------------
 
     def run(
         self,
     ) -> int:
         """
-    
-        Execute one complete manufacturing cycle.
+        Execute one complete autonomous
+        manufacturing cycle.
+
+        This entry point preserves the original
+        FactoryRunner behaviour.
+
+        Returns
+        -------
+        int
+            Number of questions generated.
         """
 
         self._logger.info(
-            "Starting manufacturing cycle."
+            "Starting autonomous manufacturing cycle."
         )
 
         print("=" * 60)
-        print("QUESTION FACTORY OS v2.2")
+        print("QUESTION FACTORY OS v2.5")
         print("=" * 60)
         print()
 
         try:
 
             #
-            # Load factory state
+            # Load current factory state
             #
 
             factory_state = (
@@ -162,7 +188,7 @@ class FactoryRunner:
             )
 
             #
-            # Plan next production order
+            # Build next production order
             #
 
             production_order = (
@@ -176,139 +202,22 @@ class FactoryRunner:
             )
 
             #
-            # Build production node
+            # Execute the shared production pipeline
             #
 
-            production_node = (
-                self.production_node_factory.build(
+            question_count = (
+                self._execute_production_order(
                     production_order,
                 )
             )
 
-            self._logger.info(
-                "Production node created."
-            )
-
             #
-            # Load blueprint
-            #
-
-            blueprint = (
-                self.blueprint_loader.load()
-            )
-
-            self._logger.info(
-                "Blueprint loaded."
-            )
-
-            #
-            # Load runtime
-            #
-
-            runtime = (
-                self.runtime_repository.get_runtime()
-            )
-
-            self._logger.info(
-                "Runtime loaded."
-            )
-
-            #
-            # Generate questions
-            #
-
-            orchestration_result: OrchestrationResult = (
-                self.question_generator.generate(
-                    node=production_node,
-                    blueprint=blueprint,
-                    runtime=runtime,
-                )
-            )
-
-            self._logger.info(
-                "Question generation completed."
-            )
-            #
-            # Validate orchestration result
-            #
-
-            if not orchestration_result.success:
-
-                message = (
-                    orchestration_result.message
-                    or "Manufacturing failed."
-                )
-
-                self._logger.error(
-                    message,
-                )
-
-                if orchestration_result.errors:
-
-                    for error in (
-                        orchestration_result.errors
-                    ):
-
-                        self._logger.error(
-                            error,
-                        )
-
-                raise RuntimeError(
-                    message,
-                )
-
-            if not orchestration_result.has_batch:
-
-                raise RuntimeError(
-                    "Question generator completed "
-                    "without returning a batch."
-                )
-
-            batch = orchestration_result.batch
-
-            if batch is None:
-                raise RuntimeError(
-                    "Question batch is None."
-                )
-
-            #
-            # Export CSV
-            #
-
-            csv_path = (
-                self.question_csv_exporter.export(
-                    batch=batch,
-                    production_order=production_order,
-                )
-            )
-
-            self._logger.info(
-                "CSV export completed."
-            )
-
-            #
-            # Persist runtime
-            #
-
-            self.runtime_repository.save_runtime(
-                runtime,
-            )
-
-            self._logger.info(
-                "Runtime saved."
-            )
-
-            #
-            # Advance factory state
+            # Advance autonomous state
             #
 
             self.factory_state_manager.advance_batch(
                 factory_state,
             )
-
-            #
-            # Persist updated factory state
-            #
 
             self.factory_state_repository.save(
                 factory_state,
@@ -318,40 +227,277 @@ class FactoryRunner:
                 "Factory state advanced."
             )
 
-            #
-            # Success output
-            #
-
-            print("=" * 60)
-            print("MANUFACTURING COMPLETED")
-            print("=" * 60)
-            print()
-
-            print(
-                "CSV Export : SUCCESS"
-            )
-
-            print(
-                "Questions  :",
-                len(batch.questions),
-            )
-
-            print(
-                "Output File:",
-                csv_path,
-            )
-
-            print()
-
-            return len(batch.questions)
+            return question_count
 
         except Exception:
 
             self._logger.exception(
-                "Manufacturing failed."
+                "Autonomous manufacturing failed."
             )
 
             raise
+
+    # ---------------------------------------------------------
+    # Curriculum Manufacturing
+    # ---------------------------------------------------------
+
+    def run_production_order(
+        self,
+        production_order: ProductionOrderModel,
+    ) -> int:
+        """
+        Execute a supplied ProductionOrderModel.
+
+        Unlike run(), this method does NOT:
+
+        - Load FactoryState
+        - Advance FactoryState
+        - Persist FactoryState
+
+        It simply executes the supplied
+        production order.
+
+        Returns
+        -------
+        int
+            Number of questions generated.
+        """
+
+        self._logger.info(
+            "Starting curriculum manufacturing."
+        )
+
+        return self._execute_production_order(
+            production_order,
+        )
+
+    # ---------------------------------------------------------
+    # Shared Production Engine
+    # ---------------------------------------------------------
+
+    def _execute_production_order(
+        self,
+        production_order: ProductionOrderModel,
+    ) -> int:
+        """
+        Execute one production order.
+
+        This method contains the common
+        manufacturing pipeline shared by both
+
+        • Autonomous Runner
+        • Curriculum Runner
+        """
+
+        self._logger.info(
+            "Executing production order %s",
+            production_order.order_id,
+        )
+
+        #
+        # Build production node
+        #
+
+        production_node = (
+            self.production_node_factory.build(
+                production_order,
+            )
+        )
+
+        self._logger.info(
+            "Production node created."
+        )
+
+        #
+        # Load blueprint
+        #
+
+        blueprint = (
+            self.blueprint_loader.load()
+        )
+
+        self._logger.info(
+            "Blueprint loaded."
+        )
+
+        #
+        # Load runtime
+        #
+
+        runtime = (
+            self.runtime_repository.get_runtime()
+        )
+
+        self._logger.info(
+            "Runtime loaded."
+        )
+        #
+        # Generate questions
+        #
+
+        orchestration_result: OrchestrationResult = (
+            self.question_generator.generate(
+                node=production_node,
+                blueprint=blueprint,
+                runtime=runtime,
+            )
+        )
+
+        self._logger.info(
+            "Question generation completed."
+        )
+
+        #
+        # Validate orchestration result
+        #
+
+        self._validate_orchestration_result(
+            orchestration_result,
+        )
+
+        batch = orchestration_result.batch
+
+        if batch is None:
+            raise RuntimeError(
+                "Question batch is None."
+            )
+
+        #
+        # Export CSV
+        #
+
+        csv_path = (
+            self._export_batch(
+                batch=batch,
+                production_order=production_order,
+            )
+        )
+
+        #
+        # Persist runtime
+        #
+
+        self.runtime_repository.save_runtime(
+            runtime,
+        )
+
+        self._logger.info(
+            "Runtime saved."
+        )
+
+        #
+        # Success output
+        #
+
+        self._print_success(
+            batch=batch,
+            csv_path=csv_path,
+        )
+
+        return len(batch.questions)
+
+    # ---------------------------------------------------------
+    # Validation
+    # ---------------------------------------------------------
+
+    def _validate_orchestration_result(
+        self,
+        orchestration_result: OrchestrationResult,
+    ) -> None:
+        """
+        Validate QuestionGenerator output.
+        """
+
+        if not orchestration_result.success:
+
+            message = (
+                orchestration_result.message
+                or "Manufacturing failed."
+            )
+
+            self._logger.error(
+                message,
+            )
+
+            if orchestration_result.errors:
+
+                for error in orchestration_result.errors:
+
+                    self._logger.error(
+                        error,
+                    )
+
+            raise RuntimeError(
+                message,
+            )
+
+        if not orchestration_result.has_batch:
+
+            raise RuntimeError(
+                "Question generator completed "
+                "without returning a batch."
+            )
+
+    # ---------------------------------------------------------
+    # CSV Export
+    # ---------------------------------------------------------
+
+    def _export_batch(
+        self,
+        *,
+        batch: QuestionBatchModel,
+        production_order: ProductionOrderModel,
+    ) -> str:
+        """
+        Export a manufactured batch to CSV.
+        """
+
+        csv_path = (
+            self.question_csv_exporter.export(
+                batch=batch,
+                production_order=production_order,
+            )
+        )
+
+        self._logger.info(
+            "CSV export completed."
+        )
+
+        return csv_path
+    # ---------------------------------------------------------
+    # Console Output
+    # ---------------------------------------------------------
+
+    def _print_success(
+        self,
+        *,
+        batch: QuestionBatchModel,
+        csv_path: str,
+    ) -> None:
+        """
+        Print manufacturing success summary.
+        """
+
+        print("=" * 60)
+        print("MANUFACTURING COMPLETED")
+        print("=" * 60)
+        print()
+
+        print(
+            "CSV Export : SUCCESS"
+        )
+
+        print(
+            "Questions  :",
+            len(batch.questions),
+        )
+
+        print(
+            "Output File:",
+            csv_path,
+        )
+
+        print()
 
     # ---------------------------------------------------------
     # Diagnostics
@@ -396,6 +542,10 @@ class FactoryRunner:
                 self.container.diagnostics()
             ),
         }
+
+    # ---------------------------------------------------------
+    # Health
+    # ---------------------------------------------------------
 
     def health(
         self,
@@ -463,7 +613,7 @@ class FactoryRunner:
         self,
     ) -> str:
         """
-        Factory OS version.
+        FactoryRunner version.
         """
 
         return self.VERSION
