@@ -135,9 +135,7 @@ class QuestionGenerator:
             runtime=runtime,
         )
 
-        print("=" * 80)
-        print("QUESTION COUNT:", job.question_count)
-        print("=" * 80)
+        
 
         self.before_generation(
             job,

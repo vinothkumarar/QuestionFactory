@@ -234,9 +234,7 @@ class PromptBuilder:
             {},
         )
 
-        print("=" * 80)
-        print("PROMPT QUESTION COUNT:", variables.get("question_count"))
-        print("=" * 80)
+        
         json_schema = textwrap.dedent("""
         {
             "batch_id": "string",

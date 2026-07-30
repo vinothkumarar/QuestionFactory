@@ -314,7 +314,7 @@ class BatchAdapter:
                 question_data,
             )
 
-            self._logger.info(
+            self._logger.debug(
                 "BUILT QUESTION: code=%s, options=%s, correct=%s",
                 question.question_code,
                 question.options,

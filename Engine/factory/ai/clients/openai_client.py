@@ -421,9 +421,7 @@ class OpenAIClient(AIClient):
                 request=request,
             )
 
-            print("=" * 80)
-            print(result.content)
-            print("=" * 80)
+            
 
             result.response_time_ms = round(
                 (
