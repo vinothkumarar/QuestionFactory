@@ -55,7 +55,7 @@ from Engine.models.question_batch_model import (
 LOGGER = logging.getLogger(__name__)
 
 
-class ManufacturingDirector:
+class PlanningDirector:
     """
     Coordinates the complete planning pipeline.
     """
@@ -85,7 +85,7 @@ class ManufacturingDirector:
     # Public API
     # ---------------------------------------------------------
 
-    def plan_manufacturing(
+    def plan(
         self,
         order: ProductionOrderModel,
     ) -> list[QuestionBatchModel]:
@@ -224,7 +224,7 @@ class ManufacturingDirector:
         self,
     ) -> dict[str, object]:
         """
-        Return ManufacturingDirector health.
+        Return PlanningDirector health.
         """
 
         return {
@@ -269,7 +269,7 @@ class ManufacturingDirector:
         """
 
         self._logger.info(
-            "ManufacturingDirector reset."
+            "PlanningDirector reset."
         )
 
     # ---------------------------------------------------------
@@ -288,5 +288,5 @@ class ManufacturingDirector:
 
 
 __all__ = [
-    "ManufacturingDirector",
+    "PlanningDirector",
 ]
