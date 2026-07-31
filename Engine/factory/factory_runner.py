@@ -61,8 +61,12 @@ from Engine.models.question_batch_model import (
     QuestionBatchModel,
 )
 
+from Engine.factory.planning.subtopic_analyzer import (
+    SubtopicAnalyzer,
+)
+
 from Engine.planning.production_planner import (
-    ProductionPlanner,
+    ProductionPlanner as AutonomousProductionPlanner,
 )
 
 from Engine.repositories.factory_state_repository import (
@@ -73,8 +77,8 @@ from Engine.repositories.runtime_repository import (
     RuntimeRepository,
 )
 
-from Engine.factory.planning.subtopic_analyzer import (
-    SubtopicAnalyzer,
+from Engine.factory.planning.planning_director import (
+    PlanningDirector,
 )
 
 from Engine.factory.planning.academic_analyzer import (
@@ -83,6 +87,14 @@ from Engine.factory.planning.academic_analyzer import (
 
 from Engine.factory.planning.subtopic_analyzer import (
     SubtopicAnalyzer,
+)
+
+from Engine.factory.planning.batch_planner import (
+    BatchPlanner,
+)
+
+from Engine.factory.planning.production_planner import (
+    ProductionPlanner as ManufacturingProductionPlanner,
 )
 
 class FactoryRunner:
@@ -147,8 +159,25 @@ class FactoryRunner:
         )
 
         self.production_planner = (
-            ProductionPlanner()
+            AutonomousProductionPlanner()
         )
+
+        self.manufacturing_production_planner = (
+            ManufacturingProductionPlanner()
+        )
+        self.batch_planner = (
+            BatchPlanner()
+        )
+
+        self.planning_director = (
+            PlanningDirector(
+                academic_analyzer=self.academic_analyzer,
+                production_planner=self.manufacturing_production_planner,
+                batch_planner=self.batch_planner,
+            )
+        )
+
+        
 
         self.factory_state_manager = (
             self.production_planner.state_manager
@@ -323,10 +352,14 @@ class FactoryRunner:
         # Analyze production order
         #
 
-        manufacturing_plan = (
-            self.subtopic_analyzer.create_plan(
+        planning_result = (
+            self.planning_director.plan(
                 production_order,
             )
+        )
+
+        manufacturing_plan = (
+            planning_result.manufacturing_plan
         )
 
         self._logger.info(

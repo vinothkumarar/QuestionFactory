@@ -52,6 +52,10 @@ from Engine.models.question_batch_model import (
     QuestionBatchModel,
 )
 
+from Engine.factory.planning.models.planning_result import (
+    PlanningResult,
+)
+
 LOGGER = logging.getLogger(__name__)
 
 
@@ -88,7 +92,7 @@ class PlanningDirector:
     def plan(
         self,
         order: ProductionOrderModel,
-    ) -> list[QuestionBatchModel]:
+    ) -> PlanningResult:
         """
         Execute the complete planning pipeline.
         """
@@ -105,14 +109,14 @@ class PlanningDirector:
         )
 
         plan: ManufacturingPlan = (
-            self._production_planner.build_plan(
+            self.build_manufacturing_plan(
                 order,
                 analysis,
             )
         )
 
         batches = (
-            self._batch_planner.create_batches(
+            self.build_batches(
                 plan,
             )
         )
@@ -122,7 +126,11 @@ class PlanningDirector:
             len(batches),
         )
 
-        return batches
+        return PlanningResult(
+            academic_analysis=analysis,
+            manufacturing_plan=plan,
+            question_batches=batches,
+        )
     # ---------------------------------------------------------
     # Validation
     # ---------------------------------------------------------
@@ -175,7 +183,7 @@ class PlanningDirector:
             order,
         )
 
-    def create_plan(
+    def build_manufacturing_plan(
         self,
         order: ProductionOrderModel,
         analysis: AcademicAnalysisModel,
@@ -189,7 +197,7 @@ class PlanningDirector:
             analysis,
         )
 
-    def create_batches(
+    def build_batches(
         self,
         plan: ManufacturingPlan,
     ) -> list[QuestionBatchModel]:
