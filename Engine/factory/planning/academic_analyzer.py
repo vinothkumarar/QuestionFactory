@@ -20,6 +20,7 @@ from __future__ import annotations
 import logging
 from typing import Any
 
+
 from Engine.factory.ai.ai_engine import (
     AIEngine,
 )
@@ -30,6 +31,10 @@ from Engine.factory.ai.models.ai_job import (
 
 from Engine.models.production_order_model import (
     ProductionOrderModel,
+)
+
+from Engine.factory.planning.models.academic_analysis_model import (
+    AcademicAnalysisModel,
 )
 
 logger = logging.getLogger(__name__)
@@ -59,7 +64,7 @@ class AcademicAnalyzer:
     def analyze(
         self,
         order: ProductionOrderModel,
-    ) -> Any:
+    ) -> AcademicAnalysisModel:
         """
         Perform academic analysis.
         """
@@ -73,10 +78,17 @@ class AcademicAnalyzer:
             order.subtopic,
         )
 
-        return self._ai_engine.execute(
+        response = self._ai_engine.execute(
             job,
         )
 
+        self.validate_response(
+            response,
+        )
+
+        return AcademicAnalysisModel.from_dict(
+            response,
+        )
     # ---------------------------------------------------------
     # AI Job
     # ---------------------------------------------------------
@@ -208,7 +220,7 @@ Do not include explanations outside JSON.
     def analyze_safe(
         self,
         order: ProductionOrderModel,
-    ) -> Any:
+    ) -> AcademicAnalysisModel:
         """
         Execute academic analysis with validation.
         """
@@ -217,10 +229,6 @@ Do not include explanations outside JSON.
 
             response = self.analyze(
                 order,
-            )
-
-            self.validate_response(
-                response,
             )
 
             logger.info(
