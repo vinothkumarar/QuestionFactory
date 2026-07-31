@@ -73,6 +73,9 @@ from Engine.repositories.runtime_repository import (
     RuntimeRepository,
 )
 
+from Engine.factory.planning.subtopic_analyzer import (
+    SubtopicAnalyzer,
+)
 
 class FactoryRunner:
     """
@@ -93,6 +96,10 @@ class FactoryRunner:
 
         self._logger = logging.getLogger(
             self.__class__.__name__
+        )
+
+        self.subtopic_analyzer = (
+            SubtopicAnalyzer()
         )
 
         #
@@ -294,6 +301,19 @@ class FactoryRunner:
             production_order.order_id,
         )
 
+           #
+        # Analyze production order
+        #
+
+        manufacturing_plan = (
+            self.subtopic_analyzer.create_plan(
+                production_order,
+            )
+        )
+
+        self._logger.info(
+            "Manufacturing plan created."
+        )
         #
         # Build production node
         #
