@@ -32,6 +32,9 @@ from Engine.models.production_order_model import (
     ProductionOrderModel,
 )
 
+from Engine.factory.planning.academic_analyzer import (
+    AcademicAnalyzer,
+)
 
 class SubtopicAnalyzer:
     """
@@ -45,8 +48,15 @@ class SubtopicAnalyzer:
     injected without changing the public API.
     """
 
-    def __init__(self) -> None:
-        pass
+    def __init__(
+        self,
+        academic_analyzer: AcademicAnalyzer,
+    ) -> None:
+
+        self._academic_analyzer = (
+            academic_analyzer
+        )
+        
 
     # ---------------------------------------------------------
     # Public API
@@ -61,40 +71,45 @@ class SubtopicAnalyzer:
         ManufacturingPlan.
         """
 
-        total_questions = self._determine_total_questions(
-            order,
-        )
+        #
+        # Ask AI to analyse the subtopic
+        #
 
-        difficulty_distribution = (
-            self._difficulty_distribution(
-                total_questions,
+        academic_analysis = (
+            self._academic_analyzer.analyze_safe(
+                order,
             )
         )
 
-        archetype_distribution = (
-            self._archetype_distribution(
-                total_questions,
-            )
-        )
+        #
+        # AI response (JSON) is expected to contain:
+        #
+        # estimated_total_questions
+        # difficulty_distribution
+        # archetype_distribution
+        # analysis_summary
+        # manufacturing_notes
+        #
 
         return ManufacturingPlan(
             subject_id=order.subject,
             unit_id=order.unit,
             chapter_id=order.chapter,
             subtopic_id=order.subtopic,
-            total_questions=total_questions,
-            difficulty_distribution=(
-                difficulty_distribution
+            total_questions=(
+                academic_analysis.estimated_total_questions
             ),
-            archetype_distribution=(
-                archetype_distribution
+            difficulty_distribution=dict(
+                academic_analysis.difficulty_distribution
             ),
-            analysis_summary=self._summary(
-                order,
-                total_questions,
+            archetype_distribution=dict(
+                academic_analysis.archetype_distribution
             ),
-            manufacturing_notes=self._notes(
-                order,
+            analysis_summary=(
+                academic_analysis.analysis_summary
+            ),
+            manufacturing_notes=list(
+                academic_analysis.manufacturing_notes
             ),
         )
 

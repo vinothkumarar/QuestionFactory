@@ -77,6 +77,14 @@ from Engine.factory.planning.subtopic_analyzer import (
     SubtopicAnalyzer,
 )
 
+from Engine.factory.planning.academic_analyzer import (
+    AcademicAnalyzer,
+)
+
+from Engine.factory.planning.subtopic_analyzer import (
+    SubtopicAnalyzer,
+)
+
 class FactoryRunner:
     """
     Executes Question Factory production.
@@ -98,15 +106,25 @@ class FactoryRunner:
             self.__class__.__name__
         )
 
-        self.subtopic_analyzer = (
-            SubtopicAnalyzer()
-        )
+        
 
         #
         # Dependency Container
         #
 
         self.container = ServiceContainer()
+
+        self.academic_analyzer = (
+            AcademicAnalyzer(
+                self.container.ai_engine,
+            )
+        )
+
+        self.subtopic_analyzer = (
+            SubtopicAnalyzer(
+                self.academic_analyzer,
+            )
+        )
 
         #
         # Repositories
