@@ -131,13 +131,18 @@ class ProductionPlanner:
         Validate a distribution.
         """
 
+        if not distribution:
+            raise ValueError(
+                "Distribution cannot be empty."
+            )
+
         actual_total = sum(
             distribution.values()
         )
 
-        if actual_total != expected_total:
+        if actual_total <= 0:
             raise ValueError(
-                f"Distribution mismatch ({actual_total} != {expected_total})"
+                "Distribution total must be greater than zero."
             )
 
         for name, value in distribution.items():

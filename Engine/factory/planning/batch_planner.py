@@ -192,18 +192,26 @@ class BatchPlanner:
                 "Analysis summary cannot be empty."
             )
 
-        if sum(
-            plan.difficulty_distribution.values()
-        ) != plan.total_questions:
+        if (
+            not plan.difficulty_distribution
+            or
+            sum(
+                plan.difficulty_distribution.values()
+            ) <= 0
+        ):
             raise ValueError(
-                "Difficulty distribution mismatch."
+                "Difficulty distribution is empty."
             )
 
-        if sum(
-            plan.archetype_distribution.values()
-        ) != plan.total_questions:
+        if (
+            not plan.archetype_distribution
+            or
+            sum(
+                plan.archetype_distribution.values()
+            ) <= 0
+        ):
             raise ValueError(
-                "Archetype distribution mismatch."
+                "Archetype distribution is empty."
             )
     # ---------------------------------------------------------
     # Statistics

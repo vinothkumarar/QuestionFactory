@@ -71,6 +71,22 @@ from Engine.factory.repair.academic_repair import (
     AcademicRepair,
 )
 
+from Engine.factory.validation.r01_validator import (
+    R01Validator,
+)
+
+from Engine.factory.validation.r02_validator import (
+    R02Validator,
+)
+
+from Engine.factory.validation.r03_validator import (
+    R03Validator,
+)
+
+from Engine.factory.validation.module_validator_adapter import (
+    ModuleValidatorAdapter,
+)
+
 LOGGER = logging.getLogger(__name__)
 
 
@@ -304,8 +320,29 @@ class ServiceContainer:
             "Creating FactoryOrchestrator."
         )
 
+        
+        question_validator = QuestionValidator()
+
+        question_validator.add_validator(
+            ModuleValidatorAdapter(
+                R01Validator(),
+            )
+        )
+
+        question_validator.add_validator(
+            ModuleValidatorAdapter(
+                R02Validator(),
+            )
+        )
+
+        question_validator.add_validator(
+            ModuleValidatorAdapter(
+                R03Validator(),
+            )
+        )
+
         validation_engine = ValidationEngine(
-            validator=QuestionValidator(),
+            validator=question_validator,
         )
 
         repair_engine = RepairEngine()

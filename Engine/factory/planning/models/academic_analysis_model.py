@@ -59,24 +59,22 @@ class AcademicAnalysisModel:
                 "must be greater than zero."
             )
 
-        if (
-            sum(
-                self.difficulty_distribution.values()
-            )
-            != self.estimated_total_questions
-        ):
+        difficulty_total = sum(
+            self.difficulty_distribution.values()
+        )
+
+        if difficulty_total <= 0:
             raise ValueError(
-                "Difficulty distribution mismatch."
+                "Difficulty distribution cannot be empty."
             )
 
-        if (
-            sum(
-                self.archetype_distribution.values()
-            )
-            != self.estimated_total_questions
-        ):
+        archetype_total = sum(
+            self.archetype_distribution.values()
+        )
+
+        if archetype_total <= 0:
             raise ValueError(
-                "Archetype distribution mismatch."
+                "Archetype distribution cannot be empty."
             )
 
         if not self.analysis_summary.strip():

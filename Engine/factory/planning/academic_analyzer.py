@@ -36,6 +36,9 @@ from Engine.models.production_order_model import (
 from Engine.factory.planning.models.academic_analysis_model import (
     AcademicAnalysisModel,
 )
+from Engine.curriculum.runtime.curriculum_context_service import (
+    CurriculumContextService,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -56,6 +59,7 @@ class AcademicAnalyzer:
     ) -> None:
 
         self._ai_engine = ai_engine
+        self._curriculum = CurriculumContextService()
 
     # ---------------------------------------------------------
     # Public API
@@ -86,8 +90,15 @@ class AcademicAnalyzer:
             response,
         )
 
+        parsed_data = (
+            self._extract_response_data(
+                response,
+            )
+        )
+
+        print("\nACADEMIC ANALYZER PARSED DATA:\n", parsed_data)
         return AcademicAnalysisModel.from_dict(
-            response,
+            parsed_data,
         )
     # ---------------------------------------------------------
     # AI Job
@@ -165,12 +176,22 @@ Do not include explanations outside JSON.
         """
         Build the academic analysis prompt.
         """
+        context = self._curriculum.enrich(
+            order,
+        )
 
         return (
-            f"Subject : {order.subject}\n"
-            f"Unit : {order.unit}\n"
-            f"Chapter : {order.chapter}\n"
-            f"Subtopic : {order.subtopic}\n"
+            f"Subject Code : {order.subject}\n"
+            f"Subject Name : {context['subject_name']}\n\n"
+
+            f"Unit Code : {order.unit}\n"
+            f"Unit Name : {context['unit_name']}\n\n"
+
+            f"Chapter Code : {order.chapter}\n"
+            f"Chapter Name : {context['chapter_name']}\n\n"
+
+            f"Subtopic Code : {order.subtopic}\n"
+            f"Subtopic Name : {context['subtopic_name']}\n\n"
             f"Set : {order.set_no}\n"
             f"Requested Questions : "
             f"{order.question_count}\n\n"
@@ -199,6 +220,35 @@ Do not include explanations outside JSON.
     # ---------------------------------------------------------
     # Validation
     # ---------------------------------------------------------
+    def _extract_response_data(
+        self,
+        response: Any,
+    ) -> dict[str, Any]:
+        """
+        Convert AI response into a dictionary.
+        """
+
+        if isinstance(
+            response,
+            dict,
+        ):
+            return response
+
+        raw_json = getattr(
+            response,
+            "raw_json",
+            None,
+        )
+
+        if isinstance(
+            raw_json,
+            dict,
+        ):
+            return raw_json
+
+        raise TypeError(
+            f"Unsupported response type: {type(response).__name__}"
+        )
 
     def validate_response(
         self,

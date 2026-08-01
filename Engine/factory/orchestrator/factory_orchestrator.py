@@ -186,6 +186,28 @@ class FactoryOrchestrator:
 
             if not final_validation.is_valid:
 
+                self._logger.error(
+                    "Validation failed after repair."
+                )
+
+                for result in final_validation.validator_results:
+
+                    if result.is_valid:
+                        continue
+
+                    self._logger.error(
+                        "Validator: %s",
+                        result.validator_name,
+                    )
+
+                    for issue in result.issues:
+
+                        self._logger.error(
+                            "  [%s] %s",
+                            issue.severity,
+                            issue.message,
+                        )
+
                 raise RuntimeError(
                     "Batch failed validation after repair."
                 )

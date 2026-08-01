@@ -1,0 +1,6 @@
+id,code,name,folder_name,display_order,is_test_enabled
+89006307-9a93-4335-8574-462eedcde6cc,MATHEMATICS,Mathematics,mathematics,1,true
+e4d83913-f938-4537-90ab-36eeec70797f,PHYSICS,Physics,physics,2,true
+27a50f90-339b-4f85-a0c1-4180e94ee7ed,CHEMISTRY,Chemistry,chemistry,3,false
+53180909-96c3-4e58-9356-27e8989e90e7,BIOLOGY,Biology,biology,4,false
+117baaa3-83eb-49b3-b0c8-80b14abdd5f3,APTITUDE,Aptitude,aptitude,5,false

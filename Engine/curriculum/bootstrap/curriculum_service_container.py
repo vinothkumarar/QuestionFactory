@@ -6,8 +6,14 @@ Curriculum Service Container
 Composition root for the Curriculum Manufacturing
 subsystem.
 """
-
 from __future__ import annotations
+
+from pathlib import Path
+
+from Engine.curriculum.curriculum_registry import (
+    CurriculumRegistry,
+)
+
 
 import logging
 from functools import cached_property
@@ -89,6 +95,19 @@ class CurriculumServiceContainer:
         return FactoryRuntimeService()
 
     @cached_property
+    def curriculum_registry(
+        self,
+    ) -> CurriculumRegistry:
+
+        self._logger.info(
+            "Creating CurriculumRegistry."
+        )
+
+        return CurriculumRegistry(
+            Path("Engine/curriculum")
+        )
+
+    @cached_property
     def production_planner(
         self,
     ) -> CurriculumProductionPlanner:
@@ -98,6 +117,7 @@ class CurriculumServiceContainer:
         )
 
         return CurriculumProductionPlanner()
+            
 
     @cached_property
     def factory_runner(
