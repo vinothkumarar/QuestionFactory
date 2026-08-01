@@ -27,4 +27,20 @@ class ProductionOrderModel:
 
     question_count: int
 
+    subject_name: str = ""
+
+    unit_name: str = ""
+
+    chapter_name: str = ""
+
+    subtopic_name: str = ""
+
+    subject_description: str = ""
+
+    unit_description: str = ""
+
+    chapter_description: str = ""
+
+    subtopic_description: str = ""
+
     status: str = "PLANNED"
