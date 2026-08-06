@@ -101,7 +101,7 @@ difficulty
 
 Allowed values:
 
-- Foundation
+- Easy
 - Easy+
 - Medium
 - Hard

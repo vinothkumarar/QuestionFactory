@@ -16,7 +16,6 @@ class DifficultyValidator:
     """
 
     VALID_DIFFICULTIES = {
-        "Foundation",
         "Easy",
         "Easy+",
         "Medium",

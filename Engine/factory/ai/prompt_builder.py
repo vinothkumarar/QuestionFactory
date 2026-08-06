@@ -234,6 +234,45 @@ class PromptBuilder:
             {},
         )
 
+        generation_payload = metadata.get(
+            "generation_payload",
+            {}
+        )
+
+        generation = generation_payload.get(
+            "generation",
+            {}
+        )
+
+        question_possibilities = generation.get(
+            "question_possibilities",
+            []
+        )
+
+        qpc_text = ""
+
+        if question_possibilities:
+
+            lines = []
+
+            for item in question_possibilities:
+
+                qp_id = item.get(
+                    "qp_id",
+                    "",
+                )
+
+                possibility = item.get(
+                    "question_possibility",
+                    "",
+                )
+
+                lines.append(
+                    f"{qp_id}: {possibility}"
+                )
+
+            qpc_text = "\n".join(lines)
+
         
         json_schema = textwrap.dedent("""
         {
@@ -247,7 +286,7 @@ class PromptBuilder:
                 {
                     "question_code": "string",
                     "question_text": "string",
-                    "difficulty": "Foundation | Easy | Medium | Hard | Elite",
+                    "difficulty": "Easy | Easy+ | Medium | Hard | Elite",
                     "options": [
                         "Option A",
                         "Option B",
@@ -282,6 +321,8 @@ class PromptBuilder:
 
             Subtopic:
             {variables.get("subtopic", "")}
+            Question Possibilities:
+            {qpc_text}
 
             Use these identifiers exactly in the generated JSON.
 
@@ -299,6 +340,15 @@ class PromptBuilder:
             Metadata:
             {metadata}
 
+            IMPORTANT
+
+            Generate exactly one question from each Question Possibility listed above.
+
+            Do not invent additional possibilities.
+
+            Do not generate two questions from the same Question Possibility.
+
+            Each generated question must correspond to one listed Question Possibility.
             Requirements
 
             - Follow the supplied blueprint.

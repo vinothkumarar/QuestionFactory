@@ -35,7 +35,6 @@ CSV_QUOTECHAR: Final[str] = '"'
 
 VALID_DIFFICULTIES: Final[frozenset[str]] = frozenset(
     {
-        "Foundation",
         "Easy",
         "Easy+",
         "Medium",

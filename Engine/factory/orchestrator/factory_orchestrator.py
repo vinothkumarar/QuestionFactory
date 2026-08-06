@@ -192,7 +192,7 @@ class FactoryOrchestrator:
 
                 for result in final_validation.validator_results:
 
-                    if result.is_valid:
+                    if result.is_successful():
                         continue
 
                     self._logger.error(
@@ -200,12 +200,16 @@ class FactoryOrchestrator:
                         result.validator_name,
                     )
 
-                    for issue in result.issues:
+                    for error in result.errors:
 
                         self._logger.error(
-                            "  [%s] %s",
-                            issue.severity,
-                            issue.message,
+                            error,
+                        )
+
+                    for warning in result.warnings:
+
+                        self._logger.warning(
+                            warning,
                         )
 
                 raise RuntimeError(

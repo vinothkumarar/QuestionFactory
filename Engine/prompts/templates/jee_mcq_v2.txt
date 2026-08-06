@@ -125,7 +125,7 @@ SET S1
 
 Difficulty
 
-Foundation
+Easy
 
 Purpose
 
@@ -740,7 +740,7 @@ Must exactly match the requested SET.
 
 Possible values
 
-Foundation
+Easy
 Easy+
 Medium
 Hard
@@ -752,7 +752,7 @@ difficulty_score
 
 Integer value
 
-Foundation : 1
+Easy : 1
 
 Easy+ : 2
 
@@ -944,7 +944,7 @@ estimated_time_sec
 
 Return realistic solving time.
 
-Foundation
+Easy
 
 30–60
 

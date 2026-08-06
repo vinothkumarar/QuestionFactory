@@ -19,7 +19,7 @@ builder = QuestionBuilder()
 skeleton = builder.build(runtime, 501)
 
 ai_question = {
-    "difficulty": "Foundation",
+    "difficulty": "Easy",
     "difficulty_score": 1,
     "question_text": "What is the SI unit of length?",
     "option_a": "metre",
