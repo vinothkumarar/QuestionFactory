@@ -40,29 +40,32 @@ class SubtopicStrategy(BaseManufacturingStrategy):
 
         queue = ManufacturingQueue()
 
-        for batch_no in range(
-            request.start_batch,
-            request.end_batch + 1,
+        for set_no in range(
+            int(request.start_set[1:]),
+            int(request.end_set[1:]) + 1,
         ):
 
-            work_item = ManufacturingWorkItemModel(
-                request_id=request.request_id,
-                work_item_id=(
-                    f"WI_{uuid.uuid4().hex[:8].upper()}"
-                ),
-                subject=request.subject,
-                unit=request.unit,
-                chapter=request.chapter,
-                subtopic=request.subtopic,
-                set_no=request.start_set,
-                batch_no=batch_no,
-                questions_per_batch=request.questions_per_batch,
-                question_start=0,
-                question_end=0,
-            )
+            for batch_no in range(
+                request.start_batch,
+                request.end_batch + 1,
+            ):
 
-            queue.enqueue(
-                work_item
-            )
+                work_item = ManufacturingWorkItemModel(
+                    request_id=request.request_id,
+                    work_item_id=(
+                        f"WI_{uuid.uuid4().hex[:8].upper()}"
+                    ),
+                    subject=request.subject,
+                    unit=request.unit,
+                    chapter=request.chapter,
+                    subtopic=request.subtopic,
+                    set_no=f"S{set_no}",
+                    batch_no=batch_no,
+                    questions_per_batch=request.questions_per_batch,
+                    question_start=0,
+                    question_end=0,
+                )
+
+                queue.enqueue(work_item)
 
         return queue
