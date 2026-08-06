@@ -148,10 +148,7 @@ class FactoryOrchestrator:
                     batch,
                 )
             )
-            print(type(validation_result))
-            print(validation_result)
-            print(validation_result.__class__.__module__)
-
+            
             #
             # Already valid
             #
