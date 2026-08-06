@@ -63,6 +63,11 @@ class GeneratedQuestionModel:
 
     concept: str = ""
 
+    bloom_level: str = ""
+    exam_level: str = ""
+    source_type: str = ""
+    exam_relevance: str = ""
+
     tags: List[str] = field(default_factory=list)
 
     metadata: Dict = field(default_factory=dict)

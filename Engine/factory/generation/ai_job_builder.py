@@ -32,6 +32,10 @@ from Engine.factory.ai.models.ai_job import AIJob
 from Engine.models.production_node_model import ProductionNodeModel
 from Engine.models.runtime_model import RuntimeModel
 
+from Engine.qpc.qpc_loader import (
+    QPCLoader,
+)
+
 
 LOGGER = logging.getLogger(__name__)
 
@@ -170,6 +174,13 @@ class AIJobBuilder:
         the AI subsystem.
         """
 
+        qpc_loader = QPCLoader()
+
+        question_possibilities = qpc_loader.load(
+            chapter_code=node.location.chapter,
+            subtopic_code=node.location.subtopic,
+        )
+
         return {
             "production": {
                 "question_from": node.question_range.question_from,
@@ -185,6 +196,7 @@ class AIJobBuilder:
                 "rules": blueprint.rules.rules,
                 "archetypes": blueprint.archetypes.archetypes,
                 "schema_version": blueprint.schema_version,
+                "question_possibilities": question_possibilities,
             },
         }
     # ---------------------------------------------------------

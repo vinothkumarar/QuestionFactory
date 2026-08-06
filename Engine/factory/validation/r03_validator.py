@@ -297,33 +297,11 @@ class R03Validator(ValidationModule):
             start=1,
         ):
 
-            bloom = question.metadata.get(
-                "bloom_level",
-                "",
-            )
+            bloom = question.bloom_level.strip()
 
-            if not bloom:
+            exam_level = question.exam_level.strip()
 
-                result.add_warning(f"Question {index}: " "Bloom level missing.")
-
-            exam_level = question.metadata.get(
-                "exam_level",
-                "",
-            )
-
-            if not exam_level:
-
-                result.add_warning(f"Question {index}: " "Exam level missing.")
-
-            source_type = question.metadata.get(
-                "source_type",
-                "",
-            )
-
-            if not source_type:
-
-                result.add_warning(f"Question {index}: " "Source type missing.")
-
+            source_type = question.source_type.strip()
     # ---------------------------------------------------------
     # Quality Validation
     # ---------------------------------------------------------
@@ -414,10 +392,7 @@ class R03Validator(ValidationModule):
             start=1,
         ):
 
-            bloom = question.metadata.get(
-                "bloom_level",
-                "",
-            ).strip()
+            bloom = question.bloom_level.strip()
 
             if not bloom:
 
@@ -487,16 +462,7 @@ class R03Validator(ValidationModule):
             start=1,
         ):
 
-            metadata = question.metadata
-
-            #
-            # Exam relevance
-            #
-
-            exam_relevance = metadata.get(
-                "exam_relevance",
-                "",
-            )
+            exam_relevance = question.exam_relevance.strip()
 
             if not exam_relevance:
 
@@ -506,6 +472,7 @@ class R03Validator(ValidationModule):
             # PYQ information
             #
 
+            metadata = question.metadata
             pyq_inspired = metadata.get(
                 "pyq_inspired",
                 None,
@@ -632,10 +599,7 @@ class R03Validator(ValidationModule):
 
                 archetypes.add(question.archetype.strip())
 
-            bloom = question.metadata.get(
-                "bloom_level",
-                "",
-            )
+            bloom = question.bloom_level.strip()
 
             if bloom:
 

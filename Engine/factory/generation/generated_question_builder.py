@@ -412,6 +412,34 @@ class GeneratedQuestionBuilder:
             )
         ).strip()
 
+        question.bloom_level = str(
+            data.get(
+                "bloom_level",
+                "",
+            )
+        ).strip()
+
+        question.exam_level = str(
+            data.get(
+                "exam_level",
+                "",
+            )
+        ).strip()
+
+        question.source_type = str(
+            data.get(
+                "source_type",
+                "",
+            )
+        ).strip()
+
+        question.exam_relevance = str(
+            data.get(
+                "exam_relevance",
+                "",
+            )
+        ).strip()
+
         tags = data.get(
             "tags",
             [],
@@ -439,6 +467,7 @@ class GeneratedQuestionBuilder:
             question.metadata.update(
                 metadata,
             )
+
 
     # ---------------------------------------------------------
     # Diagnostics
