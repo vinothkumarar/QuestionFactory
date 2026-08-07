@@ -45,4 +45,7 @@ class ManufacturingWorkItemFactory:
             questions_per_batch=request.questions_per_batch,
             question_start=0,
             question_end=0,
+
+            qp_id="",
+            question_possibility="",
         )

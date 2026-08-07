@@ -48,6 +48,10 @@ class ManufacturingWorkItemModel:
 
     question_end: int
 
+    qp_id: str = ""
+
+    question_possibility: str = ""
+
     status: str = "PENDING"
 
     retries: int = 0
