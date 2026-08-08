@@ -155,7 +155,21 @@ class ResponseParser:
 
         try:
 
+            logger.info("=" * 80)
+            logger.info("RAW AI RESPONSE")
+            logger.info(cleaned_text[:5000])
+            logger.info("=" * 80)
             payload = self._extract_json(cleaned_text)
+            logger.info(
+                "PAYLOAD TYPE = %s",
+                type(payload).__name__,
+            )
+
+            if isinstance(payload, dict):
+                logger.info(
+                    "QUESTION COUNT = %s",
+                    len(payload.get("questions", []))
+                )
 
             parsed = ParsedResponse(
                 success=True,
