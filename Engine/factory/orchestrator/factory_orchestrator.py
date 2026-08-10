@@ -143,6 +143,23 @@ class FactoryOrchestrator:
                 len(batch.questions)
             )
 
+            self._logger.info(
+                "Generated Questions = %s",
+                len(batch.questions),
+            )
+
+            for index, question in enumerate(
+                batch.questions,
+                start=1,
+            ):
+                self._logger.info(
+                    "[Q%s] concept=%s archetype=%s difficulty=%s",
+                    index,
+                    getattr(question, "concept", ""),
+                    getattr(question, "archetype", ""),
+                    getattr(question, "difficulty", ""),
+                )
+
             validation_result = (
                 self._validate_batch(
                     batch,

@@ -156,6 +156,7 @@ class AIJobBuilder:
             "qp_id": node.qp_id,
             "question_possibility": node.question_possibility,
 
+
             # Production Sequence
             "set": node.location.set_number,
             "batch": node.location.batch_number,

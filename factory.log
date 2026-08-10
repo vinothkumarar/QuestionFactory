@@ -1,0 +1,1969 @@
+2026-08-10 15:38:28,274 INFO __main__ Building manufacturing queue.
+2026-08-10 15:38:28,276 INFO __main__ Manufacturing queue created (4 work items).
+2026-08-10 15:38:28,277 INFO Engine.bootstrap.service_container Initializing ServiceContainer.
+2026-08-10 15:38:28,277 INFO Engine.factory.ai.prompt_templates PromptRegistry initialized.
+2026-08-10 15:38:28,277 INFO Engine.factory.ai.prompt_templates Registered prompt template 'question_generation_v2_1'.
+2026-08-10 15:38:28,277 INFO Engine.factory.ai.prompt_templates Registered prompt template 'question_repair_v2_1'.
+2026-08-10 15:38:28,277 INFO Engine.factory.ai.prompt_templates Registered prompt template 'validation_v2_1'.
+2026-08-10 15:38:28,277 INFO Engine.factory.ai.prompt_templates Registered prompt template 'explanation_v2_1'.
+2026-08-10 15:38:28,277 INFO Engine.factory.ai.prompt_templates Registered prompt template 'distractor_v2_1'.
+2026-08-10 15:38:28,277 INFO Engine.factory.ai.prompt_templates Registered prompt template 'blueprint_v2_1'.
+2026-08-10 15:38:28,277 INFO Engine.factory.ai.prompt_templates Registered prompt template 'report_v2_1'.
+2026-08-10 15:38:28,277 INFO Engine.factory.ai.prompt_templates 7 built-in prompt templates registered.
+2026-08-10 15:38:28,277 INFO Engine.factory.ai.prompt_templates Prompt registry created.
+2026-08-10 15:38:28,277 INFO Engine.factory.ai.ai_client openai initialized.
+2026-08-10 15:38:28,329 INFO Engine.factory.ai.clients.openai_client OpenAIClient initialized (model=gpt-5.5).
+2026-08-10 15:38:28,329 INFO Engine.factory.ai.prompt_builder PromptBuilder initialized.
+2026-08-10 15:38:28,329 INFO Engine.factory.ai.response_parser ResponseParser initialized.
+2026-08-10 15:38:28,329 INFO Engine.factory.ai.response_parser Production ResponseParser created.
+2026-08-10 15:38:28,329 INFO Engine.bootstrap.service_container AI subsystem initialized.
+2026-08-10 15:38:28,329 INFO Engine.bootstrap.service_container Creating AIEngine.
+2026-08-10 15:38:28,329 INFO Engine.factory.ai.ai_engine AIEngine initialized.
+2026-08-10 15:38:28,343 INFO Engine.bootstrap.service_container Creating QuestionGenerator.
+2026-08-10 15:38:28,343 INFO Engine.bootstrap.service_container Creating AIJobBuilder.
+2026-08-10 15:38:28,343 INFO Engine.factory.generation.ai_job_builder AI Job Builder initialized.
+2026-08-10 15:38:28,343 INFO Engine.bootstrap.service_container Creating FactoryOrchestrator.
+2026-08-10 15:38:28,343 INFO QuestionValidator Registered validator: R01 Structural Validator
+2026-08-10 15:38:28,343 INFO QuestionValidator Registered validator: R02 Academic Validator
+2026-08-10 15:38:28,343 INFO QuestionValidator Registered validator: R03 Blueprint Validator
+2026-08-10 15:38:28,343 INFO Engine.factory.repair.repair_engine RepairEngine initialized.
+2026-08-10 15:38:28,343 INFO Engine.factory.repair.repair_engine Registered repair module: Structural Repair
+2026-08-10 15:38:28,343 INFO Engine.factory.repair.repair_engine Registered repair module: Academic Repair
+2026-08-10 15:38:28,343 INFO Engine.factory.generation.generated_question_builder Generated Question Builder initialized.
+2026-08-10 15:38:28,343 INFO Engine.factory.orchestrator.batch_adapter Batch Adapter initialized.
+2026-08-10 15:38:28,343 INFO QuestionGenerator QuestionGenerator initialized.
+2026-08-10 15:38:28,343 INFO FactoryRunner FactoryRunner initialized.
+2026-08-10 15:38:28,343 INFO __main__ Executing ManufacturingWorkItemModel(request_id='REQ_2ED9AE8BD243', work_item_id='WI_B6FE2CE4', subject='MATHEMATICS', unit='U1', chapter='U1_CH1', subtopic='U1_CH1_ST8', set_no='S1', batch_no=1, questions_per_batch=20, question_start=1, question_end=20, qp_id='U1_CH1_ST8_QP001', question_possibility='Definition of Co-prime Numbers', status='PENDING', retries=0)
+2026-08-10 15:38:28,344 INFO FactoryRunner Starting curriculum manufacturing.
+2026-08-10 15:38:28,344 INFO FactoryRunner Executing production order ORDER_MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_S1_B1_Q1_20
+2026-08-10 15:38:28,344 INFO Engine.factory.planning.planning_director Planning manufacturing for 'U1_CH1_ST8'.
+2026-08-10 15:38:28,344 INFO Engine.factory.planning.academic_analyzer Academic analysis started for 'U1_CH1_ST8'.
+2026-08-10 15:38:28,344 INFO Engine.factory.ai.ai_engine Executing prompt package 'question_generation_v2_1'.
+2026-08-10 15:38:40,607 INFO httpx HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2026-08-10 15:38:40,810 INFO Engine.factory.planning.production_planner Manufacturing plan created for 'U1_CH1_ST8'.
+2026-08-10 15:38:40,810 INFO Engine.factory.planning.batch_planner Created 3 manufacturing batches.
+2026-08-10 15:38:40,810 INFO Engine.factory.planning.planning_director Manufacturing planning completed. 3 batches created.
+2026-08-10 15:38:40,810 INFO FactoryRunner Manufacturing plan created.
+2026-08-10 15:38:40,810 INFO FactoryRunner Production node created.
+2026-08-10 15:38:40,811 INFO BlueprintLoader Blueprint integrity verification passed.
+2026-08-10 15:38:40,811 INFO BlueprintLoader Discovered 13 blueprint file(s).
+2026-08-10 15:38:40,811 INFO BlueprintLoader Loading blueprint: 01_RULES.md
+2026-08-10 15:38:40,811 INFO BlueprintLoader Loading blueprint: 02_ARCHETYPES.md
+2026-08-10 15:38:40,811 INFO BlueprintLoader Loading blueprint: 03_SATURATION.md
+2026-08-10 15:38:40,811 INFO BlueprintLoader Loading blueprint: 04_REBUILD.md
+2026-08-10 15:38:40,812 INFO BlueprintLoader Loading blueprint: 05_SCHEMA.md
+2026-08-10 15:38:40,812 INFO BlueprintLoader Loading blueprint: 06_PROGRESS.md
+2026-08-10 15:38:40,812 INFO BlueprintLoader Loading blueprint: 07_FOLDER_STRUCTURE.md
+2026-08-10 15:38:40,812 INFO BlueprintLoader Loading blueprint: 08_UPLOAD_REPAIR.md
+2026-08-10 15:38:40,812 INFO BlueprintLoader Loading blueprint: 09_MASTER_AUTORUN.md
+2026-08-10 15:38:40,812 INFO BlueprintLoader Loading blueprint: 10_VERSION_CONTROL.md
+2026-08-10 15:38:40,812 INFO BlueprintLoader Loading blueprint: 11_GENERATION_ENGINE.md
+2026-08-10 15:38:40,812 INFO BlueprintLoader Loading blueprint: 12_FOLDER_AUTOMATION.md
+2026-08-10 15:38:40,813 INFO BlueprintLoader Loading blueprint: 13_RUNTIME_BEHAVIOR.md
+2026-08-10 15:38:40,813 INFO BlueprintLoader Loaded 13 blueprint document(s).
+2026-08-10 15:38:40,813 INFO BlueprintCompiler Starting blueprint compilation.
+2026-08-10 15:38:40,813 INFO BlueprintParser Parsing blueprint document: 01_RULES.md
+2026-08-10 15:38:40,813 INFO BlueprintParser Parsed 13 section(s) from 01_RULES.md
+2026-08-10 15:38:40,813 INFO BlueprintParser Parsing blueprint document: 02_ARCHETYPES.md
+2026-08-10 15:38:40,813 INFO BlueprintParser Parsed 5 section(s) from 02_ARCHETYPES.md
+2026-08-10 15:38:40,814 INFO BlueprintParser Parsing blueprint document: 03_SATURATION.md
+2026-08-10 15:38:40,814 INFO BlueprintParser Parsed 2 section(s) from 03_SATURATION.md
+2026-08-10 15:38:40,814 INFO BlueprintParser Parsing blueprint document: 04_REBUILD.md
+2026-08-10 15:38:40,814 INFO BlueprintParser Parsed 1 section(s) from 04_REBUILD.md
+2026-08-10 15:38:40,814 INFO BlueprintParser Parsing blueprint document: 05_SCHEMA.md
+2026-08-10 15:38:40,814 INFO BlueprintParser Parsed 1 section(s) from 05_SCHEMA.md
+2026-08-10 15:38:40,814 INFO BlueprintParser Parsing blueprint document: 06_PROGRESS.md
+2026-08-10 15:38:40,814 INFO BlueprintParser Parsed 1 section(s) from 06_PROGRESS.md
+2026-08-10 15:38:40,815 INFO BlueprintParser Parsing blueprint document: 07_FOLDER_STRUCTURE.md
+2026-08-10 15:38:40,815 INFO BlueprintParser Parsed 1 section(s) from 07_FOLDER_STRUCTURE.md
+2026-08-10 15:38:40,815 INFO BlueprintParser Parsing blueprint document: 08_UPLOAD_REPAIR.md
+2026-08-10 15:38:40,815 INFO BlueprintParser Parsed 2 section(s) from 08_UPLOAD_REPAIR.md
+2026-08-10 15:38:40,815 INFO BlueprintParser Parsing blueprint document: 09_MASTER_AUTORUN.md
+2026-08-10 15:38:40,816 INFO BlueprintParser Parsed 1 section(s) from 09_MASTER_AUTORUN.md
+2026-08-10 15:38:40,816 INFO BlueprintParser Parsing blueprint document: 10_VERSION_CONTROL.md
+2026-08-10 15:38:40,816 INFO BlueprintParser Parsed 1 section(s) from 10_VERSION_CONTROL.md
+2026-08-10 15:38:40,816 INFO BlueprintParser Parsing blueprint document: 11_GENERATION_ENGINE.md
+2026-08-10 15:38:40,817 INFO BlueprintParser Parsed 1 section(s) from 11_GENERATION_ENGINE.md
+2026-08-10 15:38:40,817 INFO BlueprintParser Parsing blueprint document: 12_FOLDER_AUTOMATION.md
+2026-08-10 15:38:40,817 INFO BlueprintParser Parsed 1 section(s) from 12_FOLDER_AUTOMATION.md
+2026-08-10 15:38:40,817 INFO BlueprintParser Parsing blueprint document: 13_RUNTIME_BEHAVIOR.md
+2026-08-10 15:38:40,817 INFO BlueprintParser Parsed 1 section(s) from 13_RUNTIME_BEHAVIOR.md
+2026-08-10 15:38:40,817 INFO BlueprintParser Parsed 13 blueprint document(s).
+2026-08-10 15:38:40,817 INFO BlueprintCompiler Factory information compiled.
+2026-08-10 15:38:40,817 INFO BlueprintCompiler Compiled 13 rule section(s).
+2026-08-10 15:38:40,818 INFO BlueprintCompiler Compiled 5 archetype section(s).
+2026-08-10 15:38:40,818 INFO BlueprintCompiler Runtime behaviour compiled.
+2026-08-10 15:38:40,818 INFO BlueprintCompiler Schema compiled.
+2026-08-10 15:38:40,818 INFO BlueprintCompiler Folder structure compiled.
+2026-08-10 15:38:40,818 INFO BlueprintCompiler Upload configuration compiled.
+2026-08-10 15:38:40,818 INFO BlueprintCompiler Version information compiled.
+2026-08-10 15:38:40,818 INFO BlueprintCompiler Blueprint metadata compiled.
+2026-08-10 15:38:40,818 INFO BlueprintCompiler Blueprint compilation completed.
+2026-08-10 15:38:40,818 INFO BlueprintLoader Blueprint validation successful.
+2026-08-10 15:38:40,818 INFO BlueprintLoader Blueprint successfully loaded.
+2026-08-10 15:38:40,818 INFO FactoryRunner Blueprint loaded.
+2026-08-10 15:38:40,818 INFO FactoryRunner Runtime loaded.
+2026-08-10 15:38:40,819 INFO QuestionGenerator Starting question generation.
+2026-08-10 15:38:40,823 INFO Engine.factory.generation.ai_job_builder AIJob successfully created.
+2026-08-10 15:38:40,823 INFO FactoryOrchestrator Starting manufacturing pipeline.
+2026-08-10 15:38:40,824 INFO Engine.factory.ai.ai_engine Executing prompt package 'question_generation_v2_1'.
+2026-08-10 15:39:30,693 INFO httpx HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+
+================================================================================
+QUESTION FACTORY OS v3.0
+AUTONOMOUS MANUFACTURING
+================================================================================
+
+
+ACADEMIC ANALYZER PARSED DATA:
+ {'estimated_total_questions': 45, 'difficulty_distribution': {'Easy': 8, 'Medium': 9, 'Hard': 3}, 'archetype_distribution': {'Conceptual': 5, 'Computational': 7, 'Analytical': 5, 'Application': 3}, 'analysis_summary': "The subtopic 'Co-prime Numbers' has moderate academic richness. It is foundational for number theory and supports concepts such as HCF/GCD, prime factorization, divisibility, Euler's totient function, modular arithmetic, and relative primality. For IIT JEE-level manufacturing, the subtopic can support a healthy mix of direct conceptual checks, computation-based GCD problems, analytical reasoning involving pairwise co-primality, and limited application-oriented questions. However, the scope should remain controlled because co-primality alone is a narrow concept unless connected with allied number theory tools.", 'manufacturing_notes': ['Ensure clear distinction between prime numbers and co-prime numbers; include cases where composite numbers are co-prime.', 'Include questions involving pairs and sets of numbers, especially distinguishing pairwise co-prime from collectively having HCF 1.', 'Use prime factorization and Euclidean algorithm as primary computational mechanisms.', 'Avoid overloading the subtopic with advanced modular arithmetic unless it is explicitly tied to co-primality.', 'Hard questions should involve constraints, counting, parameter-based reasoning, or hidden GCD conditions rather than lengthy arithmetic.', 'Maintain JEE relevance by connecting co-primality with divisibility, HCF/LCM properties, and integer-based reasoning.', 'For a 20-question set, avoid excessive repetition of simple HCF = 1 verification questions.', 'Include some misconception-testing questions such as consecutive integers being co-prime and non-prime numbers being co-prime.']}
+
+================================================================================
+BATCH ADAPTER PAYLOAD
+================================================================================
+{
+  "batch_id": "ORDER_MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_S1_B1_Q1_20",
+  "unit_code": "U1",
+  "chapter_code": "U1_CH1",
+  "subtopic_code": "U1_CH1_ST8",
+  "set_number": 1,
+  "batch_number": 1,
+  "questions": [
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q001",
+      "question_text": "Which of the following is the correct definition of co-prime numbers?",
+      "difficulty": "Easy",
+      "options": [
+        "Numbers having exactly one common factor, namely 1",
+        "Numbers that are both prime numbers",
+        "Numbers that have no factors at all",
+        "Numbers whose sum is a prime number"
+      ],
+      "correct_option": "A",
+      "explanation": "Two numbers are called co-prime if their only common factor is 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q002",
+      "question_text": "Two numbers are said to be co-prime if their highest common factor is:",
+      "difficulty": "Easy",
+      "options": [
+        "0",
+        "1",
+        "The smaller number",
+        "The larger number"
+      ],
+      "correct_option": "B",
+      "explanation": "Co-prime numbers have no common factor other than 1, so their highest common factor is 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q003",
+      "question_text": "Complete the statement: Co-prime numbers have no common factor except ____.",
+      "difficulty": "Easy",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "The product of the numbers"
+      ],
+      "correct_option": "B",
+      "explanation": "By definition, co-prime numbers have only one common factor, which is 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q004",
+      "question_text": "Which statement best describes two co-prime numbers?",
+      "difficulty": "Easy",
+      "options": [
+        "They must be consecutive numbers only",
+        "They must both be even numbers",
+        "They share only the factor 1",
+        "They must have the same factors"
+      ],
+      "correct_option": "C",
+      "explanation": "Co-prime numbers are numbers whose only common factor is 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q005",
+      "question_text": "If two natural numbers have 1 as their only common divisor, what are they called?",
+      "difficulty": "Easy",
+      "options": [
+        "Even numbers",
+        "Composite numbers",
+        "Co-prime numbers",
+        "Square numbers"
+      ],
+      "correct_option": "C",
+      "explanation": "Numbers whose only common divisor is 1 are called co-prime numbers.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q006",
+      "question_text": "In the definition of co-prime numbers, the common factor allowed between the numbers is:",
+      "difficulty": "Easy+",
+      "options": [
+        "Only 1",
+        "Only 2",
+        "Any prime number",
+        "Any composite number"
+      ],
+      "correct_option": "A",
+      "explanation": "Co-prime numbers can have only 1 as a common factor.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q007",
+      "question_text": "The term co-prime means that the given numbers:",
+      "difficulty": "Easy+",
+      "options": [
+        "Are all prime numbers",
+        "Have no common factor other than 1",
+        "Have no factors individually",
+        "Have equal values"
+      ],
+      "correct_option": "B",
+      "explanation": "Co-prime numbers need not be prime themselves; they simply have no common factor other than 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q008",
+      "question_text": "Which mathematical condition defines two numbers a and b as co-prime?",
+      "difficulty": "Easy+",
+      "options": [
+        "HCF(a, b) = 1",
+        "HCF(a, b) = a",
+        "HCF(a, b) = b",
+        "HCF(a, b) = a + b"
+      ],
+      "correct_option": "A",
+      "explanation": "Two numbers a and b are co-prime exactly when their highest common factor is 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q009",
+      "question_text": "Which phrase has the same meaning as co-prime numbers?",
+      "difficulty": "Easy+",
+      "options": [
+        "Relatively prime numbers",
+        "Always prime numbers",
+        "Perfect square numbers",
+        "Twin prime numbers"
+      ],
+      "correct_option": "A",
+      "explanation": "Co-prime numbers are also called relatively prime numbers.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q010",
+      "question_text": "A pair of numbers is called co-prime when the greatest number dividing both of them is:",
+      "difficulty": "Easy+",
+      "options": [
+        "1",
+        "2",
+        "Their sum",
+        "Their product"
+      ],
+      "correct_option": "A",
+      "explanation": "The greatest number dividing both co-prime numbers is 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q011",
+      "question_text": "Which option correctly completes the definition: Two numbers are co-prime if their common factors form the set ____.",
+      "difficulty": "Medium",
+      "options": [
+        "{0}",
+        "{1}",
+        "{1, 2}",
+        "{all prime numbers}"
+      ],
+      "correct_option": "B",
+      "explanation": "For co-prime numbers, the only common factor is 1, so the set of common factors is {1}.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q012",
+      "question_text": "Which of the following is NOT required in the definition of co-prime numbers?",
+      "difficulty": "Medium",
+      "options": [
+        "Their only common factor is 1",
+        "Their HCF is 1",
+        "They have no common divisor greater than 1",
+        "Both numbers must be prime"
+      ],
+      "correct_option": "D",
+      "explanation": "Co-prime numbers do not need to be prime. The only requirement is that their only common factor is 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q013",
+      "question_text": "If two numbers have a common factor greater than 1, then according to the definition, they are:",
+      "difficulty": "Medium",
+      "options": [
+        "Always co-prime",
+        "Not co-prime",
+        "Always prime",
+        "Always consecutive"
+      ],
+      "correct_option": "B",
+      "explanation": "Co-prime numbers cannot have any common factor greater than 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q014",
+      "question_text": "Which statement correctly explains the word 'co-prime'?",
+      "difficulty": "Medium",
+      "options": [
+        "The numbers are prime together because they have no common factor except 1",
+        "Each number must have exactly two factors",
+        "The numbers must be equal prime numbers",
+        "The numbers must differ by 2"
+      ],
+      "correct_option": "A",
+      "explanation": "Co-prime means the numbers are relatively prime to each other, having no common factor except 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q015",
+      "question_text": "For two integers m and n, which condition is equivalent to saying that m and n are co-prime?",
+      "difficulty": "Medium",
+      "options": [
+        "They have at least one common factor greater than 1",
+        "Their greatest common divisor is 1",
+        "Their greatest common divisor is m + n",
+        "Their least common multiple is 1"
+      ],
+      "correct_option": "B",
+      "explanation": "Two integers are co-prime when their greatest common divisor, or GCD, is 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q016",
+      "question_text": "A student says, 'Co-prime numbers are numbers whose HCF is a prime number.' Which correction is accurate?",
+      "difficulty": "Hard",
+      "options": [
+        "Their HCF must be 1, not any prime number",
+        "Their HCF must be 2 only",
+        "Their HCF must be the larger number",
+        "Their HCF must be an even number"
+      ],
+      "correct_option": "A",
+      "explanation": "The defining condition for co-prime numbers is that their HCF is exactly 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q017",
+      "question_text": "Which definition remains valid for co-prime numbers even when the numbers themselves are not prime?",
+      "difficulty": "Hard",
+      "options": [
+        "They are numbers with no common factor except 1",
+        "They are numbers with no factors except 1 and themselves",
+        "They are numbers that are always odd",
+        "They are numbers whose product is prime"
+      ],
+      "correct_option": "A",
+      "explanation": "Co-prime numbers may be composite individually; they only need to have 1 as their only common factor.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q018",
+      "question_text": "In terms of common divisors, the most precise definition of co-prime numbers is:",
+      "difficulty": "Hard",
+      "options": [
+        "They have exactly one positive common divisor, which is 1",
+        "They have no positive divisors",
+        "They have exactly two common divisors",
+        "They have all divisors in common"
+      ],
+      "correct_option": "A",
+      "explanation": "Co-prime numbers have exactly one positive common divisor, namely 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q019",
+      "question_text": "Let the common factors of two positive integers be listed. Which list would match the definition of co-prime numbers?",
+      "difficulty": "Hard",
+      "options": [
+        "1 only",
+        "1 and 2",
+        "1, 3, and 9",
+        "All factors of both numbers"
+      ],
+      "correct_option": "A",
+      "explanation": "If two positive integers are co-prime, the complete list of their common factors is only 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP001_Q020",
+      "question_text": "Which logical statement correctly captures the definition of two numbers being co-prime?",
+      "difficulty": "Elite",
+      "options": [
+        "Every common positive divisor of the two numbers is equal to 1",
+        "Every divisor of one number is also a divisor of the other",
+        "At least one common divisor is greater than 1",
+        "The two numbers have no divisor equal to 1"
+      ],
+      "correct_option": "A",
+      "explanation": "The definition of co-prime numbers is that their only common positive divisor is 1.",
+      "metadata": {
+        "qp_id": "U1_CH1_ST8_QP001",
+        "question_possibility": "Definition of Co-prime Numbers"
+      }
+    }
+  ]
+}2026-08-10 15:39:30,742 INFO FactoryOrchestrator Generated Questions = 20
+2026-08-10 15:39:30,742 INFO FactoryOrchestrator [Q1] concept= archetype= difficulty=Easy
+2026-08-10 15:39:30,742 INFO FactoryOrchestrator [Q2] concept= archetype= difficulty=Easy
+2026-08-10 15:39:30,742 INFO FactoryOrchestrator [Q3] concept= archetype= difficulty=Easy
+2026-08-10 15:39:30,742 INFO FactoryOrchestrator [Q4] concept= archetype= difficulty=Easy
+2026-08-10 15:39:30,742 INFO FactoryOrchestrator [Q5] concept= archetype= difficulty=Easy
+2026-08-10 15:39:30,742 INFO FactoryOrchestrator [Q6] concept= archetype= difficulty=Easy+
+2026-08-10 15:39:30,743 INFO FactoryOrchestrator [Q7] concept= archetype= difficulty=Easy+
+2026-08-10 15:39:30,743 INFO FactoryOrchestrator [Q8] concept= archetype= difficulty=Easy+
+2026-08-10 15:39:30,743 INFO FactoryOrchestrator [Q9] concept= archetype= difficulty=Easy+
+2026-08-10 15:39:30,743 INFO FactoryOrchestrator [Q10] concept= archetype= difficulty=Easy+
+2026-08-10 15:39:30,743 INFO FactoryOrchestrator [Q11] concept= archetype= difficulty=Medium
+2026-08-10 15:39:30,743 INFO FactoryOrchestrator [Q12] concept= archetype= difficulty=Medium
+2026-08-10 15:39:30,743 INFO FactoryOrchestrator [Q13] concept= archetype= difficulty=Medium
+2026-08-10 15:39:30,743 INFO FactoryOrchestrator [Q14] concept= archetype= difficulty=Medium
+2026-08-10 15:39:30,743 INFO FactoryOrchestrator [Q15] concept= archetype= difficulty=Medium
+2026-08-10 15:39:30,743 INFO FactoryOrchestrator [Q16] concept= archetype= difficulty=Hard
+2026-08-10 15:39:30,743 INFO FactoryOrchestrator [Q17] concept= archetype= difficulty=Hard
+2026-08-10 15:39:30,743 INFO FactoryOrchestrator [Q18] concept= archetype= difficulty=Hard
+2026-08-10 15:39:30,743 INFO FactoryOrchestrator [Q19] concept= archetype= difficulty=Hard
+2026-08-10 15:39:30,743 INFO FactoryOrchestrator [Q20] concept= archetype= difficulty=Elite
+2026-08-10 15:39:30,743 INFO ValidationEngine Starting batch validation.
+2026-08-10 15:39:30,743 INFO QuestionValidator Starting validation.
+2026-08-10 15:39:30,744 INFO QuestionValidator Executing validator: R01 Structural Validator
+2026-08-10 15:39:30,744 INFO QuestionValidator Executing validator: R02 Academic Validator
+2026-08-10 15:39:30,744 INFO QuestionValidator Executing validator: R03 Blueprint Validator
+2026-08-10 15:39:30,744 INFO QuestionValidator Validation completed.
+2026-08-10 15:39:30,744 INFO ValidationEngine Validation completed. Validators=3 Errors=0 Warnings=86
+2026-08-10 15:39:30,744 INFO QuestionGenerator Question generation completed.
+2026-08-10 15:39:30,744 INFO FactoryRunner Question generation completed.
+2026-08-10 15:39:30,745 INFO FactoryRunner CSV export completed.
+2026-08-10 15:39:30,746 INFO FactoryRunner Runtime saved.
+2026-08-10 15:39:30,746 INFO __main__ Executing ManufacturingWorkItemModel(request_id='REQ_2ED9AE8BD243', work_item_id='WI_3D17BE84', subject='MATHEMATICS', unit='U1', chapter='U1_CH1', subtopic='U1_CH1_ST8', set_no='S1', batch_no=1, questions_per_batch=20, question_start=1, question_end=20, qp_id='U1_CH1_ST8_QP002', question_possibility='Identify Co-prime Pair', status='PENDING', retries=0)
+2026-08-10 15:39:30,746 INFO FactoryRunner Starting curriculum manufacturing.
+2026-08-10 15:39:30,747 INFO FactoryRunner Executing production order ORDER_MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_S1_B1_Q1_20
+2026-08-10 15:39:30,747 INFO Engine.factory.planning.planning_director Planning manufacturing for 'U1_CH1_ST8'.
+2026-08-10 15:39:30,747 INFO Engine.factory.planning.academic_analyzer Academic analysis started for 'U1_CH1_ST8'.
+2026-08-10 15:39:30,747 INFO Engine.factory.ai.ai_engine Executing prompt package 'question_generation_v2_1'.
+2026-08-10 15:39:43,879 INFO httpx HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2026-08-10 15:39:43,907 INFO Engine.factory.planning.production_planner Manufacturing plan created for 'U1_CH1_ST8'.
+2026-08-10 15:39:43,907 INFO Engine.factory.planning.batch_planner Created 3 manufacturing batches.
+2026-08-10 15:39:43,907 INFO Engine.factory.planning.planning_director Manufacturing planning completed. 3 batches created.
+2026-08-10 15:39:43,907 INFO FactoryRunner Manufacturing plan created.
+2026-08-10 15:39:43,908 INFO FactoryRunner Production node created.
+2026-08-10 15:39:43,908 INFO BlueprintLoader Using cached blueprint.
+2026-08-10 15:39:43,908 INFO FactoryRunner Blueprint loaded.
+2026-08-10 15:39:43,908 INFO FactoryRunner Runtime loaded.
+2026-08-10 15:39:43,908 INFO QuestionGenerator Starting question generation.
+2026-08-10 15:39:43,910 INFO Engine.factory.generation.ai_job_builder AIJob successfully created.
+2026-08-10 15:39:43,911 INFO FactoryOrchestrator Starting manufacturing pipeline.
+2026-08-10 15:39:43,911 INFO Engine.factory.ai.ai_engine Executing prompt package 'question_generation_v2_1'.
+2026-08-10 15:41:00,770 INFO httpx HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+
+================================================================================
+
+============================================================
+MANUFACTURING COMPLETED
+============================================================
+
+CSV Export : SUCCESS
+Questions  : 20
+Output File: output/U1/U1_CH1/U1_CH1_ST8/U1_U1_CH1_U1_CH1_ST8_S1_Q001_Q020.csv
+
+
+ACADEMIC ANALYZER PARSED DATA:
+ {'estimated_total_questions': 45, 'difficulty_distribution': {'Easy': 8, 'Medium': 9, 'Hard': 3}, 'archetype_distribution': {'Conceptual': 7, 'Computational': 6, 'Analytical': 5, 'Application': 2}, 'analysis_summary': 'The subtopic Co-prime Numbers has moderate academic richness within the Number System unit. It supports clear concept-testing questions based on gcd, common factors, pairwise versus collectively co-prime numbers, consecutive integers, prime factorization, and basic divisibility properties. A requested set of 20 questions is fully manufacturable without repetition if questions are distributed across definition-based checks, factorization-based verification, property application, and small analytical proofs or counterexamples. The subtopic is not extremely broad, so hard questions should be limited and should rely on layered reasoning rather than advanced number theory.', 'manufacturing_notes': ['Ensure distinction between two numbers being co-prime and a set of numbers being pairwise co-prime or collectively co-prime.', 'Include questions using gcd(a, b) = 1 as the central criterion rather than only verbal definition recall.', 'Use consecutive integers, consecutive odd numbers, and expressions such as n and n+1 for property-based conceptual variety.', 'Include computational items where students determine whether given pairs or sets are co-prime using prime factorization or Euclidean algorithm.', "Avoid excessive dependence on advanced topics such as Euler's theorem, modular inverses, or Diophantine equations unless used only in a very elementary way.", 'Hard questions should involve reasoning with algebraic expressions, divisibility constraints, or proving co-primality under given conditions.', 'Maintain JEE relevance by connecting co-primality with factors, divisibility, HCF/GCD, and integer properties rather than isolated school-level definition checks.', "Avoid generating many near-duplicate questions of the form 'Are a and b co-prime?' with only numbers changed."]}
+
+================================================================================
+BATCH ADAPTER PAYLOAD
+================================================================================
+{
+  "batch_id": "ORDER_MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_S1_B1_Q1_20",
+  "unit_code": "U1",
+  "chapter_code": "U1_CH1",
+  "subtopic_code": "U1_CH1_ST8",
+  "set_number": 1,
+  "batch_number": 1,
+  "questions": [
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q001",
+      "question_text": "Which of the following pairs is co-prime?",
+      "difficulty": "Easy",
+      "options": [
+        "8 and 15",
+        "12 and 18",
+        "14 and 21",
+        "16 and 24"
+      ],
+      "correct_option": "A",
+      "explanation": "8 has factors 1, 2, 4, 8 and 15 has factors 1, 3, 5, 15. Their only common factor is 1, so 8 and 15 are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q002",
+      "question_text": "Identify the co-prime pair from the options below.",
+      "difficulty": "Easy",
+      "options": [
+        "16 and 24",
+        "21 and 22",
+        "25 and 35",
+        "27 and 36"
+      ],
+      "correct_option": "B",
+      "explanation": "21 and 22 have no common factor other than 1. The other pairs have common factors greater than 1, so the co-prime pair is 21 and 22.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q003",
+      "question_text": "Which pair of numbers is co-prime?",
+      "difficulty": "Easy",
+      "options": [
+        "14 and 49",
+        "18 and 45",
+        "11 and 20",
+        "26 and 39"
+      ],
+      "correct_option": "C",
+      "explanation": "11 is prime and it does not divide 20. Therefore, 11 and 20 have only 1 as their common factor, so they are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q004",
+      "question_text": "Choose the co-prime pair.",
+      "difficulty": "Easy",
+      "options": [
+        "32 and 48",
+        "45 and 60",
+        "54 and 81",
+        "56 and 75"
+      ],
+      "correct_option": "D",
+      "explanation": "56 = 2^3 × 7 and 75 = 3 × 5^2. They do not share any prime factor, so their only common factor is 1.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q005",
+      "question_text": "Which pair represented by prime factors is co-prime?",
+      "difficulty": "Easy+",
+      "options": [
+        "2^2 × 5 and 2 × 3^2",
+        "2^3 × 3 and 5^2 × 7",
+        "3 × 7 and 5 × 7^2",
+        "2 × 11 and 11 × 13"
+      ],
+      "correct_option": "B",
+      "explanation": "The prime factors of 2^3 × 3 are 2 and 3, while the prime factors of 5^2 × 7 are 5 and 7. Since there is no common prime factor, the pair is co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q006",
+      "question_text": "Identify the co-prime pair among the following.",
+      "difficulty": "Easy+",
+      "options": [
+        "42 and 70",
+        "63 and 84",
+        "55 and 72",
+        "91 and 143"
+      ],
+      "correct_option": "C",
+      "explanation": "55 = 5 × 11 and 72 = 2^3 × 3^2. They have no common prime factor, so 55 and 72 are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q007",
+      "question_text": "Which of these pairs is a co-prime pair?",
+      "difficulty": "Easy+",
+      "options": [
+        "35 and 36",
+        "26 and 39",
+        "44 and 55",
+        "64 and 72"
+      ],
+      "correct_option": "A",
+      "explanation": "35 and 36 are consecutive numbers. Consecutive positive integers are always co-prime because they cannot have any common factor greater than 1.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q008",
+      "question_text": "For the given labelled pairs, which pair is co-prime?",
+      "difficulty": "Easy+",
+      "options": [
+        "p = 24, q = 33",
+        "r = 35, s = 49",
+        "m = 42, n = 56",
+        "x = 27, y = 40"
+      ],
+      "correct_option": "D",
+      "explanation": "27 = 3^3 and 40 = 2^3 × 5. They have no common prime factor, so x = 27 and y = 40 form a co-prime pair.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q009",
+      "question_text": "Which pair of three-digit numbers is co-prime?",
+      "difficulty": "Medium",
+      "options": [
+        "111 and 147",
+        "121 and 144",
+        "125 and 175",
+        "143 and 221"
+      ],
+      "correct_option": "B",
+      "explanation": "121 = 11^2 and 144 = 2^4 × 3^2. They have no common factor other than 1, so 121 and 144 are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q010",
+      "question_text": "Using the absolute values of integers, identify the co-prime pair.",
+      "difficulty": "Medium",
+      "options": [
+        "-21 and 35",
+        "-18 and -45",
+        "-25 and 36",
+        "-28 and 42"
+      ],
+      "correct_option": "C",
+      "explanation": "The absolute values are 25 and 36. Since 25 = 5^2 and 36 = 2^2 × 3^2, they have no common prime factor. Hence, -25 and 36 form a co-prime pair.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q011",
+      "question_text": "Which pair involving zero is co-prime?",
+      "difficulty": "Medium",
+      "options": [
+        "0 and 1",
+        "0 and 5",
+        "0 and 12",
+        "0 and 18"
+      ],
+      "correct_option": "A",
+      "explanation": "The common factor measure for 0 and 1 is 1, because every integer divides 0 but only 1 divides 1. Thus, 0 and 1 are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q012",
+      "question_text": "Which pair of numbers written in exponential form is co-prime?",
+      "difficulty": "Medium",
+      "options": [
+        "2^5 and 2^3 × 5",
+        "2^5 and 3^4",
+        "3^2 × 7 and 7^2",
+        "5^3 and 2 × 5"
+      ],
+      "correct_option": "B",
+      "explanation": "2^5 has only the prime factor 2, while 3^4 has only the prime factor 3. Since they share no prime factor, they are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q013",
+      "question_text": "In which option do the two numbers form a co-prime pair?",
+      "difficulty": "Medium",
+      "options": [
+        "29 and 58",
+        "29 and 30",
+        "29 and 87",
+        "29 and 145"
+      ],
+      "correct_option": "B",
+      "explanation": "29 is prime. It does not divide 30, so 29 and 30 have no common factor except 1. Therefore, they are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q014",
+      "question_text": "Which of the following is a co-prime pair?",
+      "difficulty": "Hard",
+      "options": [
+        "34 and 51",
+        "39 and 65",
+        "34 and 45",
+        "46 and 69"
+      ],
+      "correct_option": "C",
+      "explanation": "34 = 2 × 17 and 45 = 3^2 × 5. There is no common prime factor between them, so 34 and 45 are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q015",
+      "question_text": "Identify the co-prime pair among the following larger numbers.",
+      "difficulty": "Hard",
+      "options": [
+        "1001 and 1024",
+        "1001 and 1008",
+        "1001 and 1430",
+        "1001 and 1716"
+      ],
+      "correct_option": "A",
+      "explanation": "1001 = 7 × 11 × 13, while 1024 = 2^10. Since 1024 has only the prime factor 2 and 1001 is not even, they have no common factor other than 1.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q016",
+      "question_text": "Which option gives a co-prime pair using the given prime-factor forms?",
+      "difficulty": "Hard",
+      "options": [
+        "2^4 × 3 and 3^2 × 5",
+        "5 × 7 and 7 × 11",
+        "2 × 13 and 13 × 17",
+        "3^3 × 5 and 2^2 × 7"
+      ],
+      "correct_option": "D",
+      "explanation": "The first number in option D has prime factors 3 and 5, while the second has prime factors 2 and 7. Since there is no common prime factor, the pair is co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q017",
+      "question_text": "A teacher wants two class roll numbers with no common factor except 1. Which pair should be chosen?",
+      "difficulty": "Hard",
+      "options": [
+        "28 and 42",
+        "33 and 55",
+        "36 and 49",
+        "44 and 66"
+      ],
+      "correct_option": "C",
+      "explanation": "36 = 2^2 × 3^2 and 49 = 7^2. They have no common prime factor, so 36 and 49 are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q018",
+      "question_text": "Which numerator-denominator pair is co-prime, so that a fraction with this pair would already be in lowest terms?",
+      "difficulty": "Hard",
+      "options": [
+        "42 and 56",
+        "48 and 125",
+        "72 and 108",
+        "91 and 117"
+      ],
+      "correct_option": "B",
+      "explanation": "48 = 2^4 × 3 and 125 = 5^3. They have no common factor other than 1, so the pair 48 and 125 is co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q019",
+      "question_text": "Which of the following pairs is co-prime?",
+      "difficulty": "Elite",
+      "options": [
+        "2^6 - 1 and 2^4 - 1",
+        "3^4 - 1 and 3^2 - 1",
+        "5^3 - 1 and 5^2 + 1",
+        "2^5 and 3^3"
+      ],
+      "correct_option": "D",
+      "explanation": "2^5 = 32 and 3^3 = 27. Since 32 has only prime factor 2 and 27 has only prime factor 3, their only common factor is 1. Hence, they are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP002_Q020",
+      "question_text": "Identify the co-prime pair from the following exponential expressions.",
+      "difficulty": "Elite",
+      "options": [
+        "2^10 - 1 and 2^5 - 1",
+        "3^6 - 1 and 3^3 - 1",
+        "2^10 - 1 and 2^8",
+        "5^4 - 1 and 5^2 - 1"
+      ],
+      "correct_option": "C",
+      "explanation": "2^10 - 1 is odd, while 2^8 is a power of 2. An odd number cannot share the prime factor 2, and 2^8 has no other prime factor. Therefore, their only common factor is 1, so the pair is co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP002",
+        "question_possibility": "Identify Co-prime Pair"
+      }
+    }
+  ]
+}2026-08-10 15:41:00,840 INFO FactoryOrchestrator Generated Questions = 20
+2026-08-10 15:41:00,840 INFO FactoryOrchestrator [Q1] concept= archetype= difficulty=Easy
+2026-08-10 15:41:00,840 INFO FactoryOrchestrator [Q2] concept= archetype= difficulty=Easy
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q3] concept= archetype= difficulty=Easy
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q4] concept= archetype= difficulty=Easy
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q5] concept= archetype= difficulty=Easy+
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q6] concept= archetype= difficulty=Easy+
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q7] concept= archetype= difficulty=Easy+
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q8] concept= archetype= difficulty=Easy+
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q9] concept= archetype= difficulty=Medium
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q10] concept= archetype= difficulty=Medium
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q11] concept= archetype= difficulty=Medium
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q12] concept= archetype= difficulty=Medium
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q13] concept= archetype= difficulty=Medium
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q14] concept= archetype= difficulty=Hard
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q15] concept= archetype= difficulty=Hard
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q16] concept= archetype= difficulty=Hard
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q17] concept= archetype= difficulty=Hard
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q18] concept= archetype= difficulty=Hard
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q19] concept= archetype= difficulty=Elite
+2026-08-10 15:41:00,841 INFO FactoryOrchestrator [Q20] concept= archetype= difficulty=Elite
+2026-08-10 15:41:00,841 INFO ValidationEngine Starting batch validation.
+2026-08-10 15:41:00,841 INFO QuestionValidator Starting validation.
+2026-08-10 15:41:00,841 INFO QuestionValidator Executing validator: R01 Structural Validator
+2026-08-10 15:41:00,841 INFO QuestionValidator Executing validator: R02 Academic Validator
+2026-08-10 15:41:00,841 INFO QuestionValidator Executing validator: R03 Blueprint Validator
+2026-08-10 15:41:00,842 INFO QuestionValidator Validation completed.
+2026-08-10 15:41:00,842 INFO ValidationEngine Validation completed. Validators=3 Errors=0 Warnings=82
+2026-08-10 15:41:00,842 INFO QuestionGenerator Question generation completed.
+2026-08-10 15:41:00,842 INFO FactoryRunner Question generation completed.
+2026-08-10 15:41:00,843 INFO FactoryRunner CSV export completed.
+2026-08-10 15:41:00,843 INFO FactoryRunner Runtime saved.
+2026-08-10 15:41:00,843 INFO __main__ Executing ManufacturingWorkItemModel(request_id='REQ_2ED9AE8BD243', work_item_id='WI_71EA9939', subject='MATHEMATICS', unit='U1', chapter='U1_CH1', subtopic='U1_CH1_ST8', set_no='S1', batch_no=1, questions_per_batch=20, question_start=1, question_end=20, qp_id='U1_CH1_ST8_QP003', question_possibility='Identify Non Co-prime Pair', status='PENDING', retries=0)
+2026-08-10 15:41:00,844 INFO FactoryRunner Starting curriculum manufacturing.
+2026-08-10 15:41:00,844 INFO FactoryRunner Executing production order ORDER_MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_S1_B1_Q1_20
+2026-08-10 15:41:00,844 INFO Engine.factory.planning.planning_director Planning manufacturing for 'U1_CH1_ST8'.
+2026-08-10 15:41:00,844 INFO Engine.factory.planning.academic_analyzer Academic analysis started for 'U1_CH1_ST8'.
+2026-08-10 15:41:00,844 INFO Engine.factory.ai.ai_engine Executing prompt package 'question_generation_v2_1'.
+2026-08-10 15:41:11,101 INFO httpx HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2026-08-10 15:41:11,188 INFO Engine.factory.planning.production_planner Manufacturing plan created for 'U1_CH1_ST8'.
+2026-08-10 15:41:11,189 INFO Engine.factory.planning.batch_planner Created 2 manufacturing batches.
+2026-08-10 15:41:11,189 INFO Engine.factory.planning.planning_director Manufacturing planning completed. 2 batches created.
+2026-08-10 15:41:11,189 INFO FactoryRunner Manufacturing plan created.
+2026-08-10 15:41:11,189 INFO FactoryRunner Production node created.
+2026-08-10 15:41:11,189 INFO BlueprintLoader Using cached blueprint.
+2026-08-10 15:41:11,189 INFO FactoryRunner Blueprint loaded.
+2026-08-10 15:41:11,189 INFO FactoryRunner Runtime loaded.
+2026-08-10 15:41:11,189 INFO QuestionGenerator Starting question generation.
+2026-08-10 15:41:11,192 INFO Engine.factory.generation.ai_job_builder AIJob successfully created.
+2026-08-10 15:41:11,192 INFO FactoryOrchestrator Starting manufacturing pipeline.
+2026-08-10 15:41:11,193 INFO Engine.factory.ai.ai_engine Executing prompt package 'question_generation_v2_1'.
+2026-08-10 15:42:45,193 INFO httpx HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+
+================================================================================
+
+============================================================
+MANUFACTURING COMPLETED
+============================================================
+
+CSV Export : SUCCESS
+Questions  : 20
+Output File: output/U1/U1_CH1/U1_CH1_ST8/U1_U1_CH1_U1_CH1_ST8_S1_Q001_Q020.csv
+
+
+ACADEMIC ANALYZER PARSED DATA:
+ {'estimated_total_questions': 35, 'difficulty_distribution': {'Easy': 8, 'Medium': 9, 'Hard': 3}, 'archetype_distribution': {'Conceptual': 6, 'Computational': 7, 'Analytical': 5, 'Application': 2}, 'analysis_summary': "The subtopic 'Co-prime Numbers' has moderate academic richness. It supports direct conceptual questions on definition, pairwise versus mutual co-primality, consecutive integers, prime-power relationships, and HCF-based identification. It also allows computational and analytical question manufacturing through gcd evaluation, divisibility properties, simplified fractions, and integer-set reasoning. However, the scope is limited if restricted strictly to classification of numbers, so hard questions should be used sparingly and should rely on multi-step gcd logic rather than advanced number theory.", 'manufacturing_notes': ['Ensure questions distinguish clearly between two numbers being co-prime and a set of numbers being pairwise co-prime.', 'Include standard properties such as consecutive integers are always co-prime and consecutive odd numbers may or may not be co-prime depending on the pair.', 'Use HCF/GCD as the primary operational test for co-primality.', "Avoid overloading the set with advanced topics such as Euler's totient function, modular inverses, or Bezout identity unless explicitly included in the syllabus layer.", 'Good medium-level questions can involve finding missing digits or values so that two numbers are co-prime.', 'Hard questions should involve constraints over multiple integers, products, powers, or divisibility conditions, but should remain solvable using elementary gcd logic.', 'Mix direct definition-based questions with examples and counterexamples to prevent rote repetition.', 'Application questions may include fraction simplification, ratio reduction, and identifying relatively prime numerator-denominator pairs.']}
+
+================================================================================
+BATCH ADAPTER PAYLOAD
+================================================================================
+{
+  "batch_id": "ORDER_MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_S1_B1_Q1_20",
+  "unit_code": "U1",
+  "chapter_code": "U1_CH1",
+  "subtopic_code": "U1_CH1_ST8",
+  "set_number": 1,
+  "batch_number": 1,
+  "questions": [
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q001",
+      "question_text": "Which of the following pairs is non co-prime?",
+      "difficulty": "Easy",
+      "options": [
+        "8 and 15",
+        "9 and 16",
+        "14 and 21",
+        "25 and 36"
+      ],
+      "correct_option": "C",
+      "explanation": "14 and 21 have a common factor 7, so their gcd is greater than 1. Hence they are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q002",
+      "question_text": "Identify the non co-prime pair from the options below.",
+      "difficulty": "Easy",
+      "options": [
+        "22 and 35",
+        "18 and 27",
+        "13 and 40",
+        "17 and 24"
+      ],
+      "correct_option": "B",
+      "explanation": "18 and 27 are both divisible by 9. Since they have a common factor greater than 1, they are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q003",
+      "question_text": "Which pair of numbers is not co-prime?",
+      "difficulty": "Easy",
+      "options": [
+        "12 and 25",
+        "15 and 28",
+        "35 and 54",
+        "45 and 75"
+      ],
+      "correct_option": "D",
+      "explanation": "45 and 75 have common factors such as 3, 5, and 15. Therefore, they are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q004",
+      "question_text": "Which pair written in product form represents a non co-prime pair?",
+      "difficulty": "Easy",
+      "options": [
+        "2 × 5 and 3 × 7",
+        "2 × 3 and 5 × 7",
+        "3 × 5 and 5 × 11",
+        "2 × 13 and 3 × 17"
+      ],
+      "correct_option": "C",
+      "explanation": "3 × 5 = 15 and 5 × 11 = 55. Both numbers have 5 as a common factor, so the pair is non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q005",
+      "question_text": "Which of these pairs is a non co-prime pair?",
+      "difficulty": "Easy+",
+      "options": [
+        "39 and 65",
+        "31 and 44",
+        "33 and 50",
+        "41 and 72"
+      ],
+      "correct_option": "A",
+      "explanation": "39 = 3 × 13 and 65 = 5 × 13. They share the factor 13, so they are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q006",
+      "question_text": "Choose the non co-prime pair.",
+      "difficulty": "Easy+",
+      "options": [
+        "101 and 202",
+        "97 and 150",
+        "121 and 200",
+        "143 and 144"
+      ],
+      "correct_option": "A",
+      "explanation": "202 = 2 × 101, so 101 and 202 have 101 as a common factor. Hence they are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q007",
+      "question_text": "Which option contains a non co-prime pair?",
+      "difficulty": "Easy+",
+      "options": [
+        "14 and 25",
+        "26 and 39",
+        "35 and 48",
+        "44 and 63"
+      ],
+      "correct_option": "B",
+      "explanation": "26 = 2 × 13 and 39 = 3 × 13. Since both are divisible by 13, the pair is non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q008",
+      "question_text": "The numbers are shown as products. Which pair is non co-prime?",
+      "difficulty": "Easy+",
+      "options": [
+        "2 × 5 and 3 × 7",
+        "3 × 7 and 7 × 11",
+        "2 × 11 and 3 × 13",
+        "5 × 13 and 2 × 17"
+      ],
+      "correct_option": "B",
+      "explanation": "3 × 7 = 21 and 7 × 11 = 77. Both numbers contain the common factor 7, so they are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q009",
+      "question_text": "After simplifying the expressions, which pair is non co-prime?",
+      "difficulty": "Medium",
+      "options": [
+        "2^4 - 1 and 2^3",
+        "3^2 + 2 and 5^2",
+        "7^2 and 2^5 + 1",
+        "5^2 - 1 and 3^3"
+      ],
+      "correct_option": "D",
+      "explanation": "5^2 - 1 = 24 and 3^3 = 27. Since 24 and 27 are both divisible by 3, they are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q010",
+      "question_text": "Which pair of numbers written in words is non co-prime?",
+      "difficulty": "Medium",
+      "options": [
+        "twenty five and thirty six",
+        "twenty seven and forty",
+        "thirty two and forty nine",
+        "forty two and fifty six"
+      ],
+      "correct_option": "D",
+      "explanation": "Forty two is 42 and fifty six is 56. Both are divisible by 14, so they are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q011",
+      "question_text": "For n = 4, which pair of values is non co-prime?",
+      "difficulty": "Medium",
+      "options": [
+        "n + 1 and 2n + 1",
+        "2n + 3 and 3n + 2",
+        "3n and 5n + 4",
+        "4n + 1 and 5n + 2"
+      ],
+      "correct_option": "C",
+      "explanation": "For n = 4, 3n = 12 and 5n + 4 = 24. Since 12 and 24 have common factors greater than 1, they are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q012",
+      "question_text": "Which of the following two-digit pairs is non co-prime?",
+      "difficulty": "Medium",
+      "options": [
+        "34 and 45",
+        "46 and 75",
+        "58 and 91",
+        "62 and 93"
+      ],
+      "correct_option": "D",
+      "explanation": "62 = 2 × 31 and 93 = 3 × 31. They share the factor 31, so the pair is non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q013",
+      "question_text": "In which option are the two numbers non co-prime?",
+      "difficulty": "Hard",
+      "options": [
+        "64 and 81",
+        "100 and 121",
+        "84 and 125",
+        "72 and 90"
+      ],
+      "correct_option": "D",
+      "explanation": "72 and 90 are both divisible by 18. Since their gcd is greater than 1, they are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q014",
+      "question_text": "Which pair is non co-prime after evaluating the expressions?",
+      "difficulty": "Hard",
+      "options": [
+        "10! + 1 and 10!",
+        "3 × 5 and 2^4 + 1",
+        "11^2 - 1 and 11^2 + 1",
+        "13^2 and 2^8"
+      ],
+      "correct_option": "C",
+      "explanation": "11^2 - 1 = 120 and 11^2 + 1 = 122. Both are even, so they have 2 as a common factor and are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q015",
+      "question_text": "Which computed pair is non co-prime?",
+      "difficulty": "Hard",
+      "options": [
+        "6^2 + 1 and 5^2",
+        "8^2 - 1 and 2^6",
+        "9^2 - 1 and 5^2 + 5",
+        "7^2 and 2^4 + 1"
+      ],
+      "correct_option": "C",
+      "explanation": "9^2 - 1 = 80 and 5^2 + 5 = 30. Since both are divisible by 10, they are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q016",
+      "question_text": "Which pair given through prime powers is non co-prime?",
+      "difficulty": "Hard",
+      "options": [
+        "2^3 × 5^2 and 3^2 × 7",
+        "3^4 × 11 and 2^5 × 5",
+        "2^2 × 7 and 3 × 5^2",
+        "5^3 × 13 and 2 × 5 × 17"
+      ],
+      "correct_option": "D",
+      "explanation": "5^3 × 13 and 2 × 5 × 17 both contain the factor 5. Hence the two numbers are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q017",
+      "question_text": "For k = 6, which pair of expressions gives a non co-prime pair?",
+      "difficulty": "Elite",
+      "options": [
+        "k^2 + 1 and 2k + 1",
+        "k^2 - 1 and k + 1",
+        "k^2 + k + 1 and k",
+        "2k + 5 and 3k + 7"
+      ],
+      "correct_option": "B",
+      "explanation": "For k = 6, k^2 - 1 = 35 and k + 1 = 7. Since 35 and 7 have 7 as a common factor, they are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q018",
+      "question_text": "Identify the non co-prime pair among the following larger numbers.",
+      "difficulty": "Elite",
+      "options": [
+        "101 and 1000",
+        "221 and 391",
+        "323 and 324",
+        "437 and 500"
+      ],
+      "correct_option": "B",
+      "explanation": "221 = 13 × 17 and 391 = 17 × 23. Since they share the factor 17, the pair is non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q019",
+      "question_text": "Which pair involving powers is non co-prime?",
+      "difficulty": "Elite",
+      "options": [
+        "2^10 - 1 and 2^5",
+        "3^5 and 2^7",
+        "5^3 - 1 and 5^2 + 1",
+        "7^2 and 6^2 + 1"
+      ],
+      "correct_option": "C",
+      "explanation": "5^3 - 1 = 124 and 5^2 + 1 = 26. Both are divisible by 2, so they are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    },
+    {
+      "question_code": "U1_CH1_ST8_QP003_Q020",
+      "question_text": "Which of the following pairs is non co-prime?",
+      "difficulty": "Elite",
+      "options": [
+        "111 and 200",
+        "143 and 221",
+        "169 and 210",
+        "187 and 256"
+      ],
+      "correct_option": "B",
+      "explanation": "143 = 11 × 13 and 221 = 13 × 17. Since both numbers have 13 as a common factor, they are non co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "qp_id": "U1_CH1_ST8_QP003",
+        "question_possibility": "Identify Non Co-prime Pair"
+      }
+    }
+  ]
+}2026-08-10 15:42:45,333 INFO FactoryOrchestrator Generated Questions = 20
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q1] concept= archetype= difficulty=Easy
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q2] concept= archetype= difficulty=Easy
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q3] concept= archetype= difficulty=Easy
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q4] concept= archetype= difficulty=Easy
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q5] concept= archetype= difficulty=Easy+
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q6] concept= archetype= difficulty=Easy+
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q7] concept= archetype= difficulty=Easy+
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q8] concept= archetype= difficulty=Easy+
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q9] concept= archetype= difficulty=Medium
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q10] concept= archetype= difficulty=Medium
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q11] concept= archetype= difficulty=Medium
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q12] concept= archetype= difficulty=Medium
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q13] concept= archetype= difficulty=Hard
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q14] concept= archetype= difficulty=Hard
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q15] concept= archetype= difficulty=Hard
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q16] concept= archetype= difficulty=Hard
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q17] concept= archetype= difficulty=Elite
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q18] concept= archetype= difficulty=Elite
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q19] concept= archetype= difficulty=Elite
+2026-08-10 15:42:45,334 INFO FactoryOrchestrator [Q20] concept= archetype= difficulty=Elite
+2026-08-10 15:42:45,334 INFO ValidationEngine Starting batch validation.
+2026-08-10 15:42:45,334 INFO QuestionValidator Starting validation.
+2026-08-10 15:42:45,334 INFO QuestionValidator Executing validator: R01 Structural Validator
+2026-08-10 15:42:45,334 INFO QuestionValidator Executing validator: R02 Academic Validator
+2026-08-10 15:42:45,335 INFO QuestionValidator Executing validator: R03 Blueprint Validator
+2026-08-10 15:42:45,335 INFO QuestionValidator Validation completed.
+2026-08-10 15:42:45,335 INFO ValidationEngine Validation completed. Validators=3 Errors=0 Warnings=82
+2026-08-10 15:42:45,335 INFO QuestionGenerator Question generation completed.
+2026-08-10 15:42:45,335 INFO FactoryRunner Question generation completed.
+2026-08-10 15:42:45,336 INFO FactoryRunner CSV export completed.
+2026-08-10 15:42:45,337 INFO FactoryRunner Runtime saved.
+2026-08-10 15:42:45,337 INFO __main__ Executing ManufacturingWorkItemModel(request_id='REQ_2ED9AE8BD243', work_item_id='WI_600A2CC8', subject='MATHEMATICS', unit='U1', chapter='U1_CH1', subtopic='U1_CH1_ST8', set_no='S1', batch_no=1, questions_per_batch=20, question_start=1, question_end=20, qp_id='U1_CH1_ST8_QP004', question_possibility='GCD-based Co-prime Identification', status='PENDING', retries=0)
+2026-08-10 15:42:45,337 INFO FactoryRunner Starting curriculum manufacturing.
+2026-08-10 15:42:45,337 INFO FactoryRunner Executing production order ORDER_MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_S1_B1_Q1_20
+2026-08-10 15:42:45,337 INFO Engine.factory.planning.planning_director Planning manufacturing for 'U1_CH1_ST8'.
+2026-08-10 15:42:45,337 INFO Engine.factory.planning.academic_analyzer Academic analysis started for 'U1_CH1_ST8'.
+2026-08-10 15:42:45,337 INFO Engine.factory.ai.ai_engine Executing prompt package 'question_generation_v2_1'.
+2026-08-10 15:43:01,934 INFO httpx HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2026-08-10 15:43:01,956 INFO Engine.factory.planning.production_planner Manufacturing plan created for 'U1_CH1_ST8'.
+2026-08-10 15:43:01,957 INFO Engine.factory.planning.batch_planner Created 3 manufacturing batches.
+2026-08-10 15:43:01,957 INFO Engine.factory.planning.planning_director Manufacturing planning completed. 3 batches created.
+2026-08-10 15:43:01,957 INFO FactoryRunner Manufacturing plan created.
+2026-08-10 15:43:01,957 INFO FactoryRunner Production node created.
+2026-08-10 15:43:01,957 INFO BlueprintLoader Using cached blueprint.
+2026-08-10 15:43:01,957 INFO FactoryRunner Blueprint loaded.
+2026-08-10 15:43:01,957 INFO FactoryRunner Runtime loaded.
+2026-08-10 15:43:01,957 INFO QuestionGenerator Starting question generation.
+2026-08-10 15:43:01,959 INFO Engine.factory.generation.ai_job_builder AIJob successfully created.
+2026-08-10 15:43:01,959 INFO FactoryOrchestrator Starting manufacturing pipeline.
+2026-08-10 15:43:01,960 INFO Engine.factory.ai.ai_engine Executing prompt package 'question_generation_v2_1'.
+2026-08-10 15:44:27,031 INFO httpx HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+
+================================================================================
+
+============================================================
+MANUFACTURING COMPLETED
+============================================================
+
+CSV Export : SUCCESS
+Questions  : 20
+Output File: output/U1/U1_CH1/U1_CH1_ST8/U1_U1_CH1_U1_CH1_ST8_S1_Q001_Q020.csv
+
+
+ACADEMIC ANALYZER PARSED DATA:
+ {'estimated_total_questions': 55, 'difficulty_distribution': {'Easy': 7, 'Medium': 9, 'Hard': 4}, 'archetype_distribution': {'Conceptual': 5, 'Computational': 7, 'Analytical': 6, 'Application': 2}, 'analysis_summary': "The subtopic Co-prime Numbers has moderate academic richness within Number System. It supports direct conceptual testing of gcd-based definitions, distinction between pairwise and mutually co-prime numbers, basic divisibility reasoning, and integration with HCF, prime factorisation, Euclidean algorithm, Euler's totient idea, and modular arithmetic foundations. A 20-question set is feasible without repetition if questions vary across identification, proof-style reasoning, counting, construction of examples, and application in fractions or divisibility constraints.", 'manufacturing_notes': ['Ensure questions do not remain limited to simply checking whether two numbers are co-prime; include multi-number cases, pairwise versus collectively co-prime distinctions, and HCF-based reasoning.', 'Medium and hard questions should combine co-primality with prime factorisation, Euclidean algorithm, divisibility properties, or counting integers co-prime to a given number.', 'Avoid excessive dependence on large numerical computation; IIT JEE-oriented questions should reward structural number sense and factor analysis.', 'Include some misconception-testing items, such as consecutive integers always being co-prime, non-prime numbers being co-prime, and pairwise co-prime versus common gcd equal to 1.', 'Application-oriented questions can involve simplification of fractions, existence of integer solutions, modular inverses, or constraints where gcd conditions determine validity.']}
+
+================================================================================
+BATCH ADAPTER PAYLOAD
+================================================================================
+{
+  "batch_id": "ORDER_MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_S1_B1_Q1_20",
+  "unit_code": "U1",
+  "chapter_code": "U1_CH1",
+  "subtopic_code": "U1_CH1_ST8",
+  "set_number": 1,
+  "batch_number": 1,
+  "questions": [
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q001",
+      "question_text": "Using the GCD criterion, decide whether 35 and 64 are co-prime.",
+      "difficulty": "Easy",
+      "options": [
+        "Yes, because gcd(35, 64) = 1",
+        "Yes, because gcd(35, 64) = 5",
+        "No, because gcd(35, 64) = 7",
+        "No, because gcd(35, 64) = 35"
+      ],
+      "correct_option": "A",
+      "explanation": "Two numbers are co-prime if their GCD is 1. Since 35 = 5 × 7 and 64 = 2^6 have no common factor except 1, gcd(35, 64) = 1. Hence they are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q002",
+      "question_text": "If gcd(48, 65) is calculated, which conclusion is correct?",
+      "difficulty": "Easy",
+      "options": [
+        "48 and 65 are not co-prime because their GCD is 13",
+        "48 and 65 are co-prime because their GCD is 1",
+        "48 and 65 are not co-prime because their GCD is 5",
+        "48 and 65 are co-prime because their GCD is 48"
+      ],
+      "correct_option": "B",
+      "explanation": "The factors of 48 are powers of 2 and 3, while 65 = 5 × 13. They have no common factor other than 1, so gcd(48, 65) = 1. Therefore, they are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q003",
+      "question_text": "Which pair is co-prime on the basis of its GCD?",
+      "difficulty": "Easy",
+      "options": [
+        "21 and 35",
+        "28 and 45",
+        "33 and 44",
+        "39 and 52"
+      ],
+      "correct_option": "B",
+      "explanation": "gcd(21, 35) = 7, gcd(28, 45) = 1, gcd(33, 44) = 11, and gcd(39, 52) = 13. Only 28 and 45 have GCD 1, so they are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q004",
+      "question_text": "The following GCD values are given. Which pair is co-prime?",
+      "difficulty": "Easy",
+      "options": [
+        "(42, 70), gcd = 14",
+        "(56, 81), gcd = 1",
+        "(63, 90), gcd = 9",
+        "(72, 96), gcd = 24"
+      ],
+      "correct_option": "B",
+      "explanation": "A pair of numbers is co-prime exactly when its GCD is 1. Among the given options, only (56, 81) has gcd = 1. Therefore, 56 and 81 are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q005",
+      "question_text": "Using Euclid's algorithm, identify whether 91 and 144 are co-prime.",
+      "difficulty": "Easy+",
+      "options": [
+        "They are not co-prime because their GCD is 7",
+        "They are not co-prime because their GCD is 13",
+        "They are co-prime because their GCD is 1",
+        "They are co-prime because their GCD is 91"
+      ],
+      "correct_option": "C",
+      "explanation": "Applying Euclid's algorithm gives 144 = 91 + 53, 91 = 53 + 38, 53 = 38 + 15, 38 = 2 × 15 + 8, 15 = 8 + 7, 8 = 7 + 1. Hence the GCD is 1, so 91 and 144 are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q006",
+      "question_text": "Let a = 2^3 × 3 × 5 and b = 7 × 11. What can be concluded from gcd(a, b)?",
+      "difficulty": "Easy+",
+      "options": [
+        "a and b are co-prime because gcd(a, b) = 1",
+        "a and b are not co-prime because gcd(a, b) = 2",
+        "a and b are not co-prime because gcd(a, b) = 3",
+        "a and b are co-prime because gcd(a, b) = 5"
+      ],
+      "correct_option": "A",
+      "explanation": "The prime factors of a are 2, 3, and 5, while the prime factors of b are 7 and 11. There is no common prime factor, so gcd(a, b) = 1. Hence a and b are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q007",
+      "question_text": "For which value of n is gcd(n, 42) = 1, making n and 42 co-prime?",
+      "difficulty": "Easy+",
+      "options": [
+        "28",
+        "35",
+        "25",
+        "63"
+      ],
+      "correct_option": "C",
+      "explanation": "Since 42 = 2 × 3 × 7, n must not be divisible by 2, 3, or 7. Among the options, 25 shares no common factor with 42. Thus gcd(25, 42) = 1, so 25 and 42 are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q008",
+      "question_text": "Compute gcd(156, 221) and choose the correct co-prime identification.",
+      "difficulty": "Easy+",
+      "options": [
+        "They are co-prime because the GCD is 1",
+        "They are not co-prime because the GCD is 13",
+        "They are not co-prime because the GCD is 17",
+        "They are co-prime because the GCD is 65"
+      ],
+      "correct_option": "B",
+      "explanation": "Using Euclid's algorithm: 221 - 156 = 65, 156 = 2 × 65 + 26, and 65 = 2 × 26 + 13. Therefore gcd(156, 221) = 13. Since the GCD is not 1, they are not co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q009",
+      "question_text": "Which fraction has numerator and denominator co-prime, as shown by their GCD?",
+      "difficulty": "Medium",
+      "options": [
+        "18/45, because gcd(18, 45) = 9",
+        "24/56, because gcd(24, 56) = 8",
+        "35/64, because gcd(35, 64) = 1",
+        "42/70, because gcd(42, 70) = 14"
+      ],
+      "correct_option": "C",
+      "explanation": "The numerator and denominator of a fraction are co-prime when their GCD is 1. For 35/64, gcd(35, 64) = 1. The other fractions have GCD greater than 1.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q010",
+      "question_text": "Which pair of numbers is co-prime based on their prime factorization and GCD?",
+      "difficulty": "Medium",
+      "options": [
+        "2^4 × 3^2 and 5^3 × 7",
+        "2^3 × 5 and 5^2 × 11",
+        "3^2 × 7 and 7 × 13",
+        "2 × 11^2 and 11 × 17"
+      ],
+      "correct_option": "A",
+      "explanation": "For two numbers to be co-prime, they must have no common prime factor, so their GCD is 1. In option A, the first number has prime factors 2 and 3, while the second has prime factors 5 and 7. Therefore their GCD is 1.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q011",
+      "question_text": "Which value of k makes k and 30 co-prime according to the condition gcd(k, 30) = 1?",
+      "difficulty": "Medium",
+      "options": [
+        "44",
+        "45",
+        "49",
+        "75"
+      ],
+      "correct_option": "C",
+      "explanation": "Since 30 = 2 × 3 × 5, k must not share factors 2, 3, or 5 with 30. The number 49 = 7^2 shares no common factor with 30, so gcd(49, 30) = 1.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q012",
+      "question_text": "Use gcd(102, 103) to identify whether 102 and 103 are co-prime.",
+      "difficulty": "Medium",
+      "options": [
+        "They are not co-prime because gcd(102, 103) = 2",
+        "They are not co-prime because gcd(102, 103) = 3",
+        "They are co-prime because gcd(102, 103) = 1",
+        "They are co-prime because gcd(102, 103) = 102"
+      ],
+      "correct_option": "C",
+      "explanation": "Consecutive positive integers always have GCD 1. Also, 103 = 102 × 1 + 1, so gcd(102, 103) = gcd(102, 1) = 1. Hence 102 and 103 are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q013",
+      "question_text": "Which pair has GCD equal to 1 and is therefore co-prime?",
+      "difficulty": "Medium",
+      "options": [
+        "104 and 195",
+        "121 and 170",
+        "138 and 207",
+        "145 and 203"
+      ],
+      "correct_option": "B",
+      "explanation": "gcd(104, 195) = 13, gcd(121, 170) = 1, gcd(138, 207) = 69, and gcd(145, 203) = 29. Therefore, only 121 and 170 are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q014",
+      "question_text": "Two numbers are A = 2^2 × 3 × 7 and B = 5 × 11 × 13. Which statement correctly identifies their co-primality using GCD?",
+      "difficulty": "Medium",
+      "options": [
+        "A and B are not co-prime because gcd(A, B) = 7",
+        "A and B are co-prime because gcd(A, B) = 1",
+        "A and B are not co-prime because gcd(A, B) = 11",
+        "A and B are co-prime because gcd(A, B) = 13"
+      ],
+      "correct_option": "B",
+      "explanation": "A has prime factors 2, 3, and 7. B has prime factors 5, 11, and 13. Since there is no common prime factor, gcd(A, B) = 1. Hence A and B are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q015",
+      "question_text": "Which option contains only pairs whose GCD is 1?",
+      "difficulty": "Hard",
+      "options": [
+        "(14, 25), (18, 35), (22, 39)",
+        "(15, 25), (17, 34), (19, 38)",
+        "(21, 28), (24, 35), (26, 39)",
+        "(16, 24), (27, 45), (31, 62)"
+      ],
+      "correct_option": "A",
+      "explanation": "In option A, gcd(14, 25) = 1, gcd(18, 35) = 1, and gcd(22, 39) = 1. Each pair is co-prime. Every other option contains at least one pair with GCD greater than 1.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q016",
+      "question_text": "Which pair is co-prime according to the GCD of the two numbers represented by their prime factorizations?",
+      "difficulty": "Hard",
+      "options": [
+        "2^3 × 3 × 5 and 2 × 7 × 11",
+        "3^2 × 5 × 13 and 7^2 × 11",
+        "2 × 5^2 × 17 and 3 × 5 × 19",
+        "7 × 11 × 13 and 11^2 × 17"
+      ],
+      "correct_option": "B",
+      "explanation": "Option B has first number with prime factors 3, 5, and 13, and second number with prime factors 7 and 11. They share no prime factor, so their GCD is 1. Hence they are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q017",
+      "question_text": "For which value of x does gcd(45, x) = 1?",
+      "difficulty": "Hard",
+      "options": [
+        "60",
+        "72",
+        "98",
+        "105"
+      ],
+      "correct_option": "C",
+      "explanation": "Since 45 = 3^2 × 5, x must not be divisible by 3 or 5. Among the options, 98 = 2 × 7^2 shares no common factor with 45. Therefore gcd(45, 98) = 1.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q018",
+      "question_text": "A GCD check gives the following results. Which option correctly identifies a co-prime pair?",
+      "difficulty": "Hard",
+      "options": [
+        "gcd(84, 135) = 3, so 84 and 135 are co-prime",
+        "gcd(95, 132) = 1, so 95 and 132 are co-prime",
+        "gcd(108, 180) = 36, so 108 and 180 are co-prime",
+        "gcd(121, 154) = 11, so 121 and 154 are co-prime"
+      ],
+      "correct_option": "B",
+      "explanation": "A pair is co-prime only when its GCD is 1. Option B correctly states that gcd(95, 132) = 1, so 95 and 132 are co-prime. The other options have GCD greater than 1.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q019",
+      "question_text": "For every positive integer n, which pair is guaranteed to be co-prime because its GCD reduces to 1?",
+      "difficulty": "Elite",
+      "options": [
+        "2n + 1 and 4n + 3",
+        "2n + 1 and 4n + 2",
+        "3n + 3 and 6n + 9",
+        "5n and 10n + 5"
+      ],
+      "correct_option": "A",
+      "explanation": "For option A, gcd(2n + 1, 4n + 3) = gcd(2n + 1, (4n + 3) - 2(2n + 1)) = gcd(2n + 1, 1) = 1. Hence the pair is always co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    },
+    {
+      "question_code": "MATHEMATICS_U1_U1_CH1_U1_CH1_ST8_U1_CH1_ST8_QP004_Q020",
+      "question_text": "Using Euclid's algorithm, decide whether 1001 and 1440 are co-prime.",
+      "difficulty": "Elite",
+      "options": [
+        "They are not co-prime because their GCD is 7",
+        "They are not co-prime because their GCD is 11",
+        "They are not co-prime because their GCD is 13",
+        "They are co-prime because their GCD is 1"
+      ],
+      "correct_option": "D",
+      "explanation": "Euclid's algorithm gives 1440 = 1001 + 439, 1001 = 2 × 439 + 123, 439 = 3 × 123 + 70, 123 = 70 + 53, 70 = 53 + 17, 53 = 3 × 17 + 2, and 17 = 8 × 2 + 1. Thus the GCD is 1, so 1001 and 1440 are co-prime.",
+      "metadata": {
+        "subject_code": "MATHEMATICS",
+        "unit_code": "U1",
+        "chapter_code": "U1_CH1",
+        "subtopic_code": "U1_CH1_ST8",
+        "qp_id": "U1_CH1_ST8_QP004",
+        "question_possibility": "GCD-based Co-prime Identification"
+      }
+    }
+  ]
+}2026-08-10 15:44:27,103 INFO FactoryOrchestrator Generated Questions = 20
+2026-08-10 15:44:27,103 INFO FactoryOrchestrator [Q1] concept= archetype= difficulty=Easy
+2026-08-10 15:44:27,103 INFO FactoryOrchestrator [Q2] concept= archetype= difficulty=Easy
+2026-08-10 15:44:27,103 INFO FactoryOrchestrator [Q3] concept= archetype= difficulty=Easy
+2026-08-10 15:44:27,103 INFO FactoryOrchestrator [Q4] concept= archetype= difficulty=Easy
+2026-08-10 15:44:27,103 INFO FactoryOrchestrator [Q5] concept= archetype= difficulty=Easy+
+2026-08-10 15:44:27,103 INFO FactoryOrchestrator [Q6] concept= archetype= difficulty=Easy+
+2026-08-10 15:44:27,103 INFO FactoryOrchestrator [Q7] concept= archetype= difficulty=Easy+
+2026-08-10 15:44:27,103 INFO FactoryOrchestrator [Q8] concept= archetype= difficulty=Easy+
+2026-08-10 15:44:27,103 INFO FactoryOrchestrator [Q9] concept= archetype= difficulty=Medium
+2026-08-10 15:44:27,103 INFO FactoryOrchestrator [Q10] concept= archetype= difficulty=Medium
+2026-08-10 15:44:27,104 INFO FactoryOrchestrator [Q11] concept= archetype= difficulty=Medium
+2026-08-10 15:44:27,104 INFO FactoryOrchestrator [Q12] concept= archetype= difficulty=Medium
+2026-08-10 15:44:27,104 INFO FactoryOrchestrator [Q13] concept= archetype= difficulty=Medium
+2026-08-10 15:44:27,104 INFO FactoryOrchestrator [Q14] concept= archetype= difficulty=Medium
+2026-08-10 15:44:27,104 INFO FactoryOrchestrator [Q15] concept= archetype= difficulty=Hard
+2026-08-10 15:44:27,104 INFO FactoryOrchestrator [Q16] concept= archetype= difficulty=Hard
+2026-08-10 15:44:27,104 INFO FactoryOrchestrator [Q17] concept= archetype= difficulty=Hard
+2026-08-10 15:44:27,104 INFO FactoryOrchestrator [Q18] concept= archetype= difficulty=Hard
+2026-08-10 15:44:27,104 INFO FactoryOrchestrator [Q19] concept= archetype= difficulty=Elite
+2026-08-10 15:44:27,104 INFO FactoryOrchestrator [Q20] concept= archetype= difficulty=Elite
+2026-08-10 15:44:27,104 INFO ValidationEngine Starting batch validation.
+2026-08-10 15:44:27,104 INFO QuestionValidator Starting validation.
+2026-08-10 15:44:27,104 INFO QuestionValidator Executing validator: R01 Structural Validator
+2026-08-10 15:44:27,104 INFO QuestionValidator Executing validator: R02 Academic Validator
+2026-08-10 15:44:27,105 INFO QuestionValidator Executing validator: R03 Blueprint Validator
+2026-08-10 15:44:27,105 INFO QuestionValidator Validation completed.
+2026-08-10 15:44:27,105 INFO ValidationEngine Validation completed. Validators=3 Errors=0 Warnings=82
+2026-08-10 15:44:27,105 INFO QuestionGenerator Question generation completed.
+2026-08-10 15:44:27,105 INFO FactoryRunner Question generation completed.
+2026-08-10 15:44:27,106 INFO FactoryRunner CSV export completed.
+2026-08-10 15:44:27,107 INFO FactoryRunner Runtime saved.
+2026-08-10 15:44:27,107 INFO __main__ Manufacturing completed successfully.
+
+================================================================================
+
+============================================================
+MANUFACTURING COMPLETED
+============================================================
+
+CSV Export : SUCCESS
+Questions  : 20
+Output File: output/U1/U1_CH1/U1_CH1_ST8/U1_U1_CH1_U1_CH1_ST8_S1_Q001_Q020.csv
+
+
+================================================================================
+MANUFACTURING SUMMARY
+================================================================================
+
+Work Items        : 4
+Completed         : 4
+Failed            : 0
+Questions Created : 80
+
+================================================================================
+PRODUCTION COMPLETED SUCCESSFULLY
+================================================================================
+
+Questions Generated : 80
+

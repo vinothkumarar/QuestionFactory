@@ -271,6 +271,9 @@ class PromptBuilder:
                     "question_code": "string",
                     "question_text": "string",
                     "difficulty": "Easy | Easy+ | Medium | Hard | Elite",
+                    "archetype": "string",
+                    "concept": "string",
+                    "bloom_level": "Remember|Understand|Apply|Analyze|Evaluate|Create",
                     "options": [
                         "Option A",
                         "Option B",
@@ -373,6 +376,41 @@ class PromptBuilder:
             If a question cannot be mapped directly to the
             selected Question Possibility, do not generate it.
 
+            COVERAGE ARCHETYPE RULE
+
+            Within the selected Question Possibility,
+            first identify all distinct coverage archetypes.
+
+            A coverage archetype is a fundamentally different
+            academic form of the same Question Possibility.
+
+            Examples:
+
+            "What is the successor of 8?"
+            "What is the successor of 14?"
+            "What is the successor of 99?"
+
+            These are NOT different archetypes.
+            They are the SAME archetype with different numbers.
+
+            Before generating questions:
+
+            1. Identify all possible coverage archetypes
+            inside the selected Question Possibility.
+
+            2. Generate questions across as many coverage
+            archetypes as possible.
+
+            3. Do not generate multiple questions from the
+            same archetype while uncovered archetypes
+            still exist.
+
+            4. Prefer breadth of coverage over numerical
+            variation.
+
+            5. A batch should maximize Question Possibility
+            coverage rather than repeating the same form.
+
             - Follow the supplied blueprint.
             - Produce original questions.
             - Provide four options.
@@ -432,6 +470,25 @@ class PromptBuilder:
             7. Never invent additional JSON fields.
 
             8. Return ONLY the JSON object.
+
+            9. Every question MUST include archetype.
+
+            10. Every question MUST include concept.
+
+            11. Every question MUST include bloom_level.
+
+            12. archetype MUST describe the coverage archetype used.
+
+            13. concept MUST describe the exact concept being tested.
+
+            14. bloom_level MUST be one of:
+            Remember
+            Understand
+            Apply
+            Analyze
+            Evaluate
+            Create
+
             """
         ).strip()
 

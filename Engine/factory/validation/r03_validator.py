@@ -82,6 +82,16 @@ class R03Validator(ValidationModule):
             result,
         )
 
+        self._validate_qp_compliance(
+            batch,
+            result,
+        )    
+
+        self._validate_archetype_coverage(
+            batch,
+            result,
+        )
+
         self._calculate_score(
             batch,
             result,
@@ -500,6 +510,87 @@ class R03Validator(ValidationModule):
                     "Estimated solving time "
                     "appears unusually high."
                 )
+
+    # ---------------------------------------------------------
+    # QP Compliance Validation
+    # ---------------------------------------------------------
+
+    def _validate_qp_compliance(
+        self,
+        batch: QuestionBatchModel,
+        result: ValidationResultModel,
+    ) -> None:
+        """
+        Validate QP metadata propagation.
+        """
+
+        for index, question in enumerate(
+            batch.questions,
+            start=1,
+        ):
+
+            metadata = question.metadata
+
+            qp_id = metadata.get(
+                "qp_id",
+                "",
+            )
+
+            if not qp_id:
+
+                result.add_warning(
+                    f"Question {index}: "
+                    "qp_id missing."
+                )
+
+            question_possibility = metadata.get(
+                "question_possibility",
+                "",
+            )
+
+            if not question_possibility:
+
+                result.add_warning(
+                    f"Question {index}: "
+                    "question_possibility missing."
+                )
+
+
+    # ---------------------------------------------------------
+    # Archetype Coverage Validation
+    # ---------------------------------------------------------
+
+    def _validate_archetype_coverage(
+        self,
+        batch: QuestionBatchModel,
+        result: ValidationResultModel,
+    ) -> None:
+        """
+        Validate archetype availability.
+        """
+
+        archetypes = set()
+
+        for question in batch.questions:
+
+            archetype = (
+                question.archetype.strip()
+                if question.archetype
+                else ""
+            )
+
+            if archetype:
+
+                archetypes.add(
+                    archetype.lower(),
+                )
+
+        if not archetypes:
+
+            result.add_warning(
+                "No archetype information found "
+                "in batch."
+            )
 
     # ---------------------------------------------------------
     # Manufacturing Metrics
