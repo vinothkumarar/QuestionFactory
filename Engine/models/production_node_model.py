@@ -172,6 +172,14 @@ class ProductionNodeModel:
 
     metadata: NodeMetadata = field(default_factory=NodeMetadata)
 
+    # ---------------------------------------------------------
+    # Question Possibility
+    # ---------------------------------------------------------
+
+    qp_id: str = ""
+
+    question_possibility: str = ""
+
     status: str = "PLANNED"
 
     current_stage: str = "SCHEDULED"
@@ -354,6 +362,15 @@ class ProductionNodeModel:
             repair_cycles=payload.get(
                 "repair_cycles",
                 0,
+            ),
+            qp_id=payload.get(
+                "qp_id",
+                "",
+            ),
+
+            question_possibility=payload.get(
+                "question_possibility",
+                "",
             ),
         )
 

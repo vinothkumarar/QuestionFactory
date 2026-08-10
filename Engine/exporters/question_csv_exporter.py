@@ -138,8 +138,10 @@ class QuestionCSVExporter:
         Write QuestionBatchModel contents to CSV.
         """
 
+        file_exists = output_file.exists()
+
         with output_file.open(
-            mode="w",
+            mode="a",
             newline="",
             encoding="utf-8",
         ) as csv_file:
@@ -150,19 +152,12 @@ class QuestionCSVExporter:
                 extrasaction="ignore",
             )
 
-            writer.writeheader()
+            if not file_exists:
+                writer.writeheader()
+
             for question in batch.questions:
 
-                #
-                # Convert the canonical model into the
-                # Question Factory export schema.
-                #
-
                 export_data = question.to_export_dict()
-
-                #
-                # Ensure every export column exists.
-                #
 
                 export_row = {
                     column: export_data.get(column, "")
@@ -172,7 +167,6 @@ class QuestionCSVExporter:
                 writer.writerow(
                     export_row,
                 )
-
     # ---------------------------------------------------------
     # Diagnostics
     # ---------------------------------------------------------

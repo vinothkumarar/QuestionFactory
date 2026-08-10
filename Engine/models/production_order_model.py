@@ -27,6 +27,10 @@ class ProductionOrderModel:
 
     question_count: int
 
+    qp_id: str = ""
+
+    question_possibility: str = ""
+
     subject_name: str = ""
 
     unit_name: str = ""

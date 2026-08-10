@@ -93,6 +93,21 @@ class BatchAdapter:
         payload = self._extract_payload(
             parsed,
         )
+        import json
+
+        print("\n" + "=" * 80)
+        print("BATCH ADAPTER PAYLOAD")
+        print("=" * 80)
+
+        print(
+            json.dumps(
+                payload,
+                indent=2,
+                ensure_ascii=False,
+            )
+        )
+
+        print("=" * 80 + "\n")
 
         batch = QuestionBatchModel()
 

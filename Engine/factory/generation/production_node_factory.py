@@ -81,6 +81,17 @@ class ProductionNodeFactory:
         # -------------------------------------------------
 
         node.metadata.batch_id = order.order_id
+        node.qp_id = getattr(
+            order,
+            "qp_id",
+            "",
+        )
+
+        node.question_possibility = getattr(
+            order,
+            "question_possibility",
+            "",
+        )
 
         node.metadata.production_node = (
             f"{order.subject}_"

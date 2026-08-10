@@ -153,6 +153,9 @@ class AIJobBuilder:
             "batch_id": node.metadata.batch_id,
             "production_node": node.metadata.production_node,
 
+            "qp_id": node.qp_id,
+            "question_possibility": node.question_possibility,
+
             # Production Sequence
             "set": node.location.set_number,
             "batch": node.location.batch_number,
@@ -196,6 +199,12 @@ class AIJobBuilder:
                 "rules": blueprint.rules.rules,
                 "archetypes": blueprint.archetypes.archetypes,
                 "schema_version": blueprint.schema_version,
+
+                # Frozen QP Manufacturing
+                "qp_id": node.qp_id,
+                "question_possibility": node.question_possibility,
+
+                # Optional diagnostics
                 "question_possibilities": question_possibilities,
             },
         }

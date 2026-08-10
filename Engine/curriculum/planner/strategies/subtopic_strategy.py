@@ -24,6 +24,7 @@ from Engine.curriculum.planner.base_strategy import (
     BaseManufacturingStrategy,
 )
 
+from Engine.qpc.qpc_loader import QPCLoader
 
 class SubtopicStrategy(BaseManufacturingStrategy):
     """
@@ -40,15 +41,19 @@ class SubtopicStrategy(BaseManufacturingStrategy):
 
         queue = ManufacturingQueue()
 
+        qpc_loader = QPCLoader()
+
+        question_possibilities = qpc_loader.load(
+            chapter_code=request.chapter,
+            subtopic_code=request.subtopic,
+        )
+
         for set_no in range(
             int(request.start_set[1:]),
             int(request.end_set[1:]) + 1,
         ):
 
-            for batch_no in range(
-                request.start_batch,
-                request.end_batch + 1,
-            ):
+            for qp in question_possibilities:
 
                 work_item = ManufacturingWorkItemModel(
                     request_id=request.request_id,
@@ -60,10 +65,13 @@ class SubtopicStrategy(BaseManufacturingStrategy):
                     chapter=request.chapter,
                     subtopic=request.subtopic,
                     set_no=f"S{set_no}",
-                    batch_no=batch_no,
+                    batch_no=1,
                     questions_per_batch=request.questions_per_batch,
-                    question_start=0,
-                    question_end=0,
+                    question_start=1,
+                    question_end=request.questions_per_batch,
+
+                    qp_id=qp["qp_id"],
+                    question_possibility=qp["question_possibility"],
                 )
 
                 queue.enqueue(work_item)

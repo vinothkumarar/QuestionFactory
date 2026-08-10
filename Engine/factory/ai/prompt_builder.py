@@ -243,37 +243,21 @@ class PromptBuilder:
             "generation",
             {}
         )
-
-        question_possibilities = generation.get(
-            "question_possibilities",
-            []
+        selected_qp_id = generation.get(
+            "qp_id",
+            ""
         )
 
-        qpc_text = ""
+        selected_question_possibility = generation.get(
+            "question_possibility",
+            ""
+        )
 
-        if question_possibilities:
-
-            lines = []
-
-            for item in question_possibilities:
-
-                qp_id = item.get(
-                    "qp_id",
-                    "",
-                )
-
-                possibility = item.get(
-                    "question_possibility",
-                    "",
-                )
-
-                lines.append(
-                    f"{qp_id}: {possibility}"
-                )
-
-            qpc_text = "\n".join(lines)
-
-        
+        qpc_text = (
+            f"{selected_qp_id}: "
+            f"{selected_question_possibility}"
+        )
+                
         json_schema = textwrap.dedent("""
         {
             "batch_id": "string",
@@ -321,8 +305,13 @@ class PromptBuilder:
 
             Subtopic:
             {variables.get("subtopic", "")}
-            Question Possibilities:
-            {qpc_text}
+            Target Question Possibility
+
+            QP ID:
+            {selected_qp_id}
+
+            Question Possibility:
+            {selected_question_possibility}
 
             Use these identifiers exactly in the generated JSON.
 
@@ -342,14 +331,47 @@ class PromptBuilder:
 
             IMPORTANT
 
-            Generate exactly one question from each Question Possibility listed above.
+            Generate exactly {variables.get("question_count", 1)} questions.
 
-            Do not invent additional possibilities.
+            The JSON questions array MUST contain exactly
+            {variables.get("question_count", 1)} question objects.
 
-            Do not generate two questions from the same Question Possibility.
+            CRITICAL QP MANUFACTURING RULE
 
-            Each generated question must correspond to one listed Question Possibility.
-            Requirements
+            Selected QP ID:
+            {selected_qp_id}
+
+            Selected Question Possibility:
+            {selected_question_possibility}
+
+            All generated questions MUST be derived from
+            ONE AND ONLY ONE Question Possibility.
+
+            Every question in this batch MUST represent
+            a variation of the SAME Question Possibility.
+
+            The batch is a manufacturing batch for a
+            single Question Possibility.
+
+            Allowed variation:
+            - Numerical values
+            - Variable names
+            - Context
+            - Representation
+            - Wording
+
+            Forbidden:
+            - Switching to another concept
+            - Using another Question Possibility
+            - Mixing multiple Question Possibilities
+            - Generating generic subtopic questions
+            - Generating questions outside the selected QP
+
+            Every generated question must be traceable
+            directly to the selected Question Possibility.
+
+            If a question cannot be mapped directly to the
+            selected Question Possibility, do not generate it.
 
             - Follow the supplied blueprint.
             - Produce original questions.

@@ -58,6 +58,10 @@ class CurriculumProductionPlanner:
             batch_no=work_item.batch_no,
             question_start=question_start,
             question_count=work_item.questions_per_batch,
+            qp_id=work_item.qp_id,
+            question_possibility=(
+                work_item.question_possibility
+            ),
             status="PLANNED",
         )
 

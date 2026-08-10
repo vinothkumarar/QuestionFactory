@@ -2,9 +2,9 @@
     "subject": "MATHEMATICS",
     "unit": "U1",
     "chapter": "U1_CH1",
-    "subtopic": "U1_CH1_ST1",
-    "set_no": "S5",
+    "subtopic": "U1_CH1_ST5",
+    "set_no": "S1",
     "current_batch": 1,
-    "questions_per_batch": 5,
+    "questions_per_batch": 20,
     "status": "RUNNING"
 }
