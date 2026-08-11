@@ -1,0 +1,342 @@
+[
+    {
+        "qp_id": "QP001",
+        "question_possibility": "Evaluate numeric expressions involving absolute value"
+    },
+    {
+        "qp_id": "QP002",
+        "question_possibility": "Simplify algebraic expressions using absolute value properties"
+    },
+    {
+        "qp_id": "QP003",
+        "question_possibility": "Establish validity of standard absolute value identities and inequalities"
+    },
+    {
+        "qp_id": "QP004",
+        "question_possibility": "Verify or refute a claimed identity or inequality involving absolute values for all real numbers"
+    },
+    {
+        "qp_id": "QP005",
+        "question_possibility": "Convert an absolute value expression into an equivalent piecewise-defined form"
+    },
+    {
+        "qp_id": "QP006",
+        "question_possibility": "Rewrite a piecewise-defined function or condition using absolute value notation"
+    },
+    {
+        "qp_id": "QP007",
+        "question_possibility": "Identify breakpoints where an absolute value expression changes its linear rule"
+    },
+    {
+        "qp_id": "QP008",
+        "question_possibility": "Solve linear equations involving a single absolute value"
+    },
+    {
+        "qp_id": "QP009",
+        "question_possibility": "Solve equations involving nested absolute values"
+    },
+    {
+        "qp_id": "QP010",
+        "question_possibility": "Solve equations involving sums or differences of multiple absolute values"
+    },
+    {
+        "qp_id": "QP011",
+        "question_possibility": "Solve equations where a polynomial expression appears inside an absolute value"
+    },
+    {
+        "qp_id": "QP012",
+        "question_possibility": "Solve rational equations that include absolute values in numerator or denominator"
+    },
+    {
+        "qp_id": "QP013",
+        "question_possibility": "Solve equations equating two absolute values"
+    },
+    {
+        "qp_id": "QP014",
+        "question_possibility": "Solve equations of the form |f(x)| = g(x) with sign and domain considerations"
+    },
+    {
+        "qp_id": "QP015",
+        "question_possibility": "Determine the number of real solutions of an absolute value equation as a function of a parameter"
+    },
+    {
+        "qp_id": "QP016",
+        "question_possibility": "Find parameter values for which an absolute value equation has no, one, or multiple solutions"
+    },
+    {
+        "qp_id": "QP017",
+        "question_possibility": "Solve linear inequalities involving a single absolute value"
+    },
+    {
+        "qp_id": "QP018",
+        "question_possibility": "Solve inequalities with nested absolute values"
+    },
+    {
+        "qp_id": "QP019",
+        "question_possibility": "Solve inequalities involving sums or differences of multiple absolute values"
+    },
+    {
+        "qp_id": "QP020",
+        "question_possibility": "Solve inequalities of the type |P(x)| ≤ k or |P(x)| ≥ k for polynomial P"
+    },
+    {
+        "qp_id": "QP021",
+        "question_possibility": "Solve rational inequalities containing absolute values"
+    },
+    {
+        "qp_id": "QP022",
+        "question_possibility": "Translate absolute value inequalities into equivalent double inequalities and intervals"
+    },
+    {
+        "qp_id": "QP023",
+        "question_possibility": "Determine the length or measure of the solution set of an absolute value inequality"
+    },
+    {
+        "qp_id": "QP024",
+        "question_possibility": "Count integer solutions to absolute value equations or inequalities"
+    },
+    {
+        "qp_id": "QP025",
+        "question_possibility": "Determine the domain of expressions involving absolute values combined with radicals, denominators, or logarithms"
+    },
+    {
+        "qp_id": "QP026",
+        "question_possibility": "Determine the range of expressions or functions involving absolute values"
+    },
+    {
+        "qp_id": "QP027",
+        "question_possibility": "Find the minimum or maximum value of expressions involving absolute values on specified domains"
+    },
+    {
+        "qp_id": "QP028",
+        "question_possibility": "Optimize the sum of absolute deviations from fixed points on the real line"
+    },
+    {
+        "qp_id": "QP029",
+        "question_possibility": "Optimize weighted sums of absolute deviations from fixed points"
+    },
+    {
+        "qp_id": "QP030",
+        "question_possibility": "Identify points where a function defined using absolute values attains its extrema"
+    },
+    {
+        "qp_id": "QP031",
+        "question_possibility": "Analyze intervals of monotonicity for functions involving absolute values"
+    },
+    {
+        "qp_id": "QP032",
+        "question_possibility": "Determine whether a function involving absolute value is even, odd, or neither"
+    },
+    {
+        "qp_id": "QP033",
+        "question_possibility": "Determine changes in periodicity when applying absolute value to periodic functions"
+    },
+    {
+        "qp_id": "QP034",
+        "question_possibility": "Sketch or graph functions involving absolute values and identify key features"
+    },
+    {
+        "qp_id": "QP035",
+        "question_possibility": "Find intersection points of graphs involving absolute value functions"
+    },
+    {
+        "qp_id": "QP036",
+        "question_possibility": "Analyze transformations under y = |f(x)| and y = f(|x|)"
+    },
+    {
+        "qp_id": "QP037",
+        "question_possibility": "Express solution sets of absolute value inequalities as unions or intersections of intervals"
+    },
+    {
+        "qp_id": "QP038",
+        "question_possibility": "Apply the triangle inequality to bound algebraic expressions"
+    },
+    {
+        "qp_id": "QP039",
+        "question_possibility": "Apply the reverse triangle inequality to bound differences of real numbers"
+    },
+    {
+        "qp_id": "QP040",
+        "question_possibility": "Determine equality conditions for the triangle and reverse triangle inequalities"
+    },
+    {
+        "qp_id": "QP041",
+        "question_possibility": "Deduce relations among |a|, |b|, and |a ± b| from given information about a and b"
+    },
+    {
+        "qp_id": "QP042",
+        "question_possibility": "Model and interpret distance constraints on the real line using absolute value"
+    },
+    {
+        "qp_id": "QP043",
+        "question_possibility": "Solve nearest or farthest point problems on the real line using absolute distance"
+    },
+    {
+        "qp_id": "QP044",
+        "question_possibility": "Solve simultaneous distance constraints from multiple fixed points on the real line"
+    },
+    {
+        "qp_id": "QP045",
+        "question_possibility": "Represent tolerance or error bounds with absolute value and deduce the corresponding intervals"
+    },
+    {
+        "qp_id": "QP046",
+        "question_possibility": "Express absolute value conditions using max or min functions and analyze"
+    },
+    {
+        "qp_id": "QP047",
+        "question_possibility": "Use signum function representation of absolute value to analyze cases"
+    },
+    {
+        "qp_id": "QP048",
+        "question_possibility": "Use valid squaring techniques to remove absolute value signs and solve"
+    },
+    {
+        "qp_id": "QP049",
+        "question_possibility": "Determine the preimage of a set under the absolute value mapping"
+    },
+    {
+        "qp_id": "QP050",
+        "question_possibility": "Determine the image of a set under the absolute value mapping"
+    },
+    {
+        "qp_id": "QP051",
+        "question_possibility": "Assess comparative statements between an expression and its absolute value"
+    },
+    {
+        "qp_id": "QP052",
+        "question_possibility": "Solve equations where the variable appears both inside and outside absolute value"
+    },
+    {
+        "qp_id": "QP053",
+        "question_possibility": "Solve parameterized inequalities of the form |x − a| ≤ b|x − c|"
+    },
+    {
+        "qp_id": "QP054",
+        "question_possibility": "Find parameter ranges ensuring |f(x, a)| ≤ k holds for all x in a stated domain"
+    },
+    {
+        "qp_id": "QP055",
+        "question_possibility": "Determine injectivity or surjectivity of functions involving absolute values on specified domains"
+    },
+    {
+        "qp_id": "QP056",
+        "question_possibility": "Find the inverse of a function involving absolute value on suitable restricted domains"
+    },
+    {
+        "qp_id": "QP057",
+        "question_possibility": "Identify all kink points where a function built from absolute values changes linear behavior"
+    },
+    {
+        "qp_id": "QP058",
+        "question_possibility": "Solve inequalities of the form |f(x)| ≤ g(x) or |f(x)| ≥ g(x) with g(x) ≥ 0"
+    },
+    {
+        "qp_id": "QP059",
+        "question_possibility": "Bound expressions using multiplicative and quotient properties of absolute value"
+    },
+    {
+        "qp_id": "QP060",
+        "question_possibility": "Translate absolute value inequalities into equivalent squared inequalities when permissible"
+    },
+    {
+        "qp_id": "QP061",
+        "question_possibility": "Solve chained absolute value inequalities such as a ≤ |x − b| ≤ c"
+    },
+    {
+        "qp_id": "QP062",
+        "question_possibility": "Solve equations or inequalities involving absolute value within logarithmic, exponential, or trigonometric functions"
+    },
+    {
+        "qp_id": "QP063",
+        "question_possibility": "Determine the domain of composite functions with absolute value inside or outside other functions"
+    },
+    {
+        "qp_id": "QP064",
+        "question_possibility": "Determine the range of composite functions with absolute value (e.g., |sin x|, ln|x|)"
+    },
+    {
+        "qp_id": "QP065",
+        "question_possibility": "Compare f(|x|) and |f(x)| and determine conditions under which they are equal"
+    },
+    {
+        "qp_id": "QP066",
+        "question_possibility": "Analyze piecewise linearity of |P(x)| and determine its breakpoints"
+    },
+    {
+        "qp_id": "QP067",
+        "question_possibility": "Determine the number of linear segments in the graph of a sum of absolute values of linear functions"
+    },
+    {
+        "qp_id": "QP068",
+        "question_possibility": "Solve systems of equations or inequalities that include absolute value constraints"
+    },
+    {
+        "qp_id": "QP069",
+        "question_possibility": "Determine feasibility and measure of solution sets defined by multiple absolute value inequalities on the real line"
+    },
+    {
+        "qp_id": "QP070",
+        "question_possibility": "Determine the locus in the plane defined by equations involving absolute values in two variables"
+    },
+    {
+        "qp_id": "QP071",
+        "question_possibility": "Describe planar regions defined by inequalities with absolute values in two variables"
+    },
+    {
+        "qp_id": "QP072",
+        "question_possibility": "Compute the area or perimeter of planar regions defined by absolute value equations or inequalities"
+    },
+    {
+        "qp_id": "QP073",
+        "question_possibility": "Count integer lattice points within regions defined by absolute value constraints in the plane"
+    },
+    {
+        "qp_id": "QP074",
+        "question_possibility": "Interpret and solve problems using Manhattan distance expressed via absolute values"
+    },
+    {
+        "qp_id": "QP075",
+        "question_possibility": "Determine conditions for intersection, disjointness, or containment of planar regions defined by absolute value relations"
+    },
+    {
+        "qp_id": "QP076",
+        "question_possibility": "Use translations and reflections to simplify loci defined by absolute value equations in two variables"
+    },
+    {
+        "qp_id": "QP077",
+        "question_possibility": "Decide equality or inclusion between two sets defined via absolute value conditions"
+    },
+    {
+        "qp_id": "QP078",
+        "question_possibility": "Combine absolute value with the greatest integer, ceiling, or fractional part functions to determine solution sets"
+    },
+    {
+        "qp_id": "QP079",
+        "question_possibility": "Determine when an absolute value equation reduces to a tautology or contradiction"
+    },
+    {
+        "qp_id": "QP080",
+        "question_possibility": "Find the minimum of |ax + b| + |cx + d| and the set of minimizers"
+    },
+    {
+        "qp_id": "QP081",
+        "question_possibility": "Find the maximum or minimum of expressions with absolute values over a bounded interval"
+    },
+    {
+        "qp_id": "QP082",
+        "question_possibility": "Compare magnitudes of two expressions involving absolute value across specified domains"
+    },
+    {
+        "qp_id": "QP083",
+        "question_possibility": "Determine parameter values ensuring uniqueness of solution in absolute value equations involving piecewise linearity"
+    },
+    {
+        "qp_id": "QP084",
+        "question_possibility": "Express solution sets of absolute value constraints in set-builder or interval notation and compute endpoints"
+    },
+    {
+        "qp_id": "QP085",
+        "question_possibility": "Count solutions to absolute value constraints subject to additional domain restrictions (e.g., integrality or bounds)"
+    }
+]
