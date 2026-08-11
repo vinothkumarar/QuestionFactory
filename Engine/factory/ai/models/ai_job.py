@@ -114,6 +114,8 @@ class AIJob:
 
     difficulty: str = ""
 
+    set_number: int = 1
+
     batch: str = ""
 
     question_count: int = 1
@@ -396,6 +398,7 @@ class AIJob:
             chapter=self.chapter,
             subtopic=self.subtopic,
             difficulty=self.difficulty,
+            set_number=self.set_number,
             batch=self.batch,
             question_count=self.question_count,
             blueprint=self.blueprint,
@@ -547,6 +550,10 @@ class AIJob:
             difficulty=data.get(
                 "difficulty",
                 "",
+            ),
+            set_number=data.get(
+                "set_number",
+                1,
             ),
             batch=data.get(
                 "batch",
@@ -752,6 +759,7 @@ def create_ai_job(
     subtopic_id: str = "",
     difficulty: str = "",
     batch: str = "",
+    set_number: int = 1,
     question_count: int = 1,
     blueprint: str = "",
     metadata: Optional[Dict[str, Any]] = None,
@@ -788,6 +796,7 @@ def create_ai_job(
         chapter=chapter,
         subtopic=subtopic,
         difficulty=difficulty,
+        set_number=set_number,
         batch=batch,
         question_count=question_count,
         blueprint=blueprint,

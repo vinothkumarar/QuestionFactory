@@ -1,0 +1,350 @@
+[
+    {
+        "concept_id": "C001",
+        "concept": "Classification of Numbers"
+    },
+    {
+        "concept_id": "C002",
+        "concept": "Natural Numbers"
+    },
+    {
+        "concept_id": "C003",
+        "concept": "Whole Numbers"
+    },
+    {
+        "concept_id": "C004",
+        "concept": "Integers"
+    },
+    {
+        "concept_id": "C005",
+        "concept": "Parity of Integers"
+    },
+    {
+        "concept_id": "C006",
+        "concept": "Rational Numbers"
+    },
+    {
+        "concept_id": "C007",
+        "concept": "Irrational Numbers"
+    },
+    {
+        "concept_id": "C008",
+        "concept": "Real Numbers"
+    },
+    {
+        "concept_id": "C009",
+        "concept": "Complex Numbers"
+    },
+    {
+        "concept_id": "C010",
+        "concept": "Algebraic Numbers"
+    },
+    {
+        "concept_id": "C011",
+        "concept": "Transcendental Numbers"
+    },
+    {
+        "concept_id": "C012",
+        "concept": "Number Line"
+    },
+    {
+        "concept_id": "C013",
+        "concept": "Order Relations on Real Numbers"
+    },
+    {
+        "concept_id": "C014",
+        "concept": "Intervals on the Real Line"
+    },
+    {
+        "concept_id": "C015",
+        "concept": "Open Intervals"
+    },
+    {
+        "concept_id": "C016",
+        "concept": "Closed Intervals"
+    },
+    {
+        "concept_id": "C017",
+        "concept": "Half-Open Intervals"
+    },
+    {
+        "concept_id": "C018",
+        "concept": "Absolute Value"
+    },
+    {
+        "concept_id": "C019",
+        "concept": "Signum Function"
+    },
+    {
+        "concept_id": "C020",
+        "concept": "Floor Function"
+    },
+    {
+        "concept_id": "C021",
+        "concept": "Ceiling Function"
+    },
+    {
+        "concept_id": "C022",
+        "concept": "Fractional Part Function"
+    },
+    {
+        "concept_id": "C023",
+        "concept": "Decimal Representation of Numbers"
+    },
+    {
+        "concept_id": "C024",
+        "concept": "Terminating Decimals"
+    },
+    {
+        "concept_id": "C025",
+        "concept": "Repeating Decimals"
+    },
+    {
+        "concept_id": "C026",
+        "concept": "Conversion between Fractions and Decimals"
+    },
+    {
+        "concept_id": "C027",
+        "concept": "Scientific Notation"
+    },
+    {
+        "concept_id": "C028",
+        "concept": "Significant Figures"
+    },
+    {
+        "concept_id": "C029",
+        "concept": "Rounding and Approximation"
+    },
+    {
+        "concept_id": "C030",
+        "concept": "Exponents and Powers"
+    },
+    {
+        "concept_id": "C031",
+        "concept": "Laws of Exponents"
+    },
+    {
+        "concept_id": "C032",
+        "concept": "Rational Exponents"
+    },
+    {
+        "concept_id": "C033",
+        "concept": "Radicals and Surds"
+    },
+    {
+        "concept_id": "C034",
+        "concept": "Positional Numeral Systems"
+    },
+    {
+        "concept_id": "C035",
+        "concept": "Base-n Representation"
+    },
+    {
+        "concept_id": "C036",
+        "concept": "Conversion between Number Bases"
+    },
+    {
+        "concept_id": "C037",
+        "concept": "Binary Numbers"
+    },
+    {
+        "concept_id": "C038",
+        "concept": "Octal Numbers"
+    },
+    {
+        "concept_id": "C039",
+        "concept": "Hexadecimal Numbers"
+    },
+    {
+        "concept_id": "C040",
+        "concept": "Sum of Digits Function"
+    },
+    {
+        "concept_id": "C041",
+        "concept": "Divisibility in Integers"
+    },
+    {
+        "concept_id": "C042",
+        "concept": "Euclidean Division Algorithm"
+    },
+    {
+        "concept_id": "C043",
+        "concept": "Quotient and Remainder in Integer Division"
+    },
+    {
+        "concept_id": "C044",
+        "concept": "Greatest Common Divisor"
+    },
+    {
+        "concept_id": "C045",
+        "concept": "Least Common Multiple"
+    },
+    {
+        "concept_id": "C046",
+        "concept": "Coprime Integers"
+    },
+    {
+        "concept_id": "C047",
+        "concept": "Bezout's Identity"
+    },
+    {
+        "concept_id": "C048",
+        "concept": "Prime Numbers"
+    },
+    {
+        "concept_id": "C049",
+        "concept": "Composite Numbers"
+    },
+    {
+        "concept_id": "C050",
+        "concept": "Fundamental Theorem of Arithmetic"
+    },
+    {
+        "concept_id": "C051",
+        "concept": "Euclid's Lemma"
+    },
+    {
+        "concept_id": "C052",
+        "concept": "Prime Factorization"
+    },
+    {
+        "concept_id": "C053",
+        "concept": "p-adic Valuation of Integers"
+    },
+    {
+        "concept_id": "C054",
+        "concept": "Factorials"
+    },
+    {
+        "concept_id": "C055",
+        "concept": "Binomial Coefficients (Number-Theoretic Properties)"
+    },
+    {
+        "concept_id": "C056",
+        "concept": "Modular Arithmetic"
+    },
+    {
+        "concept_id": "C057",
+        "concept": "Congruence Relations"
+    },
+    {
+        "concept_id": "C058",
+        "concept": "Residue Classes modulo n"
+    },
+    {
+        "concept_id": "C059",
+        "concept": "Complete Residue Systems"
+    },
+    {
+        "concept_id": "C060",
+        "concept": "Reduced Residue Systems"
+    },
+    {
+        "concept_id": "C061",
+        "concept": "Modular Inverses"
+    },
+    {
+        "concept_id": "C062",
+        "concept": "Linear Congruences"
+    },
+    {
+        "concept_id": "C063",
+        "concept": "Chinese Remainder Theorem"
+    },
+    {
+        "concept_id": "C064",
+        "concept": "Euler's Totient Function"
+    },
+    {
+        "concept_id": "C065",
+        "concept": "Fermat's Little Theorem"
+    },
+    {
+        "concept_id": "C066",
+        "concept": "Euler's Theorem"
+    },
+    {
+        "concept_id": "C067",
+        "concept": "Wilson's Theorem"
+    },
+    {
+        "concept_id": "C068",
+        "concept": "Order of an Element modulo n"
+    },
+    {
+        "concept_id": "C069",
+        "concept": "Primitive Roots modulo n"
+    },
+    {
+        "concept_id": "C070",
+        "concept": "Divisor Function d(n)"
+    },
+    {
+        "concept_id": "C071",
+        "concept": "Sum of Divisors Function sigma(n)"
+    },
+    {
+        "concept_id": "C072",
+        "concept": "Perfect Numbers"
+    },
+    {
+        "concept_id": "C073",
+        "concept": "Abundant Numbers"
+    },
+    {
+        "concept_id": "C074",
+        "concept": "Deficient Numbers"
+    },
+    {
+        "concept_id": "C075",
+        "concept": "Squarefree Numbers"
+    },
+    {
+        "concept_id": "C076",
+        "concept": "Linear Diophantine Equations"
+    },
+    {
+        "concept_id": "C077",
+        "concept": "Pythagorean Triples"
+    },
+    {
+        "concept_id": "C078",
+        "concept": "Density of Rational Numbers"
+    },
+    {
+        "concept_id": "C079",
+        "concept": "Density of Irrational Numbers"
+    },
+    {
+        "concept_id": "C080",
+        "concept": "Closure Properties of Number Sets"
+    },
+    {
+        "concept_id": "C081",
+        "concept": "Identity and Inverse Elements in Number Systems"
+    },
+    {
+        "concept_id": "C082",
+        "concept": "Commutativity, Associativity and Distributivity"
+    },
+    {
+        "concept_id": "C083",
+        "concept": "Extended Real Number System"
+    },
+    {
+        "concept_id": "C084",
+        "concept": "Bounds in the Real Numbers"
+    },
+    {
+        "concept_id": "C085",
+        "concept": "Supremum and Infimum"
+    },
+    {
+        "concept_id": "C086",
+        "concept": "Archimedean Property of Real Numbers"
+    },
+    {
+        "concept_id": "C087",
+        "concept": "Continued Fractions"
+    }
+]

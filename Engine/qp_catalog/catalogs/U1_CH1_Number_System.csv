@@ -1,0 +1,176 @@
+subject,unit,chapter,subtopic,qp_id,concept,question_possibility,archetype_id,archetype
+Mathematics,U1,CH1,Number System,QP001,Sets of Numbers and Subset Relations,"Classify a given number into N, W, Z, Q, R\Q, R with justification",A001,Direct Classification from Definition
+Mathematics,U1,CH1,Number System,QP001,Sets of Numbers and Subset Relations,"Classify a given number into N, W, Z, Q, R\Q, R with justification",A002,"Edge-Case Membership (0, negatives, undefined forms)"
+Mathematics,U1,CH1,Number System,QP001,Sets of Numbers and Subset Relations,"Classify a given number into N, W, Z, Q, R\Q, R with justification",A003,Construction to Meet Specified Memberships
+Mathematics,U1,CH1,Number System,QP001,Sets of Numbers and Subset Relations,"Classify a given number into N, W, Z, Q, R\Q, R with justification",A004,Reverse Reasoning from Decimal/Surd Form
+Mathematics,U1,CH1,Number System,QP001,Sets of Numbers and Subset Relations,"Classify a given number into N, W, Z, Q, R\Q, R with justification",A005,Counterexample to False Membership Claim
+Mathematics,U1,CH1,Number System,QP002,Ordering of Real Numbers,Compare and order real numbers under various forms,A006,Fraction Comparison via Cross-Multiplication/Bounds
+Mathematics,U1,CH1,Number System,QP002,Ordering of Real Numbers,Compare and order real numbers under various forms,A007,Surd Comparison via Squaring and Rational Bounds
+Mathematics,U1,CH1,Number System,QP002,Ordering of Real Numbers,Compare and order real numbers under various forms,A008,Decimal Truncation/Expansion-Based Comparison
+Mathematics,U1,CH1,Number System,QP002,Ordering of Real Numbers,Compare and order real numbers under various forms,A009,"Monotonic Function Mapping (log, exp, square)"
+Mathematics,U1,CH1,Number System,QP002,Ordering of Real Numbers,Compare and order real numbers under various forms,A010,Squeeze/Bisection with Upper-Lower Bounds
+Mathematics,U1,CH1,Number System,QP003,Intervals on Real Line,"Operate on intervals: union, intersection, complement, and counting integers",A011,Direct Union/Intersection of Simple Intervals
+Mathematics,U1,CH1,Number System,QP003,Intervals on Real Line,"Operate on intervals: union, intersection, complement, and counting integers",A012,Complement and Set Difference on R with Notation Conversion
+Mathematics,U1,CH1,Number System,QP003,Intervals on Real Line,"Operate on intervals: union, intersection, complement, and counting integers",A013,Image of Interval Under Linear/Affine Map
+Mathematics,U1,CH1,Number System,QP003,Intervals on Real Line,"Operate on intervals: union, intersection, complement, and counting integers",A014,Counting Integers/Rationals in Given Interval(s)
+Mathematics,U1,CH1,Number System,QP003,Intervals on Real Line,"Operate on intervals: union, intersection, complement, and counting integers",A015,Compound Interval Simplification from Inequalities
+Mathematics,U1,CH1,Number System,QP004,Decimal Expansion and Rationality,Decide if decimal expansion terminates or repeats for a rational number,A016,Prime Factor Test in Denominator (2s and 5s in base 10)
+Mathematics,U1,CH1,Number System,QP004,Decimal Expansion and Rationality,Decide if decimal expansion terminates or repeats for a rational number,A017,After Reduction/Simplification of Fraction
+Mathematics,U1,CH1,Number System,QP004,Decimal Expansion and Rationality,Decide if decimal expansion terminates or repeats for a rational number,A018,Under Base-b Numeral System Generalization
+Mathematics,U1,CH1,Number System,QP004,Decimal Expansion and Rationality,Decide if decimal expansion terminates or repeats for a rational number,A019,Combined Operations (sum/product) Affecting Termination
+Mathematics,U1,CH1,Number System,QP004,Decimal Expansion and Rationality,Decide if decimal expansion terminates or repeats for a rational number,A020,Parameter Constraints Yielding Termination vs Repetition
+Mathematics,U1,CH1,Number System,QP005,Repetend Length,Determine the length of repeating block in decimal/base-b expansion,A021,Order of 10 modulo Denominator (Prime Case)
+Mathematics,U1,CH1,Number System,QP005,Repetend Length,Determine the length of repeating block in decimal/base-b expansion,A022,Composite Denominator via CRT/LCM of Orders
+Mathematics,U1,CH1,Number System,QP005,Repetend Length,Determine the length of repeating block in decimal/base-b expansion,A023,Max/Min Repetend in a Range of Denominators
+Mathematics,U1,CH1,Number System,QP005,Repetend Length,Determine the length of repeating block in decimal/base-b expansion,A024,Base-b General Order Computation
+Mathematics,U1,CH1,Number System,QP005,Repetend Length,Determine the length of repeating block in decimal/base-b expansion,A025,Repetend from Modular Exponent Constraints
+Mathematics,U1,CH1,Number System,QP006,Converting Repeating Decimals,Convert repeating/mixed repeating decimal (base 10 or b) to a fraction,A026,Pure Repeating Block Conversion (Algebraic)
+Mathematics,U1,CH1,Number System,QP006,Converting Repeating Decimals,Convert repeating/mixed repeating decimal (base 10 or b) to a fraction,A027,Mixed (Non-repeating + Repeating) Part Conversion
+Mathematics,U1,CH1,Number System,QP006,Converting Repeating Decimals,Convert repeating/mixed repeating decimal (base 10 or b) to a fraction,A028,Base-b Repeating Expansion to Fraction
+Mathematics,U1,CH1,Number System,QP006,Converting Repeating Decimals,Convert repeating/mixed repeating decimal (base 10 or b) to a fraction,A029,Reverse Verification from Fraction to Repeating Pattern
+Mathematics,U1,CH1,Number System,QP006,Converting Repeating Decimals,Convert repeating/mixed repeating decimal (base 10 or b) to a fraction,A030,Parametric Family of Repeating Patterns to Fractions
+Mathematics,U1,CH1,Number System,QP007,Rationality and Irrationality,Decide and justify rational/irrational nature of constructed expressions,A031,Sums/Differences of Rationals and Irrationals
+Mathematics,U1,CH1,Number System,QP007,Rationality and Irrationality,Decide and justify rational/irrational nature of constructed expressions,A032,Products/Quotients and Cancellation Scenarios
+Mathematics,U1,CH1,Number System,QP007,Rationality and Irrationality,Decide and justify rational/irrational nature of constructed expressions,A033,Nested Radicals and Conjugate Techniques
+Mathematics,U1,CH1,Number System,QP007,Rationality and Irrationality,Decide and justify rational/irrational nature of constructed expressions,A034,"Exponential Forms a^b with Rational/Irrational a,b"
+Mathematics,U1,CH1,Number System,QP007,Rationality and Irrationality,Decide and justify rational/irrational nature of constructed expressions,A035,Constructive Existence of Required Type Number
+Mathematics,U1,CH1,Number System,QP008,Surds and Rationalization,Simplify expressions with surds and rationalize denominators,A036,Single Surd Denominator Rationalization
+Mathematics,U1,CH1,Number System,QP008,Surds and Rationalization,Simplify expressions with surds and rationalize denominators,A037,Conjugate Pair Rationalization (a+b√c)
+Mathematics,U1,CH1,Number System,QP008,Surds and Rationalization,Simplify expressions with surds and rationalize denominators,A038,Nested Surd Identity Recognition (√(a±2√b))
+Mathematics,U1,CH1,Number System,QP008,Surds and Rationalization,Simplify expressions with surds and rationalize denominators,A039,Parameter Conditions for Rational Value
+Mathematics,U1,CH1,Number System,QP008,Surds and Rationalization,Simplify expressions with surds and rationalize denominators,A040,Equation with Surds Leading to Integer/Prime Constraint
+Mathematics,U1,CH1,Number System,QP009,Divisibility Rules,Test divisibility using digit properties and construct numbers under divisibility constraints,A041,"Digit Sum/Alternating Sum Tests (9,3,11)"
+Mathematics,U1,CH1,Number System,QP009,Divisibility Rules,Test divisibility using digit properties and construct numbers under divisibility constraints,A042,"Ending Digits/Last Two Digits Rules (2,4,5,8,25)"
+Mathematics,U1,CH1,Number System,QP009,Divisibility Rules,Test divisibility using digit properties and construct numbers under divisibility constraints,A043,Unknown Digit Determination Under Divisibility
+Mathematics,U1,CH1,Number System,QP009,Divisibility Rules,Test divisibility using digit properties and construct numbers under divisibility constraints,A044,Smallest/Largest Number Satisfying Multiple Divisibilities
+Mathematics,U1,CH1,Number System,QP009,Divisibility Rules,Test divisibility using digit properties and construct numbers under divisibility constraints,A045,Base-b Divisibility Analogue and Constraints on b
+Mathematics,U1,CH1,Number System,QP010,Remainders and Modular Arithmetic,Compute remainders/last digits of expressions under modulus,A046,Direct Modular Reduction and Properties
+Mathematics,U1,CH1,Number System,QP010,Remainders and Modular Arithmetic,Compute remainders/last digits of expressions under modulus,A047,Cyclicity of Powers for Last Digit/Last Two Digits
+Mathematics,U1,CH1,Number System,QP010,Remainders and Modular Arithmetic,Compute remainders/last digits of expressions under modulus,A048,Binomial/Multinomial Expansion Modulo Simplification
+Mathematics,U1,CH1,Number System,QP010,Remainders and Modular Arithmetic,Compute remainders/last digits of expressions under modulus,A049,Use of Euler/Fermat for Large Exponents
+Mathematics,U1,CH1,Number System,QP010,Remainders and Modular Arithmetic,Compute remainders/last digits of expressions under modulus,A050,"Parameterized Remainder with Constraints on n,m"
+Mathematics,U1,CH1,Number System,QP011,Remainders of Factorials and Powers,Find remainders/ending digits/trailing patterns of factorials and power-towers under moduli,A051,n! Modulo m Using Zero Factors/Cancellations
+Mathematics,U1,CH1,Number System,QP011,Remainders of Factorials and Powers,Find remainders/ending digits/trailing patterns of factorials and power-towers under moduli,A052,Trailing Digits of n! Using Mod 2^k and 5^k Analysis
+Mathematics,U1,CH1,Number System,QP011,Remainders of Factorials and Powers,Find remainders/ending digits/trailing patterns of factorials and power-towers under moduli,A053,Large Power Modulo Using Order/Carmichael/Euler
+Mathematics,U1,CH1,Number System,QP011,Remainders of Factorials and Powers,Find remainders/ending digits/trailing patterns of factorials and power-towers under moduli,A054,Sum of Powers/Series Modulo m Simplification
+Mathematics,U1,CH1,Number System,QP011,Remainders of Factorials and Powers,Find remainders/ending digits/trailing patterns of factorials and power-towers under moduli,A055,"Mixed Expressions Involving n!, Powers and Products Modulo m"
+Mathematics,U1,CH1,Number System,QP012,GCD and LCM Computation,Compute gcd/lcm of integers and expressions,A056,Euclidean Algorithm Stepwise Computation
+Mathematics,U1,CH1,Number System,QP012,GCD and LCM Computation,Compute gcd/lcm of integers and expressions,A057,Prime Factorization Method for gcd/lcm
+Mathematics,U1,CH1,Number System,QP012,GCD and LCM Computation,Compute gcd/lcm of integers and expressions,A058,gcd/LCM of Forms a^n−b^n and a^n+b^n with Identities
+Mathematics,U1,CH1,Number System,QP012,GCD and LCM Computation,Compute gcd/lcm of integers and expressions,A059,Parametric gcd/lcm with Constraints on Parameters
+Mathematics,U1,CH1,Number System,QP012,GCD and LCM Computation,Compute gcd/lcm of integers and expressions,A060,gcd/LCM of Multiple Numbers and Pairwise Relations
+Mathematics,U1,CH1,Number System,QP013,Relations Between GCD and LCM,"Use relations between gcd, lcm, and product to deduce unknowns",A061,Given Product and gcd Find lcm or Vice Versa
+Mathematics,U1,CH1,Number System,QP013,Relations Between GCD and LCM,"Use relations between gcd, lcm, and product to deduce unknowns",A062,"Given gcd and lcm Find Possible Pairs (a,b)"
+Mathematics,U1,CH1,Number System,QP013,Relations Between GCD and LCM,"Use relations between gcd, lcm, and product to deduce unknowns",A063,Inequalities Involving gcd and lcm Bounds
+Mathematics,U1,CH1,Number System,QP013,Relations Between GCD and LCM,"Use relations between gcd, lcm, and product to deduce unknowns",A064,Counting Pairs with Fixed gcd or lcm
+Mathematics,U1,CH1,Number System,QP013,Relations Between GCD and LCM,"Use relations between gcd, lcm, and product to deduce unknowns",A065,Composite Scenarios with Multiple Numbers and Constraints
+Mathematics,U1,CH1,Number System,QP014,Bézout Identity and Linear Combination,Express gcd as ax+by and derive integer solutions,A066,"Extended Euclid to Find Coefficients x,y for gcd(a,b)"
+Mathematics,U1,CH1,Number System,QP014,Bézout Identity and Linear Combination,Express gcd as ax+by and derive integer solutions,A067,Solve ax+by=c and Parameterize All Solutions
+Mathematics,U1,CH1,Number System,QP014,Bézout Identity and Linear Combination,Express gcd as ax+by and derive integer solutions,A068,"Minimize |x|,|y| or x+y Under Constraints"
+Mathematics,U1,CH1,Number System,QP014,Bézout Identity and Linear Combination,Express gcd as ax+by and derive integer solutions,A069,Constrained Solutions (Nonnegative/Range-Restricted)
+Mathematics,U1,CH1,Number System,QP014,Bézout Identity and Linear Combination,Express gcd as ax+by and derive integer solutions,A070,Parametric Coefficients and Existence Conditions
+Mathematics,U1,CH1,Number System,QP015,Primes and Composites,Analyze primality/compositeness and special prime forms,A071,Small Factor Search and Bounds for Compositeness
+Mathematics,U1,CH1,Number System,QP015,Primes and Composites,Analyze primality/compositeness and special prime forms,A072,Application of Wilson’s Theorem for Prime Check (Small n)
+Mathematics,U1,CH1,Number System,QP015,Primes and Composites,Analyze primality/compositeness and special prime forms,A073,Numbers of Special Forms (Mersenne/Fermat-Like) Properties
+Mathematics,U1,CH1,Number System,QP015,Primes and Composites,Analyze primality/compositeness and special prime forms,A074,Constructive Proof of Infinitely Many/Existence in Class (Finite Scope)
+Mathematics,U1,CH1,Number System,QP015,Primes and Composites,Analyze primality/compositeness and special prime forms,A075,Prime Gap/Neighbor Constraints (n±k) Analysis
+Mathematics,U1,CH1,Number System,QP016,Prime Factorization and Perfect Powers,Use prime factorization to analyze exponents and perfect power conditions,A076,Compute Prime Factorization and Exponent Vectors
+Mathematics,U1,CH1,Number System,QP016,Prime Factorization and Perfect Powers,Use prime factorization to analyze exponents and perfect power conditions,A077,Highest Power of Integer Dividing Expression (v_p on Products/Sums)
+Mathematics,U1,CH1,Number System,QP016,Prime Factorization and Perfect Powers,Use prime factorization to analyze exponents and perfect power conditions,A078,Conditions for Perfect Square/Cube/k-th Power via Exponents
+Mathematics,U1,CH1,Number System,QP016,Prime Factorization and Perfect Powers,Use prime factorization to analyze exponents and perfect power conditions,A079,Equality of Expressions by Matching Prime Exponents
+Mathematics,U1,CH1,Number System,QP016,Prime Factorization and Perfect Powers,Use prime factorization to analyze exponents and perfect power conditions,A080,Parametric Constraints Ensuring Perfect Power Structure
+Mathematics,U1,CH1,Number System,QP017,Divisor Functions,Compute and analyze number/sum/product of divisors and restricted divisors,A081,"d(n), σ(n) Direct Formula from Factorization"
+Mathematics,U1,CH1,Number System,QP017,Divisor Functions,Compute and analyze number/sum/product of divisors and restricted divisors,A082,Count Odd/Even/Proper/Square Divisors Specifically
+Mathematics,U1,CH1,Number System,QP017,Divisor Functions,Compute and analyze number/sum/product of divisors and restricted divisors,A083,Product of Divisors and Symmetry Argument
+Mathematics,U1,CH1,Number System,QP017,Divisor Functions,Compute and analyze number/sum/product of divisors and restricted divisors,A084,Find n Given d(n) or σ(n) with Constraints
+Mathematics,U1,CH1,Number System,QP017,Divisor Functions,Compute and analyze number/sum/product of divisors and restricted divisors,A085,Divisors of Factorials/Exponentially Defined Numbers
+Mathematics,U1,CH1,Number System,QP018,Legendre’s Formula and Trailing Zeros,Find exponent of a prime in n! or trailing zeros in base 10 or base b,A086,Legendre’s Formula for v_p(n!) Computation
+Mathematics,U1,CH1,Number System,QP018,Legendre’s Formula and Trailing Zeros,Find exponent of a prime in n! or trailing zeros in base 10 or base b,A087,"Trailing Zeros in Base 10 via min(v2,v5)"
+Mathematics,U1,CH1,Number System,QP018,Legendre’s Formula and Trailing Zeros,Find exponent of a prime in n! or trailing zeros in base 10 or base b,A088,General Base-b Trailing Zeros via Prime Decomposition of b
+Mathematics,U1,CH1,Number System,QP018,Legendre’s Formula and Trailing Zeros,Find exponent of a prime in n! or trailing zeros in base 10 or base b,A089,Inverse Problem: Minimal n for Given Number of Zeros
+Mathematics,U1,CH1,Number System,QP018,Legendre’s Formula and Trailing Zeros,Find exponent of a prime in n! or trailing zeros in base 10 or base b,A090,"Trailing Zeros in Combinatorial Terms (nPk, nCk, n!^k)"
+Mathematics,U1,CH1,Number System,QP019,Linear Congruences,Solve linear congruences ax ≡ b (mod m) and count solutions,A091,"Single Solution Case with gcd(a,m)=1 Using Inverse"
+Mathematics,U1,CH1,Number System,QP019,Linear Congruences,Solve linear congruences ax ≡ b (mod m) and count solutions,A092,"Multiple/No Solutions When gcd(a,m)∤b or >1 Case"
+Mathematics,U1,CH1,Number System,QP019,Linear Congruences,Solve linear congruences ax ≡ b (mod m) and count solutions,A093,Least Positive Solution and Complete Residue Set
+Mathematics,U1,CH1,Number System,QP019,Linear Congruences,Solve linear congruences ax ≡ b (mod m) and count solutions,A094,Range-Restricted Solution Counting in Interval
+Mathematics,U1,CH1,Number System,QP019,Linear Congruences,Solve linear congruences ax ≡ b (mod m) and count solutions,A095,Parameter-Dependent Congruence and Thresholds
+Mathematics,U1,CH1,Number System,QP020,Chinese Remainder Theorem,Solve system of congruences and find least positive solution or existence conditions,A096,Two Coprime Moduli Direct CRT Construction
+Mathematics,U1,CH1,Number System,QP020,Chinese Remainder Theorem,Solve system of congruences and find least positive solution or existence conditions,A097,Non-Coprime Moduli Consistency Check and Reduction
+Mathematics,U1,CH1,Number System,QP020,Chinese Remainder Theorem,Solve system of congruences and find least positive solution or existence conditions,A098,Three or More Congruences via Iterative CRT
+Mathematics,U1,CH1,Number System,QP020,Chinese Remainder Theorem,Solve system of congruences and find least positive solution or existence conditions,A099,Solution Within a Given Range or Count Solutions
+Mathematics,U1,CH1,Number System,QP020,Chinese Remainder Theorem,Solve system of congruences and find least positive solution or existence conditions,A100,Construct Number with Prescribed Remainder Pattern
+Mathematics,U1,CH1,Number System,QP021,Modular Inverses,Find modular inverse and apply to division in modular arithmetic,A101,Inverse via Extended Euclid (General m)
+Mathematics,U1,CH1,Number System,QP021,Modular Inverses,Find modular inverse and apply to division in modular arithmetic,A102,Inverse via Fermat’s Little Theorem (Prime Modulus)
+Mathematics,U1,CH1,Number System,QP021,Modular Inverses,Find modular inverse and apply to division in modular arithmetic,A103,Existence Check Using gcd Condition and Non-Existence Case
+Mathematics,U1,CH1,Number System,QP021,Modular Inverses,Find modular inverse and apply to division in modular arithmetic,A104,Compute Division in Mod Space via Inverse Application
+Mathematics,U1,CH1,Number System,QP021,Modular Inverses,Find modular inverse and apply to division in modular arithmetic,A105,Base-b Digit Problem Reduced Using Modular Inverse
+Mathematics,U1,CH1,Number System,QP022,Classical Modular Theorems,"Apply Fermat’s, Euler’s, and Wilson’s theorems to simplify modular computations",A106,Fermat’s Little Theorem for a^(p−1)≡1 and Power Cycles
+Mathematics,U1,CH1,Number System,QP022,Classical Modular Theorems,"Apply Fermat’s, Euler’s, and Wilson’s theorems to simplify modular computations",A107,Euler’s Totient Theorem with Composite Moduli
+Mathematics,U1,CH1,Number System,QP022,Classical Modular Theorems,"Apply Fermat’s, Euler’s, and Wilson’s theorems to simplify modular computations",A108,Wilson’s Theorem for (p−1)! Mod p Evaluation
+Mathematics,U1,CH1,Number System,QP022,Classical Modular Theorems,"Apply Fermat’s, Euler’s, and Wilson’s theorems to simplify modular computations",A109,Multiplicative Order and Primitive Root Based Simplification
+Mathematics,U1,CH1,Number System,QP022,Classical Modular Theorems,"Apply Fermat’s, Euler’s, and Wilson’s theorems to simplify modular computations",A110,Composite Expressions Mixed with Theorems (Sums/Products)
+Mathematics,U1,CH1,Number System,QP023,Base Conversion,Convert numbers between bases (integer and fractional parts) and deduce minimal base,A111,Integer Base-10 to Base-b and Reverse Conversion
+Mathematics,U1,CH1,Number System,QP023,Base Conversion,Convert numbers between bases (integer and fractional parts) and deduce minimal base,A112,Fractional Part Conversion Using Repeated Multiplication/Division
+Mathematics,U1,CH1,Number System,QP023,Base Conversion,Convert numbers between bases (integer and fractional parts) and deduce minimal base,A113,Between Non-Decimal Bases via Intermediate Conversion
+Mathematics,U1,CH1,Number System,QP023,Base Conversion,Convert numbers between bases (integer and fractional parts) and deduce minimal base,A114,Minimal Base Determination from Digit Set Constraints
+Mathematics,U1,CH1,Number System,QP023,Base Conversion,Convert numbers between bases (integer and fractional parts) and deduce minimal base,A115,Base-b to Base-b^k Grouping (Binary–Octal–Hex)
+Mathematics,U1,CH1,Number System,QP024,Arithmetic in Base-b,"Perform and analyze addition, subtraction, multiplication, division in base-b with carry constraints",A116,Addition/Subtraction with Carries and Digit Constraints
+Mathematics,U1,CH1,Number System,QP024,Arithmetic in Base-b,"Perform and analyze addition, subtraction, multiplication, division in base-b with carry constraints",A117,Multiplication Algorithm and Unknown Digit/Base Finding
+Mathematics,U1,CH1,Number System,QP024,Arithmetic in Base-b,"Perform and analyze addition, subtraction, multiplication, division in base-b with carry constraints",A118,Division with Remainders and Periodicity in Base-b
+Mathematics,U1,CH1,Number System,QP024,Arithmetic in Base-b,"Perform and analyze addition, subtraction, multiplication, division in base-b with carry constraints",A119,Determine Base from Correctness of Given Operation
+Mathematics,U1,CH1,Number System,QP024,Arithmetic in Base-b,"Perform and analyze addition, subtraction, multiplication, division in base-b with carry constraints",A120,Place Value Puzzle with Multiple Equations in Base-b
+Mathematics,U1,CH1,Number System,QP025,Number of Digits and Magnitude,Determine number of digits in base-b and solve extremal digit-count problems,A121,Digits via Logarithms and Bounds in Base-b
+Mathematics,U1,CH1,Number System,QP025,Number of Digits and Magnitude,Determine number of digits in base-b and solve extremal digit-count problems,A122,Smallest/Largest Number with Given Digits Fulfilling Condition
+Mathematics,U1,CH1,Number System,QP025,Number of Digits and Magnitude,Determine number of digits in base-b and solve extremal digit-count problems,A123,Compare Digit Lengths Across Bases for Same Number
+Mathematics,U1,CH1,Number System,QP025,Number of Digits and Magnitude,Determine number of digits in base-b and solve extremal digit-count problems,A124,Count Integers with Digit-Length Constraints in Range
+Mathematics,U1,CH1,Number System,QP025,Number of Digits and Magnitude,Determine number of digits in base-b and solve extremal digit-count problems,A125,Parametric Base Affecting Digit Count Thresholds
+Mathematics,U1,CH1,Number System,QP026,Digit Sum and Digital Root,Use digit sums and digital root properties to deduce divisibility and construct numbers,A126,"Digital Root/Recasting Mod 9, Mod 3 Properties"
+Mathematics,U1,CH1,Number System,QP026,Digit Sum and Digital Root,Use digit sums and digital root properties to deduce divisibility and construct numbers,A127,Find Unknown Digits Using Mod 9/11 Constraints
+Mathematics,U1,CH1,Number System,QP026,Digit Sum and Digital Root,Use digit sums and digital root properties to deduce divisibility and construct numbers,A128,Max/Min Possible Digit Sum Under Conditions
+Mathematics,U1,CH1,Number System,QP026,Digit Sum and Digital Root,Use digit sums and digital root properties to deduce divisibility and construct numbers,A129,Periodicity and Invariance of Digit Sum Processes
+Mathematics,U1,CH1,Number System,QP026,Digit Sum and Digital Root,Use digit sums and digital root properties to deduce divisibility and construct numbers,A130,Base-b Digit Sum Divisibility Analogues
+Mathematics,U1,CH1,Number System,QP027,Palindromes and Special Digit Patterns,"Construct, count, and analyze palindromes, repdigits and constraints on them",A131,Construct Smallest/Largest Palindrome Meeting Constraint
+Mathematics,U1,CH1,Number System,QP027,Palindromes and Special Digit Patterns,"Construct, count, and analyze palindromes, repdigits and constraints on them",A132,Count Palindromes of Given Length/Base with Restrictions
+Mathematics,U1,CH1,Number System,QP027,Palindromes and Special Digit Patterns,"Construct, count, and analyze palindromes, repdigits and constraints on them",A133,Divisibility Conditions for Palindromes/Repdigits
+Mathematics,U1,CH1,Number System,QP027,Palindromes and Special Digit Patterns,"Construct, count, and analyze palindromes, repdigits and constraints on them",A134,Palindrome Equations Under Arithmetic Operations
+Mathematics,U1,CH1,Number System,QP027,Palindromes and Special Digit Patterns,"Construct, count, and analyze palindromes, repdigits and constraints on them",A135,Base-b Palindrome Properties and Conversions
+Mathematics,U1,CH1,Number System,QP028,Repunits and Repetends,Analyze repunit numbers and their divisibility/period properties in base-b,A136,Divisibility of Repunits by Given Modulus (Order-Based)
+Mathematics,U1,CH1,Number System,QP028,Repunits and Repetends,Analyze repunit numbers and their divisibility/period properties in base-b,A137,Minimal Length n for Repunit Multiple of m
+Mathematics,U1,CH1,Number System,QP028,Repunits and Repetends,Analyze repunit numbers and their divisibility/period properties in base-b,A138,Relations Between Repetend Length and Repunit Factors
+Mathematics,U1,CH1,Number System,QP028,Repunits and Repetends,Analyze repunit numbers and their divisibility/period properties in base-b,A139,Base-Generalized Repunit Identities and Factorization
+Mathematics,U1,CH1,Number System,QP028,Repunits and Repetends,Analyze repunit numbers and their divisibility/period properties in base-b,A140,Construct Numbers with Prescribed Repeating Digit Patterns
+Mathematics,U1,CH1,Number System,QP029,Floor and Ceiling Sums,Evaluate and simplify sums involving floor/ceiling functions over ranges,A141,Sum of Floors of Arithmetic Progression Terms
+Mathematics,U1,CH1,Number System,QP029,Floor and Ceiling Sums,Evaluate and simplify sums involving floor/ceiling functions over ranges,A142,Summation of ⌊n/k⌋ Over n Range (Divisor Summatory Patterns)
+Mathematics,U1,CH1,Number System,QP029,Floor and Ceiling Sums,Evaluate and simplify sums involving floor/ceiling functions over ranges,A143,Nested Floors/Ceilings Inside Summation
+Mathematics,U1,CH1,Number System,QP029,Floor and Ceiling Sums,Evaluate and simplify sums involving floor/ceiling functions over ranges,A144,Fractional Part Decomposition to Simplify Sums
+Mathematics,U1,CH1,Number System,QP029,Floor and Ceiling Sums,Evaluate and simplify sums involving floor/ceiling functions over ranges,A145,Parameter-Driven Step Changes and Breakpoints
+Mathematics,U1,CH1,Number System,QP030,Equations and Inequalities with Floor/Ceiling,Solve equations and inequalities involving floor and ceiling functions,A146,Single Floor Equation Solved by Interval Analysis
+Mathematics,U1,CH1,Number System,QP030,Equations and Inequalities with Floor/Ceiling,Solve equations and inequalities involving floor and ceiling functions,A147,Double/Nested Floor Equations Piecewise Solution
+Mathematics,U1,CH1,Number System,QP030,Equations and Inequalities with Floor/Ceiling,Solve equations and inequalities involving floor and ceiling functions,A148,Inequalities Leading to Range/Count of Integers
+Mathematics,U1,CH1,Number System,QP030,Equations and Inequalities with Floor/Ceiling,Solve equations and inequalities involving floor and ceiling functions,A149,Count Solutions Under Parameter Thresholds/Switch Points
+Mathematics,U1,CH1,Number System,QP030,Equations and Inequalities with Floor/Ceiling,Solve equations and inequalities involving floor and ceiling functions,A150,Graphical/Piecewise Interpretation for System of Inequalities
+Mathematics,U1,CH1,Number System,QP031,Fractional Part Function,Analyze and solve problems using properties of fractional part {x},A151,Identity Manipulation with {x}=x−⌊x⌋ and Bounds
+Mathematics,U1,CH1,Number System,QP031,Fractional Part Function,Analyze and solve problems using properties of fractional part {x},A152,Solve Equations Involving {ax+b} and Modular Splits
+Mathematics,U1,CH1,Number System,QP031,Fractional Part Function,Analyze and solve problems using properties of fractional part {x},A153,Inequalities with Sums of Fractional Parts and Extremes
+Mathematics,U1,CH1,Number System,QP031,Fractional Part Function,Analyze and solve problems using properties of fractional part {x},A154,Distribution of {nα} and Counting in Subintervals (Basic)
+Mathematics,U1,CH1,Number System,QP031,Fractional Part Function,Analyze and solve problems using properties of fractional part {x},A155,Nested Fractional Parts and Simplification
+Mathematics,U1,CH1,Number System,QP032,Linear Diophantine Equations,Solve ax+by=c in integers and analyze solution sets under constraints,A156,General Integer Solution via Extended Euclid Parameterization
+Mathematics,U1,CH1,Number System,QP032,Linear Diophantine Equations,Solve ax+by=c in integers and analyze solution sets under constraints,A157,Nonnegative/Integral Solutions Counting in a Box/Range
+Mathematics,U1,CH1,Number System,QP032,Linear Diophantine Equations,Solve ax+by=c in integers and analyze solution sets under constraints,A158,Optimization of Linear Objective (min x+y) Over Solutions
+Mathematics,U1,CH1,Number System,QP032,Linear Diophantine Equations,Solve ax+by=c in integers and analyze solution sets under constraints,A159,Parameter-Dependent Coefficients and Feasibility Regions
+Mathematics,U1,CH1,Number System,QP032,Linear Diophantine Equations,Solve ax+by=c in integers and analyze solution sets under constraints,A160,Coin Problem (Frobenius) Basic Reachability/Bounds
+Mathematics,U1,CH1,Number System,QP033,Pythagorean Triples,Generate and analyze integer solutions to x^2+y^2=z^2 with constraints,A161,Primitive Triples via Euclid’s Formula and Coprimality Checks
+Mathematics,U1,CH1,Number System,QP033,Pythagorean Triples,Generate and analyze integer solutions to x^2+y^2=z^2 with constraints,A162,Non-Primitive Triples and Scaling Relations
+Mathematics,U1,CH1,Number System,QP033,Pythagorean Triples,Generate and analyze integer solutions to x^2+y^2=z^2 with constraints,A163,"Constraint-Based Search (Odd/Even, Bounds, Coprime Conditions)"
+Mathematics,U1,CH1,Number System,QP033,Pythagorean Triples,Generate and analyze integer solutions to x^2+y^2=z^2 with constraints,A164,Counting Triples with Perimeter/Bound Constraints (Basic)
+Mathematics,U1,CH1,Number System,QP033,Pythagorean Triples,Generate and analyze integer solutions to x^2+y^2=z^2 with constraints,A165,Reverse Constraints from Given Triple Properties
+Mathematics,U1,CH1,Number System,QP034,"Perfect, Abundant, and Deficient Numbers",Classify and construct numbers based on sum-of-divisors and special forms,A166,Classification Using σ(n)−n and Factorization Analysis
+Mathematics,U1,CH1,Number System,QP034,"Perfect, Abundant, and Deficient Numbers",Classify and construct numbers based on sum-of-divisors and special forms,A167,Even Perfect Number Form 2^{p−1}(2^p−1) Conditions
+Mathematics,U1,CH1,Number System,QP034,"Perfect, Abundant, and Deficient Numbers",Classify and construct numbers based on sum-of-divisors and special forms,A168,Construct Minimal Examples in Each Class Given Constraints
+Mathematics,U1,CH1,Number System,QP034,"Perfect, Abundant, and Deficient Numbers",Classify and construct numbers based on sum-of-divisors and special forms,A169,Impossibility Proofs Under Parity/Prime Power Constraints
+Mathematics,U1,CH1,Number System,QP034,"Perfect, Abundant, and Deficient Numbers",Classify and construct numbers based on sum-of-divisors and special forms,A170,Range Counting for Small n with Classification
+Mathematics,U1,CH1,Number System,QP035,Coprimality and Euler Totient,Analyze coprimality in sets and compute/estimate counts using φ(n),A171,Compute φ(n) via Factorization and Use in Counting
+Mathematics,U1,CH1,Number System,QP035,Coprimality and Euler Totient,Analyze coprimality in sets and compute/estimate counts using φ(n),A172,Count Integers ≤N Coprime to n or in Interval
+Mathematics,U1,CH1,Number System,QP035,Coprimality and Euler Totient,Analyze coprimality in sets and compute/estimate counts using φ(n),A173,Pairs/Triples Coprime or Pairwise Coprime Construction
+Mathematics,U1,CH1,Number System,QP035,Coprimality and Euler Totient,Analyze coprimality in sets and compute/estimate counts using φ(n),A174,Probability/Proportion Style Coprimality within Small Range
+Mathematics,U1,CH1,Number System,QP035,Coprimality and Euler Totient,Analyze coprimality in sets and compute/estimate counts using φ(n),A175,Set Construction with Pairwise Coprime Elements Under Constraints

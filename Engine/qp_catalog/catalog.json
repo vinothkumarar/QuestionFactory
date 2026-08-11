@@ -1,0 +1,1572 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP001",
+        "concept": "Classification of Numbers and Set Hierarchy",
+        "question_possibility": "Determine the smallest standard set (N, W, Z, Q, I, R, Algebraic, Transcendental) to which a given number or expression belongs",
+        "archetype": "Direct Classification"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP001",
+        "concept": "Classification of Numbers and Set Hierarchy",
+        "question_possibility": "Determine the smallest standard set (N, W, Z, Q, I, R, Algebraic, Transcendental) to which a given number or expression belongs",
+        "archetype": "Parameterized Classification with Constraints on Parameters for Membership"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP001",
+        "concept": "Classification of Numbers and Set Hierarchy",
+        "question_possibility": "Determine the smallest standard set (N, W, Z, Q, I, R, Algebraic, Transcendental) to which a given number or expression belongs",
+        "archetype": "Reverse Construction to Achieve Target Set Membership"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP001",
+        "concept": "Classification of Numbers and Set Hierarchy",
+        "question_possibility": "Determine the smallest standard set (N, W, Z, Q, I, R, Algebraic, Transcendental) to which a given number or expression belongs",
+        "archetype": "Composite Operation Membership (Sums, Products, Powers)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP001",
+        "concept": "Classification of Numbers and Set Hierarchy",
+        "question_possibility": "Determine the smallest standard set (N, W, Z, Q, I, R, Algebraic, Transcendental) to which a given number or expression belongs",
+        "archetype": "Assertion-Reason Pattern (JEE Advanced)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP002",
+        "concept": "Algebraic Properties on Number Sets",
+        "question_possibility": "Test closure, commutativity, associativity, distributivity, identity, and inverse properties of operations on given sets",
+        "archetype": "Property Verification with Explicit Counterexample Search"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP002",
+        "concept": "Algebraic Properties on Number Sets",
+        "question_possibility": "Test closure, commutativity, associativity, distributivity, identity, and inverse properties of operations on given sets",
+        "archetype": "Determine Minimal Superset Needed for Closure or Inverses to Hold"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP002",
+        "concept": "Algebraic Properties on Number Sets",
+        "question_possibility": "Test closure, commutativity, associativity, distributivity, identity, and inverse properties of operations on given sets",
+        "archetype": "Binary Operation Defined by Formula on a Set (e.g., a∘b=f(a,b)) Property Check"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP002",
+        "concept": "Algebraic Properties on Number Sets",
+        "question_possibility": "Test closure, commutativity, associativity, distributivity, identity, and inverse properties of operations on given sets",
+        "archetype": "Parameter Range for Which a Property Holds for All Elements"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP003",
+        "concept": "Identity and Inverses in Given Operations",
+        "question_possibility": "Determine identity elements and inverses under specified operations on specified sets",
+        "archetype": "Find Identity Element for Custom Operation and Verify Uniqueness"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP003",
+        "concept": "Identity and Inverses in Given Operations",
+        "question_possibility": "Determine identity elements and inverses under specified operations on specified sets",
+        "archetype": "Solve for Inverse Element in Parameterized Operation (Existence Conditions Included)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP003",
+        "concept": "Identity and Inverses in Given Operations",
+        "question_possibility": "Determine identity elements and inverses under specified operations on specified sets",
+        "archetype": "Identify Subsets Where Inverse Exists (Domain Restriction Analysis)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP003",
+        "concept": "Identity and Inverses in Given Operations",
+        "question_possibility": "Determine identity elements and inverses under specified operations on specified sets",
+        "archetype": "Matrix-Match: Map Operations to Their Identities and Inverse Formulas (JEE Advanced)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP004",
+        "concept": "Ordering, Density, and Intervals on the Real Line",
+        "question_possibility": "Work with interval notation, unions/intersections, and density of rationals/irrationals on the real line",
+        "archetype": "Convert Set-Builder Descriptions to Interval Notation and Vice Versa"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP004",
+        "concept": "Ordering, Density, and Intervals on the Real Line",
+        "question_possibility": "Work with interval notation, unions/intersections, and density of rationals/irrationals on the real line",
+        "archetype": "Graphical Number Line Representation and Selection of Correct Interval(s)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP004",
+        "concept": "Ordering, Density, and Intervals on the Real Line",
+        "question_possibility": "Work with interval notation, unions/intersections, and density of rationals/irrationals on the real line",
+        "archetype": "Determine Union/Intersection/Complement of Given Intervals with Parameters"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP004",
+        "concept": "Ordering, Density, and Intervals on the Real Line",
+        "question_possibility": "Work with interval notation, unions/intersections, and density of rationals/irrationals on the real line",
+        "archetype": "Density Application: Construct Rational/Irrational in a Given Interval"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP005",
+        "concept": "Inequalities and Integer Counting in Intervals",
+        "question_possibility": "Solve inequalities and count integers satisfying single or simultaneous inequalities",
+        "archetype": "Direct Integer Count in Single Interval (Use of Floor/Ceiling)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP005",
+        "concept": "Inequalities and Integer Counting in Intervals",
+        "question_possibility": "Solve inequalities and count integers satisfying single or simultaneous inequalities",
+        "archetype": "Simultaneous Inequalities with Parameter-Dependent Bounds"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP005",
+        "concept": "Inequalities and Integer Counting in Intervals",
+        "question_possibility": "Solve inequalities and count integers satisfying single or simultaneous inequalities",
+        "archetype": "Integers in AP or with Step Constraints within Intervals"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP005",
+        "concept": "Inequalities and Integer Counting in Intervals",
+        "question_possibility": "Solve inequalities and count integers satisfying single or simultaneous inequalities",
+        "archetype": "Counting with Exclusions (Multiples or Residue Classes Removed)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP006",
+        "concept": "Absolute Value and Distance",
+        "question_possibility": "Solve equations and inequalities involving absolute values and interpret as distances on the real line",
+        "archetype": "Single Absolute Value Equation/Inequality to Interval(s) Conversion"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP006",
+        "concept": "Absolute Value and Distance",
+        "question_possibility": "Solve equations and inequalities involving absolute values and interpret as distances on the real line",
+        "archetype": "Multiple Absolute Values with Casewise Linearization"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP006",
+        "concept": "Absolute Value and Distance",
+        "question_possibility": "Solve equations and inequalities involving absolute values and interpret as distances on the real line",
+        "archetype": "Geometric Interpretation on Number Line (Distance to Points/Sets)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP007",
+        "concept": "Absolute Value Optimization",
+        "question_possibility": "Find minimum or maximum of expressions involving absolute values over real or integer domains",
+        "archetype": "Minimize Sum of Distances to Fixed Points (Median-Based Reasoning)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP007",
+        "concept": "Absolute Value Optimization",
+        "question_possibility": "Find minimum or maximum of expressions involving absolute values over real or integer domains",
+        "archetype": "Optimization with Parameter-Dependent Breakpoints (Piecewise Analysis)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP007",
+        "concept": "Absolute Value Optimization",
+        "question_possibility": "Find minimum or maximum of expressions involving absolute values over real or integer domains",
+        "archetype": "Discrete Domain Optimization (Integer Arguments via Convexity/Floor-Ceiling)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP008",
+        "concept": "Decimal Expansion and Rationality",
+        "question_possibility": "Classify decimal expansions as terminating or repeating and connect to rationality; convert repeating decimals to fractions",
+        "archetype": "Determine Terminating vs Repeating via Prime Factors of Denominator"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP008",
+        "concept": "Decimal Expansion and Rationality",
+        "question_possibility": "Classify decimal expansions as terminating or repeating and connect to rationality; convert repeating decimals to fractions",
+        "archetype": "Find Period Length Using Modular Order (Base 10 Modulus Reduction)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP008",
+        "concept": "Decimal Expansion and Rationality",
+        "question_possibility": "Classify decimal expansions as terminating or repeating and connect to rationality; convert repeating decimals to fractions",
+        "archetype": "Convert Repeating Decimal with Pattern to Reduced Fraction"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP008",
+        "concept": "Decimal Expansion and Rationality",
+        "question_possibility": "Classify decimal expansions as terminating or repeating and connect to rationality; convert repeating decimals to fractions",
+        "archetype": "Parameterized Decimal Pattern Leading to Fraction Constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP009",
+        "concept": "Base-b (Radix) Representation",
+        "question_possibility": "Convert numbers between bases, validate digits, and perform arithmetic in base-b",
+        "archetype": "Direct Base Conversion (b1 to b2) with Place-Value Reasoning"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP009",
+        "concept": "Base-b (Radix) Representation",
+        "question_possibility": "Convert numbers between bases, validate digits, and perform arithmetic in base-b",
+        "archetype": "Determine Unknown Base from Equality or Arithmetic Consistency Conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP009",
+        "concept": "Base-b (Radix) Representation",
+        "question_possibility": "Convert numbers between bases, validate digits, and perform arithmetic in base-b",
+        "archetype": "Find Missing Digit(s) in Base-b Given Value Constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP009",
+        "concept": "Base-b (Radix) Representation",
+        "question_possibility": "Convert numbers between bases, validate digits, and perform arithmetic in base-b",
+        "archetype": "Perform Addition/Multiplication in Base-b with Carry Analysis"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP010",
+        "concept": "Digit Count and Magnitude",
+        "question_possibility": "Determine the number of digits of integers and powers in a given base",
+        "archetype": "Digits via Logarithms (Floor of Log Formula) in Base-10 or Base-b"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP010",
+        "concept": "Digit Count and Magnitude",
+        "question_possibility": "Determine the number of digits of integers and powers in a given base",
+        "archetype": "Number of Digits of a^b with Parameterized a and b (Bounds Included)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP010",
+        "concept": "Digit Count and Magnitude",
+        "question_possibility": "Determine the number of digits of integers and powers in a given base",
+        "archetype": "Comparative Digit Counts Across Two Bases for Same Number"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP010",
+        "concept": "Digit Count and Magnitude",
+        "question_possibility": "Determine the number of digits of integers and powers in a given base",
+        "archetype": "Range of Bases Yielding Fixed Digit Count for a Given Integer"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP011",
+        "concept": "Digit Sums and Digital Roots",
+        "question_possibility": "Use digit sums and digital roots to test congruences and recover missing digits under arithmetic constraints",
+        "archetype": "Digital Root Computation and Mod 9 Congruence Application"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP011",
+        "concept": "Digit Sums and Digital Roots",
+        "question_possibility": "Use digit sums and digital roots to test congruences and recover missing digits under arithmetic constraints",
+        "archetype": "Divisibility by 9 and 3 via Sum of Digits with Missing Digit Recovery"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP011",
+        "concept": "Digit Sums and Digital Roots",
+        "question_possibility": "Use digit sums and digital roots to test congruences and recover missing digits under arithmetic constraints",
+        "archetype": "Divisibility by 11 Rule and Alternating Sum with Pattern Constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP011",
+        "concept": "Digit Sums and Digital Roots",
+        "question_possibility": "Use digit sums and digital roots to test congruences and recover missing digits under arithmetic constraints",
+        "archetype": "Error-Checking in Arithmetic via Casting Out Nines (Reverse Check)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP012",
+        "concept": "Divisibility Tests and Constructions",
+        "question_possibility": "Apply and validate divisibility tests for specific integers and construct numbers satisfying multiple divisibility conditions",
+        "archetype": "Apply Standard Divisibility Tests (2,3,4,5,6,8,9,10,11,12,25)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP012",
+        "concept": "Divisibility Tests and Constructions",
+        "question_possibility": "Apply and validate divisibility tests for specific integers and construct numbers satisfying multiple divisibility conditions",
+        "archetype": "Find Smallest/Largest Number Meeting Multiple Divisibility Constraints (LCM-Based)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP012",
+        "concept": "Divisibility Tests and Constructions",
+        "question_possibility": "Apply and validate divisibility tests for specific integers and construct numbers satisfying multiple divisibility conditions",
+        "archetype": "Missing Digit Problems with Simultaneous Divisibility Requirements"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP012",
+        "concept": "Divisibility Tests and Constructions",
+        "question_possibility": "Apply and validate divisibility tests for specific integers and construct numbers satisfying multiple divisibility conditions",
+        "archetype": "Counterexample to Incorrect Divisibility Claim (Analytical Check)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP013",
+        "concept": "GCD and LCM Computation",
+        "question_possibility": "Compute gcd and lcm of integers and apply identities and properties",
+        "archetype": "Prime Factorization Approach with Exponent Min/Max Rules"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP013",
+        "concept": "GCD and LCM Computation",
+        "question_possibility": "Compute gcd and lcm of integers and apply identities and properties",
+        "archetype": "Euclidean Algorithm with Successive Remainders (Extended Cases Included)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP013",
+        "concept": "GCD and LCM Computation",
+        "question_possibility": "Compute gcd and lcm of integers and apply identities and properties",
+        "archetype": "Use Identities: gcd(a,b)gcd(a,c)=gcd(a,gcd(b,c)) and gcd*lcm=Product Type Relations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP013",
+        "concept": "GCD and LCM Computation",
+        "question_possibility": "Compute gcd and lcm of integers and apply identities and properties",
+        "archetype": "Parameterized Numbers with gcd/lcm Depending on Parameters (Piecewise Outcomes)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP014",
+        "concept": "Bézout Identity and Linear Combinations",
+        "question_possibility": "Express gcd as a linear combination and find integer solutions for coefficients under constraints",
+        "archetype": "Extended Euclid to Find One Solution (x0,y0) with ax+by=gcd(a,b)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP014",
+        "concept": "Bézout Identity and Linear Combinations",
+        "question_possibility": "Express gcd as a linear combination and find integer solutions for coefficients under constraints",
+        "archetype": "General Solution Parametrization and Bounding Solutions Within Ranges"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP014",
+        "concept": "Bézout Identity and Linear Combinations",
+        "question_possibility": "Express gcd as a linear combination and find integer solutions for coefficients under constraints",
+        "archetype": "Minimal Positive Value Representable as ax+by and Achieving It"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP015",
+        "concept": "GCD Identities with Exponents and Sequences",
+        "question_possibility": "Use properties like gcd(a^m−1,a^n−1)=a^{gcd(m,n)}−1 and related identities",
+        "archetype": "Direct Application of Exponent GCD Identity to Compute gcd Values"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP015",
+        "concept": "GCD Identities with Exponents and Sequences",
+        "question_possibility": "Use properties like gcd(a^m−1,a^n−1)=a^{gcd(m,n)}−1 and related identities",
+        "archetype": "Reverse Determine gcd(m,n) from Given gcd of Exponential Forms"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP015",
+        "concept": "GCD Identities with Exponents and Sequences",
+        "question_possibility": "Use properties like gcd(a^m−1,a^n−1)=a^{gcd(m,n)}−1 and related identities",
+        "archetype": "Mixed Bases and Parameters with Piecewise GCD Outcomes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP016",
+        "concept": "Linear Diophantine Equations",
+        "question_possibility": "Solve ax+by=c over integers including conditions for existence and counting solutions under bounds",
+        "archetype": "Existence Check via gcd(a,b)|c and One Solution via Extended Euclid"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP016",
+        "concept": "Linear Diophantine Equations",
+        "question_possibility": "Solve ax+by=c over integers including conditions for existence and counting solutions under bounds",
+        "archetype": "General Integer Solutions and Counting within Rectangle or Strip Constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP016",
+        "concept": "Linear Diophantine Equations",
+        "question_possibility": "Solve ax+by=c over integers including conditions for existence and counting solutions under bounds",
+        "archetype": "Nonnegative Solutions Count via Parameter Range Intersection"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP017",
+        "concept": "Divisibility Under Shifts and Parameter Variation",
+        "question_possibility": "Analyze divisibility and gcd/lcm of forms like gcd(a+n,b+n) or divisibility of polynomials at integers under parameter shifts",
+        "archetype": "Evaluate gcd(a+n,b+n) via Invariance and Periodicity Arguments"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP017",
+        "concept": "Divisibility Under Shifts and Parameter Variation",
+        "question_possibility": "Analyze divisibility and gcd/lcm of forms like gcd(a+n,b+n) or divisibility of polynomials at integers under parameter shifts",
+        "archetype": "Find All n Satisfying Given Divisibility (Modular Condition Derivation)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP017",
+        "concept": "Divisibility Under Shifts and Parameter Variation",
+        "question_possibility": "Analyze divisibility and gcd/lcm of forms like gcd(a+n,b+n) or divisibility of polynomials at integers under parameter shifts",
+        "archetype": "Bounded Range Count of n Using Period and CRT"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP018",
+        "concept": "Prime Numbers and Basic Primality",
+        "question_possibility": "Determine primality/compositeness within bounds and apply small-prime tests and factor bounds",
+        "archetype": "Trial Division up to sqrt(n) with Early Stopping Logic"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP018",
+        "concept": "Prime Numbers and Basic Primality",
+        "question_possibility": "Determine primality/compositeness within bounds and apply small-prime tests and factor bounds",
+        "archetype": "Construct Numbers with Prescribed Small Prime Factors and Test Conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP018",
+        "concept": "Prime Numbers and Basic Primality",
+        "question_possibility": "Determine primality/compositeness within bounds and apply small-prime tests and factor bounds",
+        "archetype": "Use of Wilson or Fermat as Primality Check in Special Cases"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP019",
+        "concept": "Fundamental Theorem of Arithmetic",
+        "question_possibility": "Apply unique prime factorization to deduce properties and solve reconstruction problems",
+        "archetype": "Reconstruct Numbers from Given gcd/lcm and Additional Constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP019",
+        "concept": "Fundamental Theorem of Arithmetic",
+        "question_possibility": "Apply unique prime factorization to deduce properties and solve reconstruction problems",
+        "archetype": "Determine Feasible Exponent Patterns Satisfying Given Relations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP019",
+        "concept": "Fundamental Theorem of Arithmetic",
+        "question_possibility": "Apply unique prime factorization to deduce properties and solve reconstruction problems",
+        "archetype": "Multiple-Correct Reasoning on Statements About Factorization (JEE Advanced)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP020",
+        "concept": "Divisor Functions τ(n) and σ(n)",
+        "question_possibility": "Compute number of divisors, sum of divisors, and related quantities; solve inverse problems from τ or σ values",
+        "archetype": "Compute τ(n) and σ(n) from Prime Factorization with Exponent Formulas"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP020",
+        "concept": "Divisor Functions τ(n) and σ(n)",
+        "question_possibility": "Compute number of divisors, sum of divisors, and related quantities; solve inverse problems from τ or σ values",
+        "archetype": "Determine All n with Given τ(n) Under Size Bounds (Search over Exponent Partitions)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP020",
+        "concept": "Divisor Functions τ(n) and σ(n)",
+        "question_possibility": "Compute number of divisors, sum of divisors, and related quantities; solve inverse problems from τ or σ values",
+        "archetype": "Product of Divisors and Relations with n^{τ(n)/2}"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP020",
+        "concept": "Divisor Functions τ(n) and σ(n)",
+        "question_possibility": "Compute number of divisors, sum of divisors, and related quantities; solve inverse problems from τ or σ values",
+        "archetype": "Even/Odd Divisor Counts and Square/Cube Related Constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP021",
+        "concept": "Perfect Powers and Minimal Adjustments",
+        "question_possibility": "Test if a number is a perfect square/cube/k-th power and find minimal multiplier/divisor to make it so",
+        "archetype": "Exponent Parity Test for Squares and Mod-k Exponent Conditions for k-th Powers"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP021",
+        "concept": "Perfect Powers and Minimal Adjustments",
+        "question_possibility": "Test if a number is a perfect square/cube/k-th power and find minimal multiplier/divisor to make it so",
+        "archetype": "Find Least Multiplier to Achieve Perfect Power via Prime Exponent Completion"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP021",
+        "concept": "Perfect Powers and Minimal Adjustments",
+        "question_possibility": "Test if a number is a perfect square/cube/k-th power and find minimal multiplier/divisor to make it so",
+        "archetype": "Count Perfect Powers in Interval Using Floor of Roots and Overlaps"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP022",
+        "concept": "Prime Exponent in Factorials (Legendre) and Trailing Zeros",
+        "question_possibility": "Compute highest power of a prime dividing n! and trailing zeros in base b",
+        "archetype": "Legendre’s Formula Summation for vp(n!)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP022",
+        "concept": "Prime Exponent in Factorials (Legendre) and Trailing Zeros",
+        "question_possibility": "Compute highest power of a prime dividing n! and trailing zeros in base b",
+        "archetype": "Trailing Zeros in Base 10 and General Base b via Min of Valuations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP022",
+        "concept": "Prime Exponent in Factorials (Legendre) and Trailing Zeros",
+        "question_possibility": "Compute highest power of a prime dividing n! and trailing zeros in base b",
+        "archetype": "Inverse Problem: Smallest n Having At Least k Trailing Zeros"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP023",
+        "concept": "Exponent of a Prime in Binomial Coefficients",
+        "question_possibility": "Find highest power of a prime dividing nCr and deduce divisibility/parity properties",
+        "archetype": "vp(nCr) via Legendre on Factorials or Carry Count (Kummer’s Insight)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP023",
+        "concept": "Exponent of a Prime in Binomial Coefficients",
+        "question_possibility": "Find highest power of a prime dividing nCr and deduce divisibility/parity properties",
+        "archetype": "Parity of Binomial Coefficients Using Lucas Theorem Mod 2 (Pattern Count)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP023",
+        "concept": "Exponent of a Prime in Binomial Coefficients",
+        "question_possibility": "Find highest power of a prime dividing nCr and deduce divisibility/parity properties",
+        "archetype": "Divisibility of nCr by m Under Prime Power Factorization of m"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP024",
+        "concept": "Basic Modular Arithmetic",
+        "question_possibility": "Compute remainders of large expressions using modular reduction rules and properties",
+        "archetype": "Modular Reduction with Factorization and Cancellation (When Invertible)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP024",
+        "concept": "Basic Modular Arithmetic",
+        "question_possibility": "Compute remainders of large expressions using modular reduction rules and properties",
+        "archetype": "Exponent Cyclicity and Euler/Fermat Shortcuts for Large Powers"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP024",
+        "concept": "Basic Modular Arithmetic",
+        "question_possibility": "Compute remainders of large expressions using modular reduction rules and properties",
+        "archetype": "Combine Moduli via CRT for Last k Digits or Specific Residues"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP025",
+        "concept": "Linear Congruences",
+        "question_possibility": "Solve ax ≡ b (mod m) and determine number of solutions and least positive solution",
+        "archetype": "Existence and Number of Solutions Based on gcd(a,m) and Reduction"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP025",
+        "concept": "Linear Congruences",
+        "question_possibility": "Solve ax ≡ b (mod m) and determine number of solutions and least positive solution",
+        "archetype": "Explicit Solution via Modular Inverse When gcd=1 (Extended Euclid)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP025",
+        "concept": "Linear Congruences",
+        "question_possibility": "Solve ax ≡ b (mod m) and determine number of solutions and least positive solution",
+        "archetype": "General Solution Set Characterization and Enumeration in Interval"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP026",
+        "concept": "Modular Inverses",
+        "question_possibility": "Determine modular inverses and apply to solve congruences and rational modular expressions",
+        "archetype": "Inverse via Extended Euclid for Co-prime Cases (Construction)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP026",
+        "concept": "Modular Inverses",
+        "question_possibility": "Determine modular inverses and apply to solve congruences and rational modular expressions",
+        "archetype": "Existence Conditions and Non-Existence Justification When gcd>1"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP026",
+        "concept": "Modular Inverses",
+        "question_possibility": "Determine modular inverses and apply to solve congruences and rational modular expressions",
+        "archetype": "Application to Fractional Congruences and Systems Simplification"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP027",
+        "concept": "Chinese Remainder Theorem",
+        "question_possibility": "Solve simultaneous congruences and count solutions modulo LCM of moduli",
+        "archetype": "Co-prime Moduli CRT Construction of Least Nonnegative Solution"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP027",
+        "concept": "Chinese Remainder Theorem",
+        "question_possibility": "Solve simultaneous congruences and count solutions modulo LCM of moduli",
+        "archetype": "Non Co-prime Moduli Consistency Check and Solution Set Structure"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP027",
+        "concept": "Chinese Remainder Theorem",
+        "question_possibility": "Solve simultaneous congruences and count solutions modulo LCM of moduli",
+        "archetype": "Counting Solutions in a Given Range Using Periodicity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP028",
+        "concept": "Euler’s Totient Function",
+        "question_possibility": "Compute φ(n), use multiplicativity, and apply identities and counts of coprimes in intervals",
+        "archetype": "Compute φ(n) from Prime Factorization and Use Multiplicativity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP028",
+        "concept": "Euler’s Totient Function",
+        "question_possibility": "Compute φ(n), use multiplicativity, and apply identities and counts of coprimes in intervals",
+        "archetype": "Count Integers Coprime to n in [1,N] via Floor Sums and Inclusion-Exclusion"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP028",
+        "concept": "Euler’s Totient Function",
+        "question_possibility": "Compute φ(n), use multiplicativity, and apply identities and counts of coprimes in intervals",
+        "archetype": "Apply Identity Sum_{d|n} φ(d)=n in Reverse Problems"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP029",
+        "concept": "Fermat’s Little Theorem and Euler’s Theorem",
+        "question_possibility": "Apply Fermat/Euler to compute large modular powers and solve exponential congruences",
+        "archetype": "Compute a^k mod p Using Fermat and Order Reduction (p Prime)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP029",
+        "concept": "Fermat’s Little Theorem and Euler’s Theorem",
+        "question_possibility": "Apply Fermat/Euler to compute large modular powers and solve exponential congruences",
+        "archetype": "Composite Moduli via Euler’s Theorem with φ(m) and CRT Combination"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP029",
+        "concept": "Fermat’s Little Theorem and Euler’s Theorem",
+        "question_possibility": "Apply Fermat/Euler to compute large modular powers and solve exponential congruences",
+        "archetype": "Solve a^x ≡ b (mod m) Using Orders and Discrete Log Reasoning in Small Cases"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP030",
+        "concept": "Wilson’s Theorem",
+        "question_possibility": "Use Wilson’s theorem to test primality and compute factorial residues modulo primes",
+        "archetype": "Primality Characterization Using (p−1)! ≡ −1 (mod p) for Small p"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP030",
+        "concept": "Wilson’s Theorem",
+        "question_possibility": "Use Wilson’s theorem to test primality and compute factorial residues modulo primes",
+        "archetype": "Compute n! mod p via Pairing Inverses and Simplification"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP030",
+        "concept": "Wilson’s Theorem",
+        "question_possibility": "Use Wilson’s theorem to test primality and compute factorial residues modulo primes",
+        "archetype": "Derive Congruences for Central Binomial Coefficients Mod p Using Wilson"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP031",
+        "concept": "Multiplicative Order and Residue Cycles",
+        "question_possibility": "Determine the order of an element modulo m and use to solve congruences and cyclicity problems",
+        "archetype": "Compute Order ord_m(a) and Use to Reduce Exponents"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP031",
+        "concept": "Multiplicative Order and Residue Cycles",
+        "question_possibility": "Determine the order of an element modulo m and use to solve congruences and cyclicity problems",
+        "archetype": "Solve a^x ≡ 1 (mod m) and Count Solutions for Given x Ranges"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP032",
+        "concept": "Last Digit and Last k Digits",
+        "question_possibility": "Find last digit or last k digits of large numbers using modular arithmetic and CRT",
+        "archetype": "Cyclicity Mod 10 for Last Digit Using Patterns and Orders"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP032",
+        "concept": "Last Digit and Last k Digits",
+        "question_possibility": "Find last digit or last k digits of large numbers using modular arithmetic and CRT",
+        "archetype": "Last k Digits via Mod 2^k and 5^k with CRT Reconstruction"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP032",
+        "concept": "Last Digit and Last k Digits",
+        "question_possibility": "Find last digit or last k digits of large numbers using modular arithmetic and CRT",
+        "archetype": "Exponent Towers and Iterated Exponents with Euler Totient Cycling"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP033",
+        "concept": "Residue Class Counting",
+        "question_possibility": "Count integers in an interval belonging to specific residue classes modulo m",
+        "archetype": "Direct Count per Residue Class Using Floor Functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP033",
+        "concept": "Residue Class Counting",
+        "question_possibility": "Count integers in an interval belonging to specific residue classes modulo m",
+        "archetype": "Count Under Additional Parity/Divisibility Constraints (Intersecting Classes)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP033",
+        "concept": "Residue Class Counting",
+        "question_possibility": "Count integers in an interval belonging to specific residue classes modulo m",
+        "archetype": "CRT-Based Counting for Simultaneous Congruence Conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP034",
+        "concept": "Greatest Integer (Floor) and Least Integer (Ceiling) Functions",
+        "question_possibility": "Evaluate, simplify, and manipulate expressions involving floor and ceiling functions",
+        "archetype": "Direct Evaluation with Fractional Decomposition x=[x]+{x}"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP034",
+        "concept": "Greatest Integer (Floor) and Least Integer (Ceiling) Functions",
+        "question_possibility": "Evaluate, simplify, and manipulate expressions involving floor and ceiling functions",
+        "archetype": "Piecewise Analysis over Intervals Determined by Critical Points"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP034",
+        "concept": "Greatest Integer (Floor) and Least Integer (Ceiling) Functions",
+        "question_possibility": "Evaluate, simplify, and manipulate expressions involving floor and ceiling functions",
+        "archetype": "Identities and Symmetries Such as [x]+[−x] and [x]+{x}=x"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP035",
+        "concept": "Equations and Inequalities with Floor/Ceiling/Fractional Part",
+        "question_possibility": "Solve equations and inequalities involving floor, ceiling, and fractional part functions",
+        "archetype": "Single Floor/Ceil Equation via Interval Back-Substitution"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP035",
+        "concept": "Equations and Inequalities with Floor/Ceiling/Fractional Part",
+        "question_possibility": "Solve equations and inequalities involving floor, ceiling, and fractional part functions",
+        "archetype": "Multiple Nested Floors/Ceils with Case Dissection Over Integer Strips"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP035",
+        "concept": "Equations and Inequalities with Floor/Ceiling/Fractional Part",
+        "question_possibility": "Solve equations and inequalities involving floor, ceiling, and fractional part functions",
+        "archetype": "Counting Number of Integer Solutions for Parameter-Dependent Inequalities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP036",
+        "concept": "Summations Involving Floor/Ceiling",
+        "question_possibility": "Evaluate finite sums involving floor or ceiling functions using number-theoretic decompositions",
+        "archetype": "Divisor Summatory Trick: Sum_{k=1}^n floor(n/k) Decomposition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP036",
+        "concept": "Summations Involving Floor/Ceiling",
+        "question_possibility": "Evaluate finite sums involving floor or ceiling functions using number-theoretic decompositions",
+        "archetype": "Symmetry and Block-Constant Interval Grouping for Floors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP036",
+        "concept": "Summations Involving Floor/Ceiling",
+        "question_possibility": "Evaluate finite sums involving floor or ceiling functions using number-theoretic decompositions",
+        "archetype": "Parameter-Dependent Sums with Breakpoints and Piecewise Closed Forms"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP037",
+        "concept": "Fractional Part Function",
+        "question_possibility": "Manipulate and solve problems using properties of the fractional part function",
+        "archetype": "Evaluate Expressions Involving {x}, {−x}, and Their Sums/Products"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP037",
+        "concept": "Fractional Part Function",
+        "question_possibility": "Manipulate and solve problems using properties of the fractional part function",
+        "archetype": "Solve Linear Equations in Fractional Parts {ax}+{bx}=c with Case Splits"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP037",
+        "concept": "Fractional Part Function",
+        "question_possibility": "Manipulate and solve problems using properties of the fractional part function",
+        "archetype": "Range/Extremal Problems for Sums of Fractional Parts Over Real or Integer x"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP038",
+        "concept": "Counting with Divisibility and Coprimality Constraints",
+        "question_possibility": "Count integers in a range satisfying divisibility, non-divisibility, or coprimality conditions",
+        "archetype": "Inclusion-Exclusion for Multiples Within a Range"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP038",
+        "concept": "Counting with Divisibility and Coprimality Constraints",
+        "question_possibility": "Count integers in a range satisfying divisibility, non-divisibility, or coprimality conditions",
+        "archetype": "Count Coprimes to n via φ and Periodic Blocks (CRT Partitioning)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP038",
+        "concept": "Counting with Divisibility and Coprimality Constraints",
+        "question_possibility": "Count integers in a range satisfying divisibility, non-divisibility, or coprimality conditions",
+        "archetype": "Pigeonhole Principle on Residue Classes to Prove Existence and Count"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP039",
+        "concept": "Counting Solutions to Congruences in Intervals",
+        "question_possibility": "Determine the number of solutions to congruences within finite intervals and under side constraints",
+        "archetype": "Single Congruence Ax ≡ b (mod m) Solutions Count per Period in [L,U]"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP039",
+        "concept": "Counting Solutions to Congruences in Intervals",
+        "question_possibility": "Determine the number of solutions to congruences within finite intervals and under side constraints",
+        "archetype": "Simultaneous Congruences Count via CRT and Interval Truncation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP039",
+        "concept": "Counting Solutions to Congruences in Intervals",
+        "question_possibility": "Determine the number of solutions to congruences within finite intervals and under side constraints",
+        "archetype": "Additional Constraints (Parity, Coprimality) Filtering of Solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP040",
+        "concept": "Pairs/Triples with Given GCD or LCM",
+        "question_possibility": "Count ordered or unordered pairs/triples with specified gcd or lcm under bounds",
+        "archetype": "Pairs with gcd=k via Scaling and Coprime Counting (φ-Based)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP040",
+        "concept": "Pairs/Triples with Given GCD or LCM",
+        "question_possibility": "Count ordered or unordered pairs/triples with specified gcd or lcm under bounds",
+        "archetype": "Pairs with lcm=L via Divisor Lattice and Coprimality on Quotients"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP040",
+        "concept": "Pairs/Triples with Given GCD or LCM",
+        "question_possibility": "Count ordered or unordered pairs/triples with specified gcd or lcm under bounds",
+        "archetype": "Triples Under GCD/LCM Constraints Using Multiplicative Decomposition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP041",
+        "concept": "Pythagorean Triples",
+        "question_possibility": "Generate, classify, and count Pythagorean triples under various constraints",
+        "archetype": "Primitive Triples via Euclid’s Formula with Parity/Coprime Conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP041",
+        "concept": "Pythagorean Triples",
+        "question_possibility": "Generate, classify, and count Pythagorean triples under various constraints",
+        "archetype": "Counting Triples with Hypotenuse or Leg Bounds (Parameter Range)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP041",
+        "concept": "Pythagorean Triples",
+        "question_possibility": "Generate, classify, and count Pythagorean triples under various constraints",
+        "archetype": "Non-Primitive Triples via Scaling and Multiplicity Accounting"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP042",
+        "concept": "Pell-Type Equations Basics",
+        "question_possibility": "Analyze solvability and generate initial solutions for Pell equations x^2 − Dy^2 = 1",
+        "archetype": "Identify Minimal Solution and Generate Subsequent Solutions Recursively"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP042",
+        "concept": "Pell-Type Equations Basics",
+        "question_possibility": "Analyze solvability and generate initial solutions for Pell equations x^2 − Dy^2 = 1",
+        "archetype": "Solvability Conditions Based on Non-Square D and Continued Fraction Period Insight"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP043",
+        "concept": "Sum of Two Squares Conditions",
+        "question_possibility": "Determine representability of integers as a sum of two squares and construct representations",
+        "archetype": "Prime Factorization Criterion for Sum of Two Squares (Exponents Mod 4)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP043",
+        "concept": "Sum of Two Squares Conditions",
+        "question_possibility": "Determine representability of integers as a sum of two squares and construct representations",
+        "archetype": "Explicit Construction of Representation for Eligible Integers"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP044",
+        "concept": "Exponential Diophantine (Elementary Cases)",
+        "question_possibility": "Solve elementary exponential Diophantine equations using modular restrictions and bounding",
+        "archetype": "Modular Obstruction and Parity Arguments to Eliminate Cases"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP044",
+        "concept": "Exponential Diophantine (Elementary Cases)",
+        "question_possibility": "Solve elementary exponential Diophantine equations using modular restrictions and bounding",
+        "archetype": "Bounding and Monotonicity to Restrict Search for Small Solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP045",
+        "concept": "Last Non-Zero Digit and Factorial Residues",
+        "question_possibility": "Compute last non-zero digit of n! and related factorial residue properties modulo powers",
+        "archetype": "Decompose n! into 2^k5^k and Odd Part with Cyclic Patterns Mod 10/100"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP045",
+        "concept": "Last Non-Zero Digit and Factorial Residues",
+        "question_possibility": "Compute last non-zero digit of n! and related factorial residue properties modulo powers",
+        "archetype": "Recursive/Block Methods for Last Non-Zero Digit Using Periodicity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP046",
+        "concept": "Power Towers and Iterated Exponents Modulo m",
+        "question_possibility": "Evaluate power towers modulo m using totients, orders, and CRT",
+        "archetype": "Exponent Reduction Using φ and Iterated Totients with Stabilization"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP046",
+        "concept": "Power Towers and Iterated Exponents Modulo m",
+        "question_possibility": "Evaluate power towers modulo m using totients, orders, and CRT",
+        "archetype": "CRT Synthesis for Mod 2^k and Mod 5^k Branches to Get Last k Digits"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP047",
+        "concept": "Palindromic Numbers and Digital Properties",
+        "question_possibility": "Analyze palindromes: construction, counting, and divisibility properties",
+        "archetype": "Count Palindromes with Fixed Length and Leading-Digit Constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP047",
+        "concept": "Palindromic Numbers and Digital Properties",
+        "question_possibility": "Analyze palindromes: construction, counting, and divisibility properties",
+        "archetype": "Divisibility Properties of Palindromes (e.g., by 11) with Proof"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP047",
+        "concept": "Palindromic Numbers and Digital Properties",
+        "question_possibility": "Analyze palindromes: construction, counting, and divisibility properties",
+        "archetype": "Construct Minimal Palindrome Meeting Modular Constraints via CRT"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP048",
+        "concept": "Perfect, Abundant, and Deficient Numbers",
+        "question_possibility": "Classify numbers as perfect/abundant/deficient and analyze properties",
+        "archetype": "Classification via σ(n)−n with Factorization-Based Computation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP048",
+        "concept": "Perfect, Abundant, and Deficient Numbers",
+        "question_possibility": "Classify numbers as perfect/abundant/deficient and analyze properties",
+        "archetype": "Even Perfect Numbers via Mersenne Primes Criterion Application"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP048",
+        "concept": "Perfect, Abundant, and Deficient Numbers",
+        "question_possibility": "Classify numbers as perfect/abundant/deficient and analyze properties",
+        "archetype": "Range-Based Counting or Identification Under Constraints on τ or σ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP049",
+        "concept": "Integer Optimization Under Number-Theoretic Constraints",
+        "question_possibility": "Find extrema of expressions over integers subject to divisibility, gcd, or residue constraints",
+        "archetype": "Min/Max with Mod Constraints Using Residue Class Search and Number Line Partitioning"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP049",
+        "concept": "Integer Optimization Under Number-Theoretic Constraints",
+        "question_possibility": "Find extrema of expressions over integers subject to divisibility, gcd, or residue constraints",
+        "archetype": "Use Floor/Ceiling Transformations to Optimize Quadratic/Linear Forms Over Z"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP049",
+        "concept": "Integer Optimization Under Number-Theoretic Constraints",
+        "question_possibility": "Find extrema of expressions over integers subject to divisibility, gcd, or residue constraints",
+        "archetype": "Parameter-Dependent Extremal Values with Case-Based Outcomes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP050",
+        "concept": "Parity and Invariants Mod k",
+        "question_possibility": "Use parity and modular invariants to prove (im)possibility and deduce properties in integer settings",
+        "archetype": "Parity Invariant to Show Impossibility/Existence in Integer Configurations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP050",
+        "concept": "Parity and Invariants Mod k",
+        "question_possibility": "Use parity and modular invariants to prove (im)possibility and deduce properties in integer settings",
+        "archetype": "Mod k Invariant (k>2) to Constrain Remainders and Solve Construction Problems"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "qp_id": "QP050",
+        "concept": "Parity and Invariants Mod k",
+        "question_possibility": "Use parity and modular invariants to prove (im)possibility and deduce properties in integer settings",
+        "archetype": "Pigeonhole with Residue Classes for Existence of Multiples/Subsets"
+    }
+]

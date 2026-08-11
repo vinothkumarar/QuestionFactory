@@ -323,6 +323,22 @@ class PromptBuilder:
             chapter_code = {variables.get("chapter_code", variables.get("chapter", ""))}
             subtopic_code = {variables.get("subtopic_code", variables.get("subtopic", ""))}
 
+            Set Number:
+            S{variables.get("set_number", 1)}
+
+            Set Definition:
+
+            S1 = Foundation
+            S2 = Easy+
+            S3 = Medium
+            S4 = Hard
+            S5 = Elite
+
+            Generate questions ONLY at the difficulty level
+            corresponding to the selected Set Number.
+
+            Do not mix difficulty levels.
+
             Difficulty:
             {variables.get("difficulty", "")}
 
@@ -574,6 +590,12 @@ class PromptBuilder:
                 job,
                 "project",
                 "",
+            ),
+
+            "set_number": getattr(
+                job,
+                "set_number",
+                1,
             ),
 
             #

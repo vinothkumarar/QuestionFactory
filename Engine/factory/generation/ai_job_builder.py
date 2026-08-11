@@ -95,7 +95,7 @@ class AIJobBuilder:
         job = AIJob(
             project=getattr(runtime, "project", ""),
             job_type="QUESTION_GENERATION",
-
+            set_number=node.location.set_number,
             subject=node.location.subject,
             unit=node.location.unit,
             chapter=node.location.chapter,
