@@ -1,0 +1,45 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C001,Angular Displacement
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C002,Angular Velocity
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C003,Angular Acceleration
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C004,Period and Frequency
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C005,Linear–Angular Kinematic Relations
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C006,Uniform Circular Motion
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C007,Non-uniform Circular Motion
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C008,Radial (Normal) Acceleration
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C009,Tangential Acceleration
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C010,Decomposition of Motion into Radial and Tangential Components
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C011,"Vector Form of Circular Motion (v = ω × r, a = α × r + ω × (ω × r))"
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C012,Newton’s Second Law in Normal–Tangential Components
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C013,Centripetal Force
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C014,Work in Circular Motion (Work by Centripetal Force)
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C015,Power in Circular Motion
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C016,Friction as Source of Centripetal Force (Level Turns)
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C017,Skidding on Circular Turns
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C018,Banking of Roads (No Friction)
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C019,Banking of Roads (With Friction)
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C020,Overturning of Vehicles on Turns
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C021,Conical Pendulum
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C022,Vertical Circular Motion under Gravity
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C023,Tension and Normal Reaction in Vertical Circular Motion
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C024,Loss of Contact in Vertical Circular Motion
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C025,Apparent Weight in Vertical Circular Motion
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C026,Energy Methods in Vertical Circular Motion
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C027,Loop-the-Loop Motion
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C028,Polar Coordinates in Planar Motion
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C029,Radius of Curvature and Normal Acceleration in General Motion
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C030,Instantaneous Center of Curvature
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C031,Rotating Frames of Reference
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C032,Centrifugal Force (Pseudo Force)
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C033,Coriolis Force
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C034,Euler Force (Angular Acceleration Pseudo Force)
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C035,Effective Gravity in Rotating Frames
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C036,Equilibrium in Rotating Frames
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C037,Effect of Earth’s Rotation on Apparent Weight
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C038,Central Forces and Circular Orbits
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C039,Stability of Circular Orbits
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C040,Gravitational Circular Orbits and Orbital Speed
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C041,Angular Momentum in Circular Motion
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C042,Torque in Central Force Motion
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C043,Projection of Uniform Circular Motion to Simple Harmonic Motion
+Physics,Laws of Motion,Newton's Laws,Circular Motion,C044,Centripetal Force from Elastic Forces

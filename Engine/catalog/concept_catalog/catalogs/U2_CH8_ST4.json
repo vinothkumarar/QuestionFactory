@@ -1,0 +1,338 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C001",
+        "concept": "Invertible (Nonsingular) Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C002",
+        "concept": "Singular Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C003",
+        "concept": "Identity Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C004",
+        "concept": "Definition of Matrix Inverse"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C005",
+        "concept": "Existence and Uniqueness of Inverse"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C006",
+        "concept": "Determinant Criterion for Invertibility"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C007",
+        "concept": "Adjoint (Adjugate) of a Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C008",
+        "concept": "Cofactor Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C009",
+        "concept": "Minors of a Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C010",
+        "concept": "Adjugate Formula for Inverse"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C011",
+        "concept": "Elementary Row Operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C012",
+        "concept": "Elementary Column Operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C013",
+        "concept": "Gauss–Jordan Elimination"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C014",
+        "concept": "Elementary Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C015",
+        "concept": "Augmented Matrix Representation [A | I]"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C016",
+        "concept": "Left Inverse and Right Inverse"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C017",
+        "concept": "Rank of a Matrix and Invertibility"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C018",
+        "concept": "Null Space and Invertibility"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C019",
+        "concept": "Inverse of a Product of Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C020",
+        "concept": "Inverse of a Transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C021",
+        "concept": "Inverse of a Scalar Multiple of a Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C022",
+        "concept": "Inverse of a Power of a Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C023",
+        "concept": "Inverse of a Diagonal Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C024",
+        "concept": "Inverse of a Triangular Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C025",
+        "concept": "Orthogonal Matrix and Its Inverse"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C026",
+        "concept": "Symmetric Matrix and Inverse Symmetry"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C027",
+        "concept": "Determinant of the Inverse Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C028",
+        "concept": "General Linear Group GL(n)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C029",
+        "concept": "Field of Entries and Invertibility"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C030",
+        "concept": "Matrix Equations AX = I and XA = I"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C031",
+        "concept": "Solving Linear Systems Using Matrix Inverse"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C032",
+        "concept": "Row-Reduced Echelon Form and Invertibility"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C033",
+        "concept": "Inverse of a Block Diagonal Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C034",
+        "concept": "Similarity and Invertibility"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C035",
+        "concept": "Cayley–Hamilton Theorem and Matrix Inverse"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C036",
+        "concept": "Polynomial Expressions in A and A^{-1}"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C037",
+        "concept": "Inverse of a 2x2 Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C038",
+        "concept": "Inverse of a 3x3 Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C039",
+        "concept": "Permutation Matrix and Its Inverse"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C040",
+        "concept": "Idempotent Matrices and Invertibility"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C041",
+        "concept": "Nilpotent Matrices and Invertibility"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Inverse of Matrix",
+        "concept_id": "C042",
+        "concept": "Unitary Matrix and Its Inverse"
+    }
+]

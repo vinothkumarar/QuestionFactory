@@ -1,0 +1,39 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C001,Coordinate Axes Aligned with an Inclined Plane
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C002,Force Decomposition on Inclined Surfaces
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C003,Weight Components Parallel and Normal to an Incline
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C004,Normal Reaction on Inclined Surfaces
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C005,Free-Body Diagrams for Inclined Plane Systems
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C006,Dynamics of Particles on Smooth Inclined Planes
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C007,Static Friction on Inclined Planes
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C008,Limiting Friction and Coefficient of Static Friction
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C009,Kinetic Friction on Inclined Planes
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C010,Angle of Friction
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C011,Angle of Repose
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C012,Equilibrium Conditions on Inclined Planes
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C013,Dynamics of Particles on Rough Inclined Planes
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C014,Direction of Friction on Inclines
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C015,Impending Motion Up the Plane and Down the Plane
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C016,External Forces Applied at an Angle on Inclines
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C017,Effect of Applied Force Orientation on Normal Reaction
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C018,Tension in Strings on Inclined Plane Systems
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C019,Connected Motion on Inclines with Mass–String–Pulley Systems
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C020,Atwood-Type Systems with One Body on an Incline
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C021,Two Bodies on a Common Incline Connected by a String
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C022,Mixed Surface Connections: Incline–Horizontal Systems
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C023,Constraint Relations for Strings and Pulleys on Inclines
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C024,Ideal String and Pulley Model on Inclined Planes
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C025,Accelerated Wedges with Blocks on the Incline
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C026,Non-Inertial Frame Analysis for Accelerating Inclined Surfaces
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C027,Condition for Relative Rest on an Accelerating Wedge
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C028,Loss of Contact Condition on Accelerating Inclines
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C029,Frictional Constraints on Accelerating Inclined Surfaces
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C030,Relative Motion Along Inclined Surfaces
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C031,Multiple Contact Friction on Inclines
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C032,Contact Forces Between Stacked Bodies on Inclined Planes
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C033,Variable Coefficient of Friction Along an Incline
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C034,Limiting Equilibrium on Rough Inclined Planes
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C035,Tension–Friction Coupling on Rough Inclines
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C036,Kinematics Components Along and Normal to an Incline
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C037,Modeling Assumptions for Inclined Plane Analysis
+Physics,Laws of Motion,Newton's Laws,Inclined Plane,C038,Equilibrium of Concurrent Forces on an Inclined Plane

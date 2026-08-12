@@ -1,0 +1,306 @@
+[
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C001",
+        "concept": "Coordinate Axes Aligned with an Inclined Plane"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C002",
+        "concept": "Force Decomposition on Inclined Surfaces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C003",
+        "concept": "Weight Components Parallel and Normal to an Incline"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C004",
+        "concept": "Normal Reaction on Inclined Surfaces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C005",
+        "concept": "Free-Body Diagrams for Inclined Plane Systems"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C006",
+        "concept": "Dynamics of Particles on Smooth Inclined Planes"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C007",
+        "concept": "Static Friction on Inclined Planes"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C008",
+        "concept": "Limiting Friction and Coefficient of Static Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C009",
+        "concept": "Kinetic Friction on Inclined Planes"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C010",
+        "concept": "Angle of Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C011",
+        "concept": "Angle of Repose"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C012",
+        "concept": "Equilibrium Conditions on Inclined Planes"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C013",
+        "concept": "Dynamics of Particles on Rough Inclined Planes"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C014",
+        "concept": "Direction of Friction on Inclines"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C015",
+        "concept": "Impending Motion Up the Plane and Down the Plane"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C016",
+        "concept": "External Forces Applied at an Angle on Inclines"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C017",
+        "concept": "Effect of Applied Force Orientation on Normal Reaction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C018",
+        "concept": "Tension in Strings on Inclined Plane Systems"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C019",
+        "concept": "Connected Motion on Inclines with Mass–String–Pulley Systems"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C020",
+        "concept": "Atwood-Type Systems with One Body on an Incline"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C021",
+        "concept": "Two Bodies on a Common Incline Connected by a String"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C022",
+        "concept": "Mixed Surface Connections: Incline–Horizontal Systems"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C023",
+        "concept": "Constraint Relations for Strings and Pulleys on Inclines"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C024",
+        "concept": "Ideal String and Pulley Model on Inclined Planes"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C025",
+        "concept": "Accelerated Wedges with Blocks on the Incline"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C026",
+        "concept": "Non-Inertial Frame Analysis for Accelerating Inclined Surfaces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C027",
+        "concept": "Condition for Relative Rest on an Accelerating Wedge"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C028",
+        "concept": "Loss of Contact Condition on Accelerating Inclines"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C029",
+        "concept": "Frictional Constraints on Accelerating Inclined Surfaces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C030",
+        "concept": "Relative Motion Along Inclined Surfaces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C031",
+        "concept": "Multiple Contact Friction on Inclines"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C032",
+        "concept": "Contact Forces Between Stacked Bodies on Inclined Planes"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C033",
+        "concept": "Variable Coefficient of Friction Along an Incline"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C034",
+        "concept": "Limiting Equilibrium on Rough Inclined Planes"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C035",
+        "concept": "Tension–Friction Coupling on Rough Inclines"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C036",
+        "concept": "Kinematics Components Along and Normal to an Incline"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C037",
+        "concept": "Modeling Assumptions for Inclined Plane Analysis"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Inclined Plane",
+        "concept_id": "C038",
+        "concept": "Equilibrium of Concurrent Forces on an Inclined Plane"
+    }
+]

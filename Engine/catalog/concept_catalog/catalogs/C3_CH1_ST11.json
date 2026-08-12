@@ -1,0 +1,458 @@
+[
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C001",
+        "concept": "Definition and Nature of Hydrogen Bond"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C002",
+        "concept": "Hydrogen Bond Donors and Acceptors"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C003",
+        "concept": "Electronegativity and Polarization in Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C004",
+        "concept": "Role of Lone Pairs and Hybridization in Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C005",
+        "concept": "Directionality, Geometry, and Distance Criteria of Hydrogen Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C006",
+        "concept": "Energetics and Strength of Hydrogen Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C007",
+        "concept": "Comparison with Other Intermolecular Forces"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C008",
+        "concept": "Intermolecular Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C009",
+        "concept": "Intramolecular Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C010",
+        "concept": "Conventional versus Nonconventional Hydrogen Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C011",
+        "concept": "C–H and X–H...π Hydrogen Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C012",
+        "concept": "Dihydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C013",
+        "concept": "Charge-Assisted Hydrogen Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C014",
+        "concept": "Resonance-Assisted Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C015",
+        "concept": "Low-Barrier and Symmetric Hydrogen Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C016",
+        "concept": "Bifurcated and Multicenter Hydrogen Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C017",
+        "concept": "Cooperativity and Anticooperativity in Hydrogen-Bond Networks"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C018",
+        "concept": "Hydrogen-Bonded Networks and Clusters"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C019",
+        "concept": "Hydrogen Bonding in Water and Ice"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C020",
+        "concept": "Bernal–Fowler Ice Rules"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C021",
+        "concept": "Density Anomaly of Water due to Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C022",
+        "concept": "Boiling and Melting Point Trends from Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C023",
+        "concept": "Vapor Phase Association and Abnormal Molar Mass"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C024",
+        "concept": "Solubility and Miscibility Influenced by Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C025",
+        "concept": "Viscosity and Surface Tension Effects of Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C026",
+        "concept": "Hydrogen Bonding in Alcohols and Phenols"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C027",
+        "concept": "Hydrogen Bonding in Carboxylic Acids and Dimer Formation"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C028",
+        "concept": "Hydrogen Bonding in Ammonia and Amines"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C029",
+        "concept": "Hydrogen Bonding in Amides and Peptides"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C030",
+        "concept": "Intramolecular Hydrogen Bonding and Conformational Preferences"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C031",
+        "concept": "Ortho Effect in Aromatic Compounds due to Intramolecular Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C032",
+        "concept": "Tautomerism Stabilization via Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C033",
+        "concept": "Acid–Base Strength Modulation by Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C034",
+        "concept": "Solvent Effects and Protic vs Aprotic Solvents"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C035",
+        "concept": "Hydrogen Bonding in Biomolecules (Proteins and DNA)"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C036",
+        "concept": "Hydrogen Bonding in Polymers and Materials (Cellulose, Nylon)"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C037",
+        "concept": "Hydrates and Water of Crystallization via Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C038",
+        "concept": "Spectroscopic Signatures: IR of Hydrogen-Bonded X–H Stretch"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C039",
+        "concept": "Spectroscopic Signatures: NMR of Hydrogen-Bonded Protons"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C040",
+        "concept": "Structural Characterization by X-ray and Neutron Diffraction"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C041",
+        "concept": "Isotope Effects in Hydrogen Bonding (H/D Substitution)"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C042",
+        "concept": "Temperature and Pressure Dependence of Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C043",
+        "concept": "Proton Transfer and Hydrogen-Bonding Continuum"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C044",
+        "concept": "Blue-Shifting versus Red-Shifting Hydrogen Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C045",
+        "concept": "Orbital Interaction Perspective (n→σ* Donation) in Hydrogen Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C046",
+        "concept": "Substituent and Electronic Effects on Hydrogen-Bond Strength"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C047",
+        "concept": "Competition between Intramolecular and Intermolecular Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C048",
+        "concept": "Role of Hydrogen Bonding in Supramolecular Self-Assembly"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C049",
+        "concept": "Hydrogen Bonding and Reaction Mechanisms in Solution"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C050",
+        "concept": "Hydrogen Bond Acidity and Basicity Scales"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C051",
+        "concept": "Hydrogen Bonding in Hydrogen Fluoride and Its Polymerization"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C052",
+        "concept": "Group 15–17 Hydrides: Anomalous Properties due to Hydrogen Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C053",
+        "concept": "Hydrogen Bond Topology and Graph Representations"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C054",
+        "concept": "Salt Bridges and Ionic Hydrogen-Bonding in Crystals"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C055",
+        "concept": "Hydrogen-Bond-Mediated Proton Conduction (Grotthuss Mechanism)"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C056",
+        "concept": "Polarizability and Size Effects on Hydrogen-Bonding Ability"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Hydrogen Bonding",
+        "concept_id": "C057",
+        "concept": "Environmental and Phase Effects on Hydrogen-Bond Stability"
+    }
+]

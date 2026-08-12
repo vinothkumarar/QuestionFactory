@@ -1,0 +1,210 @@
+[
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C001",
+        "concept": "Dative Covalent Bond Definition and Nature"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C002",
+        "concept": "Lewis Acid–Base Theory in Coordinate Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C003",
+        "concept": "Electron Pair Donor (Lewis Base) Characteristics"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C004",
+        "concept": "Electron Pair Acceptor (Lewis Acid) Characteristics"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C005",
+        "concept": "Lone Pair Availability and Basicity in Donors"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C006",
+        "concept": "Vacant Orbital Availability and Acidity in Acceptors"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C007",
+        "concept": "Notation and Representation of Coordinate Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C008",
+        "concept": "Equivalence of Coordinate and Covalent Bonds After Formation"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C009",
+        "concept": "Directionality of Coordinate Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C010",
+        "concept": "Polarity and Charge Distribution in Coordinate Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C011",
+        "concept": "Formal Charge Changes on Coordinate Bond Formation"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C012",
+        "concept": "Resonance Delocalization Involving Coordinate Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C013",
+        "concept": "Orbital Overlap and MO Description of Coordinate Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C014",
+        "concept": "Energetics of Coordinate Bond Formation"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C015",
+        "concept": "Protonation as Coordinate Bond Formation"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C016",
+        "concept": "Hydration and Solvation via Coordinate Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C017",
+        "concept": "Lewis Acid–Base Adducts of Electron-Deficient Molecules"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C018",
+        "concept": "Bridging Coordinate Bonds and Dimerization"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C019",
+        "concept": "Metal–Ligand Coordinate Bonding (Introductory)"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C020",
+        "concept": "Ligand Donor Atoms and Denticity"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C021",
+        "concept": "Coordination Number and Geometry (Basic Notions)"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C022",
+        "concept": "Sigma Donation and Pi Back-Donation in Coordinate Bonds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C023",
+        "concept": "Hard and Soft Acids and Bases in Coordinate Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C024",
+        "concept": "Effect of Coordination on Hybridization and Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C025",
+        "concept": "Stability Factors in Coordinate Complexes"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Coordinate Bond",
+        "concept_id": "C026",
+        "concept": "Distinction Among Ionic, Covalent, Hydrogen, and Coordinate Bonds"
+    }
+]

@@ -1,0 +1,27 @@
+subject,unit_code,unit,chapter_code,chapter,subtopic_code,subtopic
+Physics,P3,Laws of Motion,CH1,Newton's Laws,ST1,First Law
+Physics,P3,Laws of Motion,CH1,Newton's Laws,ST2,Second Law
+Physics,P3,Laws of Motion,CH1,Newton's Laws,ST3,Third Law
+Physics,P3,Laws of Motion,CH1,Newton's Laws,ST4,Free Body Diagrams
+Physics,P3,Laws of Motion,CH1,Newton's Laws,ST5,Pseudo Force
+Physics,P3,Laws of Motion,CH1,Newton's Laws,ST6,Friction
+Physics,P3,Laws of Motion,CH1,Newton's Laws,ST7,Inclined Plane
+Physics,P3,Laws of Motion,CH1,Newton's Laws,ST8,Circular Motion
+Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST1,Ionic Bond
+Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST10,Dipole Moment
+Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST11,Hydrogen Bonding
+Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST12,Molecular Orbital Theory
+Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST13,Bond Order
+Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST2,Covalent Bond
+Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST3,Coordinate Bond
+Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST4,Lewis Structures
+Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST5,Formal Charge
+Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST6,Resonance
+Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST7,VSEPR Theory
+Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST8,Hybridization
+Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST9,Molecular Geometry
+Mathematics,U2,Algebra,CH8,Matrices,ST1,Types of Matrices
+Mathematics,U2,Algebra,CH8,Matrices,ST2,Matrix Operations
+Mathematics,U2,Algebra,CH8,Matrices,ST3,Transpose and Symmetric Matrices
+Mathematics,U2,Algebra,CH8,Matrices,ST4,Inverse of Matrix
+Mathematics,U2,Algebra,CH8,Matrices,ST5,Applications of Matrices

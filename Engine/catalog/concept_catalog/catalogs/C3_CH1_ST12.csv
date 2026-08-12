@@ -1,0 +1,46 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C001,Quantum Mechanical Basis of Molecular Orbitals
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C002,Born–Oppenheimer Approximation in Molecular Orbital Theory
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C003,Linear Combination of Atomic Orbitals (LCAO) Approach
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C004,Orbital Symmetry and Phase in MO Formation
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C005,Overlap Integral and Overlap Criteria
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C006,Bonding Molecular Orbitals
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C007,Antibonding Molecular Orbitals
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C008,Nonbonding Molecular Orbitals
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C009,Sigma (σ) and Pi (π) Molecular Orbitals
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C010,Delta (δ) Molecular Orbitals
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C011,"s–s, s–p, and p–p Orbital Overlaps"
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C012,Node Structure and Nodal Planes in Molecular Orbitals
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C013,Normalization and Orthogonality of Molecular Orbitals (Qualitative)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C014,Energy Ordering of Molecular Orbitals in Diatomic Molecules
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C015,s–p Mixing (Orbital Mixing) in First-Row Diatomics
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C016,Gerade (g) and Ungerade (u) Symmetry in Homonuclear Diatomics
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C017,"Molecular Orbital Electron Configuration Rules (Aufbau, Pauli, Hund)"
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C018,Bond Order in Molecular Orbital Theory
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C019,Magnetic Properties from MO Occupancy
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C020,Relationship of Bond Order with Bond Length and Bond Energy
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C021,Polarization of Molecular Orbitals in Heteronuclear Diatomics
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C022,Electronegativity Effects on MO Energies
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C023,Degeneracy of Molecular Orbitals
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C024,Frontier Molecular Orbitals (HOMO and LUMO)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C025,"Electronic Transitions in the MO Framework (σ–σ*, π–π*, n–π*)"
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C026,Photoelectron Spectroscopic Interpretation with MO Energies (Qualitative)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C027,Qualitative MO Diagrams for Homonuclear Diatomic Molecules
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C028,Qualitative MO Diagrams for Heteronuclear Diatomic Molecules
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C029,Delocalized Molecular Orbitals in Polyatomic Molecules
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C030,Symmetry-Adapted Linear Combinations (SALCs)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C031,Group Orbitals and Central Atom Interactions in Polyatomics
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C032,Charge Distribution from MO Coefficients
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C033,Hückel Molecular Orbital (HMO) Theory Basics
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C034,Delocalization Energy in Conjugated Systems
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C035,Frontier Orbital Concepts in Chemical Reactivity (Qualitative)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C036,Three-Center Two-Electron (3c–2e) Bonding in MO Theory
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C037,Multicenter Bonding in Electron-Deficient Compounds
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C038,Walsh Diagrams and Geometry Changes in MO Terms (Qualitative)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C039,Energy and Symmetry Matching Rules for Orbital Interactions
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C040,Stability of Molecular Ions in MO Theory (Qualitative)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C041,Comparison of Molecular Orbital Theory and Valence Bond Theory
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C042,Limitations of Qualitative MO Theory
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C043,Hartree–Fock Approximation in MO Theory (Overview)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C044,Density Functional Perspective on Molecular Orbitals (Overview)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Molecular Orbital Theory,C045,Potential Energy Curves and MO Occupancy vs Internuclear Distance (Qualitative)

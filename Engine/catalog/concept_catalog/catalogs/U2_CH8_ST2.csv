@@ -1,0 +1,37 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Algebra,Matrices,Matrix Operations,C001,Matrix Addition
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Properties of Matrix Addition
+Mathematics,Algebra,Matrices,Matrix Operations,C003,Scalar Multiplication of Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C004,Properties of Scalar Multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C005,Additive Inverse of a Matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C006,Zero Matrix as Additive Identity
+Mathematics,Algebra,Matrices,Matrix Operations,C007,Matrix Subtraction
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication: Definition and Computation
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Conformability and Order in Matrix Multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C010,Properties of Matrix Multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Non-Commutativity of Matrix Multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Zero Divisors in Matrix Multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C013,Identity Matrix as Multiplicative Identity
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Inverse of a Matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C015,Conditions for Invertibility of a Matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C016,Properties of Matrix Inverses
+Mathematics,Algebra,Matrices,Matrix Operations,C017,Cancellation Laws Using Invertible Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Powers of Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Polynomial Expressions in Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Binomial Expansion for Commuting Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C021,Commuting Matrices: Definition and Implications
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Transpose of a Matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Properties of the Transpose Operation
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Decomposition into Symmetric and Skew-Symmetric Parts
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Row Operations
+Mathematics,Algebra,Matrices,Matrix Operations,C026,Elementary Column Operations
+Mathematics,Algebra,Matrices,Matrix Operations,C027,Elementary Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Row and Column Equivalence of Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Pre- and Post-Multiplication as Row/Column Operations
+Mathematics,Algebra,Matrices,Matrix Operations,C030,Adjoint (Adjugate) of a Matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C031,Properties of Adjoint and Relation to Inverse
+Mathematics,Algebra,Matrices,Matrix Operations,C032,Partitioned (Block) Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C033,Block Matrix Operations
+Mathematics,Algebra,Matrices,Matrix Operations,C034,Operations with Diagonal Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C035,Operations with Triangular Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C036,Left and Right Multiplication of Matrix Equations

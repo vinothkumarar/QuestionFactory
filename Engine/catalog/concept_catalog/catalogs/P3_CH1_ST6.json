@@ -1,0 +1,418 @@
+[
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C001",
+        "concept": "Contact Forces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C002",
+        "concept": "Normal Reaction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C003",
+        "concept": "Frictional Force"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C004",
+        "concept": "Coulomb's Laws of Dry Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C005",
+        "concept": "Static Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C006",
+        "concept": "Limiting Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C007",
+        "concept": "Coefficient of Static Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C008",
+        "concept": "Kinetic (Dynamic) Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C009",
+        "concept": "Coefficient of Kinetic Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C010",
+        "concept": "Relation Between Coefficients of Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C011",
+        "concept": "Angle of Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C012",
+        "concept": "Angle of Repose"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C013",
+        "concept": "Friction Cone"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C014",
+        "concept": "Direction of Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C015",
+        "concept": "Impending Motion"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C016",
+        "concept": "Dependence of Friction on Normal Reaction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C017",
+        "concept": "Material Dependence of Coefficient of Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C018",
+        "concept": "Area of Contact and Dry Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C019",
+        "concept": "Velocity Independence in Coulomb Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C020",
+        "concept": "Microscopic Origin of Dry Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C021",
+        "concept": "Work Done by Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C022",
+        "concept": "Energy Dissipation Due to Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C023",
+        "concept": "Work by Static Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C024",
+        "concept": "Rolling Friction (Rolling Resistance)"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C025",
+        "concept": "Pure Rolling (Rolling Without Slipping)"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C026",
+        "concept": "Kinematics of Rolling Contact"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C027",
+        "concept": "Dynamics of Rolling With Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C028",
+        "concept": "Frictional Torque at Contact"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C029",
+        "concept": "Transition From Slipping to Rolling"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C030",
+        "concept": "Friction on Rough Horizontal Surfaces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C031",
+        "concept": "Friction on Inclined Planes"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C032",
+        "concept": "Effect of Pulling or Pushing at an Angle"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C033",
+        "concept": "Friction Between Stacked Bodies"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C034",
+        "concept": "Wedge Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C035",
+        "concept": "Self-Locking Condition"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C036",
+        "concept": "Ladder Friction at Wall and Floor"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C037",
+        "concept": "Friction in Circular Motion on Level Roads"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C038",
+        "concept": "Friction on Banked Curves"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C039",
+        "concept": "Speed Range on Banked Roads With Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C040",
+        "concept": "Friction in Non-Inertial Frames"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C041",
+        "concept": "Equilibrium With Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C042",
+        "concept": "Free-Body Diagrams Involving Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C043",
+        "concept": "Relative Motion and Direction of Kinetic Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C044",
+        "concept": "Moving Surface Friction (Conveyor Belts)"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C045",
+        "concept": "Rope Friction and Capstan Effect"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C046",
+        "concept": "Limitations of the Coulomb Friction Model"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C047",
+        "concept": "Viscous Friction Versus Dry Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C048",
+        "concept": "Static Friction as a Constraint Force"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C049",
+        "concept": "Traction and Driving Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C050",
+        "concept": "Frictional Torque in Brakes and Clutches"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C051",
+        "concept": "Factors Affecting Coefficient of Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Friction",
+        "concept_id": "C052",
+        "concept": "Deformation Effects in Rolling Resistance"
+    }
+]

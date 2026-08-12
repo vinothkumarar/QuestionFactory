@@ -1,0 +1,450 @@
+[
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C001",
+        "concept": "Definition and Purpose of Free Body Diagrams"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C002",
+        "concept": "System Selection and Isolation"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C003",
+        "concept": "Particle Idealization"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C004",
+        "concept": "Rigid Body Idealization"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C005",
+        "concept": "Internal and External Forces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C006",
+        "concept": "Action–Reaction Pairs and Interaction Forces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C007",
+        "concept": "Body Forces and Field Forces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C008",
+        "concept": "Contact Forces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C009",
+        "concept": "Gravitational Force (Weight)"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C010",
+        "concept": "Normal Reaction Force"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C011",
+        "concept": "Friction Force: Static"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C012",
+        "concept": "Friction Force: Kinetic"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C013",
+        "concept": "Limiting Friction and Coefficient of Friction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C014",
+        "concept": "Angle of Friction and Friction Cone"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C015",
+        "concept": "Tension in Strings and Ropes"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C016",
+        "concept": "Spring Force and Hooke’s Law"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C017",
+        "concept": "Buoyant Force (Archimedes’ Principle)"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C018",
+        "concept": "Drag and Air Resistance Models"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C019",
+        "concept": "Thrust and Propulsion Forces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C020",
+        "concept": "Constraint Forces at Hinges and Pins"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C021",
+        "concept": "Rolling Contact and Static Friction in Pure Rolling"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C022",
+        "concept": "Rolling Resistance and Traction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C023",
+        "concept": "Pseudo Forces in Linearly Accelerating Frames"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C024",
+        "concept": "Centrifugal and Coriolis Pseudo Forces in Rotating Frames"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C025",
+        "concept": "Coordinate Systems and Axes in Mechanics"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C026",
+        "concept": "Force Decomposition into Components"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C027",
+        "concept": "Tangential and Normal Components on Curved Paths"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C028",
+        "concept": "Inclined Plane Force Components"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C029",
+        "concept": "Representation Conventions in Free Body Diagrams"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C030",
+        "concept": "Multiple Contact Points and Resultant Contact Force"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C031",
+        "concept": "Point of Application and Line of Action of Forces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C032",
+        "concept": "Weight Application at Center of Mass"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C033",
+        "concept": "Extended Body Free-Body Diagrams with Torques and Couples"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C034",
+        "concept": "Equilibrium Conditions and Net Force"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C035",
+        "concept": "Dynamic Conditions and Newton’s Second Law Mapping"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C036",
+        "concept": "System-Level Versus Individual Body Free-Body Diagrams"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C037",
+        "concept": "Free-Body Diagrams for Connected Bodies"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C038",
+        "concept": "Idealizations: Smooth Surfaces, Massless Strings, Frictionless Pulleys"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C039",
+        "concept": "String and Pulley Kinematic Constraints"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C040",
+        "concept": "Tension Relationships in Ideal Pulleys and Massless Strings"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C041",
+        "concept": "Free-Body Diagrams of Pulleys and Rope Segments"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C042",
+        "concept": "Wedge–Block Contact Interactions"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C043",
+        "concept": "Apparent Weight and Normal Reaction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C044",
+        "concept": "Impulsive Forces and Momentum Impulse Representation"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C045",
+        "concept": "Distributed Loads Replaced by Resultants (Mechanics Context)"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C046",
+        "concept": "Limitations and Validity of the Free Body Diagram Model"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C047",
+        "concept": "Non-Ideal Strings and Pulleys: Mass, Friction, and Variable Tension"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C048",
+        "concept": "D’Alembert’s Principle and Inertial Force Representation"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C049",
+        "concept": "Geometric Constraints in Connected Systems"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C050",
+        "concept": "Differential Free-Body Diagrams for Variable Forces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C051",
+        "concept": "Support Reactions: Pin, Roller, and Fixed Supports"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C052",
+        "concept": "Rolling Without Slipping Kinematic Constraint"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C053",
+        "concept": "External Forces and Center of Mass Dynamics"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C054",
+        "concept": "Free-Body Diagrams for Variable-Mass Systems"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C055",
+        "concept": "Planar versus Three-Dimensional Free-Body Diagrams"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "Free Body Diagrams",
+        "concept_id": "C056",
+        "concept": "Long-Range Forces: Electrostatic and Magnetic Forces"
+    }
+]

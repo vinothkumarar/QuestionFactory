@@ -1,0 +1,418 @@
+[
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C001",
+        "concept": "Lewis Structures as Basis for Geometry Prediction"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C002",
+        "concept": "Electron Domain Concept"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C003",
+        "concept": "Steric Number"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C004",
+        "concept": "Valence Shell Electron Pair Repulsion (VSEPR) Theory"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C005",
+        "concept": "AXE Notation for Molecular Shapes"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C006",
+        "concept": "Electron-Group Geometry versus Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C007",
+        "concept": "Bond Pair and Lone Pair Repulsion Hierarchy"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C008",
+        "concept": "Effect of Multiple Bonds on Electron Domain Repulsions"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C009",
+        "concept": "Ideal Bond Angles in Common Geometries"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C010",
+        "concept": "Deviations from Ideal Bond Angles"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C011",
+        "concept": "Linear Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C012",
+        "concept": "Trigonal Planar Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C013",
+        "concept": "Tetrahedral Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C014",
+        "concept": "Trigonal Bipyramidal Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C015",
+        "concept": "Octahedral Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C016",
+        "concept": "Pentagonal Bipyramidal Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C017",
+        "concept": "Angular (Bent) Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C018",
+        "concept": "Trigonal Pyramidal Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C019",
+        "concept": "Seesaw Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C020",
+        "concept": "T-Shaped Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C021",
+        "concept": "Square Pyramidal Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C022",
+        "concept": "Square Planar Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C023",
+        "concept": "Pentagonal Planar Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C024",
+        "concept": "Distorted Octahedral Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C025",
+        "concept": "Lone Pair Placement in Trigonal Bipyramidal Structures"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C026",
+        "concept": "Ligand Positional Preferences and Apicophilicity in TBP Geometries"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C027",
+        "concept": "Stereochemical Activity of Lone Pairs"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C028",
+        "concept": "Hybridization-Geometry Correlation"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C029",
+        "concept": "Hypervalency and 3-Center-4-Electron Bonding"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C030",
+        "concept": "Limitations of d-Orbital Participation in Main-Group Hybridization"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C031",
+        "concept": "Bent's Rule and Bond Angle Variations"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C032",
+        "concept": "Molecular Orbital Perspective on Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C033",
+        "concept": "Walsh Rules for Geometry Changes in Small Molecules"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C034",
+        "concept": "Geometry of Electron-Deficient and Multicenter-Bonded Molecules"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C035",
+        "concept": "Geometry of Noble Gas Compounds"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C036",
+        "concept": "Geometry Trends in p-Block Hydrides and Halides"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C037",
+        "concept": "Shapes of Isoelectronic and Isostructural Species"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C038",
+        "concept": "Geometry of Odd-Electron (Radical) Molecules"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C039",
+        "concept": "Local Molecular Geometry in Polyatomic Frameworks"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C040",
+        "concept": "Relationship between Molecular Geometry and Dipole Moment"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C041",
+        "concept": "Symmetry Considerations and Dipole Cancellation"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C042",
+        "concept": "Experimental Methods for Determining Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C043",
+        "concept": "Phase Dependence of Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C044",
+        "concept": "Fluxionality and Berry Pseudorotation"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C045",
+        "concept": "Inversion at Pyramidal Centers"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C046",
+        "concept": "Steric Crowding Effects on Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C047",
+        "concept": "Pi-Backbonding Effects on Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C048",
+        "concept": "Limitations of VSEPR Theory"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C049",
+        "concept": "Resonance and Delocalization Effects on Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C050",
+        "concept": "Representations of Three-Dimensional Molecular Structures"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C051",
+        "concept": "Axial and Equatorial Positions in Trigonal Bipyramidal Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Molecular Geometry",
+        "concept_id": "C052",
+        "concept": "Inert Pair Effect and Its Influence on Molecular Geometry"
+    }
+]

@@ -1,0 +1,53 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C001,VSEPR Postulates
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C002,Electron Domain Concept
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C003,Steric Number
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C004,AXmEn Notation
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C005,Electron Pair Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C006,Molecular Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C007,Order of Electron Pair Repulsions (LP–LP > LP–BP > BP–BP)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C008,Effect of Multiple Bonds on Electron Domain Repulsion
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C009,Effect of Electronegativity of Substituents on Bond Angles
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C010,Effect of Ligand Size (Steric Bulk) on Geometry and Bond Angles
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C011,Bond Angle Deviations Predicted by VSEPR
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C012,Lone Pair Stereochemical Activity
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C013,Lone Pair Placement in Trigonal Bipyramidal Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C014,Axial and Equatorial Positions in Trigonal Bipyramidal Structures
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C015,Axial–Equatorial Bond Length and Strength Differences in TBP Molecules
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C016,Lone Pair Placement in Octahedral Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C017,Hypervalency in the VSEPR Framework
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C018,Three-Center Four-Electron Bonding and Its Relation to VSEPR
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C019,Resonance and Electron Domain Counting in VSEPR
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C020,Treatment of Formal Charge and Polyatomic Ions in VSEPR
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C021,Odd-Electron Species and Radicals in VSEPR
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C022,Limitations of VSEPR for Transition Metal Complexes
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C023,Limitations of VSEPR for Strongly Delocalized Pi Systems
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C024,Correlation of Molecular Shape with Polarity (Dipole Moments)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C025,Local Geometry About Each Central Atom in Polycentric Molecules
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C026,Octet Rule Exceptions within VSEPR Applications
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C027,Linear Electron Pair Geometry (SN = 2)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C028,Trigonal Planar Electron Pair Geometry (SN = 3)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C029,Tetrahedral Electron Pair Geometry (SN = 4)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C030,Trigonal Bipyramidal Electron Pair Geometry (SN = 5)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C031,Octahedral Electron Pair Geometry (SN = 6)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C032,Pentagonal Bipyramidal Electron Pair Geometry (SN = 7)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C033,Square Antiprismatic Electron Pair Geometry (SN = 8)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C034,Linear Molecular Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C035,Trigonal Planar Molecular Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C036,Bent (Angular) Molecular Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C037,Tetrahedral Molecular Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C038,Trigonal Pyramidal Molecular Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C039,Seesaw Molecular Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C040,T-Shaped Molecular Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C041,Square Pyramidal Molecular Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C042,Square Planar Molecular Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C043,Pentagonal Bipyramidal Molecular Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C044,Pentagonal Planar Molecular Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C045,Distorted Octahedral (Monocapped Octahedron) Molecular Geometry
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C046,Predictive Scope and Experimental Validation of VSEPR
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C047,Ideal Bond Angles for Common Electron Geometries
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C048,Central Atom Size Effects on VSEPR Predictions
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C049,Mixed Ligand Effects on Molecular Geometry and Distortions
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C050,Correlation of VSEPR Geometry with Hybridization
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C051,Stereochemically Inactive ns2 Lone Pair in Heavy p-Block Compounds
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,VSEPR Theory,C052,Berry Pseudorotation and Five-Coordinate Dynamics

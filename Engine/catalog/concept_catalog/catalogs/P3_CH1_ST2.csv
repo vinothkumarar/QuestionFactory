@@ -1,0 +1,39 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Physics,Laws of Motion,Newton's Laws,Second Law,C001,Linear Momentum
+Physics,Laws of Motion,Newton's Laws,Second Law,C002,Impulse
+Physics,Laws of Motion,Newton's Laws,Second Law,C003,Impulse–Momentum Theorem
+Physics,Laws of Motion,Newton's Laws,Second Law,C004,Newton's Second Law (Vector Form)
+Physics,Laws of Motion,Newton's Laws,Second Law,C005,Force as Time Rate of Change of Momentum
+Physics,Laws of Motion,Newton's Laws,Second Law,C006,Constant Mass Formulation (F = m a)
+Physics,Laws of Motion,Newton's Laws,Second Law,C007,Resultant Force (Net Force)
+Physics,Laws of Motion,Newton's Laws,Second Law,C008,Principle of Superposition of Forces
+Physics,Laws of Motion,Newton's Laws,Second Law,C009,Inertial Mass
+Physics,Laws of Motion,Newton's Laws,Second Law,C010,Inertial Frames of Reference
+Physics,Laws of Motion,Newton's Laws,Second Law,C011,Non-Inertial Frames of Reference
+Physics,Laws of Motion,Newton's Laws,Second Law,C012,Pseudo Forces
+Physics,Laws of Motion,Newton's Laws,Second Law,C013,Centrifugal Force
+Physics,Laws of Motion,Newton's Laws,Second Law,C014,Coriolis Force
+Physics,Laws of Motion,Newton's Laws,Second Law,C015,Internal versus External Forces
+Physics,Laws of Motion,Newton's Laws,Second Law,C016,System of Particles
+Physics,Laws of Motion,Newton's Laws,Second Law,C017,Second Law for a System of Particles
+Physics,Laws of Motion,Newton's Laws,Second Law,C018,Center of Mass Acceleration and External Force
+Physics,Laws of Motion,Newton's Laws,Second Law,C019,Conservation of Linear Momentum
+Physics,Laws of Motion,Newton's Laws,Second Law,C020,Impulsive Forces
+Physics,Laws of Motion,Newton's Laws,Second Law,C021,Average Force
+Physics,Laws of Motion,Newton's Laws,Second Law,C022,Variable Mass Systems
+Physics,Laws of Motion,Newton's Laws,Second Law,C023,Thrust
+Physics,Laws of Motion,Newton's Laws,Second Law,C024,Momentum Flux in Variable Mass Systems
+Physics,Laws of Motion,Newton's Laws,Second Law,C025,Time-Dependent Forces
+Physics,Laws of Motion,Newton's Laws,Second Law,C026,Position-Dependent Forces
+Physics,Laws of Motion,Newton's Laws,Second Law,C027,Velocity-Dependent Forces
+Physics,Laws of Motion,Newton's Laws,Second Law,C028,Cartesian Component Form of Second Law
+Physics,Laws of Motion,Newton's Laws,Second Law,C029,Radial and Tangential Components of Acceleration
+Physics,Laws of Motion,Newton's Laws,Second Law,C030,Circular Motion and Centripetal Force
+Physics,Laws of Motion,Newton's Laws,Second Law,C031,Constraints and Constraint Forces
+Physics,Laws of Motion,Newton's Laws,Second Law,C032,Particle Approximation in Dynamics
+Physics,Laws of Motion,Newton's Laws,Second Law,C033,Units and Dimensions of Force
+Physics,Laws of Motion,Newton's Laws,Second Law,C034,Dynamic Equilibrium
+Physics,Laws of Motion,Newton's Laws,Second Law,C035,Validity and Limitations of Newton's Second Law
+Physics,Laws of Motion,Newton's Laws,Second Law,C036,Galilean Relativity and Invariance of Second Law
+Physics,Laws of Motion,Newton's Laws,Second Law,C037,Equivalence of dp/dt and ma Forms
+Physics,Laws of Motion,Newton's Laws,Second Law,C038,D'Alembert's Principle

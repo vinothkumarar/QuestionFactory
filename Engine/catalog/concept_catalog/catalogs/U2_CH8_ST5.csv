@@ -1,0 +1,41 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Algebra,Matrices,Applications of Matrices,C001,Matrix Representation of Linear Systems
+Mathematics,Algebra,Matrices,Applications of Matrices,C002,Augmented Matrix of a Linear System
+Mathematics,Algebra,Matrices,Applications of Matrices,C003,Homogeneous Linear Systems
+Mathematics,Algebra,Matrices,Applications of Matrices,C004,Non-homogeneous Linear Systems
+Mathematics,Algebra,Matrices,Applications of Matrices,C005,Consistency of Linear Systems
+Mathematics,Algebra,Matrices,Applications of Matrices,C006,Rank of a Matrix
+Mathematics,Algebra,Matrices,Applications of Matrices,C007,Rank-based Consistency Criterion (Rouché–Capelli)
+Mathematics,Algebra,Matrices,Applications of Matrices,C008,Classification of Solutions via Rank and Order
+Mathematics,Algebra,Matrices,Applications of Matrices,C009,Solving Linear Systems Using Inverse Matrices
+Mathematics,Algebra,Matrices,Applications of Matrices,C010,Echelon Form of a Matrix
+Mathematics,Algebra,Matrices,Applications of Matrices,C011,Reduced Row Echelon Form
+Mathematics,Algebra,Matrices,Applications of Matrices,C012,Pivot Variables and Free Variables
+Mathematics,Algebra,Matrices,Applications of Matrices,C013,Null Space (Kernel) of a Matrix
+Mathematics,Algebra,Matrices,Applications of Matrices,C014,Column Space of a Matrix
+Mathematics,Algebra,Matrices,Applications of Matrices,C015,Row Space of a Matrix
+Mathematics,Algebra,Matrices,Applications of Matrices,C016,Rank–Nullity Relation
+Mathematics,Algebra,Matrices,Applications of Matrices,C017,Elementary Matrices
+Mathematics,Algebra,Matrices,Applications of Matrices,C018,Linear Dependence and Independence via Matrices
+Mathematics,Algebra,Matrices,Applications of Matrices,C019,Linear Transformations Represented by Matrices
+Mathematics,Algebra,Matrices,Applications of Matrices,C020,Composition of Linear Transformations
+Mathematics,Algebra,Matrices,Applications of Matrices,C021,Invertible Linear Transformations
+Mathematics,Algebra,Matrices,Applications of Matrices,C022,Orthogonal Matrices and Isometries
+Mathematics,Algebra,Matrices,Applications of Matrices,C023,Rotation Matrices in the Plane
+Mathematics,Algebra,Matrices,Applications of Matrices,C024,Reflection Matrices in the Plane
+Mathematics,Algebra,Matrices,Applications of Matrices,C025,Scaling (Dilation) Matrices in the Plane
+Mathematics,Algebra,Matrices,Applications of Matrices,C026,Shear Matrices in the Plane
+Mathematics,Algebra,Matrices,Applications of Matrices,C027,Determinant as Area/Volume Scaling Factor
+Mathematics,Algebra,Matrices,Applications of Matrices,C028,Orientation Change and Sign of Determinant
+Mathematics,Algebra,Matrices,Applications of Matrices,C029,Rotation Matrices in Three Dimensions
+Mathematics,Algebra,Matrices,Applications of Matrices,C030,Projection Matrices onto Lines and Planes
+Mathematics,Algebra,Matrices,Applications of Matrices,C031,Similarity Transformations and Change of Basis
+Mathematics,Algebra,Matrices,Applications of Matrices,C032,Eigenvalues and Eigenvectors in Linear Transformations
+Mathematics,Algebra,Matrices,Applications of Matrices,C033,Orthogonal Diagonalization of Symmetric Matrices
+Mathematics,Algebra,Matrices,Applications of Matrices,C034,Matrix Representation of Quadratic Forms in Two Variables
+Mathematics,Algebra,Matrices,Applications of Matrices,C035,Conic Sections in Matrix Form
+Mathematics,Algebra,Matrices,Applications of Matrices,C036,Principal Axes of Conics via Orthogonal Diagonalization
+Mathematics,Algebra,Matrices,Applications of Matrices,C037,Matrix Representation of Pair of Straight Lines
+Mathematics,Algebra,Matrices,Applications of Matrices,C038,Affine Transformations and Homogeneous Coordinates
+Mathematics,Algebra,Matrices,Applications of Matrices,C039,Permutation Matrices for Coordinate Reordering
+Mathematics,Algebra,Matrices,Applications of Matrices,C040,Rank-One Matrices and Outer Products

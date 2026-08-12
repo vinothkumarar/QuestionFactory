@@ -1,0 +1,242 @@
+[
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C001",
+        "concept": "Formal Charge: Definition and Purpose"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C002",
+        "concept": "Formal Charge Formula and Electron Assignment Rules"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C003",
+        "concept": "Valence Electron Count for Main-Group Elements"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C004",
+        "concept": "Bonding Electrons and Nonbonding Electrons in Formal Charge"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C005",
+        "concept": "Net Charge Consistency: Sum of Formal Charges Equals Species Charge"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C006",
+        "concept": "Distinction Between Formal Charge and Oxidation State"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C007",
+        "concept": "Distinction Between Formal Charge and Partial Atomic Charge"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C008",
+        "concept": "Use of Formal Charge in Selecting Preferred Lewis Structures"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C009",
+        "concept": "Minimization of Magnitude and Separation of Formal Charges"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C010",
+        "concept": "Electronegativity Guidelines for Placement of Formal Charges"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C011",
+        "concept": "Octet Rule Considerations with Formal Charge"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C012",
+        "concept": "Hypervalency and Expanded Octets: Formal Charge Treatment"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C013",
+        "concept": "Electron-Deficient Molecules (Incomplete Octet) and Formal Charge"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C014",
+        "concept": "Odd-Electron Species (Radicals) and Formal Charge Assignment"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C015",
+        "concept": "Resonance and Delocalization of Formal Charge"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C016",
+        "concept": "Equivalence of Resonance Contributors and Symmetric Charge Distribution"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C017",
+        "concept": "Criteria for Major Resonance Contributors Using Formal Charge"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C018",
+        "concept": "Formal Charge Distribution in Polyatomic Ions"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C019",
+        "concept": "Coordinate (Dative) Bonds and Formal Charge Accounting"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C020",
+        "concept": "Zwitterions and Internal Formal Charges"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C021",
+        "concept": "Formal Charge and Acid–Base Sites in Molecules and Ions"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C022",
+        "concept": "Relationship Between Formal Charge and Molecular Polarity"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C023",
+        "concept": "Formal Charge Considerations in VSEPR and Molecular Geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C024",
+        "concept": "Isoelectronic Species and Comparative Formal Charge Analysis"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C025",
+        "concept": "Limitations and Applicability of the Formal Charge Concept"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C026",
+        "concept": "Average Formal Charge in Resonance Hybrids"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C027",
+        "concept": "Formal Charge in Multiple Bonds and π Systems"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C028",
+        "concept": "Formal Charge in Coordination Compounds and Ligand Donor Types"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C029",
+        "concept": "Formal Charge and Stability of Conjugate Bases of Oxyacids"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Formal Charge",
+        "concept_id": "C030",
+        "concept": "Formal Charge in Common Functional Groups"
+    }
+]

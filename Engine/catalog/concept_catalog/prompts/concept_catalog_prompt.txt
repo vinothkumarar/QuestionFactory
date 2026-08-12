@@ -129,6 +129,10 @@ Return JSON ONLY.
 
 [
     {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
         "concept_id": "C001",
         "concept": "Concept Name"
     }
@@ -140,28 +144,52 @@ RULES
 
 1. One row = One Concept.
 
-2. Generate sequential Concept IDs.
+2. Every record must contain:
 
-3. Concept IDs must be unique.
+   subject
+   unit
+   chapter
+   subtopic
+   concept_id
+   concept
 
-4. Do NOT nest JSON.
+3. Generate sequential Concept IDs.
 
-5. Do NOT create arrays inside records.
+4. Concept IDs must be unique.
 
-6. Return flat JSON records only.
+5. Copy subject, unit, chapter and
+   subtopic from the supplied context.
+
+6. Do NOT nest JSON.
+
+7. Do NOT create arrays inside records.
+
+8. Return flat JSON records only.
 
 Example:
 
 [
     {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
         "concept_id": "C001",
         "concept": "Classification of Numbers"
     },
     {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
         "concept_id": "C002",
         "concept": "Rational Numbers"
     },
     {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
         "concept_id": "C003",
         "concept": "Irrational Numbers"
     }

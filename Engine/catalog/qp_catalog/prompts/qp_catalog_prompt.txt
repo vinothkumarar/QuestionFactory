@@ -111,6 +111,12 @@ Return JSON ONLY.
 
 [
     {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "concept_id": "C018",
+        "concept": "Absolute Value",
         "qp_id": "QP001",
         "question_possibility":
             "Question Possibility Description"
@@ -123,33 +129,55 @@ RULES
 
 1. One row = One Question Possibility.
 
-2. Generate sequential QP IDs.
+2. Every record must contain:
 
-3. QP IDs must be unique.
+   subject
+   unit
+   chapter
+   subtopic
+   concept_id
+   concept
+   qp_id
+   question_possibility
 
-4. Do NOT nest JSON.
+3. Generate sequential QP IDs.
 
-5. Do NOT create arrays inside records.
+4. QP IDs must be unique.
 
-6. Return flat JSON records only.
+5. Do NOT nest JSON.
+
+6. Do NOT create arrays inside records.
+
+7. Return flat JSON records only.
+
+8. Copy subject, unit, chapter,
+   subtopic, concept_id and concept
+   from the supplied context.
 
 Example:
 
 [
     {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "concept_id": "C018",
+        "concept": "Absolute Value",
         "qp_id": "QP001",
         "question_possibility":
-            "Evaluate absolute value expression"
+            "Evaluate numeric expressions involving absolute value"
     },
     {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Number System",
+        "concept_id": "C018",
+        "concept": "Absolute Value",
         "qp_id": "QP002",
         "question_possibility":
             "Solve absolute value equation"
-    },
-    {
-        "qp_id": "QP003",
-        "question_possibility":
-            "Solve absolute value inequality"
     }
 ]
 

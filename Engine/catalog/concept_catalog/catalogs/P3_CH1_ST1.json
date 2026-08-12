@@ -1,0 +1,202 @@
+[
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C001",
+        "concept": "Newton's First Law of Motion"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C002",
+        "concept": "Inertia"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C003",
+        "concept": "Inertial Mass"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C004",
+        "concept": "Types of Inertia: Rest, Motion, Direction"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C005",
+        "concept": "Resultant Force and Net External Force"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C006",
+        "concept": "Balanced and Unbalanced Forces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Force-Free Motion"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C008",
+        "concept": "Zero Acceleration Condition"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C009",
+        "concept": "Uniform Rectilinear Motion"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C010",
+        "concept": "Equivalence of Rest and Uniform Motion"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C011",
+        "concept": "Static Equilibrium"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C012",
+        "concept": "Dynamic Equilibrium"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C013",
+        "concept": "Translational Equilibrium Conditions"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C014",
+        "concept": "Inertial Reference Frames"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C015",
+        "concept": "Non-Inertial Reference Frames"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C016",
+        "concept": "Fictitious (Pseudo) Forces"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C017",
+        "concept": "Fictitious Forces in Rotating Frames: Centrifugal and Coriolis"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C018",
+        "concept": "Approximate Inertial Frames (Earth and Laboratory Frames)"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C019",
+        "concept": "Operational Definition and Testing of Inertial Frames"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C020",
+        "concept": "Galilean Principle of Relativity"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C021",
+        "concept": "Galilean Transformations"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C022",
+        "concept": "Conservation of Linear Momentum for a Free Particle"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C023",
+        "concept": "Center of Mass Motion of an Isolated System"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C024",
+        "concept": "Influence of Friction and Resistive Forces on Observed Motion"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C025",
+        "concept": "Domain of Validity of Newton's First Law"
+    }
+]

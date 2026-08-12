@@ -1,0 +1,35 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C001,Set
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C002,Well-definedness of a Set
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C003,Elements and Membership of a Set
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C004,Set Notation and Symbols
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C005,"Standard Number Sets (N, W, Z, Q, R, Irrationals)"
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C006,Roster (Tabular) Form of a Set
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C007,Set-Builder (Rule) Form of a Set
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C008,Equality of Sets
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C009,Empty Set (Null Set)
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C010,Singleton Set
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C011,Finite and Infinite Sets
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C012,Subset and Proper Subset
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C013,Superset and Proper Superset
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C014,Power Set
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C015,Universal Set
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C016,Complement of a Set
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C017,Venn Diagram Representation of Sets
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C018,Ordered Pair and Order Property
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C019,Cartesian Product of Sets (A×B)
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C020,Properties of Cartesian Products
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C021,Relation as a Subset of A×B
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C022,"Domain, Codomain, and Range of a Relation"
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C023,Roster Representation of a Relation (Set of Ordered Pairs)
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C024,Arrow Diagram Representation of a Relation
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C025,Matrix Representation of a Relation
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C026,Directed Graph (Digraph) Representation of a Relation
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C027,Inverse Relation
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C028,Image and Preimage under a Relation
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C029,Graph of a Relation in the Plane (Subset of R×R)
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C030,Intervals as Sets on the Real Line
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C031,"Interval Notation and Rays (Open, Closed, Half-Open)"
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C032,Set Descriptions Using Inequalities and Conditions
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C033,Family of Sets and Indexing Notation
+Mathematics,Algebra,Sets and Relations,Definition and Standard Form,C034,Characteristic Property Defining a Set

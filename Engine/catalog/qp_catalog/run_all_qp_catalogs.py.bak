@@ -1,0 +1,144 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+from Engine.catalog.qp_catalog.qp_catalog_ai_client import (
+    QPCatalogAIClient,
+)
+
+from Engine.catalog.qp_catalog.qp_catalog_generator import (
+    QPCatalogGenerator,
+)
+
+from Engine.catalog.qp_catalog.qp_catalog_csv_exporter import (
+    QPCatalogCSVExporter,
+)
+
+
+def safe_name(text: str) -> str:
+    return (
+        text.replace("/", "_")
+        .replace("\\", "_")
+        .replace(" ", "_")
+        .replace(":", "_")
+    )
+
+
+def main() -> None:
+
+    concepts_file = (
+        Path(__file__).parent.parent
+        / "concept_catalog"
+        / "concepts.json"
+    )
+
+    concepts = json.loads(
+        concepts_file.read_text(
+            encoding="utf-8"
+        )
+    )
+
+    output_dir = (
+        Path(__file__).parent
+        / "catalogs"
+    )
+
+    output_dir.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    generator = QPCatalogGenerator()
+    client = QPCatalogAIClient()
+    csv_exporter = (
+        QPCatalogCSVExporter()
+    )
+
+    total = len(concepts)
+    
+
+    for index, concept_row in enumerate(
+        concepts,
+        start=1,
+    ):
+
+        concept_id = (
+            concept_row["concept_id"]
+        )
+
+        concept = (
+            concept_row["concept"]
+        )
+
+        file_base = (
+            f"{concept_id}_"
+            f"{safe_name(concept)}"
+        )
+
+        json_file = (
+            output_dir
+            / f"{file_base}.json"
+        )
+
+        csv_file = (
+            output_dir
+            / f"{file_base}.csv"
+        )
+
+        if json_file.exists():
+
+            print(
+                f"[{index}/{total}] "
+                f"Skipping: {file_base}"
+            )
+
+            continue
+
+        print(
+            f"[{index}/{total}] "
+            f"Generating: "
+            f"{concept_id} | {concept}"
+        )
+
+        prompt = generator.load_prompt(
+            subject="Mathematics",
+            unit="U1",
+            chapter="CH1",
+            subtopic="Number System",
+            concept_id=concept_id,
+            concept=concept,
+        )
+
+        result = (
+            client.generate_json(
+                prompt
+            )
+        )
+
+        json_file.write_text(
+            json.dumps(
+                result,
+                indent=4,
+                ensure_ascii=False,
+            ),
+            encoding="utf-8",
+        )
+
+        csv_exporter.export(
+            json_file=json_file,
+            csv_file=csv_file,
+        )
+
+        print(
+            f"Created: "
+            f"{csv_file.name}"
+        )
+
+    print(
+        "\nQP catalog generation complete."
+    )
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,57 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C001,Definition and Purpose of Free Body Diagrams
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C002,System Selection and Isolation
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C003,Particle Idealization
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C004,Rigid Body Idealization
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C005,Internal and External Forces
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C006,Action–Reaction Pairs and Interaction Forces
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C007,Body Forces and Field Forces
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C008,Contact Forces
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C009,Gravitational Force (Weight)
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C010,Normal Reaction Force
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C011,Friction Force: Static
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C012,Friction Force: Kinetic
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C013,Limiting Friction and Coefficient of Friction
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C014,Angle of Friction and Friction Cone
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C015,Tension in Strings and Ropes
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C016,Spring Force and Hooke’s Law
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C017,Buoyant Force (Archimedes’ Principle)
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C018,Drag and Air Resistance Models
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C019,Thrust and Propulsion Forces
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C020,Constraint Forces at Hinges and Pins
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C021,Rolling Contact and Static Friction in Pure Rolling
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C022,Rolling Resistance and Traction
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C023,Pseudo Forces in Linearly Accelerating Frames
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C024,Centrifugal and Coriolis Pseudo Forces in Rotating Frames
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C025,Coordinate Systems and Axes in Mechanics
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C026,Force Decomposition into Components
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C027,Tangential and Normal Components on Curved Paths
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C028,Inclined Plane Force Components
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C029,Representation Conventions in Free Body Diagrams
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C030,Multiple Contact Points and Resultant Contact Force
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C031,Point of Application and Line of Action of Forces
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C032,Weight Application at Center of Mass
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C033,Extended Body Free-Body Diagrams with Torques and Couples
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C034,Equilibrium Conditions and Net Force
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C035,Dynamic Conditions and Newton’s Second Law Mapping
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C036,System-Level Versus Individual Body Free-Body Diagrams
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C037,Free-Body Diagrams for Connected Bodies
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C038,"Idealizations: Smooth Surfaces, Massless Strings, Frictionless Pulleys"
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C039,String and Pulley Kinematic Constraints
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C040,Tension Relationships in Ideal Pulleys and Massless Strings
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C041,Free-Body Diagrams of Pulleys and Rope Segments
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C042,Wedge–Block Contact Interactions
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C043,Apparent Weight and Normal Reaction
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C044,Impulsive Forces and Momentum Impulse Representation
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C045,Distributed Loads Replaced by Resultants (Mechanics Context)
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C046,Limitations and Validity of the Free Body Diagram Model
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C047,"Non-Ideal Strings and Pulleys: Mass, Friction, and Variable Tension"
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C048,D’Alembert’s Principle and Inertial Force Representation
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C049,Geometric Constraints in Connected Systems
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C050,Differential Free-Body Diagrams for Variable Forces
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C051,"Support Reactions: Pin, Roller, and Fixed Supports"
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C052,Rolling Without Slipping Kinematic Constraint
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C053,External Forces and Center of Mass Dynamics
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C054,Free-Body Diagrams for Variable-Mass Systems
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C055,Planar versus Three-Dimensional Free-Body Diagrams
+Physics,Laws of Motion,Newton's Laws,Free Body Diagrams,C056,Long-Range Forces: Electrostatic and Magnetic Forces
