@@ -134,6 +134,44 @@ DISCOVERY RULES
     Space of the supplied Concept, but remain
     strictly inside Concept boundaries.
 
+QUESTION POSSIBILITY DEFINITION RULES
+
+14. A Question Possibility represents an
+    academically distinct examinable outcome
+    that can be assessed using the supplied
+    Concept.
+
+15. A Question Possibility describes
+    WHAT is being assessed,
+    not HOW it is solved.
+
+16. Do NOT create separate Question
+    Possibilities for:
+
+    • Different formulas
+    • Different equations
+    • Different solution methods
+    • Different computational techniques
+    • Different named models
+    • Different named derivations
+
+17. Such variations belong to the
+    Archetype layer, not the
+    Question Possibility layer.
+
+18. Multiple approaches that assess the
+    same underlying learning outcome
+    must be represented by a single
+    Question Possibility.
+
+19. Prefer learning outcomes over
+    solution procedures.
+
+20. A student who has mastered the
+    supplied Concept should recognize
+    the Question Possibility before
+    selecting a solution method.
+
 --------------------------------------------------
 
 OUTPUT FORMAT
