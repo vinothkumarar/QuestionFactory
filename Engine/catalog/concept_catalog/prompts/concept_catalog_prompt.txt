@@ -121,6 +121,57 @@ DISCOVERY RULES
 
    Do NOT include it.
 
+CONCEPT BOUNDARY RULES
+
+8. Generate Concepts ONLY for the supplied
+   Subtopic.
+
+9. A Concept must be directly teachable as
+   part of the supplied Subtopic itself.
+
+10. Do NOT expand into neighboring concepts,
+    supporting theories, derived theories,
+    specialized models, or later syllabus
+    concepts.
+
+11. If a Concept can reasonably exist as an
+    independent Concept under a different
+    Subtopic, do NOT include it.
+
+12. Prefer core Concept decomposition over
+    topic expansion.
+
+13. Exhaustively enumerate the Concept Space
+    of the supplied Subtopic, but remain
+    strictly within Subtopic boundaries.
+
+CONCEPT DEFINITION RULES
+
+14. A Concept is a core knowledge idea,
+    principle, property, process,
+    entity, or relationship that can be
+    taught independently within the
+    supplied Subtopic.
+
+15. Do NOT create separate Concepts for:
+
+    • Named equations
+    • Named constants
+    • Named computational methods
+    • Named mathematical models
+    • Named derivation frameworks
+
+16. Such items should be treated as tools
+    used to analyze or calculate a Concept,
+    not as Concepts themselves.
+
+17. If multiple equations, constants,
+    models, or methods exist to study the
+    same underlying idea, create only the
+    underlying Concept.
+
+18. Prefer conceptual abstraction over
+    mathematical implementation.
 --------------------------------------------------
 
 OUTPUT FORMAT

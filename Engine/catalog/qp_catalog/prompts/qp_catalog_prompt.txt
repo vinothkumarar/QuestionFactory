@@ -103,6 +103,37 @@ DISCOVERY RULES
 
 6. Exhaustively enumerate the academic space.
 
+7. Generate Question Possibilities ONLY for the
+   supplied Concept.
+
+8. Do NOT expand into neighboring concepts,
+   derived concepts, advanced applications,
+   later syllabus concepts, or concepts that
+   require additional theory beyond the
+   supplied Concept.
+
+9. Every Question Possibility must be directly
+   answerable using the supplied Concept as
+   the primary knowledge requirement.
+
+10. If a possibility primarily belongs to a
+    different Concept, do NOT include it.
+
+11. Prefer depth within the supplied Concept
+    rather than breadth across related concepts.
+
+12. Do NOT create Question Possibilities that
+    primarily depend on knowledge that is
+    outside the supplied Concept.
+
+    If solving or answering the possibility
+    requires another major Concept as the
+    primary prerequisite, do NOT include it.
+
+13. Exhaust the COMPLETE Question Possibility
+    Space of the supplied Concept, but remain
+    strictly inside Concept boundaries.
+
 --------------------------------------------------
 
 OUTPUT FORMAT

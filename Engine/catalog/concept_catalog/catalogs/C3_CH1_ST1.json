@@ -5,7 +5,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C001",
-        "concept": "Ionic Bond (Electrovalent Bond)"
+        "concept": "Nature of Ionic Bond (electron transfer and electrostatic attraction)"
     },
     {
         "subject": "Chemistry",
@@ -13,7 +13,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C002",
-        "concept": "Cations and Anions"
+        "concept": "Cations and Anions: Formation and Electronic Configurations"
     },
     {
         "subject": "Chemistry",
@@ -21,7 +21,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C003",
-        "concept": "Electrovalency"
+        "concept": "Octet Rule as a Driving Force for Ion Formation"
     },
     {
         "subject": "Chemistry",
@@ -29,7 +29,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C004",
-        "concept": "Criteria for Formation of Ionic Compounds"
+        "concept": "Ionization Enthalpy and Cation Formation"
     },
     {
         "subject": "Chemistry",
@@ -37,7 +37,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C005",
-        "concept": "Energetics of Ionic Compound Formation"
+        "concept": "Electron Gain Enthalpy and Anion Formation"
     },
     {
         "subject": "Chemistry",
@@ -45,7 +45,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C006",
-        "concept": "Ionization Enthalpy in Ionic Bonding"
+        "concept": "Lattice Energy: Definition and Significance in Ionic Solids"
     },
     {
         "subject": "Chemistry",
@@ -53,7 +53,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C007",
-        "concept": "Electron Gain Enthalpy"
+        "concept": "Lattice Enthalpy vs Lattice Energy: Definitions and Sign Conventions"
     },
     {
         "subject": "Chemistry",
@@ -61,7 +61,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C008",
-        "concept": "Enthalpy of Atomization and Sublimation"
+        "concept": "Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)"
     },
     {
         "subject": "Chemistry",
@@ -69,7 +69,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C009",
-        "concept": "Lattice Energy and Lattice Enthalpy"
+        "concept": "Electrostatic Attraction and Short-Range Repulsion in Ionic Crystals"
     },
     {
         "subject": "Chemistry",
@@ -77,7 +77,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C010",
-        "concept": "Born–Haber Cycle"
+        "concept": "Lattice Geometry Effects on Electrostatic Stabilization in Ionic Solids"
     },
     {
         "subject": "Chemistry",
@@ -85,7 +85,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C011",
-        "concept": "Born–Landé Equation"
+        "concept": "Thermochemical Terms in Ionic Solid Formation (sublimation, atomization, bond dissociation, ionization, electron gain)"
     },
     {
         "subject": "Chemistry",
@@ -93,7 +93,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C012",
-        "concept": "Born–Mayer Equation"
+        "concept": "Thermochemical Cycle for Ionic Solid Formation Energetics (application of Hess's law)"
     },
     {
         "subject": "Chemistry",
@@ -101,7 +101,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C013",
-        "concept": "Kapustinskii Equation"
+        "concept": "Enthalpy of Formation of Ionic Solids and Its Relationship to Lattice Energy"
     },
     {
         "subject": "Chemistry",
@@ -109,7 +109,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C014",
-        "concept": "Madelung Constant"
+        "concept": "Quantitative Estimation of Lattice Energy from Ionic Properties (model-based overview)"
     },
     {
         "subject": "Chemistry",
@@ -117,7 +117,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C015",
-        "concept": "Born Exponent"
+        "concept": "Ionic Radius: Definition and Trends (cations vs anions, coordination dependence, oxidation state)"
     },
     {
         "subject": "Chemistry",
@@ -125,7 +125,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C016",
-        "concept": "Coulombic Model of Ionic Solids"
+        "concept": "Radius Ratio and Coordination Number in Ionic Solids"
     },
     {
         "subject": "Chemistry",
@@ -133,7 +133,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C017",
-        "concept": "Potential Energy Curves for Ion Pair Interaction"
+        "concept": "Common Ionic Lattice Types and Coordination Numbers"
     },
     {
         "subject": "Chemistry",
@@ -141,7 +141,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C018",
-        "concept": "Ionic Radius"
+        "concept": "Polarizing Power and Polarizability of Ions"
     },
     {
         "subject": "Chemistry",
@@ -149,7 +149,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C019",
-        "concept": "Effective Ionic Radii (Shannon Radii)"
+        "concept": "Partial Covalent Character in Ionic Compounds (origin and implications)"
     },
     {
         "subject": "Chemistry",
@@ -157,7 +157,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C020",
-        "concept": "Coordination Number in Ionic Crystals"
+        "concept": "Ionic Potential (charge density) and Its Effect on Polarization and Stability"
     },
     {
         "subject": "Chemistry",
@@ -165,7 +165,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C021",
-        "concept": "Radius Ratio Rule"
+        "concept": "Solvent Effects on Ionic Interactions (dielectric constant and solvation)"
     },
     {
         "subject": "Chemistry",
@@ -173,7 +173,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C022",
-        "concept": "Ionic Crystal Structures (NaCl, CsCl, ZnS, CaF2 Types)"
+        "concept": "Hydration Enthalpy of Ions: Concept and Dependence on Size and Charge"
     },
     {
         "subject": "Chemistry",
@@ -181,7 +181,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C023",
-        "concept": "Factors Affecting Lattice Energy"
+        "concept": "Enthalpy of Solution of Ionic Solids (balance of lattice and hydration enthalpies)"
     },
     {
         "subject": "Chemistry",
@@ -189,7 +189,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C024",
-        "concept": "Polarization in Ionic Compounds"
+        "concept": "Solubility of Ionic Compounds: Energetic Considerations and Trends"
     },
     {
         "subject": "Chemistry",
@@ -197,7 +197,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C025",
-        "concept": "Polarizing Power and Polarizability"
+        "concept": "Physical Properties of Ionic Compounds (melting point, hardness, brittleness)"
     },
     {
         "subject": "Chemistry",
@@ -205,7 +205,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C026",
-        "concept": "Fajans’ Rules"
+        "concept": "Electrical Conductivity of Ionic Compounds in Solid, Molten, and Aqueous States"
     },
     {
         "subject": "Chemistry",
@@ -213,7 +213,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C027",
-        "concept": "Covalent Character in Ionic Compounds"
+        "concept": "Stability of Ionic Compounds: Roles of Lattice Energy and Polarization"
     },
     {
         "subject": "Chemistry",
@@ -221,7 +221,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C028",
-        "concept": "Electronegativity Difference and Ionic Character"
+        "concept": "Ionic Character in Chemical Bonds and Electronegativity Difference"
     },
     {
         "subject": "Chemistry",
@@ -229,7 +229,7 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C029",
-        "concept": "Percentage Ionic Character"
+        "concept": "Stoichiometry and Charge Neutrality in Ionic Compounds (formula units and empirical formulas)"
     },
     {
         "subject": "Chemistry",
@@ -237,70 +237,6 @@
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
         "concept_id": "C030",
-        "concept": "Hydration Enthalpy"
-    },
-    {
-        "subject": "Chemistry",
-        "unit": "Chemical Bonding and Molecular Structure",
-        "chapter": "Chemical Bonding",
-        "subtopic": "Ionic Bond",
-        "concept_id": "C031",
-        "concept": "Solvation and Solvent Effects on Ionic Compounds"
-    },
-    {
-        "subject": "Chemistry",
-        "unit": "Chemical Bonding and Molecular Structure",
-        "chapter": "Chemical Bonding",
-        "subtopic": "Ionic Bond",
-        "concept_id": "C032",
-        "concept": "Dielectric Constant and Solvent Polarity Effects"
-    },
-    {
-        "subject": "Chemistry",
-        "unit": "Chemical Bonding and Molecular Structure",
-        "chapter": "Chemical Bonding",
-        "subtopic": "Ionic Bond",
-        "concept_id": "C033",
-        "concept": "Solubility of Ionic Compounds"
-    },
-    {
-        "subject": "Chemistry",
-        "unit": "Chemical Bonding and Molecular Structure",
-        "chapter": "Chemical Bonding",
-        "subtopic": "Ionic Bond",
-        "concept_id": "C034",
-        "concept": "Competing Lattice and Hydration Energies in Solubility Trends"
-    },
-    {
-        "subject": "Chemistry",
-        "unit": "Chemical Bonding and Molecular Structure",
-        "chapter": "Chemical Bonding",
-        "subtopic": "Ionic Bond",
-        "concept_id": "C035",
-        "concept": "Thermal Stability of Ionic Compounds"
-    },
-    {
-        "subject": "Chemistry",
-        "unit": "Chemical Bonding and Molecular Structure",
-        "chapter": "Chemical Bonding",
-        "subtopic": "Ionic Bond",
-        "concept_id": "C036",
-        "concept": "Physical Properties of Ionic Solids"
-    },
-    {
-        "subject": "Chemistry",
-        "unit": "Chemical Bonding and Molecular Structure",
-        "chapter": "Chemical Bonding",
-        "subtopic": "Ionic Bond",
-        "concept_id": "C037",
-        "concept": "Electrical Conductivity of Ionic Compounds"
-    },
-    {
-        "subject": "Chemistry",
-        "unit": "Chemical Bonding and Molecular Structure",
-        "chapter": "Chemical Bonding",
-        "subtopic": "Ionic Bond",
-        "concept_id": "C038",
         "concept": "Ionic Compounds Containing Polyatomic Ions"
     },
     {
@@ -308,47 +244,7 @@
         "unit": "Chemical Bonding and Molecular Structure",
         "chapter": "Chemical Bonding",
         "subtopic": "Ionic Bond",
-        "concept_id": "C039",
-        "concept": "Hard and Soft Acids and Bases (HSAB) in Ionic Bonding"
-    },
-    {
-        "subject": "Chemistry",
-        "unit": "Chemical Bonding and Molecular Structure",
-        "chapter": "Chemical Bonding",
-        "subtopic": "Ionic Bond",
-        "concept_id": "C040",
-        "concept": "Thermodynamic Stability of Ionic Solids"
-    },
-    {
-        "subject": "Chemistry",
-        "unit": "Chemical Bonding and Molecular Structure",
-        "chapter": "Chemical Bonding",
-        "subtopic": "Ionic Bond",
-        "concept_id": "C041",
-        "concept": "Ion–Dipole Interactions in Solution"
-    },
-    {
-        "subject": "Chemistry",
-        "unit": "Chemical Bonding and Molecular Structure",
-        "chapter": "Chemical Bonding",
-        "subtopic": "Ionic Bond",
-        "concept_id": "C042",
-        "concept": "Hydrated Ions and Hydration Number"
-    },
-    {
-        "subject": "Chemistry",
-        "unit": "Chemical Bonding and Molecular Structure",
-        "chapter": "Chemical Bonding",
-        "subtopic": "Ionic Bond",
-        "concept_id": "C043",
-        "concept": "Ionic Potential (Charge Density) of Ions"
-    },
-    {
-        "subject": "Chemistry",
-        "unit": "Chemical Bonding and Molecular Structure",
-        "chapter": "Chemical Bonding",
-        "subtopic": "Ionic Bond",
-        "concept_id": "C044",
-        "concept": "Ionic Bonding versus Covalent Bonding (Comparative Features)"
+        "concept_id": "C031",
+        "concept": "Comparison of Ionic and Covalent Bonding: Distinguishing Features"
     }
 ]

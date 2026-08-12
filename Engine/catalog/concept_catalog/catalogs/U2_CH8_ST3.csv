@@ -1,38 +1,31 @@
 subject,unit,chapter,subtopic,concept_id,concept
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C001,Definition of Transpose of a Matrix
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C002,Order and Index Mapping Under Transpose
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C003,"Algebraic Properties of Transpose (Sum, Scalar Multiple, Double Transpose)"
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C004,Transpose of a Product of Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C005,Relation Between Transpose and Inverse
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C006,Determinant of a Transpose
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C007,Trace of a Transpose
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C008,Rank Invariance Under Transpose
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C009,"Transpose of Special Matrices (Zero, Identity, Diagonal, Triangular)"
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C010,Block Matrix Transpose
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C011,Definition of Symmetric Matrix
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C012,Definition of Skew-Symmetric Matrix
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C013,Fundamental Properties of Symmetric Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C014,Fundamental Properties of Skew-Symmetric Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C015,Symmetric–Skew-Symmetric Decomposition of a Matrix
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C016,Uniqueness of Symmetric–Skew-Symmetric Decomposition
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C017,Degrees of Freedom in Symmetric and Skew-Symmetric Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C018,Symmetry of A A^T and A^T A
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C019,Positive Semidefiniteness of A^T A
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C020,Orthogonal Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C021,Symmetric Orthogonal Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C022,Symmetry Conditions for Matrix Products
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C023,Symmetric Triangular Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C024,Adjugate and Transpose Relations
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C025,Adjugate of a Symmetric Matrix
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C026,Conjugate Transpose (Hermitian Transpose)
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C027,Hermitian and Skew-Hermitian Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C028,Relationship Between Symmetric and Hermitian Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C029,Eigenproperties of Real Symmetric Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C030,Eigenproperties of Real Skew-Symmetric Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C031,Gram Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C032,Congruence Transformations of Symmetric Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C033,Block Symmetric Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C034,Normal Equations and Symmetric Positive Semidefinite Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C035,Transpose as a Linear Involution on Matrix Space
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C036,Determinant Properties of Skew-Symmetric Matrices
-Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C037,Positive Definite and Positive Semidefinite Symmetric Matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C001,Matrix Transpose: Definition and Notation
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C002,Dimensional Effect of Transpose
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C003,Involution Property of Transpose (Double Transpose)
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C004,Transpose of Sum and Scalar Multiple
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C005,Transpose of Product of Matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C006,Transpose of Inverse (Invertible Matrices)
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C007,Trace Invariance under Transpose
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C008,Rank Invariance under Transpose
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C009,Row Space and Column Space under Transpose
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C010,Transpose of Partitioned (Block) Matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C011,Transpose and Triangular Matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C012,Transpose of Identity and Zero Matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C013,Symmetric Matrices: Definition and Entrywise Characterization
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C014,Skew-Symmetric Matrices: Definition and Entrywise Characterization
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C015,Diagonal Entries and Trace of Skew-Symmetric Matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C016,Closure Properties of Symmetric Matrices (Addition and Scalar Multiplication)
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C017,Closure Properties of Skew-Symmetric Matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C018,Product of Symmetric Matrices and Commutativity Condition for Symmetry
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C019,Decomposition into Symmetric and Skew-Symmetric Parts (Uniqueness)
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C020,Intersection of Symmetric and Skew-Symmetric Matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C021,Symmetry of Diagonal Matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C022,Symmetry Constraints on Triangular Matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C023,Symmetric Block Matrices: Conditions on Subblocks
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C024,Symmetry of A^T A and A A^T
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C025,Independent Parameters in Symmetric Matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C026,Independent Parameters in Skew-Symmetric Matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C027,Effect of Transpose on Elementary Row and Column Operations
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C028,Order Requirement for Symmetric and Skew-Symmetric Matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C029,Transpose Properties for Rank-One and Outer-Product Matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C030,Symmetry Preservation under Congruence Transformations

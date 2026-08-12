@@ -5,7 +5,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C001",
-        "concept": "Real Matrix"
+        "concept": "Real matrix"
     },
     {
         "subject": "Mathematics",
@@ -13,7 +13,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C002",
-        "concept": "Complex Matrix"
+        "concept": "Complex matrix"
     },
     {
         "subject": "Mathematics",
@@ -21,7 +21,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C003",
-        "concept": "Square Matrix"
+        "concept": "Integer matrix"
     },
     {
         "subject": "Mathematics",
@@ -29,7 +29,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C004",
-        "concept": "Rectangular Matrix"
+        "concept": "Boolean matrix"
     },
     {
         "subject": "Mathematics",
@@ -37,7 +37,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C005",
-        "concept": "Row Matrix"
+        "concept": "Row matrix"
     },
     {
         "subject": "Mathematics",
@@ -45,7 +45,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C006",
-        "concept": "Column Matrix"
+        "concept": "Column matrix"
     },
     {
         "subject": "Mathematics",
@@ -53,7 +53,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C007",
-        "concept": "Zero Matrix"
+        "concept": "Rectangular matrix"
     },
     {
         "subject": "Mathematics",
@@ -61,7 +61,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C008",
-        "concept": "Identity Matrix"
+        "concept": "Square matrix"
     },
     {
         "subject": "Mathematics",
@@ -69,7 +69,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C009",
-        "concept": "Diagonal Matrix"
+        "concept": "Zero matrix"
     },
     {
         "subject": "Mathematics",
@@ -77,7 +77,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C010",
-        "concept": "Scalar Matrix"
+        "concept": "Diagonal matrix"
     },
     {
         "subject": "Mathematics",
@@ -85,7 +85,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C011",
-        "concept": "Triangular Matrix"
+        "concept": "Scalar matrix"
     },
     {
         "subject": "Mathematics",
@@ -93,7 +93,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C012",
-        "concept": "Upper Triangular Matrix"
+        "concept": "Identity matrix"
     },
     {
         "subject": "Mathematics",
@@ -101,7 +101,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C013",
-        "concept": "Lower Triangular Matrix"
+        "concept": "Upper triangular matrix"
     },
     {
         "subject": "Mathematics",
@@ -109,7 +109,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C014",
-        "concept": "Strictly Upper Triangular Matrix"
+        "concept": "Lower triangular matrix"
     },
     {
         "subject": "Mathematics",
@@ -117,7 +117,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C015",
-        "concept": "Strictly Lower Triangular Matrix"
+        "concept": "Strictly upper triangular matrix"
     },
     {
         "subject": "Mathematics",
@@ -125,7 +125,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C016",
-        "concept": "Symmetric Matrix"
+        "concept": "Strictly lower triangular matrix"
     },
     {
         "subject": "Mathematics",
@@ -133,7 +133,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C017",
-        "concept": "Skew-Symmetric Matrix"
+        "concept": "Symmetric matrix"
     },
     {
         "subject": "Mathematics",
@@ -141,7 +141,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C018",
-        "concept": "Orthogonal Matrix"
+        "concept": "Skew-symmetric matrix"
     },
     {
         "subject": "Mathematics",
@@ -149,7 +149,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C019",
-        "concept": "Singular Matrix"
+        "concept": "Orthogonal matrix"
     },
     {
         "subject": "Mathematics",
@@ -157,7 +157,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C020",
-        "concept": "Non-Singular Matrix"
+        "concept": "Hermitian matrix"
     },
     {
         "subject": "Mathematics",
@@ -165,7 +165,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C021",
-        "concept": "Idempotent Matrix"
+        "concept": "Skew-Hermitian matrix"
     },
     {
         "subject": "Mathematics",
@@ -173,7 +173,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C022",
-        "concept": "Involutory Matrix"
+        "concept": "Unitary matrix"
     },
     {
         "subject": "Mathematics",
@@ -181,7 +181,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C023",
-        "concept": "Nilpotent Matrix"
+        "concept": "Hollow matrix"
     },
     {
         "subject": "Mathematics",
@@ -189,7 +189,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C024",
-        "concept": "Permutation Matrix"
+        "concept": "Permutation matrix"
     },
     {
         "subject": "Mathematics",
@@ -197,7 +197,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C025",
-        "concept": "Elementary Matrix"
+        "concept": "Elementary matrix"
     },
     {
         "subject": "Mathematics",
@@ -205,7 +205,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C026",
-        "concept": "Partitioned (Block) Matrix"
+        "concept": "Block (partitioned) matrix"
     },
     {
         "subject": "Mathematics",
@@ -213,7 +213,7 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C027",
-        "concept": "Block Diagonal Matrix"
+        "concept": "Singular matrix"
     },
     {
         "subject": "Mathematics",
@@ -221,14 +221,6 @@
         "chapter": "Matrices",
         "subtopic": "Types of Matrices",
         "concept_id": "C028",
-        "concept": "Row Echelon Form Matrix"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "Algebra",
-        "chapter": "Matrices",
-        "subtopic": "Types of Matrices",
-        "concept_id": "C029",
-        "concept": "Reduced Row Echelon Form Matrix"
+        "concept": "Non-singular (invertible) matrix"
     }
 ]

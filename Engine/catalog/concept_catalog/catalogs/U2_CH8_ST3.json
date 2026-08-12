@@ -5,7 +5,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C001",
-        "concept": "Definition of Transpose of a Matrix"
+        "concept": "Matrix Transpose: Definition and Notation"
     },
     {
         "subject": "Mathematics",
@@ -13,7 +13,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C002",
-        "concept": "Order and Index Mapping Under Transpose"
+        "concept": "Dimensional Effect of Transpose"
     },
     {
         "subject": "Mathematics",
@@ -21,7 +21,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C003",
-        "concept": "Algebraic Properties of Transpose (Sum, Scalar Multiple, Double Transpose)"
+        "concept": "Involution Property of Transpose (Double Transpose)"
     },
     {
         "subject": "Mathematics",
@@ -29,7 +29,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C004",
-        "concept": "Transpose of a Product of Matrices"
+        "concept": "Transpose of Sum and Scalar Multiple"
     },
     {
         "subject": "Mathematics",
@@ -37,7 +37,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C005",
-        "concept": "Relation Between Transpose and Inverse"
+        "concept": "Transpose of Product of Matrices"
     },
     {
         "subject": "Mathematics",
@@ -45,7 +45,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C006",
-        "concept": "Determinant of a Transpose"
+        "concept": "Transpose of Inverse (Invertible Matrices)"
     },
     {
         "subject": "Mathematics",
@@ -53,7 +53,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C007",
-        "concept": "Trace of a Transpose"
+        "concept": "Trace Invariance under Transpose"
     },
     {
         "subject": "Mathematics",
@@ -61,7 +61,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C008",
-        "concept": "Rank Invariance Under Transpose"
+        "concept": "Rank Invariance under Transpose"
     },
     {
         "subject": "Mathematics",
@@ -69,7 +69,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C009",
-        "concept": "Transpose of Special Matrices (Zero, Identity, Diagonal, Triangular)"
+        "concept": "Row Space and Column Space under Transpose"
     },
     {
         "subject": "Mathematics",
@@ -77,7 +77,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C010",
-        "concept": "Block Matrix Transpose"
+        "concept": "Transpose of Partitioned (Block) Matrices"
     },
     {
         "subject": "Mathematics",
@@ -85,7 +85,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C011",
-        "concept": "Definition of Symmetric Matrix"
+        "concept": "Transpose and Triangular Matrices"
     },
     {
         "subject": "Mathematics",
@@ -93,7 +93,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C012",
-        "concept": "Definition of Skew-Symmetric Matrix"
+        "concept": "Transpose of Identity and Zero Matrices"
     },
     {
         "subject": "Mathematics",
@@ -101,7 +101,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C013",
-        "concept": "Fundamental Properties of Symmetric Matrices"
+        "concept": "Symmetric Matrices: Definition and Entrywise Characterization"
     },
     {
         "subject": "Mathematics",
@@ -109,7 +109,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C014",
-        "concept": "Fundamental Properties of Skew-Symmetric Matrices"
+        "concept": "Skew-Symmetric Matrices: Definition and Entrywise Characterization"
     },
     {
         "subject": "Mathematics",
@@ -117,7 +117,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C015",
-        "concept": "Symmetric–Skew-Symmetric Decomposition of a Matrix"
+        "concept": "Diagonal Entries and Trace of Skew-Symmetric Matrices"
     },
     {
         "subject": "Mathematics",
@@ -125,7 +125,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C016",
-        "concept": "Uniqueness of Symmetric–Skew-Symmetric Decomposition"
+        "concept": "Closure Properties of Symmetric Matrices (Addition and Scalar Multiplication)"
     },
     {
         "subject": "Mathematics",
@@ -133,7 +133,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C017",
-        "concept": "Degrees of Freedom in Symmetric and Skew-Symmetric Matrices"
+        "concept": "Closure Properties of Skew-Symmetric Matrices"
     },
     {
         "subject": "Mathematics",
@@ -141,7 +141,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C018",
-        "concept": "Symmetry of A A^T and A^T A"
+        "concept": "Product of Symmetric Matrices and Commutativity Condition for Symmetry"
     },
     {
         "subject": "Mathematics",
@@ -149,7 +149,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C019",
-        "concept": "Positive Semidefiniteness of A^T A"
+        "concept": "Decomposition into Symmetric and Skew-Symmetric Parts (Uniqueness)"
     },
     {
         "subject": "Mathematics",
@@ -157,7 +157,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C020",
-        "concept": "Orthogonal Matrices"
+        "concept": "Intersection of Symmetric and Skew-Symmetric Matrices"
     },
     {
         "subject": "Mathematics",
@@ -165,7 +165,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C021",
-        "concept": "Symmetric Orthogonal Matrices"
+        "concept": "Symmetry of Diagonal Matrices"
     },
     {
         "subject": "Mathematics",
@@ -173,7 +173,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C022",
-        "concept": "Symmetry Conditions for Matrix Products"
+        "concept": "Symmetry Constraints on Triangular Matrices"
     },
     {
         "subject": "Mathematics",
@@ -181,7 +181,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C023",
-        "concept": "Symmetric Triangular Matrices"
+        "concept": "Symmetric Block Matrices: Conditions on Subblocks"
     },
     {
         "subject": "Mathematics",
@@ -189,7 +189,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C024",
-        "concept": "Adjugate and Transpose Relations"
+        "concept": "Symmetry of A^T A and A A^T"
     },
     {
         "subject": "Mathematics",
@@ -197,7 +197,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C025",
-        "concept": "Adjugate of a Symmetric Matrix"
+        "concept": "Independent Parameters in Symmetric Matrices"
     },
     {
         "subject": "Mathematics",
@@ -205,7 +205,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C026",
-        "concept": "Conjugate Transpose (Hermitian Transpose)"
+        "concept": "Independent Parameters in Skew-Symmetric Matrices"
     },
     {
         "subject": "Mathematics",
@@ -213,7 +213,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C027",
-        "concept": "Hermitian and Skew-Hermitian Matrices"
+        "concept": "Effect of Transpose on Elementary Row and Column Operations"
     },
     {
         "subject": "Mathematics",
@@ -221,7 +221,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C028",
-        "concept": "Relationship Between Symmetric and Hermitian Matrices"
+        "concept": "Order Requirement for Symmetric and Skew-Symmetric Matrices"
     },
     {
         "subject": "Mathematics",
@@ -229,7 +229,7 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C029",
-        "concept": "Eigenproperties of Real Symmetric Matrices"
+        "concept": "Transpose Properties for Rank-One and Outer-Product Matrices"
     },
     {
         "subject": "Mathematics",
@@ -237,62 +237,6 @@
         "chapter": "Matrices",
         "subtopic": "Transpose and Symmetric Matrices",
         "concept_id": "C030",
-        "concept": "Eigenproperties of Real Skew-Symmetric Matrices"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "Algebra",
-        "chapter": "Matrices",
-        "subtopic": "Transpose and Symmetric Matrices",
-        "concept_id": "C031",
-        "concept": "Gram Matrices"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "Algebra",
-        "chapter": "Matrices",
-        "subtopic": "Transpose and Symmetric Matrices",
-        "concept_id": "C032",
-        "concept": "Congruence Transformations of Symmetric Matrices"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "Algebra",
-        "chapter": "Matrices",
-        "subtopic": "Transpose and Symmetric Matrices",
-        "concept_id": "C033",
-        "concept": "Block Symmetric Matrices"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "Algebra",
-        "chapter": "Matrices",
-        "subtopic": "Transpose and Symmetric Matrices",
-        "concept_id": "C034",
-        "concept": "Normal Equations and Symmetric Positive Semidefinite Matrices"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "Algebra",
-        "chapter": "Matrices",
-        "subtopic": "Transpose and Symmetric Matrices",
-        "concept_id": "C035",
-        "concept": "Transpose as a Linear Involution on Matrix Space"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "Algebra",
-        "chapter": "Matrices",
-        "subtopic": "Transpose and Symmetric Matrices",
-        "concept_id": "C036",
-        "concept": "Determinant Properties of Skew-Symmetric Matrices"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "Algebra",
-        "chapter": "Matrices",
-        "subtopic": "Transpose and Symmetric Matrices",
-        "concept_id": "C037",
-        "concept": "Positive Definite and Positive Semidefinite Symmetric Matrices"
+        "concept": "Symmetry Preservation under Congruence Transformations"
     }
 ]

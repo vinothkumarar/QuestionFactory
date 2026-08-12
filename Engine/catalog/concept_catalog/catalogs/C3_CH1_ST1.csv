@@ -1,45 +1,32 @@
 subject,unit,chapter,subtopic,concept_id,concept
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C001,Ionic Bond (Electrovalent Bond)
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C002,Cations and Anions
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C003,Electrovalency
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C004,Criteria for Formation of Ionic Compounds
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C005,Energetics of Ionic Compound Formation
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C006,Ionization Enthalpy in Ionic Bonding
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C007,Electron Gain Enthalpy
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C008,Enthalpy of Atomization and Sublimation
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C009,Lattice Energy and Lattice Enthalpy
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C010,Born–Haber Cycle
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C011,Born–Landé Equation
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C012,Born–Mayer Equation
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C013,Kapustinskii Equation
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C014,Madelung Constant
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C015,Born Exponent
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C016,Coulombic Model of Ionic Solids
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C017,Potential Energy Curves for Ion Pair Interaction
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C018,Ionic Radius
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C019,Effective Ionic Radii (Shannon Radii)
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C020,Coordination Number in Ionic Crystals
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C021,Radius Ratio Rule
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C022,"Ionic Crystal Structures (NaCl, CsCl, ZnS, CaF2 Types)"
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C023,Factors Affecting Lattice Energy
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C024,Polarization in Ionic Compounds
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C025,Polarizing Power and Polarizability
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C026,Fajans’ Rules
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C027,Covalent Character in Ionic Compounds
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C028,Electronegativity Difference and Ionic Character
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C029,Percentage Ionic Character
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C030,Hydration Enthalpy
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C031,Solvation and Solvent Effects on Ionic Compounds
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C032,Dielectric Constant and Solvent Polarity Effects
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C033,Solubility of Ionic Compounds
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C034,Competing Lattice and Hydration Energies in Solubility Trends
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C035,Thermal Stability of Ionic Compounds
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C036,Physical Properties of Ionic Solids
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C037,Electrical Conductivity of Ionic Compounds
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C038,Ionic Compounds Containing Polyatomic Ions
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C039,Hard and Soft Acids and Bases (HSAB) in Ionic Bonding
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C040,Thermodynamic Stability of Ionic Solids
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C041,Ion–Dipole Interactions in Solution
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C042,Hydrated Ions and Hydration Number
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C043,Ionic Potential (Charge Density) of Ions
-Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C044,Ionic Bonding versus Covalent Bonding (Comparative Features)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C001,Nature of Ionic Bond (electron transfer and electrostatic attraction)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C002,Cations and Anions: Formation and Electronic Configurations
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C003,Octet Rule as a Driving Force for Ion Formation
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C004,Ionization Enthalpy and Cation Formation
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C005,Electron Gain Enthalpy and Anion Formation
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C006,Lattice Energy: Definition and Significance in Ionic Solids
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C007,Lattice Enthalpy vs Lattice Energy: Definitions and Sign Conventions
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C008,"Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)"
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C009,Electrostatic Attraction and Short-Range Repulsion in Ionic Crystals
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C010,Lattice Geometry Effects on Electrostatic Stabilization in Ionic Solids
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C011,"Thermochemical Terms in Ionic Solid Formation (sublimation, atomization, bond dissociation, ionization, electron gain)"
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C012,Thermochemical Cycle for Ionic Solid Formation Energetics (application of Hess's law)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C013,Enthalpy of Formation of Ionic Solids and Its Relationship to Lattice Energy
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C014,Quantitative Estimation of Lattice Energy from Ionic Properties (model-based overview)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C015,"Ionic Radius: Definition and Trends (cations vs anions, coordination dependence, oxidation state)"
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C016,Radius Ratio and Coordination Number in Ionic Solids
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C017,Common Ionic Lattice Types and Coordination Numbers
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C018,Polarizing Power and Polarizability of Ions
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C019,Partial Covalent Character in Ionic Compounds (origin and implications)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C020,Ionic Potential (charge density) and Its Effect on Polarization and Stability
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C021,Solvent Effects on Ionic Interactions (dielectric constant and solvation)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C022,Hydration Enthalpy of Ions: Concept and Dependence on Size and Charge
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C023,Enthalpy of Solution of Ionic Solids (balance of lattice and hydration enthalpies)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C024,Solubility of Ionic Compounds: Energetic Considerations and Trends
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C025,"Physical Properties of Ionic Compounds (melting point, hardness, brittleness)"
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C026,"Electrical Conductivity of Ionic Compounds in Solid, Molten, and Aqueous States"
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C027,Stability of Ionic Compounds: Roles of Lattice Energy and Polarization
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C028,Ionic Character in Chemical Bonds and Electronegativity Difference
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C029,Stoichiometry and Charge Neutrality in Ionic Compounds (formula units and empirical formulas)
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C030,Ionic Compounds Containing Polyatomic Ions
+Chemistry,Chemical Bonding and Molecular Structure,Chemical Bonding,Ionic Bond,C031,Comparison of Ionic and Covalent Bonding: Distinguishing Features

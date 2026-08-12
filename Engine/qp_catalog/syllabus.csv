@@ -1,3 +1,6 @@
-﻿subject,unit_code,unit,chapter_code,chapter,subtopic_code,subtopic
+subject,unit_code,unit,chapter_code,chapter,subtopic_code,subtopic,
+Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST1,Ionic Bond,C3_CH1_ST1
 Physics,P3,Laws of Motion,CH1,Newton's Laws,ST1,First Law
-Mathematics,U2,Algebra,CH1,Sets and Relations,ST1,Definition and Standard Form	
+Mathematics,U2,Algebra,CH8,Matrices,ST1,Types of Matrices
+Mathematics,U2,Algebra,CH8,Matrices,ST2,Matrix Operations
+Mathematics,U2,Algebra,CH8,Matrices,ST3,Transpose and Symmetric Matrices

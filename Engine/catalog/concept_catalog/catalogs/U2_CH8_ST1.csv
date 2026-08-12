@@ -1,30 +1,29 @@
 subject,unit,chapter,subtopic,concept_id,concept
-Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C003,Square Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C004,Rectangular Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C005,Row Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C006,Column Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C008,Identity Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C009,Diagonal Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C010,Scalar Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C011,Triangular Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C012,Upper Triangular Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C013,Lower Triangular Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C014,Strictly Upper Triangular Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C015,Strictly Lower Triangular Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C016,Symmetric Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C017,Skew-Symmetric Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C018,Orthogonal Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C019,Singular Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C020,Non-Singular Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C021,Idempotent Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C022,Involutory Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C023,Nilpotent Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C024,Permutation Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C025,Elementary Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C026,Partitioned (Block) Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C027,Block Diagonal Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C028,Row Echelon Form Matrix
-Mathematics,Algebra,Matrices,Types of Matrices,C029,Reduced Row Echelon Form Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C003,Integer matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C004,Boolean matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C005,Row matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C006,Column matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Rectangular matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C008,Square matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Zero matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C010,Diagonal matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C011,Scalar matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Identity matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Upper triangular matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Lower triangular matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Strictly upper triangular matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C016,Strictly lower triangular matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C017,Symmetric matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Skew-symmetric matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Orthogonal matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Hermitian matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Skew-Hermitian matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Unitary matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hollow matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Permutation matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Elementary matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block (partitioned) matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Singular matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C028,Non-singular (invertible) matrix
