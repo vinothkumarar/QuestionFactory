@@ -31,60 +31,110 @@ for the supplied Question Possibility.
 
 ---
 
+--------------------------------------------------
 ARCHETYPE DEFINITION
+--------------------------------------------------
 
-An Archetype is a structurally distinct
-question pattern through which a
-Question Possibility can be examined.
+AR-01 QUESTION FACTORY HIERARCHY
 
-An Archetype represents:
+Concept
+    → defines knowledge
 
-HOW the possibility can appear.
+Question Possibility
+    → defines assessment objective
+
+Archetype
+    → defines assessment pattern
+
+Question
+    → defines concrete instance
+
+Do NOT collapse these layers.
+
+--------------------------------------------------
+
+AR-02 WHAT AN ARCHETYPE IS
+
+An Archetype IS:
+
+• An assessment pattern
+• A reasoning pattern
+• An information presentation pattern
+• A question construction pattern
+
+An Archetype describes HOW a
+Question Possibility is assessed.
+
+--------------------------------------------------
+
+AR-03 WHAT AN ARCHETYPE IS NOT
 
 An Archetype is NOT:
 
-• A Question
-• An MCQ
-• A Solved Example
-• A Trick
-• A Shortcut
+• A Concept
+• A Question Possibility
+• A Topic
+• A Learning Outcome
+• A Property
+• A Fact
+• A Formula
+• A Knowledge Point
 
----
+Do NOT generate additional
+knowledge points.
 
-GOOD EXAMPLES
+Do NOT generate Concept variants.
+
+Do NOT generate Question
+Possibility variants.
+
+--------------------------------------------------
+
+GOOD EXAMPLE
 
 Question Possibility:
 
-Solve absolute value equation
+Determine ionic charge after
+electron transfer.
 
-Possible Archetypes:
+Valid Archetypes:
 
-Linear modulus equation
+• Electron configuration analysis
+• Periodic table position analysis
+• Lewis diagram interpretation
+• Ionic formula completion
+• Tabular data interpretation
+• Assertion–Reason evaluation
 
-Nested modulus equation
+All assess the SAME Question
+Possibility.
 
-Parameter-based modulus equation
+--------------------------------------------------
 
-Multiple interval modulus equation
+BAD EXAMPLE
 
-Number-of-solutions modulus equation
+Question Possibility:
 
----
+Determine ionic charge after
+electron transfer.
 
-BAD EXAMPLES
+Invalid Archetypes:
 
-Solve |x-3| = 5
+• Electrostatic attraction
+• Octet attainment
+• Ionic conductivity
+• Lattice energy
+• Solubility
 
-Solve |2x+1| = 7
+These are Concepts,
+Knowledge Points,
+or Question Possibilities.
 
-Find x if |x| = 4
+They are NOT Archetypes.
 
-These are QUESTIONS,
-not Archetypes.
-
----
-
+--------------------------------------------------
 DISCOVERY RULES
+--------------------------------------------------
 
 1. Discover ALL Archetypes.
 
@@ -95,31 +145,79 @@ DISCOVERY RULES
    • Advanced archetypes
    • JEE Main archetypes
    • JEE Advanced archetypes
-   • Multi-concept archetypes
    • Analytical archetypes
+   • Data interpretation archetypes
+   • Assertion–Reason archetypes
+   • Comparative archetypes
+   • Multi-step reasoning archetypes
 
 3. Do NOT generate questions.
 
 4. Do NOT create duplicates.
 
 5. Exhaustively enumerate the
-   archetype space.
+   assessment-pattern space.
 
-6. Generate archetypes ONLY for the supplied
-   Question Possibility.
-
-7. Do NOT expand into neighboring concepts,
-   adjacent chapters, or broader topic areas
-   unless they are directly required by the
+6. Generate Archetypes ONLY for the
    supplied Question Possibility.
 
-8. Every archetype must be a distinct
-   examinable archetype derived from the
+7. Do NOT expand into neighboring
+   concepts, adjacent chapters,
+   broader topic areas, or additional
+   knowledge points.
+
+8. Every Archetype must represent a
+   distinct assessment pattern for the
    supplied Question Possibility.
 
-9. Do NOT create archetypes that belong
-    to a different Question Possibility.
+9. Different Archetypes may vary by:
 
+   • Representation
+   • Reasoning pathway
+   • Information format
+   • Data presentation
+   • Interpretation method
+
+10. Different Archetypes must NOT
+    vary by changing the knowledge
+    being assessed.
+
+11. All Archetypes generated for a
+    Question Possibility must assess
+    the SAME Question Possibility.
+
+12. Only the assessment pattern may
+    change.
+
+13. The underlying Question
+    Possibility must remain unchanged.
+
+13A. If two Archetypes assess the
+same Question Possibility using the
+same assessment pattern, keep only
+the most general Archetype and
+discard duplicates.
+
+14. If an Archetype primarily belongs
+    to another Question Possibility,
+    do NOT include it.
+
+15. Exhaust the COMPLETE assessment
+    pattern space of the supplied
+    Question Possibility while
+    remaining strictly inside the
+    Question Possibility boundary.
+
+16. Archetypes must be reusable
+question-generation templates.
+
+An Archetype should be capable of
+producing multiple distinct questions.
+
+If an Archetype can generate only a
+single question or a very narrow
+variation, it is too specific and
+must not be included.
 ---
 
 OUTPUT FORMAT

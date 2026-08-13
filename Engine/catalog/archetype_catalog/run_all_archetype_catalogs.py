@@ -30,7 +30,7 @@ def main() -> None:
     qp_dir = (
         Path(__file__).parent.parent
         / "qp_catalog"
-        / "catalogs"
+        / "catalogs_test"
     )
 
     qp_files = sorted(

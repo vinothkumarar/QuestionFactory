@@ -1,0 +1,12 @@
+[
+  {
+    "subject": "Chemistry",
+    "unit": "Chemical Bonding and Molecular Structure",
+    "chapter": "Chemical Bonding",
+    "subtopic": "Ionic Bond",
+    "concept_id": "C001",
+    "concept": "Nature of Ionic Bond (electron transfer and electrostatic attraction)",
+    "qp_id": "QP001",
+    "question_possibility": "Identify ionic bonding as formation via complete electron transfer followed by electrostatic attraction between resulting ions"
+  }
+]
