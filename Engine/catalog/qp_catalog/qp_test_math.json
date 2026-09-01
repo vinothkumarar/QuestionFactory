@@ -1,0 +1,52 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C015",
+        "concept": "Perpendicularity criterion in terms of slopes, including special cases",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether two lines are perpendicular using the slope/inclination criterion, correctly handling vertical and horizontal cases"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C015",
+        "concept": "Perpendicularity criterion in terms of slopes, including special cases",
+        "qp_id": "QP002",
+        "question_possibility": "Determine the orientation (slope or inclination) of a line perpendicular to a given line, including m=0 or undefined-slope cases"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C015",
+        "concept": "Perpendicularity criterion in terms of slopes, including special cases",
+        "qp_id": "QP003",
+        "question_possibility": "Determine conditions on parameter(s) so that given line(s) are perpendicular using the slope criterion, including special cases"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C015",
+        "concept": "Perpendicularity criterion in terms of slopes, including special cases",
+        "qp_id": "QP004",
+        "question_possibility": "Determine feasibility of a single line being perpendicular to two given lines in the plane and identify the condition under which this is possible"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C015",
+        "concept": "Perpendicularity criterion in terms of slopes, including special cases",
+        "qp_id": "QP005",
+        "question_possibility": "Identify the correct perpendicularity condition in slope terms and its applicability limits, recognizing exceptions when a slope is undefined"
+    }
+]

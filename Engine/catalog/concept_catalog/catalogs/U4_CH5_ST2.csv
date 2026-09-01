@@ -1,0 +1,16 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C001,Division of a line segment: definition of ratio
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C002,Internal division in Cartesian coordinates
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C003,External division in Cartesian coordinates
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C004,Midpoint of a segment
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C005,Equal partition (n-section) of a segment
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C006,Directed line segment and signed ratio convention
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C007,Affine (weighted average) representation of points on a segment
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C008,Parameter t representation of points on a segment
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C009,Component-wise application to x- and y-coordinates
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C010,Relationship between division ratio and distances from the dividing point
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C011,Collinearity characterization via section representation
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C012,Geometric interpretation of internal versus external division
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C013,Degenerate and boundary cases in section formula
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C014,Symmetry and invariance properties of the section formula
+Mathematics,Geometry,Coordinate Geometry Concepts,Section Formula,C015,Conversion between ratio form and parameter form

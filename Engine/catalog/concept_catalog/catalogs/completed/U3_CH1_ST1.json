@@ -1,0 +1,186 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C001",
+        "concept": "Inclination of a line: definition and convention"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C002",
+        "concept": "Range and periodicity of inclination (0 to π, modulo π)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C003",
+        "concept": "Slope as tangent of inclination"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C004",
+        "concept": "Horizontal and vertical lines: slopes and inclinations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C005",
+        "concept": "Sign of slope and orientation (increasing or decreasing lines)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C006",
+        "concept": "Constancy of slope for a straight line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C007",
+        "concept": "Slope from two points on a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C008",
+        "concept": "Slope from slope–intercept form of a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C009",
+        "concept": "Slope from general form Ax + By + C = 0 and its conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C010",
+        "concept": "Slope from intercept form x/a + y/b = 1"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C011",
+        "concept": "Slope from normal form x cosα + y sinα = p"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C012",
+        "concept": "Slope from direction vector or direction ratios of a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C013",
+        "concept": "Relationship between slope and direction cosines in 2D"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C014",
+        "concept": "Parallelism criterion in terms of slopes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C015",
+        "concept": "Perpendicularity criterion in terms of slopes, including special cases"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C016",
+        "concept": "Conversion between slope and inclination with quadrant considerations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C017",
+        "concept": "Special-angle lines and characteristic slopes (0, π/4, π/2, 3π/4)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C018",
+        "concept": "Geometric interpretation of slope as rise over run"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C019",
+        "concept": "Relation between line inclination and normal inclination (θ and α)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C020",
+        "concept": "Handling undefined or infinite slopes within algebraic frameworks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C021",
+        "concept": "Inclination with respect to the y-axis and its relation to slope"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C022",
+        "concept": "Invariance of slope under translation of a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C023",
+        "concept": "Comparative steepness of lines via magnitude of slope"
+    }
+]

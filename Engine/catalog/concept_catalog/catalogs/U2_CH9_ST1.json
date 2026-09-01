@@ -1,0 +1,122 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C001",
+        "concept": "Determinant Invariance under Transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C002",
+        "concept": "Row/Column Homogeneity of Determinant (Scalar Factor Extraction from a Single Row/Column)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C003",
+        "concept": "Row/Column Additivity of Determinant (Linearity in a Single Row/Column)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C004",
+        "concept": "Invariance under Adding a Multiple of One Row/Column to Another"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C005",
+        "concept": "Sign Change under Interchange of Two Rows/Columns"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C006",
+        "concept": "Zero Determinant for Linearly Dependent Rows/Columns"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C007",
+        "concept": "Determinant of Triangular and Diagonal Matrices (Product of Diagonal Entries)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C008",
+        "concept": "Degree-n Homogeneity under Scaling the Entire Matrix (det(kA) = k^n det(A))"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C009",
+        "concept": "Multiplicativity of Determinant (det(AB) = det(A) det(B))"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C010",
+        "concept": "Nonsingularity Criterion via Determinant (det(A) ≠ 0 iff A is Invertible)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C011",
+        "concept": "Determinant of the Inverse Matrix (det(A^{-1}) = 1/det(A))"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C012",
+        "concept": "Permutation Parity and Determinant Sign (General Row/Column Permutations)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C013",
+        "concept": "Determinant of Block Triangular (and Block Diagonal) Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C014",
+        "concept": "Determinant of Skew-Symmetric Matrix of Odd Order is Zero"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Properties of Determinants",
+        "concept_id": "C015",
+        "concept": "Cofactor Expansion Invariance across Choice of Row or Column"
+    }
+]

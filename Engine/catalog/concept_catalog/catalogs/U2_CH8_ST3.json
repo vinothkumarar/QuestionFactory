@@ -1,0 +1,234 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C001",
+        "concept": "Transpose of a matrix: definition and notation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C002",
+        "concept": "Entry-wise index mapping and row–column interchange under transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C003",
+        "concept": "Order change under transpose (m×n to n×m)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C004",
+        "concept": "Involution property of transpose (double transpose)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C005",
+        "concept": "Linearity of transpose (sum and scalar multiple)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C006",
+        "concept": "Transpose of a product (reverse order property)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C007",
+        "concept": "Transpose of matrix powers"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C008",
+        "concept": "Transpose–inverse relation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C009",
+        "concept": "Transpose of partitioned (block) matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C010",
+        "concept": "Transpose of triangular matrices (upper ↔ lower)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C011",
+        "concept": "Transpose of diagonal and scalar matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C012",
+        "concept": "Symmetric matrices: definition and element-wise condition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C013",
+        "concept": "Skew-symmetric matrices: definition and element-wise condition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C014",
+        "concept": "Square matrix requirement for symmetry and skew-symmetry"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C015",
+        "concept": "Zero diagonal property of skew-symmetric matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C016",
+        "concept": "Classification of common special matrices under symmetry (zero, identity, diagonal, scalar)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C017",
+        "concept": "Closure of symmetric matrices under addition and scalar multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C018",
+        "concept": "Closure of skew-symmetric matrices under addition and scalar multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C019",
+        "concept": "Symmetry of A^T A and A A^T"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C020",
+        "concept": "Symmetry of product of two symmetric matrices under commutativity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C021",
+        "concept": "Skew-symmetry of product of symmetric and skew-symmetric matrices under commutativity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C022",
+        "concept": "Powers of symmetric matrices preserve symmetry"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C023",
+        "concept": "Parity behavior of powers of skew-symmetric matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C024",
+        "concept": "Decomposition of a square matrix into symmetric and skew-symmetric parts"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C025",
+        "concept": "Uniqueness of symmetric–skew-symmetric decomposition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C026",
+        "concept": "Independent parameters in symmetric matrices of order n"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C027",
+        "concept": "Independent parameters in skew-symmetric matrices of order n"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C028",
+        "concept": "Determination of symmetric and skew-symmetric matrices from half-matrix data (upper or lower triangle)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C029",
+        "concept": "Symmetry conditions in block-partitioned matrices"
+    }
+]

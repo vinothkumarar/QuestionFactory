@@ -1,6 +1,41 @@
-subject,unit_code,unit,chapter_code,chapter,subtopic_code,subtopic,
-Chemistry,C3,Chemical Bonding and Molecular Structure,CH1,Chemical Bonding,ST1,Ionic Bond,C3_CH1_ST1
-Physics,P3,Laws of Motion,CH1,Newton's Laws,ST1,First Law
+﻿subject,unit_code,unit,chapter_code,chapter,subtopic_code,subtopic
+Mathematics,U8,Trigonometry,CH1,Trigonometric Ratios and Identities,ST1,Trigonometric Ratios
+Mathematics,U8,Trigonometry,CH1,Trigonometric Ratios and Identities,ST2,Standard Values of Trigonometric Ratios
+Mathematics,U8,Trigonometry,CH1,Trigonometric Ratios and Identities,ST3,Complementary Angle Relations
+Mathematics,U8,Trigonometry,CH1,Trigonometric Ratios and Identities,ST4,Allied Angle Identities (90Â°âˆ’Î¸)
+Mathematics,U8,Trigonometry,CH1,Trigonometric Ratios and Identities,ST5,Signs of Trigonometric Ratios in Different Quadrants
+Mathematics,U8,Trigonometry,CH1,Trigonometric Ratios and Identities,ST6,Fundamental Trigonometric Identities
+Mathematics,U8,Trigonometry,CH1,Trigonometric Ratios and Identities,ST7,Expressions involving sinÎ¸ Â± cosÎ¸
+Mathematics,U8,Trigonometry,CH1,Trigonometric Ratios and Identities,ST8,Problems Based on Given Trigonometric Ratios
+Mathematics,U8,Trigonometry,CH1,Trigonometric Ratios and Identities,ST9,Mixed Applications of Trigonometric Ratios and Identities
+Mathematics,U8,Trigonometry,CH2,Trigonometric Equations,ST1,General Solutions
+Mathematics,U8,Trigonometry,CH2,Trigonometric Equations,ST2,Linear Trigonometric Equations
+Mathematics,U8,Trigonometry,CH2,Trigonometric Equations,ST3,Quadratic Trigonometric Equations
+Mathematics,U8,Trigonometry,CH2,Trigonometric Equations,ST4,Multiple Angle Equations
+Mathematics,U8,Trigonometry,CH2,Trigonometric Equations,ST5,Mixed Trigonometric Equations
+Mathematics,U4,Geometry,CH5,Coordinate Geometry Concepts,ST1,Distance Formula
+Mathematics,U4,Geometry,CH5,Coordinate Geometry Concepts,ST2,Section Formula
+Mathematics,U4,Geometry,CH5,Coordinate Geometry Concepts,ST3,Area of Triangle
+Mathematics,U4,Geometry,CH5,Coordinate Geometry Concepts,ST4,Centroid and Collinearity
+Mathematics,U4,Geometry,CH5,Coordinate Geometry Concepts,ST5,Locus Problems
+Mathematics,U4,Geometry,CH6,Transformations,ST1,Translation
+Mathematics,U4,Geometry,CH6,Transformations,ST2,Rotation
+Mathematics,U4,Geometry,CH6,Transformations,ST3,Reflection
+Mathematics,U4,Geometry,CH6,Transformations,ST4,Scaling and Dilation
+Mathematics,U4,Geometry,CH6,Transformations,ST5,Composite Transformations
+Mathematics,U3,Coordinate Geometry,CH1,Straight Lines,ST1,Slope and Inclination
+Mathematics,U3,Coordinate Geometry,CH1,Straight Lines,ST2,Equation of Straight Line
+Mathematics,U3,Coordinate Geometry,CH1,Straight Lines,ST3,Intercept Form and Normal Form
+Mathematics,U3,Coordinate Geometry,CH1,Straight Lines,ST4,Angle Between Lines
+Mathematics,U3,Coordinate Geometry,CH1,Straight Lines,ST5,Distance of a Point from a Line
+Mathematics,U3,Coordinate Geometry,CH1,Straight Lines,ST6,Family of Lines
 Mathematics,U2,Algebra,CH8,Matrices,ST1,Types of Matrices
 Mathematics,U2,Algebra,CH8,Matrices,ST2,Matrix Operations
 Mathematics,U2,Algebra,CH8,Matrices,ST3,Transpose and Symmetric Matrices
+Mathematics,U2,Algebra,CH8,Matrices,ST4,Inverse of Matrix
+Mathematics,U2,Algebra,CH8,Matrices,ST5,Applications of Matrices
+Mathematics,U2,Algebra,CH9,Determinants,ST1,Properties of Determinants
+Mathematics,U2,Algebra,CH9,Determinants,ST2,Expansion Methods
+Mathematics,U2,Algebra,CH9,Determinants,ST3,Minors and Cofactors
+Mathematics,U2,Algebra,CH9,Determinants,ST4,Adjoint and Inverse
+Mathematics,U2,Algebra,CH9,Determinants,ST5,System of Linear Equations

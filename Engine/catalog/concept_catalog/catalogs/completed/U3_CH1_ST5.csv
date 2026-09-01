@@ -1,0 +1,16 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C001,Geometric definition of perpendicular distance from a point to a line
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C002,Existence and uniqueness of the perpendicular from a point to a line
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C003,Zero distance condition for a point lying on a line
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C004,Cartesian formulation of point–line perpendicular distance (unsigned)
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C005,Validity of line representation ax+by+c=0 and invariance under scaling of coefficients
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C006,Signed distance from a line and orientation via a chosen normal
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C007,Half-planes determined by a line and point classification using ax+by+c
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C008,Normal vector to a line and unit normal concept
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C009,Vector formulation of point–line distance using dot product with unit normal
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C010,Area-based interpretation of perpendicular distance as altitude of a triangle
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C011,Special cases of distance to horizontal and vertical lines
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C012,Normal (perpendicular) form of a line and normal distance from the origin
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C013,Point–line distance expressed using normal form parameters
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C014,Foot of the perpendicular from a point to a line and its relation to distance
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C015,Conversion of line representations to general form for distance evaluation

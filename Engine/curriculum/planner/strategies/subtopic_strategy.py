@@ -24,7 +24,9 @@ from Engine.curriculum.planner.base_strategy import (
     BaseManufacturingStrategy,
 )
 
-from Engine.qpc.qpc_loader import QPCLoader
+from Engine.catalog.archetype_catalog.archetype_catalog_loader import (
+    ArchetypeCatalogLoader,
+)
 
 class SubtopicStrategy(BaseManufacturingStrategy):
     """
@@ -41,11 +43,10 @@ class SubtopicStrategy(BaseManufacturingStrategy):
 
         queue = ManufacturingQueue()
 
-        qpc_loader = QPCLoader()
+        archetype_loader = ArchetypeCatalogLoader()
 
-        question_possibilities = qpc_loader.load(
-            chapter_code=request.chapter,
-            subtopic_code=request.subtopic,
+        archetypes = archetype_loader.load(
+            request.subtopic,
         )
 
         for set_no in range(
@@ -53,7 +54,7 @@ class SubtopicStrategy(BaseManufacturingStrategy):
             int(request.end_set[1:]) + 1,
         ):
 
-            for qp in question_possibilities:
+            for archetype in archetypes:
 
                 work_item = ManufacturingWorkItemModel(
                     request_id=request.request_id,
@@ -66,12 +67,29 @@ class SubtopicStrategy(BaseManufacturingStrategy):
                     subtopic=request.subtopic,
                     set_no=f"S{set_no}",
                     batch_no=1,
-                    questions_per_batch=request.questions_per_batch,
+                    questions_per_batch=(
+                        request.questions_per_batch
+                    ),
                     question_start=1,
-                    question_end=request.questions_per_batch,
-
-                    qp_id=qp["qp_id"],
-                    question_possibility=qp["question_possibility"],
+                    question_end=(
+                        request.questions_per_batch
+                    ),
+                    concept_id=archetype["concept_id"],
+                    concept=archetype["concept"],
+                    qp_id=archetype["qp_id"],
+                    question_possibility=(
+                        archetype["question_possibility"]
+                    ),
+                    archetype_id=archetype["archetype_id"],
+                    archetype=archetype["archetype"],
+                    variation_capacity=archetype.get(
+                        "variation_capacity",
+                        "",
+                    ),
+                    variation_dimensions=archetype.get(
+                        "variation_dimensions",
+                        [],
+                    ),
                 )
 
                 queue.enqueue(work_item)

@@ -1,0 +1,130 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C001",
+        "concept": "Coordinate differences (Δx, Δy) in the Cartesian plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C002",
+        "concept": "Euclidean distance between two points in the plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C003",
+        "concept": "Distance on the number line (one-dimensional case)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C004",
+        "concept": "Distance from the origin to a point"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C005",
+        "concept": "Horizontal and vertical distances (parallel to axes)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C006",
+        "concept": "Right-triangle interpretation of distance (Pythagorean basis)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C007",
+        "concept": "Squared Euclidean distance"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C008",
+        "concept": "Non-negativity and zero distance (identity of indiscernibles)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C009",
+        "concept": "Symmetry of Euclidean distance"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C010",
+        "concept": "Triangle inequality in the Cartesian plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C011",
+        "concept": "Invariance of distance under rigid motions (translations, rotations, reflections)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C012",
+        "concept": "Scaling behavior of distance under uniform dilations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C013",
+        "concept": "Additivity of distances on a line segment (collinear points)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C014",
+        "concept": "Equidistant points in the Cartesian plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C015",
+        "concept": "Distance-based inequalities in the plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Distance Formula",
+        "concept_id": "C016",
+        "concept": "Sign-independence of coordinate differences in distance computation"
+    }
+]

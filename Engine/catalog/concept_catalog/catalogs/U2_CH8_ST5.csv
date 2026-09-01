@@ -1,0 +1,30 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Algebra,Matrices,Applications of Matrices,C001,Matrix Representation of Linear Systems (Ax = b)
+Mathematics,Algebra,Matrices,Applications of Matrices,C002,"Coefficient Matrix, Variable Vector, and Constant Vector in Linear Models"
+Mathematics,Algebra,Matrices,Applications of Matrices,C003,Augmented Matrix of a Linear System
+Mathematics,Algebra,Matrices,Applications of Matrices,C004,Homogeneous Linear Systems (Ax = 0)
+Mathematics,Algebra,Matrices,Applications of Matrices,C005,"Non-homogeneous Linear Systems (Ax = b, b ≠ 0)"
+Mathematics,Algebra,Matrices,Applications of Matrices,C006,Consistency of Linear Systems
+Mathematics,Algebra,Matrices,Applications of Matrices,C007,"Classification of Solutions: Unique, None, Infinitely Many"
+Mathematics,Algebra,Matrices,Applications of Matrices,C008,Rank-Based Criteria for Consistency and Number of Solutions
+Mathematics,Algebra,Matrices,Applications of Matrices,C009,Invertibility of Coefficient Matrix and Uniqueness of Solution in Square Systems
+Mathematics,Algebra,Matrices,Applications of Matrices,C010,Solvability as Linear Combination of Columns (b in Column Space)
+Mathematics,Algebra,Matrices,Applications of Matrices,C011,Redundant and Contradictory Equations via Row Dependence and Inconsistency
+Mathematics,Algebra,Matrices,Applications of Matrices,C012,Row Equivalence and Preservation of Solution Sets under Elementary Row Operations
+Mathematics,Algebra,Matrices,Applications of Matrices,C013,General Solution Structure for Underdetermined Systems (Free Parameters)
+Mathematics,Algebra,Matrices,Applications of Matrices,C014,Geometric Interpretation of Solutions in R2 and R3 (Intersections of Lines/Planes)
+Mathematics,Algebra,Matrices,Applications of Matrices,C015,Linear Transformations Represented by Matrices
+Mathematics,Algebra,Matrices,Applications of Matrices,C016,Composition of Linear Transformations via Matrix Multiplication
+Mathematics,Algebra,Matrices,Applications of Matrices,C017,Inverse Transformations and Invertible Matrices in Geometry
+Mathematics,Algebra,Matrices,Applications of Matrices,C018,Singular Transformations and Dimension Reduction (Collapse to Line or Point)
+Mathematics,Algebra,Matrices,Applications of Matrices,C019,Scaling Transformations in the Plane via 2×2 Matrices
+Mathematics,Algebra,Matrices,Applications of Matrices,C020,Rotation Transformations in the Plane via 2×2 Matrices
+Mathematics,Algebra,Matrices,Applications of Matrices,C021,Reflection Transformations in the Plane via 2×2 Matrices
+Mathematics,Algebra,Matrices,Applications of Matrices,C022,Shear Transformations in the Plane via 2×2 Matrices
+Mathematics,Algebra,Matrices,Applications of Matrices,C023,Invariant Points and Invariant Lines under Linear Transformations
+Mathematics,Algebra,Matrices,Applications of Matrices,C024,Orthogonal Transformations and Preservation of Lengths and Angles
+Mathematics,Algebra,Matrices,Applications of Matrices,C025,Image of a Line under a Linear Transformation
+Mathematics,Algebra,Matrices,Applications of Matrices,C026,Repeated Application of a Transformation and Matrix Powers
+Mathematics,Algebra,Matrices,Applications of Matrices,C027,Linear Change of Variables in the Plane Using Matrices
+Mathematics,Algebra,Matrices,Applications of Matrices,C028,Limitations of Linear Transformations for Translations (Affine vs Linear)
+Mathematics,Algebra,Matrices,Applications of Matrices,C029,Modeling Geometric Intersection and Concurrency Problems via Linear Systems

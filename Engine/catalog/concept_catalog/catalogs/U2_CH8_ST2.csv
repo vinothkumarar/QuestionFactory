@@ -1,0 +1,30 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Algebra,Matrices,Matrix Operations,C001,Matrix Equality
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations
+Mathematics,Algebra,Matrices,Matrix Operations,C003,Matrix Addition
+Mathematics,Algebra,Matrices,Matrix Operations,C004,Scalar Multiplication of Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C005,Matrix Subtraction
+Mathematics,Algebra,Matrices,Matrix Operations,C006,Properties of Matrix Addition
+Mathematics,Algebra,Matrices,Matrix Operations,C007,Properties of Scalar Multiplication with Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule)
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C010,Additive Identity and Additive Inverse for Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C013,Cancellation Laws in Matrix Multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose
+Mathematics,Algebra,Matrices,Matrix Operations,C015,Properties of Transpose under Operations
+Mathematics,Algebra,Matrices,Matrix Operations,C016,Complex Conjugate of a Matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C017,Conjugate Transpose (Hermitian Transpose)
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Polynomials in Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C021,Commuting Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role
+Mathematics,Algebra,Matrices,Matrix Operations,C026,Trace of a Matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C027,Properties of Trace under Matrix Operations
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices

@@ -1,0 +1,154 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C001",
+        "concept": "Geometric definition of angle between two lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C002",
+        "concept": "Undirected angle between lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C003",
+        "concept": "Directed angle between lines and orientation convention"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C004",
+        "concept": "Angle periodicity and direction equivalence for lines (modulo π)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C005",
+        "concept": "Slope-based characterization of angle between non-vertical lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C006",
+        "concept": "Treatment of vertical lines and undefined slopes in angle determination"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C007",
+        "concept": "Normal-vector characterization using general form coefficients"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C008",
+        "concept": "Invariance of angle under scalar multiplication of line equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C009",
+        "concept": "Parallel lines as zero-angle case"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C010",
+        "concept": "Perpendicular lines as right-angle case"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C011",
+        "concept": "Coincident lines and degenerate zero-angle interpretation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C012",
+        "concept": "Complementarity between line-angle and normal-angle"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C013",
+        "concept": "Principal value and range conventions for inter-line angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C014",
+        "concept": "Symmetry properties of undirected and directed inter-line angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C015",
+        "concept": "Classification of inter-line angles: acute, right, obtuse"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C016",
+        "concept": "Invariance of angle under Euclidean rigid motions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C017",
+        "concept": "Angles formed at the intersection point and their relationships"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C018",
+        "concept": "Representation-independence of angle across line equation forms"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C019",
+        "concept": "Limiting behavior near parallelism and perpendicularity"
+    }
+]

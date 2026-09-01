@@ -81,17 +81,6 @@ class R03Validator(ValidationModule):
             batch,
             result,
         )
-
-        self._validate_qp_compliance(
-            batch,
-            result,
-        )    
-
-        self._validate_archetype_coverage(
-            batch,
-            result,
-        )
-
         self._calculate_score(
             batch,
             result,
@@ -221,7 +210,6 @@ class R03Validator(ValidationModule):
 
         concept_registry = set()
 
-        archetype_registry = set()
 
         for index, question in enumerate(
             batch.questions,
@@ -241,22 +229,7 @@ class R03Validator(ValidationModule):
             else:
 
                 concept_registry.add(concept.lower())
-
-            #
-            # Archetype
-            #
-
-            archetype = question.archetype.strip()
-
-            if not archetype:
-
-                result.add_warning(f"Question {index}: " "Archetype not specified.")
-
-            else:
-
-                archetype_registry.add(archetype.lower())
-
-            #
+#
             # Estimated solving time
             #
 
@@ -284,12 +257,7 @@ class R03Validator(ValidationModule):
         if len(concept_registry) == 1:
 
             result.add_warning("All questions use the same " "concept.")
-
-        if len(archetype_registry) == 1:
-
-            result.add_warning("All questions use the same " "archetype.")
-
-    # ---------------------------------------------------------
+# ---------------------------------------------------------
     # Blueprint Attribute Validation
     # ---------------------------------------------------------
 
@@ -512,87 +480,6 @@ class R03Validator(ValidationModule):
                 )
 
     # ---------------------------------------------------------
-    # QP Compliance Validation
-    # ---------------------------------------------------------
-
-    def _validate_qp_compliance(
-        self,
-        batch: QuestionBatchModel,
-        result: ValidationResultModel,
-    ) -> None:
-        """
-        Validate QP metadata propagation.
-        """
-
-        for index, question in enumerate(
-            batch.questions,
-            start=1,
-        ):
-
-            metadata = question.metadata
-
-            qp_id = metadata.get(
-                "qp_id",
-                "",
-            )
-
-            if not qp_id:
-
-                result.add_warning(
-                    f"Question {index}: "
-                    "qp_id missing."
-                )
-
-            question_possibility = metadata.get(
-                "question_possibility",
-                "",
-            )
-
-            if not question_possibility:
-
-                result.add_warning(
-                    f"Question {index}: "
-                    "question_possibility missing."
-                )
-
-
-    # ---------------------------------------------------------
-    # Archetype Coverage Validation
-    # ---------------------------------------------------------
-
-    def _validate_archetype_coverage(
-        self,
-        batch: QuestionBatchModel,
-        result: ValidationResultModel,
-    ) -> None:
-        """
-        Validate archetype availability.
-        """
-
-        archetypes = set()
-
-        for question in batch.questions:
-
-            archetype = (
-                question.archetype.strip()
-                if question.archetype
-                else ""
-            )
-
-            if archetype:
-
-                archetypes.add(
-                    archetype.lower(),
-                )
-
-        if not archetypes:
-
-            result.add_warning(
-                "No archetype information found "
-                "in batch."
-            )
-
-    # ---------------------------------------------------------
     # Manufacturing Metrics
     # ---------------------------------------------------------
 
@@ -674,7 +561,6 @@ class R03Validator(ValidationModule):
 
         concepts = set()
 
-        archetypes = set()
 
         bloom_levels = set()
 
@@ -685,10 +571,6 @@ class R03Validator(ValidationModule):
             if question.concept.strip():
 
                 concepts.add(question.concept.strip())
-
-            if question.archetype.strip():
-
-                archetypes.add(question.archetype.strip())
 
             bloom = question.bloom_level.strip()
 
@@ -703,10 +585,6 @@ class R03Validator(ValidationModule):
         metrics = {
             "concept_diversity": round(
                 len(concepts) / question_count,
-                2,
-            ),
-            "archetype_diversity": round(
-                len(archetypes) / question_count,
                 2,
             ),
             "bloom_diversity": round(
@@ -952,10 +830,6 @@ class R03Validator(ValidationModule):
                 "concept_diversity",
                 0,
             ),
-            "archetype_diversity": metrics.get(
-                "archetype_diversity",
-                0,
-            ),
             "difficulty_diversity": metrics.get(
                 "difficulty_diversity",
                 0,
@@ -1122,7 +996,6 @@ class R03Validator(ValidationModule):
             "blueprint_validation": True,
             "difficulty_validation": True,
             "concept_validation": True,
-            "archetype_validation": True,
             "quality_analysis": True,
             "jee_quality": True,
             "manufacturing_scoring": True,
@@ -1150,5 +1023,3 @@ class R03Validator(ValidationModule):
             "validation_scope": ("BLUEPRINT_AND_QUALITY"),
             "framework_version": "2.1.0",
         }
-
-    

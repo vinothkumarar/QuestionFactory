@@ -1,0 +1,24 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C001,Inclination of a line: definition and convention
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C002,"Range and periodicity of inclination (0 to π, modulo π)"
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C003,Slope as tangent of inclination
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C004,Horizontal and vertical lines: slopes and inclinations
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C005,Sign of slope and orientation (increasing or decreasing lines)
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C006,Constancy of slope for a straight line
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C007,Slope from two points on a line
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C008,Slope from slope–intercept form of a line
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C009,Slope from general form Ax + By + C = 0 and its conditions
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C010,Slope from intercept form x/a + y/b = 1
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C011,Slope from normal form x cosα + y sinα = p
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C012,Slope from direction vector or direction ratios of a line
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C013,Relationship between slope and direction cosines in 2D
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C014,Parallelism criterion in terms of slopes
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C015,"Perpendicularity criterion in terms of slopes, including special cases"
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C016,Conversion between slope and inclination with quadrant considerations
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C017,"Special-angle lines and characteristic slopes (0, π/4, π/2, 3π/4)"
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C018,Geometric interpretation of slope as rise over run
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C019,Relation between line inclination and normal inclination (θ and α)
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C020,Handling undefined or infinite slopes within algebraic frameworks
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C021,Inclination with respect to the y-axis and its relation to slope
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C022,Invariance of slope under translation of a line
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C023,Comparative steepness of lines via magnitude of slope

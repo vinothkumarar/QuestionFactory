@@ -1,0 +1,51 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C001,Concept of Locus in the Cartesian Plane
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C002,Set-of-Points Definition via Geometric or Algebraic Conditions
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C003,Algebraic Representation of a Locus (Equations and Inequalities)
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C004,Parametric Representation of Loci
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C005,Necessary and Sufficient Conditions for Locus Membership
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C006,Validation of a Locus and Exclusion of Extraneous Points
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C007,Locus as Curve versus Region (Boundary and Interior)
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C008,Symmetry Analysis of Loci from Symmetric Constraints
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C009,Transformation Invariance of Loci under Translation and Rotation
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C010,Composition of Loci via Intersection and Union of Conditions
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C011,Degenerate Loci and Feasibility Conditions of Constraints
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C012,Connectedness and Branch Structure of Loci
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C013,Endpoint Inclusion and Closure Properties of Loci
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C014,Equidistance from a Fixed Point as a Locus Condition
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C015,Equidistance from a Fixed Line as a Locus Condition
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C016,Equidistance from Two Fixed Points as a Locus Condition
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C017,Equidistance from Two Intersecting Lines as a Locus Condition
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C018,Fixed Ratio of Distances to Two Fixed Points (Distance-Ratio Loci)
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C019,Fixed Ratio of Distances to Two Lines (Generalized Angle-Bisector Loci)
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C020,Fixed Sum of Distances to Two Fixed Points as a Locus Condition
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C021,Fixed Difference of Distances to Two Fixed Points as a Locus Condition
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C022,Fixed Sum or Difference of Distances to a Point and a Line
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C023,Distance Inequality from a Point (Interior and Exterior Regions)
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C024,Distance Inequality from a Line (Half-Planes and Parallel Strips)
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C025,Combined Distance Inequalities Defining Annular and Banded Regions
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C026,Linear Coordinate Constraints as Loci (Lines and Half-Planes)
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C027,Quadratic Coordinate Constraints as Loci (General Second-Degree Sets)
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C028,Absolute Value Constraints and Piecewise-Linear Loci
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C029,Axis Symmetry and Even–Odd Coordinate Conditions in Loci
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C030,"Constraints on Coordinate Sums, Differences, and Products as Loci"
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C031,Angle-Bisector Loci Derived from Angular Constraints
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C032,Constant Angle Subtended by a Fixed Segment as a Locus Condition
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C033,Orientation Constraints Relative to Axes or a Given Line
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C034,Loci of Midpoints under Moving-Point Constraints
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C035,Loci of Internal and External Division Points with Fixed Ratio
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C036,Loci of Centroids under Vertex Position Constraints
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C037,Image Loci under Translation of Figures or Conditions
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C038,Image Loci under Rotation about a Fixed Point
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C039,Image Loci under Homothety (Scaling) with Fixed Center
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C040,Reflection-Derived Loci across Lines and Points
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C041,Simultaneous Metric and Algebraic Constraints Defining a Locus
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C042,Piecewise-Defined Loci Arising from Sign Cases and Absolute Values
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C043,Area-Based Locus Constraints (Fixed Area Conditions)
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C044,Collinearity and Concurrency as Locus Conditions
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C045,Perpendicularity and Parallelism Constraints in Loci
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C046,Weighted Distance Constraints and Scaled Metric Conditions
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C047,Graphical Interpretation of Loci from Given Constraints
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C048,Domain Restrictions and Admissible Sets for Locus Definitions
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C049,Loci of Projections and Feet of Perpendiculars under Motion Constraints
+Mathematics,Geometry,Coordinate Geometry Concepts,Locus Problems,C050,Polyhedral Regions from Systems of Linear Inequalities

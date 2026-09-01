@@ -1,0 +1,26 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C001,Triangle Centroid: Definition as Intersection of Medians
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C002,Concurrency of Medians in a Triangle
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C003,Coordinates of the Centroid of a Triangle (Arithmetic Mean of Vertices)
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C004,Centroid Division Ratio on Medians (2:1 from Vertex)
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C005,Centroid as Center of Mass for Equal Point Masses at Vertices
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C006,Weighted Centroid (Barycenter) of a System of Points in the Plane
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C007,Location of Centroid Within a Triangle (Always Interior)
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C008,Area Partition by Medians and Centroid into Six Equal Regions
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C009,Symmetry of Centroid Under Permutation of Triangle Vertices
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C010,Associative and Averaging Properties of Centroid of Points
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C011,Centroid of Collinear Points Lies on the Common Line
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C012,Coincidence of Centroids of a Triangle and Its Medial Triangle
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C013,Centroid as the Average of Side Midpoints of a Triangle
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C014,Collinearity of Points in the Plane: Definition
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C015,Slope-Based Condition for Collinearity of Three Points
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C016,Zero-Area (Triangle Area) Condition for Collinearity
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C017,Determinant Condition for Collinearity in 2D Coordinates
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C018,Vector Criterion for Collinearity via Linear Dependence of Displacement Vectors
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C019,Parametric (Affine Combination) Representation of Collinear Points
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C020,Relationship Between Segment Division (Internal/External) and Collinearity
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C021,Collinearity Involving Vertical Lines and Undefined Slopes
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C022,Collinearity of More Than Three Points (Consistent Pairwise Conditions)
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C023,Invariance of Collinearity Under Translations and Rotations
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C024,Equivariance of Centroid Under Translations and Rotations
+Mathematics,Geometry,Coordinate Geometry Concepts,Centroid and Collinearity,C025,Degenerate Triangle as a Collinear Configuration of Vertices

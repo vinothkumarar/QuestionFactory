@@ -1,0 +1,122 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C001",
+        "concept": "Division of a line segment: definition of ratio"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C002",
+        "concept": "Internal division in Cartesian coordinates"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C003",
+        "concept": "External division in Cartesian coordinates"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C004",
+        "concept": "Midpoint of a segment"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C005",
+        "concept": "Equal partition (n-section) of a segment"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C006",
+        "concept": "Directed line segment and signed ratio convention"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C007",
+        "concept": "Affine (weighted average) representation of points on a segment"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C008",
+        "concept": "Parameter t representation of points on a segment"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C009",
+        "concept": "Component-wise application to x- and y-coordinates"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C010",
+        "concept": "Relationship between division ratio and distances from the dividing point"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C011",
+        "concept": "Collinearity characterization via section representation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C012",
+        "concept": "Geometric interpretation of internal versus external division"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C013",
+        "concept": "Degenerate and boundary cases in section formula"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C014",
+        "concept": "Symmetry and invariance properties of the section formula"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Section Formula",
+        "concept_id": "C015",
+        "concept": "Conversion between ratio form and parameter form"
+    }
+]

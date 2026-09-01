@@ -1,0 +1,258 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C001",
+        "concept": "Angle Measurement Systems and Unit Conversion"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C002",
+        "concept": "Unit Circle Representation of Trigonometric Functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C003",
+        "concept": "Trigonometric Functions of a General Angle"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C004",
+        "concept": "Quadrant-Based Sign Conventions for Trigonometric Functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C005",
+        "concept": "Periodicity of Trigonometric Functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C006",
+        "concept": "Even–Odd and Symmetry Properties of Trigonometric Functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C007",
+        "concept": "Cofunction Relationships"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C008",
+        "concept": "Reciprocal Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C009",
+        "concept": "Quotient Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C010",
+        "concept": "Pythagorean Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C011",
+        "concept": "Related-Angle Identities for π ± x and 2π ± x"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C012",
+        "concept": "Related-Angle Identities for π⁄2 ± x and 3π⁄2 ± x"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C013",
+        "concept": "Angle Addition and Subtraction Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C014",
+        "concept": "Double-Angle Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C015",
+        "concept": "Half-Angle Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C016",
+        "concept": "Multiple-Angle Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C017",
+        "concept": "Power-Reduction Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C018",
+        "concept": "Sum-to-Product Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C019",
+        "concept": "Product-to-Sum Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C020",
+        "concept": "Auxiliary Angle (Amplitude–Phase) Transformation for A sin x + B cos x"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C021",
+        "concept": "Tangent Half-Angle Parameterization"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C022",
+        "concept": "Reduction of Trigonometric Expressions to Sine and Cosine"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C023",
+        "concept": "Equivalent-Angle Reduction Modulo Period"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C024",
+        "concept": "Domains and Ranges of Trigonometric Functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C025",
+        "concept": "Range of Linear Combinations of Sine and Cosine"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C026",
+        "concept": "Extremal Values of Trigonometric Expressions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C027",
+        "concept": "Trigonometric Inequalities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C028",
+        "concept": "Sign Determination in Identity-Based Evaluations Using Quadrant Information"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C029",
+        "concept": "Homogeneous Trigonometric Expressions and Normalization"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C030",
+        "concept": "Polynomial Forms of Trigonometric Functions via Multiple-Angle Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C031",
+        "concept": "Symmetric Trigonometric Expressions in Sine and Cosine"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Mixed Applications of Trigonometric Ratios and Identities",
+        "concept_id": "C032",
+        "concept": "Angle Reduction to the First Quadrant"
+    }
+]

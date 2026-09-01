@@ -1,0 +1,37 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C001,Definition and classification of mixed trigonometric equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C002,Domain restrictions for mixed trigonometric functions
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C003,Periodicity and common period in mixed trigonometric equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C004,General solution structure for mixed trigonometric equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C005,Linear combinations of sine and cosine
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C006,Range constraints for a sin x + b cos x expressions
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C007,Homogeneous forms in sin x and cos x
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C008,Ratio forms involving tan x and cot x
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C009,Reciprocal-function forms involving sec x and cosec x
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C010,Product forms of trigonometric functions
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C011,Sum and difference of angle expressions within equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C012,Multiple-angle relationships within mixed equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C013,Phase-shifted trigonometric expressions in equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C014,Power-type expressions in sine and cosine
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C015,"Equations with mixed arguments (m x, n x)"
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C016,Commensurability of arguments and solution alignment
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C017,Single-function representation of mixed trigonometric expressions
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C018,Trigonometric polynomial equations in sin x and cos x
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C019,Rational parametrization of sine and cosine
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C020,Pythagorean relationships in mixed trigonometric equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C021,Co-function relationships in equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C022,Parity and symmetry of trigonometric functions in equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C023,Complementary and supplementary angle relationships in equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C024,"Domain exclusions and singularities for tangent, cotangent, secant, cosecant"
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C025,Quadrant-based sign analysis in solution sets
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C026,Solution set operations for combined trigonometric conditions
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C027,Validation of solutions and extraneous roots in mixed equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C028,Interval-restricted solution description for mixed equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C029,Parameter dependence and solvability conditions in mixed equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C030,Simultaneous mixed trigonometric equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C031,Absolute-value expressions in mixed trigonometric equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C032,Graphical interpretation of mixed trigonometric equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C033,Product-to-sum and sum-to-product transformations in equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C034,Half-angle relationships in mixed trigonometric equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C035,Affine transformations of the angle variable in mixed equations
+Mathematics,Trigonometry,Trigonometric Equations,Mixed Trigonometric Equations,C036,Range constraints for mixed trigonometric expressions

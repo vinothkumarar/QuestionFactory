@@ -1,0 +1,21 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C001,Family of Lines
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C002,Degrees of Freedom of a Line
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C003,One-Parameter Subfamily of Lines
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C004,Slope–Intercept Parameterization of Line Families
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C005,Intercept Form Parameterization of Line Families
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C006,Normal Form Parameterization of Line Families
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C007,Sheaf of Lines Through a Fixed Point
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C008,Family of Lines Parallel to a Given Line
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C009,Family of Lines Perpendicular to a Given Line
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C010,Family of Lines Making a Fixed Angle with a Given Line
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C011,Family of Lines Through the Intersection of Two Lines
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C012,Linear Combination Representation of a Family of Lines
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C013,Concurrency in Families of Lines
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C014,Geometric Interpretation of Family Parameters
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C015,Parameter Normalization and Uniqueness in Line Families
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C016,Orthogonal Family of Lines Corresponding to a Given Family
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C017,Constraint-Defined Subfamilies in Slope–Intercept Space
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C018,Intercept-Constrained Subfamilies of Lines
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C019,Special and Degenerate Cases in Families of Lines
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C020,Transformation Between Family Representations of Lines

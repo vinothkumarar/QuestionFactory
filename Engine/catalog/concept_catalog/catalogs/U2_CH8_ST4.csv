@@ -1,0 +1,31 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Algebra,Matrices,Inverse of Matrix,C001,Definition of Inverse of a Square Matrix
+Mathematics,Algebra,Matrices,Inverse of Matrix,C002,Identity Matrix as Multiplicative Identity
+Mathematics,Algebra,Matrices,Inverse of Matrix,C003,Singular and Nonsingular Matrices
+Mathematics,Algebra,Matrices,Inverse of Matrix,C004,Invertibility Criterion Using Determinant
+Mathematics,Algebra,Matrices,Inverse of Matrix,C005,Uniqueness of Matrix Inverse
+Mathematics,Algebra,Matrices,Inverse of Matrix,C006,Cofactor Matrix
+Mathematics,Algebra,Matrices,Inverse of Matrix,C007,Adjugate (Adjoint) of a Matrix
+Mathematics,Algebra,Matrices,Inverse of Matrix,C008,Adjugate–Determinant Identity
+Mathematics,Algebra,Matrices,Inverse of Matrix,C009,Inverse via Adjugate and Determinant
+Mathematics,Algebra,Matrices,Inverse of Matrix,C010,Inverse of a 2×2 Matrix
+Mathematics,Algebra,Matrices,Inverse of Matrix,C011,Inverse of a Product of Matrices
+Mathematics,Algebra,Matrices,Inverse of Matrix,C012,Inverse of a Transpose
+Mathematics,Algebra,Matrices,Inverse of Matrix,C013,Inverse of a Scalar Multiple of a Matrix
+Mathematics,Algebra,Matrices,Inverse of Matrix,C014,Inverse of Powers and Negative Powers of a Matrix
+Mathematics,Algebra,Matrices,Inverse of Matrix,C015,Determinant Relationship for an Inverse Matrix
+Mathematics,Algebra,Matrices,Inverse of Matrix,C016,Elementary Matrices
+Mathematics,Algebra,Matrices,Inverse of Matrix,C017,Invertibility and Elementary Row/Column Operations
+Mathematics,Algebra,Matrices,Inverse of Matrix,C018,Left Inverse and Right Inverse for Matrices
+Mathematics,Algebra,Matrices,Inverse of Matrix,C019,Inverse of the Identity Matrix
+Mathematics,Algebra,Matrices,Inverse of Matrix,C020,Non-existence of Inverse for the Zero Matrix
+Mathematics,Algebra,Matrices,Inverse of Matrix,C021,Inverse of Diagonal Matrices
+Mathematics,Algebra,Matrices,Inverse of Matrix,C022,Inverse of Triangular Matrices
+Mathematics,Algebra,Matrices,Inverse of Matrix,C023,Inverse of Symmetric Matrices
+Mathematics,Algebra,Matrices,Inverse of Matrix,C024,Inverse of Orthogonal Matrices
+Mathematics,Algebra,Matrices,Inverse of Matrix,C025,Inverse of Permutation Matrices
+Mathematics,Algebra,Matrices,Inverse of Matrix,C026,Inverse of Block Diagonal Matrices
+Mathematics,Algebra,Matrices,Inverse of Matrix,C027,Invertibility of a Product and Factors
+Mathematics,Algebra,Matrices,Inverse of Matrix,C028,Cancellation Laws for Invertible Matrices
+Mathematics,Algebra,Matrices,Inverse of Matrix,C029,Solving Matrix Equations Using Inverses
+Mathematics,Algebra,Matrices,Inverse of Matrix,C030,Invertibility and Unique Solutions of Linear Systems

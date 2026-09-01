@@ -1,0 +1,132 @@
+[
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Ionic Bond",
+        "concept_id": "C008",
+        "concept": "Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)",
+        "qp_id": "QP001",
+        "question_possibility": "Determine qualitative dependence of lattice energy on ionic charge magnitude"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Ionic Bond",
+        "concept_id": "C008",
+        "concept": "Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)",
+        "qp_id": "QP002",
+        "question_possibility": "Determine qualitative dependence of lattice energy on interionic distance and ionic sizes"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Ionic Bond",
+        "concept_id": "C008",
+        "concept": "Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)",
+        "qp_id": "QP003",
+        "question_possibility": "Determine qualitative influence of lattice geometry (Madelung constant, coordination number, structure type) on lattice energy"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Ionic Bond",
+        "concept_id": "C008",
+        "concept": "Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)",
+        "qp_id": "QP004",
+        "question_possibility": "Compare or rank lattice energies of ionic solids using given charges, ionic sizes, and lattice geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Ionic Bond",
+        "concept_id": "C008",
+        "concept": "Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)",
+        "qp_id": "QP005",
+        "question_possibility": "Predict directional change in lattice energy resulting from a specified ion substitution or oxidation-state change"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Ionic Bond",
+        "concept_id": "C008",
+        "concept": "Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)",
+        "qp_id": "QP006",
+        "question_possibility": "Analyze competing charge, size, and geometry effects to identify the dominant factor governing lattice energy differences"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Ionic Bond",
+        "concept_id": "C008",
+        "concept": "Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)",
+        "qp_id": "QP007",
+        "question_possibility": "Infer relative ionic sizes from lattice energy trends within an isostructural, isovalent series"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Ionic Bond",
+        "concept_id": "C008",
+        "concept": "Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)",
+        "qp_id": "QP008",
+        "question_possibility": "Infer ionic charge magnitude or likely oxidation state from lattice energy data when sizes and geometry are comparable"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Ionic Bond",
+        "concept_id": "C008",
+        "concept": "Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)",
+        "qp_id": "QP009",
+        "question_possibility": "Determine whether available information is sufficient to order lattice energies or if lattice geometry data are additionally required"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Ionic Bond",
+        "concept_id": "C008",
+        "concept": "Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)",
+        "qp_id": "QP010",
+        "question_possibility": "Establish conditions under which two ionic solids can have comparable lattice energies via trade-offs among charge product, interionic distance, and geometry"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Ionic Bond",
+        "concept_id": "C008",
+        "concept": "Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)",
+        "qp_id": "QP011",
+        "question_possibility": "Interpret lattice-energy versus ionic-radius or interionic-distance data/graphs to deduce trends and parameter dependencies"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Ionic Bond",
+        "concept_id": "C008",
+        "concept": "Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)",
+        "qp_id": "QP012",
+        "question_possibility": "Diagnose and correct an incorrect lattice-energy order or claim by checking consistency with charge, size, and geometry factors"
+    },
+    {
+        "subject": "Chemistry",
+        "unit": "Chemical Bonding and Molecular Structure",
+        "chapter": "Chemical Bonding",
+        "subtopic": "Ionic Bond",
+        "concept_id": "C008",
+        "concept": "Factors Affecting Lattice Energy (ionic charge, size, interionic distance, lattice geometry)",
+        "qp_id": "QP013",
+        "question_possibility": "Estimate relative changes or ratios of lattice energies using proportional dependence on charge product and interionic distance"
+    }
+]

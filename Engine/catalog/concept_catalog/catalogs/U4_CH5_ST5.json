@@ -1,0 +1,402 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C001",
+        "concept": "Concept of Locus in the Cartesian Plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C002",
+        "concept": "Set-of-Points Definition via Geometric or Algebraic Conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C003",
+        "concept": "Algebraic Representation of a Locus (Equations and Inequalities)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C004",
+        "concept": "Parametric Representation of Loci"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C005",
+        "concept": "Necessary and Sufficient Conditions for Locus Membership"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C006",
+        "concept": "Validation of a Locus and Exclusion of Extraneous Points"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C007",
+        "concept": "Locus as Curve versus Region (Boundary and Interior)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C008",
+        "concept": "Symmetry Analysis of Loci from Symmetric Constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C009",
+        "concept": "Transformation Invariance of Loci under Translation and Rotation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C010",
+        "concept": "Composition of Loci via Intersection and Union of Conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C011",
+        "concept": "Degenerate Loci and Feasibility Conditions of Constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C012",
+        "concept": "Connectedness and Branch Structure of Loci"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C013",
+        "concept": "Endpoint Inclusion and Closure Properties of Loci"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C014",
+        "concept": "Equidistance from a Fixed Point as a Locus Condition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C015",
+        "concept": "Equidistance from a Fixed Line as a Locus Condition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C016",
+        "concept": "Equidistance from Two Fixed Points as a Locus Condition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C017",
+        "concept": "Equidistance from Two Intersecting Lines as a Locus Condition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C018",
+        "concept": "Fixed Ratio of Distances to Two Fixed Points (Distance-Ratio Loci)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C019",
+        "concept": "Fixed Ratio of Distances to Two Lines (Generalized Angle-Bisector Loci)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C020",
+        "concept": "Fixed Sum of Distances to Two Fixed Points as a Locus Condition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C021",
+        "concept": "Fixed Difference of Distances to Two Fixed Points as a Locus Condition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C022",
+        "concept": "Fixed Sum or Difference of Distances to a Point and a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C023",
+        "concept": "Distance Inequality from a Point (Interior and Exterior Regions)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C024",
+        "concept": "Distance Inequality from a Line (Half-Planes and Parallel Strips)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C025",
+        "concept": "Combined Distance Inequalities Defining Annular and Banded Regions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C026",
+        "concept": "Linear Coordinate Constraints as Loci (Lines and Half-Planes)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C027",
+        "concept": "Quadratic Coordinate Constraints as Loci (General Second-Degree Sets)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C028",
+        "concept": "Absolute Value Constraints and Piecewise-Linear Loci"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C029",
+        "concept": "Axis Symmetry and Even–Odd Coordinate Conditions in Loci"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C030",
+        "concept": "Constraints on Coordinate Sums, Differences, and Products as Loci"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C031",
+        "concept": "Angle-Bisector Loci Derived from Angular Constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C032",
+        "concept": "Constant Angle Subtended by a Fixed Segment as a Locus Condition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C033",
+        "concept": "Orientation Constraints Relative to Axes or a Given Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C034",
+        "concept": "Loci of Midpoints under Moving-Point Constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C035",
+        "concept": "Loci of Internal and External Division Points with Fixed Ratio"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C036",
+        "concept": "Loci of Centroids under Vertex Position Constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C037",
+        "concept": "Image Loci under Translation of Figures or Conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C038",
+        "concept": "Image Loci under Rotation about a Fixed Point"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C039",
+        "concept": "Image Loci under Homothety (Scaling) with Fixed Center"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C040",
+        "concept": "Reflection-Derived Loci across Lines and Points"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C041",
+        "concept": "Simultaneous Metric and Algebraic Constraints Defining a Locus"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C042",
+        "concept": "Piecewise-Defined Loci Arising from Sign Cases and Absolute Values"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C043",
+        "concept": "Area-Based Locus Constraints (Fixed Area Conditions)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C044",
+        "concept": "Collinearity and Concurrency as Locus Conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C045",
+        "concept": "Perpendicularity and Parallelism Constraints in Loci"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C046",
+        "concept": "Weighted Distance Constraints and Scaled Metric Conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C047",
+        "concept": "Graphical Interpretation of Loci from Given Constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C048",
+        "concept": "Domain Restrictions and Admissible Sets for Locus Definitions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C049",
+        "concept": "Loci of Projections and Feet of Perpendiculars under Motion Constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Locus Problems",
+        "concept_id": "C050",
+        "concept": "Polyhedral Regions from Systems of Linear Inequalities"
+    }
+]

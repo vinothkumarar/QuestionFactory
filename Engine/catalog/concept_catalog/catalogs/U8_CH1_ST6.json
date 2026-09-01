@@ -1,0 +1,74 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Fundamental Trigonometric Identities",
+        "concept_id": "C001",
+        "concept": "Definition and Universality of Trigonometric Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Fundamental Trigonometric Identities",
+        "concept_id": "C002",
+        "concept": "Domains and Validity Conditions for Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Fundamental Trigonometric Identities",
+        "concept_id": "C003",
+        "concept": "Reciprocal Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Fundamental Trigonometric Identities",
+        "concept_id": "C004",
+        "concept": "Quotient Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Fundamental Trigonometric Identities",
+        "concept_id": "C005",
+        "concept": "Pythagorean Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Fundamental Trigonometric Identities",
+        "concept_id": "C006",
+        "concept": "Even–Odd Identities (Negative Angle Properties)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Fundamental Trigonometric Identities",
+        "concept_id": "C007",
+        "concept": "Cofunction Identities (Complementary Angle Relations)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Fundamental Trigonometric Identities",
+        "concept_id": "C008",
+        "concept": "Periodicity Identities and Fundamental Periods"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Fundamental Trigonometric Identities",
+        "concept_id": "C009",
+        "concept": "Angle Unit Conventions in Identities (Degrees and Radians)"
+    }
+]

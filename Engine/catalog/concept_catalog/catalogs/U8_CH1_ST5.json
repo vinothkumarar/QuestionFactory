@@ -1,0 +1,98 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Signs of Trigonometric Ratios in Different Quadrants",
+        "concept_id": "C001",
+        "concept": "Quadrant Definitions and Labeling in the Coordinate Plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Signs of Trigonometric Ratios in Different Quadrants",
+        "concept_id": "C002",
+        "concept": "Standard Position of an Angle and Terminal Side"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Signs of Trigonometric Ratios in Different Quadrants",
+        "concept_id": "C003",
+        "concept": "Angle–Quadrant Mapping in Degrees and Radians"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Signs of Trigonometric Ratios in Different Quadrants",
+        "concept_id": "C004",
+        "concept": "Unit Circle Interpretation of Trigonometric Ratios for Sign Analysis"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Signs of Trigonometric Ratios in Different Quadrants",
+        "concept_id": "C005",
+        "concept": "Quadrant-wise Sign Distribution for Sine, Cosine, Tangent, Cotangent, Secant, and Cosecant"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Signs of Trigonometric Ratios in Different Quadrants",
+        "concept_id": "C006",
+        "concept": "Reciprocal Trigonometric Functions and Shared Sign Relationships"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Signs of Trigonometric Ratios in Different Quadrants",
+        "concept_id": "C007",
+        "concept": "Quotient Relationships and Sign of Tangent and Cotangent"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Signs of Trigonometric Ratios in Different Quadrants",
+        "concept_id": "C008",
+        "concept": "Reference Angle and Separation of Magnitude from Quadrant-based Sign"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Signs of Trigonometric Ratios in Different Quadrants",
+        "concept_id": "C009",
+        "concept": "Coterminal Angles and Invariance of Trigonometric Signs under Full Rotations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Signs of Trigonometric Ratios in Different Quadrants",
+        "concept_id": "C010",
+        "concept": "Opposite-Quadrant Symmetries and Sign Behavior"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Signs of Trigonometric Ratios in Different Quadrants",
+        "concept_id": "C011",
+        "concept": "Quadrantal Angles: Zeros, Undefined Values, and Sign Applicability"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Signs of Trigonometric Ratios in Different Quadrants",
+        "concept_id": "C012",
+        "concept": "Determining Trigonometric Signs from Coordinates of a Point on the Terminal Side"
+    }
+]

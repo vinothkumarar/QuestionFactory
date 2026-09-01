@@ -1,0 +1,218 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C001",
+        "concept": "Real Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C003",
+        "concept": "Row Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C004",
+        "concept": "Column Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C005",
+        "concept": "Rectangular Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C006",
+        "concept": "Square Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C008",
+        "concept": "Diagonal Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C010",
+        "concept": "Identity Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C011",
+        "concept": "Upper Triangular Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C012",
+        "concept": "Lower Triangular Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C014",
+        "concept": "Skew-Symmetric Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C016",
+        "concept": "Singular Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C017",
+        "concept": "Non-Singular Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C018",
+        "concept": "Idempotent Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C020",
+        "concept": "Involutory Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C023",
+        "concept": "Hermitian Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix"
+    }
+]

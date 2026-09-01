@@ -1,0 +1,13 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Algebra,Determinants,Expansion Methods,C001,Minors of a determinant
+Mathematics,Algebra,Determinants,Expansion Methods,C002,Cofactors of a determinant
+Mathematics,Algebra,Determinants,Expansion Methods,C003,Cofactor sign pattern
+Mathematics,Algebra,Determinants,Expansion Methods,C004,Recursive definition via cofactor expansion
+Mathematics,Algebra,Determinants,Expansion Methods,C005,Laplace expansion along a row
+Mathematics,Algebra,Determinants,Expansion Methods,C006,Laplace expansion along a column
+Mathematics,Algebra,Determinants,Expansion Methods,C007,Invariance under choice of expansion row or column
+Mathematics,Algebra,Determinants,Expansion Methods,C008,2x2 determinant expansion rule
+Mathematics,Algebra,Determinants,Expansion Methods,C009,3x3 determinant diagonal pattern expansion
+Mathematics,Algebra,Determinants,Expansion Methods,C010,Permutation-based determinant expansion
+Mathematics,Algebra,Determinants,Expansion Methods,C011,Permutation parity and sign in expansion
+Mathematics,Algebra,Determinants,Expansion Methods,C012,Generalized Laplace expansion by complementary minors

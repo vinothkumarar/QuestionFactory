@@ -1,0 +1,30 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C001,Transpose of a matrix: definition and notation
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C002,Entry-wise index mapping and row–column interchange under transpose
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C003,Order change under transpose (m×n to n×m)
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C004,Involution property of transpose (double transpose)
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C005,Linearity of transpose (sum and scalar multiple)
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C006,Transpose of a product (reverse order property)
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C007,Transpose of matrix powers
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C008,Transpose–inverse relation
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C009,Transpose of partitioned (block) matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C010,Transpose of triangular matrices (upper ↔ lower)
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C011,Transpose of diagonal and scalar matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C012,Symmetric matrices: definition and element-wise condition
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C013,Skew-symmetric matrices: definition and element-wise condition
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C014,Square matrix requirement for symmetry and skew-symmetry
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C015,Zero diagonal property of skew-symmetric matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C016,"Classification of common special matrices under symmetry (zero, identity, diagonal, scalar)"
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C017,Closure of symmetric matrices under addition and scalar multiplication
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C018,Closure of skew-symmetric matrices under addition and scalar multiplication
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C019,Symmetry of A^T A and A A^T
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C020,Symmetry of product of two symmetric matrices under commutativity
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C021,Skew-symmetry of product of symmetric and skew-symmetric matrices under commutativity
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C022,Powers of symmetric matrices preserve symmetry
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C023,Parity behavior of powers of skew-symmetric matrices
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C024,Decomposition of a square matrix into symmetric and skew-symmetric parts
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C025,Uniqueness of symmetric–skew-symmetric decomposition
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C026,Independent parameters in symmetric matrices of order n
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C027,Independent parameters in skew-symmetric matrices of order n
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C028,Determination of symmetric and skew-symmetric matrices from half-matrix data (upper or lower triangle)
+Mathematics,Algebra,Matrices,Transpose and Symmetric Matrices,C029,Symmetry conditions in block-partitioned matrices

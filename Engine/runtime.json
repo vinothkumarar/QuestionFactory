@@ -4,7 +4,7 @@
         "status": "IDLE",
         "started_at": "",
         "completed_at": "",
-        "last_updated": "",
+        "last_updated": "2026-08-28T20:07:53.469065",
         "current_cycle_id": ""
     },
     "production": {
@@ -18,7 +18,30 @@
         "question_to": 10,
         "next_question_number": 1,
         "production_node": "",
-        "batch_id": ""
+        "batch_id": "C3_CH1_ST1_S5_C3_CH1_ST1_AR00006",
+        "completed_batch_ids": [
+            "C3_CH1_ST1_AR00001_S5_B1",
+            "C3_CH1_ST1_AR00002_S5_B1",
+            "C3_CH1_ST1_AR00003_S5_B1",
+            "C3_CH1_ST1_AR00004_S5_B1",
+            "C3_CH1_ST1_AR00005_S5_B1",
+            "C3_CH1_ST1_AR00006_S5_B1",
+            "C3_CH1_ST1_AR00007_S5_B1",
+            "C3_CH1_ST1_AR00008_S5_B1",
+            "C3_CH1_ST1_AR00009_S5_B1",
+            "C3_CH1_ST1_AR00010_S5_B1",
+            "C3_CH1_ST1_AR00734_S5_B1",
+            "C3_CH1_ST1_S4_C3_CH1_ST1_AR00001",
+            "C3_CH1_ST1_S4_C3_CH1_ST1_AR00002",
+            "C3_CH1_ST1_S4_C3_CH1_ST1_AR00003",
+            "C3_CH1_ST1_S4_C3_CH1_ST1_AR00004",
+            "C3_CH1_ST1_S5_C3_CH1_ST1_AR00001",
+            "C3_CH1_ST1_S5_C3_CH1_ST1_AR00002",
+            "C3_CH1_ST1_S5_C3_CH1_ST1_AR00003",
+            "C3_CH1_ST1_S5_C3_CH1_ST1_AR00004",
+            "C3_CH1_ST1_S5_C3_CH1_ST1_AR00005",
+            "C3_CH1_ST1_S5_C3_CH1_ST1_AR00006"
+        ]
     },
     "statistics": {
         "total_questions": 0,
@@ -54,5 +77,5 @@
         "retry_count": 0
     },
     "created_at": "2026-07-20T16:41:55.327576",
-    "updated_at": "2026-07-20T16:41:55.327581"
+    "updated_at": "2026-08-28T20:07:53.469065"
 }

@@ -1,0 +1,122 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C001",
+        "concept": "Geometric definition of perpendicular distance from a point to a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C002",
+        "concept": "Existence and uniqueness of the perpendicular from a point to a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C003",
+        "concept": "Zero distance condition for a point lying on a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C004",
+        "concept": "Cartesian formulation of point–line perpendicular distance (unsigned)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C005",
+        "concept": "Validity of line representation ax+by+c=0 and invariance under scaling of coefficients"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C006",
+        "concept": "Signed distance from a line and orientation via a chosen normal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C007",
+        "concept": "Half-planes determined by a line and point classification using ax+by+c"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C008",
+        "concept": "Normal vector to a line and unit normal concept"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C009",
+        "concept": "Vector formulation of point–line distance using dot product with unit normal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C010",
+        "concept": "Area-based interpretation of perpendicular distance as altitude of a triangle"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C011",
+        "concept": "Special cases of distance to horizontal and vertical lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C012",
+        "concept": "Normal (perpendicular) form of a line and normal distance from the origin"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C013",
+        "concept": "Point–line distance expressed using normal form parameters"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C014",
+        "concept": "Foot of the perpendicular from a point to a line and its relation to distance"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C015",
+        "concept": "Conversion of line representations to general form for distance evaluation"
+    }
+]

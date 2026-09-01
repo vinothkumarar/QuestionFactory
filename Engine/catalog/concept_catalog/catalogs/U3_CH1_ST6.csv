@@ -1,0 +1,17 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C001,Family of lines
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C002,One-parameter family of lines
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C003,Two-parameter family of lines
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C004,Family of lines through a fixed point
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C005,Family of lines through the origin
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C006,Family of lines through the intersection of two lines
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C007,Family of lines parallel to a given line
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C008,Family of lines perpendicular to a given line
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C009,Family of lines making a fixed angle with a given line
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C010,Family of lines with fixed normal distance from the origin
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C011,Parameter interpretation in line families
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C012,Vertical line inclusion in line families
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C013,Equivalent representations of a line family
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C014,Constraint-induced subfamilies of lines
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C015,Concurrency in families of lines
+Mathematics,Coordinate Geometry,Straight Lines,Family of Lines,C016,Parameter domain in line families

@@ -1,0 +1,138 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C001",
+        "concept": "Triangle area as a plane geometric measure"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C002",
+        "concept": "Coordinate formula for triangle area from vertex coordinates"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C003",
+        "concept": "Oriented area and orientation of three points"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C004",
+        "concept": "Collinearity condition expressed via zero triangle area"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C005",
+        "concept": "Base–height formulation of triangle area in the coordinate plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C006",
+        "concept": "Triangle area from side lengths computed using the distance formula"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C007",
+        "concept": "Invariance of triangle area under translations, rotations, and reflections"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C008",
+        "concept": "Effect of dilations on triangle area scaling"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C009",
+        "concept": "Special-case area formulas with a vertex at the origin or vertices on coordinate axes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C010",
+        "concept": "Triangle area with a side parallel to a coordinate axis"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C011",
+        "concept": "Area of triangle formed by a line and the coordinate axes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C012",
+        "concept": "Area of triangle determined by three non-parallel intersecting lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C013",
+        "concept": "Equality of areas for triangles on the same base and between the same parallels"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C014",
+        "concept": "Area ratios for triangles sharing a common base or a common altitude"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C015",
+        "concept": "Area bisection property of a median in a triangle"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C016",
+        "concept": "Area relations involving midpoints and the medial triangle"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Area of Triangle",
+        "concept_id": "C017",
+        "concept": "Partition of a triangle’s area by an interior or exterior point"
+    }
+]

@@ -1,0 +1,98 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Expansion Methods",
+        "concept_id": "C001",
+        "concept": "Minors of a determinant"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Expansion Methods",
+        "concept_id": "C002",
+        "concept": "Cofactors of a determinant"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Expansion Methods",
+        "concept_id": "C003",
+        "concept": "Cofactor sign pattern"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Expansion Methods",
+        "concept_id": "C004",
+        "concept": "Recursive definition via cofactor expansion"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Expansion Methods",
+        "concept_id": "C005",
+        "concept": "Laplace expansion along a row"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Expansion Methods",
+        "concept_id": "C006",
+        "concept": "Laplace expansion along a column"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Expansion Methods",
+        "concept_id": "C007",
+        "concept": "Invariance under choice of expansion row or column"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Expansion Methods",
+        "concept_id": "C008",
+        "concept": "2x2 determinant expansion rule"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Expansion Methods",
+        "concept_id": "C009",
+        "concept": "3x3 determinant diagonal pattern expansion"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Expansion Methods",
+        "concept_id": "C010",
+        "concept": "Permutation-based determinant expansion"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Expansion Methods",
+        "concept_id": "C011",
+        "concept": "Permutation parity and sign in expansion"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Expansion Methods",
+        "concept_id": "C012",
+        "concept": "Generalized Laplace expansion by complementary minors"
+    }
+]

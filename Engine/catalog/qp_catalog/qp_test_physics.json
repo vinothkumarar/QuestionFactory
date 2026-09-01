@@ -1,0 +1,92 @@
+[
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP001",
+        "question_possibility": "Identify whether a specified reference frame is inertial"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP002",
+        "question_possibility": "Determine the kinematic criteria under which a reference frame is inertial"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP003",
+        "question_possibility": "Characterize the set of all inertial frames relative to a given inertial frame"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP004",
+        "question_possibility": "Establish the form-invariance of Newton’s first law across all inertial frames"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP005",
+        "question_possibility": "Establish that particle acceleration measurements are identical in all inertial frames"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP006",
+        "question_possibility": "Infer a reference frame’s linear acceleration or rotation from the observed motion of a force-free body"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP007",
+        "question_possibility": "Assess whether a practical frame can be approximated as inertial for specified accuracy, scale, or duration"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP008",
+        "question_possibility": "Distinguish whether observed non-uniform motion is due to real external forces or to using a non-inertial frame"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP009",
+        "question_possibility": "Differentiate a frame’s inertial property from the presence or absence of forces acting on bodies within it"
+    }
+]

@@ -1,0 +1,130 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C001",
+        "concept": "Standard Angles in Degrees and Radians"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C002",
+        "concept": "Unit Circle Coordinates at Standard Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C003",
+        "concept": "30°–60°–90° Triangle Properties"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C004",
+        "concept": "45°–45°–90° Triangle Properties"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C005",
+        "concept": "Exact Values of Sine at Standard Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C006",
+        "concept": "Exact Values of Cosine at Standard Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C007",
+        "concept": "Exact Values of Tangent at Standard Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C008",
+        "concept": "Exact Values of Cotangent at Standard Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C009",
+        "concept": "Exact Values of Secant at Standard Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C010",
+        "concept": "Exact Values of Cosecant at Standard Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C011",
+        "concept": "Quadrantal Angle Values and Undefined Cases"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C012",
+        "concept": "Quadrant-wise Signs of Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C013",
+        "concept": "Reference Angle Concept for Standard Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C014",
+        "concept": "Parity (Even–Odd) of Trigonometric Functions for Standard Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C015",
+        "concept": "Periodicity and Coterminal Standard Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Standard Values of Trigonometric Ratios",
+        "concept_id": "C016",
+        "concept": "Complementary Angle Relationships for Standard Values"
+    }
+]

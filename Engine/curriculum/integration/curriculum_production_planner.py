@@ -58,10 +58,16 @@ class CurriculumProductionPlanner:
             batch_no=work_item.batch_no,
             question_start=question_start,
             question_count=work_item.questions_per_batch,
+            concept_id=work_item.concept_id,
+            concept=work_item.concept,
             qp_id=work_item.qp_id,
             question_possibility=(
                 work_item.question_possibility
             ),
+            archetype_id=work_item.archetype_id,
+            archetype=work_item.archetype,
+            variation_capacity=work_item.variation_capacity,
+            variation_dimensions=work_item.variation_dimensions,
             status="PLANNED",
         )
 

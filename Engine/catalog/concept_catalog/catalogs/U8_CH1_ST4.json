@@ -1,0 +1,82 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Allied Angle Identities (90Â°âˆ’Î¸)",
+        "concept_id": "C001",
+        "concept": "Complementary Angles in Trigonometry"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Allied Angle Identities (90Â°âˆ’Î¸)",
+        "concept_id": "C002",
+        "concept": "Cofunction Identities for 90°−θ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Allied Angle Identities (90Â°âˆ’Î¸)",
+        "concept_id": "C003",
+        "concept": "Radian Formulation of 90°−θ Identities (π/2−θ)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Allied Angle Identities (90Â°âˆ’Î¸)",
+        "concept_id": "C004",
+        "concept": "Right-Triangle Interpretation of 90°−θ Cofunctions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Allied Angle Identities (90Â°âˆ’Î¸)",
+        "concept_id": "C005",
+        "concept": "Unit-Circle Interpretation of 90°−θ Cofunctions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Allied Angle Identities (90Â°âˆ’Î¸)",
+        "concept_id": "C006",
+        "concept": "Quadrant Determination for Angles of the Form 90°−θ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Allied Angle Identities (90Â°âˆ’Î¸)",
+        "concept_id": "C007",
+        "concept": "Sign of Trigonometric Ratios at 90°−θ Based on Quadrant"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Allied Angle Identities (90Â°âˆ’Î¸)",
+        "concept_id": "C008",
+        "concept": "Domain and Undefined Cases for Trigonometric Ratios at 90°−θ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Allied Angle Identities (90Â°âˆ’Î¸)",
+        "concept_id": "C009",
+        "concept": "Range Relationships of Cofunction Pairs on Acute Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Allied Angle Identities (90Â°âˆ’Î¸)",
+        "concept_id": "C010",
+        "concept": "Algebraic Equivalence Under 90° Complement Transformation"
+    }
+]

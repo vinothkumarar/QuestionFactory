@@ -1,0 +1,3692 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C001",
+        "concept": "Matrix Equality",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether two matrices are equal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C001",
+        "concept": "Matrix Equality",
+        "qp_id": "QP002",
+        "question_possibility": "Determine dimension constraints required for two matrices to be equal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C001",
+        "concept": "Matrix Equality",
+        "qp_id": "QP003",
+        "question_possibility": "Determine scalar parameter values that make two matrices or matrix expressions equal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C001",
+        "concept": "Matrix Equality",
+        "qp_id": "QP004",
+        "question_possibility": "Determine an unknown matrix from a matrix equality or a system of matrix equalities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C001",
+        "concept": "Matrix Equality",
+        "qp_id": "QP005",
+        "question_possibility": "Deduce new equalities from a given matrix equality using equality-preserving operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C001",
+        "concept": "Matrix Equality",
+        "qp_id": "QP006",
+        "question_possibility": "Assess whether stated conditions are sufficient and/or necessary for two matrices to be equal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C001",
+        "concept": "Matrix Equality",
+        "qp_id": "QP007",
+        "question_possibility": "Assess feasibility of matrix equality under structural constraints such as shape or sparsity pattern"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C001",
+        "concept": "Matrix Equality",
+        "qp_id": "QP008",
+        "question_possibility": "Establish and apply reflexive, symmetric, and transitive properties of matrix equality"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP001",
+        "question_possibility": "Determine order conditions for matrix equality to be meaningful"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP002",
+        "question_possibility": "Determine order conditions for matrix addition or subtraction to be defined"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP003",
+        "question_possibility": "Determine conformability of scalar multiplication with a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP004",
+        "question_possibility": "Determine conformability of matrix multiplication for given orders"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP005",
+        "question_possibility": "Determine the order of the result of a defined matrix operation or composite expression"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP006",
+        "question_possibility": "Determine conformability for operations involving transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP007",
+        "question_possibility": "Determine order conditions for matrix powers to be defined for given integer exponents"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP008",
+        "question_possibility": "Determine order conditions for polynomial expressions in a matrix to be defined"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP009",
+        "question_possibility": "Determine appropriate identity matrix order for valid sums and products"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP010",
+        "question_possibility": "Determine dimensional preconditions for expressions involving inverses assuming invertibility"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP011",
+        "question_possibility": "Determine order conditions for determinant of a matrix or matrix expression to be defined"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP012",
+        "question_possibility": "Determine order conditions for trace of a matrix or matrix expression to be defined"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP013",
+        "question_possibility": "Determine conditions under which both AB and BA are simultaneously defined and identify their orders"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP014",
+        "question_possibility": "Determine order conditions for expressions such as AB + BA to be defined"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP015",
+        "question_possibility": "Infer unknown matrix orders from the requirement that an equation or expression is well-defined"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP016",
+        "question_possibility": "Diagnose dimensional inconsistency of a proposed matrix operation or expression"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP017",
+        "question_possibility": "Determine conformability conditions for partitioned matrix addition and multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations",
+        "qp_id": "QP018",
+        "question_possibility": "Determine minimal order relationships required for a composite expression with sums and products to be well-defined"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C003",
+        "concept": "Matrix Addition",
+        "qp_id": "QP001",
+        "question_possibility": "Determine conformability and resultant order for matrix addition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C003",
+        "concept": "Matrix Addition",
+        "qp_id": "QP002",
+        "question_possibility": "Compute the sum of matrices element-wise"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C003",
+        "concept": "Matrix Addition",
+        "qp_id": "QP003",
+        "question_possibility": "Determine unknown matrix or entries from a matrix equation involving addition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C003",
+        "concept": "Matrix Addition",
+        "qp_id": "QP004",
+        "question_possibility": "Determine the additive inverse of a matrix or of a matrix sum"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C003",
+        "concept": "Matrix Addition",
+        "qp_id": "QP005",
+        "question_possibility": "Apply commutativity, associativity, and additive identity properties to simplify matrix expressions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C003",
+        "concept": "Matrix Addition",
+        "qp_id": "QP006",
+        "question_possibility": "Establish closure of specified matrix classes under addition and identify the class of the sum"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C003",
+        "concept": "Matrix Addition",
+        "qp_id": "QP007",
+        "question_possibility": "Determine existence and uniqueness conditions for solutions of matrix equations involving addition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C003",
+        "concept": "Matrix Addition",
+        "qp_id": "QP008",
+        "question_possibility": "Identify or construct the zero matrix (additive identity) of a specified order and use it in addition equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C004",
+        "concept": "Scalar Multiplication of Matrices",
+        "qp_id": "QP001",
+        "question_possibility": "Compute scalar multiple of a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C004",
+        "concept": "Scalar Multiplication of Matrices",
+        "qp_id": "QP002",
+        "question_possibility": "Evaluate matrix linear combination with scalar coefficients"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C004",
+        "concept": "Scalar Multiplication of Matrices",
+        "qp_id": "QP003",
+        "question_possibility": "Apply algebraic properties of scalar multiplication to transform matrix expressions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C004",
+        "concept": "Scalar Multiplication of Matrices",
+        "qp_id": "QP004",
+        "question_possibility": "Determine scalar parameters from matrix equalities involving scalar multiples"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C004",
+        "concept": "Scalar Multiplication of Matrices",
+        "qp_id": "QP005",
+        "question_possibility": "Determine existence or uniqueness conditions for scalars in equalities with scalar-multiplied matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C004",
+        "concept": "Scalar Multiplication of Matrices",
+        "qp_id": "QP006",
+        "question_possibility": "Determine whether one matrix is a scalar multiple of another and find the scalar"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C004",
+        "concept": "Scalar Multiplication of Matrices",
+        "qp_id": "QP007",
+        "question_possibility": "Apply compatibility of scalar multiplication with matrix multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C004",
+        "concept": "Scalar Multiplication of Matrices",
+        "qp_id": "QP008",
+        "question_possibility": "Apply compatibility of scalar multiplication with transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C004",
+        "concept": "Scalar Multiplication of Matrices",
+        "qp_id": "QP009",
+        "question_possibility": "Determine preservation of matrix structural classes under scalar multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C004",
+        "concept": "Scalar Multiplication of Matrices",
+        "qp_id": "QP010",
+        "question_possibility": "Predict qualitative entry-wise effects of scalar multiplication on sign and magnitude"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C004",
+        "concept": "Scalar Multiplication of Matrices",
+        "qp_id": "QP011",
+        "question_possibility": "Determine scalar values or ranges so a scalar multiple satisfies entry-wise inequality constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C005",
+        "concept": "Matrix Subtraction",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a matrix subtraction is defined and the order of the result"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C005",
+        "concept": "Matrix Subtraction",
+        "qp_id": "QP002",
+        "question_possibility": "Evaluate a matrix difference using element-wise subtraction"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C005",
+        "concept": "Matrix Subtraction",
+        "qp_id": "QP003",
+        "question_possibility": "Determine the general (i, j)-entry or specific entries of a matrix difference"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C005",
+        "concept": "Matrix Subtraction",
+        "qp_id": "QP004",
+        "question_possibility": "Rewrite matrix expressions by replacing subtraction with addition of additive inverses and vice versa"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C005",
+        "concept": "Matrix Subtraction",
+        "qp_id": "QP005",
+        "question_possibility": "Simplify matrix expressions involving multiple subtractions and parentheses"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C005",
+        "concept": "Matrix Subtraction",
+        "qp_id": "QP006",
+        "question_possibility": "Determine which algebraic properties of matrix subtraction hold (non-commutativity, non-associativity, identity, inverse, cancellation, closure)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C005",
+        "concept": "Matrix Subtraction",
+        "qp_id": "QP007",
+        "question_possibility": "Solve matrix equations involving subtraction to determine unknown matrices or scalar parameters"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C006",
+        "concept": "Properties of Matrix Addition",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a matrix sum is defined based on orders and identify the order of the result"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C006",
+        "concept": "Properties of Matrix Addition",
+        "qp_id": "QP002",
+        "question_possibility": "Establish and apply the commutativity of matrix addition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C006",
+        "concept": "Properties of Matrix Addition",
+        "qp_id": "QP003",
+        "question_possibility": "Establish and apply the associativity of matrix addition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C006",
+        "concept": "Properties of Matrix Addition",
+        "qp_id": "QP004",
+        "question_possibility": "Identify the additive identity (zero matrix) and use it to simplify matrix sums"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C006",
+        "concept": "Properties of Matrix Addition",
+        "qp_id": "QP005",
+        "question_possibility": "Identify and use the additive inverse of a matrix; interpret subtraction as addition of the inverse"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C006",
+        "concept": "Properties of Matrix Addition",
+        "qp_id": "QP006",
+        "question_possibility": "Apply the cancellation law for matrix addition to infer equality of matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C006",
+        "concept": "Properties of Matrix Addition",
+        "qp_id": "QP007",
+        "question_possibility": "Solve matrix equations involving only addition/subtraction to determine unknown matrices or entries"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C006",
+        "concept": "Properties of Matrix Addition",
+        "qp_id": "QP008",
+        "question_possibility": "Establish the uniqueness of the additive identity and additive inverse in the set of m×n matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C006",
+        "concept": "Properties of Matrix Addition",
+        "qp_id": "QP009",
+        "question_possibility": "Establish closure of the set of all m×n matrices under addition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C007",
+        "concept": "Properties of Scalar Multiplication with Matrices",
+        "qp_id": "QP001",
+        "question_possibility": "Compute a scalar multiple of a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C007",
+        "concept": "Properties of Scalar Multiplication with Matrices",
+        "qp_id": "QP002",
+        "question_possibility": "Apply distributivity of a scalar over matrix addition/subtraction"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C007",
+        "concept": "Properties of Scalar Multiplication with Matrices",
+        "qp_id": "QP003",
+        "question_possibility": "Apply distributivity of scalar addition over a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C007",
+        "concept": "Properties of Scalar Multiplication with Matrices",
+        "qp_id": "QP004",
+        "question_possibility": "Use associativity/commutativity of scalar factors with matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C007",
+        "concept": "Properties of Scalar Multiplication with Matrices",
+        "qp_id": "QP005",
+        "question_possibility": "Use identity, zero, and negative scalar effects in matrix scaling"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C007",
+        "concept": "Properties of Scalar Multiplication with Matrices",
+        "qp_id": "QP006",
+        "question_possibility": "Apply cancellation laws for scalar multiplication to infer matrix/scalar equality"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C007",
+        "concept": "Properties of Scalar Multiplication with Matrices",
+        "qp_id": "QP007",
+        "question_possibility": "Solve matrix equations involving a scalar factor (e.g., αX = B)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C007",
+        "concept": "Properties of Scalar Multiplication with Matrices",
+        "qp_id": "QP008",
+        "question_possibility": "Determine existence/uniqueness of solutions to αX = B based on α and B"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C007",
+        "concept": "Properties of Scalar Multiplication with Matrices",
+        "qp_id": "QP009",
+        "question_possibility": "Determine whether one matrix is a scalar multiple of another and find the scalar if it exists"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C007",
+        "concept": "Properties of Scalar Multiplication with Matrices",
+        "qp_id": "QP010",
+        "question_possibility": "Reassociate a scalar across a matrix product (α(AB) = (αA)B = A(αB))"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C007",
+        "concept": "Properties of Scalar Multiplication with Matrices",
+        "qp_id": "QP011",
+        "question_possibility": "Apply compatibility of scalar multiplication with transpose ((αA)^T = α A^T)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a matrix product is defined given the orders of the factors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP002",
+        "question_possibility": "Determine the order of a matrix product when the multiplication is defined"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP003",
+        "question_possibility": "Evaluate a specified entry of a product using the row–column (dot product) rule"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP004",
+        "question_possibility": "Compute a full matrix product using the row–column rule"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP005",
+        "question_possibility": "Interpret product columns and rows as linear combinations of columns/rows of the factors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP006",
+        "question_possibility": "Apply associativity of matrix multiplication to regroup and evaluate chain products"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP007",
+        "question_possibility": "Use distributivity and scalar compatibility to expand or simplify matrix expressions with products"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP008",
+        "question_possibility": "Assess existence, order, and potential equality of AB and BA; diagnose non-commutativity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP009",
+        "question_possibility": "Determine outcomes of multiplying with identity and zero matrices, including order constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP010",
+        "question_possibility": "Evaluate the validity of cancellation and zero-product inferences in matrix multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP011",
+        "question_possibility": "Predict the effect of pre- or post-multiplying by special matrices (diagonal, permutation, elementary) on rows/columns"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP012",
+        "question_possibility": "Determine feasibility and resulting order of multi-factor (chain) products from given dimension sequences"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP013",
+        "question_possibility": "Perform block matrix multiplication using conformal partitioning and the block row–column rule"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP014",
+        "question_possibility": "Infer forced zero or possible nonzero entries of a product from sparsity/zero patterns in the factors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP015",
+        "question_possibility": "Formulate entry-wise scalar equations from an equality like AB = C to determine or constrain unknown entries"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP016",
+        "question_possibility": "Relate the transpose of a product to the reversed product of transposes and use it within expressions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP017",
+        "question_possibility": "Predict structural form of a product (e.g., triangular, diagonal, symmetric) given structural properties of the factors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)",
+        "qp_id": "QP018",
+        "question_possibility": "Express a product as a sum of outer products and use this decomposition to infer properties of the product"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP001",
+        "question_possibility": "Determine conformability for matrix multiplication and the order of the product"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP002",
+        "question_possibility": "Assess commutativity of two matrices and identify conditions under which AB = BA"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP003",
+        "question_possibility": "Establish associativity of matrix multiplication and equivalence of parenthesizations when defined"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP004",
+        "question_possibility": "Establish distributivity of multiplication over matrix addition and subtraction"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP005",
+        "question_possibility": "Establish compatibility of matrix multiplication with scalar multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP006",
+        "question_possibility": "Determine identity element behavior in matrix multiplication and required sizes of identity matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP007",
+        "question_possibility": "Determine zero-matrix behavior under multiplication, including existence of zero divisors (nonzero factors with zero product)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP008",
+        "question_possibility": "Relate transpose to multiplication via (AB)^T = B^T A^T and analyze direct consequences"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP009",
+        "question_possibility": "Determine validity of left or right cancellation in matrix multiplication and state necessary conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP010",
+        "question_possibility": "Relate invertibility of a product to invertibility of its factors and apply (AB)^{-1} = B^{-1}A^{-1} when defined"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP011",
+        "question_possibility": "Determine feasibility and resulting orders when both AB and BA are defined and compare product orders"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP012",
+        "question_possibility": "Characterize rows and columns of a product as linear combinations of rows or columns of the factors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP013",
+        "question_possibility": "Establish algebraic rules for powers of a matrix under multiplication (A^m A^n, (A^n)^m)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP014",
+        "question_possibility": "Determine conditions under which (AB)^n equals A^n B^n or B^n A^n"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP015",
+        "question_possibility": "Predict structural form of a product from structures of factors (e.g., diagonal or triangular matrices)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP016",
+        "question_possibility": "Determine block-matrix multiplication feasibility and the resulting block-level product"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP017",
+        "question_possibility": "Determine conditions for a product to be symmetric or skew-symmetric using multiplication and transpose properties"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication",
+        "qp_id": "QP018",
+        "question_possibility": "Determine valid rebracketings of a chain product based on dimension compatibility and associativity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C010",
+        "concept": "Additive Identity and Additive Inverse for Matrices",
+        "qp_id": "QP001",
+        "question_possibility": "Identify the additive identity matrix for a specified order or matrix subset"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C010",
+        "concept": "Additive Identity and Additive Inverse for Matrices",
+        "qp_id": "QP002",
+        "question_possibility": "Determine the additive inverse of a given matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C010",
+        "concept": "Additive Identity and Additive Inverse for Matrices",
+        "qp_id": "QP003",
+        "question_possibility": "Determine the additive inverse of a matrix expression involving sums, differences, and scalar multiples"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C010",
+        "concept": "Additive Identity and Additive Inverse for Matrices",
+        "qp_id": "QP004",
+        "question_possibility": "Verify whether a proposed matrix serves as the additive identity for a specified set of matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C010",
+        "concept": "Additive Identity and Additive Inverse for Matrices",
+        "qp_id": "QP005",
+        "question_possibility": "Decide whether two given matrices are additive inverses of each other"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C010",
+        "concept": "Additive Identity and Additive Inverse for Matrices",
+        "qp_id": "QP006",
+        "question_possibility": "Solve linear matrix equations under addition using additive inverses"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C010",
+        "concept": "Additive Identity and Additive Inverse for Matrices",
+        "qp_id": "QP007",
+        "question_possibility": "Establish uniqueness of the additive identity and of additive inverses in matrix addition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C010",
+        "concept": "Additive Identity and Additive Inverse for Matrices",
+        "qp_id": "QP008",
+        "question_possibility": "Establish identities linking additive inverse with sum, transpose, and scalar multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C010",
+        "concept": "Additive Identity and Additive Inverse for Matrices",
+        "qp_id": "QP009",
+        "question_possibility": "Determine conditions under which a matrix equals its own additive inverse and characterize such matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C010",
+        "concept": "Additive Identity and Additive Inverse for Matrices",
+        "qp_id": "QP010",
+        "question_possibility": "Determine whether a specified class of matrices is closed under taking additive inverses and identify the resulting class"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C010",
+        "concept": "Additive Identity and Additive Inverse for Matrices",
+        "qp_id": "QP011",
+        "question_possibility": "Prove or apply the cancellation property in matrix addition using additive inverses"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property",
+        "qp_id": "QP001",
+        "question_possibility": "Identify the multiplicative identity matrix for a specified order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property",
+        "qp_id": "QP002",
+        "question_possibility": "Determine whether a given matrix is the identity matrix of its stated order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property",
+        "qp_id": "QP003",
+        "question_possibility": "Determine the correct order and side of the identity matrix that leaves a given matrix unchanged under multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property",
+        "qp_id": "QP004",
+        "question_possibility": "Verify the multiplicative identity property for conformable matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property",
+        "qp_id": "QP005",
+        "question_possibility": "Simplify matrix expressions using the identity property, including powers of the identity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property",
+        "qp_id": "QP006",
+        "question_possibility": "Determine feasibility and resultant dimensions of products involving identity matrices and given matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property",
+        "qp_id": "QP007",
+        "question_possibility": "Establish the uniqueness of the multiplicative identity matrix for a given order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property",
+        "qp_id": "QP008",
+        "question_possibility": "Determine existence or non-existence of a two-sided multiplicative identity for a specified class of matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property",
+        "qp_id": "QP009",
+        "question_possibility": "Classify a candidate matrix as a left identity, right identity, two-sided identity, or not an identity for a specified matrix set"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property",
+        "qp_id": "QP010",
+        "question_possibility": "Diagnose and correct errors due to incorrect identity size or placement in matrix products"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property",
+        "qp_id": "QP011",
+        "question_possibility": "Establish that the identity matrix commutes with every conformable matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property",
+        "qp_id": "QP012",
+        "question_possibility": "Solve matrix equations involving the identity matrix to determine an unknown matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property",
+        "qp_id": "QP013",
+        "question_possibility": "Identify or construct block identity matrices matching a given block partition and use them as neutral elements in block multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property",
+        "qp_id": "QP014",
+        "question_possibility": "Determine parameter values that make a given matrix equal to the identity matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP001",
+        "question_possibility": "Establish non-commutativity of matrix multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP002",
+        "question_possibility": "Determine whether two matrices commute"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP003",
+        "question_possibility": "Determine commutativity under specified structural constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP004",
+        "question_possibility": "Establish commutativity between a matrix and its powers or polynomials"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP005",
+        "question_possibility": "Determine whether a specified class of matrices is commutative under multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP006",
+        "question_possibility": "Establish existence of nonzero matrices whose product is the zero matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP007",
+        "question_possibility": "Determine whether a given nonzero matrix is a zero divisor"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP008",
+        "question_possibility": "Characterize zero divisors among square matrices via singularity or invertibility"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP009",
+        "question_possibility": "Determine feasibility of order-asymmetric zero products"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP010",
+        "question_possibility": "Determine dimensional conditions for nontrivial zero products in rectangular multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP011",
+        "question_possibility": "Determine conditions under which AB=0 forces one factor to be the zero matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP012",
+        "question_possibility": "Determine validity of cancellation in matrix multiplication and conditions ensuring it"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP013",
+        "question_possibility": "Contrast commutativity and zero-divisor properties between 1×1 and n×n (n>1) matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP014",
+        "question_possibility": "Determine conditions under which scalar algebraic identities hold for matrices based on commutativity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication",
+        "qp_id": "QP015",
+        "question_possibility": "Identify matrices that commute with every matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C013",
+        "concept": "Cancellation Laws in Matrix Multiplication",
+        "qp_id": "QP001",
+        "question_possibility": "Determine conditions under which a common left or right matrix factor can be cancelled from a product equality"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C013",
+        "concept": "Cancellation Laws in Matrix Multiplication",
+        "qp_id": "QP002",
+        "question_possibility": "Establish equivalence between two-sided cancellability and matrix invertibility, including the necessity of squareness"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C013",
+        "concept": "Cancellation Laws in Matrix Multiplication",
+        "qp_id": "QP003",
+        "question_possibility": "Demonstrate failure of general cancellation in matrices by identifying valid counterexamples"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C013",
+        "concept": "Cancellation Laws in Matrix Multiplication",
+        "qp_id": "QP004",
+        "question_possibility": "Determine when a zero product AB = 0 forces A = 0 or B = 0 and when it does not, and identify conditions guaranteeing the inference"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C013",
+        "concept": "Cancellation Laws in Matrix Multiplication",
+        "qp_id": "QP005",
+        "question_possibility": "Infer rank, null-space, or one-sided inverse properties of a matrix from given left or right cancellability behavior"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C013",
+        "concept": "Cancellation Laws in Matrix Multiplication",
+        "qp_id": "QP006",
+        "question_possibility": "Determine uniqueness or at-most-one solution of AX = B or XA = B using cancellability conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose",
+        "qp_id": "QP001",
+        "question_possibility": "Determine the transpose of a matrix (including resulting order and entries)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose",
+        "qp_id": "QP002",
+        "question_possibility": "Determine conformability and order of matrix expressions involving transpose (e.g., A^T, A^T B, B A^T)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose",
+        "qp_id": "QP003",
+        "question_possibility": "Simplify matrix expressions using transpose identities (sum, difference, scalar multiple, product, powers)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose",
+        "qp_id": "QP004",
+        "question_possibility": "Classify a matrix as symmetric or skew-symmetric using transpose definitions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose",
+        "qp_id": "QP005",
+        "question_possibility": "Determine unknown entries or parameters so that a matrix is symmetric or skew-symmetric (A = A^T or A^T = -A)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose",
+        "qp_id": "QP006",
+        "question_possibility": "Decompose a square matrix into symmetric and skew-symmetric parts using transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose",
+        "qp_id": "QP007",
+        "question_possibility": "Infer structural constraints from symmetry or skew-symmetry (entry relations, zero diagonal) using transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose",
+        "qp_id": "QP008",
+        "question_possibility": "Determine the number of independent entries in symmetric or skew-symmetric matrices of given order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the symmetry type of composite expressions formed with A and A^T (e.g., A + A^T, A - A^T, A A^T, A^T A)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose",
+        "qp_id": "QP010",
+        "question_possibility": "Analyze preservation or change of symmetry/skew-symmetry under matrix operations using transpose properties"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose",
+        "qp_id": "QP011",
+        "question_possibility": "Infer element-wise relationships from transpose equalities between matrices (e.g., A^T = B)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose",
+        "qp_id": "QP012",
+        "question_possibility": "Determine the transpose of a partitioned (block) matrix and the resulting block structure"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose",
+        "qp_id": "QP013",
+        "question_possibility": "Solve linear matrix equations involving an unknown matrix and its transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose",
+        "qp_id": "QP014",
+        "question_possibility": "Determine the effect of transpose on common matrix types (upper/lower triangular, diagonal, identity, zero, permutation)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C015",
+        "concept": "Properties of Transpose under Operations",
+        "qp_id": "QP001",
+        "question_possibility": "Determine the transpose of linear combinations of matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C015",
+        "concept": "Properties of Transpose under Operations",
+        "qp_id": "QP002",
+        "question_possibility": "Determine the transpose of a matrix product (including multiple factors) using order reversal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C015",
+        "concept": "Properties of Transpose under Operations",
+        "qp_id": "QP003",
+        "question_possibility": "Determine the transpose of a power of a matrix and of a polynomial in a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C015",
+        "concept": "Properties of Transpose under Operations",
+        "qp_id": "QP004",
+        "question_possibility": "Relate transpose and inverse operations for invertible matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C015",
+        "concept": "Properties of Transpose under Operations",
+        "qp_id": "QP005",
+        "question_possibility": "Classify a matrix expression as symmetric or skew-symmetric using transpose properties"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C015",
+        "concept": "Properties of Transpose under Operations",
+        "qp_id": "QP006",
+        "question_possibility": "Decompose a square matrix into symmetric and skew-symmetric parts via transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C015",
+        "concept": "Properties of Transpose under Operations",
+        "qp_id": "QP007",
+        "question_possibility": "Determine conditions for sums or products of symmetric/skew-symmetric matrices to be symmetric or skew-symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C015",
+        "concept": "Properties of Transpose under Operations",
+        "qp_id": "QP008",
+        "question_possibility": "Infer relations among matrices from equations involving transposes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C015",
+        "concept": "Properties of Transpose under Operations",
+        "qp_id": "QP009",
+        "question_possibility": "Determine orders and compatibility of matrices in expressions involving transposes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C015",
+        "concept": "Properties of Transpose under Operations",
+        "qp_id": "QP010",
+        "question_possibility": "Predict the structural form (upper/lower triangular or diagonal) after applying transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C015",
+        "concept": "Properties of Transpose under Operations",
+        "qp_id": "QP011",
+        "question_possibility": "Establish invariance of a matrix equation or property under transposition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C016",
+        "concept": "Complex Conjugate of a Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Determine the complex conjugate of a given matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C016",
+        "concept": "Complex Conjugate of a Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Simplify or transform matrix expressions using algebraic properties of complex conjugation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C016",
+        "concept": "Complex Conjugate of a Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Relate complex conjugation and transpose of a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C016",
+        "concept": "Complex Conjugate of a Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Relate complex conjugation and matrix inverse for invertible matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C016",
+        "concept": "Complex Conjugate of a Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Relate complex conjugation to matrix powers and polynomial functions of a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C016",
+        "concept": "Complex Conjugate of a Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Decompose a complex matrix into real and imaginary parts using conjugation and reconstruct the matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C016",
+        "concept": "Complex Conjugate of a Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Characterize matrices fixed or negated by conjugation (A = overline(A) or A = -overline(A))"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C016",
+        "concept": "Complex Conjugate of a Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Solve matrix equations involving a matrix and its complex conjugate"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C016",
+        "concept": "Complex Conjugate of a Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine behavior of standard invariants (trace, determinant) and rank under complex conjugation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C017",
+        "concept": "Conjugate Transpose (Hermitian Transpose)",
+        "qp_id": "QP001",
+        "question_possibility": "Compute the conjugate transpose of a matrix or a matrix expression"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C017",
+        "concept": "Conjugate Transpose (Hermitian Transpose)",
+        "qp_id": "QP002",
+        "question_possibility": "Establish validity of algebraic identities involving conjugate transpose (linearity with scalar conjugation, product order reversal, involution, inverse relation)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C017",
+        "concept": "Conjugate Transpose (Hermitian Transpose)",
+        "qp_id": "QP003",
+        "question_possibility": "Classify a matrix as Hermitian, skew-Hermitian, or neither using the conjugate-transpose definition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C017",
+        "concept": "Conjugate Transpose (Hermitian Transpose)",
+        "qp_id": "QP004",
+        "question_possibility": "Determine parameter conditions for a matrix to be Hermitian or skew-Hermitian"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C017",
+        "concept": "Conjugate Transpose (Hermitian Transpose)",
+        "qp_id": "QP005",
+        "question_possibility": "Decompose a complex square matrix into Hermitian and skew-Hermitian components"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C017",
+        "concept": "Conjugate Transpose (Hermitian Transpose)",
+        "qp_id": "QP006",
+        "question_possibility": "Determine whether expressions built from A and A* (e.g., A + A*, i(A − A*), A* A, A A*) are Hermitian or skew-Hermitian"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C017",
+        "concept": "Conjugate Transpose (Hermitian Transpose)",
+        "qp_id": "QP007",
+        "question_possibility": "Infer element-wise constraints implied by Hermitian or skew-Hermitian conditions (off-diagonal conjugacy and nature of diagonal entries)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C017",
+        "concept": "Conjugate Transpose (Hermitian Transpose)",
+        "qp_id": "QP008",
+        "question_possibility": "Test unitarity of a square matrix using conjugate transpose or determine parameter conditions for unitarity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C017",
+        "concept": "Conjugate Transpose (Hermitian Transpose)",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the resulting dimensions and product conformability after applying conjugate transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C017",
+        "concept": "Conjugate Transpose (Hermitian Transpose)",
+        "qp_id": "QP010",
+        "question_possibility": "Identify simplifications for real matrices under conjugate transpose (A* = A^T; Hermitian ↔ symmetric; skew-Hermitian ↔ skew-symmetric)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C017",
+        "concept": "Conjugate Transpose (Hermitian Transpose)",
+        "qp_id": "QP011",
+        "question_possibility": "Determine closure properties of Hermitian and skew-Hermitian matrices under addition and real/complex scalar multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C017",
+        "concept": "Conjugate Transpose (Hermitian Transpose)",
+        "qp_id": "QP012",
+        "question_possibility": "Determine feasibility of Hermitian, skew-Hermitian, or unitary properties for non-square matrices from their conjugate-transpose-based definitions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP001",
+        "question_possibility": "Determine the matrix conjugate or conjugate transpose of a given matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP002",
+        "question_possibility": "Determine the conjugate or conjugate transpose of a linear combination of matrices and scalars"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP003",
+        "question_possibility": "Determine the conjugate or conjugate transpose of a product, power, or inverse of matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP004",
+        "question_possibility": "Solve matrix equations involving the conjugate or conjugate transpose of the unknown matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP005",
+        "question_possibility": "Classify a matrix as Hermitian, skew-Hermitian, or neither using the conjugate transpose definition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP006",
+        "question_possibility": "Determine parameter conditions for a matrix to be Hermitian or skew-Hermitian"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP007",
+        "question_possibility": "Decompose a matrix into its Hermitian and skew-Hermitian parts"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP008",
+        "question_possibility": "Determine the Hermitian or skew-Hermitian nature of linear combinations of a matrix and its conjugate transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the Hermitian or skew-Hermitian nature of products involving a matrix and its conjugate transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP010",
+        "question_possibility": "Establish relationships among transpose, conjugate, and conjugate transpose and deduce simplifications for real matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP011",
+        "question_possibility": "Infer entry-wise constraints implied by Hermitian or skew-Hermitian conditions (diagonal and off-diagonal relations)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP012",
+        "question_possibility": "Determine the number of independent real parameters in Hermitian or skew-Hermitian matrices of a given order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP013",
+        "question_possibility": "Determine the conjugate transpose of a polynomial in a matrix and conditions on coefficients for a Hermitian or skew-Hermitian result"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP014",
+        "question_possibility": "Determine the behavior of trace under conjugation or conjugate transpose and its implications for Hermitian or skew-Hermitian matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP015",
+        "question_possibility": "Infer structural effects of conjugate transpose on special forms (diagonal, triangular, block patterns)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose",
+        "qp_id": "QP016",
+        "question_possibility": "Determine conditions on matrices or scalars for a constructed expression to be Hermitian or skew-Hermitian"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP001",
+        "question_possibility": "Evaluate a matrix power A^n for a given square matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP002",
+        "question_possibility": "Determine a general formula for A^n as a function of n for a given matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP003",
+        "question_possibility": "Determine or reduce A^n using a specified polynomial identity satisfied by A (e.g., idempotent, nilpotent, involutory, characteristic/minimal polynomial)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP004",
+        "question_possibility": "Determine conditions on A and n for which A^n equals a specified target matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP005",
+        "question_possibility": "Determine the order of a matrix (smallest positive n with A^n = I)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP006",
+        "question_possibility": "Determine invertibility of A^n and compute (A^n)^{-1} in terms of A when applicable"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP007",
+        "question_possibility": "Determine determinant or rank of A^n from information about A"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP008",
+        "question_possibility": "Evaluate finite or infinite sums of matrix powers and determine existence or convergence conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP009",
+        "question_possibility": "Determine validity and conditions of power identities for matrices, such as (AB)^n = A^n B^n, (A+B)^n expansions, or A^n − B^n factorizations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP010",
+        "question_possibility": "Determine commutation properties involving powers, such as whether A^k commutes with B under specified conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP011",
+        "question_possibility": "Solve polynomial matrix equations in an unknown matrix involving powers (e.g., X^2 = I, X^3 = X, X^k = 0)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP012",
+        "question_possibility": "Analyze rank or nullity behavior across powers of A and deduce related properties such as stabilization or index of nilpotency"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP013",
+        "question_possibility": "Determine periodicity or limiting behavior of the sequence A^n as n grows"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP014",
+        "question_possibility": "Infer structural properties of A from information about its powers (e.g., idempotency, nilpotency, orthogonality, constraints on determinant)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers",
+        "qp_id": "QP015",
+        "question_possibility": "Determine a specified entry, row or column, or a linear functional (e.g., trace or sum of entries) of A^n without computing the full power"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C020",
+        "concept": "Polynomials in Matrices",
+        "qp_id": "QP001",
+        "question_possibility": "Evaluate a polynomial at a given square matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C020",
+        "concept": "Polynomials in Matrices",
+        "qp_id": "QP002",
+        "question_possibility": "Verify whether a given matrix satisfies a specified polynomial identity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C020",
+        "concept": "Polynomials in Matrices",
+        "qp_id": "QP003",
+        "question_possibility": "Establish algebraic properties of matrix polynomial evaluation (sum, scalar multiple, product, composition)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C020",
+        "concept": "Polynomials in Matrices",
+        "qp_id": "QP004",
+        "question_possibility": "Reduce a matrix polynomial or high power using a given annihilating relation for the matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C020",
+        "concept": "Polynomials in Matrices",
+        "qp_id": "QP005",
+        "question_possibility": "Determine scalar coefficients so that a polynomial in a fixed matrix equals a target matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C020",
+        "concept": "Polynomials in Matrices",
+        "qp_id": "QP006",
+        "question_possibility": "Establish commutativity of polynomial expressions in the same matrix (e.g., p(A) with A or q(A))"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C020",
+        "concept": "Polynomials in Matrices",
+        "qp_id": "QP007",
+        "question_possibility": "Establish commutativity of polynomial expressions of commuting matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C020",
+        "concept": "Polynomials in Matrices",
+        "qp_id": "QP008",
+        "question_possibility": "Determine invertibility of a polynomial in a matrix and compute its inverse when possible using polynomial relations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C020",
+        "concept": "Polynomials in Matrices",
+        "qp_id": "QP009",
+        "question_possibility": "Express the inverse of a given invertible matrix as a polynomial in that matrix using a satisfied polynomial equation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C020",
+        "concept": "Polynomials in Matrices",
+        "qp_id": "QP010",
+        "question_possibility": "Determine parameter conditions under which a polynomial in a matrix attains a specified algebraic property (zero, identity, idempotent, nilpotent, involutory)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C020",
+        "concept": "Polynomials in Matrices",
+        "qp_id": "QP011",
+        "question_possibility": "Infer structural preservation of a matrix under polynomial evaluation (e.g., symmetry, skew-symmetry, triangularity, block-diagonality)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C020",
+        "concept": "Polynomials in Matrices",
+        "qp_id": "QP012",
+        "question_possibility": "Determine feasibility and dimensional constraints for defining a polynomial in a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C020",
+        "concept": "Polynomials in Matrices",
+        "qp_id": "QP013",
+        "question_possibility": "Characterize when two polynomials yield the same matrix upon evaluation given a known annihilating polynomial"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C021",
+        "concept": "Commuting Matrices",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a given pair of matrices commute"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C021",
+        "concept": "Commuting Matrices",
+        "qp_id": "QP002",
+        "question_possibility": "Determine parameter conditions under which two matrices commute"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C021",
+        "concept": "Commuting Matrices",
+        "qp_id": "QP003",
+        "question_possibility": "Describe the complete set of matrices that commute with a given matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C021",
+        "concept": "Commuting Matrices",
+        "qp_id": "QP004",
+        "question_possibility": "Identify matrices that commute with every matrix (characterize the center)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C021",
+        "concept": "Commuting Matrices",
+        "qp_id": "QP005",
+        "question_possibility": "Establish commutation of a matrix with its polynomial (and mutual commutation of such polynomials)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C021",
+        "concept": "Commuting Matrices",
+        "qp_id": "QP006",
+        "question_possibility": "Simplify or validate matrix identities that require commutativity (e.g., binomial-type expansions)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C021",
+        "concept": "Commuting Matrices",
+        "qp_id": "QP007",
+        "question_possibility": "Infer commutation of powers and inverses from a base commutation relation when defined"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C021",
+        "concept": "Commuting Matrices",
+        "qp_id": "QP008",
+        "question_possibility": "Determine whether a matrix commutes with its transpose or find conditions ensuring it"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C021",
+        "concept": "Commuting Matrices",
+        "qp_id": "QP009",
+        "question_possibility": "Establish invariance of commutation under similarity (conjugation by an invertible matrix)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C021",
+        "concept": "Commuting Matrices",
+        "qp_id": "QP010",
+        "question_possibility": "Analyze algebraic properties of the 'commutes with' relation (reflexivity, symmetry, transitivity)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C021",
+        "concept": "Commuting Matrices",
+        "qp_id": "QP011",
+        "question_possibility": "Determine the dimension or degrees of freedom of the set of matrices commuting with a given matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C021",
+        "concept": "Commuting Matrices",
+        "qp_id": "QP012",
+        "question_possibility": "Establish closure and commutativity properties within a family of pairwise commuting matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP001",
+        "question_possibility": "Determine conformable block partitions and resulting block dimensions for given matrix operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP002",
+        "question_possibility": "Compute linear combinations of partitioned matrices using block-wise addition and scalar multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP003",
+        "question_possibility": "Compute product of partitioned matrices using block multiplication rules"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP004",
+        "question_possibility": "Determine a specified sub-block of a matrix product using block multiplication without computing the full product"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP005",
+        "question_possibility": "Evaluate the transpose of a partitioned matrix in terms of transposes of its blocks and their placement"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP006",
+        "question_possibility": "Infer relations among blocks from equality of two partitioned matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP007",
+        "question_possibility": "Compute with block diagonal matrices, including products, powers, and inverses via their diagonal blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP008",
+        "question_possibility": "Determine determinant or trace of a partitioned matrix using block diagonal or block triangular structure"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the inverse of block upper or lower triangular matrices using block formulas when diagonal blocks are invertible"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP010",
+        "question_possibility": "Determine the inverse of a 2×2 block matrix using the Schur complement when an appropriate block is invertible"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP011",
+        "question_possibility": "Determine the determinant of a 2×2 block matrix using Schur complement or block triangular identities under suitable invertibility conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP012",
+        "question_possibility": "Solve block linear systems using block elimination or Schur complement to obtain component solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP013",
+        "question_possibility": "Determine solvability and uniqueness conditions for a block linear system using invertibility of sub-blocks and Schur complements"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP014",
+        "question_possibility": "Simplify computations of partitioned matrix expressions by exploiting zero or identity blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP015",
+        "question_possibility": "Compute the image of a partitioned vector under a block matrix and express component equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations",
+        "qp_id": "QP016",
+        "question_possibility": "Determine block-wise conditions under which a partitioned matrix is symmetric or skew-symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations",
+        "qp_id": "QP001",
+        "question_possibility": "Classify operations as valid elementary row operations and identify their types"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations",
+        "qp_id": "QP002",
+        "question_possibility": "Apply specified elementary row operations to obtain the resulting matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations",
+        "qp_id": "QP003",
+        "question_possibility": "Reduce a matrix to row echelon or reduced row echelon form using elementary row operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations",
+        "qp_id": "QP004",
+        "question_possibility": "Construct a sequence of elementary row operations to transform a matrix into a specified target matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations",
+        "qp_id": "QP005",
+        "question_possibility": "Determine whether two matrices are row-equivalent"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations",
+        "qp_id": "QP006",
+        "question_possibility": "Determine the minimal number of elementary row operations required for a stated transformation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations",
+        "qp_id": "QP007",
+        "question_possibility": "Diagnose incorrect or impermissible use of elementary row operations in a given row-reduction"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations",
+        "qp_id": "QP008",
+        "question_possibility": "Determine the inverse elementary row operation or inverse sequence that undoes a given transformation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations",
+        "qp_id": "QP009",
+        "question_possibility": "Assess whether the order of two given elementary row operations affects the outcome for a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations",
+        "qp_id": "QP010",
+        "question_possibility": "Identify pivot positions obtainable in a row-reduced form via elementary row operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations",
+        "qp_id": "QP011",
+        "question_possibility": "Assess uniqueness or non-uniqueness of row-reduced forms obtainable via elementary row operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations",
+        "qp_id": "QP012",
+        "question_possibility": "Determine whether a specified elementary row operation leaves a given matrix unchanged"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations",
+        "qp_id": "QP013",
+        "question_possibility": "Establish preservation of solution-set equivalence when applying elementary row operations to an augmented matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations",
+        "qp_id": "QP014",
+        "question_possibility": "Determine whether two given sequences of elementary row operations are equivalent in effect"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP001",
+        "question_possibility": "Identify and classify a given operation as a valid elementary column operation and specify its type"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP002",
+        "question_possibility": "Determine the resulting matrix after a specified sequence of elementary column operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP003",
+        "question_possibility": "Determine elementary column operations required to achieve a prescribed structural goal in a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP004",
+        "question_possibility": "Construct the elementary column matrix corresponding to a specified elementary column operation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP005",
+        "question_possibility": "Represent a sequence of elementary column operations as right-multiplication by a single matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP006",
+        "question_possibility": "Determine whether two matrices are column-equivalent under elementary column operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP007",
+        "question_possibility": "Find a right-multiplier formed by elementary column matrices that maps one matrix to another when possible"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP008",
+        "question_possibility": "Determine whether a stated matrix property is invariant under elementary column operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the effect of a specified elementary column operation on selected entries or linear combinations of columns"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP010",
+        "question_possibility": "Obtain a column-echelon or column-reduced form of a matrix using only elementary column operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP011",
+        "question_possibility": "Translate between column operations on a matrix and row operations on its transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP012",
+        "question_possibility": "Validate or diagnose the correctness of a claimed transformation achieved via elementary column operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP013",
+        "question_possibility": "Determine parameter values within elementary column operations that ensure a desired transformation or maintain validity constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP014",
+        "question_possibility": "Determine whether two specified elementary column operations commute and analyze order dependence"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP015",
+        "question_possibility": "Determine the inverse of a given elementary column operation or of a product of such operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP016",
+        "question_possibility": "Factorize an invertible square matrix as a product of elementary column matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP017",
+        "question_possibility": "Determine the minimal number of elementary column operations required to accomplish a specified transformation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP018",
+        "question_possibility": "Determine achievability of a specified transformation when only a restricted subset of elementary column operations is allowed"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP019",
+        "question_possibility": "Decide whether a proposed column transformation is realizable as a composition of elementary column operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations",
+        "qp_id": "QP020",
+        "question_possibility": "Determine uniqueness or degrees of freedom in the elementary column transformation mapping one matrix to another"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP001",
+        "question_possibility": "Classify a given matrix as elementary or not and identify its type"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP002",
+        "question_possibility": "Relate a specified elementary row/column operation to its corresponding elementary matrix and conversely"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP003",
+        "question_possibility": "Determine the inverse of an elementary matrix and identify the undoing operation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP004",
+        "question_possibility": "Determine the correct multiplication side (left/right) to implement a stated row or column operation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP005",
+        "question_possibility": "Apply a given elementary matrix or product to transform a matrix or vector"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP006",
+        "question_possibility": "Construct the product elementary matrix implementing a specified sequence of row or column operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP007",
+        "question_possibility": "Infer the elementary matrix or product that maps one matrix to another via row or column operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP008",
+        "question_possibility": "Reduce a matrix to a specified canonical form (identity/row‑echelon/reduced row‑echelon) using elementary operations or elementary matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the inverse of a nonsingular matrix using elementary operations or elementary matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP010",
+        "question_possibility": "Establish invertibility of a square matrix via reduction to identity or representation as a product of elementary matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP011",
+        "question_possibility": "Express a given invertible matrix as a product of elementary matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP012",
+        "question_possibility": "Determine whether two matrices are row‑equivalent or column‑equivalent using elementary operations or elementary matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP013",
+        "question_possibility": "Represent and analyze two‑sided transformations B = U A V using products of elementary matrices and determine U and/or V"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP014",
+        "question_possibility": "Decide whether a proposed transformation is a valid elementary row or column operation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP015",
+        "question_possibility": "Determine whether a product of elementary matrices is itself elementary or only a general invertible matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role",
+        "qp_id": "QP016",
+        "question_possibility": "Relate row and column operations via transposition of elementary matrices (link left‑multiplication by E^T to right‑multiplication by E)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C026",
+        "concept": "Trace of a Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Evaluate the trace of a square matrix or a matrix expression using trace properties (linearity, transpose invariance, cyclicity, block additivity)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C026",
+        "concept": "Trace of a Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Compare or rank trace values of matrices or matrix expressions using known trace properties"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C026",
+        "concept": "Trace of a Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine parameter values from equations or inequalities involving the trace of matrices or matrix expressions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C026",
+        "concept": "Trace of a Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Determine invariance or change of the trace under specified operations (transpose, similarity, row/column operations, permutation conjugation)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C026",
+        "concept": "Trace of a Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Assess validity of general statements or identities involving trace (linearity, tr(AB)=tr(BA), cyclic permutations, common false claims)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C026",
+        "concept": "Trace of a Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine feasibility or sufficiency of given information to uniquely determine a trace value under stated matrix constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C027",
+        "concept": "Properties of Trace under Matrix Operations",
+        "qp_id": "QP001",
+        "question_possibility": "Evaluate trace of linear combinations of matrices (linearity of trace)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C027",
+        "concept": "Properties of Trace under Matrix Operations",
+        "qp_id": "QP002",
+        "question_possibility": "Determine equality or compute trace of matrix products using cyclic invariance (including conformable rectangular products)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C027",
+        "concept": "Properties of Trace under Matrix Operations",
+        "qp_id": "QP003",
+        "question_possibility": "Establish invariance of trace under similarity transformations (change of basis)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C027",
+        "concept": "Properties of Trace under Matrix Operations",
+        "qp_id": "QP004",
+        "question_possibility": "Establish invariance of trace under transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C027",
+        "concept": "Properties of Trace under Matrix Operations",
+        "qp_id": "QP005",
+        "question_possibility": "Evaluate trace of block-partitioned matrices (sum of traces of diagonal blocks)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C027",
+        "concept": "Properties of Trace under Matrix Operations",
+        "qp_id": "QP006",
+        "question_possibility": "Determine whether specified elementary row/column operations or one-sided multiplications preserve the trace"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C027",
+        "concept": "Properties of Trace under Matrix Operations",
+        "qp_id": "QP007",
+        "question_possibility": "Establish zero-trace conditions from structural identities (e.g., skew-symmetric matrices, commutators, symmetric–skew-symmetric products)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C027",
+        "concept": "Properties of Trace under Matrix Operations",
+        "qp_id": "QP008",
+        "question_possibility": "Use trace as a similarity invariant to certify non-similarity of matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C027",
+        "concept": "Properties of Trace under Matrix Operations",
+        "qp_id": "QP009",
+        "question_possibility": "Compute scalar inner products via trace identities (e.g., tr(A^T B), tr(uv^T))"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP001",
+        "question_possibility": "Evaluate linear combinations of diagonal matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP002",
+        "question_possibility": "Evaluate the product of diagonal matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP003",
+        "question_possibility": "Evaluate integer powers of a diagonal matrix and determine existence for negative powers"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP004",
+        "question_possibility": "Determine invertibility of a diagonal matrix and compute its inverse"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP005",
+        "question_possibility": "Evaluate a polynomial or rational expression of a diagonal matrix and state existence conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP006",
+        "question_possibility": "Determine row or column scaling effects from left or right multiplication by a diagonal matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP007",
+        "question_possibility": "Determine conditions for a matrix to commute with a given diagonal matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP008",
+        "question_possibility": "Solve matrix equations with a diagonal coefficient matrix and analyze consistency and solution form"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP009",
+        "question_possibility": "Determine conditions for the product of a given matrix with a diagonal matrix to be diagonal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP010",
+        "question_possibility": "Compute the trace of a diagonal matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP011",
+        "question_possibility": "Determine the rank of a diagonal matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP012",
+        "question_possibility": "Compute the determinant of a diagonal matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP013",
+        "question_possibility": "Classify a diagonal matrix as idempotent, involutory, or nilpotent from its diagonal entries"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP014",
+        "question_possibility": "Determine transpose-related symmetry properties of a diagonal matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP015",
+        "question_possibility": "Determine constraints on a matrix given zero-product with a diagonal matrix on the left or right"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP016",
+        "question_possibility": "Determine the effect of conjugation by an invertible diagonal matrix on matrix entries"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices",
+        "qp_id": "QP017",
+        "question_possibility": "Determine conditions on diagonal entries for a diagonal matrix to satisfy a given polynomial matrix equation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP001",
+        "question_possibility": "Characterize whether a given matrix is a permutation matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP002",
+        "question_possibility": "Construct the permutation matrix for a specified permutation or target row/column order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP003",
+        "question_possibility": "Recover the underlying permutation (mapping or cycle form) from a given permutation matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP004",
+        "question_possibility": "Compute the result of left or right multiplication by a permutation matrix on a matrix (row or column permutation)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP005",
+        "question_possibility": "Track the new position of a specified entry under PA, AP, or PAP^T permutations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP006",
+        "question_possibility": "Relate permutation composition to permutation-matrix multiplication and sequencing of row/column operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP007",
+        "question_possibility": "Establish inverse and transpose relations for permutation matrices and identify the corresponding inverse permutation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP008",
+        "question_possibility": "Determine determinant–parity relationships for permutation matrices and infer sign of the permutation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the effect of row/column permutations on det(A): evaluate det(PA), det(AP), and det(PAP^T)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP010",
+        "question_possibility": "Establish that rank is invariant under row/column permutations and infer rank of permuted matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP011",
+        "question_possibility": "Determine whether two matrices are permutation-equivalent by independent row and column permutations (existence of P, Q with B = PAQ)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP012",
+        "question_possibility": "Determine whether two matrices are related by a simultaneous row-and-column permutation using the same permutation (B = PAP^T)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP013",
+        "question_possibility": "Determine powers and order of a permutation matrix using the underlying permutation structure"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP014",
+        "question_possibility": "Determine behavior of trace under permutations, including invariance under conjugation by a permutation matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices",
+        "qp_id": "QP015",
+        "question_possibility": "Count the number of n×n permutation matrices and relate it to factorial growth"
+    }
+]

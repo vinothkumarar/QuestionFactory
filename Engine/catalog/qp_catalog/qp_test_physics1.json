@@ -1,0 +1,92 @@
+[
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP001",
+        "question_possibility": "Identify the defining criterion for an inertial frame using motion of a force-free particle"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP002",
+        "question_possibility": "Classify a reference frame as inertial or non-inertial from its translational and rotational motion relative to a known inertial frame"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP003",
+        "question_possibility": "Establish that any frame in uniform translation relative to an inertial frame is also inertial (equivalence of inertial frames)"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP004",
+        "question_possibility": "Infer inertial or non-inertial nature of a frame from the observed motion of a known force-free particle"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP005",
+        "question_possibility": "Determine conditions or parameter bounds under which a given accelerating or rotating frame can be approximated as inertial for a specified experiment"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP006",
+        "question_possibility": "Determine the relative velocity of an inertial frame in which a given force-free particle is at rest or has a specified constant velocity"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP007",
+        "question_possibility": "Assess whether the Earth or a lab-fixed frame can be treated as inertial for a given situation based on time and length scales"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP008",
+        "question_possibility": "Establish correct logical implications of Newton's first law across frames regarding when rest or uniform motion implies zero net force"
+    },
+    {
+        "subject": "Physics",
+        "unit": "Laws of Motion",
+        "chapter": "Newton's Laws",
+        "subtopic": "First Law",
+        "concept_id": "C007",
+        "concept": "Inertial Reference Frames",
+        "qp_id": "QP009",
+        "question_possibility": "Determine how accelerations measured in two inertial frames in uniform relative translation are related (acceleration invariance)"
+    }
+]

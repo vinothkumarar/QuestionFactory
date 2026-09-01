@@ -1,0 +1,36 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Geometry,Transformations,Rotation,C001,Definition of Rotation in the Plane
+Mathematics,Geometry,Transformations,Rotation,C002,Center of Rotation
+Mathematics,Geometry,Transformations,Rotation,C003,Angle of Rotation and Direction Convention
+Mathematics,Geometry,Transformations,Rotation,C004,Parameters Defining a Rotation (Center and Angle)
+Mathematics,Geometry,Transformations,Rotation,C005,Orientation Preservation under Rotation (Direct Isometry)
+Mathematics,Geometry,Transformations,Rotation,C006,Distance Preservation under Rotation (Isometry)
+Mathematics,Geometry,Transformations,Rotation,C007,Angle Preservation under Rotation
+Mathematics,Geometry,Transformations,Rotation,C008,Area Preservation under Rotation
+Mathematics,Geometry,Transformations,Rotation,C009,Preservation of Collinearity and Concurrency under Rotation
+Mathematics,Geometry,Transformations,Rotation,C010,Preservation of Parallelism and Perpendicularity under Rotation
+Mathematics,Geometry,Transformations,Rotation,C011,Fixed Points of a Rotation (Only the Center Except Trivial Cases)
+Mathematics,Geometry,Transformations,Rotation,C012,"Invariant Sets under Rotation about a Center (e.g., Concentric Circles)"
+Mathematics,Geometry,Transformations,Rotation,C013,Image of a Point under Rotation
+Mathematics,Geometry,Transformations,Rotation,C014,"Image of a Line under Rotation and Special Cases (Through Center, 180°)"
+Mathematics,Geometry,Transformations,Rotation,C015,"Image of a Segment, Ray, and Angle under Rotation"
+Mathematics,Geometry,Transformations,Rotation,C016,Image of a Circle and Arc under Rotation
+Mathematics,Geometry,Transformations,Rotation,C017,Image of a Polygon under Rotation
+Mathematics,Geometry,Transformations,Rotation,C018,Periodicity of Rotation Angles (Modulo 360° or 2π)
+Mathematics,Geometry,Transformations,Rotation,C019,Clockwise and Counterclockwise Conventions (Sign of Angle)
+Mathematics,Geometry,Transformations,Rotation,C020,Identity Rotation (Zero Angle)
+Mathematics,Geometry,Transformations,Rotation,C021,Inverse of a Rotation (Negative Angle)
+Mathematics,Geometry,Transformations,Rotation,C022,Composition of Rotations with the Same Center (Angle Addition)
+Mathematics,Geometry,Transformations,Rotation,C023,Composition of Rotations with Different Centers (Resulting Isometry)
+Mathematics,Geometry,Transformations,Rotation,C024,Commutativity Conditions for Rotations (Common Center vs Different Centers)
+Mathematics,Geometry,Transformations,Rotation,C025,Rotation as Composition of Two Reflections in Intersecting Lines
+Mathematics,Geometry,Transformations,Rotation,C026,Order of a Rotation and Cyclic Behavior
+Mathematics,Geometry,Transformations,Rotation,C027,Rotational Symmetry of Figures
+Mathematics,Geometry,Transformations,Rotation,C028,Center and Angle of Rotational Symmetry of a Figure
+Mathematics,Geometry,Transformations,Rotation,C029,Rotational Symmetry of Regular Polygons (Order and Angle)
+Mathematics,Geometry,Transformations,Rotation,C030,Coordinate Representation of Rotation about the Origin (2D Cartesian)
+Mathematics,Geometry,Transformations,Rotation,C031,Coordinate Representation of Rotation about an Arbitrary Point (2D Cartesian)
+Mathematics,Geometry,Transformations,Rotation,C032,"Special Plane Rotations (90°, 180°, 270°) and Their Effects"
+Mathematics,Geometry,Transformations,Rotation,C033,Locus under Rotation (Orbit of a Point as a Circle about the Center)
+Mathematics,Geometry,Transformations,Rotation,C034,Congruence Mapping via Rotation (Rotation as a Rigid Motion)
+Mathematics,Geometry,Transformations,Rotation,C035,Uniqueness of a Rotation from Its Parameters (Given Center and Angle)

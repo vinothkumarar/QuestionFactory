@@ -1,0 +1,37 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Geometry,Transformations,Reflection,C001,Reflection as a Euclidean Isometry
+Mathematics,Geometry,Transformations,Reflection,C002,Mirror Line (Axis of Reflection) in the Plane
+Mathematics,Geometry,Transformations,Reflection,C003,Mirror Plane in Three-Dimensional Space
+Mathematics,Geometry,Transformations,Reflection,C004,Self-Inverse Property of Reflection
+Mathematics,Geometry,Transformations,Reflection,C005,Orientation Reversal under Reflection
+Mathematics,Geometry,Transformations,Reflection,C006,Distance Preservation under Reflection
+Mathematics,Geometry,Transformations,Reflection,C007,Angle Preservation under Reflection
+Mathematics,Geometry,Transformations,Reflection,C008,Collinearity and Parallelism Preservation under Reflection
+Mathematics,Geometry,Transformations,Reflection,C009,Area and Perimeter Preservation under Reflection
+Mathematics,Geometry,Transformations,Reflection,C010,Fixed Points and Invariant Sets of Reflection
+Mathematics,Geometry,Transformations,Reflection,C011,Perpendicular Bisector Characterization of Reflection
+Mathematics,Geometry,Transformations,Reflection,C012,Midpoint and Foot of Perpendicular in Reflection
+Mathematics,Geometry,Transformations,Reflection,C013,Reflection of a Point in a Line (Plane in 3D)
+Mathematics,Geometry,Transformations,Reflection,C014,Central Symmetry (Point Reflection)
+Mathematics,Geometry,Transformations,Reflection,C015,Reflection of a Line in a Line
+Mathematics,Geometry,Transformations,Reflection,C016,Reflection of a Ray and a Segment
+Mathematics,Geometry,Transformations,Reflection,C017,Reflection of a Circle in a Line
+Mathematics,Geometry,Transformations,Reflection,C018,Reflection of a Polygon and Axes of Symmetry
+Mathematics,Geometry,Transformations,Reflection,C019,Coordinate Formula: Reflection in the x-axis
+Mathematics,Geometry,Transformations,Reflection,C020,Coordinate Formula: Reflection in the y-axis
+Mathematics,Geometry,Transformations,Reflection,C021,Coordinate Formula: Reflection in the Origin
+Mathematics,Geometry,Transformations,Reflection,C022,Coordinate Formula: Reflection in the Line y = x
+Mathematics,Geometry,Transformations,Reflection,C023,Coordinate Formula: Reflection in the Line y = -x
+Mathematics,Geometry,Transformations,Reflection,C024,Coordinate Formula: Reflection in a General Line ax + by + c = 0
+Mathematics,Geometry,Transformations,Reflection,C025,Vector Formulation: Reflection across a Line through the Origin (2D)
+Mathematics,Geometry,Transformations,Reflection,C026,3D Coordinate Formulas: Reflection in Coordinate Planes
+Mathematics,Geometry,Transformations,Reflection,C027,3D Vector Formulation: Reflection in an Arbitrary Plane
+Mathematics,Geometry,Transformations,Reflection,C028,Composition of Reflections in Intersecting Lines
+Mathematics,Geometry,Transformations,Reflection,C029,Composition of Reflections in Parallel Lines
+Mathematics,Geometry,Transformations,Reflection,C030,Glide Reflection
+Mathematics,Geometry,Transformations,Reflection,C031,Orientation Parity under Multiple Reflections
+Mathematics,Geometry,Transformations,Reflection,C032,Symmetry of Regular Polygons under Reflections
+Mathematics,Geometry,Transformations,Reflection,C033,Angle Bisectors as Axes of Reflection
+Mathematics,Geometry,Transformations,Reflection,C034,Behavior of Tangents and Normals under Reflection
+Mathematics,Geometry,Transformations,Reflection,C035,Symmetry of Curves under Reflection
+Mathematics,Geometry,Transformations,Reflection,C036,Slope Transformation of Lines under Reflection

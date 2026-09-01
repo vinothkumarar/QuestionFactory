@@ -48,9 +48,21 @@ class ManufacturingWorkItemModel:
 
     question_end: int
 
+    concept_id: str = ""
+
+    concept: str = ""
+
     qp_id: str = ""
 
     question_possibility: str = ""
+
+    archetype_id: str = ""
+
+    archetype: str = ""
+
+    variation_capacity: str = ""
+
+    variation_dimensions: list[str] | None = None
 
     status: str = "PENDING"
 
@@ -71,11 +83,8 @@ class ManufacturingWorkItemModel:
     @property
     def batch_id(self) -> str:
 
-        return (
-            f"{self.subject}_"
-            f"{self.unit}_"
-            f"{self.chapter}_"
-            f"{self.subtopic}_"
+        return (            
+            f"{self.archetype_id}_"
             f"{self.set_no}_"
             f"B{self.batch_no}"
         )

@@ -1,0 +1,258 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C001",
+        "concept": "Linear equation in two variables as geometric representation of a straight line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C002",
+        "concept": "General form of a straight line (ax + by + c = 0)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C003",
+        "concept": "Equivalence of proportional linear equations representing the same line (scaling invariance)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C004",
+        "concept": "Direction vector and normal vector of a line in 2D"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C005",
+        "concept": "Relationship between direction ratios and slope of a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C006",
+        "concept": "Slope determined from the general form of a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C007",
+        "concept": "Intercepts on coordinate axes derived from the general form of a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C008",
+        "concept": "Slope-intercept form of a line (y = mx + c)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C009",
+        "concept": "Point-slope form of a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C010",
+        "concept": "Two-point form of a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C011",
+        "concept": "Intercept form of a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C012",
+        "concept": "Normal form of a line (x cos α + y sin α = p)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C013",
+        "concept": "Parametric form of a line in 2D"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C014",
+        "concept": "Symmetric form of a line using direction ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C015",
+        "concept": "Vector form of a line in 2D (r = r0 + t d)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C016",
+        "concept": "Determinantal form of a line through two points"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C017",
+        "concept": "Vertical lines (x = constant) and undefined slope"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C018",
+        "concept": "Horizontal lines (y = constant) and zero slope"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C019",
+        "concept": "Coordinate axes as straight lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C020",
+        "concept": "Axis-parallel conditions expressed in the general form (ax + by + c = 0)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C021",
+        "concept": "Criteria for parallel lines using slopes and coefficients"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C022",
+        "concept": "Criteria for perpendicular lines using slopes and coefficients"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C023",
+        "concept": "Family of lines parallel to a given line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C024",
+        "concept": "Family of lines perpendicular to a given line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C025",
+        "concept": "One-parameter family (pencil) of lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C026",
+        "concept": "Family of lines passing through a given point"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C027",
+        "concept": "Line through the intersection point of two given lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C028",
+        "concept": "Conversion between different equation forms of a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C029",
+        "concept": "Perpendicular distance of a line from the origin via its equation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C030",
+        "concept": "Validity and degeneracy of linear equations in two variables"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C031",
+        "concept": "Half-planes determined by a line and the sign of ax + by + c"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C032",
+        "concept": "Normalized general form of a line and uniqueness up to sign"
+    }
+]

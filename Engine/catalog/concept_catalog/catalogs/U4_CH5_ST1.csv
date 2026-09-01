@@ -1,0 +1,17 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C001,"Coordinate differences (Δx, Δy) in the Cartesian plane"
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C002,Euclidean distance between two points in the plane
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C003,Distance on the number line (one-dimensional case)
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C004,Distance from the origin to a point
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C005,Horizontal and vertical distances (parallel to axes)
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C006,Right-triangle interpretation of distance (Pythagorean basis)
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C007,Squared Euclidean distance
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C008,Non-negativity and zero distance (identity of indiscernibles)
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C009,Symmetry of Euclidean distance
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C010,Triangle inequality in the Cartesian plane
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C011,"Invariance of distance under rigid motions (translations, rotations, reflections)"
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C012,Scaling behavior of distance under uniform dilations
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C013,Additivity of distances on a line segment (collinear points)
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C014,Equidistant points in the Cartesian plane
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C015,Distance-based inequalities in the plane
+Mathematics,Geometry,Coordinate Geometry Concepts,Distance Formula,C016,Sign-independence of coordinate differences in distance computation

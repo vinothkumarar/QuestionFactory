@@ -1,0 +1,282 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C001",
+        "concept": "Definition of Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C002",
+        "concept": "Translation Vector (Displacement as a Free Vector)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C003",
+        "concept": "Vector Form of Translation r' = r + a"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C004",
+        "concept": "Coordinate Representation of Translation in 2D"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C005",
+        "concept": "Coordinate Representation of Translation in 3D"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C006",
+        "concept": "Active vs Passive Translation (Point Translation vs Change of Origin)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C007",
+        "concept": "Metric Preservation under Translation (Distances, Lengths, Perimeters, Arc Lengths)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C008",
+        "concept": "Angle Preservation under Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C009",
+        "concept": "Preservation of Parallelism and Collinearity under Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C010",
+        "concept": "Orientation Preservation (Direct Isometry) under Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C011",
+        "concept": "Area and Volume Preservation under Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C012",
+        "concept": "Preservation of Midpoints and Centroids under Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C013",
+        "concept": "Image of a Line under Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C014",
+        "concept": "Image of a Segment, Ray, and Polygon under Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C015",
+        "concept": "Image of a Circle under Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C016",
+        "concept": "Image of a Plane under Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C017",
+        "concept": "Image of a Locus under Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C018",
+        "concept": "Transformation of Algebraic Equations under Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C019",
+        "concept": "Translation of Coordinate Axes (Change of Origin)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C020",
+        "concept": "Determination and Uniqueness of Translation from Corresponding Points"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C021",
+        "concept": "Composition of Translations (Vector Addition Law)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C022",
+        "concept": "Inverse Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C023",
+        "concept": "Identity Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C024",
+        "concept": "Group Structure of the Set of Translations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C025",
+        "concept": "Commutativity of Translations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C026",
+        "concept": "Fixed Points of a Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C027",
+        "concept": "Translational Symmetry in Geometry"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C028",
+        "concept": "Translation as an Affine (Non-Linear) Mapping with Respect to Origin"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C029",
+        "concept": "Homogeneous Coordinate Matrix Representation of Translation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C030",
+        "concept": "Action of Translation on Points versus Position Vectors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C031",
+        "concept": "Congruence via Translation (Equivalence of Figures)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C032",
+        "concept": "Effect of Translation on Slope and Intercepts of a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C033",
+        "concept": "One-Dimensional Translation on a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C034",
+        "concept": "Geometric Interpretation of Translation Vector (Direction and Magnitude)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Translation",
+        "concept_id": "C035",
+        "concept": "Periodic Structures and Lattice Translations"
+    }
+]

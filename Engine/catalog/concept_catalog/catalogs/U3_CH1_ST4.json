@@ -1,0 +1,114 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C001",
+        "concept": "Angle of Inclination of a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C002",
+        "concept": "Slope–Angle Relationship for a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C003",
+        "concept": "Directed Angle Between Two Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C004",
+        "concept": "Acute (Unoriented) Angle Between Two Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C005",
+        "concept": "Angle Between Lines as Difference of Inclinations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C006",
+        "concept": "Slope-Based Formula for Angle Between Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C007",
+        "concept": "Coefficient-Based Formula for Angle Between Lines in General Form"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C008",
+        "concept": "Handling Vertical and Horizontal Lines in Angle Computation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C009",
+        "concept": "Parallel and Coincident Lines as Zero-Angle Cases"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C010",
+        "concept": "Perpendicularity as a Right-Angle Case Between Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C011",
+        "concept": "Angle Between a Line and the Coordinate Axes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C012",
+        "concept": "Angle Conventions and Principal Value Ranges"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C013",
+        "concept": "Invariance of Angle Between Lines Under Translation and Equation Scaling"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Angle Between Lines",
+        "concept_id": "C014",
+        "concept": "Geometric Interpretation via Direction Vectors and Normals"
+    }
+]

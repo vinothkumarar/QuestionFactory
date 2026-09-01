@@ -59,6 +59,8 @@ class GeneratedQuestionModel:
 
     difficulty: str = ""
 
+    archetype_id: str = ""
+
     archetype: str = ""
 
     concept: str = ""
@@ -92,6 +94,7 @@ class GeneratedQuestionModel:
             "correct_option": self.correct_option,
             "explanation": self.explanation,
             "difficulty": self.difficulty,
+            "archetype_id": self.archetype_id,
             "archetype": self.archetype,
             "concept": self.concept,
             "tags": list(self.tags),
@@ -152,6 +155,10 @@ class GeneratedQuestionModel:
             ),
             difficulty=data.get(
                 "difficulty",
+                "",
+            ),
+            archetype_id=data.get(
+                "archetype_id",
                 "",
             ),
             archetype=data.get(
@@ -257,6 +264,7 @@ class GeneratedQuestionModel:
             ),
 
             "concept_tested": self.concept,
+            "archetype_id": self.archetype_id,
             "question_archetype": self.archetype,
 
             "exam_level": metadata.get(
@@ -658,6 +666,8 @@ class GeneratedQuestionModel:
         self.explanation = ""
 
         self.difficulty = ""
+
+        self.archetype_id = ""
 
         self.archetype = ""
 

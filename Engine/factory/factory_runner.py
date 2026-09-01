@@ -52,6 +52,9 @@ from Engine.factory.orchestrator.orchestration_result import (
 from Engine.factory.generation.production_node_factory import (
     ProductionNodeFactory,
 )
+from Engine.models.production_node_model import (
+    ProductionNodeModel,
+)
 
 from Engine.models.production_order_model import (
     ProductionOrderModel,
@@ -402,6 +405,36 @@ class FactoryRunner:
         self._logger.info(
             "Runtime loaded."
         )
+
+        #
+        # Resume Check
+        #
+
+        resume_batch_id = self._build_resume_batch_id(
+            production_node,
+        )
+
+        if (
+            resume_batch_id
+            and runtime.is_batch_completed(
+                resume_batch_id,
+            )
+        ):
+            self._logger.info(
+                "Skipping completed manufacturing batch: %s",
+                resume_batch_id,
+            )
+
+            print(
+                "RESUME: SKIPPING COMPLETED BATCH",
+            )
+            print(
+                "Batch ID:",
+                resume_batch_id,
+            )
+
+            return 0
+
         #
         # Generate questions
         #
@@ -445,11 +478,30 @@ class FactoryRunner:
         )
 
         #
+        # Mark manufacturing batch completed
+        #
+
+        if resume_batch_id:
+
+            runtime.mark_batch_completed(
+                resume_batch_id,
+            )
+
+            self._logger.info(
+                "Manufacturing batch marked completed: %s",
+                resume_batch_id,
+            )
+
+        #
         # Persist runtime
         #
 
         self.runtime_repository.save_runtime(
             runtime,
+        )
+
+        self._logger.info(
+            "Runtime saved."
         )
 
         self._logger.info(
@@ -467,6 +519,42 @@ class FactoryRunner:
 
         return len(batch.questions)
 
+    # ---------------------------------------------------------
+    # Resume Identity
+    # ---------------------------------------------------------
+
+    def _build_resume_batch_id(
+        self,
+        production_node,
+    ) -> str:
+        """
+        Build the canonical manufacturing resume ID.
+
+        Format
+        ------
+        <subtopic>_<set>_<archetype_id>
+
+        Example
+        -------
+        C3_CH1_ST1_S5_AR00001
+        """
+
+        archetype_id = getattr(
+            production_node,
+            "archetype_id",
+            "",
+        )
+
+        if not archetype_id:
+            return ""
+
+        set_number = production_node.location.set_number
+
+        return (
+            f"{production_node.location.subtopic}_"
+            f"S{set_number}_"
+            f"{archetype_id}"
+        )
     # ---------------------------------------------------------
     # Validation
     # ---------------------------------------------------------

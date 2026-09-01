@@ -1,0 +1,234 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C001",
+        "concept": "Matrix Equality"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C002",
+        "concept": "Conformability Conditions for Matrix Operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C003",
+        "concept": "Matrix Addition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C004",
+        "concept": "Scalar Multiplication of Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C005",
+        "concept": "Matrix Subtraction"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C006",
+        "concept": "Properties of Matrix Addition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C007",
+        "concept": "Properties of Scalar Multiplication with Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C008",
+        "concept": "Matrix Multiplication (Row–Column Rule)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C009",
+        "concept": "Properties of Matrix Multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C010",
+        "concept": "Additive Identity and Additive Inverse for Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C011",
+        "concept": "Multiplicative Identity Matrix and Identity Property"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C012",
+        "concept": "Non-Commutativity and Zero Divisors in Matrix Multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C013",
+        "concept": "Cancellation Laws in Matrix Multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C014",
+        "concept": "Matrix Transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C015",
+        "concept": "Properties of Transpose under Operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C016",
+        "concept": "Complex Conjugate of a Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C017",
+        "concept": "Conjugate Transpose (Hermitian Transpose)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C018",
+        "concept": "Properties of Conjugate and Conjugate Transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C019",
+        "concept": "Matrix Powers"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C020",
+        "concept": "Polynomials in Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C021",
+        "concept": "Commuting Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C022",
+        "concept": "Partitioned (Block) Matrix Operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C023",
+        "concept": "Elementary Row Operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C024",
+        "concept": "Elementary Column Operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C025",
+        "concept": "Elementary Matrices and Their Operational Role"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C026",
+        "concept": "Trace of a Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C027",
+        "concept": "Properties of Trace under Matrix Operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C028",
+        "concept": "Operations with Diagonal Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Matrix Operations",
+        "concept_id": "C029",
+        "concept": "Row and Column Permutations via Permutation Matrices"
+    }
+]

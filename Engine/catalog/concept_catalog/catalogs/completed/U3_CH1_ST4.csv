@@ -1,0 +1,20 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C001,Geometric definition of angle between two lines
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C002,Undirected angle between lines
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C003,Directed angle between lines and orientation convention
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C004,Angle periodicity and direction equivalence for lines (modulo π)
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C005,Slope-based characterization of angle between non-vertical lines
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C006,Treatment of vertical lines and undefined slopes in angle determination
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C007,Normal-vector characterization using general form coefficients
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C008,Invariance of angle under scalar multiplication of line equations
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C009,Parallel lines as zero-angle case
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C010,Perpendicular lines as right-angle case
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C011,Coincident lines and degenerate zero-angle interpretation
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C012,Complementarity between line-angle and normal-angle
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C013,Principal value and range conventions for inter-line angles
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C014,Symmetry properties of undirected and directed inter-line angles
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C015,"Classification of inter-line angles: acute, right, obtuse"
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C016,Invariance of angle under Euclidean rigid motions
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C017,Angles formed at the intersection point and their relationships
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C018,Representation-independence of angle across line equation forms
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C019,Limiting behavior near parallelism and perpendicularity

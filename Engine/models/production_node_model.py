@@ -176,9 +176,21 @@ class ProductionNodeModel:
     # Question Possibility
     # ---------------------------------------------------------
 
+    concept_id: str = ""
+
+    concept: str = ""
+
     qp_id: str = ""
 
     question_possibility: str = ""
+
+    archetype_id: str = ""
+
+    archetype: str = ""
+
+    variation_capacity: str = ""
+
+    variation_dimensions: list[str] | None = None
 
     status: str = "PLANNED"
 

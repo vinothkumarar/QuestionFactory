@@ -81,6 +81,18 @@ class ProductionNodeFactory:
         # -------------------------------------------------
 
         node.metadata.batch_id = order.order_id
+        node.concept_id = getattr(
+            order,
+            "concept_id",
+            "",
+        )
+
+        node.concept = getattr(
+            order,
+            "concept",
+            "",
+        )
+
         node.qp_id = getattr(
             order,
             "qp_id",
@@ -91,6 +103,29 @@ class ProductionNodeFactory:
             order,
             "question_possibility",
             "",
+        )
+
+        node.archetype_id = getattr(
+            order,
+            "archetype_id",
+            "",
+        )
+
+        node.archetype = getattr(
+            order,
+            "archetype",
+            "",
+        )
+        node.variation_capacity = getattr(
+            order,
+            "variation_capacity",
+            "",
+        )
+
+        node.variation_dimensions = getattr(
+            order,
+            "variation_dimensions",
+            [],
         )
 
         node.metadata.production_node = (

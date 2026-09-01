@@ -1,0 +1,130 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C001",
+        "concept": "Perpendicular Distance as Shortest Distance (Definition)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C002",
+        "concept": "Normal Vector of a Line and Unit Normal Direction"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C003",
+        "concept": "Unsigned Perpendicular Distance Formula for Ax + By + C = 0"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C004",
+        "concept": "Signed Distance from a Point to an Oriented Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C005",
+        "concept": "Scaling Invariance of Distance under Line Equation Rescaling"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C006",
+        "concept": "Perpendicular Projection (Foot) of a Point on a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C007",
+        "concept": "Existence and Uniqueness of the Perpendicular from a Point to a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C008",
+        "concept": "Normal Form of a Line and Distance of the Origin (x cos α + y sin α = p)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C009",
+        "concept": "Distance from a Point to the Coordinate Axes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C010",
+        "concept": "Distance from a Point to Lines Parallel to Axes (x = k, y = k)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C011",
+        "concept": "Area-Based Interpretation of Perpendicular Distance (Triangle Height)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C012",
+        "concept": "Projection-Based Interpretation on the Unit Normal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C013",
+        "concept": "Zero Distance Criterion and Point Incidence on a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C014",
+        "concept": "Side of a Point Relative to a Line via Sign of Ax + By + C"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C015",
+        "concept": "Validity Conditions for Distance Formula (Non-Degenerate Line)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Distance of a Point from a Line",
+        "concept_id": "C016",
+        "concept": "Invariance of Perpendicular Distance under Rigid Motions (Translations/Rotations)"
+    }
+]

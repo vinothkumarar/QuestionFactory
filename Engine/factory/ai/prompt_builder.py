@@ -243,6 +243,16 @@ class PromptBuilder:
             "generation",
             {}
         )
+        selected_concept_id = generation.get(
+            "concept_id",
+            ""
+        )
+
+        selected_concept = generation.get(
+            "concept",
+            ""
+        )
+
         selected_qp_id = generation.get(
             "qp_id",
             ""
@@ -253,9 +263,21 @@ class PromptBuilder:
             ""
         )
 
-        qpc_text = (
-            f"{selected_qp_id}: "
-            f"{selected_question_possibility}"
+        selected_archetype_id = generation.get(
+            "archetype_id",
+            ""
+        )
+
+        selected_archetype = generation.get(
+            "archetype",
+            ""
+        )
+
+        logger.info(
+            "PROMPT CONCEPT=%s | QP=%s | ARCHETYPE=%s",
+            selected_concept_id,
+            selected_qp_id,
+            selected_archetype_id,
         )
                 
         json_schema = textwrap.dedent("""
@@ -282,7 +304,11 @@ class PromptBuilder:
                     ],
                     "correct_option": "A",
                     "explanation": "string",
-                    "metadata": {}
+                    "metadata": {
+                        "concept_id": "string",
+                        "qp_id": "string",
+                        "archetype_id": "string"
+                    }
                 }
             ]
         }
@@ -308,7 +334,13 @@ class PromptBuilder:
 
             Subtopic:
             {variables.get("subtopic", "")}
-            Target Question Possibility
+            Target Manufacturing Context
+
+            Concept ID:
+            {selected_concept_id}
+
+            Concept:
+            {selected_concept}
 
             QP ID:
             {selected_qp_id}
@@ -316,7 +348,20 @@ class PromptBuilder:
             Question Possibility:
             {selected_question_possibility}
 
-            Use these identifiers exactly in the generated JSON.
+            Selected Archetype ID:
+            {selected_archetype_id}
+
+            Selected Archetype:
+            {selected_archetype}
+
+            The Concept, Question Possibility, and Archetype above
+            are already selected by the Question Factory.
+
+            Do NOT discover, select, replace, reinterpret, or invent
+            another Question Possibility or Archetype.
+
+            Use the supplied manufacturing identifiers exactly
+            in the generated question metadata.
 
             subject_code = {variables.get("subject", "")}
             unit_code = {variables.get("unit", "")}
@@ -355,77 +400,92 @@ class PromptBuilder:
             The JSON questions array MUST contain exactly
             {variables.get("question_count", 1)} question objects.
 
-            CRITICAL QP MANUFACTURING RULE
+            CRITICAL MANUFACTURING CONTEXT RULE
 
-            Selected QP ID:
+            The Question Factory has ALREADY selected:
+
+            Concept ID:
+            {selected_concept_id}
+
+            Concept:
+            {selected_concept}
+
+            QP ID:
             {selected_qp_id}
 
-            Selected Question Possibility:
+            Question Possibility:
             {selected_question_possibility}
 
+            Archetype ID:
+            {selected_archetype_id}
+
+            Archetype:
+            {selected_archetype}
+
+            These are FIXED manufacturing inputs.
+
             All generated questions MUST be derived from
-            ONE AND ONLY ONE Question Possibility.
+            ONE AND ONLY ONE selected Question Possibility
+            and ONE AND ONLY ONE selected Archetype.
 
-            Every question in this batch MUST represent
-            a variation of the SAME Question Possibility.
+            Do NOT:
 
-            The batch is a manufacturing batch for a
-            single Question Possibility.
+            - discover another Archetype
+            - select another Archetype
+            - combine multiple Archetypes
+            - replace the selected Archetype
+            - reinterpret the selected Archetype into another pattern
+            - switch to another Question Possibility
+            - switch to another Concept
+            - generate generic subtopic questions
+            - generate questions outside the selected QP
+
+            The selected Archetype defines the assessment pattern.
+            Every generated question must instantiate that
+            assessment pattern while allowing different concrete
+            values, contexts, wording, or valid data.
 
             Allowed variation:
+
             - Numerical values
             - Variable names
-            - Context
+            - Valid context
             - Representation
             - Wording
+            - Concrete data
 
-            Forbidden:
-            - Switching to another concept
-            - Using another Question Possibility
-            - Mixing multiple Question Possibilities
-            - Generating generic subtopic questions
-            - Generating questions outside the selected QP
+            Forbidden variation:
 
-            Every generated question must be traceable
-            directly to the selected Question Possibility.
+            - Changing the assessment objective
+            - Changing the Question Possibility
+            - Changing the Concept
+            - Changing the Archetype
+            - Introducing a neighboring concept
+            - Introducing a neighboring Question Possibility
+            - Using a different reasoning pattern
 
-            If a question cannot be mapped directly to the
-            selected Question Possibility, do not generate it.
+            Every generated question MUST be directly traceable
+            to the selected Concept + Question Possibility +
+            Archetype.
 
-            COVERAGE ARCHETYPE RULE
+            If a question cannot be mapped directly to all three,
+            do not generate it.
 
-            Within the selected Question Possibility,
-            first identify all distinct coverage archetypes.
+            ARCHETYPE FIDELITY RULE
 
-            A coverage archetype is a fundamentally different
-            academic form of the same Question Possibility.
+            The Archetype supplied above is NOT a suggestion.
 
-            Examples:
+            It is the required assessment pattern for every
+            question in this batch.
 
-            "What is the successor of 8?"
-            "What is the successor of 14?"
-            "What is the successor of 99?"
+            Do not generate questions merely because they are
+            related to the selected topic.
 
-            These are NOT different archetypes.
-            They are the SAME archetype with different numbers.
+            Do not generate questions from other valid Archetypes
+            of the same Question Possibility.
 
-            Before generating questions:
-
-            1. Identify all possible coverage archetypes
-            inside the selected Question Possibility.
-
-            2. Generate questions across as many coverage
-            archetypes as possible.
-
-            3. Do not generate multiple questions from the
-            same archetype while uncovered archetypes
-            still exist.
-
-            4. Prefer breadth of coverage over numerical
-            variation.
-
-            5. A batch should maximize Question Possibility
-            coverage rather than repeating the same form.
+            Generate multiple distinct concrete instances of
+            the SAME selected Archetype.
 
             - Follow the supplied blueprint.
             - Produce original questions.
@@ -493,9 +553,22 @@ class PromptBuilder:
 
             11. Every question MUST include bloom_level.
 
-            12. archetype MUST describe the coverage archetype used.
+            12. archetype MUST exactly represent the selected
+            Archetype assessment pattern.
 
-            13. concept MUST describe the exact concept being tested.
+            13. concept MUST exactly represent the selected
+            Concept.
+
+            14. Every question metadata object MUST contain:
+
+                concept_id
+                qp_id
+                archetype_id
+
+            15. These identifiers MUST exactly match the selected
+            manufacturing context supplied above.
+
+            16. Do not invent, modify, or omit these identifiers.
 
             14. bloom_level MUST be one of:
             Remember

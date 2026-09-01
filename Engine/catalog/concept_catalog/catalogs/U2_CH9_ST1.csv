@@ -1,0 +1,16 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Algebra,Determinants,Properties of Determinants,C001,Determinant Invariance under Transpose
+Mathematics,Algebra,Determinants,Properties of Determinants,C002,Row/Column Homogeneity of Determinant (Scalar Factor Extraction from a Single Row/Column)
+Mathematics,Algebra,Determinants,Properties of Determinants,C003,Row/Column Additivity of Determinant (Linearity in a Single Row/Column)
+Mathematics,Algebra,Determinants,Properties of Determinants,C004,Invariance under Adding a Multiple of One Row/Column to Another
+Mathematics,Algebra,Determinants,Properties of Determinants,C005,Sign Change under Interchange of Two Rows/Columns
+Mathematics,Algebra,Determinants,Properties of Determinants,C006,Zero Determinant for Linearly Dependent Rows/Columns
+Mathematics,Algebra,Determinants,Properties of Determinants,C007,Determinant of Triangular and Diagonal Matrices (Product of Diagonal Entries)
+Mathematics,Algebra,Determinants,Properties of Determinants,C008,Degree-n Homogeneity under Scaling the Entire Matrix (det(kA) = k^n det(A))
+Mathematics,Algebra,Determinants,Properties of Determinants,C009,Multiplicativity of Determinant (det(AB) = det(A) det(B))
+Mathematics,Algebra,Determinants,Properties of Determinants,C010,Nonsingularity Criterion via Determinant (det(A) ≠ 0 iff A is Invertible)
+Mathematics,Algebra,Determinants,Properties of Determinants,C011,Determinant of the Inverse Matrix (det(A^{-1}) = 1/det(A))
+Mathematics,Algebra,Determinants,Properties of Determinants,C012,Permutation Parity and Determinant Sign (General Row/Column Permutations)
+Mathematics,Algebra,Determinants,Properties of Determinants,C013,Determinant of Block Triangular (and Block Diagonal) Matrices
+Mathematics,Algebra,Determinants,Properties of Determinants,C014,Determinant of Skew-Symmetric Matrix of Odd Order is Zero
+Mathematics,Algebra,Determinants,Properties of Determinants,C015,Cofactor Expansion Invariance across Choice of Row or Column

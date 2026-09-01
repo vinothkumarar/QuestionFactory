@@ -32,9 +32,7 @@ from Engine.factory.ai.models.ai_job import AIJob
 from Engine.models.production_node_model import ProductionNodeModel
 from Engine.models.runtime_model import RuntimeModel
 
-from Engine.qpc.qpc_loader import (
-    QPCLoader,
-)
+
 
 
 LOGGER = logging.getLogger(__name__)
@@ -46,7 +44,7 @@ class AIJobBuilder:
     current manufacturing context.
     """
 
-    VERSION = "2.1.0"
+    VERSION = "2.2.0"
 
     COMPONENT_NAME = "AI Job Builder"
 
@@ -115,7 +113,15 @@ class AIJobBuilder:
             "AIJob successfully created."
         )
 
-        
+        self._logger.info(
+            "QP_ID=%s",
+            node.qp_id,
+        )
+
+        self._logger.info(
+            "QUESTION_POSSIBILITY=%s",
+            node.question_possibility,
+        )
 
         return job
     # ---------------------------------------------------------
@@ -153,8 +159,12 @@ class AIJobBuilder:
             "batch_id": node.metadata.batch_id,
             "production_node": node.metadata.production_node,
 
+            "concept_id": node.concept_id,
+            "concept": node.concept,
             "qp_id": node.qp_id,
             "question_possibility": node.question_possibility,
+            "archetype_id": node.archetype_id,
+            "archetype": node.archetype,
 
 
             # Production Sequence
@@ -178,12 +188,7 @@ class AIJobBuilder:
         the AI subsystem.
         """
 
-        qpc_loader = QPCLoader()
-
-        question_possibilities = qpc_loader.load(
-            chapter_code=node.location.chapter,
-            subtopic_code=node.location.subtopic,
-        )
+        
 
         return {
             "production": {
@@ -198,15 +203,20 @@ class AIJobBuilder:
             },
             "generation": {
                 "rules": blueprint.rules.rules,
-                "archetypes": blueprint.archetypes.archetypes,
                 "schema_version": blueprint.schema_version,
 
-                # Frozen QP Manufacturing
+                # Frozen Question Possibility Manufacturing
+                "concept_id": node.concept_id,
+                "concept": node.concept,
                 "qp_id": node.qp_id,
                 "question_possibility": node.question_possibility,
 
+                # Frozen Archetype Manufacturing
+                "archetype_id": node.archetype_id,
+                "archetype": node.archetype,
+
                 # Optional diagnostics
-                "question_possibilities": question_possibilities,
+                
             },
         }
     # ---------------------------------------------------------

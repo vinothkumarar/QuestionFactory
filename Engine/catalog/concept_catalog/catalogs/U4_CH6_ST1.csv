@@ -1,0 +1,36 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Geometry,Transformations,Translation,C001,Definition of Translation
+Mathematics,Geometry,Transformations,Translation,C002,Translation Vector (Displacement as a Free Vector)
+Mathematics,Geometry,Transformations,Translation,C003,Vector Form of Translation r' = r + a
+Mathematics,Geometry,Transformations,Translation,C004,Coordinate Representation of Translation in 2D
+Mathematics,Geometry,Transformations,Translation,C005,Coordinate Representation of Translation in 3D
+Mathematics,Geometry,Transformations,Translation,C006,Active vs Passive Translation (Point Translation vs Change of Origin)
+Mathematics,Geometry,Transformations,Translation,C007,"Metric Preservation under Translation (Distances, Lengths, Perimeters, Arc Lengths)"
+Mathematics,Geometry,Transformations,Translation,C008,Angle Preservation under Translation
+Mathematics,Geometry,Transformations,Translation,C009,Preservation of Parallelism and Collinearity under Translation
+Mathematics,Geometry,Transformations,Translation,C010,Orientation Preservation (Direct Isometry) under Translation
+Mathematics,Geometry,Transformations,Translation,C011,Area and Volume Preservation under Translation
+Mathematics,Geometry,Transformations,Translation,C012,Preservation of Midpoints and Centroids under Translation
+Mathematics,Geometry,Transformations,Translation,C013,Image of a Line under Translation
+Mathematics,Geometry,Transformations,Translation,C014,"Image of a Segment, Ray, and Polygon under Translation"
+Mathematics,Geometry,Transformations,Translation,C015,Image of a Circle under Translation
+Mathematics,Geometry,Transformations,Translation,C016,Image of a Plane under Translation
+Mathematics,Geometry,Transformations,Translation,C017,Image of a Locus under Translation
+Mathematics,Geometry,Transformations,Translation,C018,Transformation of Algebraic Equations under Translation
+Mathematics,Geometry,Transformations,Translation,C019,Translation of Coordinate Axes (Change of Origin)
+Mathematics,Geometry,Transformations,Translation,C020,Determination and Uniqueness of Translation from Corresponding Points
+Mathematics,Geometry,Transformations,Translation,C021,Composition of Translations (Vector Addition Law)
+Mathematics,Geometry,Transformations,Translation,C022,Inverse Translation
+Mathematics,Geometry,Transformations,Translation,C023,Identity Translation
+Mathematics,Geometry,Transformations,Translation,C024,Group Structure of the Set of Translations
+Mathematics,Geometry,Transformations,Translation,C025,Commutativity of Translations
+Mathematics,Geometry,Transformations,Translation,C026,Fixed Points of a Translation
+Mathematics,Geometry,Transformations,Translation,C027,Translational Symmetry in Geometry
+Mathematics,Geometry,Transformations,Translation,C028,Translation as an Affine (Non-Linear) Mapping with Respect to Origin
+Mathematics,Geometry,Transformations,Translation,C029,Homogeneous Coordinate Matrix Representation of Translation
+Mathematics,Geometry,Transformations,Translation,C030,Action of Translation on Points versus Position Vectors
+Mathematics,Geometry,Transformations,Translation,C031,Congruence via Translation (Equivalence of Figures)
+Mathematics,Geometry,Transformations,Translation,C032,Effect of Translation on Slope and Intercepts of a Line
+Mathematics,Geometry,Transformations,Translation,C033,One-Dimensional Translation on a Line
+Mathematics,Geometry,Transformations,Translation,C034,Geometric Interpretation of Translation Vector (Direction and Magnitude)
+Mathematics,Geometry,Transformations,Translation,C035,Periodic Structures and Lattice Translations

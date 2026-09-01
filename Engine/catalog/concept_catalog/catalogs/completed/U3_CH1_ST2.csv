@@ -1,0 +1,25 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C001,Locus Definition of a Straight Line in the Cartesian Plane
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C002,Linear Equations in Two Variables
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C003,General Form of a Straight Line (ax + by + c = 0)
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C004,Equivalence of Line Equations under Scalar Multiplication
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C005,Point–Line Incidence (Point Satisfying a Line Equation)
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C006,"Coordinate Axes as Straight Lines (x = 0, y = 0)"
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C007,"Lines Parallel to Coordinate Axes (x = k, y = c)"
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C008,Lines Passing Through the Origin
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C009,Slope–Intercept Form of a Line (y = mx + c)
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C010,Point–Slope Form of a Line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C011,Two–Point Form of a Line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C012,Intercept Form of a Line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C013,Symmetric Form of a Line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C014,Normal Form of a Line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C015,Parametric (Vector) Form of a Line in 2D
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C016,Direction Vector and Normal Vector Associated with a Line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C017,Minimal Data for Unique Determination of a Line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C018,Conversion Between Different Forms of Line Equations
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C019,Special Cases and Degeneracies in Line Equations (Vertical and Horizontal Lines)
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C020,Geometric Interpretation of Coefficients in ax + by + c = 0
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C021,Criterion for an Equation to Represent a Straight Line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C022,Axis Intercepts of a Line (x-intercept and y-intercept)
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C023,Normalization in Normal Form (p > 0 and Range of α)
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C024,Angle Parameters in Line Equations (Angle of Inclination and Angle of Normal)

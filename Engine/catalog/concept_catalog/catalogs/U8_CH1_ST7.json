@@ -1,0 +1,122 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C001",
+        "concept": "Functional form of sinθ ± cosθ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C002",
+        "concept": "Periodicity and parity properties of sinθ ± cosθ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C003",
+        "concept": "Single-function representation with amplitude and phase shift for sinθ ± cosθ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C004",
+        "concept": "Range and bounds of sinθ ± cosθ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C005",
+        "concept": "Extremal values and attaining angles for sinθ ± cosθ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C006",
+        "concept": "Square identity of sinθ ± cosθ in terms of sin2θ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C007",
+        "concept": "Sum of squares identity for sinθ + cosθ and sinθ − cosθ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C008",
+        "concept": "Product identity linking (sinθ + cosθ)(sinθ − cosθ) to cos2θ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C009",
+        "concept": "Ratio transformations of sinθ ± cosθ to tangent forms"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C010",
+        "concept": "Zeros and sign distribution of sinθ ± cosθ over a period"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C011",
+        "concept": "Graphical characteristics of y = sinθ ± cosθ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C012",
+        "concept": "Geometric interpretation of sinθ ± cosθ via unit-circle projections"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C013",
+        "concept": "Phase-shift interrelation between sum and difference forms of sinθ and cosθ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C014",
+        "concept": "Absolute value behavior and piecewise structure of |sinθ ± cosθ|"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Expressions involving sinÎ¸ Â± cosÎ¸",
+        "concept_id": "C015",
+        "concept": "Complementary and supplementary angle transformations for sinθ ± cosθ"
+    }
+]

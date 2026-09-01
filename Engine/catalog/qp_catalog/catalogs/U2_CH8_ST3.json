@@ -1,0 +1,182 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C001",
+        "concept": "Transpose of a matrix: definition and notation",
+        "qp_id": "QP001",
+        "question_possibility": "Recognize and interpret standard notation for the transpose of a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C001",
+        "concept": "Transpose of a matrix: definition and notation",
+        "qp_id": "QP002",
+        "question_possibility": "Determine the order of a transpose for a given matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C001",
+        "concept": "Transpose of a matrix: definition and notation",
+        "qp_id": "QP003",
+        "question_possibility": "Determine correspondence of entries, rows, and columns between a matrix and its transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C001",
+        "concept": "Transpose of a matrix: definition and notation",
+        "qp_id": "QP004",
+        "question_possibility": "Form the transpose of a matrix from its given entries"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C001",
+        "concept": "Transpose of a matrix: definition and notation",
+        "qp_id": "QP005",
+        "question_possibility": "Decide whether one matrix is the transpose of another"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C001",
+        "concept": "Transpose of a matrix: definition and notation",
+        "qp_id": "QP006",
+        "question_possibility": "Establish equality under double transposition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C002",
+        "concept": "Entry-wise index mapping and row–column interchange under transpose",
+        "qp_id": "QP001",
+        "question_possibility": "Determine the dimensions of the transpose of a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C002",
+        "concept": "Entry-wise index mapping and row–column interchange under transpose",
+        "qp_id": "QP002",
+        "question_possibility": "Map a specific entry between a matrix and its transpose using index swap a_ij ↔ a_ji"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C002",
+        "concept": "Entry-wise index mapping and row–column interchange under transpose",
+        "qp_id": "QP003",
+        "question_possibility": "Relate entire rows and columns under transpose (k-th row of A to k-th column of A^T and vice versa)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C002",
+        "concept": "Entry-wise index mapping and row–column interchange under transpose",
+        "qp_id": "QP004",
+        "question_possibility": "Identify entries invariant under transpose and count them for m×n matrices (i=j positions)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C002",
+        "concept": "Entry-wise index mapping and row–column interchange under transpose",
+        "qp_id": "QP005",
+        "question_possibility": "Determine how index-defined regions map under transpose (main/anti-diagonal, upper/lower triangular, bands)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C002",
+        "concept": "Entry-wise index mapping and row–column interchange under transpose",
+        "qp_id": "QP006",
+        "question_possibility": "Determine the entry formula of A^T from an entry formula a_ij for A via index interchange"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C002",
+        "concept": "Entry-wise index mapping and row–column interchange under transpose",
+        "qp_id": "QP007",
+        "question_possibility": "Decide symmetry or skew-symmetry of a matrix from entry-wise conditions a_ij versus a_ji"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C002",
+        "concept": "Entry-wise index mapping and row–column interchange under transpose",
+        "qp_id": "QP008",
+        "question_possibility": "Determine the number of independent entries in symmetric or skew-symmetric matrices using a_ij–a_ji pairing"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C002",
+        "concept": "Entry-wise index mapping and row–column interchange under transpose",
+        "qp_id": "QP009",
+        "question_possibility": "Infer entry-wise relations from a stated relation between a matrix and its transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C002",
+        "concept": "Entry-wise index mapping and row–column interchange under transpose",
+        "qp_id": "QP010",
+        "question_possibility": "Determine the effect of repeated transposition (involution and parity of the number of transposes)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C002",
+        "concept": "Entry-wise index mapping and row–column interchange under transpose",
+        "qp_id": "QP011",
+        "question_possibility": "Determine the transpose of a block-partitioned matrix in terms of block positions and block transposes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Transpose and Symmetric Matrices",
+        "concept_id": "C002",
+        "concept": "Entry-wise index mapping and row–column interchange under transpose",
+        "qp_id": "QP012",
+        "question_possibility": "Predict how a sparsity or zero pattern specified by index conditions transforms under transpose"
+    }
+]

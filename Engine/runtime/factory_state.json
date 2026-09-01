@@ -1,10 +1,10 @@
 {
-    "subject": "MATHEMATICS",
-    "unit": "U1",
-    "chapter": "U1_CH1",
-    "subtopic": "U1_CH1_ST8",
-    "set_no": "S4",
+    "subject": "CHEMISTRY",
+    "unit": "C3",
+    "chapter": "C3_CH1",
+    "subtopic": "C3_CH1_ST1",
+    "set_no": "S5",
     "current_batch": 1,
-    "questions_per_batch": 2,
+    "questions_per_batch": 5,
     "status": "RUNNING"
 }

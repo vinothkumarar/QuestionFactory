@@ -1,0 +1,194 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C001",
+        "concept": "Locus Definition of a Straight Line in the Cartesian Plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C002",
+        "concept": "Linear Equations in Two Variables"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C003",
+        "concept": "General Form of a Straight Line (ax + by + c = 0)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C004",
+        "concept": "Equivalence of Line Equations under Scalar Multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C005",
+        "concept": "Point–Line Incidence (Point Satisfying a Line Equation)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C006",
+        "concept": "Coordinate Axes as Straight Lines (x = 0, y = 0)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C007",
+        "concept": "Lines Parallel to Coordinate Axes (x = k, y = c)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C008",
+        "concept": "Lines Passing Through the Origin"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C009",
+        "concept": "Slope–Intercept Form of a Line (y = mx + c)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C010",
+        "concept": "Point–Slope Form of a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C011",
+        "concept": "Two–Point Form of a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C012",
+        "concept": "Intercept Form of a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C013",
+        "concept": "Symmetric Form of a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C014",
+        "concept": "Normal Form of a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C015",
+        "concept": "Parametric (Vector) Form of a Line in 2D"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C016",
+        "concept": "Direction Vector and Normal Vector Associated with a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C017",
+        "concept": "Minimal Data for Unique Determination of a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C018",
+        "concept": "Conversion Between Different Forms of Line Equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C019",
+        "concept": "Special Cases and Degeneracies in Line Equations (Vertical and Horizontal Lines)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C020",
+        "concept": "Geometric Interpretation of Coefficients in ax + by + c = 0"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C021",
+        "concept": "Criterion for an Equation to Represent a Straight Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C022",
+        "concept": "Axis Intercepts of a Line (x-intercept and y-intercept)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C023",
+        "concept": "Normalization in Normal Form (p > 0 and Range of α)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Equation of Straight Line",
+        "concept_id": "C024",
+        "concept": "Angle Parameters in Line Equations (Angle of Inclination and Angle of Normal)"
+    }
+]

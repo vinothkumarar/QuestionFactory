@@ -1,0 +1,24 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Algebra,Determinants,Minors and Cofactors,C001,Minor of an element
+Mathematics,Algebra,Determinants,Minors and Cofactors,C002,Row–column deletion for forming minors
+Mathematics,Algebra,Determinants,Minors and Cofactors,C003,Order of a minor
+Mathematics,Algebra,Determinants,Minors and Cofactors,C004,k-th order minors of a square matrix
+Mathematics,Algebra,Determinants,Minors and Cofactors,C005,Submatrix representation of a minor (index-set notation)
+Mathematics,Algebra,Determinants,Minors and Cofactors,C006,Principal minors
+Mathematics,Algebra,Determinants,Minors and Cofactors,C007,Leading principal minors
+Mathematics,Algebra,Determinants,Minors and Cofactors,C008,Complementary minors
+Mathematics,Algebra,Determinants,Minors and Cofactors,C009,Matrix of minors
+Mathematics,Algebra,Determinants,Minors and Cofactors,C010,Cofactor of an element (algebraic cofactor)
+Mathematics,Algebra,Determinants,Minors and Cofactors,C011,Relationship between a minor and its cofactor
+Mathematics,Algebra,Determinants,Minors and Cofactors,C012,Cofactor sign pattern (checkerboard convention)
+Mathematics,Algebra,Determinants,Minors and Cofactors,C013,Cofactor matrix
+Mathematics,Algebra,Determinants,Minors and Cofactors,C014,Cofactor–transpose relation
+Mathematics,Algebra,Determinants,Minors and Cofactors,C015,Cofactor expansion along a row
+Mathematics,Algebra,Determinants,Minors and Cofactors,C016,Cofactor expansion along a column
+Mathematics,Algebra,Determinants,Minors and Cofactors,C017,Generalized Laplace expansion by k-th order minors
+Mathematics,Algebra,Determinants,Minors and Cofactors,C018,Determinant defined recursively via cofactors
+Mathematics,Algebra,Determinants,Minors and Cofactors,C019,Cofactor orthogonality relations between distinct rows or columns
+Mathematics,Algebra,Determinants,Minors and Cofactors,C020,Principal cofactors (diagonal cofactors)
+Mathematics,Algebra,Determinants,Minors and Cofactors,C021,Symmetry of the cofactor matrix for symmetric matrices
+Mathematics,Algebra,Determinants,Minors and Cofactors,C022,Effect of elementary row or column operations on cofactors
+Mathematics,Algebra,Determinants,Minors and Cofactors,C023,Cofactor patterns for diagonal and triangular matrices

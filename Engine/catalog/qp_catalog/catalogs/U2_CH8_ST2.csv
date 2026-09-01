@@ -1,0 +1,370 @@
+subject,unit,chapter,subtopic,concept_id,concept,qp_id,question_possibility
+Mathematics,Algebra,Matrices,Matrix Operations,C001,Matrix Equality,QP001,Determine whether two matrices are equal
+Mathematics,Algebra,Matrices,Matrix Operations,C001,Matrix Equality,QP002,Determine dimension constraints required for two matrices to be equal
+Mathematics,Algebra,Matrices,Matrix Operations,C001,Matrix Equality,QP003,Determine scalar parameter values that make two matrices or matrix expressions equal
+Mathematics,Algebra,Matrices,Matrix Operations,C001,Matrix Equality,QP004,Determine an unknown matrix from a matrix equality or a system of matrix equalities
+Mathematics,Algebra,Matrices,Matrix Operations,C001,Matrix Equality,QP005,Deduce new equalities from a given matrix equality using equality-preserving operations
+Mathematics,Algebra,Matrices,Matrix Operations,C001,Matrix Equality,QP006,Assess whether stated conditions are sufficient and/or necessary for two matrices to be equal
+Mathematics,Algebra,Matrices,Matrix Operations,C001,Matrix Equality,QP007,Assess feasibility of matrix equality under structural constraints such as shape or sparsity pattern
+Mathematics,Algebra,Matrices,Matrix Operations,C001,Matrix Equality,QP008,"Establish and apply reflexive, symmetric, and transitive properties of matrix equality"
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP001,Determine order conditions for matrix equality to be meaningful
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP002,Determine order conditions for matrix addition or subtraction to be defined
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP003,Determine conformability of scalar multiplication with a matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP004,Determine conformability of matrix multiplication for given orders
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP005,Determine the order of the result of a defined matrix operation or composite expression
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP006,Determine conformability for operations involving transpose
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP007,Determine order conditions for matrix powers to be defined for given integer exponents
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP008,Determine order conditions for polynomial expressions in a matrix to be defined
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP009,Determine appropriate identity matrix order for valid sums and products
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP010,Determine dimensional preconditions for expressions involving inverses assuming invertibility
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP011,Determine order conditions for determinant of a matrix or matrix expression to be defined
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP012,Determine order conditions for trace of a matrix or matrix expression to be defined
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP013,Determine conditions under which both AB and BA are simultaneously defined and identify their orders
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP014,Determine order conditions for expressions such as AB + BA to be defined
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP015,Infer unknown matrix orders from the requirement that an equation or expression is well-defined
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP016,Diagnose dimensional inconsistency of a proposed matrix operation or expression
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP017,Determine conformability conditions for partitioned matrix addition and multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C002,Conformability Conditions for Matrix Operations,QP018,Determine minimal order relationships required for a composite expression with sums and products to be well-defined
+Mathematics,Algebra,Matrices,Matrix Operations,C003,Matrix Addition,QP001,Determine conformability and resultant order for matrix addition
+Mathematics,Algebra,Matrices,Matrix Operations,C003,Matrix Addition,QP002,Compute the sum of matrices element-wise
+Mathematics,Algebra,Matrices,Matrix Operations,C003,Matrix Addition,QP003,Determine unknown matrix or entries from a matrix equation involving addition
+Mathematics,Algebra,Matrices,Matrix Operations,C003,Matrix Addition,QP004,Determine the additive inverse of a matrix or of a matrix sum
+Mathematics,Algebra,Matrices,Matrix Operations,C003,Matrix Addition,QP005,"Apply commutativity, associativity, and additive identity properties to simplify matrix expressions"
+Mathematics,Algebra,Matrices,Matrix Operations,C003,Matrix Addition,QP006,Establish closure of specified matrix classes under addition and identify the class of the sum
+Mathematics,Algebra,Matrices,Matrix Operations,C003,Matrix Addition,QP007,Determine existence and uniqueness conditions for solutions of matrix equations involving addition
+Mathematics,Algebra,Matrices,Matrix Operations,C003,Matrix Addition,QP008,Identify or construct the zero matrix (additive identity) of a specified order and use it in addition equations
+Mathematics,Algebra,Matrices,Matrix Operations,C004,Scalar Multiplication of Matrices,QP001,Compute scalar multiple of a matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C004,Scalar Multiplication of Matrices,QP002,Evaluate matrix linear combination with scalar coefficients
+Mathematics,Algebra,Matrices,Matrix Operations,C004,Scalar Multiplication of Matrices,QP003,Apply algebraic properties of scalar multiplication to transform matrix expressions
+Mathematics,Algebra,Matrices,Matrix Operations,C004,Scalar Multiplication of Matrices,QP004,Determine scalar parameters from matrix equalities involving scalar multiples
+Mathematics,Algebra,Matrices,Matrix Operations,C004,Scalar Multiplication of Matrices,QP005,Determine existence or uniqueness conditions for scalars in equalities with scalar-multiplied matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C004,Scalar Multiplication of Matrices,QP006,Determine whether one matrix is a scalar multiple of another and find the scalar
+Mathematics,Algebra,Matrices,Matrix Operations,C004,Scalar Multiplication of Matrices,QP007,Apply compatibility of scalar multiplication with matrix multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C004,Scalar Multiplication of Matrices,QP008,Apply compatibility of scalar multiplication with transpose
+Mathematics,Algebra,Matrices,Matrix Operations,C004,Scalar Multiplication of Matrices,QP009,Determine preservation of matrix structural classes under scalar multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C004,Scalar Multiplication of Matrices,QP010,Predict qualitative entry-wise effects of scalar multiplication on sign and magnitude
+Mathematics,Algebra,Matrices,Matrix Operations,C004,Scalar Multiplication of Matrices,QP011,Determine scalar values or ranges so a scalar multiple satisfies entry-wise inequality constraints
+Mathematics,Algebra,Matrices,Matrix Operations,C005,Matrix Subtraction,QP001,Determine whether a matrix subtraction is defined and the order of the result
+Mathematics,Algebra,Matrices,Matrix Operations,C005,Matrix Subtraction,QP002,Evaluate a matrix difference using element-wise subtraction
+Mathematics,Algebra,Matrices,Matrix Operations,C005,Matrix Subtraction,QP003,"Determine the general (i, j)-entry or specific entries of a matrix difference"
+Mathematics,Algebra,Matrices,Matrix Operations,C005,Matrix Subtraction,QP004,Rewrite matrix expressions by replacing subtraction with addition of additive inverses and vice versa
+Mathematics,Algebra,Matrices,Matrix Operations,C005,Matrix Subtraction,QP005,Simplify matrix expressions involving multiple subtractions and parentheses
+Mathematics,Algebra,Matrices,Matrix Operations,C005,Matrix Subtraction,QP006,"Determine which algebraic properties of matrix subtraction hold (non-commutativity, non-associativity, identity, inverse, cancellation, closure)"
+Mathematics,Algebra,Matrices,Matrix Operations,C005,Matrix Subtraction,QP007,Solve matrix equations involving subtraction to determine unknown matrices or scalar parameters
+Mathematics,Algebra,Matrices,Matrix Operations,C006,Properties of Matrix Addition,QP001,Determine whether a matrix sum is defined based on orders and identify the order of the result
+Mathematics,Algebra,Matrices,Matrix Operations,C006,Properties of Matrix Addition,QP002,Establish and apply the commutativity of matrix addition
+Mathematics,Algebra,Matrices,Matrix Operations,C006,Properties of Matrix Addition,QP003,Establish and apply the associativity of matrix addition
+Mathematics,Algebra,Matrices,Matrix Operations,C006,Properties of Matrix Addition,QP004,Identify the additive identity (zero matrix) and use it to simplify matrix sums
+Mathematics,Algebra,Matrices,Matrix Operations,C006,Properties of Matrix Addition,QP005,Identify and use the additive inverse of a matrix; interpret subtraction as addition of the inverse
+Mathematics,Algebra,Matrices,Matrix Operations,C006,Properties of Matrix Addition,QP006,Apply the cancellation law for matrix addition to infer equality of matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C006,Properties of Matrix Addition,QP007,Solve matrix equations involving only addition/subtraction to determine unknown matrices or entries
+Mathematics,Algebra,Matrices,Matrix Operations,C006,Properties of Matrix Addition,QP008,Establish the uniqueness of the additive identity and additive inverse in the set of m×n matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C006,Properties of Matrix Addition,QP009,Establish closure of the set of all m×n matrices under addition
+Mathematics,Algebra,Matrices,Matrix Operations,C007,Properties of Scalar Multiplication with Matrices,QP001,Compute a scalar multiple of a matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C007,Properties of Scalar Multiplication with Matrices,QP002,Apply distributivity of a scalar over matrix addition/subtraction
+Mathematics,Algebra,Matrices,Matrix Operations,C007,Properties of Scalar Multiplication with Matrices,QP003,Apply distributivity of scalar addition over a matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C007,Properties of Scalar Multiplication with Matrices,QP004,Use associativity/commutativity of scalar factors with matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C007,Properties of Scalar Multiplication with Matrices,QP005,"Use identity, zero, and negative scalar effects in matrix scaling"
+Mathematics,Algebra,Matrices,Matrix Operations,C007,Properties of Scalar Multiplication with Matrices,QP006,Apply cancellation laws for scalar multiplication to infer matrix/scalar equality
+Mathematics,Algebra,Matrices,Matrix Operations,C007,Properties of Scalar Multiplication with Matrices,QP007,"Solve matrix equations involving a scalar factor (e.g., αX = B)"
+Mathematics,Algebra,Matrices,Matrix Operations,C007,Properties of Scalar Multiplication with Matrices,QP008,Determine existence/uniqueness of solutions to αX = B based on α and B
+Mathematics,Algebra,Matrices,Matrix Operations,C007,Properties of Scalar Multiplication with Matrices,QP009,Determine whether one matrix is a scalar multiple of another and find the scalar if it exists
+Mathematics,Algebra,Matrices,Matrix Operations,C007,Properties of Scalar Multiplication with Matrices,QP010,Reassociate a scalar across a matrix product (α(AB) = (αA)B = A(αB))
+Mathematics,Algebra,Matrices,Matrix Operations,C007,Properties of Scalar Multiplication with Matrices,QP011,Apply compatibility of scalar multiplication with transpose ((αA)^T = α A^T)
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP001,Determine whether a matrix product is defined given the orders of the factors
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP002,Determine the order of a matrix product when the multiplication is defined
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP003,Evaluate a specified entry of a product using the row–column (dot product) rule
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP004,Compute a full matrix product using the row–column rule
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP005,Interpret product columns and rows as linear combinations of columns/rows of the factors
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP006,Apply associativity of matrix multiplication to regroup and evaluate chain products
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP007,Use distributivity and scalar compatibility to expand or simplify matrix expressions with products
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP008,"Assess existence, order, and potential equality of AB and BA; diagnose non-commutativity"
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP009,"Determine outcomes of multiplying with identity and zero matrices, including order constraints"
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP010,Evaluate the validity of cancellation and zero-product inferences in matrix multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP011,"Predict the effect of pre- or post-multiplying by special matrices (diagonal, permutation, elementary) on rows/columns"
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP012,Determine feasibility and resulting order of multi-factor (chain) products from given dimension sequences
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP013,Perform block matrix multiplication using conformal partitioning and the block row–column rule
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP014,Infer forced zero or possible nonzero entries of a product from sparsity/zero patterns in the factors
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP015,Formulate entry-wise scalar equations from an equality like AB = C to determine or constrain unknown entries
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP016,Relate the transpose of a product to the reversed product of transposes and use it within expressions
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP017,"Predict structural form of a product (e.g., triangular, diagonal, symmetric) given structural properties of the factors"
+Mathematics,Algebra,Matrices,Matrix Operations,C008,Matrix Multiplication (Row–Column Rule),QP018,Express a product as a sum of outer products and use this decomposition to infer properties of the product
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP001,Determine conformability for matrix multiplication and the order of the product
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP002,Assess commutativity of two matrices and identify conditions under which AB = BA
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP003,Establish associativity of matrix multiplication and equivalence of parenthesizations when defined
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP004,Establish distributivity of multiplication over matrix addition and subtraction
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP005,Establish compatibility of matrix multiplication with scalar multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP006,Determine identity element behavior in matrix multiplication and required sizes of identity matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP007,"Determine zero-matrix behavior under multiplication, including existence of zero divisors (nonzero factors with zero product)"
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP008,Relate transpose to multiplication via (AB)^T = B^T A^T and analyze direct consequences
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP009,Determine validity of left or right cancellation in matrix multiplication and state necessary conditions
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP010,Relate invertibility of a product to invertibility of its factors and apply (AB)^{-1} = B^{-1}A^{-1} when defined
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP011,Determine feasibility and resulting orders when both AB and BA are defined and compare product orders
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP012,Characterize rows and columns of a product as linear combinations of rows or columns of the factors
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP013,"Establish algebraic rules for powers of a matrix under multiplication (A^m A^n, (A^n)^m)"
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP014,Determine conditions under which (AB)^n equals A^n B^n or B^n A^n
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP015,"Predict structural form of a product from structures of factors (e.g., diagonal or triangular matrices)"
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP016,Determine block-matrix multiplication feasibility and the resulting block-level product
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP017,Determine conditions for a product to be symmetric or skew-symmetric using multiplication and transpose properties
+Mathematics,Algebra,Matrices,Matrix Operations,C009,Properties of Matrix Multiplication,QP018,Determine valid rebracketings of a chain product based on dimension compatibility and associativity
+Mathematics,Algebra,Matrices,Matrix Operations,C010,Additive Identity and Additive Inverse for Matrices,QP001,Identify the additive identity matrix for a specified order or matrix subset
+Mathematics,Algebra,Matrices,Matrix Operations,C010,Additive Identity and Additive Inverse for Matrices,QP002,Determine the additive inverse of a given matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C010,Additive Identity and Additive Inverse for Matrices,QP003,"Determine the additive inverse of a matrix expression involving sums, differences, and scalar multiples"
+Mathematics,Algebra,Matrices,Matrix Operations,C010,Additive Identity and Additive Inverse for Matrices,QP004,Verify whether a proposed matrix serves as the additive identity for a specified set of matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C010,Additive Identity and Additive Inverse for Matrices,QP005,Decide whether two given matrices are additive inverses of each other
+Mathematics,Algebra,Matrices,Matrix Operations,C010,Additive Identity and Additive Inverse for Matrices,QP006,Solve linear matrix equations under addition using additive inverses
+Mathematics,Algebra,Matrices,Matrix Operations,C010,Additive Identity and Additive Inverse for Matrices,QP007,Establish uniqueness of the additive identity and of additive inverses in matrix addition
+Mathematics,Algebra,Matrices,Matrix Operations,C010,Additive Identity and Additive Inverse for Matrices,QP008,"Establish identities linking additive inverse with sum, transpose, and scalar multiplication"
+Mathematics,Algebra,Matrices,Matrix Operations,C010,Additive Identity and Additive Inverse for Matrices,QP009,Determine conditions under which a matrix equals its own additive inverse and characterize such matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C010,Additive Identity and Additive Inverse for Matrices,QP010,Determine whether a specified class of matrices is closed under taking additive inverses and identify the resulting class
+Mathematics,Algebra,Matrices,Matrix Operations,C010,Additive Identity and Additive Inverse for Matrices,QP011,Prove or apply the cancellation property in matrix addition using additive inverses
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property,QP001,Identify the multiplicative identity matrix for a specified order
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property,QP002,Determine whether a given matrix is the identity matrix of its stated order
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property,QP003,Determine the correct order and side of the identity matrix that leaves a given matrix unchanged under multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property,QP004,Verify the multiplicative identity property for conformable matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property,QP005,"Simplify matrix expressions using the identity property, including powers of the identity"
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property,QP006,Determine feasibility and resultant dimensions of products involving identity matrices and given matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property,QP007,Establish the uniqueness of the multiplicative identity matrix for a given order
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property,QP008,Determine existence or non-existence of a two-sided multiplicative identity for a specified class of matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property,QP009,"Classify a candidate matrix as a left identity, right identity, two-sided identity, or not an identity for a specified matrix set"
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property,QP010,Diagnose and correct errors due to incorrect identity size or placement in matrix products
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property,QP011,Establish that the identity matrix commutes with every conformable matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property,QP012,Solve matrix equations involving the identity matrix to determine an unknown matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property,QP013,Identify or construct block identity matrices matching a given block partition and use them as neutral elements in block multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C011,Multiplicative Identity Matrix and Identity Property,QP014,Determine parameter values that make a given matrix equal to the identity matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP001,Establish non-commutativity of matrix multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP002,Determine whether two matrices commute
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP003,Determine commutativity under specified structural constraints
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP004,Establish commutativity between a matrix and its powers or polynomials
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP005,Determine whether a specified class of matrices is commutative under multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP006,Establish existence of nonzero matrices whose product is the zero matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP007,Determine whether a given nonzero matrix is a zero divisor
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP008,Characterize zero divisors among square matrices via singularity or invertibility
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP009,Determine feasibility of order-asymmetric zero products
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP010,Determine dimensional conditions for nontrivial zero products in rectangular multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP011,Determine conditions under which AB=0 forces one factor to be the zero matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP012,Determine validity of cancellation in matrix multiplication and conditions ensuring it
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP013,Contrast commutativity and zero-divisor properties between 1×1 and n×n (n>1) matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP014,Determine conditions under which scalar algebraic identities hold for matrices based on commutativity
+Mathematics,Algebra,Matrices,Matrix Operations,C012,Non-Commutativity and Zero Divisors in Matrix Multiplication,QP015,Identify matrices that commute with every matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C013,Cancellation Laws in Matrix Multiplication,QP001,Determine conditions under which a common left or right matrix factor can be cancelled from a product equality
+Mathematics,Algebra,Matrices,Matrix Operations,C013,Cancellation Laws in Matrix Multiplication,QP002,"Establish equivalence between two-sided cancellability and matrix invertibility, including the necessity of squareness"
+Mathematics,Algebra,Matrices,Matrix Operations,C013,Cancellation Laws in Matrix Multiplication,QP003,Demonstrate failure of general cancellation in matrices by identifying valid counterexamples
+Mathematics,Algebra,Matrices,Matrix Operations,C013,Cancellation Laws in Matrix Multiplication,QP004,"Determine when a zero product AB = 0 forces A = 0 or B = 0 and when it does not, and identify conditions guaranteeing the inference"
+Mathematics,Algebra,Matrices,Matrix Operations,C013,Cancellation Laws in Matrix Multiplication,QP005,"Infer rank, null-space, or one-sided inverse properties of a matrix from given left or right cancellability behavior"
+Mathematics,Algebra,Matrices,Matrix Operations,C013,Cancellation Laws in Matrix Multiplication,QP006,Determine uniqueness or at-most-one solution of AX = B or XA = B using cancellability conditions
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose,QP001,Determine the transpose of a matrix (including resulting order and entries)
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose,QP002,"Determine conformability and order of matrix expressions involving transpose (e.g., A^T, A^T B, B A^T)"
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose,QP003,"Simplify matrix expressions using transpose identities (sum, difference, scalar multiple, product, powers)"
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose,QP004,Classify a matrix as symmetric or skew-symmetric using transpose definitions
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose,QP005,Determine unknown entries or parameters so that a matrix is symmetric or skew-symmetric (A = A^T or A^T = -A)
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose,QP006,Decompose a square matrix into symmetric and skew-symmetric parts using transpose
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose,QP007,"Infer structural constraints from symmetry or skew-symmetry (entry relations, zero diagonal) using transpose"
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose,QP008,Determine the number of independent entries in symmetric or skew-symmetric matrices of given order
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose,QP009,"Determine the symmetry type of composite expressions formed with A and A^T (e.g., A + A^T, A - A^T, A A^T, A^T A)"
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose,QP010,Analyze preservation or change of symmetry/skew-symmetry under matrix operations using transpose properties
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose,QP011,"Infer element-wise relationships from transpose equalities between matrices (e.g., A^T = B)"
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose,QP012,Determine the transpose of a partitioned (block) matrix and the resulting block structure
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose,QP013,Solve linear matrix equations involving an unknown matrix and its transpose
+Mathematics,Algebra,Matrices,Matrix Operations,C014,Matrix Transpose,QP014,"Determine the effect of transpose on common matrix types (upper/lower triangular, diagonal, identity, zero, permutation)"
+Mathematics,Algebra,Matrices,Matrix Operations,C015,Properties of Transpose under Operations,QP001,Determine the transpose of linear combinations of matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C015,Properties of Transpose under Operations,QP002,Determine the transpose of a matrix product (including multiple factors) using order reversal
+Mathematics,Algebra,Matrices,Matrix Operations,C015,Properties of Transpose under Operations,QP003,Determine the transpose of a power of a matrix and of a polynomial in a matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C015,Properties of Transpose under Operations,QP004,Relate transpose and inverse operations for invertible matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C015,Properties of Transpose under Operations,QP005,Classify a matrix expression as symmetric or skew-symmetric using transpose properties
+Mathematics,Algebra,Matrices,Matrix Operations,C015,Properties of Transpose under Operations,QP006,Decompose a square matrix into symmetric and skew-symmetric parts via transpose
+Mathematics,Algebra,Matrices,Matrix Operations,C015,Properties of Transpose under Operations,QP007,Determine conditions for sums or products of symmetric/skew-symmetric matrices to be symmetric or skew-symmetric
+Mathematics,Algebra,Matrices,Matrix Operations,C015,Properties of Transpose under Operations,QP008,Infer relations among matrices from equations involving transposes
+Mathematics,Algebra,Matrices,Matrix Operations,C015,Properties of Transpose under Operations,QP009,Determine orders and compatibility of matrices in expressions involving transposes
+Mathematics,Algebra,Matrices,Matrix Operations,C015,Properties of Transpose under Operations,QP010,Predict the structural form (upper/lower triangular or diagonal) after applying transpose
+Mathematics,Algebra,Matrices,Matrix Operations,C015,Properties of Transpose under Operations,QP011,Establish invariance of a matrix equation or property under transposition
+Mathematics,Algebra,Matrices,Matrix Operations,C016,Complex Conjugate of a Matrix,QP001,Determine the complex conjugate of a given matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C016,Complex Conjugate of a Matrix,QP002,Simplify or transform matrix expressions using algebraic properties of complex conjugation
+Mathematics,Algebra,Matrices,Matrix Operations,C016,Complex Conjugate of a Matrix,QP003,Relate complex conjugation and transpose of a matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C016,Complex Conjugate of a Matrix,QP004,Relate complex conjugation and matrix inverse for invertible matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C016,Complex Conjugate of a Matrix,QP005,Relate complex conjugation to matrix powers and polynomial functions of a matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C016,Complex Conjugate of a Matrix,QP006,Decompose a complex matrix into real and imaginary parts using conjugation and reconstruct the matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C016,Complex Conjugate of a Matrix,QP007,Characterize matrices fixed or negated by conjugation (A = overline(A) or A = -overline(A))
+Mathematics,Algebra,Matrices,Matrix Operations,C016,Complex Conjugate of a Matrix,QP008,Solve matrix equations involving a matrix and its complex conjugate
+Mathematics,Algebra,Matrices,Matrix Operations,C016,Complex Conjugate of a Matrix,QP009,"Determine behavior of standard invariants (trace, determinant) and rank under complex conjugation"
+Mathematics,Algebra,Matrices,Matrix Operations,C017,Conjugate Transpose (Hermitian Transpose),QP001,Compute the conjugate transpose of a matrix or a matrix expression
+Mathematics,Algebra,Matrices,Matrix Operations,C017,Conjugate Transpose (Hermitian Transpose),QP002,"Establish validity of algebraic identities involving conjugate transpose (linearity with scalar conjugation, product order reversal, involution, inverse relation)"
+Mathematics,Algebra,Matrices,Matrix Operations,C017,Conjugate Transpose (Hermitian Transpose),QP003,"Classify a matrix as Hermitian, skew-Hermitian, or neither using the conjugate-transpose definition"
+Mathematics,Algebra,Matrices,Matrix Operations,C017,Conjugate Transpose (Hermitian Transpose),QP004,Determine parameter conditions for a matrix to be Hermitian or skew-Hermitian
+Mathematics,Algebra,Matrices,Matrix Operations,C017,Conjugate Transpose (Hermitian Transpose),QP005,Decompose a complex square matrix into Hermitian and skew-Hermitian components
+Mathematics,Algebra,Matrices,Matrix Operations,C017,Conjugate Transpose (Hermitian Transpose),QP006,"Determine whether expressions built from A and A* (e.g., A + A*, i(A − A*), A* A, A A*) are Hermitian or skew-Hermitian"
+Mathematics,Algebra,Matrices,Matrix Operations,C017,Conjugate Transpose (Hermitian Transpose),QP007,Infer element-wise constraints implied by Hermitian or skew-Hermitian conditions (off-diagonal conjugacy and nature of diagonal entries)
+Mathematics,Algebra,Matrices,Matrix Operations,C017,Conjugate Transpose (Hermitian Transpose),QP008,Test unitarity of a square matrix using conjugate transpose or determine parameter conditions for unitarity
+Mathematics,Algebra,Matrices,Matrix Operations,C017,Conjugate Transpose (Hermitian Transpose),QP009,Determine the resulting dimensions and product conformability after applying conjugate transpose
+Mathematics,Algebra,Matrices,Matrix Operations,C017,Conjugate Transpose (Hermitian Transpose),QP010,Identify simplifications for real matrices under conjugate transpose (A* = A^T; Hermitian ↔ symmetric; skew-Hermitian ↔ skew-symmetric)
+Mathematics,Algebra,Matrices,Matrix Operations,C017,Conjugate Transpose (Hermitian Transpose),QP011,Determine closure properties of Hermitian and skew-Hermitian matrices under addition and real/complex scalar multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C017,Conjugate Transpose (Hermitian Transpose),QP012,"Determine feasibility of Hermitian, skew-Hermitian, or unitary properties for non-square matrices from their conjugate-transpose-based definitions"
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP001,Determine the matrix conjugate or conjugate transpose of a given matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP002,Determine the conjugate or conjugate transpose of a linear combination of matrices and scalars
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP003,"Determine the conjugate or conjugate transpose of a product, power, or inverse of matrices"
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP004,Solve matrix equations involving the conjugate or conjugate transpose of the unknown matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP005,"Classify a matrix as Hermitian, skew-Hermitian, or neither using the conjugate transpose definition"
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP006,Determine parameter conditions for a matrix to be Hermitian or skew-Hermitian
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP007,Decompose a matrix into its Hermitian and skew-Hermitian parts
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP008,Determine the Hermitian or skew-Hermitian nature of linear combinations of a matrix and its conjugate transpose
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP009,Determine the Hermitian or skew-Hermitian nature of products involving a matrix and its conjugate transpose
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP010,"Establish relationships among transpose, conjugate, and conjugate transpose and deduce simplifications for real matrices"
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP011,Infer entry-wise constraints implied by Hermitian or skew-Hermitian conditions (diagonal and off-diagonal relations)
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP012,Determine the number of independent real parameters in Hermitian or skew-Hermitian matrices of a given order
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP013,Determine the conjugate transpose of a polynomial in a matrix and conditions on coefficients for a Hermitian or skew-Hermitian result
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP014,Determine the behavior of trace under conjugation or conjugate transpose and its implications for Hermitian or skew-Hermitian matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP015,"Infer structural effects of conjugate transpose on special forms (diagonal, triangular, block patterns)"
+Mathematics,Algebra,Matrices,Matrix Operations,C018,Properties of Conjugate and Conjugate Transpose,QP016,Determine conditions on matrices or scalars for a constructed expression to be Hermitian or skew-Hermitian
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP001,Evaluate a matrix power A^n for a given square matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP002,Determine a general formula for A^n as a function of n for a given matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP003,"Determine or reduce A^n using a specified polynomial identity satisfied by A (e.g., idempotent, nilpotent, involutory, characteristic/minimal polynomial)"
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP004,Determine conditions on A and n for which A^n equals a specified target matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP005,Determine the order of a matrix (smallest positive n with A^n = I)
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP006,Determine invertibility of A^n and compute (A^n)^{-1} in terms of A when applicable
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP007,Determine determinant or rank of A^n from information about A
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP008,Evaluate finite or infinite sums of matrix powers and determine existence or convergence conditions
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP009,"Determine validity and conditions of power identities for matrices, such as (AB)^n = A^n B^n, (A+B)^n expansions, or A^n − B^n factorizations"
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP010,"Determine commutation properties involving powers, such as whether A^k commutes with B under specified conditions"
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP011,"Solve polynomial matrix equations in an unknown matrix involving powers (e.g., X^2 = I, X^3 = X, X^k = 0)"
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP012,Analyze rank or nullity behavior across powers of A and deduce related properties such as stabilization or index of nilpotency
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP013,Determine periodicity or limiting behavior of the sequence A^n as n grows
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP014,"Infer structural properties of A from information about its powers (e.g., idempotency, nilpotency, orthogonality, constraints on determinant)"
+Mathematics,Algebra,Matrices,Matrix Operations,C019,Matrix Powers,QP015,"Determine a specified entry, row or column, or a linear functional (e.g., trace or sum of entries) of A^n without computing the full power"
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Polynomials in Matrices,QP001,Evaluate a polynomial at a given square matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Polynomials in Matrices,QP002,Verify whether a given matrix satisfies a specified polynomial identity
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Polynomials in Matrices,QP003,"Establish algebraic properties of matrix polynomial evaluation (sum, scalar multiple, product, composition)"
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Polynomials in Matrices,QP004,Reduce a matrix polynomial or high power using a given annihilating relation for the matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Polynomials in Matrices,QP005,Determine scalar coefficients so that a polynomial in a fixed matrix equals a target matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Polynomials in Matrices,QP006,"Establish commutativity of polynomial expressions in the same matrix (e.g., p(A) with A or q(A))"
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Polynomials in Matrices,QP007,Establish commutativity of polynomial expressions of commuting matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Polynomials in Matrices,QP008,Determine invertibility of a polynomial in a matrix and compute its inverse when possible using polynomial relations
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Polynomials in Matrices,QP009,Express the inverse of a given invertible matrix as a polynomial in that matrix using a satisfied polynomial equation
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Polynomials in Matrices,QP010,"Determine parameter conditions under which a polynomial in a matrix attains a specified algebraic property (zero, identity, idempotent, nilpotent, involutory)"
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Polynomials in Matrices,QP011,"Infer structural preservation of a matrix under polynomial evaluation (e.g., symmetry, skew-symmetry, triangularity, block-diagonality)"
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Polynomials in Matrices,QP012,Determine feasibility and dimensional constraints for defining a polynomial in a matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C020,Polynomials in Matrices,QP013,Characterize when two polynomials yield the same matrix upon evaluation given a known annihilating polynomial
+Mathematics,Algebra,Matrices,Matrix Operations,C021,Commuting Matrices,QP001,Determine whether a given pair of matrices commute
+Mathematics,Algebra,Matrices,Matrix Operations,C021,Commuting Matrices,QP002,Determine parameter conditions under which two matrices commute
+Mathematics,Algebra,Matrices,Matrix Operations,C021,Commuting Matrices,QP003,Describe the complete set of matrices that commute with a given matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C021,Commuting Matrices,QP004,Identify matrices that commute with every matrix (characterize the center)
+Mathematics,Algebra,Matrices,Matrix Operations,C021,Commuting Matrices,QP005,Establish commutation of a matrix with its polynomial (and mutual commutation of such polynomials)
+Mathematics,Algebra,Matrices,Matrix Operations,C021,Commuting Matrices,QP006,"Simplify or validate matrix identities that require commutativity (e.g., binomial-type expansions)"
+Mathematics,Algebra,Matrices,Matrix Operations,C021,Commuting Matrices,QP007,Infer commutation of powers and inverses from a base commutation relation when defined
+Mathematics,Algebra,Matrices,Matrix Operations,C021,Commuting Matrices,QP008,Determine whether a matrix commutes with its transpose or find conditions ensuring it
+Mathematics,Algebra,Matrices,Matrix Operations,C021,Commuting Matrices,QP009,Establish invariance of commutation under similarity (conjugation by an invertible matrix)
+Mathematics,Algebra,Matrices,Matrix Operations,C021,Commuting Matrices,QP010,"Analyze algebraic properties of the 'commutes with' relation (reflexivity, symmetry, transitivity)"
+Mathematics,Algebra,Matrices,Matrix Operations,C021,Commuting Matrices,QP011,Determine the dimension or degrees of freedom of the set of matrices commuting with a given matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C021,Commuting Matrices,QP012,Establish closure and commutativity properties within a family of pairwise commuting matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP001,Determine conformable block partitions and resulting block dimensions for given matrix operations
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP002,Compute linear combinations of partitioned matrices using block-wise addition and scalar multiplication
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP003,Compute product of partitioned matrices using block multiplication rules
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP004,Determine a specified sub-block of a matrix product using block multiplication without computing the full product
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP005,Evaluate the transpose of a partitioned matrix in terms of transposes of its blocks and their placement
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP006,Infer relations among blocks from equality of two partitioned matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP007,"Compute with block diagonal matrices, including products, powers, and inverses via their diagonal blocks"
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP008,Determine determinant or trace of a partitioned matrix using block diagonal or block triangular structure
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP009,Determine the inverse of block upper or lower triangular matrices using block formulas when diagonal blocks are invertible
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP010,Determine the inverse of a 2×2 block matrix using the Schur complement when an appropriate block is invertible
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP011,Determine the determinant of a 2×2 block matrix using Schur complement or block triangular identities under suitable invertibility conditions
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP012,Solve block linear systems using block elimination or Schur complement to obtain component solutions
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP013,Determine solvability and uniqueness conditions for a block linear system using invertibility of sub-blocks and Schur complements
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP014,Simplify computations of partitioned matrix expressions by exploiting zero or identity blocks
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP015,Compute the image of a partitioned vector under a block matrix and express component equations
+Mathematics,Algebra,Matrices,Matrix Operations,C022,Partitioned (Block) Matrix Operations,QP016,Determine block-wise conditions under which a partitioned matrix is symmetric or skew-symmetric
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations,QP001,Classify operations as valid elementary row operations and identify their types
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations,QP002,Apply specified elementary row operations to obtain the resulting matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations,QP003,Reduce a matrix to row echelon or reduced row echelon form using elementary row operations
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations,QP004,Construct a sequence of elementary row operations to transform a matrix into a specified target matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations,QP005,Determine whether two matrices are row-equivalent
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations,QP006,Determine the minimal number of elementary row operations required for a stated transformation
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations,QP007,Diagnose incorrect or impermissible use of elementary row operations in a given row-reduction
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations,QP008,Determine the inverse elementary row operation or inverse sequence that undoes a given transformation
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations,QP009,Assess whether the order of two given elementary row operations affects the outcome for a matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations,QP010,Identify pivot positions obtainable in a row-reduced form via elementary row operations
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations,QP011,Assess uniqueness or non-uniqueness of row-reduced forms obtainable via elementary row operations
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations,QP012,Determine whether a specified elementary row operation leaves a given matrix unchanged
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations,QP013,Establish preservation of solution-set equivalence when applying elementary row operations to an augmented matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C023,Elementary Row Operations,QP014,Determine whether two given sequences of elementary row operations are equivalent in effect
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP001,Identify and classify a given operation as a valid elementary column operation and specify its type
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP002,Determine the resulting matrix after a specified sequence of elementary column operations
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP003,Determine elementary column operations required to achieve a prescribed structural goal in a matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP004,Construct the elementary column matrix corresponding to a specified elementary column operation
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP005,Represent a sequence of elementary column operations as right-multiplication by a single matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP006,Determine whether two matrices are column-equivalent under elementary column operations
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP007,Find a right-multiplier formed by elementary column matrices that maps one matrix to another when possible
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP008,Determine whether a stated matrix property is invariant under elementary column operations
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP009,Determine the effect of a specified elementary column operation on selected entries or linear combinations of columns
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP010,Obtain a column-echelon or column-reduced form of a matrix using only elementary column operations
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP011,Translate between column operations on a matrix and row operations on its transpose
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP012,Validate or diagnose the correctness of a claimed transformation achieved via elementary column operations
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP013,Determine parameter values within elementary column operations that ensure a desired transformation or maintain validity constraints
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP014,Determine whether two specified elementary column operations commute and analyze order dependence
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP015,Determine the inverse of a given elementary column operation or of a product of such operations
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP016,Factorize an invertible square matrix as a product of elementary column matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP017,Determine the minimal number of elementary column operations required to accomplish a specified transformation
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP018,Determine achievability of a specified transformation when only a restricted subset of elementary column operations is allowed
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP019,Decide whether a proposed column transformation is realizable as a composition of elementary column operations
+Mathematics,Algebra,Matrices,Matrix Operations,C024,Elementary Column Operations,QP020,Determine uniqueness or degrees of freedom in the elementary column transformation mapping one matrix to another
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP001,Classify a given matrix as elementary or not and identify its type
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP002,Relate a specified elementary row/column operation to its corresponding elementary matrix and conversely
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP003,Determine the inverse of an elementary matrix and identify the undoing operation
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP004,Determine the correct multiplication side (left/right) to implement a stated row or column operation
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP005,Apply a given elementary matrix or product to transform a matrix or vector
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP006,Construct the product elementary matrix implementing a specified sequence of row or column operations
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP007,Infer the elementary matrix or product that maps one matrix to another via row or column operations
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP008,Reduce a matrix to a specified canonical form (identity/row‑echelon/reduced row‑echelon) using elementary operations or elementary matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP009,Determine the inverse of a nonsingular matrix using elementary operations or elementary matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP010,Establish invertibility of a square matrix via reduction to identity or representation as a product of elementary matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP011,Express a given invertible matrix as a product of elementary matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP012,Determine whether two matrices are row‑equivalent or column‑equivalent using elementary operations or elementary matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP013,Represent and analyze two‑sided transformations B = U A V using products of elementary matrices and determine U and/or V
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP014,Decide whether a proposed transformation is a valid elementary row or column operation
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP015,Determine whether a product of elementary matrices is itself elementary or only a general invertible matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C025,Elementary Matrices and Their Operational Role,QP016,Relate row and column operations via transposition of elementary matrices (link left‑multiplication by E^T to right‑multiplication by E)
+Mathematics,Algebra,Matrices,Matrix Operations,C026,Trace of a Matrix,QP001,"Evaluate the trace of a square matrix or a matrix expression using trace properties (linearity, transpose invariance, cyclicity, block additivity)"
+Mathematics,Algebra,Matrices,Matrix Operations,C026,Trace of a Matrix,QP002,Compare or rank trace values of matrices or matrix expressions using known trace properties
+Mathematics,Algebra,Matrices,Matrix Operations,C026,Trace of a Matrix,QP003,Determine parameter values from equations or inequalities involving the trace of matrices or matrix expressions
+Mathematics,Algebra,Matrices,Matrix Operations,C026,Trace of a Matrix,QP004,"Determine invariance or change of the trace under specified operations (transpose, similarity, row/column operations, permutation conjugation)"
+Mathematics,Algebra,Matrices,Matrix Operations,C026,Trace of a Matrix,QP005,"Assess validity of general statements or identities involving trace (linearity, tr(AB)=tr(BA), cyclic permutations, common false claims)"
+Mathematics,Algebra,Matrices,Matrix Operations,C026,Trace of a Matrix,QP006,Determine feasibility or sufficiency of given information to uniquely determine a trace value under stated matrix constraints
+Mathematics,Algebra,Matrices,Matrix Operations,C027,Properties of Trace under Matrix Operations,QP001,Evaluate trace of linear combinations of matrices (linearity of trace)
+Mathematics,Algebra,Matrices,Matrix Operations,C027,Properties of Trace under Matrix Operations,QP002,Determine equality or compute trace of matrix products using cyclic invariance (including conformable rectangular products)
+Mathematics,Algebra,Matrices,Matrix Operations,C027,Properties of Trace under Matrix Operations,QP003,Establish invariance of trace under similarity transformations (change of basis)
+Mathematics,Algebra,Matrices,Matrix Operations,C027,Properties of Trace under Matrix Operations,QP004,Establish invariance of trace under transpose
+Mathematics,Algebra,Matrices,Matrix Operations,C027,Properties of Trace under Matrix Operations,QP005,Evaluate trace of block-partitioned matrices (sum of traces of diagonal blocks)
+Mathematics,Algebra,Matrices,Matrix Operations,C027,Properties of Trace under Matrix Operations,QP006,Determine whether specified elementary row/column operations or one-sided multiplications preserve the trace
+Mathematics,Algebra,Matrices,Matrix Operations,C027,Properties of Trace under Matrix Operations,QP007,"Establish zero-trace conditions from structural identities (e.g., skew-symmetric matrices, commutators, symmetric–skew-symmetric products)"
+Mathematics,Algebra,Matrices,Matrix Operations,C027,Properties of Trace under Matrix Operations,QP008,Use trace as a similarity invariant to certify non-similarity of matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C027,Properties of Trace under Matrix Operations,QP009,"Compute scalar inner products via trace identities (e.g., tr(A^T B), tr(uv^T))"
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP001,Evaluate linear combinations of diagonal matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP002,Evaluate the product of diagonal matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP003,Evaluate integer powers of a diagonal matrix and determine existence for negative powers
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP004,Determine invertibility of a diagonal matrix and compute its inverse
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP005,Evaluate a polynomial or rational expression of a diagonal matrix and state existence conditions
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP006,Determine row or column scaling effects from left or right multiplication by a diagonal matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP007,Determine conditions for a matrix to commute with a given diagonal matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP008,Solve matrix equations with a diagonal coefficient matrix and analyze consistency and solution form
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP009,Determine conditions for the product of a given matrix with a diagonal matrix to be diagonal
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP010,Compute the trace of a diagonal matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP011,Determine the rank of a diagonal matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP012,Compute the determinant of a diagonal matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP013,"Classify a diagonal matrix as idempotent, involutory, or nilpotent from its diagonal entries"
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP014,Determine transpose-related symmetry properties of a diagonal matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP015,Determine constraints on a matrix given zero-product with a diagonal matrix on the left or right
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP016,Determine the effect of conjugation by an invertible diagonal matrix on matrix entries
+Mathematics,Algebra,Matrices,Matrix Operations,C028,Operations with Diagonal Matrices,QP017,Determine conditions on diagonal entries for a diagonal matrix to satisfy a given polynomial matrix equation
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP001,Characterize whether a given matrix is a permutation matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP002,Construct the permutation matrix for a specified permutation or target row/column order
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP003,Recover the underlying permutation (mapping or cycle form) from a given permutation matrix
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP004,Compute the result of left or right multiplication by a permutation matrix on a matrix (row or column permutation)
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP005,"Track the new position of a specified entry under PA, AP, or PAP^T permutations"
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP006,Relate permutation composition to permutation-matrix multiplication and sequencing of row/column operations
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP007,Establish inverse and transpose relations for permutation matrices and identify the corresponding inverse permutation
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP008,Determine determinant–parity relationships for permutation matrices and infer sign of the permutation
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP009,"Determine the effect of row/column permutations on det(A): evaluate det(PA), det(AP), and det(PAP^T)"
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP010,Establish that rank is invariant under row/column permutations and infer rank of permuted matrices
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP011,"Determine whether two matrices are permutation-equivalent by independent row and column permutations (existence of P, Q with B = PAQ)"
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP012,Determine whether two matrices are related by a simultaneous row-and-column permutation using the same permutation (B = PAP^T)
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP013,Determine powers and order of a permutation matrix using the underlying permutation structure
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP014,"Determine behavior of trace under permutations, including invariance under conjugation by a permutation matrix"
+Mathematics,Algebra,Matrices,Matrix Operations,C029,Row and Column Permutations via Permutation Matrices,QP015,Count the number of n×n permutation matrices and relate it to factorial growth

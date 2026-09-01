@@ -1,0 +1,36 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Geometry,Transformations,Scaling and Dilation,C001,Definition of Dilation (Uniform Scaling) Transformation
+Mathematics,Geometry,Transformations,Scaling and Dilation,C002,Center of Dilation
+Mathematics,Geometry,Transformations,Scaling and Dilation,C003,Scale Factor and Magnitude
+Mathematics,Geometry,Transformations,Scaling and Dilation,C004,Sign of Scale Factor and Orientation Reversal
+Mathematics,Geometry,Transformations,Scaling and Dilation,C005,Coordinate Representation about the Origin
+Mathematics,Geometry,Transformations,Scaling and Dilation,C006,Coordinate Representation about an Arbitrary Center
+Mathematics,Geometry,Transformations,Scaling and Dilation,C007,Vector and Matrix Formulation of Dilation
+Mathematics,Geometry,Transformations,Scaling and Dilation,C008,Complex Plane Representation of Dilation
+Mathematics,Geometry,Transformations,Scaling and Dilation,C009,Fixed Points and Invariant Sets under Dilation
+Mathematics,Geometry,Transformations,Scaling and Dilation,C010,Preservation of Collinearity and Parallelism
+Mathematics,Geometry,Transformations,Scaling and Dilation,C011,Angle Preservation (Conformality) in Dilation
+Mathematics,Geometry,Transformations,Scaling and Dilation,C012,"Scaling of Lengths, Distances, and Perimeters"
+Mathematics,Geometry,Transformations,Scaling and Dilation,C013,Scaling of Areas and Volumes under Dilation
+Mathematics,Geometry,Transformations,Scaling and Dilation,C014,Effect of Dilation on Lines and Rays
+Mathematics,Geometry,Transformations,Scaling and Dilation,C015,Effect of Dilation on Circles and Circular Arcs
+Mathematics,Geometry,Transformations,Scaling and Dilation,C016,Effect of Dilation on Polygons and Similarity of Figures
+Mathematics,Geometry,Transformations,Scaling and Dilation,C017,Dilation of Triangles and Similarity Ratio of Sides and Angles
+Mathematics,Geometry,Transformations,Scaling and Dilation,C018,Centers of Similarity for Two Similar Figures (Internal and External)
+Mathematics,Geometry,Transformations,Scaling and Dilation,C019,Inverse Dilation and Reversibility (k ≠ 0)
+Mathematics,Geometry,Transformations,Scaling and Dilation,C020,Composition of Dilations with the Same Center
+Mathematics,Geometry,Transformations,Scaling and Dilation,C021,Composition of Dilations with Different Centers
+Mathematics,Geometry,Transformations,Scaling and Dilation,C022,Dilation as a Similarity Transformation
+Mathematics,Geometry,Transformations,Scaling and Dilation,C023,Dilation as a Special Affine Transformation
+Mathematics,Geometry,Transformations,Scaling and Dilation,C024,Preservation of Division Ratios (Internal and External) on Lines
+Mathematics,Geometry,Transformations,Scaling and Dilation,C025,Slope and Intercept Behavior of Lines under Dilation
+Mathematics,Geometry,Transformations,Scaling and Dilation,C026,"Dilation in Three Dimensions: Lines, Planes, and Solids"
+Mathematics,Geometry,Transformations,Scaling and Dilation,C027,Concurrency of Corresponding Segments at the Center of Dilation
+Mathematics,Geometry,Transformations,Scaling and Dilation,C028,Uniqueness of Center and Scale Factor for Mapping Similar Figures
+Mathematics,Geometry,Transformations,Scaling and Dilation,C029,Degenerate Cases: Identity (k = 1) and Collapse to Center (k = 0)
+Mathematics,Geometry,Transformations,Scaling and Dilation,C030,Orientation and Chirality Effects of Positive and Negative Scaling
+Mathematics,Geometry,Transformations,Scaling and Dilation,C031,Existence and Uniqueness of Images under Dilation
+Mathematics,Geometry,Transformations,Scaling and Dilation,C032,Radial Distance Relation from Center (OP' = k·OP)
+Mathematics,Geometry,Transformations,Scaling and Dilation,C033,Concentricity under Dilation for Centered Figures
+Mathematics,Geometry,Transformations,Scaling and Dilation,C034,Invariance of Rays and Directions from the Center
+Mathematics,Geometry,Transformations,Scaling and Dilation,C035,Algebraic Structure of Dilations about a Fixed Center (Group Properties)

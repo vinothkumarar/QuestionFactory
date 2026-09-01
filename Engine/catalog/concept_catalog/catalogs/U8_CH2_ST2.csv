@@ -1,0 +1,31 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C001,Definition of Linear Trigonometric Equations
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C002,Standard Forms of Linear Trigonometric Equations
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C003,Classification by Involved Trigonometric Functions
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C004,Domain Restrictions for Trigonometric Functions in Equations
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C005,Periodicity and General Solution Principle
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C006,Effect of Linear Argument Coefficient on Period
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C007,Phase Shift Effects on Solutions
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C008,Range-Based Solvability Conditions
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C009,General Solution of sin(ax + b) = k
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C010,General Solution of cos(ax + b) = k
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C011,General Solution of tan(ax + b) = k
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C012,General Solution of cot(ax + b) = k
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C013,General Solution of sec(ax + b) = k
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C014,General Solution of csc(ax + b) = k
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C015,Solutions on Restricted Intervals
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C016,Linear Combination A sin x + B cos x = C: Structure
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C017,Range of A sin x + B cos x
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C018,Solvability Conditions for A sin x + B cos x = C
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C019,Homogeneous Equation A sin x + B cos x = 0
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C020,Reciprocal Function Transformations in Equations
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C021,Cofunction Transformations within Linear Equations
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C022,Reduction to Linear Form in a Single Trigonometric Function
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C023,Algebraic Transformations and Solution Validity
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C024,Identity and Contradiction Cases in Linear Trigonometric Equations
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C025,Simultaneous Linear Equations in sin x and cos x
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C026,Consistency with sin^2 x + cos^2 x = 1 in Linear Systems
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C027,Solution Representation Modulo Period
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C028,Solution Uniqueness under Periodicity
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C029,"Domain Exclusions for tan, cot, sec, csc"
+Mathematics,Trigonometry,Trigonometric Equations,Linear Trigonometric Equations,C030,Parameter-Dependent Solvability

@@ -1,0 +1,21 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C001,Definition of Inclination of a Line
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C002,Principal Range of Inclination
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C003,Periodicity of Inclination (Equivalence Modulo π)
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C004,Definition of Slope of a Line
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C005,Relationship Between Slope and Inclination (m = tanθ)
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C006,Slope via Coordinate Differences (Δy/Δx) for Non-Vertical Lines
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C007,Well-definedness of Slope for Straight Lines (Except Vertical)
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C008,Horizontal Lines: Zero Slope and Zero Inclination
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C009,Vertical Lines: Undefined Slope and Right-Angle Inclination
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C010,Sign of Slope and Nature of Inclination (Acute vs Obtuse)
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C011,Monotonicity of a Line with Respect to Slope Sign
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C012,Magnitude of Slope and Geometric Steepness
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C013,Slope Criteria for Parallelism of Lines
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C014,Slope Criteria for Perpendicularity of Lines
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C015,Slope from General Linear Equation Coefficients (Ax + By + C = 0)
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C016,Dependence of Inclination on Choice of Reference Axes
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C017,Direction Ratios and Slope in the Plane
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C018,Principal Inclination from Slope (Arctangent and Branch Selection)
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C019,Extended Real Interpretation of Slope (Including Infinity)
+Mathematics,Coordinate Geometry,Straight Lines,Slope and Inclination,C020,"Standard Reference Slopes and Inclinations (y = x, y = −x)"

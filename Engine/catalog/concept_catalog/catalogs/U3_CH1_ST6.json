@@ -1,0 +1,130 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C001",
+        "concept": "Family of lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C002",
+        "concept": "One-parameter family of lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C003",
+        "concept": "Two-parameter family of lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C004",
+        "concept": "Family of lines through a fixed point"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C005",
+        "concept": "Family of lines through the origin"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C006",
+        "concept": "Family of lines through the intersection of two lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C007",
+        "concept": "Family of lines parallel to a given line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C008",
+        "concept": "Family of lines perpendicular to a given line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C009",
+        "concept": "Family of lines making a fixed angle with a given line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C010",
+        "concept": "Family of lines with fixed normal distance from the origin"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C011",
+        "concept": "Parameter interpretation in line families"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C012",
+        "concept": "Vertical line inclusion in line families"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C013",
+        "concept": "Equivalent representations of a line family"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C014",
+        "concept": "Constraint-induced subfamilies of lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C015",
+        "concept": "Concurrency in families of lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C016",
+        "concept": "Parameter domain in line families"
+    }
+]

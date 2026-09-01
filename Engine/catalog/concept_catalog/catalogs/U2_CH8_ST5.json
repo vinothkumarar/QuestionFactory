@@ -1,0 +1,234 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C001",
+        "concept": "Matrix Representation of Linear Systems (Ax = b)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C002",
+        "concept": "Coefficient Matrix, Variable Vector, and Constant Vector in Linear Models"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C003",
+        "concept": "Augmented Matrix of a Linear System"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C004",
+        "concept": "Homogeneous Linear Systems (Ax = 0)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C005",
+        "concept": "Non-homogeneous Linear Systems (Ax = b, b ≠ 0)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C006",
+        "concept": "Consistency of Linear Systems"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C007",
+        "concept": "Classification of Solutions: Unique, None, Infinitely Many"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C008",
+        "concept": "Rank-Based Criteria for Consistency and Number of Solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C009",
+        "concept": "Invertibility of Coefficient Matrix and Uniqueness of Solution in Square Systems"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C010",
+        "concept": "Solvability as Linear Combination of Columns (b in Column Space)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C011",
+        "concept": "Redundant and Contradictory Equations via Row Dependence and Inconsistency"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C012",
+        "concept": "Row Equivalence and Preservation of Solution Sets under Elementary Row Operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C013",
+        "concept": "General Solution Structure for Underdetermined Systems (Free Parameters)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C014",
+        "concept": "Geometric Interpretation of Solutions in R2 and R3 (Intersections of Lines/Planes)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C015",
+        "concept": "Linear Transformations Represented by Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C016",
+        "concept": "Composition of Linear Transformations via Matrix Multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C017",
+        "concept": "Inverse Transformations and Invertible Matrices in Geometry"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C018",
+        "concept": "Singular Transformations and Dimension Reduction (Collapse to Line or Point)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C019",
+        "concept": "Scaling Transformations in the Plane via 2×2 Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C020",
+        "concept": "Rotation Transformations in the Plane via 2×2 Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C021",
+        "concept": "Reflection Transformations in the Plane via 2×2 Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C022",
+        "concept": "Shear Transformations in the Plane via 2×2 Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C023",
+        "concept": "Invariant Points and Invariant Lines under Linear Transformations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C024",
+        "concept": "Orthogonal Transformations and Preservation of Lengths and Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C025",
+        "concept": "Image of a Line under a Linear Transformation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C026",
+        "concept": "Repeated Application of a Transformation and Matrix Powers"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C027",
+        "concept": "Linear Change of Variables in the Plane Using Matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C028",
+        "concept": "Limitations of Linear Transformations for Translations (Affine vs Linear)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Applications of Matrices",
+        "concept_id": "C029",
+        "concept": "Modeling Geometric Intersection and Concurrency Problems via Linear Systems"
+    }
+]

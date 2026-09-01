@@ -1,0 +1,282 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C001",
+        "concept": "Definition of Dilation (Uniform Scaling) Transformation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C002",
+        "concept": "Center of Dilation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C003",
+        "concept": "Scale Factor and Magnitude"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C004",
+        "concept": "Sign of Scale Factor and Orientation Reversal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C005",
+        "concept": "Coordinate Representation about the Origin"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C006",
+        "concept": "Coordinate Representation about an Arbitrary Center"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C007",
+        "concept": "Vector and Matrix Formulation of Dilation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C008",
+        "concept": "Complex Plane Representation of Dilation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C009",
+        "concept": "Fixed Points and Invariant Sets under Dilation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C010",
+        "concept": "Preservation of Collinearity and Parallelism"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C011",
+        "concept": "Angle Preservation (Conformality) in Dilation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C012",
+        "concept": "Scaling of Lengths, Distances, and Perimeters"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C013",
+        "concept": "Scaling of Areas and Volumes under Dilation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C014",
+        "concept": "Effect of Dilation on Lines and Rays"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C015",
+        "concept": "Effect of Dilation on Circles and Circular Arcs"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C016",
+        "concept": "Effect of Dilation on Polygons and Similarity of Figures"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C017",
+        "concept": "Dilation of Triangles and Similarity Ratio of Sides and Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C018",
+        "concept": "Centers of Similarity for Two Similar Figures (Internal and External)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C019",
+        "concept": "Inverse Dilation and Reversibility (k ≠ 0)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C020",
+        "concept": "Composition of Dilations with the Same Center"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C021",
+        "concept": "Composition of Dilations with Different Centers"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C022",
+        "concept": "Dilation as a Similarity Transformation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C023",
+        "concept": "Dilation as a Special Affine Transformation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C024",
+        "concept": "Preservation of Division Ratios (Internal and External) on Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C025",
+        "concept": "Slope and Intercept Behavior of Lines under Dilation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C026",
+        "concept": "Dilation in Three Dimensions: Lines, Planes, and Solids"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C027",
+        "concept": "Concurrency of Corresponding Segments at the Center of Dilation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C028",
+        "concept": "Uniqueness of Center and Scale Factor for Mapping Similar Figures"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C029",
+        "concept": "Degenerate Cases: Identity (k = 1) and Collapse to Center (k = 0)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C030",
+        "concept": "Orientation and Chirality Effects of Positive and Negative Scaling"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C031",
+        "concept": "Existence and Uniqueness of Images under Dilation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C032",
+        "concept": "Radial Distance Relation from Center (OP' = k·OP)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C033",
+        "concept": "Concentricity under Dilation for Centered Figures"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C034",
+        "concept": "Invariance of Rays and Directions from the Center"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Scaling and Dilation",
+        "concept_id": "C035",
+        "concept": "Algebraic Structure of Dilations about a Fixed Center (Group Properties)"
+    }
+]

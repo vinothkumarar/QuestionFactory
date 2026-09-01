@@ -1,0 +1,23 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C001,Definition of intercept form of a straight line
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C002,Geometric interpretation of x-intercept and y-intercept as directed lengths
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C003,Existence conditions for intercept form (line cutting both coordinate axes)
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C004,Limitations of intercept form (lines through origin or parallel to axes)
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C005,Sign conventions and quadrant interpretation of intercepts
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C006,Slope of a line in intercept form
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C007,Relationship of intercept form with general form of a line
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C008,Intercept segment between axes: endpoints and length
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C009,Uniqueness of intercept representation for non-axial lines
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C010,Definition of normal form of a straight line
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C011,Geometric interpretation of normal form parameters p and α
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C012,Unit normal vector representation of a line in normal form
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C013,Parameter ranges and uniqueness conventions in normal form
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C014,Slope of a line in normal form
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C015,Special cases in normal form (lines parallel to axes and line through origin)
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C016,Foot of the perpendicular from origin to a line in normal form
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C017,Relationship of normal form with general form of a line
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C018,Parallelism and perpendicularity characterization via normal parameters
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C019,Universality of normal form for representation of any straight line
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C020,"Relations between intercept parameters (a, b) and normal parameters (p, α)"
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C021,Finite intercept conditions expressed in normal parameters (cosα and sinα constraints)
+Mathematics,Coordinate Geometry,Straight Lines,Intercept Form and Normal Form,C022,Perpendicular distance from origin to a line expressed in terms of intercepts

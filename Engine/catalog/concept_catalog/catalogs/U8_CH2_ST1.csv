@@ -1,0 +1,31 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C001,Definition of General Solution
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C002,Principal Solution and Base Interval
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C003,Fundamental Periods of Trigonometric Functions
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C004,Angular Equivalence Modulo Period
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C005,Even–Odd Symmetry of Trigonometric Functions
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C006,Existence Conditions from Function Ranges
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C007,Parametric Representation with Integer Parameters
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C008,Arithmetic Progression Structure of Solutions
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C009,General Solution of sin x = a
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C010,General Solution of cos x = a
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C011,General Solution of tan x = a
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C012,General Solution of cot x = a
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C013,General Solution of sec x = a
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C014,General Solution of cosec x = a
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C015,Angle Equivalences for sin A = sin B
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C016,Angle Equivalences for cos A = cos B
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C017,Angle Equivalences for tan A = tan B
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C018,Effect of Angle Scaling on Period and Solution Density
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C019,Phase Shift Effects on Solution Sets
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C020,Domain Exclusions for Undefined Trigonometric Values
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C021,Reference Angle and Quadrant Families
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C022,Sign Symmetry in General Solutions
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C023,General Solutions for Zeros of Trigonometric Functions
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C024,Extreme-Value Cases in General Solutions
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C025,Multiple-Angle Equations in General Solutions
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C026,Equations of the Form f(ax + b) = f(cx + d): General Solutions
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C027,Restricting General Solutions to Specified Intervals
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C028,Degree and Radian Measures in General Solutions
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C029,Reciprocal Relationships in General Solutions
+Mathematics,Trigonometry,Trigonometric Equations,General Solutions,C030,Disjoint Solution Families and Duplication Avoidance

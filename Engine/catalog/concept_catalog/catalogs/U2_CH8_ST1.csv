@@ -1,0 +1,28 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C003,Row Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C004,Column Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C005,Rectangular Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C006,Square Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C008,Diagonal Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C010,Identity Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C011,Upper Triangular Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Lower Triangular Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Skew-Symmetric Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C016,Singular Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C017,Non-Singular Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Idempotent Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Involutory Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hermitian Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix

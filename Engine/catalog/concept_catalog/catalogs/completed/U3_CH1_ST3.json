@@ -1,0 +1,178 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C001",
+        "concept": "Definition of intercept form of a straight line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C002",
+        "concept": "Geometric interpretation of x-intercept and y-intercept as directed lengths"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C003",
+        "concept": "Existence conditions for intercept form (line cutting both coordinate axes)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C004",
+        "concept": "Limitations of intercept form (lines through origin or parallel to axes)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C005",
+        "concept": "Sign conventions and quadrant interpretation of intercepts"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C006",
+        "concept": "Slope of a line in intercept form"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C007",
+        "concept": "Relationship of intercept form with general form of a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C008",
+        "concept": "Intercept segment between axes: endpoints and length"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C009",
+        "concept": "Uniqueness of intercept representation for non-axial lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C010",
+        "concept": "Definition of normal form of a straight line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C011",
+        "concept": "Geometric interpretation of normal form parameters p and α"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C012",
+        "concept": "Unit normal vector representation of a line in normal form"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C013",
+        "concept": "Parameter ranges and uniqueness conventions in normal form"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C014",
+        "concept": "Slope of a line in normal form"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C015",
+        "concept": "Special cases in normal form (lines parallel to axes and line through origin)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C016",
+        "concept": "Foot of the perpendicular from origin to a line in normal form"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C017",
+        "concept": "Relationship of normal form with general form of a line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C018",
+        "concept": "Parallelism and perpendicularity characterization via normal parameters"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C019",
+        "concept": "Universality of normal form for representation of any straight line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C020",
+        "concept": "Relations between intercept parameters (a, b) and normal parameters (p, α)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C021",
+        "concept": "Finite intercept conditions expressed in normal parameters (cosα and sinα constraints)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Intercept Form and Normal Form",
+        "concept_id": "C022",
+        "concept": "Perpendicular distance from origin to a line expressed in terms of intercepts"
+    }
+]

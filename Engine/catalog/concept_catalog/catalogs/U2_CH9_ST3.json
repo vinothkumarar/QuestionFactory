@@ -1,0 +1,186 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C001",
+        "concept": "Minor of an element"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C002",
+        "concept": "Row–column deletion for forming minors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C003",
+        "concept": "Order of a minor"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C004",
+        "concept": "k-th order minors of a square matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C005",
+        "concept": "Submatrix representation of a minor (index-set notation)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C006",
+        "concept": "Principal minors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C007",
+        "concept": "Leading principal minors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C008",
+        "concept": "Complementary minors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C009",
+        "concept": "Matrix of minors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C010",
+        "concept": "Cofactor of an element (algebraic cofactor)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C011",
+        "concept": "Relationship between a minor and its cofactor"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C012",
+        "concept": "Cofactor sign pattern (checkerboard convention)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C013",
+        "concept": "Cofactor matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C014",
+        "concept": "Cofactor–transpose relation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C015",
+        "concept": "Cofactor expansion along a row"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C016",
+        "concept": "Cofactor expansion along a column"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C017",
+        "concept": "Generalized Laplace expansion by k-th order minors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C018",
+        "concept": "Determinant defined recursively via cofactors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C019",
+        "concept": "Cofactor orthogonality relations between distinct rows or columns"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C020",
+        "concept": "Principal cofactors (diagonal cofactors)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C021",
+        "concept": "Symmetry of the cofactor matrix for symmetric matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C022",
+        "concept": "Effect of elementary row or column operations on cofactors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Minors and Cofactors",
+        "concept_id": "C023",
+        "concept": "Cofactor patterns for diagonal and triangular matrices"
+    }
+]

@@ -1,0 +1,17 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C001,Perpendicular Distance as Shortest Distance (Definition)
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C002,Normal Vector of a Line and Unit Normal Direction
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C003,Unsigned Perpendicular Distance Formula for Ax + By + C = 0
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C004,Signed Distance from a Point to an Oriented Line
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C005,Scaling Invariance of Distance under Line Equation Rescaling
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C006,Perpendicular Projection (Foot) of a Point on a Line
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C007,Existence and Uniqueness of the Perpendicular from a Point to a Line
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C008,Normal Form of a Line and Distance of the Origin (x cos α + y sin α = p)
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C009,Distance from a Point to the Coordinate Axes
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C010,"Distance from a Point to Lines Parallel to Axes (x = k, y = k)"
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C011,Area-Based Interpretation of Perpendicular Distance (Triangle Height)
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C012,Projection-Based Interpretation on the Unit Normal
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C013,Zero Distance Criterion and Point Incidence on a Line
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C014,Side of a Point Relative to a Line via Sign of Ax + By + C
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C015,Validity Conditions for Distance Formula (Non-Degenerate Line)
+Mathematics,Coordinate Geometry,Straight Lines,Distance of a Point from a Line,C016,Invariance of Perpendicular Distance under Rigid Motions (Translations/Rotations)

@@ -1,0 +1,138 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C001",
+        "concept": "Definition of Complementary Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C002",
+        "concept": "Complementary Angle Transformation (θ → π/2 − θ)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C003",
+        "concept": "Cofunction Pairing of Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C004",
+        "concept": "Cofunction Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C005",
+        "concept": "Degree and Radian Forms of Complementary Relations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C006",
+        "concept": "Domain and Range in Cofunction Relations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C007",
+        "concept": "Discontinuities in Cofunction Relations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C008",
+        "concept": "Extension of Cofunction Identities to All Real Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C009",
+        "concept": "Unit Circle Interpretation of Cofunction Relations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C010",
+        "concept": "Right-Triangle Interpretation of Cofunction Relations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C011",
+        "concept": "Sine–Cosine Symmetry Under Complementation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C012",
+        "concept": "Tangent–Cotangent Symmetry Under Complementation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C013",
+        "concept": "Secant–Cosecant Symmetry Under Complementation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C014",
+        "concept": "Special-Angle Complementary Correspondences"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C015",
+        "concept": "Equivalence of Trigonometric Expressions Under Complementary Transformation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C016",
+        "concept": "Connection to Pythagorean Relationships"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Complementary Angle Relations",
+        "concept_id": "C017",
+        "concept": "Bijection Between Sine and Cosine on the First Quadrant"
+    }
+]

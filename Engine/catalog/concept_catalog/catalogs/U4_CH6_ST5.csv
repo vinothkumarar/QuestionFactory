@@ -1,0 +1,38 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Geometry,Transformations,Composite Transformations,C001,Definition and notation of composite transformation
+Mathematics,Geometry,Transformations,Composite Transformations,C002,Order of operations and non-commutativity in composition
+Mathematics,Geometry,Transformations,Composite Transformations,C003,Associativity of transformation composition
+Mathematics,Geometry,Transformations,Composite Transformations,C004,Identity transformation within composition
+Mathematics,Geometry,Transformations,Composite Transformations,C005,Inverse of a composite transformation and reversal property
+Mathematics,Geometry,Transformations,Composite Transformations,C006,Closure properties of transformation classes under composition
+Mathematics,Geometry,Transformations,Composite Transformations,C007,Orientation behavior in composite transformations
+Mathematics,Geometry,Transformations,Composite Transformations,C008,Invariants preserved under composite transformations
+Mathematics,Geometry,Transformations,Composite Transformations,C009,"Parameter aggregation in composites (angles, scales, shears)"
+Mathematics,Geometry,Transformations,Composite Transformations,C010,Composite isometries in the plane
+Mathematics,Geometry,Transformations,Composite Transformations,C011,Composition of translations
+Mathematics,Geometry,Transformations,Composite Transformations,C012,Composition of rotations about the same center
+Mathematics,Geometry,Transformations,Composite Transformations,C013,Composition of rotations about different centers
+Mathematics,Geometry,Transformations,Composite Transformations,C014,Composition of reflections across parallel lines
+Mathematics,Geometry,Transformations,Composite Transformations,C015,Composition of reflections across intersecting lines
+Mathematics,Geometry,Transformations,Composite Transformations,C016,Glide reflection as a composite transformation
+Mathematics,Geometry,Transformations,Composite Transformations,C017,Composition of reflection and translation
+Mathematics,Geometry,Transformations,Composite Transformations,C018,Composition of reflection and rotation
+Mathematics,Geometry,Transformations,Composite Transformations,C019,Composition of rotation and translation
+Mathematics,Geometry,Transformations,Composite Transformations,C020,Composition of dilations about the same center
+Mathematics,Geometry,Transformations,Composite Transformations,C021,Composition of dilations with different centers
+Mathematics,Geometry,Transformations,Composite Transformations,C022,Similarity transformations as composites
+Mathematics,Geometry,Transformations,Composite Transformations,C023,Composition of dilation and rotation
+Mathematics,Geometry,Transformations,Composite Transformations,C024,Composition of dilation and reflection
+Mathematics,Geometry,Transformations,Composite Transformations,C025,Composition of dilation and translation
+Mathematics,Geometry,Transformations,Composite Transformations,C026,Composition of shears
+Mathematics,Geometry,Transformations,Composite Transformations,C027,Closure and properties of affine transformations under composition
+Mathematics,Geometry,Transformations,Composite Transformations,C028,Effects of composite affine transformations on parallelism and ratios
+Mathematics,Geometry,Transformations,Composite Transformations,C029,Matrix representation of composite linear transformations
+Mathematics,Geometry,Transformations,Composite Transformations,C030,Homogeneous coordinate representation for composing affine transformations
+Mathematics,Geometry,Transformations,Composite Transformations,C031,Determinant-based area and orientation change in composites
+Mathematics,Geometry,Transformations,Composite Transformations,C032,Decomposition of isometries into reflections
+Mathematics,Geometry,Transformations,Composite Transformations,C033,Equivalence of different transformation sequences
+Mathematics,Geometry,Transformations,Composite Transformations,C034,"Fixed points, invariant lines, and axes in composites"
+Mathematics,Geometry,Transformations,Composite Transformations,C035,Conjugation effects within transformation composition
+Mathematics,Geometry,Transformations,Composite Transformations,C036,Centers and axes of composite isometries
+Mathematics,Geometry,Transformations,Composite Transformations,C037,Active and passive viewpoints in composite transformations

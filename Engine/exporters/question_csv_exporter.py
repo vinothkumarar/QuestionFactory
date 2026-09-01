@@ -102,26 +102,16 @@ class QuestionCSVExporter:
         production_order: ProductionOrderModel,
     ) -> str:
         """
-        Build production CSV filename.
+        Build the canonical production CSV filename.
+
+        One CSV represents one subtopic/set.
         """
-
-        question_start = (
-            production_order.question_start
-        )
-
-        question_end = (
-            question_start
-            + production_order.question_count
-            - 1
-        )
 
         return (
             f"{production_order.unit}_"
             f"{production_order.chapter}_"
             f"{production_order.subtopic}_"
-            f"{production_order.set_no}_"
-            f"Q{question_start:03d}"
-            f"_Q{question_end:03d}.csv"
+            f"{production_order.set_no}.csv"
         )
 
     # ---------------------------------------------------------

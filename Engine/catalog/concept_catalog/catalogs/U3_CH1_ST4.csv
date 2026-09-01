@@ -1,0 +1,15 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C001,Angle of Inclination of a Line
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C002,Slope–Angle Relationship for a Line
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C003,Directed Angle Between Two Lines
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C004,Acute (Unoriented) Angle Between Two Lines
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C005,Angle Between Lines as Difference of Inclinations
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C006,Slope-Based Formula for Angle Between Lines
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C007,Coefficient-Based Formula for Angle Between Lines in General Form
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C008,Handling Vertical and Horizontal Lines in Angle Computation
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C009,Parallel and Coincident Lines as Zero-Angle Cases
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C010,Perpendicularity as a Right-Angle Case Between Lines
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C011,Angle Between a Line and the Coordinate Axes
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C012,Angle Conventions and Principal Value Ranges
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C013,Invariance of Angle Between Lines Under Translation and Equation Scaling
+Mathematics,Coordinate Geometry,Straight Lines,Angle Between Lines,C014,Geometric Interpretation via Direction Vectors and Normals

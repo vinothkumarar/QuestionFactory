@@ -1,0 +1,146 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C001",
+        "concept": "Adjoint (Adjugate) of a Square Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C002",
+        "concept": "Cofactor Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C003",
+        "concept": "Identity A·adj(A) = adj(A)·A = det(A)·I"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C004",
+        "concept": "Inverse of a Matrix (Definition and Uniqueness)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C005",
+        "concept": "Invertibility Criterion via Determinant (Non-singularity Condition)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C006",
+        "concept": "Inverse via Adjoint Relationship A^{-1} = adj(A)/det(A)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C007",
+        "concept": "Adjoint under Transpose: adj(A^T) = (adj A)^T"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C008",
+        "concept": "Adjoint under Scalar Multiplication: adj(kA) = k^{n-1}·adj(A)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C009",
+        "concept": "Adjoint of a Product: adj(AB) = adj(B)·adj(A)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C010",
+        "concept": "Determinant of the Adjoint: det(adj A) = (det A)^{n-1}"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C011",
+        "concept": "Adjoint of the Adjoint: adj(adj A) = (det A)^{n-2}·A (n ≥ 2)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C012",
+        "concept": "Inverse under Transpose: (A^{-1})^T = (A^T)^{-1}"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C013",
+        "concept": "Inverse of a Product: (AB)^{-1} = B^{-1}·A^{-1}"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C014",
+        "concept": "Inverse under Scalar Multiplication: (kA)^{-1} = (1/k)·A^{-1} (k ≠ 0)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C015",
+        "concept": "Adjoint for Singular Matrices (A·adj(A) = O when det A = 0)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C016",
+        "concept": "Existence of Adjoint for Any Square Matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C017",
+        "concept": "Adjoint under Similarity: adj(SAS^{-1}) = S·adj(A)·S^{-1}"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "Adjoint and Inverse",
+        "concept_id": "C018",
+        "concept": "Inverse Entries via Cofactors (Transpose of Cofactor Matrix over det A)"
+    }
+]

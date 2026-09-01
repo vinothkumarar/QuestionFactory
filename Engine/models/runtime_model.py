@@ -80,6 +80,10 @@ class ProductionStateModel:
     production_node: str = ""
 
     batch_id: str = ""
+
+    completed_batch_ids: list[str] = field(
+        default_factory=list
+    )
     # ---------------------------------------------------------
 
 
@@ -280,7 +284,8 @@ class RuntimeModel:
 
     def reset_cycle(self) -> None:
         """
-        Reset transient cycle state while preserving production progress.
+        Reset transient cycle state while preserving
+        production progress.
         """
 
         self.factory.status = "IDLE"
@@ -293,6 +298,46 @@ class RuntimeModel:
 
         self.touch()
 
+    # ---------------------------------------------------------
+    # Manufacturing Resume
+    # ---------------------------------------------------------
+
+    def is_batch_completed(
+        self,
+        batch_id: str,
+    ) -> bool:
+        """
+        Return True when the manufacturing batch has
+        already completed successfully.
+        """
+
+        return (
+            batch_id
+            in self.production.completed_batch_ids
+        )
+
+    def mark_batch_completed(
+        self,
+        batch_id: str,
+    ) -> None:
+        """
+        Mark a manufacturing batch as successfully
+        completed.
+
+        Duplicate batch IDs are ignored.
+        """
+
+        if (
+            batch_id
+            not in self.production.completed_batch_ids
+        ):
+            self.production.completed_batch_ids.append(
+                batch_id
+            )
+
+        self.production.batch_id = batch_id
+
+        self.touch()
     # ---------------------------------------------------------
     # Serialization
     # ---------------------------------------------------------

@@ -1,0 +1,226 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C001",
+        "concept": "Multiple-angle equations: definition and scope"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C002",
+        "concept": "Period of sin(nθ), cos(nθ), tan(nθ) with respect to θ"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C003",
+        "concept": "Domain and range constraints in multiple-angle equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C004",
+        "concept": "General solutions for sin(nθ) = k"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C005",
+        "concept": "General solutions for cos(nθ) = k"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C006",
+        "concept": "General solutions for tan(nθ) = k"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C007",
+        "concept": "General solutions for cot(nθ) = k"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C008",
+        "concept": "General solutions for sec(nθ) = k"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C009",
+        "concept": "General solutions for csc(nθ) = k"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C010",
+        "concept": "Zeros of multiple-angle trigonometric functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C011",
+        "concept": "Extreme values of sin(nθ) and cos(nθ) and corresponding angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C012",
+        "concept": "Discontinuities in tan(nθ), cot(nθ), sec(nθ), csc(nθ)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C013",
+        "concept": "Angle congruence relations for equality of trigonometric values"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C014",
+        "concept": "Sine-based multiple-angle equalities: sin(mθ) = sin(nθ)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C015",
+        "concept": "Cosine-based multiple-angle equalities: cos(mθ) = cos(nθ)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C016",
+        "concept": "Tangent-based multiple-angle equalities: tan(mθ) = tan(nθ)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C017",
+        "concept": "Co-function equalities in multiple-angle equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C018",
+        "concept": "Phase-shifted multiple-angle equations f(nθ + φ) = k"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C019",
+        "concept": "Parity effects of the multiplier n on solution sets"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C020",
+        "concept": "Solution set parametrization and periodic indexing for multiple angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C021",
+        "concept": "Interval-restricted solution sets for multiple-angle equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C022",
+        "concept": "Period synchronization using LCM in multiple-angle conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C023",
+        "concept": "GCD-based spacing and alignment of multiple-angle solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C024",
+        "concept": "Principal and general solutions in multiple-angle equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C025",
+        "concept": "Multiple-angle identities for sine"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C026",
+        "concept": "Multiple-angle identities for cosine"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C027",
+        "concept": "Multiple-angle identities for tangent"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Multiple Angle Equations",
+        "concept_id": "C028",
+        "concept": "n-to-one angle mapping and solution multiplicity in multiple-angle equations"
+    }
+]

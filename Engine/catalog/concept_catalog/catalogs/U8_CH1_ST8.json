@@ -1,0 +1,194 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C001",
+        "concept": "Trigonometric Ratios (Sine, Cosine, Tangent, Cotangent, Secant, Cosecant)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C002",
+        "concept": "Reciprocal Relationships of Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C003",
+        "concept": "Quotient Identities of Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C004",
+        "concept": "Pythagorean Identities of Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C005",
+        "concept": "Sign Convention of Trigonometric Functions in Quadrants"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C006",
+        "concept": "Reference Angle and Quadrant Association"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C007",
+        "concept": "Allied Angle Identities (Quadrant Reduction)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C008",
+        "concept": "Cofunction Identities (Complementary Angles)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C009",
+        "concept": "Even–Odd Properties of Trigonometric Functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C010",
+        "concept": "Periodicity of Trigonometric Functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C011",
+        "concept": "Unit Circle Interpretation of Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C012",
+        "concept": "Trigonometric Ratios of Special Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C013",
+        "concept": "Domain and Points of Non-Definition of Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C014",
+        "concept": "Range of Basic Trigonometric Functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C015",
+        "concept": "Quadrant Determination from Given Trigonometric Information"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C016",
+        "concept": "Geometric Realization of a Given Trigonometric Ratio (Right-Triangle Model)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C017",
+        "concept": "Compound-Angle Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C018",
+        "concept": "Double-Angle Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C019",
+        "concept": "Half-Angle Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C020",
+        "concept": "Power-Reduction Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C021",
+        "concept": "Sum-to-Product and Product-to-Sum Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C022",
+        "concept": "Multiple-Angle Identities"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C023",
+        "concept": "Sign Selection after Square Root Extraction in Trigonometric Contexts"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Problems Based on Given Trigonometric Ratios",
+        "concept_id": "C024",
+        "concept": "Validity Conditions and Restrictions for Trigonometric Transformations"
+    }
+]

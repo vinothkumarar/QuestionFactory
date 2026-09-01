@@ -398,6 +398,19 @@ class GeneratedQuestionBuilder:
             )
         ).strip()
 
+        question.archetype_id = str(
+            data.get(
+                "archetype_id",
+                data.get(
+                    "metadata",
+                    {},
+                ).get(
+                    "archetype_id",
+                    "",
+                ),
+            ),
+        ).strip()
+
         question.archetype = str(
             data.get(
                 "archetype",

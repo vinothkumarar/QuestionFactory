@@ -1,0 +1,242 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C001",
+        "concept": "Definition of Linear Trigonometric Equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C002",
+        "concept": "Standard Forms of Linear Trigonometric Equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C003",
+        "concept": "Classification by Involved Trigonometric Functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C004",
+        "concept": "Domain Restrictions for Trigonometric Functions in Equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C005",
+        "concept": "Periodicity and General Solution Principle"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C006",
+        "concept": "Effect of Linear Argument Coefficient on Period"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C007",
+        "concept": "Phase Shift Effects on Solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C008",
+        "concept": "Range-Based Solvability Conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C009",
+        "concept": "General Solution of sin(ax + b) = k"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C010",
+        "concept": "General Solution of cos(ax + b) = k"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C011",
+        "concept": "General Solution of tan(ax + b) = k"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C012",
+        "concept": "General Solution of cot(ax + b) = k"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C013",
+        "concept": "General Solution of sec(ax + b) = k"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C014",
+        "concept": "General Solution of csc(ax + b) = k"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C015",
+        "concept": "Solutions on Restricted Intervals"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C016",
+        "concept": "Linear Combination A sin x + B cos x = C: Structure"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C017",
+        "concept": "Range of A sin x + B cos x"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C018",
+        "concept": "Solvability Conditions for A sin x + B cos x = C"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C019",
+        "concept": "Homogeneous Equation A sin x + B cos x = 0"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C020",
+        "concept": "Reciprocal Function Transformations in Equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C021",
+        "concept": "Cofunction Transformations within Linear Equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C022",
+        "concept": "Reduction to Linear Form in a Single Trigonometric Function"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C023",
+        "concept": "Algebraic Transformations and Solution Validity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C024",
+        "concept": "Identity and Contradiction Cases in Linear Trigonometric Equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C025",
+        "concept": "Simultaneous Linear Equations in sin x and cos x"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C026",
+        "concept": "Consistency with sin^2 x + cos^2 x = 1 in Linear Systems"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C027",
+        "concept": "Solution Representation Modulo Period"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C028",
+        "concept": "Solution Uniqueness under Periodicity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C029",
+        "concept": "Domain Exclusions for tan, cot, sec, csc"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Linear Trigonometric Equations",
+        "concept_id": "C030",
+        "concept": "Parameter-Dependent Solvability"
+    }
+]

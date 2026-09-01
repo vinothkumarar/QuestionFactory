@@ -1,0 +1,3502 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C001",
+        "concept": "Real Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Classify a matrix as a real matrix based on its entries"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C001",
+        "concept": "Real Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine parameter conditions under which a parametric matrix is a real matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C001",
+        "concept": "Real Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine whether addition or subtraction of matrices yields a real matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C001",
+        "concept": "Real Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Determine whether multiplication or taking powers of real matrices yields a real matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C001",
+        "concept": "Real Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine whether scalar multiplication or linear combinations yield a real matrix and identify conditions on scalar coefficients"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C001",
+        "concept": "Real Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine whether the transpose of a matrix is a real matrix and infer implications for real matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C001",
+        "concept": "Real Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Characterize real matrices using complex conjugation and relate conjugate transpose to transpose for real matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C001",
+        "concept": "Real Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine whether the inverse of a real matrix, when it exists, is a real matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C001",
+        "concept": "Real Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine whether a polynomial or rational expression in real matrices with real coefficients is a real matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C001",
+        "concept": "Real Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Infer that trace, determinant, minors, and cofactors of a real matrix are real numbers"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C001",
+        "concept": "Real Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Establish subset and superset relationships among integer, rational, real, and complex matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C001",
+        "concept": "Real Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Determine the number of independent real parameters required to specify an m×n real matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C001",
+        "concept": "Real Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Interpret and translate notation for sets of real matrices such as R^{m×n} and M_{m×n}(R)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Classify a matrix as real or complex based on its entries"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine the complex conjugate of a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine the conjugate transpose (adjoint) of a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Verify whether a matrix is Hermitian"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Verify whether a matrix is skew-Hermitian"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Verify whether a matrix is unitary"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Determine parameter conditions for a matrix to be Hermitian, skew-Hermitian, or unitary"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Decompose a complex matrix into Hermitian and skew-Hermitian components"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the effect of real or imaginary scalar multiplication on Hermitian and skew-Hermitian types"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Determine the resulting type of a sum or difference given operand types (Hermitian, skew-Hermitian, unitary)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Determine the resulting type under matrix product, inverse, or adjoint given operand types and commutativity constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Establish and apply algebraic identities for the adjoint, such as (AB)† = B†A† and (cA)† = c̄ A†"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Characterize unitarity via orthonormality of columns or rows"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP014",
+        "question_possibility": "Infer constraints on diagonal entries and trace for Hermitian and skew-Hermitian matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C002",
+        "concept": "Complex Matrix",
+        "qp_id": "QP015",
+        "question_possibility": "Relate real symmetric, skew-symmetric, and orthogonal matrices to Hermitian, skew-Hermitian, and unitary types"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C003",
+        "concept": "Row Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Identify a matrix as a row matrix from its order or arrangement"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C003",
+        "concept": "Row Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine order and indexing constraints for a row matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C003",
+        "concept": "Row Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine parameter conditions under which a matrix is a row matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C003",
+        "concept": "Row Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Construct a row matrix of specified order from given elements or pattern"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C003",
+        "concept": "Row Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Establish when a row matrix is also square or a column matrix based on order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C003",
+        "concept": "Row Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Infer order and entry correspondence of a matrix equal to a given row matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C003",
+        "concept": "Row Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Determine closure of row matrices under addition and scalar multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C004",
+        "concept": "Column Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Identify whether a given matrix is a column matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C004",
+        "concept": "Column Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Construct a column matrix from specified elements or a rule"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C004",
+        "concept": "Column Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Establish equality of two column matrices from their corresponding entries and order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C004",
+        "concept": "Column Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Determine and classify the transpose of a column matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C004",
+        "concept": "Column Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine whether an operation involving column matrices is defined (compatibility)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C004",
+        "concept": "Column Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine the resulting order or type of a defined matrix expression involving column matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C004",
+        "concept": "Column Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Determine parameter conditions for a matrix to be a column matrix in terms of its order variables"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C004",
+        "concept": "Column Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine the condition under which a column matrix is square"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C004",
+        "concept": "Column Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Form the column matrix corresponding to a specified column of a given matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C004",
+        "concept": "Column Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Relate the order and the number of elements for a column matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C005",
+        "concept": "Rectangular Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Classify a matrix as rectangular based on its order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C005",
+        "concept": "Rectangular Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Identify whether a rectangular matrix is a row matrix or a column matrix from its order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C005",
+        "concept": "Rectangular Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine possible orders of a rectangular matrix from constraints on size or relations between rows and columns"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C005",
+        "concept": "Rectangular Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Determine definedness and resulting order/type of addition or subtraction involving rectangular matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C005",
+        "concept": "Rectangular Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine definedness and resulting order/type of matrix products involving at least one rectangular matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C005",
+        "concept": "Rectangular Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine feasibility of self-operations or relations of a rectangular matrix with its transpose (equality, sum/difference, powers) using order compatibility"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C005",
+        "concept": "Rectangular Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Assess applicability of square-matrix-only properties or types to a rectangular matrix (determinant, trace, adjoint, inverse, eigenvalues, symmetric/skew-symmetric, triangular, diagonal, orthogonal, idempotent, involutory)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C005",
+        "concept": "Rectangular Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine the effect of transpose on the order and type of a rectangular matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C005",
+        "concept": "Rectangular Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Infer rectangularity or squareness of a matrix from the definedness or outcomes of given operations or properties"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C005",
+        "concept": "Rectangular Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Determine the orders of identity matrices that can multiply with a given rectangular matrix on the left or right without changing it"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C006",
+        "concept": "Square Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Classify a matrix as square and state its order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C006",
+        "concept": "Square Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine parameter conditions under which a matrix is square"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C006",
+        "concept": "Square Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine whether a matrix expression yields a square matrix and identify its order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C006",
+        "concept": "Square Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Decide applicability of square-only constructs (determinant, trace, inverse, eigenvalues, characteristic polynomial) for a given matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C006",
+        "concept": "Square Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Identify the principal or secondary diagonal of a square matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C006",
+        "concept": "Square Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine counts of total, diagonal, off-diagonal, above-diagonal, and below-diagonal entries in an n×n matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C006",
+        "concept": "Square Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Establish closure of n×n matrices under addition, scalar multiplication, transpose, multiplication, and integer powers"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C006",
+        "concept": "Square Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Infer that a matrix must be square from given information invoking square-only notions or operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C006",
+        "concept": "Square Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine conditions on block sizes for a partitioned matrix to be square"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a given matrix is the zero matrix (all entries zero)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine parameter conditions for a matrix to be the zero matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine the order of the zero matrix required for addition or subtraction with a given matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Simplify matrix expressions using the additive identity property of the zero matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine products involving the zero matrix (left or right) and the order of the resulting zero matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Assess whether AB = zero matrix forces A or B to be the zero matrix (zero-product implication)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Infer matrix zero-ness from scalar multiplication statements such as cA = zero matrix and evaluate c·zero matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine the transpose of a zero matrix and its order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Classify the zero matrix among standard types (symmetric, skew-symmetric, diagonal, scalar, triangular)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Evaluate determinant and trace of a zero matrix (square case)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Evaluate integer powers of a zero matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Determine the invertibility status of the zero matrix (existence or non-existence of inverse)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Establish the uniqueness of the zero matrix for a given order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C007",
+        "concept": "Zero Matrix",
+        "qp_id": "QP014",
+        "question_possibility": "Establish matrix equality via zero difference (A − B equals zero matrix if and only if A equals B)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C008",
+        "concept": "Diagonal Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a given matrix is diagonal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C008",
+        "concept": "Diagonal Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine parameter conditions under which a matrix becomes diagonal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C008",
+        "concept": "Diagonal Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine singularity or nonsingularity of a diagonal matrix from its diagonal entries"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C008",
+        "concept": "Diagonal Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Determine the inverse of a diagonal matrix when it exists"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C008",
+        "concept": "Diagonal Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Establish closure and commutativity properties of diagonal matrices under standard operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C008",
+        "concept": "Diagonal Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Evaluate powers or polynomial expressions in a diagonal matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C008",
+        "concept": "Diagonal Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Determine the effect of left or right multiplication by a diagonal matrix on another matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C008",
+        "concept": "Diagonal Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine conditions on diagonal entries for a diagonal matrix to satisfy a given matrix equation (e.g., D^2=D, D^k=I, D^m=0)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C008",
+        "concept": "Diagonal Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine conditions under which a diagonal matrix commutes with every matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Identify whether a given square matrix is a scalar matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Distinguish scalar matrices from diagonal and identity matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine parameter conditions under which a given matrix is a scalar matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Construct a scalar matrix of specified order with a given scalar entry"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Establish equivalent characterizations of scalar matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine the result of adding or multiplying scalar matrices and the resulting scalar"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Determine the effect of multiplying an arbitrary matrix by a scalar matrix (uniform scaling and commutation)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine existence and form of the inverse of a scalar matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine integer powers (including negative, when defined) of a scalar matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Determine the adjugate of a scalar matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Compute the determinant and trace of a scalar matrix in terms of its order and scalar"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Determine the rank, nullity, and singularity condition of a scalar matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Determine parameter conditions for a scalar matrix to satisfy a specified standard property (identity, zero, idempotent, nilpotent, involutory, symmetric, skew-symmetric, orthogonal)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP014",
+        "question_possibility": "Infer the scalar value from given information about a scalar matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP015",
+        "question_possibility": "Count scalar matrices of a given order under specified entry constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP016",
+        "question_possibility": "Determine existence or uniqueness of a scalar matrix satisfying given constraints or matrix equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C009",
+        "concept": "Scalar Matrix",
+        "qp_id": "QP017",
+        "question_possibility": "Evaluate a polynomial in a scalar matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C010",
+        "concept": "Identity Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Identify whether a matrix is the identity matrix of a stated order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C010",
+        "concept": "Identity Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Construct the identity matrix of a specified order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C010",
+        "concept": "Identity Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine the appropriate identity matrices and order compatibility in products with a given matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C010",
+        "concept": "Identity Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Simplify matrix expressions using identity matrix properties"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C010",
+        "concept": "Identity Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine determinant, trace, and rank of an identity matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C010",
+        "concept": "Identity Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Classify the identity matrix among standard matrix types and properties"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C010",
+        "concept": "Identity Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Establish existence conditions and uniqueness of the identity matrix for a given order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C010",
+        "concept": "Identity Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine an unknown matrix that acts as a left or right identity under given constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C010",
+        "concept": "Identity Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Establish that a matrix equals the identity from given algebraic conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C010",
+        "concept": "Identity Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Determine spectral characteristics of the identity matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C010",
+        "concept": "Identity Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Determine the transpose, inverse, and powers of the identity matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C011",
+        "concept": "Upper Triangular Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Identify whether a matrix is upper triangular"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C011",
+        "concept": "Upper Triangular Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine parameter conditions for a matrix to be upper triangular"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C011",
+        "concept": "Upper Triangular Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Classify relationships among upper triangular, diagonal, scalar, and identity matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C011",
+        "concept": "Upper Triangular Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Establish closure of upper triangular matrices under addition and scalar multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C011",
+        "concept": "Upper Triangular Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Establish preservation of upper triangularity under matrix multiplication, powers, and polynomials"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C011",
+        "concept": "Upper Triangular Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Relate upper triangularity under transpose and deduce diagonal condition when both upper and lower triangular"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C011",
+        "concept": "Upper Triangular Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Determine invertibility conditions for an upper triangular matrix and the triangularity of its inverse"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C011",
+        "concept": "Upper Triangular Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Establish nilpotency and power bounds for strictly upper triangular matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C011",
+        "concept": "Upper Triangular Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the number of independent entries in an n×n upper triangular matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C011",
+        "concept": "Upper Triangular Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Determine which elementary row or column operations preserve upper triangular structure"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C011",
+        "concept": "Upper Triangular Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Determine diagonal entries of products or powers of upper triangular matrices from factor diagonals"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C012",
+        "concept": "Lower Triangular Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Identify whether a given matrix is lower triangular from its entry pattern"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C012",
+        "concept": "Lower Triangular Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine whether a matrix is strictly lower triangular or unit lower triangular based on diagonal entries"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C012",
+        "concept": "Lower Triangular Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine the number of independent parameters and the number of forced zeros in an n×n lower triangular matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C012",
+        "concept": "Lower Triangular Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Determine whether the class of lower triangular matrices is closed under addition and scalar multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C012",
+        "concept": "Lower Triangular Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine whether the product of two (or more) lower triangular matrices is lower triangular"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C012",
+        "concept": "Lower Triangular Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine the relationship between a lower triangular matrix and its transpose (upper triangularity)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C012",
+        "concept": "Lower Triangular Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Infer diagonality when a matrix is both lower and upper triangular or when it is lower triangular and symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C012",
+        "concept": "Lower Triangular Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine whether powers of a lower triangular matrix remain lower triangular"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C012",
+        "concept": "Lower Triangular Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine diagonal entries of the product or powers of lower triangular matrices from their diagonal entries"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C012",
+        "concept": "Lower Triangular Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Determine parameter constraints on a symbolic matrix so that it becomes lower triangular"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C012",
+        "concept": "Lower Triangular Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Determine whether the inverse of a nonsingular lower triangular matrix is lower triangular"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C012",
+        "concept": "Lower Triangular Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Determine invertibility conditions for a lower triangular matrix in terms of its diagonal entries"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C012",
+        "concept": "Lower Triangular Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Establish nilpotency and an order bound for strictly lower triangular matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a given square matrix is symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine parameter conditions for a matrix to be symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine the number of independent entries in an n×n symmetric matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Obtain the symmetric component of a square matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Decompose a square matrix into symmetric and skew-symmetric parts"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Establish uniqueness of the symmetric–skew-symmetric decomposition of a square matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Determine whether a linear combination of given matrices is symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine conditions under which the product of matrices is symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine whether powers or polynomials in a symmetric matrix are symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Determine whether the inverse of a symmetric invertible matrix is symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Determine whether the adjugate of a symmetric matrix is symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Identify which expressions formed from a matrix and its transpose are symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Determine whether congruence transforms of a symmetric matrix are symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP014",
+        "question_possibility": "Determine symmetry of a matrix defined by an entry-wise rule a_ij = f(i, j)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP015",
+        "question_possibility": "Determine conditions for a block-partitioned matrix to be symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP016",
+        "question_possibility": "Infer structural constraints for a symmetric triangular matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP017",
+        "question_possibility": "Determine consequences of a matrix being both symmetric and skew-symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP018",
+        "question_possibility": "Infer symmetry of an unknown matrix from given relations involving the transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C013",
+        "concept": "Symmetric Matrix",
+        "qp_id": "QP019",
+        "question_possibility": "Count symmetric matrices of a given order under specified entry constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C014",
+        "concept": "Skew-Symmetric Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Classify a matrix as skew-symmetric or not"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C014",
+        "concept": "Skew-Symmetric Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine parameter conditions or missing entries for a matrix to be skew-symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C014",
+        "concept": "Skew-Symmetric Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Obtain the skew-symmetric part of a matrix and perform symmetric–skew-symmetric decomposition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C014",
+        "concept": "Skew-Symmetric Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Infer diagonal and trace properties of a skew-symmetric matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C014",
+        "concept": "Skew-Symmetric Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Describe the general element-wise form of an n×n skew-symmetric matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C014",
+        "concept": "Skew-Symmetric Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine the number of independent parameters of an n×n skew-symmetric matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C014",
+        "concept": "Skew-Symmetric Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Establish closure and invariance of skew-symmetric matrices under addition, subtraction, scalar multiplication, transpose, and negation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C014",
+        "concept": "Skew-Symmetric Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Classify the symmetry type of powers or polynomials in a skew-symmetric matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C014",
+        "concept": "Skew-Symmetric Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine when products, commutators, or anticommutators involving symmetric and/or skew-symmetric matrices are skew-symmetric or symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C014",
+        "concept": "Skew-Symmetric Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Determine singularity or invertibility conditions of skew-symmetric matrices based on order parity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C014",
+        "concept": "Skew-Symmetric Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Determine the type of the inverse of a skew-symmetric matrix when it exists"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C014",
+        "concept": "Skew-Symmetric Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Characterize matrices that are both symmetric and skew-symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C014",
+        "concept": "Skew-Symmetric Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Count skew-symmetric matrices of given order under discrete entry constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a given square real matrix is orthogonal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine parameter conditions that make a matrix orthogonal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Complete a partially specified matrix so that it becomes orthogonal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Determine the inverse or transpose of an orthogonal matrix using the relation Q^{-1} = Q^T"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine determinant-related properties of an orthogonal matrix, including possible values and orientation classification"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine preservation of orthogonality under specified matrix operations such as product, transpose, inverse, and powers"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Establish equivalence between characterizations of orthogonality, such as Q^T Q = I and orthonormal rows or columns"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine entry-wise and aggregate constraints implied by orthogonality, including unit column norms, zero cross-dot products, total squared-sum equals matrix order, and bounds on entries"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Characterize orthogonality within special matrix families such as diagonal matrices, permutation or sign-change matrices, and block-diagonal matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Determine conditions on a scalar multiple of a matrix for it to be orthogonal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Determine which row or column permutations and sign changes preserve orthogonality"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Determine structural necessities and feasibility for orthogonality, including squareness, non-singularity, and rank"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Establish metric-preserving properties of orthogonal matrices, such as preservation of vector lengths, dot products, and angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP014",
+        "question_possibility": "Determine implications when a matrix is both orthogonal and another special type, such as symmetric or skew-symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C015",
+        "concept": "Orthogonal Matrix",
+        "qp_id": "QP015",
+        "question_possibility": "Determine the number of independent parameters or constraints in an n×n orthogonal matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C016",
+        "concept": "Singular Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Classify a square matrix as singular or non-singular"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C016",
+        "concept": "Singular Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine parameter conditions for a square matrix or matrix expression to be singular"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C016",
+        "concept": "Singular Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Analyze singularity behavior under matrix multiplication, scalar multiplication, and powers"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C016",
+        "concept": "Singular Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Determine preservation of singularity under transpose, similarity transformations, and elementary row or column operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C016",
+        "concept": "Singular Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Establish or use equivalent characterizations of a singular matrix (determinant zero, no inverse, rank deficiency, row or column dependence)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C016",
+        "concept": "Singular Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine singularity relations between a matrix and its adjugate"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C017",
+        "concept": "Non-Singular Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a given square matrix is non-singular"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C017",
+        "concept": "Non-Singular Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine parameter conditions under which a square matrix is non-singular"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C017",
+        "concept": "Non-Singular Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Recognize equivalent characterizations of non-singularity (non-zero determinant, existence of inverse, full rank)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C017",
+        "concept": "Non-Singular Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Infer non-singularity of matrices derived from a non-singular matrix (transpose, powers, scalar multiples, adjoint)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C017",
+        "concept": "Non-Singular Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Infer non-singularity relationships for matrix products and factors (A, B, AB)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C017",
+        "concept": "Non-Singular Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine existence and uniqueness of solutions to Ax=b using non-singularity of the coefficient matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C017",
+        "concept": "Non-Singular Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Assess preservation of non-singularity under specified elementary row or column operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C017",
+        "concept": "Non-Singular Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Classify given conditions as necessary, sufficient, or equivalent for non-singularity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C017",
+        "concept": "Non-Singular Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Count the number of non-singular matrices under specified discrete entry constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C017",
+        "concept": "Non-Singular Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Determine feasibility or construct an example of a non-singular matrix satisfying given constraints"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C018",
+        "concept": "Idempotent Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a given square matrix is idempotent"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C018",
+        "concept": "Idempotent Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine parameter conditions under which a matrix is idempotent"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C018",
+        "concept": "Idempotent Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Simplify or evaluate powers and polynomial expressions in an idempotent matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C018",
+        "concept": "Idempotent Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Determine the possible eigenvalues and their multiplicities for an idempotent matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C018",
+        "concept": "Idempotent Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine diagonalizability and canonical similarity form of an idempotent matrix; classify idempotents up to similarity by rank"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C018",
+        "concept": "Idempotent Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine and relate rank, trace, nullity, and determinant for an idempotent matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C018",
+        "concept": "Idempotent Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Determine properties of the complementary matrix I − A when A is idempotent, including idempotence and rank relations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C018",
+        "concept": "Idempotent Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine when algebraic combinations of idempotent matrices (sum, product, scalar multiple, linear combination) are idempotent"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C018",
+        "concept": "Idempotent Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine invertibility conditions for an idempotent matrix and for matrices of the form I ± αA; compute inverses when they exist"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C018",
+        "concept": "Idempotent Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Determine minimal and characteristic polynomial constraints for an idempotent matrix and infer one from the other"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C018",
+        "concept": "Idempotent Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Determine existence of nontrivial idempotent matrices of a given order satisfying specified invariants (rank, trace, determinant) or spectrum"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C018",
+        "concept": "Idempotent Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Determine similarity or non-similarity of two idempotent matrices using invariants such as rank or trace"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C018",
+        "concept": "Idempotent Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Characterize idempotent matrices within structured classes (e.g., diagonal, triangular, symmetric/orthogonal projector cases)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a given square matrix is nilpotent"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine the index of nilpotency of a nilpotent matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine conditions on parameters for a matrix to be nilpotent"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Infer eigenvalues, determinant and trace of a nilpotent matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine characteristic polynomial constraints for a nilpotent matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Evaluate polynomial expressions in a nilpotent matrix using nilpotency"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Establish invertibility and obtain (I ± N)^{-1} for a nilpotent matrix N"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Establish invariance of nilpotency and its index under similarity transformations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Establish nilpotency for strictly upper/lower triangular matrices and non-nilpotency for nonzero diagonal matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Bound or determine the index of nilpotency from matrix size or bandwidth"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Infer rank and nullity constraints for a nilpotent matrix and for its powers"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Determine nilpotency and index bounds for block triangular matrices from their diagonal blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Assess preservation or failure of nilpotency under operations such as scalar multiples, powers, sums or products with commutation conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP014",
+        "question_possibility": "Establish existence of nilpotent matrices with prescribed size and index"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C019",
+        "concept": "Nilpotent Matrix",
+        "qp_id": "QP015",
+        "question_possibility": "Decide nilpotency or invertibility of p(N) for a polynomial p based on its constant term"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C020",
+        "concept": "Involutory Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a given matrix is involutory"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C020",
+        "concept": "Involutory Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine parameter conditions for a matrix to be involutory"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C020",
+        "concept": "Involutory Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine the inverse of an involutory matrix and related invertibility consequences"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C020",
+        "concept": "Involutory Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Evaluate powers and reduce polynomials in an involutory matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C020",
+        "concept": "Involutory Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine eigenvalues and multiplicity structure of an involutory matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C020",
+        "concept": "Involutory Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine determinant and trace constraints of an involutory matrix and infer values from given data"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C020",
+        "concept": "Involutory Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Diagonalize or classify an involutory matrix up to similarity into blocks of I and −I"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C020",
+        "concept": "Involutory Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Establish and use the projector decomposition (I±A)/2 for an involutory matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C020",
+        "concept": "Involutory Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine rank and nullity of I±A for an involutory matrix and relate them to eigenspace dimensions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C020",
+        "concept": "Involutory Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Determine the minimal polynomial and characterize the characteristic polynomial constraints of an involutory matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C020",
+        "concept": "Involutory Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Determine conditions under which the product of matrices is involutory"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C020",
+        "concept": "Involutory Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Determine invertibility and compute the inverse of linear combinations αI+βA for an involutory A"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C020",
+        "concept": "Involutory Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Determine feasibility or constructibility of an involutory matrix with specified order and invariants such as trace or determinant"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Identify whether a given square matrix is a permutation matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Construct the permutation matrix corresponding to a specified permutation of indices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Recover the underlying permutation (mapping or cycle form) from a given permutation matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Count the number of n×n permutation matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine the determinant and parity (even or odd) of a permutation matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine the inverse of a permutation matrix and verify P^T P = I"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Determine the row or column reordering induced by left or right multiplication by a permutation matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine the product of permutation matrices as the composition of the corresponding permutations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the order of a permutation matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Compute a power P^k of a permutation matrix or determine its periodicity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Determine the number of fixed points of the permutation from the trace of its permutation matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Determine conditions under which a permutation matrix is symmetric (P = P^T)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Determine the determinant scaling of a matrix under row or column permutations via permutation matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP014",
+        "question_possibility": "Determine a permutation matrix P that achieves a specified simultaneous row and column permutation via conjugation PAP^{-1}"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP015",
+        "question_possibility": "Determine whether two permutation matrices commute using properties of their underlying permutations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP016",
+        "question_possibility": "Determine the rank of a permutation matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C021",
+        "concept": "Permutation Matrix",
+        "qp_id": "QP017",
+        "question_possibility": "Establish that n×n permutation matrices form a group under multiplication and identify its isomorphism with the symmetric group"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Identify whether a given square matrix is an elementary matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Classify the type and parameters of the elementary operation encoded by a given elementary matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Construct the elementary matrix corresponding to a specified elementary row or column operation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Predict the effect of left or right multiplication by a specified elementary matrix on a matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine the inverse of a given elementary matrix and the corresponding inverse operation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine the determinant of a given elementary matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Determine whether a given square matrix can be expressed as a product of elementary matrices and obtain such a factorization when possible"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine whether two matrices are row-equivalent or column-equivalent via a finite product of elementary matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the minimal number of elementary row or column operations needed to achieve a specified matrix transformation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Determine whether the product of specified elementary matrices is itself an elementary matrix and analyze closure under multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Determine whether two specified elementary matrices commute and establish commutativity conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Determine whether the elementary matrix implementing a specified row or column operation is unique"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Determine whether a specified single-step matrix transformation can be achieved by one elementary row or column operation and identify the operation when possible"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C022",
+        "concept": "Elementary Matrix",
+        "qp_id": "QP014",
+        "question_possibility": "Determine the combined effect on a matrix of pre- and post-multiplication by specified elementary matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C023",
+        "concept": "Hermitian Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a given complex square matrix is Hermitian"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C023",
+        "concept": "Hermitian Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine constraints on entries or parameters required for a matrix to be Hermitian"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C023",
+        "concept": "Hermitian Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Decompose a complex square matrix uniquely into Hermitian and skew-Hermitian parts"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C023",
+        "concept": "Hermitian Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Determine closure and vector-space behavior of Hermitian matrices under addition and real scalar multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C023",
+        "concept": "Hermitian Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine Hermitian status of powers and real polynomials in a Hermitian matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C023",
+        "concept": "Hermitian Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine conditions under which a product AB is Hermitian given properties of A and B"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C023",
+        "concept": "Hermitian Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Determine whether the inverse or adjugate of a Hermitian matrix is Hermitian when defined"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C023",
+        "concept": "Hermitian Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Infer real-valued scalar invariants such as trace and determinant for a Hermitian matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C023",
+        "concept": "Hermitian Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the Hermitian nature of matrices of the form A*A and AA* for arbitrary complex A"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C023",
+        "concept": "Hermitian Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Determine preservation of Hermitian property under congruence transformations P*AP"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C023",
+        "concept": "Hermitian Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Relate Hermitian matrices to symmetric matrices over reals and to skew-Hermitian matrices via multiplication by i"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C023",
+        "concept": "Hermitian Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Characterize Hermitian matrices using the condition that x*Ax is real for all complex vectors x"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C023",
+        "concept": "Hermitian Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Determine the number of independent real parameters of n×n Hermitian matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a given matrix is skew-Hermitian"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine conditions or unknown entries for a matrix to be skew-Hermitian"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Decompose a matrix into Hermitian and skew-Hermitian parts"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Infer constraints on diagonal entries and trace of a skew-Hermitian matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine constraints on the determinant of a skew-Hermitian matrix with respect to matrix order"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine preservation of the skew-Hermitian property under linear combinations and identify scalar conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Determine the Hermitian or skew-Hermitian nature of powers or polynomials of a skew-Hermitian matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Relate skew-Hermitian and skew-symmetric matrices in the real case"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the condition for a matrix to be both Hermitian and skew-Hermitian"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Infer constraints on eigenvalues of a skew-Hermitian matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Infer the nature of the scalar x*Ax when A is skew-Hermitian"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Classify AB ± BA as Hermitian or skew-Hermitian given the types of A and B"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Determine the number of independent real parameters in an n×n skew-Hermitian matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C024",
+        "concept": "Skew-Hermitian Matrix",
+        "qp_id": "QP014",
+        "question_possibility": "Determine the type of the inverse of a skew-Hermitian matrix when it exists"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Determine whether a square complex matrix is unitary"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine parameter conditions for a matrix to be unitary"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Determine the inverse of a unitary matrix via its conjugate transpose"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Establish equivalence among standard characterizations of unitarity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine preservation of unitarity under specified matrix operations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine scalar conditions under which a scalar multiple of a unitary matrix is unitary"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Determine determinant constraints of unitary matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine invertibility and rank properties of unitary matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Characterize diagonal unitary matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Characterize triangular unitary matrices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Determine unitarity of block-diagonal matrices from the unitarity of their blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Distinguish unitary and orthogonal matrices and relate the real case equivalence"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Formulate entrywise orthonormality conditions equivalent to unitarity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C025",
+        "concept": "Unitary Matrix",
+        "qp_id": "QP014",
+        "question_possibility": "Establish norm-preservation by unitary matrices for vectors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Recognize or verify block diagonal structure for a stated partition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine admissible block partitions for a given square matrix size"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Construct a block diagonal matrix from specified square blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Extract the diagonal blocks from a block diagonal matrix for a given partition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Determine the determinant of a block diagonal matrix from determinants of its blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine the trace of a block diagonal matrix from traces of its blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Determine the rank of a block diagonal matrix from ranks of its blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Determine invertibility of a block diagonal matrix from invertibility of its blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the inverse of a block diagonal matrix via inverses of its blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Evaluate a polynomial in a block diagonal matrix (including powers) blockwise"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Determine the transpose of a block diagonal matrix in terms of block transposes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Determine conditions under which linear combinations of block diagonal matrices remain block diagonal"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Compute the product of block diagonal matrices with a common partition via blockwise multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP014",
+        "question_possibility": "Determine when a block diagonal matrix reduces to a diagonal matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP015",
+        "question_possibility": "Determine upper or lower triangularity of a block diagonal matrix from triangularity of its blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP016",
+        "question_possibility": "Decompose a linear system with a block diagonal coefficient matrix into independent subsystems"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP017",
+        "question_possibility": "Determine the number of structurally forced zero entries from a given block partition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP018",
+        "question_possibility": "Determine the number of independent parameters in the set of block diagonal matrices for a given partition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP019",
+        "question_possibility": "Identify which elementary row or column operations preserve block diagonal structure"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C026",
+        "concept": "Block Diagonal Matrix",
+        "qp_id": "QP020",
+        "question_possibility": "Distinguish block diagonal matrices from block triangular matrices by zero-pattern criteria"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP001",
+        "question_possibility": "Determine a valid block partition of a matrix for specified block sizes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP002",
+        "question_possibility": "Determine conformability for block-wise addition/subtraction and identify resulting block dimensions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP003",
+        "question_possibility": "Compute block-wise addition/subtraction/scalar multiplication"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP004",
+        "question_possibility": "Determine conformability for block matrix multiplication and the dimensions of product blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP005",
+        "question_possibility": "Express the blocks of a product matrix in terms of the factor blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP006",
+        "question_possibility": "Determine the transpose of a partitioned matrix in terms of transposed blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP007",
+        "question_possibility": "Classify a partitioned matrix by block structure (block diagonal/upper/lower/banded)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP008",
+        "question_possibility": "Evaluate the determinant of a block diagonal or block triangular matrix from diagonal blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP009",
+        "question_possibility": "Determine the inverse of a block diagonal matrix from inverses of diagonal blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP010",
+        "question_possibility": "Evaluate powers of a block diagonal matrix via powers of its diagonal blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP011",
+        "question_possibility": "Determine block conditions for a partitioned matrix to be symmetric or skew-symmetric"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP012",
+        "question_possibility": "Determine unknown block matrices from a given block equation consistent with a partition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP013",
+        "question_possibility": "Determine conditions and formula to invert a 2×2 block matrix using Schur complements or special structures"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP014",
+        "question_possibility": "Evaluate the trace of a block diagonal or block triangular matrix from traces of diagonal blocks"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Matrices",
+        "subtopic": "Types of Matrices",
+        "concept_id": "C027",
+        "concept": "Partitioned (Block) Matrix",
+        "qp_id": "QP015",
+        "question_possibility": "Determine whether the product of block triangular matrices preserves block triangular structure and identify its diagonal blocks"
+    }
+]

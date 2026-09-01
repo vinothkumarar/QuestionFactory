@@ -16,15 +16,6 @@ from Engine.catalog.qp_catalog.qp_catalog_csv_exporter import (
 )
 
 
-def safe_name(text: str) -> str:
-    return (
-        text.replace("/", "_")
-        .replace("\\", "_")
-        .replace(" ", "_")
-        .replace(":", "_")
-    )
-
-
 def main() -> None:
 
     concept_dir = (
@@ -36,7 +27,7 @@ def main() -> None:
     concept_files = sorted(
         concept_dir.glob("*.json")
     )
-    
+
     total = len(concept_files)
 
     output_dir = (
@@ -51,22 +42,18 @@ def main() -> None:
 
     generator = QPCatalogGenerator()
     client = QPCatalogAIClient()
-    csv_exporter = (
-        QPCatalogCSVExporter()
-    )
-
-        
+    csv_exporter = QPCatalogCSVExporter()
 
     for index, concept_file in enumerate(
         concept_files,
         start=1,
     ):
+
         concepts = json.loads(
             concept_file.read_text(
                 encoding="utf-8"
             )
         )
-        all_qps = []
 
         if not concepts:
             continue
@@ -83,23 +70,81 @@ def main() -> None:
             / f"{file_base}.csv"
         )
 
+        # -----------------------------------------------------
+        # Load existing progress for this ST
+        # -----------------------------------------------------
+
+        all_qps: list[dict] = []
+
         if json_file.exists():
 
-            print(
-                f"[{index}/{total}] "
-                f"Skipping: {file_base}"
-            )
+            try:
+                existing_data = json.loads(
+                    json_file.read_text(
+                        encoding="utf-8"
+                    )
+                )
 
-            continue
+                if isinstance(
+                    existing_data,
+                    list,
+                ):
+                    all_qps = existing_data
+
+            except json.JSONDecodeError:
+
+                print(
+                    f"WARNING: Could not read "
+                    f"{json_file.name}. "
+                    f"Starting with empty QP catalog."
+                )
+
+                all_qps = []
+
+        # -----------------------------------------------------
+        # Determine concepts already completed
+        # -----------------------------------------------------
+
+        completed_concept_ids = {
+            str(row.get("concept_id", "")).strip()
+            for row in all_qps
+            if row.get("concept_id")
+        }
 
         first_row = concepts[0]
 
+        print()
         print(
-            f"[{index}/{total}] Generating: "
+            "=" * 80
+        )
+
+        print(
+            f"[{index}/{total}] "
+            f"{file_base}"
+        )
+
+        print(
             f"{first_row['unit']} | "
             f"{first_row['chapter']} | "
             f"{first_row['subtopic']}"
         )
+
+        print(
+            f"Existing QPs: {len(all_qps)}"
+        )
+
+        print(
+            f"Completed concepts: "
+            f"{len(completed_concept_ids)}"
+        )
+
+        print(
+            "=" * 80
+        )
+
+        # -----------------------------------------------------
+        # Process concepts one by one
+        # -----------------------------------------------------
 
         for concept_row in concepts:
 
@@ -108,8 +153,34 @@ def main() -> None:
             chapter = concept_row["chapter"]
             subtopic = concept_row["subtopic"]
 
-            concept_id = concept_row["concept_id"]
+            concept_id = str(
+                concept_row["concept_id"]
+            ).strip()
+
             concept = concept_row["concept"]
+
+            # -------------------------------------------------
+            # Resume check
+            # -------------------------------------------------
+
+            if concept_id in completed_concept_ids:
+
+                print(
+                    f"SKIP {concept_id} | "
+                    f"already persisted"
+                )
+
+                continue
+
+            # -------------------------------------------------
+            # Generate QPs
+            # -------------------------------------------------
+
+            print()
+            print(
+                f"START {concept_id} | "
+                f"{concept}"
+            )
 
             prompt = generator.load_prompt(
                 subject=subject,
@@ -120,43 +191,95 @@ def main() -> None:
                 concept=concept,
             )
 
-            print(
-                f"START {concept_id} | {concept}"
-            )
-
             result = client.generate_json(
                 prompt
             )
 
-            print(
-                f"DONE {concept_id}"
-            )
+            # -------------------------------------------------
+            # Validate basic response
+            # -------------------------------------------------
+
+            if not isinstance(
+                result,
+                list,
+            ):
+
+                raise ValueError(
+                    f"QP generation for "
+                    f"{concept_id} did not return "
+                    f"a list."
+                )
+
+            # -------------------------------------------------
+            # Add generated QPs
+            # -------------------------------------------------
 
             all_qps.extend(result)
 
-        
+            completed_concept_ids.add(
+                concept_id
+            )
 
-        json_file.write_text(
-            json.dumps(
-                all_qps,
-                indent=4,
-                ensure_ascii=False,
-            ),
-            encoding="utf-8",
-        )
+            print(
+                f"DONE {concept_id} | "
+                f"Generated QPs: {len(result)}"
+            )
 
-        csv_exporter.export(
-            json_file=json_file,
-            csv_file=csv_file,
+            # -------------------------------------------------
+            # Persist immediately
+            # -------------------------------------------------
+
+            json_file.write_text(
+                json.dumps(
+                    all_qps,
+                    indent=4,
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+
+            csv_exporter.export(
+                json_file=json_file,
+                csv_file=csv_file,
+            )
+
+            print(
+                f"SAVED {file_base} | "
+                f"Total QPs: {len(all_qps)}"
+            )
+
+            print(
+                f"JSON: {json_file}"
+            )
+
+            print(
+                f"CSV:  {csv_file}"
+            )
+
+        # -----------------------------------------------------
+        # ST summary
+        # -----------------------------------------------------
+
+        print()
+        print(
+            f"COMPLETED ST: {file_base}"
         )
 
         print(
-            f"Created: "
-            f"{csv_file.name}"
+            f"Total QPs: {len(all_qps)}"
         )
 
+        print(
+            f"JSON: {json_file}"
+        )
+
+        print(
+            f"CSV:  {csv_file}"
+        )
+
+    print()
     print(
-        "\nQP catalog generation complete."
+        "QP catalog generation complete."
     )
 
 

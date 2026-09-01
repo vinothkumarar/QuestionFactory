@@ -1,0 +1,146 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C001",
+        "concept": "Definition and canonical forms of quadratic trigonometric equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C002",
+        "concept": "Single-function quadratic forms in primary trigonometric functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C003",
+        "concept": "Single-function quadratic forms in reciprocal trigonometric functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C004",
+        "concept": "Range constraints for trigonometric substitution variables"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C005",
+        "concept": "Domain restrictions and excluded angles in quadratic trigonometric equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C006",
+        "concept": "Root-existence conditions relative to admissible trigonometric ranges"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C007",
+        "concept": "Solution-set parametrization for equations derived from quadratic trigonometric forms"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C008",
+        "concept": "Quadratic equations in trigonometric functions of linear arguments (ax + b)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C009",
+        "concept": "Quadratic equations in linear combinations of trigonometric functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C010",
+        "concept": "Equivalent reductions between tangent–secant and cotangent–cosecant quadratic forms"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C011",
+        "concept": "Periodicity considerations in compiling complete solution sets for quadratic trigonometric equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C012",
+        "concept": "Degenerate cases in quadratic trigonometric equations: identities and contradictions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C013",
+        "concept": "Parameter-dependent solvability in quadratic trigonometric equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C014",
+        "concept": "Boundary-value scenarios at extremal trigonometric values and zeros"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C015",
+        "concept": "Validity checks and elimination of inadmissible solutions in quadratic trigonometric equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C016",
+        "concept": "Mapping between algebraic quadratic roots and trigonometric solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C017",
+        "concept": "Symmetry properties and parity considerations in quadratic trigonometric equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Quadratic Trigonometric Equations",
+        "concept_id": "C018",
+        "concept": "Interval-restricted solution sets for quadratic trigonometric equations"
+    }
+]

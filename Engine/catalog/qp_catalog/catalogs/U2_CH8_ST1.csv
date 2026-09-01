@@ -1,0 +1,351 @@
+subject,unit,chapter,subtopic,concept_id,concept,qp_id,question_possibility
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix,QP001,Classify a matrix as a real matrix based on its entries
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix,QP002,Determine parameter conditions under which a parametric matrix is a real matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix,QP003,Determine whether addition or subtraction of matrices yields a real matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix,QP004,Determine whether multiplication or taking powers of real matrices yields a real matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix,QP005,Determine whether scalar multiplication or linear combinations yield a real matrix and identify conditions on scalar coefficients
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix,QP006,Determine whether the transpose of a matrix is a real matrix and infer implications for real matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix,QP007,Characterize real matrices using complex conjugation and relate conjugate transpose to transpose for real matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix,QP008,"Determine whether the inverse of a real matrix, when it exists, is a real matrix"
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix,QP009,Determine whether a polynomial or rational expression in real matrices with real coefficients is a real matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix,QP010,"Infer that trace, determinant, minors, and cofactors of a real matrix are real numbers"
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix,QP011,"Establish subset and superset relationships among integer, rational, real, and complex matrices"
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix,QP012,Determine the number of independent real parameters required to specify an m×n real matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C001,Real Matrix,QP013,Interpret and translate notation for sets of real matrices such as R^{m×n} and M_{m×n}(R)
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP001,Classify a matrix as real or complex based on its entries
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP002,Determine the complex conjugate of a matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP003,Determine the conjugate transpose (adjoint) of a matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP004,Verify whether a matrix is Hermitian
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP005,Verify whether a matrix is skew-Hermitian
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP006,Verify whether a matrix is unitary
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP007,"Determine parameter conditions for a matrix to be Hermitian, skew-Hermitian, or unitary"
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP008,Decompose a complex matrix into Hermitian and skew-Hermitian components
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP009,Determine the effect of real or imaginary scalar multiplication on Hermitian and skew-Hermitian types
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP010,"Determine the resulting type of a sum or difference given operand types (Hermitian, skew-Hermitian, unitary)"
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP011,"Determine the resulting type under matrix product, inverse, or adjoint given operand types and commutativity constraints"
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP012,"Establish and apply algebraic identities for the adjoint, such as (AB)† = B†A† and (cA)† = c̄ A†"
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP013,Characterize unitarity via orthonormality of columns or rows
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP014,Infer constraints on diagonal entries and trace for Hermitian and skew-Hermitian matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C002,Complex Matrix,QP015,"Relate real symmetric, skew-symmetric, and orthogonal matrices to Hermitian, skew-Hermitian, and unitary types"
+Mathematics,Algebra,Matrices,Types of Matrices,C003,Row Matrix,QP001,Identify a matrix as a row matrix from its order or arrangement
+Mathematics,Algebra,Matrices,Types of Matrices,C003,Row Matrix,QP002,Determine order and indexing constraints for a row matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C003,Row Matrix,QP003,Determine parameter conditions under which a matrix is a row matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C003,Row Matrix,QP004,Construct a row matrix of specified order from given elements or pattern
+Mathematics,Algebra,Matrices,Types of Matrices,C003,Row Matrix,QP005,Establish when a row matrix is also square or a column matrix based on order
+Mathematics,Algebra,Matrices,Types of Matrices,C003,Row Matrix,QP006,Infer order and entry correspondence of a matrix equal to a given row matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C003,Row Matrix,QP007,Determine closure of row matrices under addition and scalar multiplication
+Mathematics,Algebra,Matrices,Types of Matrices,C004,Column Matrix,QP001,Identify whether a given matrix is a column matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C004,Column Matrix,QP002,Construct a column matrix from specified elements or a rule
+Mathematics,Algebra,Matrices,Types of Matrices,C004,Column Matrix,QP003,Establish equality of two column matrices from their corresponding entries and order
+Mathematics,Algebra,Matrices,Types of Matrices,C004,Column Matrix,QP004,Determine and classify the transpose of a column matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C004,Column Matrix,QP005,Determine whether an operation involving column matrices is defined (compatibility)
+Mathematics,Algebra,Matrices,Types of Matrices,C004,Column Matrix,QP006,Determine the resulting order or type of a defined matrix expression involving column matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C004,Column Matrix,QP007,Determine parameter conditions for a matrix to be a column matrix in terms of its order variables
+Mathematics,Algebra,Matrices,Types of Matrices,C004,Column Matrix,QP008,Determine the condition under which a column matrix is square
+Mathematics,Algebra,Matrices,Types of Matrices,C004,Column Matrix,QP009,Form the column matrix corresponding to a specified column of a given matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C004,Column Matrix,QP010,Relate the order and the number of elements for a column matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C005,Rectangular Matrix,QP001,Classify a matrix as rectangular based on its order
+Mathematics,Algebra,Matrices,Types of Matrices,C005,Rectangular Matrix,QP002,Identify whether a rectangular matrix is a row matrix or a column matrix from its order
+Mathematics,Algebra,Matrices,Types of Matrices,C005,Rectangular Matrix,QP003,Determine possible orders of a rectangular matrix from constraints on size or relations between rows and columns
+Mathematics,Algebra,Matrices,Types of Matrices,C005,Rectangular Matrix,QP004,Determine definedness and resulting order/type of addition or subtraction involving rectangular matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C005,Rectangular Matrix,QP005,Determine definedness and resulting order/type of matrix products involving at least one rectangular matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C005,Rectangular Matrix,QP006,"Determine feasibility of self-operations or relations of a rectangular matrix with its transpose (equality, sum/difference, powers) using order compatibility"
+Mathematics,Algebra,Matrices,Types of Matrices,C005,Rectangular Matrix,QP007,"Assess applicability of square-matrix-only properties or types to a rectangular matrix (determinant, trace, adjoint, inverse, eigenvalues, symmetric/skew-symmetric, triangular, diagonal, orthogonal, idempotent, involutory)"
+Mathematics,Algebra,Matrices,Types of Matrices,C005,Rectangular Matrix,QP008,Determine the effect of transpose on the order and type of a rectangular matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C005,Rectangular Matrix,QP009,Infer rectangularity or squareness of a matrix from the definedness or outcomes of given operations or properties
+Mathematics,Algebra,Matrices,Types of Matrices,C005,Rectangular Matrix,QP010,Determine the orders of identity matrices that can multiply with a given rectangular matrix on the left or right without changing it
+Mathematics,Algebra,Matrices,Types of Matrices,C006,Square Matrix,QP001,Classify a matrix as square and state its order
+Mathematics,Algebra,Matrices,Types of Matrices,C006,Square Matrix,QP002,Determine parameter conditions under which a matrix is square
+Mathematics,Algebra,Matrices,Types of Matrices,C006,Square Matrix,QP003,Determine whether a matrix expression yields a square matrix and identify its order
+Mathematics,Algebra,Matrices,Types of Matrices,C006,Square Matrix,QP004,"Decide applicability of square-only constructs (determinant, trace, inverse, eigenvalues, characteristic polynomial) for a given matrix"
+Mathematics,Algebra,Matrices,Types of Matrices,C006,Square Matrix,QP005,Identify the principal or secondary diagonal of a square matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C006,Square Matrix,QP006,"Determine counts of total, diagonal, off-diagonal, above-diagonal, and below-diagonal entries in an n×n matrix"
+Mathematics,Algebra,Matrices,Types of Matrices,C006,Square Matrix,QP007,"Establish closure of n×n matrices under addition, scalar multiplication, transpose, multiplication, and integer powers"
+Mathematics,Algebra,Matrices,Types of Matrices,C006,Square Matrix,QP008,Infer that a matrix must be square from given information invoking square-only notions or operations
+Mathematics,Algebra,Matrices,Types of Matrices,C006,Square Matrix,QP009,Determine conditions on block sizes for a partitioned matrix to be square
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix,QP001,Determine whether a given matrix is the zero matrix (all entries zero)
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix,QP002,Determine parameter conditions for a matrix to be the zero matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix,QP003,Determine the order of the zero matrix required for addition or subtraction with a given matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix,QP004,Simplify matrix expressions using the additive identity property of the zero matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix,QP005,Determine products involving the zero matrix (left or right) and the order of the resulting zero matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix,QP006,Assess whether AB = zero matrix forces A or B to be the zero matrix (zero-product implication)
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix,QP007,Infer matrix zero-ness from scalar multiplication statements such as cA = zero matrix and evaluate c·zero matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix,QP008,Determine the transpose of a zero matrix and its order
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix,QP009,"Classify the zero matrix among standard types (symmetric, skew-symmetric, diagonal, scalar, triangular)"
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix,QP010,Evaluate determinant and trace of a zero matrix (square case)
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix,QP011,Evaluate integer powers of a zero matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix,QP012,Determine the invertibility status of the zero matrix (existence or non-existence of inverse)
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix,QP013,Establish the uniqueness of the zero matrix for a given order
+Mathematics,Algebra,Matrices,Types of Matrices,C007,Zero Matrix,QP014,Establish matrix equality via zero difference (A − B equals zero matrix if and only if A equals B)
+Mathematics,Algebra,Matrices,Types of Matrices,C008,Diagonal Matrix,QP001,Determine whether a given matrix is diagonal
+Mathematics,Algebra,Matrices,Types of Matrices,C008,Diagonal Matrix,QP002,Determine parameter conditions under which a matrix becomes diagonal
+Mathematics,Algebra,Matrices,Types of Matrices,C008,Diagonal Matrix,QP003,Determine singularity or nonsingularity of a diagonal matrix from its diagonal entries
+Mathematics,Algebra,Matrices,Types of Matrices,C008,Diagonal Matrix,QP004,Determine the inverse of a diagonal matrix when it exists
+Mathematics,Algebra,Matrices,Types of Matrices,C008,Diagonal Matrix,QP005,Establish closure and commutativity properties of diagonal matrices under standard operations
+Mathematics,Algebra,Matrices,Types of Matrices,C008,Diagonal Matrix,QP006,Evaluate powers or polynomial expressions in a diagonal matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C008,Diagonal Matrix,QP007,Determine the effect of left or right multiplication by a diagonal matrix on another matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C008,Diagonal Matrix,QP008,"Determine conditions on diagonal entries for a diagonal matrix to satisfy a given matrix equation (e.g., D^2=D, D^k=I, D^m=0)"
+Mathematics,Algebra,Matrices,Types of Matrices,C008,Diagonal Matrix,QP009,Determine conditions under which a diagonal matrix commutes with every matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP001,Identify whether a given square matrix is a scalar matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP002,Distinguish scalar matrices from diagonal and identity matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP003,Determine parameter conditions under which a given matrix is a scalar matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP004,Construct a scalar matrix of specified order with a given scalar entry
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP005,Establish equivalent characterizations of scalar matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP006,Determine the result of adding or multiplying scalar matrices and the resulting scalar
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP007,Determine the effect of multiplying an arbitrary matrix by a scalar matrix (uniform scaling and commutation)
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP008,Determine existence and form of the inverse of a scalar matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP009,"Determine integer powers (including negative, when defined) of a scalar matrix"
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP010,Determine the adjugate of a scalar matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP011,Compute the determinant and trace of a scalar matrix in terms of its order and scalar
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP012,"Determine the rank, nullity, and singularity condition of a scalar matrix"
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP013,"Determine parameter conditions for a scalar matrix to satisfy a specified standard property (identity, zero, idempotent, nilpotent, involutory, symmetric, skew-symmetric, orthogonal)"
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP014,Infer the scalar value from given information about a scalar matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP015,Count scalar matrices of a given order under specified entry constraints
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP016,Determine existence or uniqueness of a scalar matrix satisfying given constraints or matrix equations
+Mathematics,Algebra,Matrices,Types of Matrices,C009,Scalar Matrix,QP017,Evaluate a polynomial in a scalar matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C010,Identity Matrix,QP001,Identify whether a matrix is the identity matrix of a stated order
+Mathematics,Algebra,Matrices,Types of Matrices,C010,Identity Matrix,QP002,Construct the identity matrix of a specified order
+Mathematics,Algebra,Matrices,Types of Matrices,C010,Identity Matrix,QP003,Determine the appropriate identity matrices and order compatibility in products with a given matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C010,Identity Matrix,QP004,Simplify matrix expressions using identity matrix properties
+Mathematics,Algebra,Matrices,Types of Matrices,C010,Identity Matrix,QP005,"Determine determinant, trace, and rank of an identity matrix"
+Mathematics,Algebra,Matrices,Types of Matrices,C010,Identity Matrix,QP006,Classify the identity matrix among standard matrix types and properties
+Mathematics,Algebra,Matrices,Types of Matrices,C010,Identity Matrix,QP007,Establish existence conditions and uniqueness of the identity matrix for a given order
+Mathematics,Algebra,Matrices,Types of Matrices,C010,Identity Matrix,QP008,Determine an unknown matrix that acts as a left or right identity under given constraints
+Mathematics,Algebra,Matrices,Types of Matrices,C010,Identity Matrix,QP009,Establish that a matrix equals the identity from given algebraic conditions
+Mathematics,Algebra,Matrices,Types of Matrices,C010,Identity Matrix,QP010,Determine spectral characteristics of the identity matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C010,Identity Matrix,QP011,"Determine the transpose, inverse, and powers of the identity matrix"
+Mathematics,Algebra,Matrices,Types of Matrices,C011,Upper Triangular Matrix,QP001,Identify whether a matrix is upper triangular
+Mathematics,Algebra,Matrices,Types of Matrices,C011,Upper Triangular Matrix,QP002,Determine parameter conditions for a matrix to be upper triangular
+Mathematics,Algebra,Matrices,Types of Matrices,C011,Upper Triangular Matrix,QP003,"Classify relationships among upper triangular, diagonal, scalar, and identity matrices"
+Mathematics,Algebra,Matrices,Types of Matrices,C011,Upper Triangular Matrix,QP004,Establish closure of upper triangular matrices under addition and scalar multiplication
+Mathematics,Algebra,Matrices,Types of Matrices,C011,Upper Triangular Matrix,QP005,"Establish preservation of upper triangularity under matrix multiplication, powers, and polynomials"
+Mathematics,Algebra,Matrices,Types of Matrices,C011,Upper Triangular Matrix,QP006,Relate upper triangularity under transpose and deduce diagonal condition when both upper and lower triangular
+Mathematics,Algebra,Matrices,Types of Matrices,C011,Upper Triangular Matrix,QP007,Determine invertibility conditions for an upper triangular matrix and the triangularity of its inverse
+Mathematics,Algebra,Matrices,Types of Matrices,C011,Upper Triangular Matrix,QP008,Establish nilpotency and power bounds for strictly upper triangular matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C011,Upper Triangular Matrix,QP009,Determine the number of independent entries in an n×n upper triangular matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C011,Upper Triangular Matrix,QP010,Determine which elementary row or column operations preserve upper triangular structure
+Mathematics,Algebra,Matrices,Types of Matrices,C011,Upper Triangular Matrix,QP011,Determine diagonal entries of products or powers of upper triangular matrices from factor diagonals
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Lower Triangular Matrix,QP001,Identify whether a given matrix is lower triangular from its entry pattern
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Lower Triangular Matrix,QP002,Determine whether a matrix is strictly lower triangular or unit lower triangular based on diagonal entries
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Lower Triangular Matrix,QP003,Determine the number of independent parameters and the number of forced zeros in an n×n lower triangular matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Lower Triangular Matrix,QP004,Determine whether the class of lower triangular matrices is closed under addition and scalar multiplication
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Lower Triangular Matrix,QP005,Determine whether the product of two (or more) lower triangular matrices is lower triangular
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Lower Triangular Matrix,QP006,Determine the relationship between a lower triangular matrix and its transpose (upper triangularity)
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Lower Triangular Matrix,QP007,Infer diagonality when a matrix is both lower and upper triangular or when it is lower triangular and symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Lower Triangular Matrix,QP008,Determine whether powers of a lower triangular matrix remain lower triangular
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Lower Triangular Matrix,QP009,Determine diagonal entries of the product or powers of lower triangular matrices from their diagonal entries
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Lower Triangular Matrix,QP010,Determine parameter constraints on a symbolic matrix so that it becomes lower triangular
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Lower Triangular Matrix,QP011,Determine whether the inverse of a nonsingular lower triangular matrix is lower triangular
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Lower Triangular Matrix,QP012,Determine invertibility conditions for a lower triangular matrix in terms of its diagonal entries
+Mathematics,Algebra,Matrices,Types of Matrices,C012,Lower Triangular Matrix,QP013,Establish nilpotency and an order bound for strictly lower triangular matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP001,Determine whether a given square matrix is symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP002,Determine parameter conditions for a matrix to be symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP003,Determine the number of independent entries in an n×n symmetric matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP004,Obtain the symmetric component of a square matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP005,Decompose a square matrix into symmetric and skew-symmetric parts
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP006,Establish uniqueness of the symmetric–skew-symmetric decomposition of a square matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP007,Determine whether a linear combination of given matrices is symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP008,Determine conditions under which the product of matrices is symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP009,Determine whether powers or polynomials in a symmetric matrix are symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP010,Determine whether the inverse of a symmetric invertible matrix is symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP011,Determine whether the adjugate of a symmetric matrix is symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP012,Identify which expressions formed from a matrix and its transpose are symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP013,Determine whether congruence transforms of a symmetric matrix are symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP014,"Determine symmetry of a matrix defined by an entry-wise rule a_ij = f(i, j)"
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP015,Determine conditions for a block-partitioned matrix to be symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP016,Infer structural constraints for a symmetric triangular matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP017,Determine consequences of a matrix being both symmetric and skew-symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP018,Infer symmetry of an unknown matrix from given relations involving the transpose
+Mathematics,Algebra,Matrices,Types of Matrices,C013,Symmetric Matrix,QP019,Count symmetric matrices of a given order under specified entry constraints
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Skew-Symmetric Matrix,QP001,Classify a matrix as skew-symmetric or not
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Skew-Symmetric Matrix,QP002,Determine parameter conditions or missing entries for a matrix to be skew-symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Skew-Symmetric Matrix,QP003,Obtain the skew-symmetric part of a matrix and perform symmetric–skew-symmetric decomposition
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Skew-Symmetric Matrix,QP004,Infer diagonal and trace properties of a skew-symmetric matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Skew-Symmetric Matrix,QP005,Describe the general element-wise form of an n×n skew-symmetric matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Skew-Symmetric Matrix,QP006,Determine the number of independent parameters of an n×n skew-symmetric matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Skew-Symmetric Matrix,QP007,"Establish closure and invariance of skew-symmetric matrices under addition, subtraction, scalar multiplication, transpose, and negation"
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Skew-Symmetric Matrix,QP008,Classify the symmetry type of powers or polynomials in a skew-symmetric matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Skew-Symmetric Matrix,QP009,"Determine when products, commutators, or anticommutators involving symmetric and/or skew-symmetric matrices are skew-symmetric or symmetric"
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Skew-Symmetric Matrix,QP010,Determine singularity or invertibility conditions of skew-symmetric matrices based on order parity
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Skew-Symmetric Matrix,QP011,Determine the type of the inverse of a skew-symmetric matrix when it exists
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Skew-Symmetric Matrix,QP012,Characterize matrices that are both symmetric and skew-symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C014,Skew-Symmetric Matrix,QP013,Count skew-symmetric matrices of given order under discrete entry constraints
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP001,Determine whether a given square real matrix is orthogonal
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP002,Determine parameter conditions that make a matrix orthogonal
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP003,Complete a partially specified matrix so that it becomes orthogonal
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP004,Determine the inverse or transpose of an orthogonal matrix using the relation Q^{-1} = Q^T
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP005,"Determine determinant-related properties of an orthogonal matrix, including possible values and orientation classification"
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP006,"Determine preservation of orthogonality under specified matrix operations such as product, transpose, inverse, and powers"
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP007,"Establish equivalence between characterizations of orthogonality, such as Q^T Q = I and orthonormal rows or columns"
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP008,"Determine entry-wise and aggregate constraints implied by orthogonality, including unit column norms, zero cross-dot products, total squared-sum equals matrix order, and bounds on entries"
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP009,"Characterize orthogonality within special matrix families such as diagonal matrices, permutation or sign-change matrices, and block-diagonal matrices"
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP010,Determine conditions on a scalar multiple of a matrix for it to be orthogonal
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP011,Determine which row or column permutations and sign changes preserve orthogonality
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP012,"Determine structural necessities and feasibility for orthogonality, including squareness, non-singularity, and rank"
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP013,"Establish metric-preserving properties of orthogonal matrices, such as preservation of vector lengths, dot products, and angles"
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP014,"Determine implications when a matrix is both orthogonal and another special type, such as symmetric or skew-symmetric"
+Mathematics,Algebra,Matrices,Types of Matrices,C015,Orthogonal Matrix,QP015,Determine the number of independent parameters or constraints in an n×n orthogonal matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C016,Singular Matrix,QP001,Classify a square matrix as singular or non-singular
+Mathematics,Algebra,Matrices,Types of Matrices,C016,Singular Matrix,QP002,Determine parameter conditions for a square matrix or matrix expression to be singular
+Mathematics,Algebra,Matrices,Types of Matrices,C016,Singular Matrix,QP003,"Analyze singularity behavior under matrix multiplication, scalar multiplication, and powers"
+Mathematics,Algebra,Matrices,Types of Matrices,C016,Singular Matrix,QP004,"Determine preservation of singularity under transpose, similarity transformations, and elementary row or column operations"
+Mathematics,Algebra,Matrices,Types of Matrices,C016,Singular Matrix,QP005,"Establish or use equivalent characterizations of a singular matrix (determinant zero, no inverse, rank deficiency, row or column dependence)"
+Mathematics,Algebra,Matrices,Types of Matrices,C016,Singular Matrix,QP006,Determine singularity relations between a matrix and its adjugate
+Mathematics,Algebra,Matrices,Types of Matrices,C017,Non-Singular Matrix,QP001,Determine whether a given square matrix is non-singular
+Mathematics,Algebra,Matrices,Types of Matrices,C017,Non-Singular Matrix,QP002,Determine parameter conditions under which a square matrix is non-singular
+Mathematics,Algebra,Matrices,Types of Matrices,C017,Non-Singular Matrix,QP003,"Recognize equivalent characterizations of non-singularity (non-zero determinant, existence of inverse, full rank)"
+Mathematics,Algebra,Matrices,Types of Matrices,C017,Non-Singular Matrix,QP004,"Infer non-singularity of matrices derived from a non-singular matrix (transpose, powers, scalar multiples, adjoint)"
+Mathematics,Algebra,Matrices,Types of Matrices,C017,Non-Singular Matrix,QP005,"Infer non-singularity relationships for matrix products and factors (A, B, AB)"
+Mathematics,Algebra,Matrices,Types of Matrices,C017,Non-Singular Matrix,QP006,Determine existence and uniqueness of solutions to Ax=b using non-singularity of the coefficient matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C017,Non-Singular Matrix,QP007,Assess preservation of non-singularity under specified elementary row or column operations
+Mathematics,Algebra,Matrices,Types of Matrices,C017,Non-Singular Matrix,QP008,"Classify given conditions as necessary, sufficient, or equivalent for non-singularity"
+Mathematics,Algebra,Matrices,Types of Matrices,C017,Non-Singular Matrix,QP009,Count the number of non-singular matrices under specified discrete entry constraints
+Mathematics,Algebra,Matrices,Types of Matrices,C017,Non-Singular Matrix,QP010,Determine feasibility or construct an example of a non-singular matrix satisfying given constraints
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Idempotent Matrix,QP001,Determine whether a given square matrix is idempotent
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Idempotent Matrix,QP002,Determine parameter conditions under which a matrix is idempotent
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Idempotent Matrix,QP003,Simplify or evaluate powers and polynomial expressions in an idempotent matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Idempotent Matrix,QP004,Determine the possible eigenvalues and their multiplicities for an idempotent matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Idempotent Matrix,QP005,Determine diagonalizability and canonical similarity form of an idempotent matrix; classify idempotents up to similarity by rank
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Idempotent Matrix,QP006,"Determine and relate rank, trace, nullity, and determinant for an idempotent matrix"
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Idempotent Matrix,QP007,"Determine properties of the complementary matrix I − A when A is idempotent, including idempotence and rank relations"
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Idempotent Matrix,QP008,"Determine when algebraic combinations of idempotent matrices (sum, product, scalar multiple, linear combination) are idempotent"
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Idempotent Matrix,QP009,Determine invertibility conditions for an idempotent matrix and for matrices of the form I ± αA; compute inverses when they exist
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Idempotent Matrix,QP010,Determine minimal and characteristic polynomial constraints for an idempotent matrix and infer one from the other
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Idempotent Matrix,QP011,"Determine existence of nontrivial idempotent matrices of a given order satisfying specified invariants (rank, trace, determinant) or spectrum"
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Idempotent Matrix,QP012,Determine similarity or non-similarity of two idempotent matrices using invariants such as rank or trace
+Mathematics,Algebra,Matrices,Types of Matrices,C018,Idempotent Matrix,QP013,"Characterize idempotent matrices within structured classes (e.g., diagonal, triangular, symmetric/orthogonal projector cases)"
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP001,Determine whether a given square matrix is nilpotent
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP002,Determine the index of nilpotency of a nilpotent matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP003,Determine conditions on parameters for a matrix to be nilpotent
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP004,"Infer eigenvalues, determinant and trace of a nilpotent matrix"
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP005,Determine characteristic polynomial constraints for a nilpotent matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP006,Evaluate polynomial expressions in a nilpotent matrix using nilpotency
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP007,Establish invertibility and obtain (I ± N)^{-1} for a nilpotent matrix N
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP008,Establish invariance of nilpotency and its index under similarity transformations
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP009,Establish nilpotency for strictly upper/lower triangular matrices and non-nilpotency for nonzero diagonal matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP010,Bound or determine the index of nilpotency from matrix size or bandwidth
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP011,Infer rank and nullity constraints for a nilpotent matrix and for its powers
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP012,Determine nilpotency and index bounds for block triangular matrices from their diagonal blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP013,"Assess preservation or failure of nilpotency under operations such as scalar multiples, powers, sums or products with commutation conditions"
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP014,Establish existence of nilpotent matrices with prescribed size and index
+Mathematics,Algebra,Matrices,Types of Matrices,C019,Nilpotent Matrix,QP015,Decide nilpotency or invertibility of p(N) for a polynomial p based on its constant term
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Involutory Matrix,QP001,Determine whether a given matrix is involutory
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Involutory Matrix,QP002,Determine parameter conditions for a matrix to be involutory
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Involutory Matrix,QP003,Determine the inverse of an involutory matrix and related invertibility consequences
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Involutory Matrix,QP004,Evaluate powers and reduce polynomials in an involutory matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Involutory Matrix,QP005,Determine eigenvalues and multiplicity structure of an involutory matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Involutory Matrix,QP006,Determine determinant and trace constraints of an involutory matrix and infer values from given data
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Involutory Matrix,QP007,Diagonalize or classify an involutory matrix up to similarity into blocks of I and −I
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Involutory Matrix,QP008,Establish and use the projector decomposition (I±A)/2 for an involutory matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Involutory Matrix,QP009,Determine rank and nullity of I±A for an involutory matrix and relate them to eigenspace dimensions
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Involutory Matrix,QP010,Determine the minimal polynomial and characterize the characteristic polynomial constraints of an involutory matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Involutory Matrix,QP011,Determine conditions under which the product of matrices is involutory
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Involutory Matrix,QP012,Determine invertibility and compute the inverse of linear combinations αI+βA for an involutory A
+Mathematics,Algebra,Matrices,Types of Matrices,C020,Involutory Matrix,QP013,Determine feasibility or constructibility of an involutory matrix with specified order and invariants such as trace or determinant
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP001,Identify whether a given square matrix is a permutation matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP002,Construct the permutation matrix corresponding to a specified permutation of indices
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP003,Recover the underlying permutation (mapping or cycle form) from a given permutation matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP004,Count the number of n×n permutation matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP005,Determine the determinant and parity (even or odd) of a permutation matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP006,Determine the inverse of a permutation matrix and verify P^T P = I
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP007,Determine the row or column reordering induced by left or right multiplication by a permutation matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP008,Determine the product of permutation matrices as the composition of the corresponding permutations
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP009,Determine the order of a permutation matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP010,Compute a power P^k of a permutation matrix or determine its periodicity
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP011,Determine the number of fixed points of the permutation from the trace of its permutation matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP012,Determine conditions under which a permutation matrix is symmetric (P = P^T)
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP013,Determine the determinant scaling of a matrix under row or column permutations via permutation matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP014,Determine a permutation matrix P that achieves a specified simultaneous row and column permutation via conjugation PAP^{-1}
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP015,Determine whether two permutation matrices commute using properties of their underlying permutations
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP016,Determine the rank of a permutation matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C021,Permutation Matrix,QP017,Establish that n×n permutation matrices form a group under multiplication and identify its isomorphism with the symmetric group
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix,QP001,Identify whether a given square matrix is an elementary matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix,QP002,Classify the type and parameters of the elementary operation encoded by a given elementary matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix,QP003,Construct the elementary matrix corresponding to a specified elementary row or column operation
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix,QP004,Predict the effect of left or right multiplication by a specified elementary matrix on a matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix,QP005,Determine the inverse of a given elementary matrix and the corresponding inverse operation
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix,QP006,Determine the determinant of a given elementary matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix,QP007,Determine whether a given square matrix can be expressed as a product of elementary matrices and obtain such a factorization when possible
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix,QP008,Determine whether two matrices are row-equivalent or column-equivalent via a finite product of elementary matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix,QP009,Determine the minimal number of elementary row or column operations needed to achieve a specified matrix transformation
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix,QP010,Determine whether the product of specified elementary matrices is itself an elementary matrix and analyze closure under multiplication
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix,QP011,Determine whether two specified elementary matrices commute and establish commutativity conditions
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix,QP012,Determine whether the elementary matrix implementing a specified row or column operation is unique
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix,QP013,Determine whether a specified single-step matrix transformation can be achieved by one elementary row or column operation and identify the operation when possible
+Mathematics,Algebra,Matrices,Types of Matrices,C022,Elementary Matrix,QP014,Determine the combined effect on a matrix of pre- and post-multiplication by specified elementary matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hermitian Matrix,QP001,Determine whether a given complex square matrix is Hermitian
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hermitian Matrix,QP002,Determine constraints on entries or parameters required for a matrix to be Hermitian
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hermitian Matrix,QP003,Decompose a complex square matrix uniquely into Hermitian and skew-Hermitian parts
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hermitian Matrix,QP004,Determine closure and vector-space behavior of Hermitian matrices under addition and real scalar multiplication
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hermitian Matrix,QP005,Determine Hermitian status of powers and real polynomials in a Hermitian matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hermitian Matrix,QP006,Determine conditions under which a product AB is Hermitian given properties of A and B
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hermitian Matrix,QP007,Determine whether the inverse or adjugate of a Hermitian matrix is Hermitian when defined
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hermitian Matrix,QP008,Infer real-valued scalar invariants such as trace and determinant for a Hermitian matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hermitian Matrix,QP009,Determine the Hermitian nature of matrices of the form A*A and AA* for arbitrary complex A
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hermitian Matrix,QP010,Determine preservation of Hermitian property under congruence transformations P*AP
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hermitian Matrix,QP011,Relate Hermitian matrices to symmetric matrices over reals and to skew-Hermitian matrices via multiplication by i
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hermitian Matrix,QP012,Characterize Hermitian matrices using the condition that x*Ax is real for all complex vectors x
+Mathematics,Algebra,Matrices,Types of Matrices,C023,Hermitian Matrix,QP013,Determine the number of independent real parameters of n×n Hermitian matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix,QP001,Determine whether a given matrix is skew-Hermitian
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix,QP002,Determine conditions or unknown entries for a matrix to be skew-Hermitian
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix,QP003,Decompose a matrix into Hermitian and skew-Hermitian parts
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix,QP004,Infer constraints on diagonal entries and trace of a skew-Hermitian matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix,QP005,Determine constraints on the determinant of a skew-Hermitian matrix with respect to matrix order
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix,QP006,Determine preservation of the skew-Hermitian property under linear combinations and identify scalar conditions
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix,QP007,Determine the Hermitian or skew-Hermitian nature of powers or polynomials of a skew-Hermitian matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix,QP008,Relate skew-Hermitian and skew-symmetric matrices in the real case
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix,QP009,Determine the condition for a matrix to be both Hermitian and skew-Hermitian
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix,QP010,Infer constraints on eigenvalues of a skew-Hermitian matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix,QP011,Infer the nature of the scalar x*Ax when A is skew-Hermitian
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix,QP012,Classify AB ± BA as Hermitian or skew-Hermitian given the types of A and B
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix,QP013,Determine the number of independent real parameters in an n×n skew-Hermitian matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C024,Skew-Hermitian Matrix,QP014,Determine the type of the inverse of a skew-Hermitian matrix when it exists
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix,QP001,Determine whether a square complex matrix is unitary
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix,QP002,Determine parameter conditions for a matrix to be unitary
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix,QP003,Determine the inverse of a unitary matrix via its conjugate transpose
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix,QP004,Establish equivalence among standard characterizations of unitarity
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix,QP005,Determine preservation of unitarity under specified matrix operations
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix,QP006,Determine scalar conditions under which a scalar multiple of a unitary matrix is unitary
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix,QP007,Determine determinant constraints of unitary matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix,QP008,Determine invertibility and rank properties of unitary matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix,QP009,Characterize diagonal unitary matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix,QP010,Characterize triangular unitary matrices
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix,QP011,Determine unitarity of block-diagonal matrices from the unitarity of their blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix,QP012,Distinguish unitary and orthogonal matrices and relate the real case equivalence
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix,QP013,Formulate entrywise orthonormality conditions equivalent to unitarity
+Mathematics,Algebra,Matrices,Types of Matrices,C025,Unitary Matrix,QP014,Establish norm-preservation by unitary matrices for vectors
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP001,Recognize or verify block diagonal structure for a stated partition
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP002,Determine admissible block partitions for a given square matrix size
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP003,Construct a block diagonal matrix from specified square blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP004,Extract the diagonal blocks from a block diagonal matrix for a given partition
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP005,Determine the determinant of a block diagonal matrix from determinants of its blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP006,Determine the trace of a block diagonal matrix from traces of its blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP007,Determine the rank of a block diagonal matrix from ranks of its blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP008,Determine invertibility of a block diagonal matrix from invertibility of its blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP009,Determine the inverse of a block diagonal matrix via inverses of its blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP010,Evaluate a polynomial in a block diagonal matrix (including powers) blockwise
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP011,Determine the transpose of a block diagonal matrix in terms of block transposes
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP012,Determine conditions under which linear combinations of block diagonal matrices remain block diagonal
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP013,Compute the product of block diagonal matrices with a common partition via blockwise multiplication
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP014,Determine when a block diagonal matrix reduces to a diagonal matrix
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP015,Determine upper or lower triangularity of a block diagonal matrix from triangularity of its blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP016,Decompose a linear system with a block diagonal coefficient matrix into independent subsystems
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP017,Determine the number of structurally forced zero entries from a given block partition
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP018,Determine the number of independent parameters in the set of block diagonal matrices for a given partition
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP019,Identify which elementary row or column operations preserve block diagonal structure
+Mathematics,Algebra,Matrices,Types of Matrices,C026,Block Diagonal Matrix,QP020,Distinguish block diagonal matrices from block triangular matrices by zero-pattern criteria
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP001,Determine a valid block partition of a matrix for specified block sizes
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP002,Determine conformability for block-wise addition/subtraction and identify resulting block dimensions
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP003,Compute block-wise addition/subtraction/scalar multiplication
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP004,Determine conformability for block matrix multiplication and the dimensions of product blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP005,Express the blocks of a product matrix in terms of the factor blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP006,Determine the transpose of a partitioned matrix in terms of transposed blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP007,Classify a partitioned matrix by block structure (block diagonal/upper/lower/banded)
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP008,Evaluate the determinant of a block diagonal or block triangular matrix from diagonal blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP009,Determine the inverse of a block diagonal matrix from inverses of diagonal blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP010,Evaluate powers of a block diagonal matrix via powers of its diagonal blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP011,Determine block conditions for a partitioned matrix to be symmetric or skew-symmetric
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP012,Determine unknown block matrices from a given block equation consistent with a partition
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP013,Determine conditions and formula to invert a 2×2 block matrix using Schur complements or special structures
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP014,Evaluate the trace of a block diagonal or block triangular matrix from traces of diagonal blocks
+Mathematics,Algebra,Matrices,Types of Matrices,C027,Partitioned (Block) Matrix,QP015,Determine whether the product of block triangular matrices preserves block triangular structure and identify its diagonal blocks

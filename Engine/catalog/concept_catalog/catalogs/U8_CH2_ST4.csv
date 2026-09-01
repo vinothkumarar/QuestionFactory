@@ -1,0 +1,29 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C001,Multiple-angle equations: definition and scope
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C002,"Period of sin(nθ), cos(nθ), tan(nθ) with respect to θ"
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C003,Domain and range constraints in multiple-angle equations
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C004,General solutions for sin(nθ) = k
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C005,General solutions for cos(nθ) = k
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C006,General solutions for tan(nθ) = k
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C007,General solutions for cot(nθ) = k
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C008,General solutions for sec(nθ) = k
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C009,General solutions for csc(nθ) = k
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C010,Zeros of multiple-angle trigonometric functions
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C011,Extreme values of sin(nθ) and cos(nθ) and corresponding angles
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C012,"Discontinuities in tan(nθ), cot(nθ), sec(nθ), csc(nθ)"
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C013,Angle congruence relations for equality of trigonometric values
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C014,Sine-based multiple-angle equalities: sin(mθ) = sin(nθ)
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C015,Cosine-based multiple-angle equalities: cos(mθ) = cos(nθ)
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C016,Tangent-based multiple-angle equalities: tan(mθ) = tan(nθ)
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C017,Co-function equalities in multiple-angle equations
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C018,Phase-shifted multiple-angle equations f(nθ + φ) = k
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C019,Parity effects of the multiplier n on solution sets
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C020,Solution set parametrization and periodic indexing for multiple angles
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C021,Interval-restricted solution sets for multiple-angle equations
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C022,Period synchronization using LCM in multiple-angle conditions
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C023,GCD-based spacing and alignment of multiple-angle solutions
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C024,Principal and general solutions in multiple-angle equations
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C025,Multiple-angle identities for sine
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C026,Multiple-angle identities for cosine
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C027,Multiple-angle identities for tangent
+Mathematics,Trigonometry,Trigonometric Equations,Multiple Angle Equations,C028,n-to-one angle mapping and solution multiplicity in multiple-angle equations

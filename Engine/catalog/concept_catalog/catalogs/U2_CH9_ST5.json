@@ -1,0 +1,186 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C001",
+        "concept": "Linear equation in n variables"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C002",
+        "concept": "Structure of a system of linear equations (m equations, n unknowns)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C003",
+        "concept": "Solution set of a system of linear equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C004",
+        "concept": "Consistent and inconsistent systems"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C005",
+        "concept": "Homogeneous and non-homogeneous systems"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C006",
+        "concept": "Coefficient matrix and constant vector for square systems"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C007",
+        "concept": "Determinant of the coefficient matrix"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C008",
+        "concept": "Non-singularity of the coefficient matrix and unique solution"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C009",
+        "concept": "Singularity of the coefficient matrix and non-uniqueness of solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C010",
+        "concept": "Determinant-based representation of solution variables in square systems"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C011",
+        "concept": "Consistency criteria in two-variable systems via proportionality of coefficients and constants"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C012",
+        "concept": "Geometric interpretation in two variables: intersection of lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C013",
+        "concept": "Geometric interpretation in three variables: intersection of planes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C014",
+        "concept": "Homogeneous systems: trivial solution and condition for non-trivial solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C015",
+        "concept": "Linear dependence among equations and zero determinant"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C016",
+        "concept": "Equivalence of systems under scaling and linear combination of equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C017",
+        "concept": "Parametric description of infinitely many solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C018",
+        "concept": "Parameter-dependent solvability conditions arising from determinant zero"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C019",
+        "concept": "Limitation of determinant-based solution methods to square systems"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C020",
+        "concept": "Effect of reordering equations or variables on determinant-based solution formulas"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C021",
+        "concept": "Effect of scaling an equation on the system’s solutions and coefficient determinant"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C022",
+        "concept": "Compatibility condition for proportional equations in non-homogeneous two-variable systems"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Algebra",
+        "chapter": "Determinants",
+        "subtopic": "System of Linear Equations",
+        "concept_id": "C023",
+        "concept": "Homogeneous solution set as a linear subspace through the origin"
+    }
+]

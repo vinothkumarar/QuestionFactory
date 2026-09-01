@@ -1,0 +1,24 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Algebra,Determinants,System of Linear Equations,C001,Linear equation in n variables
+Mathematics,Algebra,Determinants,System of Linear Equations,C002,"Structure of a system of linear equations (m equations, n unknowns)"
+Mathematics,Algebra,Determinants,System of Linear Equations,C003,Solution set of a system of linear equations
+Mathematics,Algebra,Determinants,System of Linear Equations,C004,Consistent and inconsistent systems
+Mathematics,Algebra,Determinants,System of Linear Equations,C005,Homogeneous and non-homogeneous systems
+Mathematics,Algebra,Determinants,System of Linear Equations,C006,Coefficient matrix and constant vector for square systems
+Mathematics,Algebra,Determinants,System of Linear Equations,C007,Determinant of the coefficient matrix
+Mathematics,Algebra,Determinants,System of Linear Equations,C008,Non-singularity of the coefficient matrix and unique solution
+Mathematics,Algebra,Determinants,System of Linear Equations,C009,Singularity of the coefficient matrix and non-uniqueness of solutions
+Mathematics,Algebra,Determinants,System of Linear Equations,C010,Determinant-based representation of solution variables in square systems
+Mathematics,Algebra,Determinants,System of Linear Equations,C011,Consistency criteria in two-variable systems via proportionality of coefficients and constants
+Mathematics,Algebra,Determinants,System of Linear Equations,C012,Geometric interpretation in two variables: intersection of lines
+Mathematics,Algebra,Determinants,System of Linear Equations,C013,Geometric interpretation in three variables: intersection of planes
+Mathematics,Algebra,Determinants,System of Linear Equations,C014,Homogeneous systems: trivial solution and condition for non-trivial solutions
+Mathematics,Algebra,Determinants,System of Linear Equations,C015,Linear dependence among equations and zero determinant
+Mathematics,Algebra,Determinants,System of Linear Equations,C016,Equivalence of systems under scaling and linear combination of equations
+Mathematics,Algebra,Determinants,System of Linear Equations,C017,Parametric description of infinitely many solutions
+Mathematics,Algebra,Determinants,System of Linear Equations,C018,Parameter-dependent solvability conditions arising from determinant zero
+Mathematics,Algebra,Determinants,System of Linear Equations,C019,Limitation of determinant-based solution methods to square systems
+Mathematics,Algebra,Determinants,System of Linear Equations,C020,Effect of reordering equations or variables on determinant-based solution formulas
+Mathematics,Algebra,Determinants,System of Linear Equations,C021,Effect of scaling an equation on the system’s solutions and coefficient determinant
+Mathematics,Algebra,Determinants,System of Linear Equations,C022,Compatibility condition for proportional equations in non-homogeneous two-variable systems
+Mathematics,Algebra,Determinants,System of Linear Equations,C023,Homogeneous solution set as a linear subspace through the origin

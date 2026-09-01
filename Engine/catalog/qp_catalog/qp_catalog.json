@@ -7,7 +7,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP001",
-        "question_possibility": "Interpret absolute value as distance on the real number line"
+        "question_possibility": "Evaluate absolute value expression for given numerical values"
     },
     {
         "subject": "Mathematics",
@@ -17,7 +17,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP002",
-        "question_possibility": "State and apply the piecewise definition of absolute value"
+        "question_possibility": "Simplify algebraic expression using absolute value properties and identities"
     },
     {
         "subject": "Mathematics",
@@ -27,7 +27,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP003",
-        "question_possibility": "Use non-negativity and zero property of absolute value (|x| ≥ 0, |x| = 0 ⇔ x = 0)"
+        "question_possibility": "Convert an absolute value expression into an equivalent piecewise-defined form on the real line"
     },
     {
         "subject": "Mathematics",
@@ -37,7 +37,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP004",
-        "question_possibility": "Use symmetry property |−x| = |x| in simplifications and comparisons"
+        "question_possibility": "Construct an absolute value expression equivalent to a given piecewise linear definition on the real line"
     },
     {
         "subject": "Mathematics",
@@ -47,7 +47,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP005",
-        "question_possibility": "Apply multiplicative and quotient properties |xy| = |x||y| and |x/y| = |x|/|y| with domain conditions"
+        "question_possibility": "Interpret and represent distance or interval conditions on the number line using absolute value notation (center and radius identification)"
     },
     {
         "subject": "Mathematics",
@@ -57,7 +57,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP006",
-        "question_possibility": "Handle exponents with absolute value and parity considerations (e.g., |x|^n and |x^n|)"
+        "question_possibility": "Solve an absolute value equation in one real variable"
     },
     {
         "subject": "Mathematics",
@@ -67,7 +67,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP007",
-        "question_possibility": "Compare magnitudes using absolute values and order numbers by modulus"
+        "question_possibility": "Determine the number of real solutions of an absolute value equation"
     },
     {
         "subject": "Mathematics",
@@ -77,7 +77,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP008",
-        "question_possibility": "Convert absolute value expressions to max/min formulations (e.g., |x| = max(x, −x))"
+        "question_possibility": "Determine parameter conditions for existence, uniqueness, or multiplicity of solutions of an absolute value equation"
     },
     {
         "subject": "Mathematics",
@@ -87,7 +87,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP009",
-        "question_possibility": "Express max or min of two real numbers using absolute value (e.g., max(a,b) = (a+b+|a−b|)/2)"
+        "question_possibility": "Solve an absolute value inequality in one real variable"
     },
     {
         "subject": "Mathematics",
@@ -97,7 +97,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP010",
-        "question_possibility": "Establish and apply the triangle inequality for real numbers"
+        "question_possibility": "Determine parameter conditions under which an absolute value inequality holds for all, some, or no real x"
     },
     {
         "subject": "Mathematics",
@@ -107,7 +107,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP011",
-        "question_possibility": "Establish and apply the reverse triangle inequality for real numbers"
+        "question_possibility": "Determine the number of integer solutions satisfying absolute value equations or inequalities"
     },
     {
         "subject": "Mathematics",
@@ -117,7 +117,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP012",
-        "question_possibility": "Determine equality conditions in triangle and reverse triangle inequalities"
+        "question_possibility": "Analyze feasibility and obtain the solution set of a system of absolute value equations and/or inequalities"
     },
     {
         "subject": "Mathematics",
@@ -127,7 +127,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP013",
-        "question_possibility": "Bound linear combinations using triangle inequality and its variants"
+        "question_possibility": "Determine the range of an expression or function involving absolute values"
     },
     {
         "subject": "Mathematics",
@@ -137,7 +137,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP014",
-        "question_possibility": "Evaluate numeric expressions involving absolute value"
+        "question_possibility": "Determine the minimum or maximum value of a sum or linear combination of absolute values and identify the point(s) where it is attained"
     },
     {
         "subject": "Mathematics",
@@ -147,7 +147,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP015",
-        "question_possibility": "Simplify algebraic expressions containing absolute values using case analysis"
+        "question_possibility": "Establish tight bounds for expressions using triangle inequality and reverse triangle inequality for real numbers"
     },
     {
         "subject": "Mathematics",
@@ -157,7 +157,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP016",
-        "question_possibility": "Convert nested absolute value expressions to explicit piecewise definitions"
+        "question_possibility": "Determine equality conditions in the triangle inequality or its reverse for real numbers"
     },
     {
         "subject": "Mathematics",
@@ -167,7 +167,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP017",
-        "question_possibility": "Use signum function relationships with absolute value for simplification or analysis"
+        "question_possibility": "Express max or min of two real numbers using absolute value and deduce related comparisons or identities"
     },
     {
         "subject": "Mathematics",
@@ -177,7 +177,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP018",
-        "question_possibility": "Identify breakpoints where arguments of absolute values change sign and partition the real line accordingly"
+        "question_possibility": "Validate or refute purported identities involving absolute values and identify exceptions or necessary conditions"
     },
     {
         "subject": "Mathematics",
@@ -187,7 +187,7 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP019",
-        "question_possibility": "Solve linear absolute value equations of the form |ax+b| = c with real parameters"
+        "question_possibility": "Establish equivalence, inclusion, or disjointness between sets defined by absolute value constraints"
     },
     {
         "subject": "Mathematics",
@@ -197,706 +197,6 @@
         "concept_id": "C018",
         "concept": "Absolute Value",
         "qp_id": "QP020",
-        "question_possibility": "Solve equations with absolute values on both sides such as |ax+b| = |cx+d|"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP021",
-        "question_possibility": "Solve equations involving sums of absolute values equal to a constant"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP022",
-        "question_possibility": "Solve equations involving differences of absolute values equal to a constant"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP023",
-        "question_possibility": "Solve equations containing nested absolute values with multiple layers"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP024",
-        "question_possibility": "Solve equations where a polynomial inside absolute value equals a constant or another function"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP025",
-        "question_possibility": "Analyze parametric absolute value equations to determine solution count as a function of a parameter"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP026",
-        "question_possibility": "Determine number of real solutions to an absolute value equation without fully solving it"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP027",
-        "question_possibility": "Solve systems of equations that include absolute value terms"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP028",
-        "question_possibility": "Solve rational equations containing absolute values with careful domain analysis"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP029",
-        "question_possibility": "Solve exponential or logarithmic equations where absolute value appears inside arguments with domain constraints"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP030",
-        "question_possibility": "Solve linear absolute value inequalities of all comparison types (<, ≤, ≥, >)"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP031",
-        "question_possibility": "Solve inequalities with absolute values on both sides such as |ax+b| < |cx+d|"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP032",
-        "question_possibility": "Solve inequalities involving sums of absolute values bounded by a constant"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP033",
-        "question_possibility": "Solve inequalities involving differences of absolute values bounded by a constant"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP034",
-        "question_possibility": "Solve inequalities containing nested absolute values with multiple layers"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP035",
-        "question_possibility": "Solve polynomial inequalities that include absolute value terms"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP036",
-        "question_possibility": "Solve rational inequalities involving absolute value expressions with domain restrictions"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP037",
-        "question_possibility": "Perform parameter analysis for absolute value inequalities to determine existence and count of solutions"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP038",
-        "question_possibility": "Determine the measure or length of a solution set defined by an absolute value inequality"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP039",
-        "question_possibility": "Count integer solutions to absolute value equations or inequalities within specified ranges"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP040",
-        "question_possibility": "Translate absolute value inequalities into interval notation and vice versa"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP041",
-        "question_possibility": "Express open, closed, and degenerate intervals as absolute value inequalities and conversely"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP042",
-        "question_possibility": "Find case-wise intervals of validity arising from absolute value arguments and solve within each case"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP043",
-        "question_possibility": "Sketch the graph of y = |ax + b| and identify vertex, slopes, and intercepts"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP044",
-        "question_possibility": "Sketch graphs of sums or differences of absolute value functions and analyze features"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP045",
-        "question_possibility": "Sketch and analyze graphs with nested absolute value operations"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP046",
-        "question_possibility": "Determine domain and range of functions involving absolute values"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP047",
-        "question_possibility": "Identify intercepts and vertex for absolute value graphs and related transformations"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP048",
-        "question_possibility": "Locate points of non-linearity or kinks where absolute value arguments are zero"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP049",
-        "question_possibility": "Analyze shifts, reflections, and scalings of absolute value graphs via parameter changes"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP050",
-        "question_possibility": "Determine and count intersections of absolute value graphs with lines or other curves"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP051",
-        "question_possibility": "Obtain explicit piecewise definitions from formulas containing absolute values"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP052",
-        "question_possibility": "Determine monotonicity intervals for functions defined with absolute values using algebraic cases"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP053",
-        "question_possibility": "Find inverse relations or restricted inverses for functions involving absolute value"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP054",
-        "question_possibility": "Model distance problems on the real line using absolute value and solve for the variable"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP055",
-        "question_possibility": "Describe loci on the number line defined by absolute distance constraints from points"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP056",
-        "question_possibility": "Identify the set of real numbers closer to one given point than another using absolute values"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP057",
-        "question_possibility": "Minimize or maximize sums of absolute deviations from specified points on the real line"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP058",
-        "question_possibility": "Determine minimizers (argmin) for sums of absolute distances and relate to the median"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP059",
-        "question_possibility": "Solve weighted absolute deviation optimization problems and identify weighted medians"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP060",
-        "question_possibility": "Determine minimal possible values of expressions involving absolute distances and characterize equality cases"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP061",
-        "question_possibility": "Compare magnitudes of two absolute value expressions under given constraints to decide which is larger"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP062",
-        "question_possibility": "Derive bounds on algebraic expressions using triangle and reverse triangle inequalities"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP063",
-        "question_possibility": "Convert inequalities involving squares to absolute value form and conversely with parameter conditions"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP064",
-        "question_possibility": "Determine valid conditions to remove absolute value signs in algebraic manipulations"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP065",
-        "question_possibility": "Assess when an absolute value equation has no solution, exactly one, finitely many, or infinitely many solutions"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP066",
-        "question_possibility": "Determine parameter ranges for which an absolute value inequality holds for all real numbers"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP067",
-        "question_possibility": "Reformulate real-world tolerance or error bounds using absolute value inequalities (|x − a| < ε) and interpret the set"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP068",
-        "question_possibility": "Determine equivalence of two absolute value expressions by comparing their piecewise definitions"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP069",
-        "question_possibility": "Analyze symmetry (evenness) of functions defined via absolute values and its consequences on graphs and solutions"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP070",
-        "question_possibility": "Express piecewise linear functions as linear combinations of absolute value functions and vice versa"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP071",
-        "question_possibility": "Analyze sums of absolute values Σ|x − a_i|: describe piecewise form, slopes, and location of minima"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP072",
-        "question_possibility": "Find intersection counts between y = |f(x)| and y = g(x) using piecewise analysis and parameter conditions"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP073",
-        "question_possibility": "Determine tangency (single-contact) conditions between an absolute value graph and a given line or curve using parameters"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP074",
-        "question_possibility": "Analyze feasibility of systems of absolute value inequalities and determine parameter ranges for non-empty intersection"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP075",
-        "question_possibility": "Prove standard identities or inequalities involving absolute values and specify equality cases"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP076",
-        "question_possibility": "Evaluate or characterize sums involving absolute differences over finite sets (e.g., Σ|a_i − a_j|) using ordering arguments"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP077",
-        "question_possibility": "Count ordered pairs or tuples satisfying constraints expressed with absolute differences on integers"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP078",
-        "question_possibility": "Compute distance from a real number to an interval using absolute value and determine nearest points"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP079",
-        "question_possibility": "Determine whether an absolute value inequality represents an empty set, a single point, or an interval"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP080",
-        "question_possibility": "Describe and analyze the locus in the plane defined by equations such as |x| + |y| = k (geometric characterization)"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP081",
-        "question_possibility": "Describe regions defined by planar absolute value inequalities like |x| + |y| ≤ k and compute area or perimeter"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP082",
-        "question_possibility": "Convert planar absolute value relations into equivalent linear systems within quadrant-based cases"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP083",
-        "question_possibility": "Count lattice points in planar regions bounded by absolute value curves or inequalities"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP084",
-        "question_possibility": "Find intersection points or count intersections between two planar absolute value curves"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP085",
-        "question_possibility": "Model piecewise-linear planar loci using absolute values and deduce vertex coordinates and edge equations"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP086",
-        "question_possibility": "Assess validity and consequences of algebraic manipulations involving absolute value (e.g., squaring, dropping bars) under stated conditions"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP087",
-        "question_possibility": "Determine parameter values for which |P(x)| ≤ Q(x) holds identically, for all x, or for no x, where P and Q are polynomials"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP088",
-        "question_possibility": "Determine parameter ranges ensuring a unique, multiple, or no intersection between y = |ax + b| and y = mx + c"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP089",
-        "question_possibility": "Translate between absolute value conditions and set-builder descriptions of solution sets on R"
-    },
-    {
-        "subject": "Mathematics",
-        "unit": "U1",
-        "chapter": "CH1",
-        "subtopic": "Number System",
-        "concept_id": "C018",
-        "concept": "Absolute Value",
-        "qp_id": "QP090",
-        "question_possibility": "Establish equivalence among multiple formulations of the same absolute value inequality or constraint"
+        "question_possibility": "Compare or rank real numbers by their closeness to a given point using absolute values"
     }
 ]

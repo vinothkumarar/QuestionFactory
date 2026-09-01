@@ -1,0 +1,290 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C001",
+        "concept": "Reflection as a Euclidean Isometry"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C002",
+        "concept": "Mirror Line (Axis of Reflection) in the Plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C003",
+        "concept": "Mirror Plane in Three-Dimensional Space"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C004",
+        "concept": "Self-Inverse Property of Reflection"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C005",
+        "concept": "Orientation Reversal under Reflection"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C006",
+        "concept": "Distance Preservation under Reflection"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C007",
+        "concept": "Angle Preservation under Reflection"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C008",
+        "concept": "Collinearity and Parallelism Preservation under Reflection"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C009",
+        "concept": "Area and Perimeter Preservation under Reflection"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C010",
+        "concept": "Fixed Points and Invariant Sets of Reflection"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C011",
+        "concept": "Perpendicular Bisector Characterization of Reflection"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C012",
+        "concept": "Midpoint and Foot of Perpendicular in Reflection"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C013",
+        "concept": "Reflection of a Point in a Line (Plane in 3D)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C014",
+        "concept": "Central Symmetry (Point Reflection)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C015",
+        "concept": "Reflection of a Line in a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C016",
+        "concept": "Reflection of a Ray and a Segment"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C017",
+        "concept": "Reflection of a Circle in a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C018",
+        "concept": "Reflection of a Polygon and Axes of Symmetry"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C019",
+        "concept": "Coordinate Formula: Reflection in the x-axis"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C020",
+        "concept": "Coordinate Formula: Reflection in the y-axis"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C021",
+        "concept": "Coordinate Formula: Reflection in the Origin"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C022",
+        "concept": "Coordinate Formula: Reflection in the Line y = x"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C023",
+        "concept": "Coordinate Formula: Reflection in the Line y = -x"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C024",
+        "concept": "Coordinate Formula: Reflection in a General Line ax + by + c = 0"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C025",
+        "concept": "Vector Formulation: Reflection across a Line through the Origin (2D)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C026",
+        "concept": "3D Coordinate Formulas: Reflection in Coordinate Planes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C027",
+        "concept": "3D Vector Formulation: Reflection in an Arbitrary Plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C028",
+        "concept": "Composition of Reflections in Intersecting Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C029",
+        "concept": "Composition of Reflections in Parallel Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C030",
+        "concept": "Glide Reflection"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C031",
+        "concept": "Orientation Parity under Multiple Reflections"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C032",
+        "concept": "Symmetry of Regular Polygons under Reflections"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C033",
+        "concept": "Angle Bisectors as Axes of Reflection"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C034",
+        "concept": "Behavior of Tangents and Normals under Reflection"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C035",
+        "concept": "Symmetry of Curves under Reflection"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Reflection",
+        "concept_id": "C036",
+        "concept": "Slope Transformation of Lines under Reflection"
+    }
+]

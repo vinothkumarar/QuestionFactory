@@ -1,0 +1,282 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C001",
+        "concept": "Definition of Rotation in the Plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C002",
+        "concept": "Center of Rotation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C003",
+        "concept": "Angle of Rotation and Direction Convention"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C004",
+        "concept": "Parameters Defining a Rotation (Center and Angle)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C005",
+        "concept": "Orientation Preservation under Rotation (Direct Isometry)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C006",
+        "concept": "Distance Preservation under Rotation (Isometry)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C007",
+        "concept": "Angle Preservation under Rotation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C008",
+        "concept": "Area Preservation under Rotation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C009",
+        "concept": "Preservation of Collinearity and Concurrency under Rotation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C010",
+        "concept": "Preservation of Parallelism and Perpendicularity under Rotation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C011",
+        "concept": "Fixed Points of a Rotation (Only the Center Except Trivial Cases)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C012",
+        "concept": "Invariant Sets under Rotation about a Center (e.g., Concentric Circles)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C013",
+        "concept": "Image of a Point under Rotation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C014",
+        "concept": "Image of a Line under Rotation and Special Cases (Through Center, 180°)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C015",
+        "concept": "Image of a Segment, Ray, and Angle under Rotation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C016",
+        "concept": "Image of a Circle and Arc under Rotation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C017",
+        "concept": "Image of a Polygon under Rotation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C018",
+        "concept": "Periodicity of Rotation Angles (Modulo 360° or 2π)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C019",
+        "concept": "Clockwise and Counterclockwise Conventions (Sign of Angle)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C020",
+        "concept": "Identity Rotation (Zero Angle)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C021",
+        "concept": "Inverse of a Rotation (Negative Angle)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C022",
+        "concept": "Composition of Rotations with the Same Center (Angle Addition)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C023",
+        "concept": "Composition of Rotations with Different Centers (Resulting Isometry)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C024",
+        "concept": "Commutativity Conditions for Rotations (Common Center vs Different Centers)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C025",
+        "concept": "Rotation as Composition of Two Reflections in Intersecting Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C026",
+        "concept": "Order of a Rotation and Cyclic Behavior"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C027",
+        "concept": "Rotational Symmetry of Figures"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C028",
+        "concept": "Center and Angle of Rotational Symmetry of a Figure"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C029",
+        "concept": "Rotational Symmetry of Regular Polygons (Order and Angle)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C030",
+        "concept": "Coordinate Representation of Rotation about the Origin (2D Cartesian)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C031",
+        "concept": "Coordinate Representation of Rotation about an Arbitrary Point (2D Cartesian)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C032",
+        "concept": "Special Plane Rotations (90°, 180°, 270°) and Their Effects"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C033",
+        "concept": "Locus under Rotation (Orbit of a Point as a Circle about the Center)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C034",
+        "concept": "Congruence Mapping via Rotation (Rotation as a Rigid Motion)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Transformations",
+        "subtopic": "Rotation",
+        "concept_id": "C035",
+        "concept": "Uniqueness of a Rotation from Its Parameters (Given Center and Angle)"
+    }
+]

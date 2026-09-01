@@ -1,0 +1,234 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C001",
+        "concept": "Right-Triangle Definition of Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C002",
+        "concept": "Unit Circle Definition of Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C003",
+        "concept": "General-Angle Trigonometric Ratios in the Cartesian Plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C004",
+        "concept": "Sine and Cosine as Unit Circle Coordinates"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C005",
+        "concept": "Tangent as Slope of the Terminal Ray"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C006",
+        "concept": "Reciprocal Trigonometric Ratios (Secant, Cosecant, Cotangent)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C007",
+        "concept": "Reciprocal Relationships among Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C008",
+        "concept": "Quotient Relationships among Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C009",
+        "concept": "Pythagorean Relationship among Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C010",
+        "concept": "Scale Invariance of Trigonometric Ratios in Similar Triangles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C011",
+        "concept": "Directed Length Convention for Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C012",
+        "concept": "Domain of Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C013",
+        "concept": "Range and Extremal Values of Sine and Cosine"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C014",
+        "concept": "Range of Secant and Cosecant"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C015",
+        "concept": "Undefined Points of Tangent, Cotangent, Secant, and Cosecant"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C016",
+        "concept": "Periodicity of Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C017",
+        "concept": "Angle Reduction Modulo 2π (and π for Tangent and Cotangent)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C018",
+        "concept": "Even–Odd Properties of Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C019",
+        "concept": "Signs of Trigonometric Ratios in Quadrants"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C020",
+        "concept": "Reference Angle and Reduction to First Quadrant"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C021",
+        "concept": "Co-function Relationships for Complementary Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C022",
+        "concept": "Allied Angle Relationships (π ± θ, 2π − θ, etc.)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C023",
+        "concept": "Trigonometric Ratios for Negative Angles"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C024",
+        "concept": "Standard Angle Values of Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C025",
+        "concept": "Special Right Triangles and Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C026",
+        "concept": "Symmetry of Trigonometric Ratios on the Unit Circle"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C027",
+        "concept": "Principal-Interval Monotonicity of Sine, Cosine, and Tangent"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C028",
+        "concept": "Coterminal Angles and Trigonometric Ratios"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Ratios and Identities",
+        "subtopic": "Trigonometric Ratios",
+        "concept_id": "C029",
+        "concept": "Range of Tangent and Cotangent"
+    }
+]

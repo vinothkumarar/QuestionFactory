@@ -1,0 +1,202 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C001",
+        "concept": "Triangle Centroid: Definition as Intersection of Medians"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C002",
+        "concept": "Concurrency of Medians in a Triangle"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C003",
+        "concept": "Coordinates of the Centroid of a Triangle (Arithmetic Mean of Vertices)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C004",
+        "concept": "Centroid Division Ratio on Medians (2:1 from Vertex)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C005",
+        "concept": "Centroid as Center of Mass for Equal Point Masses at Vertices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C006",
+        "concept": "Weighted Centroid (Barycenter) of a System of Points in the Plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C007",
+        "concept": "Location of Centroid Within a Triangle (Always Interior)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C008",
+        "concept": "Area Partition by Medians and Centroid into Six Equal Regions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C009",
+        "concept": "Symmetry of Centroid Under Permutation of Triangle Vertices"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C010",
+        "concept": "Associative and Averaging Properties of Centroid of Points"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C011",
+        "concept": "Centroid of Collinear Points Lies on the Common Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C012",
+        "concept": "Coincidence of Centroids of a Triangle and Its Medial Triangle"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C013",
+        "concept": "Centroid as the Average of Side Midpoints of a Triangle"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C014",
+        "concept": "Collinearity of Points in the Plane: Definition"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C015",
+        "concept": "Slope-Based Condition for Collinearity of Three Points"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C016",
+        "concept": "Zero-Area (Triangle Area) Condition for Collinearity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C017",
+        "concept": "Determinant Condition for Collinearity in 2D Coordinates"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C018",
+        "concept": "Vector Criterion for Collinearity via Linear Dependence of Displacement Vectors"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C019",
+        "concept": "Parametric (Affine Combination) Representation of Collinear Points"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C020",
+        "concept": "Relationship Between Segment Division (Internal/External) and Collinearity"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C021",
+        "concept": "Collinearity Involving Vertical Lines and Undefined Slopes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C022",
+        "concept": "Collinearity of More Than Three Points (Consistent Pairwise Conditions)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C023",
+        "concept": "Invariance of Collinearity Under Translations and Rotations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C024",
+        "concept": "Equivariance of Centroid Under Translations and Rotations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Geometry",
+        "chapter": "Coordinate Geometry Concepts",
+        "subtopic": "Centroid and Collinearity",
+        "concept_id": "C025",
+        "concept": "Degenerate Triangle as a Collinear Configuration of Vertices"
+    }
+]

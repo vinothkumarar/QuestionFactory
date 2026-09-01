@@ -1,0 +1,162 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C001",
+        "concept": "Family of Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C002",
+        "concept": "Degrees of Freedom of a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C003",
+        "concept": "One-Parameter Subfamily of Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C004",
+        "concept": "Slope–Intercept Parameterization of Line Families"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C005",
+        "concept": "Intercept Form Parameterization of Line Families"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C006",
+        "concept": "Normal Form Parameterization of Line Families"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C007",
+        "concept": "Sheaf of Lines Through a Fixed Point"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C008",
+        "concept": "Family of Lines Parallel to a Given Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C009",
+        "concept": "Family of Lines Perpendicular to a Given Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C010",
+        "concept": "Family of Lines Making a Fixed Angle with a Given Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C011",
+        "concept": "Family of Lines Through the Intersection of Two Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C012",
+        "concept": "Linear Combination Representation of a Family of Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C013",
+        "concept": "Concurrency in Families of Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C014",
+        "concept": "Geometric Interpretation of Family Parameters"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C015",
+        "concept": "Parameter Normalization and Uniqueness in Line Families"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C016",
+        "concept": "Orthogonal Family of Lines Corresponding to a Given Family"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C017",
+        "concept": "Constraint-Defined Subfamilies in Slope–Intercept Space"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C018",
+        "concept": "Intercept-Constrained Subfamilies of Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C019",
+        "concept": "Special and Degenerate Cases in Families of Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Family of Lines",
+        "concept_id": "C020",
+        "concept": "Transformation Between Family Representations of Lines"
+    }
+]

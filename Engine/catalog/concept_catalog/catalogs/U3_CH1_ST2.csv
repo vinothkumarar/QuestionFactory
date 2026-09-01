@@ -1,0 +1,33 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C001,Linear equation in two variables as geometric representation of a straight line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C002,General form of a straight line (ax + by + c = 0)
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C003,Equivalence of proportional linear equations representing the same line (scaling invariance)
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C004,Direction vector and normal vector of a line in 2D
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C005,Relationship between direction ratios and slope of a line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C006,Slope determined from the general form of a line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C007,Intercepts on coordinate axes derived from the general form of a line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C008,Slope-intercept form of a line (y = mx + c)
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C009,Point-slope form of a line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C010,Two-point form of a line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C011,Intercept form of a line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C012,Normal form of a line (x cos α + y sin α = p)
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C013,Parametric form of a line in 2D
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C014,Symmetric form of a line using direction ratios
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C015,Vector form of a line in 2D (r = r0 + t d)
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C016,Determinantal form of a line through two points
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C017,Vertical lines (x = constant) and undefined slope
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C018,Horizontal lines (y = constant) and zero slope
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C019,Coordinate axes as straight lines
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C020,Axis-parallel conditions expressed in the general form (ax + by + c = 0)
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C021,Criteria for parallel lines using slopes and coefficients
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C022,Criteria for perpendicular lines using slopes and coefficients
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C023,Family of lines parallel to a given line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C024,Family of lines perpendicular to a given line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C025,One-parameter family (pencil) of lines
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C026,Family of lines passing through a given point
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C027,Line through the intersection point of two given lines
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C028,Conversion between different equation forms of a line
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C029,Perpendicular distance of a line from the origin via its equation
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C030,Validity and degeneracy of linear equations in two variables
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C031,Half-planes determined by a line and the sign of ax + by + c
+Mathematics,Coordinate Geometry,Straight Lines,Equation of Straight Line,C032,Normalized general form of a line and uniqueness up to sign

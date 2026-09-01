@@ -1,0 +1,242 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C001",
+        "concept": "Definition of General Solution"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C002",
+        "concept": "Principal Solution and Base Interval"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C003",
+        "concept": "Fundamental Periods of Trigonometric Functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C004",
+        "concept": "Angular Equivalence Modulo Period"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C005",
+        "concept": "Even–Odd Symmetry of Trigonometric Functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C006",
+        "concept": "Existence Conditions from Function Ranges"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C007",
+        "concept": "Parametric Representation with Integer Parameters"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C008",
+        "concept": "Arithmetic Progression Structure of Solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C009",
+        "concept": "General Solution of sin x = a"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C010",
+        "concept": "General Solution of cos x = a"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C011",
+        "concept": "General Solution of tan x = a"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C012",
+        "concept": "General Solution of cot x = a"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C013",
+        "concept": "General Solution of sec x = a"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C014",
+        "concept": "General Solution of cosec x = a"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C015",
+        "concept": "Angle Equivalences for sin A = sin B"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C016",
+        "concept": "Angle Equivalences for cos A = cos B"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C017",
+        "concept": "Angle Equivalences for tan A = tan B"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C018",
+        "concept": "Effect of Angle Scaling on Period and Solution Density"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C019",
+        "concept": "Phase Shift Effects on Solution Sets"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C020",
+        "concept": "Domain Exclusions for Undefined Trigonometric Values"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C021",
+        "concept": "Reference Angle and Quadrant Families"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C022",
+        "concept": "Sign Symmetry in General Solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C023",
+        "concept": "General Solutions for Zeros of Trigonometric Functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C024",
+        "concept": "Extreme-Value Cases in General Solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C025",
+        "concept": "Multiple-Angle Equations in General Solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C026",
+        "concept": "Equations of the Form f(ax + b) = f(cx + d): General Solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C027",
+        "concept": "Restricting General Solutions to Specified Intervals"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C028",
+        "concept": "Degree and Radian Measures in General Solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C029",
+        "concept": "Reciprocal Relationships in General Solutions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "General Solutions",
+        "concept_id": "C030",
+        "concept": "Disjoint Solution Families and Duplication Avoidance"
+    }
+]

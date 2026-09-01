@@ -1,0 +1,162 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C001",
+        "concept": "Definition of Inclination of a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C002",
+        "concept": "Principal Range of Inclination"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C003",
+        "concept": "Periodicity of Inclination (Equivalence Modulo π)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C004",
+        "concept": "Definition of Slope of a Line"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C005",
+        "concept": "Relationship Between Slope and Inclination (m = tanθ)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C006",
+        "concept": "Slope via Coordinate Differences (Δy/Δx) for Non-Vertical Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C007",
+        "concept": "Well-definedness of Slope for Straight Lines (Except Vertical)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C008",
+        "concept": "Horizontal Lines: Zero Slope and Zero Inclination"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C009",
+        "concept": "Vertical Lines: Undefined Slope and Right-Angle Inclination"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C010",
+        "concept": "Sign of Slope and Nature of Inclination (Acute vs Obtuse)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C011",
+        "concept": "Monotonicity of a Line with Respect to Slope Sign"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C012",
+        "concept": "Magnitude of Slope and Geometric Steepness"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C013",
+        "concept": "Slope Criteria for Parallelism of Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C014",
+        "concept": "Slope Criteria for Perpendicularity of Lines"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C015",
+        "concept": "Slope from General Linear Equation Coefficients (Ax + By + C = 0)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C016",
+        "concept": "Dependence of Inclination on Choice of Reference Axes"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C017",
+        "concept": "Direction Ratios and Slope in the Plane"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C018",
+        "concept": "Principal Inclination from Slope (Arctangent and Branch Selection)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C019",
+        "concept": "Extended Real Interpretation of Slope (Including Infinity)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Coordinate Geometry",
+        "chapter": "Straight Lines",
+        "subtopic": "Slope and Inclination",
+        "concept_id": "C020",
+        "concept": "Standard Reference Slopes and Inclinations (y = x, y = −x)"
+    }
+]

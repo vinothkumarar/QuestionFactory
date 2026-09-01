@@ -329,6 +329,21 @@ class BatchAdapter:
                 question_data,
             )
 
+            archetype_id = question.archetype_id
+
+            if archetype_id:
+
+                short_archetype_id = (
+                    archetype_id.split("_")[-1]
+                )
+
+                question.question_code = (
+                    f"{batch.subtopic_code}_"
+                    f"S{batch.set_number}_"
+                    f"{short_archetype_id}_"
+                    f"Q{index:03d}"
+                )
+
             self._logger.debug(
                 "BUILT QUESTION: code=%s, options=%s, correct=%s",
                 question.question_code,

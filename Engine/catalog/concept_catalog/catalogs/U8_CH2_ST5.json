@@ -1,0 +1,290 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C001",
+        "concept": "Definition and classification of mixed trigonometric equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C002",
+        "concept": "Domain restrictions for mixed trigonometric functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C003",
+        "concept": "Periodicity and common period in mixed trigonometric equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C004",
+        "concept": "General solution structure for mixed trigonometric equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C005",
+        "concept": "Linear combinations of sine and cosine"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C006",
+        "concept": "Range constraints for a sin x + b cos x expressions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C007",
+        "concept": "Homogeneous forms in sin x and cos x"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C008",
+        "concept": "Ratio forms involving tan x and cot x"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C009",
+        "concept": "Reciprocal-function forms involving sec x and cosec x"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C010",
+        "concept": "Product forms of trigonometric functions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C011",
+        "concept": "Sum and difference of angle expressions within equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C012",
+        "concept": "Multiple-angle relationships within mixed equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C013",
+        "concept": "Phase-shifted trigonometric expressions in equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C014",
+        "concept": "Power-type expressions in sine and cosine"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C015",
+        "concept": "Equations with mixed arguments (m x, n x)"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C016",
+        "concept": "Commensurability of arguments and solution alignment"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C017",
+        "concept": "Single-function representation of mixed trigonometric expressions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C018",
+        "concept": "Trigonometric polynomial equations in sin x and cos x"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C019",
+        "concept": "Rational parametrization of sine and cosine"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C020",
+        "concept": "Pythagorean relationships in mixed trigonometric equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C021",
+        "concept": "Co-function relationships in equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C022",
+        "concept": "Parity and symmetry of trigonometric functions in equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C023",
+        "concept": "Complementary and supplementary angle relationships in equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C024",
+        "concept": "Domain exclusions and singularities for tangent, cotangent, secant, cosecant"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C025",
+        "concept": "Quadrant-based sign analysis in solution sets"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C026",
+        "concept": "Solution set operations for combined trigonometric conditions"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C027",
+        "concept": "Validation of solutions and extraneous roots in mixed equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C028",
+        "concept": "Interval-restricted solution description for mixed equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C029",
+        "concept": "Parameter dependence and solvability conditions in mixed equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C030",
+        "concept": "Simultaneous mixed trigonometric equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C031",
+        "concept": "Absolute-value expressions in mixed trigonometric equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C032",
+        "concept": "Graphical interpretation of mixed trigonometric equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C033",
+        "concept": "Product-to-sum and sum-to-product transformations in equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C034",
+        "concept": "Half-angle relationships in mixed trigonometric equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C035",
+        "concept": "Affine transformations of the angle variable in mixed equations"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "Trigonometry",
+        "chapter": "Trigonometric Equations",
+        "subtopic": "Mixed Trigonometric Equations",
+        "concept_id": "C036",
+        "concept": "Range constraints for mixed trigonometric expressions"
+    }
+]

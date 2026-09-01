@@ -1,0 +1,18 @@
+subject,unit,chapter,subtopic,concept_id,concept
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C001,Triangle area as a plane geometric measure
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C002,Coordinate formula for triangle area from vertex coordinates
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C003,Oriented area and orientation of three points
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C004,Collinearity condition expressed via zero triangle area
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C005,Base–height formulation of triangle area in the coordinate plane
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C006,Triangle area from side lengths computed using the distance formula
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C007,"Invariance of triangle area under translations, rotations, and reflections"
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C008,Effect of dilations on triangle area scaling
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C009,Special-case area formulas with a vertex at the origin or vertices on coordinate axes
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C010,Triangle area with a side parallel to a coordinate axis
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C011,Area of triangle formed by a line and the coordinate axes
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C012,Area of triangle determined by three non-parallel intersecting lines
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C013,Equality of areas for triangles on the same base and between the same parallels
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C014,Area ratios for triangles sharing a common base or a common altitude
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C015,Area bisection property of a median in a triangle
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C016,Area relations involving midpoints and the medial triangle
+Mathematics,Geometry,Coordinate Geometry Concepts,Area of Triangle,C017,Partition of a triangle’s area by an interior or exterior point
