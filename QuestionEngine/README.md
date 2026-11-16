@@ -124,3 +124,13 @@ The internal ST1 question-possibility catalogue is preserved at
   questions. The current pilot exports unverified drafts; independent answer
   and official syllabus-scope verification remain mandatory before approval.
 
+### ST1 answer-verification coverage
+
+The default composite answer-verifier stack includes a deterministic N/W/Z
+membership verifier for tightly specified single-correct MCQs. It evaluates
+integer, whole-number and natural-number membership using exact rational
+arithmetic (not floating-point approximations). Natural-number questions must
+state whether zero is included. The verifier rejects ambiguous wording,
+duplicate numeric options, zero/multiple correct options and unsupported
+answer formats; those candidates remain pending rather than being auto-approved.
+
