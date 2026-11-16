@@ -2,13 +2,14 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from itertools import islice
 from typing import Iterable, List
 
 from .generation import GenerationRequest, QuestionGenerationProvider
 from .models import QuestionCandidate, QuestionOrigin
 from .quality import QuestionQualityGate, QualityDecision
+from .verification import QuestionAnswerVerifier
 
 
 @dataclass(frozen=True)
@@ -35,14 +36,58 @@ class OriginalQuestionEngine:
         self,
         request: GenerationRequest,
         provider: QuestionGenerationProvider,
+        verifier: QuestionAnswerVerifier,
     ) -> OriginalEngineResult:
-        """Generate a bounded candidate batch, then apply the normal review gates.
+        """Generate candidates, independently verify answers, then review.
 
-        The provider does not get to approve its own output. Every candidate is
-        passed through the same hard gates and duplicate checks as supplied data.
+        Any answer_verified flag supplied by the generator is discarded. Only
+        the separate verifier can restore that flag, and only with method and
+        evidence. Every resulting candidate then passes the shared quality gate.
         """
+        verified_candidates = []
         candidates = islice(provider.generate(request), request.candidate_limit)
-        return self.review(candidates)
+        for candidate in candidates:
+            unverified = replace(
+                candidate,
+                answer_verified=False,
+                answer_verification_method="",
+                answer_verification_evidence="",
+                answer_verification_notes="",
+            )
+            verification = verifier.verify(unverified)
+            if verification.question_id != candidate.question_id:
+                verified_candidates.append(
+                    replace(
+                        unverified,
+                        answer_verification_notes=(
+                            "Verifier returned a mismatched question_id"
+                        ),
+                    )
+                )
+            elif (
+                verification.verified
+                and verification.method.strip()
+                and verification.evidence.strip()
+            ):
+                verified_candidates.append(
+                    replace(
+                        unverified,
+                        answer_verified=True,
+                        answer_verification_method=verification.method.strip(),
+                        answer_verification_evidence=verification.evidence.strip(),
+                    )
+                )
+            else:
+                verified_candidates.append(
+                    replace(
+                        unverified,
+                        answer_verification_notes=(
+                            verification.reason
+                            or "Independent verifier did not approve the answer"
+                        ),
+                    )
+                )
+        return self.review(verified_candidates)
 
     def review(self, candidates: Iterable[QuestionCandidate]) -> OriginalEngineResult:
         approved: List[QuestionCandidate] = []
