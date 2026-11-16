@@ -122,6 +122,11 @@ class ExamSyllabusRegistry:
                         f"APPROVED mapping {mapping.mapping_id} requires a retrieved and "
                         "SHA-256-fingerprinted official source document"
                     )
+                if not source.effective_from:
+                    raise ExamSyllabusRegistryError(
+                        f"APPROVED mapping {mapping.mapping_id} requires an explicit "
+                        "effective_from date for the official syllabus source"
+                    )
             if mapping.review_status != "PROVISIONAL_REVIEW_REQUIRED":
                 audit = (
                     mapping.reviewer_id, mapping.reviewed_at,
