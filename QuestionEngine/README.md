@@ -21,7 +21,7 @@ An independent implementation of two question workflows for JEE Main, JEE Advanc
 - Conservative deterministic integer-expression verifier for the exact `Evaluate: <integer expression>` format. It uses a restricted AST interpreter (no `eval`), checks four distinct integer options and rejects unsupported formats or incorrect answers.
 - Conservative deterministic divisibility-rule verifier for the exact `Which of these integers is divisible by N?` single-correct MCQ format; checks all four options independently and rejects zero/multiple matches, malformed options or unsupported wording.
 - Approved-catalog scope verifier that checks the full subject → unit → chapter → subtopic ID chain and requires every referenced concept to be explicitly approved with audit metadata.
-- Exam-versioned official syllabus source/mapping registry with provenance, effective dates, optional document hash, reviewer audit fields and exact-match lookup; APPROVED mappings additionally require a retrieved official document with a recorded SHA-256 fingerprint.
+- Exam-versioned official syllabus source/mapping registry with provenance, effective dates, optional document hash, reviewer audit fields and exact-match lookup; APPROVED mappings additionally require a retrieved official document with a recorded SHA-256 fingerprint and an explicit effective-from date.
 - Exam-target scope-verification wrapper that requires a configured syllabus version and an approved official mapping for every exam target.
 - PYQ intake gate requiring paper provenance, verified transcription and traceable answer-key/solution reference.
 - Audited PYQ registry loader for CSV and XLSX, including duplicate-ID checks and acquisition reporting.
@@ -90,3 +90,10 @@ The ChatGPT Library contains a JEE 2002–2026 inventory with 247 paper/source r
 ## First concept-coverage pilot
 
 A provisional concept catalog for Mathematics U1–CH1–ST1 is maintained at `catalogs/maths_u1_ch1_st1_concepts.csv`. It is a planning aid, not an approved syllabus mapping. Every row is marked `PROVISIONAL_REVIEW_REQUIRED`; in particular, the natural-number convention and placement of absolute value/additive inverse/closure must be checked against the active exam syllabus and the approved chapter map before production generation. The catalog defines coverage candidates, not a target question count. Generate only where a distinct learning opportunity is justified.
+
+
+### JEE Main 2027 acquisition and Mathematics U1 pilot status
+
+NTA's official documents listing currently identifies a 1 MB entry titled `Syllabus 2027` (see the official [Syllabus 2027 page](https://jeemain.nta.nic.in/document/syllabus-2027/) and [Documents listing](https://jeemain.nta.nic.in/documents/)). A candidate CDN endpoint is recorded in `catalogs/exam_syllabus_sources.csv`, but download failed in the current environment because outbound DNS/network retrieval was unavailable. The endpoint response, PDF bytes and SHA-256 fingerprint are therefore **not verified**. Do not approve mappings or use an unofficial mirror as the authoritative syllabus source.
+
+The internal Mathematics U1 label is `Number System`. Do not equate that internal unit number with NTA's official Mathematics Unit 1 or generate exam-targeted questions from a numerical label match. All seven U1-CH1-ST1 concept candidates remain `PROVISIONAL_REVIEW_REQUIRED`, are excluded from production generation, and carry an explicit JEE Main 2027 mapping-pending warning. The source tracker records this blocker. Reattempt official PDF acquisition before exact wording extraction, reviewer mapping and approval.
