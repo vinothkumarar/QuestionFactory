@@ -6,7 +6,7 @@ import ast
 import operator
 import re
 from dataclasses import dataclass
-from typing import Callable, Protocol
+from typing import Callable, Iterable, Protocol
 
 from .models import QuestionCandidate
 
