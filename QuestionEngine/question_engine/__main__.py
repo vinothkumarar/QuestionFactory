@@ -17,11 +17,14 @@ def main() -> int:
         default=Path("Engine") / "curriculum",
         help="Path to the existing curriculum folder",
     )
-    parser.add_argument(
-        "--pyq-registry",
-        type=Path,
-        default=None,
+    registry_group = parser.add_mutually_exclusive_group()
+    registry_group.add_argument(
+        "--pyq-registry", type=Path, default=None,
         help="Optional audited PYQ source-registry CSV to summarize",
+    )
+    registry_group.add_argument(
+        "--pyq-registry-xlsx", type=Path, default=None,
+        help="Optional audited PYQ source-registry XLSX to summarize",
     )
     args = parser.parse_args()
 
@@ -32,8 +35,12 @@ def main() -> int:
     print(f"Chapters: {len(snapshot.chapters)}")
     print(f"Subtopics: {len(snapshot.subtopics)}")
 
-    if args.pyq_registry:
-        registry = PYQSourceRegistry.load_csv(args.pyq_registry)
+    if args.pyq_registry or args.pyq_registry_xlsx:
+        registry = (
+            PYQSourceRegistry.load_csv(args.pyq_registry)
+            if args.pyq_registry
+            else PYQSourceRegistry.load_xlsx(args.pyq_registry_xlsx)
+        )
         summary = registry.summary()
         print("\\nPYQ SOURCE REGISTRY (acquisition status only)")
         print(f"Records: {summary.total_records}")
