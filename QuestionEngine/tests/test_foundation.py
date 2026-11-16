@@ -657,5 +657,63 @@ class IntegerArithmeticVerifierTests(unittest.TestCase):
         ).verified)
 
 
+class ApprovedCatalogScopeVerifierTests(unittest.TestCase):
+    def setUp(self):
+        from question_engine.curriculum import CurriculumSnapshot
+        from question_engine.concept_catalog import ConceptCatalog, ConceptEntry
+        from question_engine.scope_verification import ApprovedCatalogScopeVerifier
+
+        snapshot = CurriculumSnapshot(
+            subjects=[{"id": "S1", "name": "Mathematics"}],
+            units=[{"id": "U1", "subject_id": "S1"}],
+            chapters=[{"id": "C1", "unit_id": "U1"}],
+            subtopics=[{"id": "ST1", "chapter_id": "C1", "code": "U1_CH1_ST1"}],
+        )
+        catalog = ConceptCatalog([
+            ConceptEntry(
+                "INTEGER-CLASS", "U1_CH1_ST1", "Integer classification",
+                "Classify integers.", "APPROVED",
+                reviewer_id="reviewer", reviewed_at="2026-11-16T12:00:00Z",
+                review_source="Approved syllabus mapping v1",
+                approval_rationale="Explicitly reviewed against the approved scope.",
+            ),
+            ConceptEntry(
+                "PROVISIONAL", "U1_CH1_ST1", "Provisional",
+                "Pending review.", "PROVISIONAL_REVIEW_REQUIRED",
+            ),
+        ])
+        self.verifier = ApprovedCatalogScopeVerifier(snapshot, catalog)
+
+    def _question(self, **overrides):
+        values = dict(
+            question_id="SCOPE-001", origin=QuestionOrigin.ORIGINAL,
+            subject_id="S1", unit_id="U1", chapter_id="C1", subtopic_id="ST1",
+            question_text="Classify the integer 7.", answer_type="SHORT_ANSWER",
+            correct_answer="integer", explanation="7 is an integer.",
+            concept_ids=("INTEGER-CLASS",),
+        )
+        values.update(overrides)
+        return QuestionCandidate(**values)
+
+    def test_approves_exact_hierarchy_and_approved_concept_mapping(self):
+        result = self.verifier.verify(self._question())
+        self.assertTrue(result.verified)
+        self.assertIn("Approved syllabus mapping v1", result.evidence)
+
+    def test_rejects_mismatched_parent_hierarchy(self):
+        result = self.verifier.verify(self._question(unit_id="WRONG"))
+        self.assertFalse(result.verified)
+        self.assertIn("unit_id", result.reason)
+
+    def test_rejects_provisional_concept(self):
+        result = self.verifier.verify(self._question(concept_ids=("PROVISIONAL",)))
+        self.assertFalse(result.verified)
+        self.assertIn("not approved", result.reason)
+
+    def test_rejects_unknown_subtopic(self):
+        result = self.verifier.verify(self._question(subtopic_id="UNKNOWN"))
+        self.assertFalse(result.verified)
+
+
 if __name__ == "__main__":
     unittest.main()
