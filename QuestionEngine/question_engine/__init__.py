@@ -8,6 +8,7 @@ from .quality import QuestionQualityGate
 from .pyq_registry import PYQSourceRegistry
 from .pdf_ingest import PDFTextExtractor, PDFExtractionResult, PDFPageText
 from .verification import AnswerVerificationResult, QuestionAnswerVerifier
+from .scope_verification import ScopeVerificationResult, QuestionScopeVerifier
 from .openai_provider import OpenAIQuestionGenerationProvider, OpenAIProviderError
 
 __all__ = [
@@ -26,6 +27,8 @@ __all__ = [
     "PDFPageText",
     "AnswerVerificationResult",
     "QuestionAnswerVerifier",
+    "ScopeVerificationResult",
+    "QuestionScopeVerifier",
     "OpenAIQuestionGenerationProvider",
     "OpenAIProviderError",
 ]
