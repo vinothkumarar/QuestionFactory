@@ -197,3 +197,63 @@ class ExamSyllabusRegistry:
             item for item in self.mappings
             if item.review_status == "PROVISIONAL_REVIEW_REQUIRED"
         )
+
+
+class ExamVersionedQuestionScopeVerifier:
+    """Require reviewed official syllabus mappings for every requested exam."""
+
+    METHOD = "exam-versioned-official-syllabus-v1"
+
+    def __init__(self, curriculum, base_verifier, registry, exam_versions):
+        self.curriculum = curriculum
+        self.base_verifier = base_verifier
+        self.registry = registry
+        self.exam_versions = dict(exam_versions)
+
+    def verify(self, question):
+        from .scope_verification import ScopeVerificationResult
+
+        base = self.base_verifier.verify(question)
+        if not base.verified:
+            return ScopeVerificationResult(
+                question.question_id, False, self.METHOD, "",
+                "Internal curriculum/concept check failed: " + base.reason,
+            )
+        if not question.exam_targets:
+            return ScopeVerificationResult(
+                question.question_id, False, self.METHOD, "",
+                "Question has no exam_targets; exam-specific scope cannot be verified",
+            )
+        subtopic = next(
+            (row for row in self.curriculum.subtopics if row.get("id") == question.subtopic_id),
+            None,
+        )
+        if subtopic is None:
+            return ScopeVerificationResult(
+                question.question_id, False, self.METHOD, "",
+                "Question subtopic_id is not present in the loaded curriculum",
+            )
+        evidence = [base.evidence]
+        for exam in question.exam_targets:
+            version = self.exam_versions.get(exam, "")
+            if not version:
+                return ScopeVerificationResult(
+                    question.question_id, False, self.METHOD, "",
+                    f"No explicitly configured syllabus version for exam target: {exam}",
+                )
+            mapping = self.registry.approved_mapping(
+                exam, version, question.subject_id, subtopic.get("code", "")
+            )
+            if mapping is None:
+                return ScopeVerificationResult(
+                    question.question_id, False, self.METHOD, "",
+                    f"No unique APPROVED official syllabus mapping for "
+                    f"{exam}/{version}/{question.subject_id}/{subtopic.get('code', '')}",
+                )
+            evidence.append(
+                f"{exam} {version}: {mapping.official_wording} "
+                f"(source {mapping.source_id}; review {mapping.review_source})"
+            )
+        return ScopeVerificationResult(
+            question.question_id, True, self.METHOD, "; ".join(evidence)
+        )
