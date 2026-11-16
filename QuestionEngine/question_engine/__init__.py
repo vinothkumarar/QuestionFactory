@@ -16,7 +16,11 @@ from .scope_verification import (
 )
 from .pyq_segmenter import PYQTextSegmenter, PYQTextFragment, PYQSegmentationResult
 from .openai_provider import OpenAIQuestionGenerationProvider, OpenAIProviderError
-from .exam_syllabus import (\n    ExamSyllabusRegistry, ExamSyllabusRegistryError, ExamSyllabusSource, ExamSyllabusMapping,\n)\n
+from .exam_syllabus import (
+    ExamSyllabusRegistry, ExamSyllabusRegistryError, ExamSyllabusSource,
+    ExamSyllabusMapping, ExamVersionedQuestionScopeVerifier,
+)
+
 __all__ = [
     "CurriculumLoader", "CurriculumSnapshot", "ConceptCatalog",
     "ConceptCatalogError", "ConceptEntry", "QuestionCandidate",
@@ -27,4 +31,8 @@ __all__ = [
     "IntegerArithmeticExpressionVerifier", "ScopeVerificationResult",
     "QuestionScopeVerifier", "ApprovedCatalogScopeVerifier",
     "PYQTextSegmenter", "PYQTextFragment", "PYQSegmentationResult",
-    "OpenAIQuestionGenerationProvider", "OpenAIProviderError",\n    "ExamSyllabusRegistry", "ExamSyllabusRegistryError",\n    "ExamSyllabusSource", "ExamSyllabusMapping",\n]
+    "OpenAIQuestionGenerationProvider", "OpenAIProviderError",
+    "ExamSyllabusRegistry", "ExamSyllabusRegistryError",
+    "ExamSyllabusSource", "ExamSyllabusMapping",
+    "ExamVersionedQuestionScopeVerifier",
+]
