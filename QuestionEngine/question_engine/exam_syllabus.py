@@ -116,6 +116,12 @@ class ExamSyllabusRegistry:
                 raise ExamSyllabusRegistryError(
                     f"Unsupported review_status for {mapping.mapping_id}: {mapping.review_status}"
                 )
+            if mapping.review_status == "APPROVED":
+                if not source.document_sha256 or not source.retrieved_at:
+                    raise ExamSyllabusRegistryError(
+                        f"APPROVED mapping {mapping.mapping_id} requires a retrieved and "
+                        "SHA-256-fingerprinted official source document"
+                    )
             if mapping.review_status != "PROVISIONAL_REVIEW_REQUIRED":
                 audit = (
                     mapping.reviewer_id, mapping.reviewed_at,
