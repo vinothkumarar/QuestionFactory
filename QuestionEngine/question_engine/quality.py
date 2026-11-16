@@ -40,7 +40,13 @@ class QuestionQualityGate:
         if not question.explanation.strip():
             reasons.append("Missing explanation")
         if not question.syllabus_scope_verified:
-            reasons.append("Syllabus scope has not been verified")
+            detail = question.syllabus_verification_notes.strip()
+            reason = "Syllabus scope has not been verified"
+            reasons.append(f"{reason}: {detail}" if detail else reason)
+        elif not question.syllabus_verification_method.strip():
+            reasons.append("Independent syllabus verification method is missing")
+        elif not question.syllabus_verification_evidence.strip():
+            reasons.append("Independent syllabus verification evidence is missing")
         if not question.answer_verified:
             detail = question.answer_verification_notes.strip()
             reason = "Correct answer has not been independently verified"
