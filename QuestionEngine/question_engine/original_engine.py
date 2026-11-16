@@ -70,7 +70,7 @@ class OriginalQuestionEngine:
         for unverified in self.generate_drafts(request, provider):
             unverified = replace(unverified, answer_verification_notes="")
             verification = verifier.verify(unverified)
-            if verification.question_id != candidate.question_id:
+            if verification.question_id != unverified.question_id:
                 verified_candidates.append(
                     replace(
                         unverified,
