@@ -525,7 +525,8 @@ class PYQSegmentationTests(unittest.TestCase):
         self.assertEqual(result[0].detected_option_labels, ("A", "B", "C", "D"))
         self.assertIn("Which of the following", result[0].raw_text)
         self.assertEqual(result[0].source_sha256, "abc123")
-        self.assertTrue(result[0].needs_manual_review)
+        self.assertFalse(result[0].needs_manual_review)
+        self.assertTrue(result[1].needs_manual_review)
         self.assertTrue(any("continue onto the next page" in reason for reason in result[1].pending_reasons))
 
     def test_unrecognized_page_is_preserved_as_pending_not_discarded(self):
