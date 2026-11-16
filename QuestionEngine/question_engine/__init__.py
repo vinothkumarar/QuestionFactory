@@ -10,7 +10,7 @@ from .pyq_registry import PYQSourceRegistry
 from .pdf_ingest import PDFTextExtractor, PDFExtractionResult, PDFPageText
 from .verification import (
     AnswerVerificationResult, QuestionAnswerVerifier, IntegerArithmeticExpressionVerifier,
-    DivisibilityRuleVerifier,
+    DivisibilityRuleVerifier, CompositeQuestionAnswerVerifier,
 )
 from .scope_verification import (
     ScopeVerificationResult, QuestionScopeVerifier, ApprovedCatalogScopeVerifier,
@@ -29,7 +29,7 @@ __all__ = [
     "QuestionOrigin", "QuestionQualityScores", "QuestionQualityGate",
     "PYQSourceRegistry", "PDFTextExtractor", "PDFExtractionResult",
     "PDFPageText", "AnswerVerificationResult", "QuestionAnswerVerifier",
-    "IntegerArithmeticExpressionVerifier", "DivisibilityRuleVerifier", "ScopeVerificationResult",
+    "IntegerArithmeticExpressionVerifier", "DivisibilityRuleVerifier", "CompositeQuestionAnswerVerifier", "ScopeVerificationResult",
     "QuestionScopeVerifier", "ApprovedCatalogScopeVerifier",
     "PYQTextSegmenter", "PYQTextFragment", "PYQSegmentationResult",
     "OpenAIQuestionGenerationProvider", "OpenAIProviderError",
