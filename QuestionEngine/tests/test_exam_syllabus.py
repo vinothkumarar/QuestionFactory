@@ -7,6 +7,7 @@ from question_engine.exam_syllabus import (
     ExamSyllabusRegistry,
     ExamSyllabusRegistryError,
     ExamSyllabusSource,
+    ExamVersionedQuestionScopeVerifier,
 )
 
 
@@ -104,6 +105,72 @@ class ExamSyllabusRegistryTests(unittest.TestCase):
             registry = ExamSyllabusRegistry.load_csv(sources_path, mappings_path)
         self.assertEqual(len(registry.sources), 1)
         self.assertEqual(len(registry.mappings), 0)
+
+
+class ExamVersionedScopeIntegrationTests(unittest.TestCase):
+    def test_requires_approved_mapping_for_exam_target(self):
+        from question_engine.curriculum import CurriculumSnapshot
+        from question_engine.scope_verification import ScopeVerificationResult
+
+        curriculum = CurriculumSnapshot(
+            subjects=[{"id": "MATHEMATICS"}], units=[], chapters=[],
+            subtopics=[{"id": "ST1", "code": "U1_CH1_ST1"}],
+        )
+
+        class PassingBaseVerifier:
+            def verify(self, question):
+                return ScopeVerificationResult(question.question_id, True, "base", "internal check passed")
+
+        approved = mapping(
+            review_status="APPROVED", reviewer_id="reviewer",
+            reviewed_at="2026-11-16T10:00:00Z",
+            review_source="Official syllabus PDF page 3",
+            approval_rationale="Exact official wording manually mapped.",
+        )
+        registry = ExamSyllabusRegistry([source()], [approved])
+        verifier = ExamVersionedQuestionScopeVerifier(
+            curriculum, PassingBaseVerifier(), registry, {"JEE Main": "2026"}
+        )
+
+        class Question:
+            question_id = "Q-EXAM-1"
+            subject_id = "MATHEMATICS"
+            subtopic_id = "ST1"
+            exam_targets = ("JEE Main",)
+
+        result = verifier.verify(Question())
+        self.assertTrue(result.verified)
+        self.assertIn("JEE Main 2026", result.evidence)
+
+    def test_rejects_missing_mapping_and_unconfigured_version(self):
+        from question_engine.curriculum import CurriculumSnapshot
+        from question_engine.scope_verification import ScopeVerificationResult
+
+        curriculum = CurriculumSnapshot(
+            subjects=[{"id": "MATHEMATICS"}], units=[], chapters=[],
+            subtopics=[{"id": "ST1", "code": "U1_CH1_ST1"}],
+        )
+
+        class PassingBaseVerifier:
+            def verify(self, question):
+                return ScopeVerificationResult(question.question_id, True, "base", "ok")
+
+        class Question:
+            question_id = "Q-EXAM-2"
+            subject_id = "MATHEMATICS"
+            subtopic_id = "ST1"
+            exam_targets = ("JEE Advanced",)
+
+        verifier = ExamVersionedQuestionScopeVerifier(
+            curriculum, PassingBaseVerifier(), ExamSyllabusRegistry([source()], []),
+            {"JEE Advanced": "2026"},
+        )
+        self.assertFalse(verifier.verify(Question()).verified)
+
+        verifier_without_version = ExamVersionedQuestionScopeVerifier(
+            curriculum, PassingBaseVerifier(), ExamSyllabusRegistry([source()], []), {}
+        )
+        self.assertIn("No explicitly configured", verifier_without_version.verify(Question()).reason)
 
 
 if __name__ == "__main__":
