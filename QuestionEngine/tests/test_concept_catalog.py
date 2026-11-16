@@ -16,7 +16,8 @@ class ConceptCatalogTests(unittest.TestCase):
         self.assertEqual(len(catalog.for_subtopic("U1_CH1_ST1")), 7)
         self.assertEqual(catalog.approved_for_generation("U1_CH1_ST1"), ())
         self.assertTrue(all(
-            "JEE Main 2027 mapping pending" in entry.notes
+            "JEE Main mapping pending" in entry.notes
+            and "official 2026 Mathematics Unit 1 is Sets, Relations and Functions" in entry.notes
             for entry in catalog.for_subtopic("U1_CH1_ST1")
         ))
 
