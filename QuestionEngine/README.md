@@ -79,3 +79,8 @@ The ChatGPT Library contains a JEE 2002–2026 inventory with 247 paper/source r
 - The current branch is `feature/dual-question-engine-v1`; PR #2 remains a draft.
 - Do not merge until the pilot, independent verification adapters and import contract have been reviewed.
 - Usage rights must be reviewed before external redistribution of historical paper content.
+
+
+## First concept-coverage pilot
+
+A provisional concept catalog for Mathematics U1–CH1–ST1 is maintained at `catalogs/maths_u1_ch1_st1_concepts.csv`. It is a planning aid, not an approved syllabus mapping. Every row is marked `PROVISIONAL_REVIEW_REQUIRED`; in particular, the natural-number convention and placement of absolute value/additive inverse/closure must be checked against the active exam syllabus and the approved chapter map before production generation. The catalog defines coverage candidates, not a target question count. Generate only where a distinct learning opportunity is justified.
