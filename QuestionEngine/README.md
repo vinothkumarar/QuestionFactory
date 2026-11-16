@@ -67,8 +67,8 @@ Generate up to three unverified draft candidates for Mathematics U1–CH1–ST1:
 PYTHONPATH=QuestionEngine python -m question_engine.pilot \
   --subtopic-code U1_CH1_ST1 \
   --exam-target 'JEE Main' \
-  --concept-id natural-numbers \
-  --outcome 'Classify natural numbers, whole numbers and integers.' \
+  --concept-id NS-NUMBER-SETS \
+  --outcome 'Distinguish natural numbers, whole numbers and integers using the adopted convention for whether zero belongs to the natural numbers.' \
   --candidate-limit 3 \
   --output output/maths_u1_ch1_st1_drafts.csv
 ~~~
@@ -106,6 +106,9 @@ The internal ST1 question-possibility catalogue is preserved at
 `QuestionEngine/catalogs/maths_u1_ch1_st1_archetypes.csv`.
 
 - Version 1 contains 40 archetype recipes mapped to all 20 existing ST1 QPC IDs.
+- `question_engine.archetype_catalog.ArchetypeCatalog` loads the recipes and
+  rejects duplicate IDs, missing QPC coverage, source-description drift and
+  unsupported scope states.
 - `QuestionEngine/tests/test_st1_archetype_catalog.py` checks unique IDs,
   complete QPC coverage, exact source-description matching, required design
   fields and the blocked-source rule for QP016.
