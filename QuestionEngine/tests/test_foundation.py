@@ -78,6 +78,18 @@ class QualityTests(unittest.TestCase):
         self.assertEqual(len(result.approved), 1)
         self.assertEqual(len(result.duplicates), 1)
 
+    def test_pyq_inspired_question_requires_source_pyq_identity(self):
+        question = make_question(
+            origin=QuestionOrigin.PYQ_INSPIRED,
+            inspired_by_pyq_id="JEE-MAIN-2025-P1-S1-Q12",
+        )
+        self.assertTrue(QuestionQualityGate().evaluate(question).approved)
+
+        missing_source = make_question(origin=QuestionOrigin.PYQ_INSPIRED)
+        result = QuestionQualityGate().evaluate(missing_source)
+        self.assertFalse(result.approved)
+        self.assertIn("PYQ-inspired question lacks its source PYQ ID", result.reasons)
+
 
 class PYQTests(unittest.TestCase):
     def test_unverified_pyq_stays_pending(self):
