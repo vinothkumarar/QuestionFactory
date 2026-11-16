@@ -773,5 +773,77 @@ class ApprovedCatalogScopeVerifierTests(unittest.TestCase):
         self.assertFalse(result.verified)
 
 
+class CompositeQuestionAnswerVerifierTests(unittest.TestCase):
+    def setUp(self):
+        from question_engine.verification import CompositeQuestionAnswerVerifier
+        self.Composite = CompositeQuestionAnswerVerifier
+
+    def test_uses_first_independent_verifier_that_proves_answer(self):
+        class RejectingVerifier:
+            def verify(self, question):
+                return AnswerVerificationResult(
+                    question.question_id, False, "unsupported-v1", "",
+                    "Question format is outside this verifier's scope",
+                )
+
+        class AcceptingVerifier:
+            def verify(self, question):
+                return AnswerVerificationResult(
+                    question.question_id, True, "independent-check-v1",
+                    "Recomputed result and matched the unique answer.",
+                )
+
+        result = self.Composite([
+            RejectingVerifier(), AcceptingVerifier()
+        ]).verify(make_question())
+        self.assertTrue(result.verified)
+        self.assertEqual(result.method, "independent-check-v1")
+
+    def test_rejects_mismatched_question_id_from_verifier(self):
+        class MismatchedVerifier:
+            def verify(self, question):
+                return AnswerVerificationResult(
+                    "SOME-OTHER-ID", True, "bad-verifier-v1",
+                    "This must never approve the current question.",
+                )
+
+        result = self.Composite([MismatchedVerifier()]).verify(make_question())
+        self.assertFalse(result.verified)
+        self.assertIn("mismatched question_id", result.reason)
+
+    def test_rejects_positive_result_without_evidence(self):
+        class EvidenceFreeVerifier:
+            def verify(self, question):
+                return AnswerVerificationResult(
+                    question.question_id, True, "empty-evidence-v1", ""
+                )
+
+        result = self.Composite([EvidenceFreeVerifier()]).verify(make_question())
+        self.assertFalse(result.verified)
+        self.assertIn("lacked method or evidence", result.reason)
+
+    def test_requires_at_least_one_verifier(self):
+        with self.assertRaises(ValueError):
+            self.Composite([])
+
+    def test_reports_all_failed_verifiers_without_approving(self):
+        class RejectingVerifier:
+            def __init__(self, reason):
+                self.reason = reason
+
+            def verify(self, question):
+                return AnswerVerificationResult(
+                    question.question_id, False, "reject-v1", "", self.reason
+                )
+
+        result = self.Composite([
+            RejectingVerifier("not arithmetic"),
+            RejectingVerifier("not divisibility"),
+        ]).verify(make_question())
+        self.assertFalse(result.verified)
+        self.assertIn("not arithmetic", result.reason)
+        self.assertIn("not divisibility", result.reason)
+
+
 if __name__ == "__main__":
     unittest.main()
