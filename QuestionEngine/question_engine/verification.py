@@ -137,7 +137,7 @@ class DivisibilityRuleVerifier:
 
     METHOD = "deterministic-integer-divisibility-v1"
     QUESTION_PATTERN = re.compile(
-        r"^\\s*Which (?:of these|of the following) integers is divisible by (\\d+)\\?\\s*$",
+        r"^\s*Which (?:of these|of the following) integers is divisible by (\d+)\?\s*$",
         re.IGNORECASE,
     )
     MAX_DIVISOR = 10**6
@@ -196,7 +196,7 @@ class DivisibilityRuleVerifier:
     @staticmethod
     def _parse_integer(value: str) -> int | None:
         candidate = value.strip()
-        if not re.fullmatch(r"[+-]?\\d+", candidate):
+        if not re.fullmatch(r"[+-]?\d+", candidate):
             return None
         try:
             return int(candidate)
