@@ -15,6 +15,7 @@ from question_engine.models import (
 )
 from question_engine.original_engine import OriginalQuestionEngine
 from question_engine.pyq_engine import PYQPracticeEngine
+from question_engine.pyq_registry import PYQSourceRegistry
 from question_engine.quality import QuestionQualityGate
 
 
@@ -173,6 +174,43 @@ class ExportTests(unittest.TestCase):
         self.assertEqual(exported["exam"], "JEE Main")
         self.assertEqual(exported["source_file"], "paper.pdf")
         self.assertTrue(exported["transcription_verified"])
+
+
+class PYQRegistryTests(unittest.TestCase):
+    def test_loads_source_manifest_without_claiming_papers_are_acquired(self):
+        content = (
+            "PYQ_ID,Year,Exam,Paper,Language,Source,Primary Source URL,PDF URL,"
+            "Answer Key URL,Solution URL,Acquisition Status,PDF Verified,"
+            "Answer Key Verified,Audit Status\\n"
+            "JEE-2025-P1,2025,JEE Main,Paper 1,English,Official archive,"
+            "https://example.org/archive,, , ,Not yet acquired,No,No,Ready for acquisition\\n"
+            "JEE-2024-P2,2024,JEE Advanced,Paper 2,English,Official archive,"
+            "https://example.org/archive,https://example.org/paper.pdf,"
+            "https://example.org/key.pdf,,Acquired,Yes,Yes,Verified\\n"
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "registry.csv"
+            path.write_text(content, encoding="utf-8")
+            registry = PYQSourceRegistry.load_csv(path)
+        summary = registry.summary()
+        self.assertEqual(summary.total_records, 2)
+        self.assertEqual(summary.direct_pdf_urls, 1)
+        self.assertEqual(summary.pdf_verified, 1)
+        self.assertEqual(summary.answer_keys_verified, 1)
+        self.assertEqual(summary.not_yet_acquired, 1)
+        self.assertFalse(registry.records[0].ready_for_verified_practice)
+
+    def test_registry_rejects_duplicate_pyq_ids(self):
+        content = (
+            "PYQ_ID,Year,Exam,Paper,Acquisition Status\\n"
+            "DUP,2025,JEE Main,Paper 1,Not yet acquired\\n"
+            "DUP,2024,JEE Main,Paper 2,Not yet acquired\\n"
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "registry.csv"
+            path.write_text(content, encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "duplicate PYQ_ID"):
+                PYQSourceRegistry.load_csv(path)
 
 
 class PYQTests(unittest.TestCase):
