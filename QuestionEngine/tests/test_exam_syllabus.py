@@ -168,6 +168,13 @@ class ExamSyllabusRegistryTests(unittest.TestCase):
         self.assertIsNone(registry.provisional_baseline_source("JEE Advanced", "2027"))
         with self.assertRaisesRegex(ExamSyllabusRegistryError, "four-digit year"):
             registry.provisional_baseline_source("JEE Main", "latest")
+        duplicate_year_source = source(
+            source_id="JEE-MAIN-2026-ALT",
+            official_source_title="Alternate official JEE Main 2026 source",
+        )
+        ambiguous = ExamSyllabusRegistry([source(), duplicate_year_source], [])
+        with self.assertRaisesRegex(ExamSyllabusRegistryError, "Ambiguous prior-year"):
+            ambiguous.provisional_baseline_source("JEE Main", "2027")
 
     def test_allows_unknown_publication_and_effective_dates_without_inventing_them(self):
         registry = ExamSyllabusRegistry(
