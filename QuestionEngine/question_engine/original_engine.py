@@ -10,6 +10,7 @@ from .generation import GenerationRequest, QuestionGenerationProvider
 from .models import QuestionCandidate, QuestionOrigin
 from .quality import QuestionQualityGate, QualityDecision
 from .verification import QuestionAnswerVerifier
+from .scope_verification import QuestionScopeVerifier
 
 
 @dataclass(frozen=True)
@@ -49,7 +50,10 @@ class OriginalQuestionEngine:
                     syllabus_scope_verified=False,
                     answer_verification_method="",
                     answer_verification_evidence="",
-                    answer_verification_notes="Awaiting independent answer and syllabus verification.",
+                    answer_verification_notes="Awaiting independent answer verification.",
+                    syllabus_verification_method="",
+                    syllabus_verification_evidence="",
+                    syllabus_verification_notes="Awaiting independent syllabus-scope verification.",
                 )
             )
         return drafts
@@ -58,50 +62,58 @@ class OriginalQuestionEngine:
         self,
         request: GenerationRequest,
         provider: QuestionGenerationProvider,
-        verifier: QuestionAnswerVerifier,
+        answer_verifier: QuestionAnswerVerifier,
+        scope_verifier: QuestionScopeVerifier,
     ) -> OriginalEngineResult:
-        """Generate candidates, independently verify answers, then review.
-
-        Any answer_verified flag supplied by the generator is discarded. Only
-        the separate verifier can restore that flag, and only with method and
-        evidence. Every resulting candidate then passes the shared quality gate.
-        """
+        """Generate drafts, independently verify answers and syllabus scope, then review."""
         verified_candidates = []
-        for unverified in self.generate_drafts(request, provider):
-            unverified = replace(unverified, answer_verification_notes="")
-            verification = verifier.verify(unverified)
-            if verification.question_id != unverified.question_id:
-                verified_candidates.append(
-                    replace(
-                        unverified,
-                        answer_verification_notes=(
-                            "Verifier returned a mismatched question_id"
-                        ),
-                    )
-                )
-            elif (
-                verification.verified
-                and verification.method.strip()
-                and verification.evidence.strip()
+        for draft in self.generate_drafts(request, provider):
+            answer_result = answer_verifier.verify(draft)
+            if (
+                answer_result.question_id != draft.question_id
+                or not answer_result.verified
+                or not answer_result.method.strip()
+                or not answer_result.evidence.strip()
             ):
+                detail = answer_result.reason or "Independent answer verification failed"
+                if answer_result.question_id != draft.question_id:
+                    detail = "Answer verifier returned a mismatched question_id"
                 verified_candidates.append(
-                    replace(
-                        unverified,
-                        answer_verified=True,
-                        answer_verification_method=verification.method.strip(),
-                        answer_verification_evidence=verification.evidence.strip(),
-                    )
+                    replace(draft, answer_verification_notes=detail)
                 )
-            else:
+                continue
+
+            answer_checked = replace(
+                draft,
+                answer_verified=True,
+                answer_verification_method=answer_result.method.strip(),
+                answer_verification_evidence=answer_result.evidence.strip(),
+                answer_verification_notes="",
+            )
+            scope_result = scope_verifier.verify(answer_checked)
+            if (
+                scope_result.question_id != draft.question_id
+                or not scope_result.verified
+                or not scope_result.method.strip()
+                or not scope_result.evidence.strip()
+            ):
+                detail = scope_result.reason or "Independent syllabus-scope verification failed"
+                if scope_result.question_id != draft.question_id:
+                    detail = "Scope verifier returned a mismatched question_id"
                 verified_candidates.append(
-                    replace(
-                        unverified,
-                        answer_verification_notes=(
-                            verification.reason
-                            or "Independent verifier did not approve the answer"
-                        ),
-                    )
+                    replace(answer_checked, syllabus_verification_notes=detail)
                 )
+                continue
+
+            verified_candidates.append(
+                replace(
+                    answer_checked,
+                    syllabus_scope_verified=True,
+                    syllabus_verification_method=scope_result.method.strip(),
+                    syllabus_verification_evidence=scope_result.evidence.strip(),
+                    syllabus_verification_notes="",
+                )
+            )
         return self.review(verified_candidates)
 
     def review(self, candidates: Iterable[QuestionCandidate]) -> OriginalEngineResult:
