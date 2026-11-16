@@ -2,7 +2,7 @@
 
 A small, independent foundation for two complementary question workflows:
 
-- **Original Question Engine** — accepts generated candidates only when they add meaningful learning value and pass quality gates.
+- **Original Question Engine** — reviews generated candidates only when they add meaningful learning value and pass quality gates.
 - **PYQ Practice Engine** — preserves historical questions with source provenance and keeps unverified transcriptions out of the verified practice collection.
 
 Both use the existing curriculum hierarchy and a shared question model. This package does not replace or modify the legacy `Engine/` implementation.
@@ -27,22 +27,28 @@ The loader reads the existing files under `Engine/curriculum/`:
 
 It includes Mathematics, Physics, Chemistry and Biology. Aptitude is deliberately excluded from this examination scope. Extra historical columns such as `created_at` are tolerated but not required.
 
-## Current scope
+**Current data finding:** Biology is listed in `subjects.csv`, but its current units, chapters and subtopics CSV files are empty. The loader reports Biology as incomplete; it does not invent curriculum records. The existing Mathematics, Physics and Chemistry data is loaded and relationship-checked.
+
+## Current implementation boundary
 
 This first foundation provides:
 - curriculum loading and relationship validation;
 - a shared question data model;
-- explicit quality gates and duplicate checks;
-- separate original-question review and PYQ provenance intake;
+- explicit quality gates and exact-duplicate checks;
+- separate original/PYQ-inspired review and PYQ provenance intake;
+- a curriculum readiness command;
 - standard-library unit tests.
 
-It does **not** claim to extract 20 years of papers automatically or to generate verified academic content without a configured provider and source material. PDF/OCR extraction, AI provider integration, practice delivery and final CSV mapping are subsequent increments.
+The original engine currently reviews candidates; an AI generation provider is not yet wired in. The PYQ engine currently verifies intake metadata; bulk PDF/OCR extraction and 20-year paper collection are not yet implemented. These are the next delivery increments, not features we claim are already complete.
+
+Exact PYQs require traceable paper provenance, verified transcription and verified answer evidence before they enter the verified practice collection. Usage rights must be reviewed before external redistribution.
 
 ## Run
 
 From the repository root:
 
 ```bash
+PYTHONPATH=QuestionEngine python -m question_engine --curriculum-root Engine/curriculum
 python -m unittest discover -s QuestionEngine/tests -v
 python -m compileall QuestionEngine
 ```
