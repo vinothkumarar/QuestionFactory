@@ -21,6 +21,7 @@ An independent implementation of two question workflows for JEE Main, JEE Advanc
 - PYQ intake gate requiring paper provenance, verified transcription and traceable answer-key/solution reference.
 - Audited PYQ registry loader for CSV and XLSX, including duplicate-ID checks and acquisition reporting.
 - PDF text intake with SHA-256 fingerprinting, page-level provenance, file checks and explicit OCR-required page reporting.
+- Conservative page-level PYQ segmentation that preserves raw text and source page, detects option labels, and leaves uncertain/continuation fragments pending manual review.
 - Deterministic CSV staging export preserving options, rubric scores, answer/scope verification evidence and PYQ provenance.
 - Single-subtopic original-question draft pilot CLI.
 - GitHub Actions compile and unit-test workflow.
@@ -29,7 +30,7 @@ An independent implementation of two question workflows for JEE Main, JEE Advanc
 
 - The OpenAI adapter is implemented but has not been connected to a live API account in this repository. It needs a secret API key and an API-enabled model ID at runtime.
 - No concrete independent mathematical solver or curriculum-scope verifier is connected yet; only strict contracts and approval gates exist.
-- PDF downloading, OCR execution, question-boundary extraction, answer-key matching and bulk PYQ reconstruction are not complete.
+- PDF downloading, OCR execution, answer-key matching and bulk PYQ reconstruction are not complete. The initial question-boundary segmenter is heuristic and explicitly marks ambiguous fragments for manual review; it is not an authenticity or correctness verifier.
 - Student practice UI and final Supabase import schema are not connected. CSV is a staging contract only.
 - NEET and BITSAT historical source inventories need separate acquisition audits.
 
