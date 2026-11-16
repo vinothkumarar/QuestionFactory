@@ -243,6 +243,32 @@ class GenerationTests(unittest.TestCase):
             "independent-symbolic-check",
         )
 
+    def test_draft_generation_resets_provider_approval_flags(self):
+        class FakeProvider:
+            def generate(self, request):
+                yield make_question(
+                    answer_verified=True,
+                    syllabus_scope_verified=True,
+                    answer_verification_method="fake",
+                    answer_verification_evidence="fake evidence",
+                )
+
+        request = GenerationRequest(
+            subject_id="subject-math",
+            unit_id="unit-u1",
+            chapter_id="chapter-ch1",
+            subtopic_id="subtopic-st1",
+            exam_targets=("JEE Main",),
+            concept_ids=("number-classification",),
+            learning_outcomes=("Classify integers using divisibility.",),
+        )
+        drafts = OriginalQuestionEngine().generate_drafts(request, FakeProvider())
+        self.assertEqual(len(drafts), 1)
+        self.assertFalse(drafts[0].answer_verified)
+        self.assertFalse(drafts[0].syllabus_scope_verified)
+        self.assertEqual(drafts[0].answer_verification_method, "")
+        self.assertIn("Awaiting independent", drafts[0].answer_verification_notes)
+
     def test_generator_cannot_self_approve_without_verifier_approval(self):
         class FakeProvider:
             def generate(self, request):
