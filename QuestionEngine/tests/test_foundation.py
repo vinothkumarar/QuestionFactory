@@ -16,7 +16,8 @@ from question_engine.models import (
 from question_engine.original_engine import OriginalQuestionEngine
 from question_engine.pyq_engine import PYQPracticeEngine
 from question_engine.pyq_registry import PYQSourceRegistry
-from question_engine.pdf_ingest import PDFTextExtractor
+from question_engine.pdf_ingest import PDFTextExtractor, PDFPageText, PDFExtractionResult
+from question_engine.pyq_segmenter import PYQTextSegmenter
 from question_engine.verification import AnswerVerificationResult
 from question_engine.scope_verification import ScopeVerificationResult
 from question_engine.openai_provider import (
@@ -501,6 +502,57 @@ class PDFIngestionTests(unittest.TestCase):
                 writer.write(handle)
             with self.assertRaisesRegex(ValueError, "size limit"):
                 PDFTextExtractor(max_file_size_bytes=1).extract(path)
+
+
+class PYQSegmentationTests(unittest.TestCase):
+    def test_segments_numbered_questions_and_preserves_source_page(self):
+        page = PDFPageText(
+            page_number=4,
+            text=(
+                "12. Which of the following integers is divisible by 6?\\n"
+                "(A) 12\\n(B) 14\\n(C) 15\\n(D) 25\\n"
+                "13. Find the next integer after 99.\\n"
+                "(A) 98\\n(B) 100\\n(C) 101\\n(D) 102"
+            ),
+            needs_ocr=False,
+        )
+        result = PYQTextSegmenter().segment_page(
+            page, source_path="paper.pdf", source_sha256="abc123"
+        )
+        self.assertEqual(len(result), 2)
+        self.assertEqual(result[0].question_number, "12")
+        self.assertEqual(result[0].page_number, 4)
+        self.assertEqual(result[0].detected_option_labels, ("A", "B", "C", "D"))
+        self.assertIn("Which of the following", result[0].raw_text)
+        self.assertEqual(result[0].source_sha256, "abc123")
+        self.assertTrue(result[0].needs_manual_review)
+        self.assertTrue(any("continue onto the next page" in reason for reason in result[1].pending_reasons))
+
+    def test_unrecognized_page_is_preserved_as_pending_not_discarded(self):
+        page = PDFPageText(
+            page_number=7,
+            text="Some text extracted from a paper with uncertain numbering.",
+            needs_ocr=False,
+        )
+        result = PYQTextSegmenter().segment_page(page, "paper.pdf", "hash")
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0].question_number, "")
+        self.assertTrue(result[0].needs_manual_review)
+        self.assertIn("Some text extracted", result[0].raw_text)
+
+    def test_segment_pdf_reports_pages_without_question_boundaries(self):
+        extraction = PDFExtractionResult(
+            source_path="paper.pdf",
+            sha256="paper-hash",
+            page_count=2,
+            pages=(
+                PDFPageText(1, "1. A sufficiently long question?\\n(A) a\\n(B) b\\n(C) c\\n(D) d", False),
+                PDFPageText(2, "Header and footer only", False),
+            ),
+        )
+        result = PYQTextSegmenter().segment_pdf(extraction)
+        self.assertEqual(result.pages_without_question_boundaries, (2,))
+        self.assertEqual(result.fragments[0].page_number, 1)
 
 
 class PYQTests(unittest.TestCase):
