@@ -103,6 +103,7 @@ class GenerationTests(unittest.TestCase):
                 for index in range(1, 4):
                     yield make_question(
                         question_id=f"GEN-{index}",
+                        question_text=f"Generated candidate {index}: evaluate a distinct divisibility property.",
                         uniqueness_key=f"generated-concept-{index}",
                     )
 
