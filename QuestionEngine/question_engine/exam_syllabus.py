@@ -220,14 +220,14 @@ class ExamSyllabusRegistry:
         source document hash, or authorize question generation. The caller must
         preserve the returned source version and label any comparison provisional.
         """
-        if not re.fullmatch(r"\\d{4}", target_syllabus_version):
+        if not re.fullmatch(r"\d{4}", target_syllabus_version):
             raise ExamSyllabusRegistryError(
                 f"Target syllabus version must be a four-digit year: {target_syllabus_version}"
             )
         target_year = int(target_syllabus_version)
         candidates: list[tuple[int, ExamSyllabusSource]] = []
         for source in self.sources:
-            if source.exam != exam or not re.fullmatch(r"\\d{4}", source.syllabus_version):
+            if source.exam != exam or not re.fullmatch(r"\d{4}", source.syllabus_version):
                 continue
             source_year = int(source.syllabus_version)
             if source_year < target_year:
