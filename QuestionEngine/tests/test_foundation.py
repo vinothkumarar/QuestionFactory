@@ -602,5 +602,60 @@ class PYQTests(unittest.TestCase):
         self.assertTrue(result.verified_for_practice)
 
 
+class IntegerArithmeticVerifierTests(unittest.TestCase):
+    def setUp(self):
+        from question_engine.verification import IntegerArithmeticExpressionVerifier
+        self.verifier = IntegerArithmeticExpressionVerifier()
+
+    def _question(self, **overrides):
+        values = dict(
+            question_id="MATH-INT-001", origin=QuestionOrigin.ORIGINAL,
+            subject_id="math", unit_id="u1", chapter_id="ch1", subtopic_id="st1",
+            question_text="Evaluate: -8 + 3 * 4", answer_type="SINGLE_CORRECT",
+            options=("4", "12", "-20", "0"), correct_answer="4",
+            explanation="Apply multiplication before addition.",
+        )
+        values.update(overrides)
+        return QuestionCandidate(**values)
+
+    def test_verifies_supported_integer_expression(self):
+        result = self.verifier.verify(self._question())
+        self.assertTrue(result.verified)
+        self.assertIn("evaluated to 4", result.evidence)
+
+    def test_rejects_incorrect_answer(self):
+        result = self.verifier.verify(self._question(correct_answer="12"))
+        self.assertFalse(result.verified)
+        self.assertIn("disagrees", result.reason)
+
+    def test_rejects_unsupported_question_format(self):
+        result = self.verifier.verify(self._question(question_text="Which integer is largest?"))
+        self.assertFalse(result.verified)
+
+    def test_rejects_function_calls(self):
+        result = self.verifier.verify(self._question(question_text="Evaluate: abs(-4)"))
+        self.assertFalse(result.verified)
+
+    def test_rejects_division_by_zero(self):
+        result = self.verifier.verify(self._question(question_text="Evaluate: 8 // 0"))
+        self.assertFalse(result.verified)
+
+    def test_rejects_non_integer_and_duplicate_options(self):
+        self.assertFalse(self.verifier.verify(
+            self._question(options=("4", "12", "3/4", "0"))
+        ).verified)
+        self.assertFalse(self.verifier.verify(
+            self._question(options=("4", "4", "12", "0"))
+        ).verified)
+
+    def test_rejects_missing_result_and_excessive_values(self):
+        self.assertFalse(self.verifier.verify(
+            self._question(options=("5", "12", "-20", "0"))
+        ).verified)
+        self.assertFalse(self.verifier.verify(
+            self._question(question_text="Evaluate: 999999999999999 * 999999999999999")
+        ).verified)
+
+
 if __name__ == "__main__":
     unittest.main()
