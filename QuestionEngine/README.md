@@ -54,6 +54,14 @@ From the repository root:
 ```bash
 PYTHONPATH=QuestionEngine python -m question_engine --curriculum-root Engine/curriculum
 python -m unittest discover -s QuestionEngine/tests -v
+# Generate a small unverified draft pilot (requires OPENAI_API_KEY and OPENAI_MODEL):
+PYTHONPATH=QuestionEngine python -m question_engine.pilot \\
+  --subtopic-code U1_CH1_ST1 \\
+  --exam-target 'JEE Main' \\
+  --concept-id natural-numbers \\
+  --outcome 'Classify natural numbers, whole numbers and integers.' \\
+  --candidate-limit 3 \\
+  --output output/maths_u1_ch1_st1_drafts.csv
 # Optional registry reports:
 # --pyq-registry path/to/audited_registry.csv
 # --pyq-registry-xlsx path/to/audited_registry.xlsx
