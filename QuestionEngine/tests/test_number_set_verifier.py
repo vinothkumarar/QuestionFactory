@@ -5,7 +5,10 @@ from __future__ import annotations
 import unittest
 
 from question_engine.models import QuestionCandidate, QuestionOrigin
-from question_engine.verification import NumberSetMembershipVerifier
+from question_engine.verification import (
+    NumberSetMembershipVerifier,
+    build_default_answer_verifier,
+)
 
 
 class NumberSetMembershipVerifierTests(unittest.TestCase):
@@ -103,6 +106,20 @@ class NumberSetMembershipVerifierTests(unittest.TestCase):
         ))
         self.assertFalse(result.verified)
         self.assertIn("four distinct exact numeric values", result.reason)
+
+
+    def test_default_composite_verifier_includes_number_set_membership(self) -> None:
+        question = self.question(
+            "Which of these values is an integer?",
+            ("-3", "0.5", "3/2", "2.5"),
+            "-3",
+        )
+        result = build_default_answer_verifier().verify(question)
+        self.assertTrue(result.verified)
+        self.assertEqual(
+            result.method,
+            "deterministic-number-set-membership-v1",
+        )
 
     def test_rejects_unsupported_format_and_answer_type(self) -> None:
         unsupported = self.verifier.verify(self.question(
