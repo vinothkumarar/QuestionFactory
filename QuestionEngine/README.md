@@ -18,6 +18,8 @@ An independent implementation of two question workflows for JEE Main, JEE Advanc
 - OpenAI Chat Completions adapter using `OPENAI_API_KEY` and `OPENAI_MODEL`; JSON response parsing, candidate shape validation and deterministic draft IDs.
 - Draft generation path which always clears provider-supplied answer/syllabus approval flags.
 - Separate answer-verification and syllabus-scope-verification contracts. Both must return matching question IDs, a method and evidence before approval.
+- Conservative deterministic integer-expression verifier for the exact `Evaluate: <integer expression>` format. It uses a restricted AST interpreter (no `eval`), checks four distinct integer options and rejects unsupported formats or incorrect answers.
+- Approved-catalog scope verifier that checks the full subject → unit → chapter → subtopic ID chain and requires every referenced concept to be explicitly approved with audit metadata.
 - PYQ intake gate requiring paper provenance, verified transcription and traceable answer-key/solution reference.
 - Audited PYQ registry loader for CSV and XLSX, including duplicate-ID checks and acquisition reporting.
 - PDF text intake with SHA-256 fingerprinting, page-level provenance, file checks and explicit OCR-required page reporting.
@@ -30,7 +32,8 @@ An independent implementation of two question workflows for JEE Main, JEE Advanc
 ## Not complete yet
 
 - The OpenAI adapter is implemented but has not been connected to a live API account in this repository. It needs a secret API key and an API-enabled model ID at runtime.
-- No concrete independent mathematical solver or syllabus-scope verifier is connected yet; only strict contracts and approval gates exist.
+- The deterministic answer verifier currently supports only a narrow integer-expression MCQ format. It is not a general symbolic mathematics solver; all other question formats remain unverified until a suitable independent verifier is added.
+- The scope verifier confirms repository curriculum hierarchy and approved concept-catalog membership. It does not independently establish inclusion in each exam's current official syllabus; an exam-versioned authoritative syllabus registry and mapping review are still required.
 - PDF downloading, OCR execution, answer-key matching and bulk PYQ reconstruction are not complete. The initial question-boundary segmenter is heuristic and explicitly marks ambiguous fragments for manual review; it is not an authenticity or correctness verifier.
 - Student practice UI and final Supabase import schema are not connected. CSV is a staging contract only.
 - NEET and BITSAT historical source inventories need separate acquisition audits.
