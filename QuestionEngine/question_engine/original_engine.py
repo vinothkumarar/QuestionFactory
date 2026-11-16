@@ -17,11 +17,14 @@ class OriginalEngineResult:
 
 
 class OriginalQuestionEngine:
-    """Review candidates produced by a configured AI/faculty generator.
+    """Review original and PYQ-inspired candidates from a configured generator.
 
     Generation is injected rather than hardwired, so API credentials and provider
     choices stay outside the academic rules and can be configured in deployment.
+    Exact historical PYQs are intentionally rejected here and belong to PYQPracticeEngine.
     """
+
+    ACCEPTED_ORIGINS = {QuestionOrigin.ORIGINAL, QuestionOrigin.PYQ_INSPIRED}
 
     def __init__(self, quality_gate: QuestionQualityGate | None = None):
         self.quality_gate = quality_gate or QuestionQualityGate()
@@ -31,10 +34,10 @@ class OriginalQuestionEngine:
         rejected: List[tuple[QuestionCandidate, QualityDecision]] = []
 
         for candidate in candidates:
-            if candidate.origin != QuestionOrigin.ORIGINAL:
+            if candidate.origin not in self.ACCEPTED_ORIGINS:
                 rejected.append((
                     candidate,
-                    QualityDecision(False, ("Original engine accepts ORIGINAL records only",), None),
+                    QualityDecision(False, ("Exact PYQs belong to the PYQ engine",), None),
                 ))
                 continue
             decision = self.quality_gate.evaluate(candidate)
