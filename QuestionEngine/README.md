@@ -134,3 +134,10 @@ state whether zero is included. The verifier rejects ambiguous wording,
 duplicate numeric options, zero/multiple correct options and unsupported
 answer formats; those candidates remain pending rather than being auto-approved.
 
+Supported direct-membership stem examples are deliberately narrow:
+- `Which of these values is a natural number? Natural numbers exclude zero.`
+- `Which of these values is a natural number? Natural numbers include zero.`
+- `Which of these values is a whole number?`
+- `Which of these values is an integer?`
+- The corresponding `is not` forms are also supported.
+
