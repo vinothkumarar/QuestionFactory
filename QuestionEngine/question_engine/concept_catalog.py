@@ -1,13 +1,15 @@
-"""Validated concept registry with an explicit approval gate.
+"""Validated concept registry with an explicit, auditable approval gate.
 
-Provisional concept rows are visible for review but are never supplied to
-production generation until an authorised curriculum review marks them APPROVED.
+Provisional concepts are visible for review but are never supplied to production
+generation. Approved/rejected decisions require reviewer, timestamp, source and
+rationale metadata so a status edit cannot silently become an unaudited release.
 """
 
 from __future__ import annotations
 
 import csv
 from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
 from typing import Iterable
 
@@ -20,6 +22,10 @@ class ConceptEntry:
     learning_outcome: str
     review_status: str
     notes: str = ""
+    reviewer_id: str = ""
+    reviewed_at: str = ""
+    review_source: str = ""
+    approval_rationale: str = ""
 
     @property
     def approved_for_generation(self) -> bool:
@@ -38,6 +44,10 @@ class ConceptCatalog:
         "learning_outcome",
         "review_status",
         "notes",
+        "reviewer_id",
+        "reviewed_at",
+        "review_source",
+        "approval_rationale",
     }
     ALLOWED_STATUSES = {"PROVISIONAL_REVIEW_REQUIRED", "APPROVED", "REJECTED"}
 
@@ -60,6 +70,25 @@ class ConceptCatalog:
                 raise ConceptCatalogError(f"Duplicate concept_id: {entry.concept_id}")
             seen.add(entry.concept_id)
 
+            if entry.review_status != "PROVISIONAL_REVIEW_REQUIRED":
+                audit_fields = (
+                    entry.reviewer_id,
+                    entry.reviewed_at,
+                    entry.review_source,
+                    entry.approval_rationale,
+                )
+                if not all(value.strip() for value in audit_fields):
+                    raise ConceptCatalogError(
+                        f"{entry.review_status} concept {entry.concept_id} "
+                        "requires reviewer_id, reviewed_at, review_source and approval_rationale"
+                    )
+                try:
+                    datetime.fromisoformat(entry.reviewed_at.replace("Z", "+00:00"))
+                except ValueError as exc:
+                    raise ConceptCatalogError(
+                        f"Invalid ISO-8601 reviewed_at for {entry.concept_id}"
+                    ) from exc
+
     @classmethod
     def load(cls, path: Path | str) -> "ConceptCatalog":
         source = Path(path)
@@ -81,6 +110,10 @@ class ConceptCatalog:
                     learning_outcome=(row.get("learning_outcome") or "").strip(),
                     review_status=(row.get("review_status") or "").strip().upper(),
                     notes=(row.get("notes") or "").strip(),
+                    reviewer_id=(row.get("reviewer_id") or "").strip(),
+                    reviewed_at=(row.get("reviewed_at") or "").strip(),
+                    review_source=(row.get("review_source") or "").strip(),
+                    approval_rationale=(row.get("approval_rationale") or "").strip(),
                 )
                 for row in reader
             ]
@@ -95,7 +128,7 @@ class ConceptCatalog:
     def approved_for_generation(
         self, subtopic_code: str
     ) -> tuple[ConceptEntry, ...]:
-        """Return only explicitly approved concepts; provisional rows are excluded."""
+        """Return only explicitly approved and fully audited concepts."""
         return tuple(
             entry for entry in self.for_subtopic(subtopic_code)
             if entry.approved_for_generation
