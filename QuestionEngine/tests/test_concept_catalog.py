@@ -16,7 +16,7 @@ class ConceptCatalogTests(unittest.TestCase):
         self.assertEqual(len(catalog.for_subtopic("U1_CH1_ST1")), 7)
         self.assertEqual(catalog.approved_for_generation("U1_CH1_ST1"), ())
 
-    def test_only_explicitly_approved_concepts_are_released(self):
+    def test_only_explicitly_approved_and_audited_concepts_are_released(self):
         from question_engine.concept_catalog import ConceptEntry
 
         catalog = ConceptCatalog([
@@ -26,6 +26,10 @@ class ConceptCatalogTests(unittest.TestCase):
                 concept_name="Integer membership",
                 learning_outcome="Classify integers.",
                 review_status="APPROVED",
+                reviewer_id="curriculum-reviewer",
+                reviewed_at="2026-11-16T12:00:00Z",
+                review_source="Official syllabus and approved chapter map",
+                approval_rationale="Explicitly included in the approved scope.",
             ),
             ConceptEntry(
                 concept_id="C-2",
@@ -40,10 +44,30 @@ class ConceptCatalogTests(unittest.TestCase):
             ["C-1"],
         )
 
-    def test_duplicate_concept_ids_are_rejected(self):
+    def test_approval_without_audit_metadata_is_rejected(self):
         from question_engine.concept_catalog import ConceptEntry
 
         row = ConceptEntry("C-1", "U1_CH1_ST1", "Name", "Outcome", "APPROVED")
+        with self.assertRaisesRegex(ConceptCatalogError, "requires reviewer_id"):
+            ConceptCatalog([row])
+
+    def test_invalid_review_timestamp_is_rejected(self):
+        from question_engine.concept_catalog import ConceptEntry
+
+        row = ConceptEntry(
+            "C-1", "U1_CH1_ST1", "Name", "Outcome", "REJECTED",
+            reviewer_id="reviewer",
+            reviewed_at="yesterday",
+            review_source="Official syllabus",
+            approval_rationale="Out of scope.",
+        )
+        with self.assertRaisesRegex(ConceptCatalogError, "Invalid ISO-8601"):
+            ConceptCatalog([row])
+
+    def test_duplicate_concept_ids_are_rejected(self):
+        from question_engine.concept_catalog import ConceptEntry
+
+        row = ConceptEntry("C-1", "U1_CH1_ST1", "Name", "Outcome", "PROVISIONAL_REVIEW_REQUIRED")
         with self.assertRaisesRegex(ConceptCatalogError, "Duplicate concept_id"):
             ConceptCatalog([row, row])
 
