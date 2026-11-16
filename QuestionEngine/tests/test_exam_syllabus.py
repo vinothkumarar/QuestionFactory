@@ -90,9 +90,9 @@ class ExamSyllabusRegistryTests(unittest.TestCase):
             root / "catalogs" / "exam_syllabus_sources.csv",
             root / "catalogs" / "exam_syllabus_mappings.csv",
         )
-        self.assertEqual(len(registry.sources), 2)
+        self.assertEqual(len(registry.sources), 3)
         source_ids = {item.source_id for item in registry.sources}
-        self.assertEqual(source_ids, {"NEET-UG-2026-NMC", "JEE-MAIN-2027-NTA"})
+        self.assertEqual(source_ids, {"NEET-UG-2026-NMC", "JEE-MAIN-2027-NTA", "JEE-ADVANCED-2027-IITD"})
         jee_main = next(item for item in registry.sources if item.source_id == "JEE-MAIN-2027-NTA")
         self.assertEqual(jee_main.publication_date, "")
         self.assertEqual(registry.mappings, ())
