@@ -98,3 +98,26 @@ A provisional concept catalog for Mathematics U1–CH1–ST1 is maintained at `c
 NTA's official documents listing identifies a 1 MB entry titled `Syllabus 2027` (see the official [Syllabus 2027 page](https://jeemain.nta.nic.in/document/syllabus-2027/) and [Documents listing](https://jeemain.nta.nic.in/documents/)). The candidate 2027 CDN endpoint remains unverified: local PDF retrieval and SHA-256 fingerprinting are pending because outbound DNS/network retrieval failed. The official NTA-hosted [JEE Main 2026 syllabus PDF](https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf), [JEE Advanced 2026 syllabus PDF](https://jeeadv.ac.in/documents/jee-advanced-2026-syllabus.pdf), [NEET UG 2026 syllabus](https://www.nmc.org.in/MCIRest/open/getDocument?path=%2FDocuments%2FPublic%2FPortal%2FLatestNews%2FPublic+Notice_NEET_removed.pdf), and [BITSAT 2026 brochure](https://www.bitsadmission.com/FD/downloads/BITSAT-2026_brochure.pdf) are registered as previous-year official baselines and accessible as indexed text. Local bytes and SHA-256 remain pending for each. Do not approve mappings from unverified local document fingerprints or use unofficial mirrors as authoritative evidence.
 
 The internal Mathematics U1 label is `Number System`; the official 2026 JEE Main Mathematics Unit 1 is `Sets, Relations and Functions`. The seven Number System concepts therefore have no approved direct mapping to that official unit and must not be forced into it. All seven U1-CH1-ST1 concept candidates remain `PROVISIONAL_REVIEW_REQUIRED` and excluded from exam-targeted production generation. Use the 2026 official syllabus only as a provisional comparison where 2027 text is unavailable; promote no mapping until exact official wording, source fingerprint and reviewer evidence are recorded.
+
+## Mathematics U1 / CH1 / ST1 archetype catalogue
+
+The internal ST1 question-possibility catalogue is preserved at
+`Engine/qpc/mathematics/U1_CH1.csv`. Its archetype recipes are maintained at
+`QuestionEngine/catalogs/maths_u1_ch1_st1_archetypes.csv`.
+
+- Version 1 contains 40 archetype recipes mapped to all 20 existing ST1 QPC IDs.
+- `QuestionEngine/tests/test_st1_archetype_catalog.py` checks unique IDs,
+  complete QPC coverage, exact source-description matching, required design
+  fields and the blocked-source rule for QP016.
+- QP016 currently contains the source text `Boundary Classification (?1`.
+  Its intended meaning is unresolved; the two associated catalogue rows are
+  blocked and must not be used to generate questions until the source wording
+  is recovered and reviewed.
+- The ST1 concept registry remains provisional. No concept is approved for
+  production, and no official JEE syllabus mapping for this internal subtopic
+  is approved. Archetype coverage is an internal design deliverable, not proof
+  of JEE Main/JEE Advanced syllabus inclusion.
+- The archetype catalogue does not itself generate, answer-verify or approve
+  questions. The current pilot exports unverified drafts; independent answer
+  and official syllabus-scope verification remain mandatory before approval.
+
