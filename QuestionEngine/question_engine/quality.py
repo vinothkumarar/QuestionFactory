@@ -43,6 +43,11 @@ class QuestionQualityGate:
             reasons.append("Syllabus scope has not been verified")
         if not question.answer_verified:
             reasons.append("Correct answer has not been independently verified")
+        elif question.origin != QuestionOrigin.PYQ:
+            if not question.answer_verification_method.strip():
+                reasons.append("Independent answer verification method is missing")
+            if not question.answer_verification_evidence.strip():
+                reasons.append("Independent answer verification evidence is missing")
 
         if question.answer_type.upper() in self.MULTIPLE_CHOICE_TYPES:
             if len(question.options) != 4:
