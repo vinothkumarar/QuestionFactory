@@ -77,6 +77,15 @@ class QualityTests(unittest.TestCase):
         self.assertFalse(result.approved)
         self.assertIn("Correct answer has not been independently verified", result.reasons)
 
+    def test_verified_original_requires_verification_evidence(self):
+        question = make_question(answer_verification_evidence="")
+        result = QuestionQualityGate().evaluate(question)
+        self.assertFalse(result.approved)
+        self.assertIn(
+            "Independent answer verification evidence is missing",
+            result.reasons,
+        )
+
     def test_original_engine_has_no_fixed_question_quota(self):
         result = OriginalQuestionEngine().review([make_question()])
         self.assertEqual(len(result.approved), 1)
