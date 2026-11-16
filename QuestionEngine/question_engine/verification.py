@@ -28,6 +28,48 @@ class QuestionAnswerVerifier(Protocol):
         ...
 
 
+class CompositeQuestionAnswerVerifier:
+    """Try independent narrow verifiers in order; approve only on explicit evidence.
+
+    This allows the original-question pipeline to use multiple deterministic
+    verification methods without broadening any individual verifier's scope.
+    A failed or malformed verifier result never grants approval.
+    """
+
+    METHOD = "composite-independent-answer-verification-v1"
+
+    def __init__(self, verifiers: Iterable[QuestionAnswerVerifier]):
+        self.verifiers = tuple(verifiers)
+        if not self.verifiers:
+            raise ValueError("At least one answer verifier must be configured")
+
+    def verify(self, question: QuestionCandidate) -> AnswerVerificationResult:
+        failures: list[str] = []
+        for index, verifier in enumerate(self.verifiers, start=1):
+            result = verifier.verify(question)
+            if result.question_id != question.question_id:
+                failures.append(f"verifier {index}: mismatched question_id")
+                continue
+            if result.verified:
+                if result.method.strip() and result.evidence.strip():
+                    return result
+                failures.append(
+                    f"verifier {index}: positive result lacked method or evidence"
+                )
+                continue
+            detail = result.reason.strip() or "not supported"
+            failures.append(f"verifier {index}: {detail}")
+
+        summary = "; ".join(failures) or "no verifier produced a valid result"
+        return AnswerVerificationResult(
+            question.question_id,
+            False,
+            self.METHOD,
+            "",
+            f"No configured verifier independently approved this answer ({summary})",
+        )
+
+
 class IntegerArithmeticExpressionVerifier:
     """Verify only 'Evaluate: <integer expression>' single-correct MCQs.
 
