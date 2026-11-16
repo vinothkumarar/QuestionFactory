@@ -139,6 +139,36 @@ class ExamSyllabusRegistryTests(unittest.TestCase):
         self.assertTrue(all(row["subtopic_mapping_status"] == "NO_MAPPINGS_APPROVED" for row in status_rows))
 
 
+    def test_provisional_baseline_selects_latest_prior_year_without_approving_mapping(self):
+        registry = ExamSyllabusRegistry(
+            [
+                source(),
+                source(
+                    source_id="JEE-MAIN-2025",
+                    syllabus_version="2025",
+                    official_source_title="Official JEE Main 2025 syllabus",
+                    publication_date="2024-11-01",
+                    effective_from="",
+                    effective_to="",
+                    retrieved_at="",
+                    document_sha256="",
+                ),
+            ],
+            [],
+        )
+        baseline = registry.provisional_baseline_source("JEE Main", "2027")
+        self.assertIsNotNone(baseline)
+        self.assertEqual(baseline.syllabus_version, "2026")
+        self.assertIsNone(registry.approved_mapping(
+            "JEE Main", "2027", "MATHEMATICS", "U1_CH1_ST1"
+        ))
+
+    def test_provisional_baseline_does_not_choose_future_or_ambiguous_sources(self):
+        registry = ExamSyllabusRegistry([source()], [])
+        self.assertIsNone(registry.provisional_baseline_source("JEE Advanced", "2027"))
+        with self.assertRaisesRegex(ExamSyllabusRegistryError, "four-digit year"):
+            registry.provisional_baseline_source("JEE Main", "latest")
+
     def test_allows_unknown_publication_and_effective_dates_without_inventing_them(self):
         registry = ExamSyllabusRegistry(
             [source(publication_date="", effective_from="", effective_to="")], []
