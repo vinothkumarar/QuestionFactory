@@ -83,6 +83,18 @@ class ExamSyllabusRegistryTests(unittest.TestCase):
         with self.assertRaisesRegex(ExamSyllabusRegistryError, "precedes"):
             ExamSyllabusRegistry([source(effective_to="2025-12-31")], [])
 
+
+    def test_repository_registry_records_verified_neet_source_without_approving_mappings(self):
+        root = Path(__file__).resolve().parents[1]
+        registry = ExamSyllabusRegistry.load_csv(
+            root / "catalogs" / "exam_syllabus_sources.csv",
+            root / "catalogs" / "exam_syllabus_mappings.csv",
+        )
+        self.assertEqual(len(registry.sources), 1)
+        self.assertEqual(registry.sources[0].source_id, "NEET-UG-2026-NMC")
+        self.assertEqual(registry.sources[0].publication_date, "2025-12-22")
+        self.assertEqual(registry.mappings, ())
+
     def test_csv_loader_requires_schema_and_loads_records(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
