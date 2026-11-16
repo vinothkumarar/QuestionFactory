@@ -96,6 +96,11 @@ class ExamSyllabusRegistryTests(unittest.TestCase):
         jee_main = next(item for item in registry.sources if item.source_id == "JEE-MAIN-2027-NTA")
         self.assertEqual(jee_main.publication_date, "")
         self.assertEqual(registry.mappings, ())
+        status_path = root / "catalogs" / "exam_syllabus_source_status.csv"
+        with status_path.open("r", encoding="utf-8", newline="") as handle:
+            status_rows = list(__import__("csv").DictReader(handle))
+        self.assertEqual({row["source_id"] for row in status_rows}, source_ids)
+        self.assertTrue(all(row["subtopic_mapping_status"] == "NO_MAPPINGS_APPROVED" for row in status_rows))
 
 
     def test_allows_unknown_publication_and_effective_dates_without_inventing_them(self):
