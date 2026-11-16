@@ -126,3 +126,79 @@ class IntegerArithmeticExpressionVerifier:
             return int(candidate)
         except ValueError:
             return None
+
+
+
+class DivisibilityRuleVerifier:
+    """Verify a narrowly defined 'Which integers is divisible by N?' MCQ.
+
+    This is a deterministic rule checker, not a general number-theory solver.
+    """
+
+    METHOD = "deterministic-integer-divisibility-v1"
+    QUESTION_PATTERN = re.compile(
+        r"^\\s*Which (?:of these|of the following) integers is divisible by (\\d+)\\?\\s*$",
+        re.IGNORECASE,
+    )
+    MAX_DIVISOR = 10**6
+    MAX_OPTION_VALUE = 10**12
+
+    def verify(self, question: QuestionCandidate) -> AnswerVerificationResult:
+        def reject(reason: str) -> AnswerVerificationResult:
+            return AnswerVerificationResult(
+                question.question_id, False, self.METHOD, "", reason
+            )
+
+        if question.answer_type.upper() != "SINGLE_CORRECT":
+            return reject("Unsupported answer type; only SINGLE_CORRECT is supported")
+        match = self.QUESTION_PATTERN.fullmatch(question.question_text)
+        if not match:
+            return reject(
+                "Unsupported question format; expected "
+                "'Which of these integers is divisible by N?'"
+            )
+        divisor = int(match.group(1))
+        if divisor < 2 or divisor > self.MAX_DIVISOR:
+            return reject("Divisor must be between 2 and the supported maximum")
+        if len(question.options) != 4:
+            return reject("Exactly four answer options are required")
+        values = [self._parse_integer(option) for option in question.options]
+        if any(value is None for value in values):
+            return reject("All four options must be plain integer values")
+        integers = [int(value) for value in values if value is not None]
+        if len(set(integers)) != 4:
+            return reject("Options must have four distinct integer values")
+        if any(abs(value) > self.MAX_OPTION_VALUE for value in integers):
+            return reject("An option exceeds the supported integer range")
+        matching = [value for value in integers if value % divisor == 0]
+        if len(matching) != 1:
+            return reject(
+                "Exactly one option must be divisible by the stated divisor; "
+                f"found {len(matching)}"
+            )
+        supplied = self._parse_integer(question.correct_answer)
+        if supplied is None:
+            return reject("Correct answer must be expressed as an integer value")
+        if supplied != matching[0]:
+            return reject(
+                f"Supplied answer {supplied} disagrees with independently "
+                f"verified divisible option {matching[0]}"
+            )
+        evidence = (
+            f"Checked each of four distinct integer options modulo {divisor}; "
+            f"exactly one option ({matching[0]}) has remainder zero and the "
+            "supplied correct answer matches."
+        )
+        return AnswerVerificationResult(
+            question.question_id, True, self.METHOD, evidence
+        )
+
+    @staticmethod
+    def _parse_integer(value: str) -> int | None:
+        candidate = value.strip()
+        if not re.fullmatch(r"[+-]?\\d+", candidate):
+            return None
+        try:
+            return int(candidate)
+        except ValueError:
+            return None
