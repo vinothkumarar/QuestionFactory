@@ -42,7 +42,9 @@ class QuestionQualityGate:
         if not question.syllabus_scope_verified:
             reasons.append("Syllabus scope has not been verified")
         if not question.answer_verified:
-            reasons.append("Correct answer has not been independently verified")
+            detail = question.answer_verification_notes.strip()
+            reason = "Correct answer has not been independently verified"
+            reasons.append(f"{reason}: {detail}" if detail else reason)
         elif question.origin != QuestionOrigin.PYQ:
             if not question.answer_verification_method.strip():
                 reasons.append("Independent answer verification method is missing")
