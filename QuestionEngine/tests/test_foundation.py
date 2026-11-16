@@ -1,7 +1,11 @@
 from pathlib import Path
+import csv
+import json
+import tempfile
 import unittest
 
 from question_engine.curriculum import CurriculumLoader
+from question_engine.export import CSV_FIELDS, QuestionCSVExporter
 from question_engine.models import (
     PYQProvenance,
     QuestionCandidate,
@@ -89,6 +93,47 @@ class QualityTests(unittest.TestCase):
         result = QuestionQualityGate().evaluate(missing_source)
         self.assertFalse(result.approved)
         self.assertIn("PYQ-inspired question lacks its source PYQ ID", result.reasons)
+
+
+class ExportTests(unittest.TestCase):
+    def test_csv_export_preserves_options_and_question_text(self):
+        question = make_question(
+            question_text="Which number is divisible by both 2 and 3?",
+            options=("6, 12", "5", "7", "11"),
+            tags=("foundation", "number-system"),
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            destination = Path(directory) / "out" / "questions.csv"
+            count = QuestionCSVExporter().export([question], destination)
+            self.assertEqual(count, 1)
+            with destination.open("r", encoding="utf-8-sig", newline="") as handle:
+                row = next(csv.DictReader(handle))
+            self.assertEqual(tuple(row.keys()), CSV_FIELDS)
+            self.assertEqual(row["question_text"], question.question_text)
+            self.assertEqual(json.loads(row["options_json"]), list(question.options))
+            self.assertEqual(json.loads(row["tags_json"]), list(question.tags))
+            self.assertEqual(row["origin"], "ORIGINAL")
+
+    def test_csv_export_keeps_pyq_provenance(self):
+        provenance = PYQProvenance(
+            exam="JEE Main", year=2025, paper="Paper 1", shift="Shift 1",
+            question_number="Q12", source_file="paper.pdf",
+            answer_key_reference="official-key.pdf",
+            transcription_verified=True, answer_verified=True,
+        )
+        question = make_question(
+            origin=QuestionOrigin.PYQ,
+            pyq_provenance=provenance,
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            destination = Path(directory) / "pyq.csv"
+            QuestionCSVExporter().export([question], destination)
+            with destination.open("r", encoding="utf-8-sig", newline="") as handle:
+                row = next(csv.DictReader(handle))
+        exported = json.loads(row["pyq_provenance_json"])
+        self.assertEqual(exported["exam"], "JEE Main")
+        self.assertEqual(exported["source_file"], "paper.pdf")
+        self.assertTrue(exported["transcription_verified"])
 
 
 class PYQTests(unittest.TestCase):
