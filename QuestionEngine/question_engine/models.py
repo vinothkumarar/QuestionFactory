@@ -89,4 +89,5 @@ class QuestionCandidate:
     syllabus_scope_verified: bool = False
     quality_scores: Optional[QuestionQualityScores] = None
     pyq_provenance: Optional[PYQProvenance] = None
+    inspired_by_pyq_id: Optional[str] = None
     tags: Tuple[str, ...] = field(default_factory=tuple)
