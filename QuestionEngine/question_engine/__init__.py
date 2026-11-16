@@ -7,6 +7,7 @@ from .models import QuestionCandidate, QuestionOrigin, QuestionQualityScores
 from .quality import QuestionQualityGate
 from .pyq_registry import PYQSourceRegistry
 from .pdf_ingest import PDFTextExtractor, PDFExtractionResult, PDFPageText
+from .verification import AnswerVerificationResult, QuestionAnswerVerifier
 
 __all__ = [
     "CurriculumLoader",
@@ -22,4 +23,6 @@ __all__ = [
     "PDFTextExtractor",
     "PDFExtractionResult",
     "PDFPageText",
+    "AnswerVerificationResult",
+    "QuestionAnswerVerifier",
 ]
