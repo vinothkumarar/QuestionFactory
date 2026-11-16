@@ -118,6 +118,7 @@ class ExamSyllabusRegistryTests(unittest.TestCase):
         self.assertEqual(source_ids, {"NEET-UG-2026-NMC", "JEE-MAIN-2027-NTA", "JEE-ADVANCED-2027-IITD"})
         jee_main = next(item for item in registry.sources if item.source_id == "JEE-MAIN-2027-NTA")
         self.assertEqual(jee_main.publication_date, "")
+        self.assertTrue(jee_main.official_source_url.endswith("/20261024683680768.pdf"))
         self.assertEqual(registry.mappings, ())
         status_path = root / "catalogs" / "exam_syllabus_source_status.csv"
         with status_path.open("r", encoding="utf-8", newline="") as handle:
