@@ -509,10 +509,10 @@ class PYQSegmentationTests(unittest.TestCase):
         page = PDFPageText(
             page_number=4,
             text=(
-                "12. Which of the following integers is divisible by 6?\\n"
-                "(A) 12\\n(B) 14\\n(C) 15\\n(D) 25\\n"
-                "13. Find the next integer after 99.\\n"
-                "(A) 98\\n(B) 100\\n(C) 101\\n(D) 102"
+                "12. Which of the following integers is divisible by 6?\n"
+                "(A) 12\n(B) 14\n(C) 15\n(D) 25\n"
+                "13. Find the next integer after 99.\n"
+                "(A) 98\n(B) 100\n(C) 101\n(D) 102"
             ),
             needs_ocr=False,
         )
@@ -546,7 +546,7 @@ class PYQSegmentationTests(unittest.TestCase):
             sha256="paper-hash",
             page_count=2,
             pages=(
-                PDFPageText(1, "1. A sufficiently long question?\\n(A) a\\n(B) b\\n(C) c\\n(D) d", False),
+                PDFPageText(1, "1. A sufficiently long question?\n(A) a\n(B) b\n(C) c\n(D) d", False),
                 PDFPageText(2, "Header and footer only", False),
             ),
         )
