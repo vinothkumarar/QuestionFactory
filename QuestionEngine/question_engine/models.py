@@ -91,3 +91,6 @@ class QuestionCandidate:
     pyq_provenance: Optional[PYQProvenance] = None
     inspired_by_pyq_id: Optional[str] = None
     tags: Tuple[str, ...] = field(default_factory=tuple)
+    answer_verification_method: str = ""
+    answer_verification_evidence: str = ""
+    answer_verification_notes: str = ""
