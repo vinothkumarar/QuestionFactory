@@ -200,6 +200,35 @@ class PYQRegistryTests(unittest.TestCase):
         self.assertEqual(summary.not_yet_acquired, 1)
         self.assertFalse(registry.records[0].ready_for_verified_practice)
 
+    def test_loads_audited_xlsx_worksheet(self):
+        from openpyxl import Workbook
+
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "audited.xlsx"
+            workbook = Workbook()
+            worksheet = workbook.active
+            worksheet.title = "Audited Tracker"
+            worksheet.append([
+                "PYQ_ID", "Year", "Exam", "Paper", "Language", "Source",
+                "Primary Source URL", "PDF URL", "Answer Key URL",
+                "Solution URL", "Acquisition Status", "PDF Verified",
+                "Answer Key Verified", "Audit Status",
+            ])
+            worksheet.append([
+                "JEE-2026-P1", 2026, "JEE Advanced", "Paper 1", "English",
+                "Official archive", "https://example.org/archive",
+                "https://example.org/paper.pdf", "https://example.org/key.pdf",
+                None, "Acquired", "Yes", "Yes", "Ready",
+            ])
+            workbook.save(path)
+            workbook.close()
+
+            registry = PYQSourceRegistry.load_xlsx(path)
+        self.assertEqual(registry.summary().total_records, 1)
+        self.assertEqual(registry.records[0].pyq_id, "JEE-2026-P1")
+        self.assertTrue(registry.records[0].pdf_verified)
+        self.assertEqual(registry.records[0].answer_key_url, "https://example.org/key.pdf")
+
     def test_registry_rejects_duplicate_pyq_ids(self):
         content = (
             "PYQ_ID,Year,Exam,Paper,Acquisition Status\n"
