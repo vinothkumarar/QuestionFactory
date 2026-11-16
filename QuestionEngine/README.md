@@ -37,6 +37,7 @@ This first foundation provides:
 - explicit quality gates and exact-duplicate checks;
 - separate original/PYQ-inspired review and PYQ provenance intake;
 - provider-neutral generation request contract; generated candidates always pass through the shared quality gate;
+- audited PYQ source-registry CSV loader and acquisition-readiness summary; source inventory records are never treated as acquired PDFs or verified questions;
 - deterministic UTF-8 CSV export that preserves options, rubric scores and PYQ provenance in JSON columns;
 - deterministic UTF-8 CSV export that preserves options, rubric scores and PYQ provenance in JSON columns;
 - a curriculum readiness command;
@@ -53,6 +54,7 @@ From the repository root:
 ```bash
 PYTHONPATH=QuestionEngine python -m question_engine --curriculum-root Engine/curriculum
 python -m unittest discover -s QuestionEngine/tests -v
+# Optional: add --pyq-registry path/to/audited_registry.csv for acquisition status
 python -m compileall QuestionEngine
 ```
 
@@ -63,4 +65,4 @@ The ChatGPT Library already contains a JEE paper inventory and source registries
 - `JEE_PYQ_Phase2_Source_Registry.xlsx` and `JEE_PYQ_Phase2_1_Audited_Source_Registry.xlsx` — source and verification references.
 - `JEE_PYQ_Phase2_2_2026_English_Acquisition_Registry.xlsx` — acquisition status and official-paper references.
 
-These are acquisition manifests, not proof that every listed PDF has already been downloaded or verified. Reuse them as the starting manifest; do not recreate the JEE inventory. The current first code increment does not yet import these Library workbooks. NEET and BITSAT source inventories still need a separate audit before claiming complete coverage.
+These are acquisition manifests, not proof that every listed PDF has already been downloaded or verified. Reuse them as the starting manifest; do not recreate the JEE inventory. The current code accepts a normalized CSV export of the audited registry; direct XLSX import and automatic PDF acquisition are separate follow-on work. The existing audited registry contains 247 rows, but currently marks all 247 as not yet acquired, with no PDFs or answer keys verified. NEET and BITSAT source inventories still need a separate audit before claiming complete coverage.
