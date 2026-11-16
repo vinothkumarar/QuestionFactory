@@ -100,7 +100,7 @@ class ExamSyllabusRegistryTests(unittest.TestCase):
 
     def test_allows_unknown_publication_and_effective_dates_without_inventing_them(self):
         registry = ExamSyllabusRegistry(
-            [source(publication_date="", effective_from="")], []
+            [source(publication_date="", effective_from="", effective_to="")], []
         )
         self.assertEqual(registry.sources[0].publication_date, "")
         with self.assertRaisesRegex(ExamSyllabusRegistryError, "effective_to requires"):
