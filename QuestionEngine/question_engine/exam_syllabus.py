@@ -24,8 +24,8 @@ class ExamSyllabusSource:
     syllabus_version: str
     official_source_title: str
     official_source_url: str
-    publication_date: str
-    effective_from: str
+    publication_date: str = ""
+    effective_from: str = ""
     effective_to: str = ""
     retrieved_at: str = ""
     document_sha256: str = ""
@@ -75,16 +75,18 @@ class ExamSyllabusRegistry:
             required = (
                 source.source_id, source.exam, source.syllabus_version,
                 source.official_source_title, source.official_source_url,
-                source.publication_date, source.effective_from,
             )
             if not all(value.strip() for value in required):
                 raise ExamSyllabusRegistryError("Syllabus sources require identity, official URL, title and dates")
             if not source.official_source_url.startswith("https://"):
                 raise ExamSyllabusRegistryError(f"Official source URL must use HTTPS: {source.source_id}")
-            self._date(source.publication_date, "publication_date", source.source_id)
-            start = self._date(source.effective_from, "effective_from", source.source_id)
+            if source.publication_date:
+                self._date(source.publication_date, "publication_date", source.source_id)
+            start = self._date(source.effective_from, "effective_from", source.source_id) if source.effective_from else None
             end = self._date(source.effective_to, "effective_to", source.source_id) if source.effective_to else None
-            if end and end < start:
+            if end and start is None:
+                raise ExamSyllabusRegistryError(f"effective_to requires effective_from: {source.source_id}")
+            if end and start and end < start:
                 raise ExamSyllabusRegistryError(f"effective_to precedes effective_from: {source.source_id}")
             if source.retrieved_at:
                 self._datetime(source.retrieved_at, "retrieved_at", source.source_id)
