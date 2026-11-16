@@ -361,3 +361,18 @@ class NumberSetMembershipVerifier:
         return AnswerVerificationResult(
             question.question_id, True, self.METHOD, evidence
         )
+
+
+def build_default_answer_verifier() -> CompositeQuestionAnswerVerifier:
+    """Build the conservative verifier stack currently supported by the engine.
+
+    Each verifier remains deliberately narrow. Unsupported formats fail closed
+    and stay pending for an additional independent verification method.
+    """
+    return CompositeQuestionAnswerVerifier(
+        (
+            IntegerArithmeticExpressionVerifier(),
+            DivisibilityRuleVerifier(),
+            NumberSetMembershipVerifier(),
+        )
+    )
