@@ -38,6 +38,7 @@ This first foundation provides:
 - separate original/PYQ-inspired review and PYQ provenance intake;
 - provider-neutral generation request contract; generated candidates always pass through the shared quality gate;
 - audited PYQ source-registry CSV/XLSX loader and acquisition-readiness summary; source inventory records are never treated as acquired PDFs or verified questions;
+- local PDF text intake with SHA-256 fingerprinting, page-level provenance and explicit OCR-required page reporting;
 - deterministic UTF-8 CSV export that preserves options, rubric scores and PYQ provenance in JSON columns;
 - a curriculum readiness command;
 - standard-library unit tests.
@@ -66,4 +67,4 @@ The ChatGPT Library already contains a JEE paper inventory and source registries
 - `JEE_PYQ_Phase2_Source_Registry.xlsx` and `JEE_PYQ_Phase2_1_Audited_Source_Registry.xlsx` — source and verification references.
 - `JEE_PYQ_Phase2_2_2026_English_Acquisition_Registry.xlsx` — acquisition status and official-paper references.
 
-These are acquisition manifests, not proof that every listed PDF has already been downloaded or verified. Reuse them as the starting manifest; do not recreate the JEE inventory. The code accepts both CSV and the audited XLSX workbook directly (default worksheet: `Audited Tracker`). Automatic PDF acquisition, OCR, and question-level reconstruction are separate follow-on work. The existing audited registry contains 247 rows, but currently marks all 247 as not yet acquired, with no PDFs or answer keys verified. NEET and BITSAT source inventories still need a separate audit before claiming complete coverage.
+These are acquisition manifests, not proof that every listed PDF has already been downloaded or verified. Reuse them as the starting manifest; do not recreate the JEE inventory. The code accepts both CSV and the audited XLSX workbook directly (default worksheet: `Audited Tracker`). Automatic PDF acquisition, OCR execution, question-boundary extraction and question-level reconstruction are separate follow-on work. The PDF intake extracts selectable text only; scanned/image-only pages are explicitly flagged for OCR instead of being guessed. The existing audited registry contains 247 rows, but currently marks all 247 as not yet acquired, with no PDFs or answer keys verified. NEET and BITSAT source inventories still need a separate audit before claiming complete coverage.
