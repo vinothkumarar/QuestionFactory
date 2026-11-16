@@ -43,11 +43,12 @@ def make_question(origin=QuestionOrigin.ORIGINAL, **overrides):
 
 
 class CurriculumTests(unittest.TestCase):
-    def test_loads_four_exam_subjects_and_excludes_aptitude(self):
+    def test_loads_four_exam_subjects_and_reports_incomplete_curriculum(self):
         snapshot = CurriculumLoader(REPO_ROOT / "Engine" / "curriculum").load()
         names = {row["name"] for row in snapshot.subjects}
         self.assertEqual(names, {"Mathematics", "Physics", "Chemistry", "Biology"})
         self.assertTrue(snapshot.subtopics)
+        self.assertTrue(any(item.startswith("Biology:") for item in snapshot.incomplete_subjects))
 
     def test_finds_existing_subtopic_code(self):
         snapshot = CurriculumLoader(REPO_ROOT / "Engine" / "curriculum").load()
