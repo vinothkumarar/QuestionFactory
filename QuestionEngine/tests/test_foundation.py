@@ -75,10 +75,14 @@ class CurriculumTests(unittest.TestCase):
             ("Classify natural numbers, whole numbers and integers.",),
             3,
         )
-        self.assertEqual(request.subject_id, "MAT")
-        self.assertEqual(request.unit_id, "U1")
-        self.assertEqual(request.chapter_id, "CH1")
-        self.assertEqual(request.subtopic_id, "ST1")
+        subtopic = snapshot.find_subtopic("U1_CH1_ST1")
+        chapter = next(row for row in snapshot.chapters if row["id"] == subtopic["chapter_id"])
+        unit = next(row for row in snapshot.units if row["id"] == chapter["unit_id"])
+        subject = next(row for row in snapshot.subjects if row["id"] == unit["subject_id"])
+        self.assertEqual(request.subject_id, subject["id"])
+        self.assertEqual(request.unit_id, unit["id"])
+        self.assertEqual(request.chapter_id, chapter["id"])
+        self.assertEqual(request.subtopic_id, subtopic["id"])
         self.assertEqual(request.candidate_limit, 3)
 
     def test_finds_existing_subtopic_code(self):
