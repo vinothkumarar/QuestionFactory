@@ -18,6 +18,7 @@ from question_engine.pyq_engine import PYQPracticeEngine
 from question_engine.pyq_registry import PYQSourceRegistry
 from question_engine.pdf_ingest import PDFTextExtractor
 from question_engine.verification import AnswerVerificationResult
+from question_engine.scope_verification import ScopeVerificationResult
 from question_engine.openai_provider import (
     OpenAIProviderError,
     OpenAIQuestionGenerationProvider,
@@ -51,6 +52,8 @@ def make_question(origin=QuestionOrigin.ORIGINAL, **overrides):
         answer_verification_method="independent-symbolic-check",
         answer_verification_evidence="Worked solution independently checked against the result.",
         syllabus_scope_verified=True,
+        syllabus_verification_method="curriculum-cross-reference",
+        syllabus_verification_evidence="Mapped to the active subject/unit/chapter/subtopic hierarchy.",
         quality_scores=QuestionQualityScores(9, 8, 9, 8, 8),
     )
     values.update(overrides)
@@ -254,8 +257,17 @@ class GenerationTests(unittest.TestCase):
                     evidence="Recomputed independently and substituted into the original condition.",
                 )
 
+        class FakeScopeVerifier:
+            def verify(self, question):
+                return ScopeVerificationResult(
+                    question_id=question.question_id,
+                    verified=True,
+                    method="curriculum-cross-reference",
+                    evidence="Confirmed subject, unit, chapter and subtopic mapping.",
+                )
+
         result = OriginalQuestionEngine().generate_and_review(
-            request, FakeProvider(), FakeVerifier()
+            request, FakeProvider(), FakeVerifier(), FakeScopeVerifier()
         )
         self.assertEqual(len(result.approved), 2)
         self.assertEqual(result.approved[0].question_id, "GEN-1")
@@ -314,14 +326,23 @@ class GenerationTests(unittest.TestCase):
             concept_ids=("number-classification",),
             learning_outcomes=("Classify integers using divisibility.",),
         )
+        class FakeScopeVerifier:
+            def verify(self, question):
+                return ScopeVerificationResult(
+                    question_id=question.question_id,
+                    verified=True,
+                    method="curriculum-cross-reference",
+                    evidence="Confirmed curriculum mapping.",
+                )
+
         result = OriginalQuestionEngine().generate_and_review(
-            request, FakeProvider(), RejectingVerifier()
+            request, FakeProvider(), RejectingVerifier(), FakeScopeVerifier()
         )
         self.assertEqual(result.approved, [])
-        self.assertIn(
-            "Independent recomputation disagreed",
-            result.rejected[0][1].reasons[0],
-        )
+        self.assertTrue(any(
+            "Independent recomputation disagreed" in reason
+            for reason in result.rejected[0][1].reasons
+        ))
 
     def test_generation_request_rejects_missing_learning_outcomes(self):
         with self.assertRaises(ValueError):
