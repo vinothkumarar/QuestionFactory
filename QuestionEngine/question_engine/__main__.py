@@ -6,6 +6,7 @@ import argparse
 from pathlib import Path
 
 from .curriculum import CurriculumLoader
+from .pyq_registry import PYQSourceRegistry
 
 
 def main() -> int:
@@ -16,6 +17,12 @@ def main() -> int:
         default=Path("Engine") / "curriculum",
         help="Path to the existing curriculum folder",
     )
+    parser.add_argument(
+        "--pyq-registry",
+        type=Path,
+        default=None,
+        help="Optional audited PYQ source-registry CSV to summarize",
+    )
     args = parser.parse_args()
 
     snapshot = CurriculumLoader(args.curriculum_root).load()
@@ -24,6 +31,18 @@ def main() -> int:
     print(f"Units: {len(snapshot.units)}")
     print(f"Chapters: {len(snapshot.chapters)}")
     print(f"Subtopics: {len(snapshot.subtopics)}")
+
+    if args.pyq_registry:
+        registry = PYQSourceRegistry.load_csv(args.pyq_registry)
+        summary = registry.summary()
+        print("\\nPYQ SOURCE REGISTRY (acquisition status only)")
+        print(f"Records: {summary.total_records}")
+        print(f"Direct PDF URLs: {summary.direct_pdf_urls}")
+        print(f"PDFs verified: {summary.pdf_verified}")
+        print(f"Answer keys verified: {summary.answer_keys_verified}")
+        print(f"Not yet acquired: {summary.not_yet_acquired}")
+        for exam, count in sorted(summary.by_exam.items()):
+            print(f"- {exam}: {count}")
 
     if snapshot.incomplete_subjects:
         print("\nINCOMPLETE CURRICULA:")
