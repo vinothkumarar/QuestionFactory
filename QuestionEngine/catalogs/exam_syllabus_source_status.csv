@@ -1,4 +1,4 @@
 source_id,source_review_status,document_retrieval_status,document_fingerprint_status,subtopic_mapping_status,review_notes
 NEET-UG-2026-NMC,OFFICIAL_SOURCE_REGISTERED,PDF_URL_REGISTERED_NOT_DOWNLOADED,SHA256_PENDING,NO_MAPPINGS_APPROVED,"NMC UGMEB 2026 syllabus source registered; exact text extraction and reviewer mapping pending."
-JEE-MAIN-2027-NTA,OFFICIAL_LANDING_PAGE_REGISTERED,ACCESSIBLE_VERSION_LISTED_DIRECT_PDF_RETRIEVAL_PENDING,SHA256_PENDING,NO_MAPPINGS_APPROVED,"NTA 2027 syllabus page lists an accessible 1 MB document; exact PDF link could not be resolved through current retrieval path."
+JEE-MAIN-2027-NTA,OFFICIAL_CDN_PDF_URL_IDENTIFIED,DIRECT_PDF_DOWNLOAD_PENDING,SHA256_PENDING,NO_MAPPINGS_APPROVED,"NTA documents listing identifies Syllabus 2027 (1 MB); the official CDN PDF endpoint is recorded, but download and SHA-256 fingerprinting remain pending because retrieval failed."
 JEE-ADVANCED-2027-IITD,OFFICIAL_STATUS_PAGE_REGISTERED,SYLLABUS_NOT_YET_PUBLISHED,SHA256_NOT_APPLICABLE,NO_MAPPINGS_APPROVED,"Official IIT Delhi 2027 syllabus page currently states Coming soon; do not infer the 2027 syllabus from 2026."
