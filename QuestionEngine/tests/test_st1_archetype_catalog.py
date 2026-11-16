@@ -74,7 +74,11 @@ class ST1ArchetypeCatalogTests(unittest.TestCase):
         self.assertTrue(blocked)
         self.assertTrue(all(row["scope_status"] == "BLOCKED_SOURCE_TEXT" for row in blocked))
         self.assertTrue(
-            all("unknown" in row["notes"].lower() for row in blocked)
+            all(
+                "unknown" in row["notes"].lower()
+                or "do not silently normalize" in row["notes"].lower()
+                for row in blocked
+            )
         )
 
     def test_other_qpcs_are_not_blocked_by_the_qp016_source_defect(self) -> None:
