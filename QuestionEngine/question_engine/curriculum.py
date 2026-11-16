@@ -5,7 +5,7 @@ from __future__ import annotations
 import csv
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, Iterable, List
+from typing import Iterable, List
 
 
 SUPPORTED_SUBJECTS = {"Mathematics", "Physics", "Chemistry", "Biology"}
@@ -17,6 +17,7 @@ class CurriculumSnapshot:
     units: List[dict]
     chapters: List[dict]
     subtopics: List[dict]
+    incomplete_subjects: tuple[str, ...] = ()
 
     def find_subtopic(self, code: str) -> dict:
         for row in self.subtopics:
@@ -32,9 +33,19 @@ class CurriculumLoader:
         self.root = Path(curriculum_root)
 
     @staticmethod
-    def _read(path: Path, required: Iterable[str]) -> List[dict]:
+    def _read(
+        path: Path,
+        required: Iterable[str],
+        *,
+        allow_empty: bool = False,
+    ) -> List[dict]:
         if not path.is_file():
+            if allow_empty:
+                return []
             raise FileNotFoundError(f"Curriculum file not found: {path}")
+        if allow_empty and path.stat().st_size == 0:
+            return []
+
         with path.open("r", encoding="utf-8-sig", newline="") as handle:
             reader = csv.DictReader(handle)
             headers = set(reader.fieldnames or [])
@@ -71,23 +82,47 @@ class CurriculumLoader:
         units: List[dict] = []
         chapters: List[dict] = []
         subtopics: List[dict] = []
+        incomplete_subjects: List[str] = []
 
         for subject in subjects:
             folder = self.root / subject["folder_name"]
+            units_path = folder / "units.csv"
+            chapters_path = folder / "chapters.csv"
+            subtopics_path = folder / "subtopics.csv"
+
             subject_units = self._read(
-                folder / "units.csv",
+                units_path,
                 ("id", "subject_id", "code", "unit_name", "display_order", "is_test_enabled"),
+                allow_empty=True,
             )
-            if any(row["subject_id"] != subject["id"] for row in subject_units):
-                raise ValueError(f"Unit subject_id mismatch in {folder / 'units.csv'}")
             subject_chapters = self._read(
-                folder / "chapters.csv",
+                chapters_path,
                 ("id", "unit_id", "code", "chapter_name", "display_order", "is_test_enabled"),
+                allow_empty=True,
             )
             subject_subtopics = self._read(
-                folder / "subtopics.csv",
+                subtopics_path,
                 ("id", "chapter_id", "code", "subtopic_name", "display_order", "is_test_enabled"),
+                allow_empty=True,
             )
+
+            missing_parts = [
+                filename
+                for filename, rows in (
+                    ("units.csv", subject_units),
+                    ("chapters.csv", subject_chapters),
+                    ("subtopics.csv", subject_subtopics),
+                )
+                if not rows
+            ]
+            if missing_parts:
+                incomplete_subjects.append(
+                    f"{subject['name']}: empty or missing {', '.join(missing_parts)}"
+                )
+
+            if any(row["subject_id"] != subject["id"] for row in subject_units):
+                raise ValueError(f"Unit subject_id mismatch in {units_path}")
+
             units.extend(subject_units)
             chapters.extend(subject_chapters)
             subtopics.extend(subject_subtopics)
@@ -106,4 +141,10 @@ class CurriculumLoader:
             if row["chapter_id"] not in chapter_ids:
                 raise ValueError(f"Subtopic {row['code']} references unknown chapter_id")
 
-        return CurriculumSnapshot(subjects, units, chapters, subtopics)
+        return CurriculumSnapshot(
+            subjects,
+            units,
+            chapters,
+            subtopics,
+            tuple(incomplete_subjects),
+        )
