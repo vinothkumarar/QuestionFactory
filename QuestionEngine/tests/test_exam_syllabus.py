@@ -107,18 +107,25 @@ class ExamSyllabusRegistryTests(unittest.TestCase):
             ExamSyllabusRegistry([source(effective_to="2025-12-31")], [])
 
 
-    def test_repository_registry_records_verified_neet_source_without_approving_mappings(self):
+    def test_repository_registry_records_official_sources_without_approving_mappings(self):
         root = Path(__file__).resolve().parents[1]
         registry = ExamSyllabusRegistry.load_csv(
             root / "catalogs" / "exam_syllabus_sources.csv",
             root / "catalogs" / "exam_syllabus_mappings.csv",
         )
-        self.assertEqual(len(registry.sources), 3)
+        self.assertEqual(len(registry.sources), 4)
         source_ids = {item.source_id for item in registry.sources}
-        self.assertEqual(source_ids, {"NEET-UG-2026-NMC", "JEE-MAIN-2027-NTA", "JEE-ADVANCED-2027-IITD"})
-        jee_main = next(item for item in registry.sources if item.source_id == "JEE-MAIN-2027-NTA")
-        self.assertEqual(jee_main.publication_date, "")
-        self.assertTrue(jee_main.official_source_url.endswith("/20261024683680768.pdf"))
+        self.assertEqual(source_ids, {
+            "NEET-UG-2026-NMC", "JEE-MAIN-2026-NTA",
+            "JEE-MAIN-2027-NTA", "JEE-ADVANCED-2027-IITD",
+        })
+        jee_main_2026 = next(item for item in registry.sources if item.source_id == "JEE-MAIN-2026-NTA")
+        self.assertEqual(jee_main_2026.publication_date, "2025-10-31")
+        self.assertEqual(jee_main_2026.document_sha256, "")
+        self.assertTrue(jee_main_2026.official_source_url.endswith("/202510311323551056.pdf"))
+        jee_main_2027 = next(item for item in registry.sources if item.source_id == "JEE-MAIN-2027-NTA")
+        self.assertEqual(jee_main_2027.publication_date, "")
+        self.assertTrue(jee_main_2027.official_source_url.endswith("/20261024683680768.pdf"))
         self.assertEqual(registry.mappings, ())
         status_path = root / "catalogs" / "exam_syllabus_source_status.csv"
         with status_path.open("r", encoding="utf-8", newline="") as handle:
