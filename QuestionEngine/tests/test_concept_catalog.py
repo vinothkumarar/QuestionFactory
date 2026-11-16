@@ -15,6 +15,10 @@ class ConceptCatalogTests(unittest.TestCase):
         )
         self.assertEqual(len(catalog.for_subtopic("U1_CH1_ST1")), 7)
         self.assertEqual(catalog.approved_for_generation("U1_CH1_ST1"), ())
+        self.assertTrue(all(
+            "JEE Main 2027 mapping pending" in entry.notes
+            for entry in catalog.for_subtopic("U1_CH1_ST1")
+        ))
 
     def test_only_explicitly_approved_and_audited_concepts_are_released(self):
         from question_engine.concept_catalog import ConceptEntry
