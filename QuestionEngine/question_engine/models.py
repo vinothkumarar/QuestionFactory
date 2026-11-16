@@ -94,3 +94,6 @@ class QuestionCandidate:
     answer_verification_method: str = ""
     answer_verification_evidence: str = ""
     answer_verification_notes: str = ""
+    syllabus_verification_method: str = ""
+    syllabus_verification_evidence: str = ""
+    syllabus_verification_notes: str = ""
