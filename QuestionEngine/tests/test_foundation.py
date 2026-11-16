@@ -657,6 +657,64 @@ class IntegerArithmeticVerifierTests(unittest.TestCase):
         ).verified)
 
 
+class DivisibilityRuleVerifierTests(unittest.TestCase):
+    def setUp(self):
+        from question_engine.verification import DivisibilityRuleVerifier
+        self.verifier = DivisibilityRuleVerifier()
+
+    def _question(self, **overrides):
+        values = dict(
+            question_id="MATH-DIV-001", origin=QuestionOrigin.ORIGINAL,
+            subject_id="math", unit_id="u1", chapter_id="ch1", subtopic_id="st1",
+            question_text="Which of these integers is divisible by 6?",
+            answer_type="SINGLE_CORRECT",
+            options=("12", "14", "15", "25"), correct_answer="12",
+            explanation="12 = 6 × 2.",
+        )
+        values.update(overrides)
+        return QuestionCandidate(**values)
+
+    def test_verifies_unique_divisible_option(self):
+        result = self.verifier.verify(self._question())
+        self.assertTrue(result.verified)
+        self.assertIn("exactly one option (12)", result.evidence)
+
+    def test_rejects_wrong_supplied_answer(self):
+        result = self.verifier.verify(self._question(correct_answer="14"))
+        self.assertFalse(result.verified)
+        self.assertIn("disagrees", result.reason)
+
+    def test_rejects_multiple_or_zero_matching_options(self):
+        self.assertFalse(self.verifier.verify(
+            self._question(options=("12", "18", "15", "25"))
+        ).verified)
+        self.assertFalse(self.verifier.verify(
+            self._question(options=("13", "14", "15", "25"))
+        ).verified)
+
+    def test_rejects_unsupported_format_and_non_single_correct(self):
+        self.assertFalse(self.verifier.verify(
+            self._question(question_text="Find all multiples of 6.")
+        ).verified)
+        self.assertFalse(self.verifier.verify(
+            self._question(answer_type="MULTIPLE_CORRECT")
+        ).verified)
+
+    def test_rejects_invalid_divisor_and_option_values(self):
+        self.assertFalse(self.verifier.verify(
+            self._question(question_text="Which of these integers is divisible by 0?")
+        ).verified)
+        self.assertFalse(self.verifier.verify(
+            self._question(options=("12", "14", "15.0", "25"))
+        ).verified)
+        self.assertFalse(self.verifier.verify(
+            self._question(options=("12", "12", "15", "25"))
+        ).verified)
+        self.assertFalse(self.verifier.verify(
+            self._question(options=("1200000000000", "14", "15", "25"))
+        ).verified)
+
+
 class ApprovedCatalogScopeVerifierTests(unittest.TestCase):
     def setUp(self):
         from question_engine.curriculum import CurriculumSnapshot
