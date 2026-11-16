@@ -90,10 +90,23 @@ class ExamSyllabusRegistryTests(unittest.TestCase):
             root / "catalogs" / "exam_syllabus_sources.csv",
             root / "catalogs" / "exam_syllabus_mappings.csv",
         )
-        self.assertEqual(len(registry.sources), 1)
-        self.assertEqual(registry.sources[0].source_id, "NEET-UG-2026-NMC")
-        self.assertEqual(registry.sources[0].publication_date, "2025-12-22")
+        self.assertEqual(len(registry.sources), 2)
+        source_ids = {item.source_id for item in registry.sources}
+        self.assertEqual(source_ids, {"NEET-UG-2026-NMC", "JEE-MAIN-2027-NTA"})
+        jee_main = next(item for item in registry.sources if item.source_id == "JEE-MAIN-2027-NTA")
+        self.assertEqual(jee_main.publication_date, "")
         self.assertEqual(registry.mappings, ())
+
+
+    def test_allows_unknown_publication_and_effective_dates_without_inventing_them(self):
+        registry = ExamSyllabusRegistry(
+            [source(publication_date="", effective_from="")], []
+        )
+        self.assertEqual(registry.sources[0].publication_date, "")
+        with self.assertRaisesRegex(ExamSyllabusRegistryError, "effective_to requires"):
+            ExamSyllabusRegistry(
+                [source(publication_date="", effective_from="", effective_to="2026-12-31")], []
+            )
 
     def test_csv_loader_requires_schema_and_loads_records(self):
         with tempfile.TemporaryDirectory() as directory:
