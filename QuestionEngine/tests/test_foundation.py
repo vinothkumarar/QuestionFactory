@@ -16,6 +16,7 @@ from question_engine.models import (
 from question_engine.original_engine import OriginalQuestionEngine
 from question_engine.pyq_engine import PYQPracticeEngine
 from question_engine.pyq_registry import PYQSourceRegistry
+from question_engine.pdf_ingest import PDFTextExtractor
 from question_engine.quality import QuestionQualityGate
 
 
@@ -240,6 +241,45 @@ class PYQRegistryTests(unittest.TestCase):
             path.write_text(content, encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "duplicate PYQ_ID"):
                 PYQSourceRegistry.load_csv(path)
+
+
+class PDFIngestionTests(unittest.TestCase):
+    def test_extracts_page_count_hash_and_marks_scanned_pages_for_ocr(self):
+        from pypdf import PdfWriter
+
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "scanned-source.pdf"
+            writer = PdfWriter()
+            writer.add_blank_page(width=612, height=792)
+            writer.add_blank_page(width=612, height=792)
+            with path.open("wb") as handle:
+                writer.write(handle)
+
+            result = PDFTextExtractor().extract(path)
+
+        self.assertEqual(result.page_count, 2)
+        self.assertEqual(len(result.sha256), 64)
+        self.assertEqual(result.pages_needing_ocr, (1, 2))
+        self.assertEqual(result.extracted_text_page_count, 0)
+
+    def test_rejects_non_pdf_input(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "not-a-pdf.pdf"
+            path.write_text("not a PDF", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "not a valid PDF header"):
+                PDFTextExtractor().extract(path)
+
+    def test_enforces_pdf_size_limit(self):
+        from pypdf import PdfWriter
+
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "source.pdf"
+            writer = PdfWriter()
+            writer.add_blank_page(width=612, height=792)
+            with path.open("wb") as handle:
+                writer.write(handle)
+            with self.assertRaisesRegex(ValueError, "size limit"):
+                PDFTextExtractor(max_file_size_bytes=1).extract(path)
 
 
 class PYQTests(unittest.TestCase):
