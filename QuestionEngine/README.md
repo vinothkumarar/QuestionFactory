@@ -20,7 +20,7 @@ An independent implementation of two question workflows for JEE Main, JEE Advanc
 - Separate answer-verification and syllabus-scope-verification contracts. Both must return matching question IDs, a method and evidence before approval.
 - Conservative deterministic integer-expression verifier for the exact `Evaluate: <integer expression>` format. It uses a restricted AST interpreter (no `eval`), checks four distinct integer options and rejects unsupported formats or incorrect answers.
 - Approved-catalog scope verifier that checks the full subject → unit → chapter → subtopic ID chain and requires every referenced concept to be explicitly approved with audit metadata.
-- Exam-versioned official syllabus source/mapping registry with provenance, effective dates, optional document hash, reviewer audit fields and exact-match lookup.
+- Exam-versioned official syllabus source/mapping registry with provenance, effective dates, optional document hash, reviewer audit fields and exact-match lookup; APPROVED mappings additionally require a retrieved official document with a recorded SHA-256 fingerprint.
 - Exam-target scope-verification wrapper that requires a configured syllabus version and an approved official mapping for every exam target.
 - PYQ intake gate requiring paper provenance, verified transcription and traceable answer-key/solution reference.
 - Audited PYQ registry loader for CSV and XLSX, including duplicate-ID checks and acquisition reporting.
