@@ -9,6 +9,7 @@ from .pyq_registry import PYQSourceRegistry
 from .pdf_ingest import PDFTextExtractor, PDFExtractionResult, PDFPageText
 from .verification import AnswerVerificationResult, QuestionAnswerVerifier
 from .scope_verification import ScopeVerificationResult, QuestionScopeVerifier
+from .pyq_segmenter import PYQTextSegmenter, PYQTextFragment, PYQSegmentationResult
 from .openai_provider import OpenAIQuestionGenerationProvider, OpenAIProviderError
 
 __all__ = [
@@ -29,6 +30,9 @@ __all__ = [
     "QuestionAnswerVerifier",
     "ScopeVerificationResult",
     "QuestionScopeVerifier",
+    "PYQTextSegmenter",
+    "PYQTextFragment",
+    "PYQSegmentationResult",
     "OpenAIQuestionGenerationProvider",
     "OpenAIProviderError",
 ]
