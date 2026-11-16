@@ -3,8 +3,10 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from itertools import islice
 from typing import Iterable, List
 
+from .generation import GenerationRequest, QuestionGenerationProvider
 from .models import QuestionCandidate, QuestionOrigin
 from .quality import QuestionQualityGate, QualityDecision
 
@@ -28,6 +30,19 @@ class OriginalQuestionEngine:
 
     def __init__(self, quality_gate: QuestionQualityGate | None = None):
         self.quality_gate = quality_gate or QuestionQualityGate()
+
+    def generate_and_review(
+        self,
+        request: GenerationRequest,
+        provider: QuestionGenerationProvider,
+    ) -> OriginalEngineResult:
+        """Generate a bounded candidate batch, then apply the normal review gates.
+
+        The provider does not get to approve its own output. Every candidate is
+        passed through the same hard gates and duplicate checks as supplied data.
+        """
+        candidates = islice(provider.generate(request), request.candidate_limit)
+        return self.review(candidates)
 
     def review(self, candidates: Iterable[QuestionCandidate]) -> OriginalEngineResult:
         approved: List[QuestionCandidate] = []
