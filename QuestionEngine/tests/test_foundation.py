@@ -191,6 +191,18 @@ class PYQTests(unittest.TestCase):
         self.assertFalse(result.verified_for_practice)
         self.assertTrue(any("not verified" in reason for reason in result.pending_reasons))
 
+    def test_pyq_with_unreferenced_answer_key_stays_pending(self):
+        provenance = PYQProvenance(
+            exam="JEE Main", year=2025, paper="Paper 1", shift="Shift 1",
+            question_number="Q12", source_file="paper.pdf",
+            transcription_verified=True, answer_verified=True,
+        )
+        result = PYQPracticeEngine().ingest(
+            make_question(origin=QuestionOrigin.PYQ, pyq_provenance=provenance)
+        )
+        self.assertFalse(result.verified_for_practice)
+        self.assertIn("PYQ answer-key/solution reference is missing", result.pending_reasons)
+
     def test_verified_pyq_enters_practice_collection(self):
         provenance = PYQProvenance(
             exam="JEE Main",
