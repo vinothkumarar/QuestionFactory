@@ -78,6 +78,16 @@ class ExamSyllabusRegistryTests(unittest.TestCase):
         with self.assertRaisesRegex(ExamSyllabusRegistryError, "SHA-256-fingerprinted"):
             ExamSyllabusRegistry([source(retrieved_at="")], [approved])
 
+    def test_approved_mapping_requires_explicit_source_effective_date(self):
+        approved = mapping(
+            review_status="APPROVED", reviewer_id="reviewer",
+            reviewed_at="2026-11-16T10:00:00Z",
+            review_source="Official syllabus PDF page 3",
+            approval_rationale="Exact wording and mapping checked.",
+        )
+        with self.assertRaisesRegex(ExamSyllabusRegistryError, "effective_from"):
+            ExamSyllabusRegistry([source(effective_from="")], [approved])
+
     def test_rejects_approved_mapping_without_audit_evidence(self):
         with self.assertRaisesRegex(ExamSyllabusRegistryError, "requires reviewer"):
             ExamSyllabusRegistry([source()], [mapping(review_status="APPROVED")])
