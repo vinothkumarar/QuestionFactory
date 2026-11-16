@@ -113,11 +113,12 @@ class ExamSyllabusRegistryTests(unittest.TestCase):
             root / "catalogs" / "exam_syllabus_sources.csv",
             root / "catalogs" / "exam_syllabus_mappings.csv",
         )
-        self.assertEqual(len(registry.sources), 4)
+        self.assertEqual(len(registry.sources), 6)
         source_ids = {item.source_id for item in registry.sources}
         self.assertEqual(source_ids, {
             "NEET-UG-2026-NMC", "JEE-MAIN-2026-NTA",
-            "JEE-MAIN-2027-NTA", "JEE-ADVANCED-2027-IITD",
+            "JEE-MAIN-2027-NTA", "JEE-ADVANCED-2026-IITD",
+            "JEE-ADVANCED-2027-IITD", "BITSAT-2026-BITS",
         })
         jee_main_2026 = next(item for item in registry.sources if item.source_id == "JEE-MAIN-2026-NTA")
         self.assertEqual(jee_main_2026.publication_date, "2025-10-31")
@@ -126,6 +127,10 @@ class ExamSyllabusRegistryTests(unittest.TestCase):
         jee_main_2027 = next(item for item in registry.sources if item.source_id == "JEE-MAIN-2027-NTA")
         self.assertEqual(jee_main_2027.publication_date, "")
         self.assertTrue(jee_main_2027.official_source_url.endswith("/20261024683680768.pdf"))
+        jee_advanced_2026 = next(item for item in registry.sources if item.source_id == "JEE-ADVANCED-2026-IITD")
+        self.assertTrue(jee_advanced_2026.official_source_url.endswith("/jee-advanced-2026-syllabus.pdf"))
+        bitsat_2026 = next(item for item in registry.sources if item.source_id == "BITSAT-2026-BITS")
+        self.assertTrue(bitsat_2026.official_source_url.endswith("/BITSAT-2026_brochure.pdf"))
         self.assertEqual(registry.mappings, ())
         status_path = root / "catalogs" / "exam_syllabus_source_status.csv"
         with status_path.open("r", encoding="utf-8", newline="") as handle:
