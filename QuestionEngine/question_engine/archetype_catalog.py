@@ -122,7 +122,27 @@ class ArchetypeCatalog:
             Path(qpc_path),
             {"qp_id", "subtopic_code", "question_possibility"},
         )
-        entries = [ArchetypeEntry(**row) for row in archetypes]
+        entries = [
+            ArchetypeEntry(
+                archetype_id=row.get("archetype_id", ""),
+                qp_id=row.get("qp_id", ""),
+                subtopic_code=row.get("subtopic_code", ""),
+                question_possibility=row.get("question_possibility", ""),
+                archetype_name=row.get("archetype_name", ""),
+                construction_pattern=row.get("construction_pattern", ""),
+                target_skill=row.get("target_skill", ""),
+                suggested_format=row.get("suggested_format", ""),
+                difficulty_band=row.get("difficulty_band", ""),
+                variation_dimensions=row.get("variation_dimensions", ""),
+                distractor_strategy=row.get("distractor_strategy", ""),
+                independent_verification_route=row.get(
+                    "independent_verification_route", ""
+                ),
+                scope_status=row.get("scope_status", ""),
+                notes=row.get("notes", ""),
+            )
+            for row in archetypes
+        ]
         catalog = cls(entries)
         catalog.validate_qpc_alignment(qpc_rows)
         return catalog
@@ -149,11 +169,15 @@ class ArchetypeCatalog:
         self, qpc_rows: Iterable[dict[str, str]]
     ) -> None:
         """Require exact QPC identity/description alignment and full coverage."""
-        qpc_by_id = {
-            row["qp_id"]: row
-            for row in qpc_rows
-            if row.get("qp_id") and row.get("subtopic_code")
-        }
+        qpc_by_id: dict[str, dict[str, str]] = {}
+        for row in qpc_rows:
+            qp_id = row.get("qp_id", "")
+            if not qp_id or not row.get("subtopic_code"):
+                continue
+            if qp_id in qpc_by_id:
+                raise ArchetypeCatalogError(f"Duplicate source QPC ID: {qp_id}")
+            qpc_by_id[qp_id] = row
+
         subtopics = {entry.subtopic_code for entry in self.entries}
         expected = {
             row["qp_id"]: row
