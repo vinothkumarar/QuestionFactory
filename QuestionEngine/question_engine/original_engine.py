@@ -32,6 +32,28 @@ class OriginalQuestionEngine:
     def __init__(self, quality_gate: QuestionQualityGate | None = None):
         self.quality_gate = quality_gate or QuestionQualityGate()
 
+    def generate_drafts(
+        self,
+        request: GenerationRequest,
+        provider: QuestionGenerationProvider,
+    ) -> list[QuestionCandidate]:
+        """Generate bounded draft candidates without granting approval status."""
+        drafts: list[QuestionCandidate] = []
+        for candidate in islice(provider.generate(request), request.candidate_limit):
+            if candidate.origin not in self.ACCEPTED_ORIGINS:
+                continue
+            drafts.append(
+                replace(
+                    candidate,
+                    answer_verified=False,
+                    syllabus_scope_verified=False,
+                    answer_verification_method="",
+                    answer_verification_evidence="",
+                    answer_verification_notes="Awaiting independent answer and syllabus verification.",
+                )
+            )
+        return drafts
+
     def generate_and_review(
         self,
         request: GenerationRequest,
@@ -45,15 +67,8 @@ class OriginalQuestionEngine:
         evidence. Every resulting candidate then passes the shared quality gate.
         """
         verified_candidates = []
-        candidates = islice(provider.generate(request), request.candidate_limit)
-        for candidate in candidates:
-            unverified = replace(
-                candidate,
-                answer_verified=False,
-                answer_verification_method="",
-                answer_verification_evidence="",
-                answer_verification_notes="",
-            )
+        for unverified in self.generate_drafts(request, provider):
+            unverified = replace(unverified, answer_verification_notes="")
             verification = verifier.verify(unverified)
             if verification.question_id != candidate.question_id:
                 verified_candidates.append(
