@@ -17,6 +17,7 @@ from question_engine.original_engine import OriginalQuestionEngine
 from question_engine.pyq_engine import PYQPracticeEngine
 from question_engine.pyq_registry import PYQSourceRegistry
 from question_engine.pdf_ingest import PDFTextExtractor
+from question_engine.verification import AnswerVerificationResult
 from question_engine.quality import QuestionQualityGate
 
 
@@ -42,6 +43,8 @@ def make_question(origin=QuestionOrigin.ORIGINAL, **overrides):
         reasoning_signature="classify-positive-integer-by-divisibility",
         uniqueness_key="positive-integer-classification-001",
         answer_verified=True,
+        answer_verification_method="independent-symbolic-check",
+        answer_verification_evidence="Worked solution independently checked against the result.",
         syllabus_scope_verified=True,
         quality_scores=QuestionQualityScores(9, 8, 9, 8, 8),
     )
@@ -119,9 +122,57 @@ class GenerationTests(unittest.TestCase):
             learning_outcomes=("Classify integers using divisibility.",),
             candidate_limit=2,
         )
-        result = OriginalQuestionEngine().generate_and_review(request, FakeProvider())
+        class FakeVerifier:
+            def verify(self, question):
+                return AnswerVerificationResult(
+                    question_id=question.question_id,
+                    verified=True,
+                    method="independent-symbolic-check",
+                    evidence="Recomputed independently and substituted into the original condition.",
+                )
+
+        result = OriginalQuestionEngine().generate_and_review(
+            request, FakeProvider(), FakeVerifier()
+        )
         self.assertEqual(len(result.approved), 2)
         self.assertEqual(result.approved[0].question_id, "GEN-1")
+        self.assertEqual(
+            result.approved[0].answer_verification_method,
+            "independent-symbolic-check",
+        )
+
+    def test_generator_cannot_self_approve_without_verifier_approval(self):
+        class FakeProvider:
+            def generate(self, request):
+                yield make_question(answer_verified=True)
+
+        class RejectingVerifier:
+            def verify(self, question):
+                return AnswerVerificationResult(
+                    question_id=question.question_id,
+                    verified=False,
+                    method="",
+                    evidence="",
+                    reason="Independent recomputation disagreed with the supplied answer.",
+                )
+
+        request = GenerationRequest(
+            subject_id="subject-math",
+            unit_id="unit-u1",
+            chapter_id="chapter-ch1",
+            subtopic_id="subtopic-st1",
+            exam_targets=("JEE Main",),
+            concept_ids=("number-classification",),
+            learning_outcomes=("Classify integers using divisibility.",),
+        )
+        result = OriginalQuestionEngine().generate_and_review(
+            request, FakeProvider(), RejectingVerifier()
+        )
+        self.assertEqual(result.approved, [])
+        self.assertIn(
+            "Independent recomputation disagreed",
+            result.rejected[0][1].reasons[0],
+        )
 
     def test_generation_request_rejects_missing_learning_outcomes(self):
         with self.assertRaises(ValueError):
