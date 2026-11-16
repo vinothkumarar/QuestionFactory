@@ -1,6 +1,7 @@
 """Independent dual question engine foundation."""
 
 from .curriculum import CurriculumLoader, CurriculumSnapshot
+from .concept_catalog import ConceptCatalog, ConceptCatalogError, ConceptEntry
 from .export import QuestionCSVExporter
 from .generation import GenerationRequest, QuestionGenerationProvider
 from .models import QuestionCandidate, QuestionOrigin, QuestionQualityScores
@@ -15,6 +16,9 @@ from .openai_provider import OpenAIQuestionGenerationProvider, OpenAIProviderErr
 __all__ = [
     "CurriculumLoader",
     "CurriculumSnapshot",
+    "ConceptCatalog",
+    "ConceptCatalogError",
+    "ConceptEntry",
     "QuestionCandidate",
     "QuestionCSVExporter",
     "GenerationRequest",
