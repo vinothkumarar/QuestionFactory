@@ -50,11 +50,15 @@ class QuestionQualityGate:
             elif len({self._normalise(option) for option in question.options}) != 4:
                 reasons.append("MCQ contains duplicate options")
 
-        if question.origin == QuestionOrigin.ORIGINAL:
+        if question.origin in {QuestionOrigin.ORIGINAL, QuestionOrigin.PYQ_INSPIRED}:
             if not question.reasoning_signature.strip():
                 reasons.append("Original question lacks a reasoning signature")
             if not question.uniqueness_key.strip():
                 reasons.append("Original question lacks a uniqueness key")
+
+        if question.origin == QuestionOrigin.PYQ_INSPIRED:
+            if not question.inspired_by_pyq_id:
+                reasons.append("PYQ-inspired question lacks its source PYQ ID")
 
         if question.origin == QuestionOrigin.PYQ:
             evidence = question.pyq_provenance
@@ -90,15 +94,18 @@ class QuestionQualityGate:
 
         for question in questions:
             text_key = self._normalise(question.question_text)
-            unique_key = question.uniqueness_key.strip().casefold()
+            unique_key = (
+                f"{question.subject_id}:{question.subtopic_id}:"
+                f"{question.uniqueness_key.strip().casefold()}"
+            )
             duplicate = bool(text_key and text_key in seen_text)
-            duplicate = duplicate or bool(unique_key and unique_key in seen_keys)
+            duplicate = duplicate or bool(question.uniqueness_key.strip() and unique_key in seen_keys)
             if duplicate:
                 rejected.append(question)
                 continue
             if text_key:
                 seen_text.add(text_key)
-            if unique_key:
+            if question.uniqueness_key.strip():
                 seen_keys.add(unique_key)
             accepted.append(question)
 
