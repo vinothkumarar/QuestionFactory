@@ -265,7 +265,7 @@ class NumberSetMembershipVerifier:
     METHOD = "deterministic-number-set-membership-v1"
     QUESTION_PATTERN = re.compile(
         r"^\s*Which of these values is (?P<negation>not )?"
-        r"(?:a )?(?P<number_set>natural number|whole number|integer)\?"
+        r"(?:a |an )?(?P<number_set>natural number|whole number|integer)\?"
         r"\s*(?:Natural numbers (?P<natural_convention>include|exclude) zero\.)?\s*$",
         re.IGNORECASE,
     )
