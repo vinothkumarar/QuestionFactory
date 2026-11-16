@@ -181,12 +181,12 @@ class PYQRegistryTests(unittest.TestCase):
         content = (
             "PYQ_ID,Year,Exam,Paper,Language,Source,Primary Source URL,PDF URL,"
             "Answer Key URL,Solution URL,Acquisition Status,PDF Verified,"
-            "Answer Key Verified,Audit Status\\n"
+            "Answer Key Verified,Audit Status\n"
             "JEE-2025-P1,2025,JEE Main,Paper 1,English,Official archive,"
-            "https://example.org/archive,, , ,Not yet acquired,No,No,Ready for acquisition\\n"
+            "https://example.org/archive,, , ,Not yet acquired,No,No,Ready for acquisition\n"
             "JEE-2024-P2,2024,JEE Advanced,Paper 2,English,Official archive,"
             "https://example.org/archive,https://example.org/paper.pdf,"
-            "https://example.org/key.pdf,,Acquired,Yes,Yes,Verified\\n"
+            "https://example.org/key.pdf,,Acquired,Yes,Yes,Verified\n"
         )
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "registry.csv"
@@ -202,9 +202,9 @@ class PYQRegistryTests(unittest.TestCase):
 
     def test_registry_rejects_duplicate_pyq_ids(self):
         content = (
-            "PYQ_ID,Year,Exam,Paper,Acquisition Status\\n"
-            "DUP,2025,JEE Main,Paper 1,Not yet acquired\\n"
-            "DUP,2024,JEE Main,Paper 2,Not yet acquired\\n"
+            "PYQ_ID,Year,Exam,Paper,Acquisition Status\n"
+            "DUP,2025,JEE Main,Paper 1,Not yet acquired\n"
+            "DUP,2024,JEE Main,Paper 2,Not yet acquired\n"
         )
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "registry.csv"
