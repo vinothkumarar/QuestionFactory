@@ -36,10 +36,11 @@ This first foundation provides:
 - a shared question data model;
 - explicit quality gates and exact-duplicate checks;
 - separate original/PYQ-inspired review and PYQ provenance intake;
+- deterministic UTF-8 CSV export that preserves options, rubric scores and PYQ provenance in JSON columns;
 - a curriculum readiness command;
 - standard-library unit tests.
 
-The original engine currently reviews candidates; an AI generation provider is not yet wired in. The PYQ engine currently verifies intake metadata; bulk PDF/OCR extraction and 20-year paper collection are not yet implemented. These are the next delivery increments, not features we claim are already complete.
+`QuestionCSVExporter` writes a staging CSV with an explicit stable column order. It is intentionally not represented as the final Supabase import schema until that contract is confirmed.\n\nThe original engine currently reviews candidates; an AI generation provider is not yet wired in. The PYQ engine currently verifies intake metadata; bulk PDF/OCR extraction and 20-year paper collection are not yet implemented. These are the next delivery increments, not features we claim are already complete.
 
 Exact PYQs require traceable paper provenance, verified transcription and verified answer evidence before they enter the verified practice collection. Usage rights must be reviewed before external redistribution.
 
