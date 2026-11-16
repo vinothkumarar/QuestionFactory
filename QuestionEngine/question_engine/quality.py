@@ -67,6 +67,12 @@ class QuestionQualityGate:
             else:
                 if not all((evidence.exam, evidence.paper, evidence.question_number, evidence.source_file)):
                     reasons.append("PYQ provenance is incomplete")
+                if evidence.year < 1900 or evidence.year > 2100:
+                    reasons.append("PYQ provenance has an invalid examination year")
+                if evidence.page_number is not None and evidence.page_number < 1:
+                    reasons.append("PYQ source page number must be positive")
+                if not evidence.answer_key_reference:
+                    reasons.append("PYQ answer-key/solution reference is missing")
                 if not evidence.transcription_verified:
                     reasons.append("PYQ transcription is not verified against its source")
                 if not evidence.answer_verified:
