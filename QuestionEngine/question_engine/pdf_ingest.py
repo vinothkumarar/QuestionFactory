@@ -55,7 +55,9 @@ class PDFTextExtractor:
             raise ValueError(
                 f"PDF exceeds configured size limit ({size} > {self.max_file_size_bytes})"
             )
-        if size < 5 or path.read_bytes()[:5] != b"%PDF-":
+        with path.open("rb") as handle:
+            header = handle.read(5)
+        if size < 5 or header != b"%PDF-":
             raise ValueError(f"File is not a valid PDF header: {path}")
 
         digest = hashlib.sha256()
