@@ -5,6 +5,7 @@ from __future__ import annotations
 import ast
 import operator
 import re
+from fractions import Fraction
 from dataclasses import dataclass
 from typing import Callable, Iterable, Protocol
 
@@ -244,3 +245,119 @@ class DivisibilityRuleVerifier:
             return int(candidate)
         except ValueError:
             return None
+
+
+
+class NumberSetMembershipVerifier:
+    """Verify tightly specified membership MCQs for N, W and Z.
+
+    Supported form:
+      Which of these values is [not] a natural number?
+      Which of these values is [not] a whole number?
+      Which of these values is [not] an integer?
+
+    Natural-number questions must append either
+    'Natural numbers include zero.' or 'Natural numbers exclude zero.'
+    Options must be exact integers, decimals or fractions parseable by
+    fractions.Fraction. Unsupported wording fails closed.
+    """
+
+    METHOD = "deterministic-number-set-membership-v1"
+    QUESTION_PATTERN = re.compile(
+        r"^\s*Which of these values is (?P<negation>not )?"
+        r"(?:a )?(?P<number_set>natural number|whole number|integer)\?"
+        r"\s*(?:Natural numbers (?P<natural_convention>include|exclude) zero\.)?\s*$",
+        re.IGNORECASE,
+    )
+
+    def verify(self, question: QuestionCandidate) -> AnswerVerificationResult:
+        def reject(reason: str) -> AnswerVerificationResult:
+            return AnswerVerificationResult(
+                question.question_id, False, self.METHOD, "", reason
+            )
+
+        if question.answer_type.upper() != "SINGLE_CORRECT":
+            return reject("Unsupported answer type; only SINGLE_CORRECT is supported")
+
+        match = self.QUESTION_PATTERN.fullmatch(question.question_text)
+        if match is None:
+            return reject(
+                "Unsupported wording; expected a direct N/W/Z membership question"
+            )
+
+        number_set = match.group("number_set").casefold()
+        natural_convention = match.group("natural_convention")
+        if number_set == "natural number" and natural_convention is None:
+            return reject(
+                "Natural-number convention must explicitly include or exclude zero"
+            )
+        if number_set != "natural number" and natural_convention is not None:
+            return reject(
+                "Natural-number convention suffix is only valid for natural-number questions"
+            )
+
+        if len(question.options) != 4:
+            return reject("Exactly four answer options are required")
+
+        try:
+            values = [Fraction(option.strip()) for option in question.options]
+        except (ValueError, ZeroDivisionError):
+            return reject("All four options must be exact integer, decimal or fraction values")
+
+        if len(set(values)) != 4:
+            return reject("Options must represent four distinct exact numeric values")
+
+        def belongs(value: Fraction) -> bool:
+            is_integer = value.denominator == 1
+            if number_set == "integer":
+                return is_integer
+            if number_set == "whole number":
+                return is_integer and value >= 0
+            if number_set == "natural number":
+                if not is_integer:
+                    return False
+                if natural_convention and natural_convention.casefold() == "include":
+                    return value >= 0
+                return value > 0
+            return False
+
+        negate = bool(match.group("negation"))
+        matching = [
+            value for value in values
+            if (not belongs(value) if negate else belongs(value))
+        ]
+        if len(matching) != 1:
+            return reject(
+                "Exactly one option must satisfy the requested membership; "
+                f"found {len(matching)}"
+            )
+
+        try:
+            supplied = Fraction(question.correct_answer.strip())
+        except (ValueError, ZeroDivisionError):
+            return reject("Correct answer must be an exact numeric value")
+        if supplied != matching[0]:
+            return reject(
+                f"Supplied answer {question.correct_answer!r} disagrees with "
+                f"the independently verified option value {matching[0]}"
+            )
+
+        rule = {
+            "natural number": (
+                "non-negative integer"
+                if natural_convention and natural_convention.casefold() == "include"
+                else "positive integer"
+            ),
+            "whole number": "non-negative integer",
+            "integer": "number with denominator one",
+        }[number_set]
+        if negate:
+            rule = "value that is not a " + rule
+        evidence = (
+            f"Parsed all four options exactly as rational values and tested "
+            f"membership in {number_set}; rule: {rule}. Exactly one option "
+            f"matches ({matching[0]}), and the supplied answer agrees."
+        )
+        return AnswerVerificationResult(
+            question.question_id, True, self.METHOD, evidence
+        )
