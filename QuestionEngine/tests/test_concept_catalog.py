@@ -5,13 +5,13 @@ import unittest
 from question_engine.concept_catalog import ConceptCatalog, ConceptCatalogError
 
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
+QUESTION_ENGINE_ROOT = Path(__file__).resolve().parents[1]
 
 
 class ConceptCatalogTests(unittest.TestCase):
     def test_provisional_pilot_concepts_are_not_released_for_generation(self):
         catalog = ConceptCatalog.load(
-            REPO_ROOT / "catalogs" / "maths_u1_ch1_st1_concepts.csv"
+            QUESTION_ENGINE_ROOT / "catalogs" / "maths_u1_ch1_st1_concepts.csv"
         )
         self.assertEqual(len(catalog.for_subtopic("U1_CH1_ST1")), 7)
         self.assertEqual(catalog.approved_for_generation("U1_CH1_ST1"), ())
