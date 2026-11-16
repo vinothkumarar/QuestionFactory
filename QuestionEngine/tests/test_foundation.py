@@ -23,6 +23,7 @@ from question_engine.openai_provider import (
     OpenAIQuestionGenerationProvider,
 )
 from question_engine.quality import QuestionQualityGate
+from question_engine.pilot import build_request
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -63,6 +64,22 @@ class CurriculumTests(unittest.TestCase):
         self.assertEqual(names, {"Mathematics", "Physics", "Chemistry", "Biology"})
         self.assertTrue(snapshot.subtopics)
         self.assertTrue(any(item.startswith("Biology:") for item in snapshot.incomplete_subjects))
+
+    def test_pilot_request_resolves_subtopic_to_full_curriculum_hierarchy(self):
+        snapshot = CurriculumLoader(REPO_ROOT / "Engine" / "curriculum").load()
+        request = build_request(
+            snapshot,
+            "U1_CH1_ST1",
+            ("JEE Main", "JEE Advanced"),
+            ("natural-numbers", "integers"),
+            ("Classify natural numbers, whole numbers and integers.",),
+            3,
+        )
+        self.assertEqual(request.subject_id, "MAT")
+        self.assertEqual(request.unit_id, "U1")
+        self.assertEqual(request.chapter_id, "CH1")
+        self.assertEqual(request.subtopic_id, "ST1")
+        self.assertEqual(request.candidate_limit, 3)
 
     def test_finds_existing_subtopic_code(self):
         snapshot = CurriculumLoader(REPO_ROOT / "Engine" / "curriculum").load()
