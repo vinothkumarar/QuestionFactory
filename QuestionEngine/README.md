@@ -37,8 +37,7 @@ This first foundation provides:
 - explicit quality gates and exact-duplicate checks;
 - separate original/PYQ-inspired review and PYQ provenance intake;
 - provider-neutral generation request contract; generated candidates always pass through the shared quality gate;
-- audited PYQ source-registry CSV loader and acquisition-readiness summary; source inventory records are never treated as acquired PDFs or verified questions;
-- deterministic UTF-8 CSV export that preserves options, rubric scores and PYQ provenance in JSON columns;
+- audited PYQ source-registry CSV/XLSX loader and acquisition-readiness summary; source inventory records are never treated as acquired PDFs or verified questions;
 - deterministic UTF-8 CSV export that preserves options, rubric scores and PYQ provenance in JSON columns;
 - a curriculum readiness command;
 - standard-library unit tests.
