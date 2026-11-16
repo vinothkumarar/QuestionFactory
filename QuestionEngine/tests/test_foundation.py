@@ -6,6 +6,7 @@ import unittest
 
 from question_engine.curriculum import CurriculumLoader
 from question_engine.export import CSV_FIELDS, QuestionCSVExporter
+from question_engine.generation import GenerationRequest
 from question_engine.models import (
     PYQProvenance,
     QuestionCandidate,
@@ -93,6 +94,43 @@ class QualityTests(unittest.TestCase):
         result = QuestionQualityGate().evaluate(missing_source)
         self.assertFalse(result.approved)
         self.assertIn("PYQ-inspired question lacks its source PYQ ID", result.reasons)
+
+
+class GenerationTests(unittest.TestCase):
+    def test_provider_output_is_capped_and_still_quality_reviewed(self):
+        class FakeProvider:
+            def generate(self, request):
+                for index in range(1, 4):
+                    yield make_question(
+                        question_id=f"GEN-{index}",
+                        uniqueness_key=f"generated-concept-{index}",
+                    )
+
+        request = GenerationRequest(
+            subject_id="subject-math",
+            unit_id="unit-u1",
+            chapter_id="chapter-ch1",
+            subtopic_id="subtopic-st1",
+            exam_targets=("JEE Main",),
+            concept_ids=("number-classification",),
+            learning_outcomes=("Classify integers using divisibility.",),
+            candidate_limit=2,
+        )
+        result = OriginalQuestionEngine().generate_and_review(request, FakeProvider())
+        self.assertEqual(len(result.approved), 2)
+        self.assertEqual(result.approved[0].question_id, "GEN-1")
+
+    def test_generation_request_rejects_missing_learning_outcomes(self):
+        with self.assertRaises(ValueError):
+            GenerationRequest(
+                subject_id="subject-math",
+                unit_id="unit-u1",
+                chapter_id="chapter-ch1",
+                subtopic_id="subtopic-st1",
+                exam_targets=("JEE Main",),
+                concept_ids=("number-classification",),
+                learning_outcomes=(),
+            )
 
 
 class ExportTests(unittest.TestCase):
