@@ -5,6 +5,7 @@ from .export import QuestionCSVExporter
 from .generation import GenerationRequest, QuestionGenerationProvider
 from .models import QuestionCandidate, QuestionOrigin, QuestionQualityScores
 from .quality import QuestionQualityGate
+from .pyq_registry import PYQSourceRegistry
 
 __all__ = [
     "CurriculumLoader",
@@ -16,4 +17,5 @@ __all__ = [
     "QuestionOrigin",
     "QuestionQualityScores",
     "QuestionQualityGate",
+    "PYQSourceRegistry",
 ]
