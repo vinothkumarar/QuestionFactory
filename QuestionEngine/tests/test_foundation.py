@@ -18,6 +18,10 @@ from question_engine.pyq_engine import PYQPracticeEngine
 from question_engine.pyq_registry import PYQSourceRegistry
 from question_engine.pdf_ingest import PDFTextExtractor
 from question_engine.verification import AnswerVerificationResult
+from question_engine.openai_provider import (
+    OpenAIProviderError,
+    OpenAIQuestionGenerationProvider,
+)
 from question_engine.quality import QuestionQualityGate
 
 
@@ -108,6 +112,95 @@ class QualityTests(unittest.TestCase):
         result = QuestionQualityGate().evaluate(missing_source)
         self.assertFalse(result.approved)
         self.assertIn("PYQ-inspired question lacks its source PYQ ID", result.reasons)
+
+
+class OpenAIProviderTests(unittest.TestCase):
+    @staticmethod
+    def _request():
+        return GenerationRequest(
+            subject_id="subject-math",
+            unit_id="unit-u1",
+            chapter_id="chapter-ch1",
+            subtopic_id="subtopic-st1",
+            exam_targets=("JEE Main",),
+            concept_ids=("number-classification",),
+            learning_outcomes=("Classify integers using divisibility.",),
+            candidate_limit=2,
+        )
+
+    @staticmethod
+    def _candidate():
+        return {
+            "question_text": "Which of these integers is divisible by 6?",
+            "answer_type": "SINGLE_CORRECT",
+            "options": ["12", "14", "15", "25"],
+            "correct_answer": "12",
+            "explanation": "12 = 6 × 2, so it is divisible by 6.",
+            "difficulty": "Easy",
+            "concept_ids": ["divisibility"],
+            "reasoning_signature": "test-divisibility-by-six",
+            "uniqueness_key": "divisibility-six-check",
+            "quality_scores": {
+                "academic_accuracy": 9,
+                "reasoning_depth": 8,
+                "clarity": 9,
+                "distractor_quality": 8,
+                "exam_relevance": 8,
+            },
+            "tags": ["number-system"],
+        }
+
+    def test_provider_parses_candidates_but_never_self_verifies(self):
+        captured = {}
+
+        def fake_transport(url, headers, body, timeout):
+            captured["url"] = url
+            captured["headers"] = headers
+            captured["body"] = json.loads(body)
+            payload = {"questions": [self._candidate()]}
+            return json.dumps({
+                "choices": [{"message": {"content": json.dumps(payload)}}]
+            }).encode("utf-8")
+
+        provider = OpenAIQuestionGenerationProvider(
+            api_key="test-secret",
+            model="test-model",
+            transport=fake_transport,
+        )
+        candidates = list(provider.generate(self._request()))
+        self.assertEqual(len(candidates), 1)
+        candidate = candidates[0]
+        self.assertEqual(candidate.origin, QuestionOrigin.ORIGINAL)
+        self.assertFalse(candidate.answer_verified)
+        self.assertFalse(candidate.syllabus_scope_verified)
+        self.assertEqual(candidate.subject_id, "subject-math")
+        self.assertTrue(candidate.question_id.startswith("DRAFT-"))
+        self.assertEqual(captured["url"], "https://api.openai.com/v1/chat/completions")
+        self.assertEqual(captured["headers"]["Authorization"], "Bearer test-secret")
+        self.assertEqual(captured["body"]["response_format"], {"type": "json_object"})
+
+    def test_provider_rejects_missing_configuration(self):
+        with self.assertRaisesRegex(ValueError, "OPENAI_API_KEY"):
+            OpenAIQuestionGenerationProvider(api_key="", model="test-model")
+        with self.assertRaisesRegex(ValueError, "OPENAI_MODEL"):
+            OpenAIQuestionGenerationProvider(api_key="test-secret", model="")
+
+    def test_provider_rejects_malformed_mcq_instead_of_repairing_it(self):
+        def fake_transport(url, headers, body, timeout):
+            invalid = self._candidate()
+            invalid["options"] = ["12", "14"]
+            payload = {"questions": [invalid]}
+            return json.dumps({
+                "choices": [{"message": {"content": json.dumps(payload)}}]
+            }).encode("utf-8")
+
+        provider = OpenAIQuestionGenerationProvider(
+            api_key="test-secret",
+            model="test-model",
+            transport=fake_transport,
+        )
+        with self.assertRaisesRegex(OpenAIProviderError, "exactly four options"):
+            list(provider.generate(self._request()))
 
 
 class GenerationTests(unittest.TestCase):
