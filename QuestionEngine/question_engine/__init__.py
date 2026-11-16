@@ -9,7 +9,8 @@ from .quality import QuestionQualityGate
 from .pyq_registry import PYQSourceRegistry
 from .pdf_ingest import PDFTextExtractor, PDFExtractionResult, PDFPageText
 from .verification import (
-    AnswerVerificationResult, QuestionAnswerVerifier, IntegerArithmeticExpressionVerifier,\n    DivisibilityRuleVerifier,
+    AnswerVerificationResult, QuestionAnswerVerifier, IntegerArithmeticExpressionVerifier,
+    DivisibilityRuleVerifier,
 )
 from .scope_verification import (
     ScopeVerificationResult, QuestionScopeVerifier, ApprovedCatalogScopeVerifier,
