@@ -822,3 +822,23 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 220 dispositions and 58 draft archetypes; 130 source QPs remain untouched.
+
+
+## Batch 045 — nilpotent polynomial reduction and finite inverse construction (global QP221–QP225)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C019 / QP006 | ELIGIBLE | Nilpotency truncates polynomial expressions to finite sums |
+| C019 / QP007 | ELIGIBLE | Finite geometric series constructs exact inverses of I±N |
+| C019 / QP008 | FOUNDATION_ONLY | Similarity invariance of nilpotency/index is a direct identity |
+| C019 / QP009 | FOUNDATION_ONLY | Triangular zero-pattern nilpotency is a standard structural result |
+| C019 / QP010 | FOUNDATION_ONLY | Index bounds overlap the existing nilpotency-bound mechanism |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00059`: Reduce polynomial expressions in a nilpotent matrix.
+- `U2_CH8_ST1_AR00060`: Construct inverses of I±N using finite geometric series.
+
+Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 225 dispositions and 60 draft archetypes; 125 source QPs remain untouched.
