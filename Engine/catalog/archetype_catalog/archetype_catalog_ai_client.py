@@ -65,10 +65,16 @@ class ArchetypeCatalogAIClient:
                 raise ValueError(f"Archetype record #{index} must be an object.")
 
             missing = self.REQUIRED_FIELDS - set(record)
-            if missing:
+            extra = set(record) - self.REQUIRED_FIELDS
+            if missing or extra:
+                details = []
+                if missing:
+                    details.append("missing fields: " + ", ".join(sorted(missing)))
+                if extra:
+                    details.append("unexpected fields: " + ", ".join(sorted(extra)))
                 raise ValueError(
-                    f"Archetype record #{index} is missing fields: "
-                    + ", ".join(sorted(missing))
+                    f"Archetype record #{index} schema mismatch: "
+                    + "; ".join(details)
                 )
 
             string_fields = {
