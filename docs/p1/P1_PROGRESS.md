@@ -126,6 +126,14 @@ Findings:
 - GitHub branch comparison reports `feature/dual-question-engine-v1` is diverged from `main` (671 commits ahead, 6 behind at the time of check). P1 documentation changes remain on the feature branch. No merge, rebase, force update or production-code change was performed; branch reconciliation remains a separate controlled action.
 - The P1 blueprint authority audit records the second recovery pass; the canonical v1.5 source remains unrecovered.
 
+## 2026-11-17 — Chemistry scope second-pass review
+
+- Scanned all 260 Chemistry subtopic names against the official Main 2027 Unit 13 Purification and Characterisation, Unit 20 Principles Related to Practical Chemistry and Unit 19 Biomolecules/vitamins scope.
+- Found one existing chromatography topic, `C20_CH1_ST9`, nested under Metallurgy but correctly cross-mapped to Main Unit 13. Its parent unit/chapter are disabled, so it is not effectively enabled.
+- No direct taxonomy labels were found for the other major Main Unit 13 purification/characterisation methods or for practical-chemistry exercises, salt analysis, functional-group detection and preparations. C27_CH3 Vitamins remains an empty chapter although Main Biomolecules includes vitamins.
+- Added `P1_CHEMISTRY_COVERAGE_GAP_SECOND_PASS.md` and updated the unit-level and empty-chapter gap audits. No taxonomy IDs, parent paths or enablement flags were changed.
+- These are inventory-level gap findings; actual external/prior catalogue content must still be inspected before proposing any new taxonomy IDs.
+
 ## MECP v1.2 P1 exit gate (verbatim acceptance conditions)\n\n- Pilot subtopic has an evidence-backed official syllabus mapping.\n- Required PYQ/source evidence is sufficient for meaningful analysis, or source gaps are explicitly accepted and bounded.\n- Rule authority is identified and conflicts are resolved or isolated from the pilot.\n- Taxonomy IDs and enablement state are traceable.\n- No pilot selection based solely on catalogue maturity.\n\nThe P1 deliverables also include the official source register, reconciled syllabus master, Main/Advanced applicability map, taxonomy/enablement report, PYQ source/acquisition/answer-key register, authoritative blueprint reference/rule crosswalk, and candidate pilot sequence with source confidence.\n\n## P1 work remaining
 
 1. Independently validate the provisional Main/Advanced mappings against exact official syllabus wording; revalidate Advanced scope when the 2027 syllabus is published.
