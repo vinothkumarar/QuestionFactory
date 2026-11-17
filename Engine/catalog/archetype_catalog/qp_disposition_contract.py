@@ -55,6 +55,12 @@ def validate_catalog_response(
     for index, item in enumerate(dispositions, start=1):
         if not isinstance(item, dict):
             raise ValueError(f"QP disposition #{index} must be an object.")
+        expected_fields = {"concept_id", "qp_id", "disposition", "rationale"}
+        if set(item) != expected_fields:
+            raise ValueError(
+                f"QP disposition #{index} must contain exactly "
+                f"{sorted(expected_fields)}."
+            )
         key = qp_key(item)
         if key not in input_by_key:
             raise ValueError(f"Disposition references unknown QP: {key}.")
