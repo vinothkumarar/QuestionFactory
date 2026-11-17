@@ -580,3 +580,18 @@ New draft candidate:
 - JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
 
 Cumulative status: 160 dispositions and 28 draft archetypes; 190 source QPs remain untouched. Four QPs are held for review because their source specifications are insufficiently precise.
+
+
+## Batch 033 — skew-symmetric decomposition and core properties (global QP161–QP165)
+
+All five possibilities are retained as `FOUNDATION_ONLY`:
+
+| QP | Source mechanism | Disposition rationale |
+|---|---|---|
+| C014 / QP003 | Skew-symmetric component/decomposition | Already covered by the full decomposition archetype AR00024 |
+| C014 / QP004 | Diagonal and trace properties | Direct consequences of skew-symmetry |
+| C014 / QP005 | General element-wise form | Direct pairwise sign pattern |
+| C014 / QP006 | Count independent parameters | Direct n(n−1)/2 count |
+| C014 / QP007 | Closure/invariance operations | Direct transpose identities |
+
+No new archetypes were added. Cumulative status: 165 dispositions and 28 draft archetypes; 185 source QPs remain untouched.
