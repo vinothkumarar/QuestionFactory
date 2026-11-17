@@ -389,6 +389,36 @@
             "qp_id": "QP001",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Zero-matrix recognition by checking all entries is a direct definition-level task."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "QP002",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Requiring every entry of a parameterized matrix to vanish gives entrywise zero equations; this is direct parameter substitution/solving and remains foundation-level."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The zero matrix order must match the given matrix for addition/subtraction; this is direct dimension compatibility."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Using the zero matrix as additive identity is a direct algebraic simplification rule."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Products with a zero matrix produce a zero matrix of compatible order; this is a direct operation property."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "QP006",
+            "disposition": "ELIGIBLE",
+            "rationale": "The implication AB=O ⇒ A=O or B=O is false for matrices; constructing nonzero zero-divisor matrices or reasoning through nullspaces is a distinct reusable inference/counterexample mechanism."
         }
     ],
     "archetypes": [
@@ -616,6 +646,35 @@
                 "symbolic block sizes",
                 "equal versus constrained block dimensions",
                 "additional order conditions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C007",
+            "concept": "Zero Matrix",
+            "qp_id": "QP006",
+            "question_possibility": "Assess whether AB = zero matrix forces A or B to be the zero matrix (zero-product implication)",
+            "archetype_id": "U2_CH8_ST1_AR00009",
+            "archetype": "Disprove the zero-product implication with nonzero matrices",
+            "assessment_mechanism": "Test the scalar-like implication AB=O ⇒ A=O or B=O for matrices by constructing or characterizing nonzero matrix zero divisors, using compatible dimensions and nullspace/column-space reasoning.",
+            "reasoning_path": "Recognize that matrix multiplication is not an integral-domain operation; choose a nonzero matrix A with a nontrivial nullspace; choose a nonzero B whose columns lie in that nullspace; verify AB=O while both factors are nonzero; check the dimensions and any additional constraints in the question.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "rank and nullity",
+                "singular versus invertible factors",
+                "explicit counterexample versus existence reasoning",
+                "additional symmetry/structure constraints"
             ]
         }
     ]
