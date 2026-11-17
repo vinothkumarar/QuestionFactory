@@ -968,3 +968,25 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 255 dispositions and 78 draft archetypes; 95 source QPs remain untouched.
+
+
+## Batch 052 — permutation determinant, conjugation, commutativity and group structure (global QP256–QP260)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C021 / QP013 | ELIGIBLE | Row/column permutation scales determinant by permutation sign |
+| C021 / QP014 | ELIGIBLE | Conjugation PAP⁻¹ realizes simultaneous index relabeling |
+| C021 / QP015 | ELIGIBLE | Permutation matrices commute iff their underlying permutations commute |
+| C021 / QP016 | FOUNDATION_ONLY | Every permutation matrix has full rank |
+| C021 / QP017 | ELIGIBLE | Permutation matrices form a group isomorphic to S_n |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00079`: Track determinant changes under permutation of rows or columns.
+- `U2_CH8_ST1_AR00080`: Determine simultaneous row-column relabeling through permutation conjugation.
+- `U2_CH8_ST1_AR00081`: Determine commutativity of permutation matrices from cycle structure.
+- `U2_CH8_ST1_AR00082`: Establish the symmetric-group structure of permutation matrices.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 260 dispositions and 82 draft archetypes; 90 source QPs remain untouched.
