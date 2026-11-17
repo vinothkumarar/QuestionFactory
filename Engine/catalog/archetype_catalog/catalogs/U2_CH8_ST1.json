@@ -989,6 +989,36 @@
             "qp_id": "QP007",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Addition, subtraction, scalar multiplication, transpose and negation preserve skew-symmetry by direct transpose identities."
+        },
+        {
+            "concept_id": "C014",
+            "qp_id": "QP008",
+            "disposition": "ELIGIBLE",
+            "rationale": "For a skew-symmetric K, (K^m)ᵀ=(−1)^mK^m, so powers alternate symmetric/skew-symmetric; polynomial expressions require separating even and odd powers. This is a reusable parity-based structure mechanism."
+        },
+        {
+            "concept_id": "C014",
+            "qp_id": "QP009",
+            "disposition": "ELIGIBLE",
+            "rationale": "Transpose reversal and sign rules produce a classification table for products, commutators and anticommutators of symmetric/skew-symmetric matrices; this is a distinct multi-case algebraic mechanism."
+        },
+        {
+            "concept_id": "C014",
+            "qp_id": "QP010",
+            "disposition": "ELIGIBLE",
+            "rationale": "Every odd-order skew-symmetric matrix is singular because det(A)=det(Aᵀ)=det(−A)=−det(A); even order permits but does not guarantee invertibility. This is a reusable parity/invertibility mechanism."
+        },
+        {
+            "concept_id": "C014",
+            "qp_id": "QP011",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "If an invertible matrix is skew-symmetric, its inverse is skew-symmetric by the transpose-of-inverse identity; this is a direct property."
+        },
+        {
+            "concept_id": "C014",
+            "qp_id": "QP012",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A matrix both symmetric and skew-symmetric is zero over the real/complex fields; this duplicates the earlier foundation disposition."
         }
     ],
     "archetypes": [
@@ -1794,6 +1824,93 @@
                 "parameterized entries",
                 "diagonal constraints",
                 "independent/dependent pair constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C014",
+            "concept": "Skew-Symmetric Matrix",
+            "qp_id": "QP008",
+            "question_possibility": "Classify the symmetry type of powers or polynomials in a skew-symmetric matrix",
+            "archetype_id": "U2_CH8_ST1_AR00029",
+            "archetype": "Classify powers and polynomials of a skew-symmetric matrix",
+            "assessment_mechanism": "Use (K^m)ᵀ=(−1)^mK^m to determine whether integer powers of a skew-symmetric matrix are symmetric or skew-symmetric, and separate even/odd polynomial components.",
+            "reasoning_path": "Apply transpose to the matrix power; use Kᵀ=−K; simplify the sign according to exponent parity; for polynomials, split into even and odd powers; determine whether the result is purely symmetric, purely skew-symmetric or a sum of both.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "power parity",
+                "polynomial degree",
+                "even/odd polynomial parts",
+                "matrix order",
+                "zero or repeated powers"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C014",
+            "concept": "Skew-Symmetric Matrix",
+            "qp_id": "QP009",
+            "question_possibility": "Determine when products, commutators, or anticommutators involving symmetric and/or skew-symmetric matrices are skew-symmetric or symmetric",
+            "archetype_id": "U2_CH8_ST1_AR00030",
+            "archetype": "Classify products, commutators and anticommutators by transpose rules",
+            "assessment_mechanism": "Apply transpose reversal and the symmetric/skew-symmetric sign rules to classify products, commutators and anticommutators of matrices with specified symmetry types.",
+            "reasoning_path": "Transpose the complete expression; reverse product order; substitute Sᵀ=S and Kᵀ=−K for each factor; simplify signs and order; compare with the original or its negative; state any commutativity/anticommutativity conditions required.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "operand symmetry types",
+                "product order",
+                "commutator versus anticommutator",
+                "commuting/noncommuting assumptions",
+                "number of factors"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C014",
+            "concept": "Skew-Symmetric Matrix",
+            "qp_id": "QP010",
+            "question_possibility": "Determine singularity or invertibility conditions of skew-symmetric matrices based on order parity",
+            "archetype_id": "U2_CH8_ST1_AR00031",
+            "archetype": "Infer singularity of skew-symmetric matrices from order parity",
+            "assessment_mechanism": "Use determinant invariance under transpose and sign scaling to prove that every odd-order skew-symmetric matrix has zero determinant, while distinguishing even order as a necessary but not sufficient condition for invertibility.",
+            "reasoning_path": "Set Aᵀ=−A; write det(A)=det(Aᵀ)=det(−A)=(-1)^n det(A); for odd n conclude det(A)=0; for even n note the identity gives no forced singularity and test invertibility using the actual matrix or additional conditions.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "odd versus even order",
+                "matrix dimension",
+                "determinant constraints",
+                "singularity versus invertibility",
+                "additional structural assumptions"
             ]
         }
     ]
