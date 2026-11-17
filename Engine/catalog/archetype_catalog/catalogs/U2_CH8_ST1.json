@@ -1,0 +1,90 @@
+{
+    "qp_dispositions": [
+        {
+            "concept_id": "C001",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Direct recognition of whether entries are real is definition-level classification; no distinct multi-step JEE reasoning mechanism is present in the source possibility."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "A parameterized matrix can require simultaneous constraints from multiple entries; extracting and solving all reality conditions is a reusable parameter-constraint mechanism. Candidate only; academic approval and question-level validation remain pending."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "For real matrices, entrywise addition and subtraction preserve real entries directly. This is a basic closure fact and does not justify a separate archetype from the stated possibility."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Products and integer powers of real matrices remain real by entrywise closure under multiplication and addition. The stated possibility is a direct closure check without a distinct reasoning mechanism."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "QP005",
+            "disposition": "ELIGIBLE",
+            "rationale": "Determining when a linear combination of real matrices remains real can require constraints on complex scalar coefficients and matrix linear independence; this differs from imposing reality conditions on matrix entries themselves. Candidate only; validate against representative JEE questions before approval."
+        }
+    ],
+    "archetypes": [
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C001",
+            "concept": "Real Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Determine parameter conditions under which a parametric matrix is a real matrix",
+            "archetype_id": "U2_CH8_ST1_AR00001",
+            "archetype": "Simultaneous reality constraints in a parameterized matrix",
+            "assessment_mechanism": "Translate the requirement that an entire parameterized matrix is real into simultaneous zero-imaginary-part constraints on its entries, then solve the resulting parameter system.",
+            "reasoning_path": "Inspect each matrix entry; isolate its imaginary part; set every imaginary part to zero; solve the simultaneous equations; check that the resulting parameter values satisfy every entry.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of constrained entries",
+                "number of parameters",
+                "independent versus dependent constraints",
+                "linear versus nonlinear parameter conditions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C001",
+            "concept": "Real Matrix",
+            "qp_id": "QP005",
+            "question_possibility": "Determine whether scalar multiplication or linear combinations yield a real matrix and identify conditions on scalar coefficients",
+            "archetype_id": "U2_CH8_ST1_AR00002",
+            "archetype": "Reality of a linear combination of real matrices",
+            "assessment_mechanism": "Determine the scalar-coefficient conditions under which a linear combination of real matrices has only real entries, using entrywise imaginary-part equations and any stated linear-independence information.",
+            "reasoning_path": "Write the imaginary parts of the scalar coefficients; form the matrix equation for the imaginary component of the combination; use the matrix independence or dependence conditions to solve for admissible coefficients; verify the result entrywise.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of matrices in the combination",
+                "linear independence or dependence",
+                "coefficient constraints",
+                "presence of zero or repeated matrices"
+            ]
+        }
+    ]
+}
