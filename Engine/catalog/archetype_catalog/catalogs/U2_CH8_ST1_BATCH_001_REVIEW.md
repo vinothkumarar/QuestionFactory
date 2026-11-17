@@ -1157,3 +1157,21 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 300 dispositions and 105 draft archetypes; 50 source QPs remain untouched.
+
+
+## Batch 061 — skew-Hermitian inverse and unitary parameter constraints (global QP301–QP305)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C024 / QP014 | FOUNDATION_ONLY | Inverse of an invertible skew-Hermitian matrix remains skew-Hermitian |
+| C025 / QP001 | FOUNDATION_ONLY | Direct unitary verification by U*U=I |
+| C025 / QP002 | ELIGIBLE | Unitary parameterization creates coupled complex norm/orthogonality equations |
+| C025 / QP003 | FOUNDATION_ONLY | Inverse of a unitary matrix is its conjugate transpose |
+| C025 / QP004 | FOUNDATION_ONLY | Row/column orthonormality and U*U=I are standard equivalent characterizations |
+
+New draft candidate:
+
+- `U2_CH8_ST1_AR00106`: Derive parameter constraints for a unitary matrix.
+- JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
+
+Cumulative status: 305 dispositions and 106 draft archetypes; 45 source QPs remain untouched.
