@@ -749,6 +749,36 @@
             "qp_id": "QP010",
             "disposition": "REQUIRES_REVIEW",
             "rationale": "The source does not specify which elementary row/column operations are in scope. Different operations preserve or destroy triangularity differently; an exact operation list is needed."
+        },
+        {
+            "concept_id": "C011",
+            "qp_id": "QP011",
+            "disposition": "ELIGIBLE",
+            "rationale": "For upper-triangular factors, the diagonal of a product is the entrywise product of factor diagonals, and powers follow by repeated application; this is a reusable structural inference mechanism."
+        },
+        {
+            "concept_id": "C012",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Lower-triangular recognition is a direct check that all entries above the main diagonal vanish."
+        },
+        {
+            "concept_id": "C012",
+            "qp_id": "QP002",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Strict/unit lower-triangular classification follows directly from the zero pattern and diagonal entries."
+        },
+        {
+            "concept_id": "C012",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Counting independent lower-triangular entries and forced zeros is a direct positional count."
+        },
+        {
+            "concept_id": "C012",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Addition and scalar multiplication preserve lower-triangular form by direct entrywise closure."
         }
     ],
     "archetypes": [
@@ -1323,6 +1353,35 @@
                 "sparsity pattern",
                 "bandwidth",
                 "additional zero constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C011",
+            "concept": "Upper Triangular Matrix",
+            "qp_id": "QP011",
+            "question_possibility": "Determine diagonal entries of products or powers of upper triangular matrices from factor diagonals",
+            "archetype_id": "U2_CH8_ST1_AR00021",
+            "archetype": "Infer diagonal entries of products and powers of upper-triangular matrices",
+            "assessment_mechanism": "Use upper-triangular structure to show that each diagonal entry of a product is the product of the corresponding diagonal entries of the factors, then extend to powers.",
+            "reasoning_path": "Write each factor as upper triangular; compute the (i,i) entry of the product; use triangular zero patterns to show only the matching diagonal-index term contributes; obtain the product of diagonal entries; extend by induction to powers and verify for multiple factors.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of factors",
+                "matrix order",
+                "product versus powers",
+                "parameterized diagonal entries",
+                "singularity implications"
             ]
         }
     ]
