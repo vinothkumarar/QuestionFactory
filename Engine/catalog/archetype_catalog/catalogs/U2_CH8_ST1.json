@@ -1499,6 +1499,36 @@
             "qp_id": "QP007",
             "disposition": "ELIGIBLE",
             "rationale": "Left and right multiplication by permutation matrices reorder rows and columns respectively; tracking the induced index mapping is a distinct transformation mechanism."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP008",
+            "disposition": "ELIGIBLE",
+            "rationale": "Multiplication of permutation matrices corresponds to composition of their permutations; order and composition direction must be tracked carefully."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP009",
+            "disposition": "ELIGIBLE",
+            "rationale": "The order of a permutation matrix is the least common multiple of its disjoint cycle lengths; this is a distinct cycle-decomposition mechanism."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP010",
+            "disposition": "ELIGIBLE",
+            "rationale": "Powers act by advancing positions within each cycle; periodicity and return to identity are determined by cycle lengths and modular arithmetic."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP011",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The trace counts fixed points because diagonal entries are 1 exactly at fixed indices; this is a direct read-off property."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP012",
+            "disposition": "ELIGIBLE",
+            "rationale": "P=Pᵀ=P⁻¹ exactly when the permutation is self-inverse, so every cycle has length one or two; this is a distinct structural classification."
         }
     ],
     "archetypes": [
@@ -3634,6 +3664,122 @@
                 "multiple permutation matrices",
                 "rectangular target matrix",
                 "row/column index mapping"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C021",
+            "concept": "Permutation Matrix",
+            "qp_id": "QP008",
+            "question_possibility": "Determine the product of permutation matrices as the composition of the corresponding permutations",
+            "archetype_id": "U2_CH8_ST1_AR00075",
+            "archetype": "Compose permutations through permutation-matrix multiplication",
+            "assessment_mechanism": "Translate matrix multiplication of permutation matrices into composition of the underlying permutations, preserving the correct order convention.",
+            "reasoning_path": "Decode the row/column action of each permutation matrix; determine whether the adopted convention represents left or right composition; compose the mappings in the correct order; construct the resulting permutation matrix; verify by acting on basis vectors.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of factors",
+                "composition convention",
+                "cycle versus one-line notation",
+                "left/right action",
+                "matrix order"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C021",
+            "concept": "Permutation Matrix",
+            "qp_id": "QP009",
+            "question_possibility": "Determine the order of a permutation matrix",
+            "archetype_id": "U2_CH8_ST1_AR00076",
+            "archetype": "Determine permutation order from disjoint cycle lengths",
+            "assessment_mechanism": "Use disjoint cycle decomposition to find the least positive power that returns every element to its original position; the order is the least common multiple of cycle lengths.",
+            "reasoning_path": "Decompose the permutation into disjoint cycles; list cycle lengths; compute their least common multiple; verify that this is the smallest positive exponent returning the permutation matrix to identity.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "cycle lengths",
+                "repeated cycle lengths",
+                "prime factorization",
+                "matrix order",
+                "order constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C021",
+            "concept": "Permutation Matrix",
+            "qp_id": "QP010",
+            "question_possibility": "Compute a power P^k of a permutation matrix or determine its periodicity",
+            "archetype_id": "U2_CH8_ST1_AR00077",
+            "archetype": "Compute powers and periodicity of a permutation matrix",
+            "assessment_mechanism": "Use cycle decomposition to compute the action of P^k and determine periodicity through modular shifts within each cycle.",
+            "reasoning_path": "Decompose the permutation into disjoint cycles; reduce k modulo each cycle length; advance each element by the resulting shift; reconstruct P^k; use the least common multiple to identify the period and identity powers.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "exponent k",
+                "cycle lengths",
+                "large exponent modular reduction",
+                "fixed points",
+                "periodicity"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C021",
+            "concept": "Permutation Matrix",
+            "qp_id": "QP012",
+            "question_possibility": "Determine conditions under which a permutation matrix is symmetric (P = P^T)",
+            "archetype_id": "U2_CH8_ST1_AR00078",
+            "archetype": "Characterize symmetric permutation matrices through involutions",
+            "assessment_mechanism": "Use Pᵀ=P⁻¹ to show that a permutation matrix is symmetric exactly when its permutation is self-inverse, with cycles only of lengths one or two.",
+            "reasoning_path": "Translate Pᵀ=P into P=P⁻¹; infer σ=σ⁻¹ and σ²=id; decompose into disjoint cycles; conclude all cycles have length one or two; verify the converse.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "cycle decomposition",
+                "fixed points",
+                "transpositions",
+                "matrix order",
+                "counting or classification target"
             ]
         }
     ]
