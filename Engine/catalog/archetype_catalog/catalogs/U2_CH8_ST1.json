@@ -1709,6 +1709,36 @@
             "qp_id": "QP011",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "A real Hermitian matrix is symmetric, and multiplication by i maps Hermitian matrices to skew-Hermitian matrices; this is a direct field/conjugation correspondence."
+        },
+        {
+            "concept_id": "C023",
+            "qp_id": "QP012",
+            "disposition": "ELIGIBLE",
+            "rationale": "A complex square matrix A is Hermitian iff x*Ax is real for every complex vector x; deriving the reverse implication using basis vectors and pairwise combinations is a distinct characterization mechanism."
+        },
+        {
+            "concept_id": "C023",
+            "qp_id": "QP013",
+            "disposition": "ELIGIBLE",
+            "rationale": "An n×n Hermitian matrix has n real diagonal parameters and n(n−1)/2 freely chosen complex off-diagonal pairs, totaling n² real degrees of freedom; this is a distinct parameter-count mechanism."
+        },
+        {
+            "concept_id": "C024",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Skew-Hermitian recognition is a direct check of A*=−A, including purely imaginary diagonal entries and negative-conjugate off-diagonal pairs."
+        },
+        {
+            "concept_id": "C024",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "Skew-Hermitian structure imposes purely imaginary diagonal entries and negative-conjugate off-diagonal pairs; solving these simultaneous constraints is a distinct parameter/missing-entry mechanism."
+        },
+        {
+            "concept_id": "C024",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The unique Hermitian/skew-Hermitian decomposition is already represented by the general complex-matrix decomposition archetype."
         }
     ],
     "archetypes": [
@@ -4482,6 +4512,93 @@
                 "congruence versus similarity",
                 "matrix order",
                 "complex entries"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C023",
+            "concept": "Hermitian Matrix",
+            "qp_id": "QP012",
+            "question_possibility": "Characterize Hermitian matrices using the condition that x*Ax is real for all complex vectors x",
+            "archetype_id": "U2_CH8_ST1_AR00097",
+            "archetype": "Characterize Hermitian matrices through real quadratic forms",
+            "assessment_mechanism": "Prove that A is Hermitian exactly when x*Ax is real for every complex vector x, using basis vectors and pairwise test vectors to recover entry constraints.",
+            "reasoning_path": "Assume x*Ax is real for all x; choose standard basis vectors to show diagonal entries are real; choose e_i+e_j and e_i+i e_j to derive conjugate-pair relations; conclude A*=A; verify the forward implication directly.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "test vector choices",
+                "diagonal versus off-diagonal entries",
+                "real-valued quadratic form",
+                "necessity and sufficiency"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C023",
+            "concept": "Hermitian Matrix",
+            "qp_id": "QP013",
+            "question_possibility": "Determine the number of independent real parameters of n×n Hermitian matrices",
+            "archetype_id": "U2_CH8_ST1_AR00098",
+            "archetype": "Count independent real parameters of a Hermitian matrix",
+            "assessment_mechanism": "Count real degrees of freedom by separating real diagonal entries from freely chosen complex entries above the diagonal and their conjugates below.",
+            "reasoning_path": "Count n real diagonal entries; choose one arbitrary complex number (two real parameters) for each of n(n−1)/2 off-diagonal pairs; sum to n+n(n−1)=n²; verify small-order cases.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order n",
+                "diagonal parameters",
+                "complex off-diagonal pairs",
+                "real degrees of freedom",
+                "comparison with general complex matrices"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C024",
+            "concept": "Skew-Hermitian Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Determine conditions or unknown entries for a matrix to be skew-Hermitian",
+            "archetype_id": "U2_CH8_ST1_AR00099",
+            "archetype": "Derive parameter and missing-entry constraints for a skew-Hermitian matrix",
+            "assessment_mechanism": "Translate A*=−A into purely imaginary diagonal conditions and negative-conjugate off-diagonal pair constraints, then solve the parameter system.",
+            "reasoning_path": "Compare aᵢⱼ with −conjugate(aⱼᵢ); require each diagonal entry to be purely imaginary; impose paired negative-conjugate relations; solve real/imaginary parameter equations; verify A*=−A.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "real/imaginary parameter split",
+                "diagonal constraints",
+                "off-diagonal conjugate pairs",
+                "missing entries"
             ]
         }
     ]
