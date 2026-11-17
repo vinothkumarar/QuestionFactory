@@ -885,3 +885,24 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 235 dispositions and 67 draft archetypes; 115 source QPs remain untouched.
+
+
+## Batch 048 — involutory canonical forms, projectors and polynomial invariants (global QP236–QP240)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C020 / QP006 | FOUNDATION_ONLY | Trace/determinant follow from ±1 eigenvalue multiplicities |
+| C020 / QP007 | ELIGIBLE | Distinct roots of x²−1 give diagonalizability and canonical ±I blocks |
+| C020 / QP008 | ELIGIBLE | (I±A)/2 are complementary idempotent projectors onto ±1 eigenspaces |
+| C020 / QP009 | FOUNDATION_ONLY | Rank/nullity of I±A follows from projector eigenspaces |
+| C020 / QP010 | ELIGIBLE | Minimal polynomial divides x²−1 and characteristic polynomial has only ±1 roots |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00068`: Classify involutory matrices up to similarity into ±I blocks.
+- `U2_CH8_ST1_AR00069`: Construct complementary projectors from an involutory matrix.
+- `U2_CH8_ST1_AR00070`: Derive minimal and characteristic polynomial constraints for an involutory matrix.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 240 dispositions and 70 draft archetypes; 110 source QPs remain untouched.
