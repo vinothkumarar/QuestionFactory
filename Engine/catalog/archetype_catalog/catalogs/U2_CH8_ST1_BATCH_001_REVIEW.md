@@ -524,3 +524,21 @@ New draft candidates:
 Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 145 dispositions and 24 draft archetypes; 205 source QPs remain untouched.
+
+
+## Batch 030 — symmetric-matrix products and closure (global QP146–QP150)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C013 / QP007 | FOUNDATION_ONLY | Linear combinations preserve symmetry by transpose linearity |
+| C013 / QP008 | ELIGIBLE | Symmetry of AB reduces to a commutativity condition when factors are symmetric |
+| C013 / QP009 | FOUNDATION_ONLY | Powers/polynomials preserve symmetry by direct transpose identities |
+| C013 / QP010 | FOUNDATION_ONLY | Inverse of an invertible symmetric matrix remains symmetric |
+| C013 / QP011 | FOUNDATION_ONLY | Adjugate of a symmetric matrix remains symmetric |
+
+New draft candidate:
+
+- `U2_CH8_ST1_AR00025`: Determine symmetry of a matrix product through commutativity.
+- JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
+
+Cumulative status: 150 dispositions and 25 draft archetypes; 200 source QPs remain untouched.
