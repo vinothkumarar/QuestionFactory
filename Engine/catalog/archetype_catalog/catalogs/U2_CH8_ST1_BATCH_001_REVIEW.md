@@ -1217,3 +1217,23 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 315 dispositions and 112 draft archetypes; 35 source QPs remain untouched.
+
+
+## Batch 064 — block-diagonal partition and determinant mechanisms (global QP316–QP320)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C026 / QP001 | FOUNDATION_ONLY | Direct recognition of zero off-diagonal blocks |
+| C026 / QP002 | ELIGIBLE | Admissible block sizes form positive-integer partition constraints |
+| C026 / QP003 | FOUNDATION_ONLY | Direct construction by block placement |
+| C026 / QP004 | FOUNDATION_ONLY | Direct block extraction/indexing |
+| C026 / QP005 | ELIGIBLE | Determinant factors as the product of diagonal-block determinants |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00113`: Determine admissible block partitions of a fixed matrix order.
+- `U2_CH8_ST1_AR00114`: Factor determinant and singularity conditions of a block-diagonal matrix.
+
+Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 320 dispositions and 114 draft archetypes; 30 source QPs remain untouched.
