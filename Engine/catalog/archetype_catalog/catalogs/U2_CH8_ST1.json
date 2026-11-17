@@ -599,6 +599,36 @@
             "qp_id": "QP013",
             "disposition": "ELIGIBLE",
             "rationale": "A scalar matrix λI satisfies each listed structural property exactly when λ obeys a corresponding scalar equation; solving and consolidating these conditions is a reusable parameter-classification mechanism."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP014",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Recovering the scalar value from entries or stated conditions is direct parameter identification within λI and overlaps the scalar-property constraint candidate."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP015",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Counting admissible scalar matrices reduces to counting admissible scalar values under the stated entry restrictions; the source possibility does not establish a distinct reusable JEE mechanism."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP016",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Existence/uniqueness for constrained scalar matrices overlaps the existing scalar-parameter equation mechanism and is not split into another archetype."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP017",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A polynomial in λI reduces to p(λ)I by direct substitution; this is a standard evaluation rule."
+        },
+        {
+            "concept_id": "C010",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Identity-matrix recognition is direct comparison with the diagonal ones and off-diagonal zeros."
         }
     ],
     "archetypes": [
