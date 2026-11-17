@@ -809,6 +809,36 @@
             "qp_id": "QP009",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Diagonal entries of lower-triangular products/powers follow the same componentwise rule as upper-triangular matrices; it duplicates the existing archetype mechanism and is retained as a foundation variation."
+        },
+        {
+            "concept_id": "C012",
+            "qp_id": "QP010",
+            "disposition": "ELIGIBLE",
+            "rationale": "Requiring a parameterized matrix to be lower triangular imposes simultaneous zero constraints on all entries above the main diagonal; this is a reusable parameter-constraint mechanism."
+        },
+        {
+            "concept_id": "C012",
+            "qp_id": "QP011",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The inverse of a nonsingular lower-triangular matrix remains lower triangular; this mirrors the existing upper-triangular inverse mechanism and is not duplicated."
+        },
+        {
+            "concept_id": "C012",
+            "qp_id": "QP012",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Invertibility is equivalent to nonzero diagonal entries, the same diagonal-product criterion already represented by the triangular inverse candidate."
+        },
+        {
+            "concept_id": "C012",
+            "qp_id": "QP013",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Strictly lower-triangular nilpotency and its order bound mirror the existing strictly upper-triangular nilpotency mechanism; retain as a variation, not a duplicate."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Symmetric-matrix recognition is a direct comparison of the matrix with its transpose."
         }
     ],
     "archetypes": [
@@ -1412,6 +1442,35 @@
                 "product versus powers",
                 "parameterized diagonal entries",
                 "singularity implications"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C012",
+            "concept": "Lower Triangular Matrix",
+            "qp_id": "QP010",
+            "question_possibility": "Determine parameter constraints on a symbolic matrix so that it becomes lower triangular",
+            "archetype_id": "U2_CH8_ST1_AR00022",
+            "archetype": "Derive parameter constraints for a lower-triangular matrix",
+            "assessment_mechanism": "Translate lower-triangular structure into zero constraints on all entries strictly above the main diagonal, then solve the resulting simultaneous parameter equations.",
+            "reasoning_path": "Identify every position (i,j) with i<j; set each such entry equal to zero; solve the parameter system; retain unconstrained diagonal and below-diagonal entries; verify the resulting matrix has the required zero pattern.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "number of parameters",
+                "number of above-diagonal constraints",
+                "independent/dependent equations",
+                "symbolic versus numeric entries"
             ]
         }
     ]
