@@ -26,15 +26,9 @@ def validate_catalog_response(
     response: Any,
     input_qps: list[dict[str, Any]],
 ) -> dict[str, list[dict[str, Any]]]:
-    """Validate explicit QP dispositions independently of archetype count.
-
-    The response must contain exactly the qp_dispositions and archetypes
-    arrays. Each input QP receives one disposition; only ELIGIBLE QPs may
-    have archetypes, and every ELIGIBLE QP must have at least one.
-    """
+    """Validate one disposition-aware QP/archetype batch or persisted catalogue."""
     if not isinstance(response, dict):
         raise ValueError("Catalogue response must be a JSON object.")
-
     if set(response) != {"qp_dispositions", "archetypes"}:
         raise ValueError(
             "Catalogue response must contain exactly "
@@ -84,6 +78,10 @@ def validate_catalog_response(
     archetypes_by_key: dict[tuple[str, str], list[dict[str, Any]]] = {
         key: [] for key in input_by_key
     }
+    copied_fields = (
+        "subject", "unit", "chapter", "subtopic", "concept_id",
+        "concept", "qp_id", "question_possibility",
+    )
     for index, archetype in enumerate(archetypes, start=1):
         if not isinstance(archetype, dict):
             raise ValueError(f"Archetype #{index} must be an object.")
@@ -91,21 +89,24 @@ def validate_catalog_response(
         if key not in input_by_key:
             raise ValueError(f"Archetype references unknown QP: {key}.")
         if disposition_by_key[key]["disposition"] != "ELIGIBLE":
-            raise ValueError(
-                f"Archetype references non-eligible QP {key}."
-            )
+            raise ValueError(f"Archetype references non-eligible QP {key}.")
+        source = input_by_key[key]
+        for field in copied_fields:
+            if archetype.get(field) != source.get(field):
+                raise ValueError(
+                    f"Archetype #{index} field '{field}' does not exactly "
+                    f"match source QP {key}."
+                )
         archetypes_by_key[key].append(archetype)
 
-    for key, disposition in disposition_by_key.items():
-        if disposition["disposition"] == "ELIGIBLE":
+    for key, item in disposition_by_key.items():
+        if item["disposition"] == "ELIGIBLE":
             if not archetypes_by_key[key]:
                 raise ValueError(
                     f"ELIGIBLE QP {key} must have at least one archetype."
                 )
         elif archetypes_by_key[key]:
-            raise ValueError(
-                f"Non-eligible QP {key} cannot have archetypes."
-            )
+            raise ValueError(f"Non-eligible QP {key} cannot have archetypes.")
 
     return {
         "qp_dispositions": dispositions,
@@ -113,8 +114,4 @@ def validate_catalog_response(
     }
 
 
-__all__ = [
-    "VALID_DISPOSITIONS",
-    "qp_key",
-    "validate_catalog_response",
-]
+__all__ = ["VALID_DISPOSITIONS", "qp_key", "validate_catalog_response"]
