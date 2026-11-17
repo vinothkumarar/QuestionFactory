@@ -1739,6 +1739,36 @@
             "qp_id": "QP003",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "The unique Hermitian/skew-Hermitian decomposition is already represented by the general complex-matrix decomposition archetype."
+        },
+        {
+            "concept_id": "C024",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Diagonal entries of a skew-Hermitian matrix are purely imaginary, so its trace is purely imaginary; this is a direct consequence of A*=−A."
+        },
+        {
+            "concept_id": "C024",
+            "qp_id": "QP005",
+            "disposition": "ELIGIBLE",
+            "rationale": "From A*=−A, conjugate(det A)=(-1)^n det A; therefore det A is real for even n and purely imaginary for odd n. This is a distinct order-parity invariant."
+        },
+        {
+            "concept_id": "C024",
+            "qp_id": "QP006",
+            "disposition": "ELIGIBLE",
+            "rationale": "Real scalar multiples preserve skew-Hermiticity, while complex scalar multiplication preserves it only under a real-scalar condition; imaginary scalars convert it to Hermitian structure. This is a reusable scalar-classification mechanism."
+        },
+        {
+            "concept_id": "C024",
+            "qp_id": "QP007",
+            "disposition": "ELIGIBLE",
+            "rationale": "Powers alternate Hermitian/skew-Hermitian by exponent parity, and polynomial expressions split into even/odd parts with coefficient constraints; this is a distinct parity-reduction mechanism."
+        },
+        {
+            "concept_id": "C024",
+            "qp_id": "QP008",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "For real entries, conjugation is trivial, so skew-Hermitian reduces directly to skew-symmetric."
         }
     ],
     "archetypes": [
@@ -4599,6 +4629,92 @@
                 "diagonal constraints",
                 "off-diagonal conjugate pairs",
                 "missing entries"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C024",
+            "concept": "Skew-Hermitian Matrix",
+            "qp_id": "QP005",
+            "question_possibility": "Determine constraints on the determinant of a skew-Hermitian matrix with respect to matrix order",
+            "archetype_id": "U2_CH8_ST1_AR00100",
+            "archetype": "Infer determinant reality or pure-imaginary character from skew-Hermitian order",
+            "assessment_mechanism": "Use conjugation of the determinant and A*=−A to derive an order-parity condition on det(A).",
+            "reasoning_path": "Take determinants in A*=−A; use det(A*)=conjugate(det A) and det(−A)=(-1)^n det A; compare the two expressions; conclude det(A) is real for even n and purely imaginary for odd n; verify with low-order examples.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order parity",
+                "determinant zero/nonzero",
+                "real versus complex determinant",
+                "additional eigenvalue constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C024",
+            "concept": "Skew-Hermitian Matrix",
+            "qp_id": "QP006",
+            "question_possibility": "Determine preservation of the skew-Hermitian property under linear combinations and identify scalar conditions",
+            "archetype_id": "U2_CH8_ST1_AR00101",
+            "archetype": "Classify scalar combinations of skew-Hermitian matrices",
+            "assessment_mechanism": "Use (cA)*=conjugate(c)A* to determine which scalar coefficients preserve skew-Hermiticity or convert a skew-Hermitian matrix into a Hermitian one.",
+            "reasoning_path": "Compute (cA)*; substitute A*=−A; compare with cA for skew-Hermiticity and with cA for Hermiticity; solve the scalar conjugation condition; extend to sums of multiple skew-Hermitian matrices.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "real versus complex scalar",
+                "zero/nonzero matrix",
+                "sum of multiple matrices",
+                "skew-Hermitian versus Hermitian target",
+                "coefficient constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C024",
+            "concept": "Skew-Hermitian Matrix",
+            "qp_id": "QP007",
+            "question_possibility": "Determine the Hermitian or skew-Hermitian nature of powers or polynomials of a skew-Hermitian matrix",
+            "archetype_id": "U2_CH8_ST1_AR00102",
+            "archetype": "Classify powers and polynomials of skew-Hermitian matrices",
+            "assessment_mechanism": "Use (A^k)*=(−1)^kA^k to classify powers by parity and reduce polynomial expressions into Hermitian/skew-Hermitian components.",
+            "reasoning_path": "Apply adjoint to A^k; reverse factor order (identical factors); simplify the sign by parity; split a polynomial into even and odd powers; apply coefficient conjugation constraints to determine the resulting Hermitian/skew-Hermitian character.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "power parity",
+                "polynomial even/odd parts",
+                "complex coefficients",
+                "matrix order",
+                "target structure"
             ]
         }
     ]
