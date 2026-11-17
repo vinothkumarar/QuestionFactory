@@ -657,3 +657,24 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 180 dispositions and 36 draft archetypes; 170 source QPs remain untouched.
+
+
+## Batch 037 — orthogonal scalar, metric and combined-structure reasoning (global QP181–QP185)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C015 / QP010 | ELIGIBLE | Scalar scaling of A is orthogonal under a scalar equation derived from c²AᵀA=I |
+| C015 / QP011 | FOUNDATION_ONLY | Row/column permutations and sign changes preserve orthonormality directly |
+| C015 / QP012 | FOUNDATION_ONLY | Squareness, full rank and nonsingularity follow directly from QᵀQ=I |
+| C015 / QP013 | ELIGIBLE | Orthogonal transforms preserve inner products, norms and angles |
+| C015 / QP014 | ELIGIBLE | Combining orthogonality with symmetry/skew-symmetry yields stronger matrix identities and feasibility constraints |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00037`: Determine scalar multiples that preserve orthogonality.
+- `U2_CH8_ST1_AR00038`: Use orthogonality to preserve vector lengths and inner products.
+- `U2_CH8_ST1_AR00039`: Combine orthogonality with symmetric or skew-symmetric structure.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 185 dispositions and 39 draft archetypes; 165 source QPs remain untouched.
