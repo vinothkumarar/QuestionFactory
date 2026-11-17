@@ -118,6 +118,14 @@ Findings:
 - This second pass is internal review, not independent human academic sign-off. The 1,026-row taxonomy remains `PENDING_INDEPENDENT_REVIEW`.
 - No production questions, taxonomy edits, enablement changes or schema changes were made.
 
+## 2026-11-17 — Fresh official-source and branch-state recheck
+
+- Rechecked the official JEE Advanced 2027 syllabus page. It still states “Coming soon”; the official JEE Advanced 2026 syllabus remains only a provisional comparison baseline for Advanced 2027. The official JEE Main 2027 documents register continues to list “Syllabus 2027”.
+- Official pages: https://jeeadv.ac.in/syllabus.html and https://jeemain.nta.nic.in/documents/. The Advanced 2027 home page was launched by IIT Delhi on 2026-11-13; that announcement does not publish the syllabus.
+- Attempted direct local download of the official Main paper and Advanced paper PDF sources through the working container; downloads failed. No local PDF bytes or SHA-256 values are claimed. Continue to distinguish official URL/PDF viewer access from local acquisition.
+- GitHub branch comparison reports `feature/dual-question-engine-v1` is diverged from `main` (671 commits ahead, 6 behind at the time of check). P1 documentation changes remain on the feature branch. No merge, rebase, force update or production-code change was performed; branch reconciliation remains a separate controlled action.
+- The P1 blueprint authority audit records the second recovery pass; the canonical v1.5 source remains unrecovered.
+
 ## MECP v1.2 P1 exit gate (verbatim acceptance conditions)\n\n- Pilot subtopic has an evidence-backed official syllabus mapping.\n- Required PYQ/source evidence is sufficient for meaningful analysis, or source gaps are explicitly accepted and bounded.\n- Rule authority is identified and conflicts are resolved or isolated from the pilot.\n- Taxonomy IDs and enablement state are traceable.\n- No pilot selection based solely on catalogue maturity.\n\nThe P1 deliverables also include the official source register, reconciled syllabus master, Main/Advanced applicability map, taxonomy/enablement report, PYQ source/acquisition/answer-key register, authoritative blueprint reference/rule crosswalk, and candidate pilot sequence with source confidence.\n\n## P1 work remaining
 
 1. Independently validate the provisional Main/Advanced mappings against exact official syllabus wording; revalidate Advanced scope when the 2027 syllabus is published.
