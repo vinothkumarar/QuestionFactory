@@ -103,3 +103,20 @@ Still missing: complete original v1.5 file, exact saturation thresholds, full ar
 7. Revalidate Advanced mapping when the official 2027 syllabus is published.
 
 **No P1 completion claim, production-question generation, schema mutation, taxonomy renumbering or bulk enablement change is authorised by this checklist.**
+
+
+## 2C. PYQ tracker reconciliation — 2026-11-17
+
+- Raw comparison of the 247-row Acquisition Tracker and 247-row Audited Source Registry confirms identical 247 `PYQ_ID` values and no row-level ID differences.
+- The nine official-source label differences are exactly the nine April 2026 Main shift rows (`Yes` vs `Yes — NTA archive exists`). Aggregate non-No count is 66 in both trackers. The discrepancy is CLOSED as a label-only mismatch; canonical field normalization remains pending.
+- The 2026 Acquisition Tracker is a 247-row master workbook containing a 21-row 2026 subset, not a 21-row-only workbook.
+- Eleven question-paper URLs remain URL-access-verified only; no local PDF bytes or hashes are present. Answer Key URL cells remain empty in both trackers.
+- Direct download retries failed due to DNS resolution in the working container; no local bytes/hash are claimed.
+
+## 6. Updated P1 evidence disposition — 2026-11-17
+
+**Closed in this pass:** Nine-row official-source label discrepancy is explained by exact row-level comparison; both workbooks contain the same 247 IDs and the same aggregate 66 non-No source-confirmation records.
+
+**Still open:** Derived canonical source-label normalization, 2026 answer-key URL linkage, 10 January Main PDF sourcing, local PDF acquisition and SHA-256, broad question/key matching, full taxonomy academic review, and canonical Blueprint v1.5 authority.
+
+**P1 remains IN PROGRESS — EXIT GATE NOT PASSED.**
