@@ -185,3 +185,12 @@ The MECP v1.2 activity/deliverable/exit criteria are now tracked explicitly in `
 - The ten January Main 2026 shift records remain without a populated question-paper URL in the acquisition tracker.
 - Retried direct PDF downloads for Advanced 2026 Paper 1, Main 2026 April 2 Shift 1 and the official Main Session I final key. The working container failed DNS resolution for the official hosts. No PDF bytes were saved and no SHA-256 was calculated. This is a working-environment network limitation; it does not invalidate the official URLs previously verified through web access.
 - No Library workbook was overwritten and no source IDs, taxonomy IDs, enablement flags or production code were changed.
+
+
+## 2026-11-17 — Official 2026 answer-key source linkage completed at session level
+
+- Opened the official NTA Session I and Session II final answer-key PDFs and inspected their date/shift page headers. Session I covers all 10 January 2026 Main Paper 1 shifts (21, 22, 23, 24 and 28 January; two shifts each). Session II covers all 9 April 2026 Main Paper 1 shifts (2, 4, 5 and 6 April; two shifts each; 8 April Shift II).
+- Linked all 19 Main shift records to the corresponding official session-level final-key URL in the derived register `docs/p1/P1_2026_SESSION_KEY_LINKAGE.csv`. The same register links both Advanced 2026 papers to their official final-key URLs.
+- The register has 21 records total: 19 Main shifts and 2 Advanced papers. Four question-level samples are marked SAMPLE_MATCHED; the remaining question-level matches remain pending.
+- This closes official answer-key source identification at session/paper level for all 21 2026 records. It does not close question-ID-to-paper matching for all questions or the workbook's still-empty Answer Key URL column. Original Library workbooks remain unchanged.
+- Local PDF bytes and SHA-256 remain unacquired/pending because direct download retries failed at DNS resolution in the working container.
