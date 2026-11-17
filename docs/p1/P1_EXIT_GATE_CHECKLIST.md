@@ -40,6 +40,13 @@ This checklist applies the P1 activities, deliverables and exit gate in `Questio
 - `P1_CHEMISTRY_COVERAGE_GAP_SECOND_PASS.md` scans all 260 Chemistry subtopic names and records the cross-unit chromatography entry, the remaining Main Unit 13 gaps, Practical Chemistry coverage gaps and empty Vitamins chapter.
 - The Chemistry gap audit now distinguishes partial Unit 13 coverage from a wholly absent taxonomy path. No IDs, parent paths or enablement flags were changed.
 
+## 2B. Physics Experimental Skills second-pass evidence — 2026-11-17
+
+- `P1_PHYSICS_EXPERIMENTAL_SKILLS_SECOND_PASS.md` crosswalks the 18 official Main 2027 Physics Unit 20 activities against existing Physics taxonomy paths.
+- Related theory topics exist for many activities, but practical procedures/apparatus/observations/graphs are not represented as a dedicated Experimental Skills hierarchy. The P5 metre-scale/moments activity is additionally affected by two empty chapters.
+- Corrected the explicit Main simple-pendulum mapping for `P10_CH1_ST8` from `NO_DIRECT_EXPLICIT_SCOPE` to `MAPPED_PROVISIONAL`, based on NTA 2027 Physics Unit 10 and Unit 20 wording. UUID, flags and pending academic-review status were preserved.
+- Revalidated structural totals: Main 2027 = 589 mapped, 130 partial, 307 no direct; Advanced 2026 unchanged = 688 mapped, 107 partial, 231 no direct. All 1,026 rows remain pending independent review.
+
 ## 3. Mapping register structural validation
 
 - Total rows: 1,026.
@@ -47,7 +54,7 @@ This checklist applies the P1 activities, deliverables and exit gate in `Questio
 - Unique subtopic IDs: 1,026.
 - Duplicate codes/IDs: 0.
 - Missing required mapping fields: 0.
-- Main status totals: 588 provisional mapped, 130 partial, 308 no direct explicit scope.
+- Main status totals: 589 provisional mapped, 130 partial, 307 no direct explicit scope.
 - Advanced status totals: 688 provisional mapped, 107 partial, 231 no direct explicit scope.
 - Mapping basis: 285 chapter-level provisional, 155 chapter-level no-direct, 524 subtopic-level provisional, 52 subtopic-level no-direct, 10 cross-unit/subject.
 - All 1,026 rows: `PENDING_INDEPENDENT_REVIEW`.
