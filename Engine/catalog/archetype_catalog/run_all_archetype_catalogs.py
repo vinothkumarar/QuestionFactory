@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import json
 import re
 from pathlib import Path
@@ -106,9 +107,42 @@ def persist_catalog(
     )
 
 
+def select_qp_files(
+    *,
+    qp_dir: Path,
+    scopes: list[str] | None = None,
+) -> list[Path]:
+    available = sorted(qp_dir.glob("*.json"))
+    if not scopes:
+        return available
+
+    by_scope = {path.stem: path for path in available}
+    missing = sorted(set(scopes) - set(by_scope))
+    if missing:
+        raise ValueError(
+            "Requested QP catalogue scope(s) not found: "
+            + ", ".join(missing)
+        )
+    return [by_scope[scope] for scope in scopes]
+
+
 def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Generate disposition-aware archetype catalogues."
+    )
+    parser.add_argument(
+        "--scope",
+        action="append",
+        dest="scopes",
+        help=(
+            "Process only this QP catalogue stem. Repeat the option to "
+            "process multiple scopes. Defaults to all JSON catalogues."
+        ),
+    )
+    args = parser.parse_args()
+
     qp_dir = Path(__file__).parent.parent / "qp_catalog" / "catalogs"
-    qp_files = sorted(qp_dir.glob("*.json"))
+    qp_files = select_qp_files(qp_dir=qp_dir, scopes=args.scopes)
     output_dir = Path(__file__).parent / "catalogs"
     output_dir.mkdir(parents=True, exist_ok=True)
 
