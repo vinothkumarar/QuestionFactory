@@ -433,3 +433,23 @@ New draft candidate:
 - JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
 
 Cumulative status: 120 dispositions and 18 draft archetypes; 230 source QPs remain untouched.
+
+
+## Batch 025 — upper-triangular inverse and nilpotency mechanisms (global QP121–QP125)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C011 / QP006 | FOUNDATION_ONLY | Both upper and lower triangular implies diagonal |
+| C011 / QP007 | ELIGIBLE | Diagonal entries determine invertibility; inverse preserves upper-triangular structure |
+| C011 / QP008 | ELIGIBLE | Strictly upper-triangular zero pattern gives a nilpotency power bound |
+| C011 / QP009 | FOUNDATION_ONLY | Direct count of diagonal and above-diagonal entries |
+| C011 / QP010 | REQUIRES_REVIEW | Source does not specify which elementary row/column operations are intended |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00019`: Infer invertibility and inverse structure of an upper-triangular matrix.
+- `U2_CH8_ST1_AR00020`: Establish nilpotency bounds for strictly upper-triangular matrices.
+
+Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled. Two QPs are now explicitly held for review due underspecified source details.
+
+Cumulative status: 125 dispositions and 20 draft archetypes; 225 source QPs remain untouched.
