@@ -869,6 +869,36 @@
             "qp_id": "QP006",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Uniqueness follows by adding/subtracting the symmetric and skew-symmetric parts; this is a direct consequence of the decomposition and is not a separate archetype."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Linear combinations of symmetric matrices with scalar coefficients remain symmetric by transpose linearity; this is a direct closure property."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP008",
+            "disposition": "ELIGIBLE",
+            "rationale": "A product AB is symmetric exactly when AB=BᵀAᵀ; for symmetric A and B this reduces to AB=BA. Identifying and applying the commutativity condition is a distinct reusable mechanism."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP009",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Powers and polynomial expressions in a symmetric matrix remain symmetric by transpose and power identities; this is a direct property."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP010",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The inverse of an invertible symmetric matrix is symmetric by the transpose-of-inverse identity; this is a direct property."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP011",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The adjugate of a symmetric matrix is symmetric by the transpose/cofactor identity; this is a direct property."
         }
     ],
     "archetypes": [
@@ -1558,6 +1588,35 @@
                 "rational versus complex entries",
                 "component verification",
                 "uniqueness condition"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C013",
+            "concept": "Symmetric Matrix",
+            "qp_id": "QP008",
+            "question_possibility": "Determine conditions under which the product of matrices is symmetric",
+            "archetype_id": "U2_CH8_ST1_AR00025",
+            "archetype": "Determine symmetry of a matrix product through commutativity",
+            "assessment_mechanism": "Use transpose reversal (AB)ᵀ=BᵀAᵀ to determine when a product is symmetric; for symmetric factors, reduce the condition to commutativity AB=BA.",
+            "reasoning_path": "Transpose the product and reverse factor order; substitute the symmetry conditions on the factors; equate AB with BᵀAᵀ; where both factors are symmetric, reduce to AB=BA; test or derive the required commutativity condition.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "factor symmetry assumptions",
+                "two versus multiple factors",
+                "commuting versus noncommuting matrices",
+                "parameterized factors",
+                "product order"
             ]
         }
     ]
