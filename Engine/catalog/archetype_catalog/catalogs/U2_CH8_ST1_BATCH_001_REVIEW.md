@@ -100,3 +100,21 @@ Two additional draft candidates have been created:
 Both are JEE Main candidates only, with Moderate/Hard potential, and remain `DRAFT_CORE_REQUIRES_ACADEMIC_REVIEW` with `manufacturing_enabled=FALSE`.
 
 The cumulative catalogue now has 20 QP dispositions and 4 draft archetypes. The remaining 330 QPs are untouched.
+
+
+## Batch 005 — complex-matrix structural mechanisms (C002 / QP008–QP012)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| QP008 | ELIGIBLE | Canonical decomposition into Hermitian and skew-Hermitian components is a reusable construction |
+| QP009 | FOUNDATION_ONLY | Scalar multiplication effects are direct consequences of adjoint identities |
+| QP010 | FOUNDATION_ONLY | Sum/difference type outcomes are direct closure checks |
+| QP011 | ELIGIBLE | Product/inverse structure requires adjoint reversal and commutativity/invertibility checks |
+| QP012 | FOUNDATION_ONLY | The adjoint identities themselves are foundational rules; the multi-step application is represented by QP011 |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00005`: Decompose a complex matrix into Hermitian and skew-Hermitian components.
+- `U2_CH8_ST1_AR00006`: Infer product or inverse structure using adjoint reversal and commutativity.
+
+Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled. The cumulative catalogue now contains 25 dispositions and 6 archetypes; 325 source QPs remain untouched.
