@@ -85,7 +85,7 @@ README reconciliation:
 - Resolve this by distinguishing at least: INVENTORIED, URL_VERIFIED, BYTES_ACQUIRED, HASH_VERIFIED, TRANSCRIPTION_VERIFIED, ANSWER_KEY_SOURCE_LINKED, ANSWER_KEY_VERIFIED and SYLLABUS_MAPPED. Do not collapse URL accessibility into acquisition.
 - Historical IIT-JEE and AIEEE remain separate exam families from JEE Main and JEE Advanced. Their syllabus and paper formats must not be assumed identical.
 
-#### Answer-key source follow-up — 2026-11-17\n\n- NTA JEE Main 2026 Session I and Session II final answer-key PDFs are official and text-accessible; they contain subject-wise question IDs and correct option identifiers by date/shift. The Library tracker has not yet linked these URLs to the 19 2026 Main shift records or matched question IDs to the 2026 paper PDFs.\n- JEE Advanced 2026 Information Brochure states that final answer keys for both papers were scheduled for online publication on 2026-06-01. The direct final-key PDF URL was not recovered during this initial pass; both paper records remain unverified pending exact source retrieval and matching. Official brochure: https://jeeadv.ac.in/documents/IBEnglish_2026.pdf\n\n#### Blueprint authority audit — unresolved
+#### Answer-key source follow-up — 2026-11-17\n\n- NTA JEE Main 2026 Session I and Session II final answer-key PDFs are official and text-accessible; they contain subject-wise question IDs and correct option identifiers by date/shift. The Library tracker has not yet linked these URLs to all 19 2026 Main shift records. Two question/key pairs from 2 April Shift 1 are now matched in the P1 evidence register; the remaining paper/shift/question matches are pending.\n- JEE Advanced 2026 Information Brochure states that final answer keys for both papers were scheduled for online publication on 2026-06-01. The direct final-key PDF URL was not recovered during this initial pass; both paper records remain unverified pending exact source retrieval and matching. Official brochure: https://jeeadv.ac.in/documents/IBEnglish_2026.pdf\n\n#### Blueprint authority audit — unresolved
 
 Repository sources inspected:
 - `Engine/prompts/master/05_blueprint_rules.md`
@@ -120,4 +120,4 @@ Findings:
 
 ## Exit gate
 
-**NOT PASSED.** P1 remains ACTIVE. No production questions have been generated in this phase. No final syllabus mapping, PYQ verification, or authoritative blueprint freeze is claimed.
+**NOT PASSED.** P1 remains ACTIVE. No production questions have been generated in this phase. No final syllabus mapping, complete PYQ verification, or authoritative blueprint freeze is claimed. Two 2026 Main question/key pairs have been matched as provisional source evidence.
