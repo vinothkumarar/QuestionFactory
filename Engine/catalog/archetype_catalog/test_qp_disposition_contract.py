@@ -9,7 +9,16 @@ from Engine.catalog.archetype_catalog.qp_disposition_contract import (
 
 
 def qp(qp_id: str = "QP001") -> dict[str, Any]:
-    return {"concept_id": "C001", "qp_id": qp_id}
+    return {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Sets",
+        "concept_id": "C001",
+        "concept": "Set inclusion",
+        "qp_id": qp_id,
+        "question_possibility": f"Possibility {qp_id}",
+    }
 
 
 def disposition(
@@ -26,10 +35,15 @@ def disposition(
 
 def archetype(qp_id: str = "QP001") -> dict[str, Any]:
     return {
-        "concept_id": "C001",
-        "qp_id": qp_id,
+        **qp(qp_id),
         "archetype_id": "",
         "archetype": "Distinct assessment mechanism",
+        "assessment_mechanism": "Infer a set relation from constraints.",
+        "reasoning_path": "Translate constraints, then test inclusion.",
+        "exam_fit": ["JEE_MAIN"],
+        "difficulty_potential": ["MODERATE"],
+        "variation_capacity": "MODERATE",
+        "variation_dimensions": ["Set structure"],
     }
 
 
@@ -64,7 +78,7 @@ class QPDispositionContractTests(unittest.TestCase):
                 input_qps=[qp()],
             )
 
-    def test_every_input_qp_requires_exactly_one_disposition(self) -> None:
+    def test_every_input_qp_requires_a_disposition(self) -> None:
         with self.assertRaisesRegex(ValueError, "Missing QP dispositions"):
             validate_catalog_response(
                 response={
@@ -106,6 +120,18 @@ class QPDispositionContractTests(unittest.TestCase):
             input_qps=[qp()],
         )
         self.assertEqual(len(result["archetypes"]), 1)
+
+    def test_archetype_cannot_change_copied_source_metadata(self) -> None:
+        changed = archetype()
+        changed["question_possibility"] = "Changed by AI"
+        with self.assertRaisesRegex(ValueError, "does not exactly match"):
+            validate_catalog_response(
+                response={
+                    "qp_dispositions": [disposition("ELIGIBLE")],
+                    "archetypes": [changed],
+                },
+                input_qps=[qp()],
+            )
 
 
 if __name__ == "__main__":
