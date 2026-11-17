@@ -1529,6 +1529,36 @@
             "qp_id": "QP012",
             "disposition": "ELIGIBLE",
             "rationale": "P=Pᵀ=P⁻¹ exactly when the permutation is self-inverse, so every cycle has length one or two; this is a distinct structural classification."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP013",
+            "disposition": "ELIGIBLE",
+            "rationale": "Left/right multiplication by a permutation matrix permutes rows/columns and scales determinant by the sign of the permutation; this is a reusable determinant-transformation mechanism."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP014",
+            "disposition": "ELIGIBLE",
+            "rationale": "Conjugation PAP⁻¹ simultaneously relabels rows and columns; determining P for a target relabeling is a distinct index-mapping mechanism."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP015",
+            "disposition": "ELIGIBLE",
+            "rationale": "Two permutation matrices commute exactly when their underlying permutations commute; cycle structure and composition order determine the condition."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP016",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Every permutation matrix is invertible and has rank n; this is a direct full-rank property."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP017",
+            "disposition": "ELIGIBLE",
+            "rationale": "Permutation matrices under multiplication realize the symmetric group through the permutation-to-matrix correspondence; establishing the isomorphism requires verifying the homomorphism and bijection."
         }
     ],
     "archetypes": [
@@ -3780,6 +3810,122 @@
                 "transpositions",
                 "matrix order",
                 "counting or classification target"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C021",
+            "concept": "Permutation Matrix",
+            "qp_id": "QP013",
+            "question_possibility": "Determine the determinant scaling of a matrix under row or column permutations via permutation matrices",
+            "archetype_id": "U2_CH8_ST1_AR00079",
+            "archetype": "Track determinant changes under permutation of rows or columns",
+            "assessment_mechanism": "Use the sign of the row/column permutation to determine the determinant scaling of the transformed matrix.",
+            "reasoning_path": "Identify the permutation matrix P; use det(PA)=det(P)det(A) or det(AP)=det(A)det(P); compute det(P) from permutation parity; state the sign change and handle simultaneous row/column permutations.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "row versus column permutation",
+                "permutation parity",
+                "single versus multiple swaps",
+                "left/right multiplication",
+                "original determinant"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C021",
+            "concept": "Permutation Matrix",
+            "qp_id": "QP014",
+            "question_possibility": "Determine a permutation matrix P that achieves a specified simultaneous row and column permutation via conjugation PAP^{-1}",
+            "archetype_id": "U2_CH8_ST1_AR00080",
+            "archetype": "Determine simultaneous row-column relabeling through permutation conjugation",
+            "assessment_mechanism": "Use PAP⁻¹ to relabel both row and column indices consistently, then construct the permutation that realizes a target simultaneous reordering.",
+            "reasoning_path": "Translate the target relabeling into an index permutation; construct P; compute or interpret PAP⁻¹; verify the induced mapping on matrix entries; check composition and inverse conventions.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "target index mapping",
+                "matrix order",
+                "cycle notation",
+                "simultaneous versus separate permutations",
+                "conjugation direction"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C021",
+            "concept": "Permutation Matrix",
+            "qp_id": "QP015",
+            "question_possibility": "Determine whether two permutation matrices commute using properties of their underlying permutations",
+            "archetype_id": "U2_CH8_ST1_AR00081",
+            "archetype": "Determine commutativity of permutation matrices from cycle structure",
+            "assessment_mechanism": "Reduce commutativity of permutation matrices to commutativity of the corresponding permutations and analyze their cycle actions.",
+            "reasoning_path": "Translate PQ=QP into σ∘τ=τ∘σ; compare the actions on each element; use disjoint supports or compatible cycle structure where possible; test the equality on all indices.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "disjoint versus overlapping cycles",
+                "cycle lengths",
+                "composition order",
+                "commuting subgroups",
+                "explicit permutation notation"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C021",
+            "concept": "Permutation Matrix",
+            "qp_id": "QP017",
+            "question_possibility": "Establish that n×n permutation matrices form a group under multiplication and identify its isomorphism with the symmetric group",
+            "archetype_id": "U2_CH8_ST1_AR00082",
+            "archetype": "Establish the symmetric-group structure of permutation matrices",
+            "assessment_mechanism": "Prove that permutation matrices form a group under multiplication and that the permutation-to-matrix correspondence is a bijective homomorphism with the symmetric group.",
+            "reasoning_path": "Verify closure under multiplication; identify identity; show transpose gives inverse; use associativity of matrix multiplication; establish a one-to-one correspondence with permutations; verify multiplication matches composition under the chosen convention.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order n",
+                "group axioms",
+                "composition convention",
+                "bijection proof",
+                "identity and inverse"
             ]
         }
     ]
