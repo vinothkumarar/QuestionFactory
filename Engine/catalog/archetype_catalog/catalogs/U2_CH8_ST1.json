@@ -1619,6 +1619,36 @@
             "qp_id": "QP010",
             "disposition": "REQUIRES_REVIEW",
             "rationale": "Whether a product of elementary matrices is itself elementary depends on operation types, indices and order; the source does not constrain these cases."
+        },
+        {
+            "concept_id": "C022",
+            "qp_id": "QP011",
+            "disposition": "ELIGIBLE",
+            "rationale": "Commutativity of elementary matrices depends on operation types, affected indices and order; classifying when E₁E₂=E₂E₁ is a distinct operation-interaction mechanism."
+        },
+        {
+            "concept_id": "C022",
+            "qp_id": "QP012",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "For a fixed specified elementary operation, applying it to identity uniquely determines its elementary matrix; this is a direct construction uniqueness fact."
+        },
+        {
+            "concept_id": "C022",
+            "qp_id": "QP013",
+            "disposition": "ELIGIBLE",
+            "rationale": "Determining whether a transformation differs from identity by exactly one elementary row/column operation requires reverse-engineering the allowed single-step matrix patterns."
+        },
+        {
+            "concept_id": "C022",
+            "qp_id": "QP014",
+            "disposition": "ELIGIBLE",
+            "rationale": "Pre- and post-multiplication apply row and column operations respectively; combining them requires tracking both transformations and their order."
+        },
+        {
+            "concept_id": "C023",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Hermitian recognition is a direct check of A*=A, including real diagonal entries and conjugate-paired off-diagonal entries."
         }
     ],
     "archetypes": [
@@ -4160,6 +4190,93 @@
                 "rank",
                 "row/column space",
                 "explicit operation sequence"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C022",
+            "concept": "Elementary Matrix",
+            "qp_id": "QP011",
+            "question_possibility": "Determine whether two specified elementary matrices commute and establish commutativity conditions",
+            "archetype_id": "U2_CH8_ST1_AR00089",
+            "archetype": "Classify when two elementary matrices commute",
+            "assessment_mechanism": "Compare the two operation matrices by type, affected indices and order to derive necessary and sufficient conditions for E₁E₂=E₂E₁.",
+            "reasoning_path": "Write both elementary matrices explicitly; compute E₁E₂ and E₂E₁ or compare their actions on a generic matrix; split by swap/scaling/addition types and index overlap; derive exact parameter/index conditions.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "operation types",
+                "affected row/column indices",
+                "overlapping versus disjoint indices",
+                "operation parameters",
+                "row versus column"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C022",
+            "concept": "Elementary Matrix",
+            "qp_id": "QP013",
+            "question_possibility": "Determine whether a specified single-step matrix transformation can be achieved by one elementary row or column operation and identify the operation when possible",
+            "archetype_id": "U2_CH8_ST1_AR00090",
+            "archetype": "Recognize whether a transformation is a single elementary operation",
+            "assessment_mechanism": "Test whether a given transformation matrix matches exactly one elementary-matrix pattern and recover the corresponding operation if it does.",
+            "reasoning_path": "Compare with identity; test whether the difference is a single allowed row/column swap, nonzero scaling or one row/column addition; reject matrices requiring multiple changes; identify the unique operation and verify it.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "operation type",
+                "number of altered rows/columns",
+                "parameter value",
+                "single-step versus multi-step",
+                "row versus column"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C022",
+            "concept": "Elementary Matrix",
+            "qp_id": "QP014",
+            "question_possibility": "Determine the combined effect on a matrix of pre- and post-multiplication by specified elementary matrices",
+            "archetype_id": "U2_CH8_ST1_AR00091",
+            "archetype": "Track combined row and column transformations by pre/post multiplication",
+            "assessment_mechanism": "Interpret E_L A E_R as a row operation followed by a column operation, preserving the correct left/right order and tracking the combined entry changes.",
+            "reasoning_path": "Apply E_L on the left to transform rows; apply E_R on the right to transform columns; calculate the combined result in the stated order; track affected row/column intersections; verify dimensions and the resulting matrix.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "left and right elementary matrices",
+                "operation order",
+                "affected row/column intersection",
+                "operation types",
+                "rectangular matrix dimensions"
             ]
         }
     ]
