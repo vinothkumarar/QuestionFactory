@@ -1679,6 +1679,36 @@
             "qp_id": "QP006",
             "disposition": "ELIGIBLE",
             "rationale": "For Hermitian A and B, (AB)*=BA, so AB is Hermitian exactly when AB=BA; this is a distinct commutativity condition."
+        },
+        {
+            "concept_id": "C023",
+            "qp_id": "QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The inverse of an invertible Hermitian matrix is Hermitian, and its adjugate is a real scalar multiple of the inverse; these follow directly from adjoint identities and real determinant."
+        },
+        {
+            "concept_id": "C023",
+            "qp_id": "QP008",
+            "disposition": "ELIGIBLE",
+            "rationale": "Hermitian matrices have real eigenvalues, so trace and determinant are real; deriving these invariants from the spectral theorem and characteristic polynomial is a distinct invariant mechanism."
+        },
+        {
+            "concept_id": "C023",
+            "qp_id": "QP009",
+            "disposition": "ELIGIBLE",
+            "rationale": "A*A and AA* are Hermitian positive semidefinite because their adjoints equal themselves and x*A*Ax=||Ax||²≥0; this is a distinct positivity construction."
+        },
+        {
+            "concept_id": "C023",
+            "qp_id": "QP010",
+            "disposition": "ELIGIBLE",
+            "rationale": "The congruence P*AP is Hermitian whenever A is Hermitian, since its adjoint reverses the product to P*A*P; this is a reusable structure-preservation mechanism."
+        },
+        {
+            "concept_id": "C023",
+            "qp_id": "QP011",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A real Hermitian matrix is symmetric, and multiplication by i maps Hermitian matrices to skew-Hermitian matrices; this is a direct field/conjugation correspondence."
         }
     ],
     "archetypes": [
@@ -4364,6 +4394,93 @@
                 "commuting/noncommuting factors",
                 "product order",
                 "additional normality/unitarity assumptions",
+                "complex entries"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C023",
+            "concept": "Hermitian Matrix",
+            "qp_id": "QP008",
+            "question_possibility": "Infer real-valued scalar invariants such as trace and determinant for a Hermitian matrix",
+            "archetype_id": "U2_CH8_ST1_AR00094",
+            "archetype": "Infer real trace and determinant invariants of a Hermitian matrix",
+            "assessment_mechanism": "Use the real spectrum of a Hermitian matrix to prove trace and determinant are real and derive further constraints from eigenvalue information.",
+            "reasoning_path": "Apply the spectral theorem or Hermitian eigenvalue property; express trace as the sum and determinant as the product of real eigenvalues; use characteristic-polynomial coefficients when needed; verify any supplied invariant constraints.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "eigenvalue data",
+                "trace versus determinant",
+                "positive/negative/zero eigenvalues",
+                "characteristic polynomial"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C023",
+            "concept": "Hermitian Matrix",
+            "qp_id": "QP009",
+            "question_possibility": "Determine the Hermitian nature of matrices of the form A*A and AA* for arbitrary complex A",
+            "archetype_id": "U2_CH8_ST1_AR00095",
+            "archetype": "Establish positive semidefiniteness of A*A and AA*",
+            "assessment_mechanism": "Show that A*A and AA* are Hermitian and that their quadratic forms are nonnegative, linking the matrices to squared vector norms.",
+            "reasoning_path": "Compute (A*A)*=A*A and (AA*)*=AA*; evaluate x*A*Ax=||Ax||² and x*AA*x=||A*x||²; infer positive semidefiniteness and identify when equality occurs.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "rectangular versus square A",
+                "rank/nullspace",
+                "positive definite versus semidefinite",
+                "quadratic form",
+                "A versus A*"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C023",
+            "concept": "Hermitian Matrix",
+            "qp_id": "QP010",
+            "question_possibility": "Determine preservation of Hermitian property under congruence transformations P*AP",
+            "archetype_id": "U2_CH8_ST1_AR00096",
+            "archetype": "Prove Hermitian structure is preserved by congruence transformations",
+            "assessment_mechanism": "Use adjoint reversal to show P*AP remains Hermitian when A is Hermitian, even when P is rectangular and the resulting matrix has compatible square order.",
+            "reasoning_path": "Take the adjoint of P*AP; reverse product order; use A*=A; obtain (P*AP)*=P*AP; verify dimensions and distinguish congruence from similarity.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "square versus rectangular P",
+                "rank/invertibility of P",
+                "congruence versus similarity",
+                "matrix order",
                 "complex entries"
             ]
         }
