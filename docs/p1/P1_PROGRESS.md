@@ -78,14 +78,14 @@ Audited 2002–2026 inventory:
 - The 10 January JEE Main shifts remain “Not yet acquired”.
 - All 21 records have Answer Key Verified = No.
 - The 11 “PDF Verified = Yes” flags represent URL/access verification in this workbook; they do not establish local byte acquisition or SHA-256. No local PDF bytes or hashes were found in the audited repository or the inspected workbook records.
-- NTA's current official documents register lists nine April 2026 Paper 1 shift papers. Its 2026 documents include final answer-key records for Session I and Session II, but those answer keys have not been linked/matched/verified per paper in the acquisition tracker.
+- NTA's current official documents register lists nine April 2026 Paper 1 shift papers. Both official Session I and Session II final answer-key PDFs have now been opened and their contents inspected. Session I key: https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/02/20260216459398513.pdf (10 pages; identifies dates/shifts and subject question IDs/correct options). Session II key: https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/20260420409057044.pdf (18 pages; identifies dates/shifts and subject question IDs/correct option IDs). These official source documents are located, but the per-paper/per-question matching and tracker linkage are not yet complete.
 
 README reconciliation:
 - `QuestionEngine/README.md` says the Library contains 247 records and all are not yet acquired, with PDF/answer-key verification No. That matches the audited tracker but does not explain the separate 2026 workbook's 11 URL-access flags.
 - Resolve this by distinguishing at least: INVENTORIED, URL_VERIFIED, BYTES_ACQUIRED, HASH_VERIFIED, TRANSCRIPTION_VERIFIED, ANSWER_KEY_SOURCE_LINKED, ANSWER_KEY_VERIFIED and SYLLABUS_MAPPED. Do not collapse URL accessibility into acquisition.
 - Historical IIT-JEE and AIEEE remain separate exam families from JEE Main and JEE Advanced. Their syllabus and paper formats must not be assumed identical.
 
-#### Blueprint authority audit — unresolved
+#### Answer-key source follow-up — 2026-11-17\n\n- NTA JEE Main 2026 Session I and Session II final answer-key PDFs are official and text-accessible; they contain subject-wise question IDs and correct option identifiers by date/shift. The Library tracker has not yet linked these URLs to the 19 2026 Main shift records or matched question IDs to the 2026 paper PDFs.\n- JEE Advanced 2026 Information Brochure states that final answer keys for both papers were scheduled for online publication on 2026-06-01. The direct final-key PDF URL was not recovered during this initial pass; both paper records remain unverified pending exact source retrieval and matching. Official brochure: https://jeeadv.ac.in/documents/IBEnglish_2026.pdf\n\n#### Blueprint authority audit — unresolved
 
 Repository sources inspected:
 - `Engine/prompts/master/05_blueprint_rules.md`
