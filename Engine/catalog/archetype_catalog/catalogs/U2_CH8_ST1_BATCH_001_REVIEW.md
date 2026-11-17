@@ -781,3 +781,23 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 210 dispositions and 53 draft archetypes; 140 source QPs remain untouched. Nine source possibilities are held for review.
+
+
+## Batch 043 — idempotent inverse formulas and polynomial invariants (global QP211–QP215)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C018 / QP009 | ELIGIBLE | I±αA for idempotent A reduce to a scalar invertibility condition and closed-form inverse |
+| C018 / QP010 | ELIGIBLE | Minimal polynomial divides x(x−1); characteristic polynomial links to rank and eigenvalue multiplicity |
+| C018 / QP011 | FOUNDATION_ONLY | Nontrivial idempotent existence under invariants is covered by rank/canonical classification |
+| C018 / QP012 | FOUNDATION_ONLY | Similarity classification by rank is already represented |
+| C018 / QP013 | REQUIRES_REVIEW | Structured classes and combinations are too broad without explicit family assumptions |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00054`: Determine invertibility and inverses of I±αA for idempotent A.
+- `U2_CH8_ST1_AR00055`: Derive minimal and characteristic polynomial constraints for an idempotent matrix.
+
+Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 215 dispositions and 55 draft archetypes; 135 source QPs remain untouched. Ten source possibilities are held for review.
