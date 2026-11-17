@@ -132,3 +132,8 @@ Findings:
 - Advanced 2026 dispositions across all subjects: 688 provisional mapped, 107 partial, 231 no direct explicit scope.
 - Effective-enabled snapshot: 26 TRUE, 1,000 FALSE. These are preserved snapshots; no source curriculum enable flags were changed.
 - All 1,026 rows remain `PENDING_INDEPENDENT_REVIEW`. The mapping-basis classification (chapter-level vs subtopic-level) is a review aid, not a claim of final academic verification.
+
+
+## P1 acceptance-gate tracking
+
+The MECP v1.2 activity/deliverable/exit criteria are now tracked explicitly in `docs/p1/P1_EXIT_GATE_CHECKLIST.md`. Overall P1 status remains **IN PROGRESS / EXIT GATE NOT PASSED**. The canonical frozen v1.5 authority is the current blocking decision; PYQ local bytes/hashes and independent taxonomy review also remain open.
