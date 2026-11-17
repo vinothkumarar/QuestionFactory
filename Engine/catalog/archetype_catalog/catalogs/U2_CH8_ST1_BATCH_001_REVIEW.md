@@ -926,3 +926,23 @@ New draft candidates:
 Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 245 dispositions and 72 draft archetypes; 105 source QPs remain untouched. Twelve source possibilities are held for review.
+
+
+## Batch 050 — permutation parity and matrix reordering (global QP246–QP250)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C021 / QP003 | FOUNDATION_ONLY | Direct decoding of the permutation from row positions |
+| C021 / QP004 | FOUNDATION_ONLY | Direct n! count via bijection with permutations |
+| C021 / QP005 | ELIGIBLE | Determinant equals permutation sign; parity from inversions/cycles |
+| C021 / QP006 | FOUNDATION_ONLY | Inverse of a permutation matrix is its transpose |
+| C021 / QP007 | ELIGIBLE | Left/right multiplication reorders rows/columns with index tracking |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00073`: Determine determinant sign and parity of a permutation matrix.
+- `U2_CH8_ST1_AR00074`: Track row and column reordering under permutation-matrix multiplication.
+
+Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 250 dispositions and 74 draft archetypes; 100 source QPs remain untouched.
