@@ -3,71 +3,67 @@
 **Branch:** `feature/dual-question-engine-v1`  
 **Source:** `Engine/qpc/mathematics/U1_CH1.csv`  
 **Related registry:** `Engine/catalog/archetype_catalog/catalogs/U1_CH1_ST1.csv`  
-**Status:** Academic gate; no manufacturing authorization
+**Status:** Foundation-only recommendation; manufacturing remains disabled
 
-## Why this review exists
+## Decision summary
 
-The archetype discovery prompt requires meaningful reasoning and explicitly rejects archetypes based primarily on direct recall, memorization or trivial recognition. The current 19-row core draft includes several direct definition and elementary membership checks. Those are useful as prerequisite learning diagnostics, but they should not be represented as JEE-worthy archetypes without stronger evidence.
+ST1 is restricted to classifying membership in Natural Numbers (N), Whole Numbers (W) and Integers (Z). Under that strict boundary, the source possibilities do not provide enough mathematical structure to justify a separate JEE-level archetype catalogue.
 
-To avoid both over-generation and blocking the entire subtopic, use two lanes:
+The seven previously retained candidates were stress-tested against the JEE-worthiness rule: a reusable, distinct reasoning mechanism that requires meaningful inference beyond direct recall, recognition or routine classification. None currently clears that threshold without importing a different QP or a neighbouring concept.
 
-- **Foundation prerequisite lane:** retain for diagnostic/practice learning, but do not count as JEE archetype coverage and do not include in JEE production batches.
-- **JEE candidate lane:** retain as draft candidates only. Their actual reasoning depth must be demonstrated through representative questions and academic review before approval.
+**Recommendation: route all interpretable ST1 possibilities to the foundation/prerequisite track. Do not count any ST1 archetype toward JEE Main/Advanced catalogue coverage.** This is a quality-control decision, not deletion of the QPs or their IDs.
 
-## Provisional disposition
+## Scope and conventions
 
-### Foundation prerequisite only — 12 QPs
+- Keep ST1 limited to N, W and Z membership/classification.
+- Configurable project default: N = positive integers; W = non-negative integers; Z = all integers.
+- The active convention must be explicit whenever zero is involved.
+- Do not import divisibility, parity, primes, HCF/LCM, rational/irrational classification, closure proofs or other adjacent concepts into ST1.
+- A task that needs those ideas belongs to its own QP/subtopic and must not be used to inflate ST1's JEE-worthiness.
 
-| QP | Source possibility | Reason |
-|---|---|---|
-| QP001 | Definition of Natural Numbers | Definition recall alone |
-| QP002 | Definition of Whole Numbers | Definition recognition alone |
-| QP003 | Definition of Integers | Definition recall alone |
-| QP004 | Identify Natural Number | Direct membership test |
-| QP005 | Identify Whole Number | Direct membership test |
-| QP006 | Identify Integer | Direct membership test |
-| QP007 | Identify Non-Natural Number | Direct exclusion/membership test |
-| QP008 | Identify Non-Whole Number | Direct exclusion/membership test |
-| QP009 | Identify Non-Integer | Direct integrality recognition |
-| QP013 | Membership of Zero | Single boundary fact unless embedded in a deeper argument |
-| QP014 | Membership of Positive Integer | Direct sign and integrality test |
-| QP015 | Membership of Negative Integer | Direct sign and integrality test |
+## Candidate stress-test
 
-These are not deleted. They may support onboarding, diagnostic tests, remediation and prerequisite mastery. They must not be used to inflate the JEE archetype count.
+| QP | Source possibility | What a stronger task would require | Result |
+|---|---|---|---|
+| QP010 | Classify Given Number | Derive sign/integrality from constraints before classification | Still reduces to membership once the value is known; deeper algebra would be another QP |
+| QP011 | Classify Multiple Numbers | Aggregate membership patterns across several values | Repeated classification/counting; no distinct JEE mechanism within N/W/Z alone |
+| QP012 | Smallest Applicable Number Set | Compare nested-set membership with zero/sign boundaries | A short decision rule, not a sufficiently rich reusable JEE mechanism |
+| QP017 | Classification after Arithmetic Operation | Infer sign and integrality from an operation's structure | Routine evaluation/classification; closure or divisibility reasoning belongs elsewhere |
+| QP018 | Statement-based Classification | Combine multiple membership claims and implications | Elementary set-inclusion logic; deeper proof structure overlaps QP019 or another QP |
+| QP019 | True/False Classification | Prove or disprove a universal membership claim | Valid foundation exercise, but counterexample/proof remains elementary under this scope |
+| QP020 | Error Detection in Classification | Locate the first invalid inference in a classification argument | Definition-checking/diagnostic practice; multi-step algebra would exceed this QP |
 
-### JEE candidate lane — 7 QPs
+This is a scope-based assessment. A future approved expansion of a QP may justify a new review, but do not assume that possibility now.
 
-| QP | Source possibility | Required evidence before approval |
-|---|---|---|
-| QP010 | Classify Given Number | Multi-condition classification where the value's form or constraints require non-trivial inference, not a simple sign check |
-| QP011 | Classify Multiple Numbers | A genuine aggregate/set-membership reasoning task; avoid mere repetitive classification |
-| QP012 | Smallest Applicable Number Set | A decision requiring comparison of nested-set membership and explicit convention handling |
-| QP017 | Classification after Arithmetic Operation | Exact evaluation plus non-trivial sign/integrality reasoning; no routine one-step arithmetic |
-| QP018 | Statement-based Classification | Multi-claim consistency or logical implication analysis grounded strictly in N/W/Z |
-| QP019 | True/False Classification | Proposition evaluation with a meaningful proof or counterexample requirement |
-| QP020 | Error Detection in Classification | Diagnose the first invalid inference in a multi-step classification argument |
+## Foundation prerequisite lane — all 19 interpretable QPs
 
-The candidate lane remains provisional. If representative tasks cannot meet JEE standards without importing another QP or concept, downgrade that QP to the foundation lane rather than stretching its scope.
+QP001–QP015 and QP017–QP020 remain available for:
+- prerequisite diagnostics;
+- concept introduction and remediation;
+- basic mastery checks;
+- short warm-up questions before more advanced Number System topics.
 
-## Boundary rules
+They are not deleted and their source identifiers remain unchanged. They must not be presented as JEE-worthy archetypes merely by increasing wording, numerical complexity or the number of values.
 
-1. Keep scope restricted to N, W and Z.
-2. Use the project's configurable default convention: N = positive integers; W = non-negative integers; Z = all integers. Every test must inherit the convention explicitly.
-3. Do not add divisibility, primes, HCF/LCM, rational/irrational classification or unrelated properties to ST1.
-4. Do not create separate archetypes for changes in numbers, symbols, signs or presentation alone.
-5. A JEE candidate must demonstrate a distinct reusable reasoning pathway, not merely be labelled HARD or ADVANCED.
-6. Keep all current IDs stable. Do not delete or recycle parked IDs.
-7. QP016 remains quarantined because its source text is malformed.
+## Quarantine
 
-## Execution decision
+QP016 remains quarantined because the source text is malformed:
 
-The next safe manufacturing path is **not** to manufacture all 19 QPs indiscriminately.
+`Boundary Classification (?1`
 
-1. Build a compact representative-task set for the seven JEE candidates.
-2. Independently solve and verify every task.
-3. Apply ambiguity, answer, distractor, novelty and R03 checks.
-4. Retain only the candidates that genuinely pass the JEE-worthiness gate.
-5. Route the 12 foundation-only QPs to a separate prerequisite practice track.
-6. Do not enable manufacturing until the catalogue gate and runtime checks are implemented and verified.
+Do not infer whether the intended value was +1, -1 or something else. No archetype or question may be manufactured from QP016 until the source is authoritatively corrected.
 
-**Current counts:** 19 core draft candidates; 12 provisionally foundation-only; 7 provisional JEE candidates; 33 parked candidates; 0 manufacturing-enabled rows.
+## Registry and manufacturing controls
+
+- Preserve all existing archetype IDs AR00001–AR00052.
+- The 19 core candidates remain drafts and must be treated as foundation-only pending any future approved scope revision.
+- The other 33 candidates remain parked; do not restore them without documented source justification and a distinct reasoning mechanism.
+- All rows remain `manufacturing_enabled=FALSE`.
+- No JEE approval is granted by this review.
+- Any later change must preserve the existing IDs and record its academic rationale.
+
+## Next production direction
+
+Do not spend more cycles manufacturing artificial complexity from ST1. Move to the next source-backed subtopic whose QPs support richer mathematical reasoning, and qualify it independently before enabling production.
+
+**Current disposition:** 19 foundation/prerequisite QPs; 7 formerly provisional JEE candidates downgraded to foundation-only; 33 parked archetype candidates; QP016 quarantined; zero manufacturing-enabled rows.
