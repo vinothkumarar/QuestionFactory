@@ -1919,6 +1919,36 @@
             "qp_id": "QP005",
             "disposition": "ELIGIBLE",
             "rationale": "The determinant of a block-diagonal matrix factors as the product of determinants of its diagonal blocks; using this to infer singularity or parameter constraints is a reusable factorization mechanism."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP006",
+            "disposition": "ELIGIBLE",
+            "rationale": "The trace of a block-diagonal matrix is the sum of the traces of its diagonal blocks; this is a direct blockwise invariant aggregation."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP007",
+            "disposition": "ELIGIBLE",
+            "rationale": "The rank of a block-diagonal matrix is the sum of the ranks of its diagonal blocks because the block images occupy independent coordinate subspaces."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP008",
+            "disposition": "ELIGIBLE",
+            "rationale": "A square block-diagonal matrix is invertible exactly when every diagonal block is invertible; this follows from the determinant product and blockwise kernel structure."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP009",
+            "disposition": "ELIGIBLE",
+            "rationale": "When every diagonal block is invertible, the inverse is block diagonal with the inverse of each block; this is a direct construction formula."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP010",
+            "disposition": "ELIGIBLE",
+            "rationale": "Powers and polynomial expressions of a block-diagonal matrix are evaluated independently on each diagonal block; this is a reusable blockwise reduction."
         }
     ],
     "archetypes": [
@@ -5213,6 +5243,151 @@
                 "parameterized block determinants",
                 "singularity of one versus multiple blocks",
                 "determinant value versus invertibility"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C026",
+            "concept": "Block Diagonal Matrix",
+            "qp_id": "QP006",
+            "question_possibility": "Determine the trace of a block diagonal matrix from traces of its blocks",
+            "archetype_id": "U2_CH8_ST1_AR00115",
+            "archetype": "Aggregate trace across diagonal blocks",
+            "assessment_mechanism": "Use the direct-sum structure of a block-diagonal matrix to express its trace as the sum of the traces of its diagonal blocks.",
+            "reasoning_path": "Write the matrix as diag(A₁,...,Aₖ); identify all diagonal entries as the union of block diagonals; sum the block traces; apply parameter constraints blockwise.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of blocks",
+                "block orders",
+                "known block traces",
+                "parameterized diagonal entries",
+                "trace constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C026",
+            "concept": "Block Diagonal Matrix",
+            "qp_id": "QP007",
+            "question_possibility": "Determine the rank of a block diagonal matrix from ranks of its blocks",
+            "archetype_id": "U2_CH8_ST1_AR00116",
+            "archetype": "Aggregate rank across diagonal blocks",
+            "assessment_mechanism": "Use independence of coordinate subspaces to show that the rank of a block-diagonal matrix is the sum of the ranks of its diagonal blocks.",
+            "reasoning_path": "Represent the image as the direct sum of the block images; note their coordinate supports are disjoint; add the block ranks; infer nullity and full-rank conditions where needed.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of blocks",
+                "individual block ranks",
+                "block sizes",
+                "rank deficiency distribution",
+                "nullity"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C026",
+            "concept": "Block Diagonal Matrix",
+            "qp_id": "QP008",
+            "question_possibility": "Determine invertibility of a block diagonal matrix from invertibility of its blocks",
+            "archetype_id": "U2_CH8_ST1_AR00117",
+            "archetype": "Determine invertibility of a block-diagonal matrix blockwise",
+            "assessment_mechanism": "Reduce invertibility of a block-diagonal matrix to invertibility of every square diagonal block, using determinant or kernel arguments.",
+            "reasoning_path": "Apply det(diag(A₁,...,Aₖ))=∏det(Aᵢ); conclude the full matrix is invertible iff every block determinant is nonzero; alternatively analyze the blockwise kernel; verify square compatible blocks.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of blocks",
+                "block orders",
+                "one or multiple singular blocks",
+                "parameterized determinants",
+                "kernel conditions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C026",
+            "concept": "Block Diagonal Matrix",
+            "qp_id": "QP009",
+            "question_possibility": "Determine the inverse of a block diagonal matrix via inverses of its blocks",
+            "archetype_id": "U2_CH8_ST1_AR00118",
+            "archetype": "Construct the inverse of an invertible block-diagonal matrix",
+            "assessment_mechanism": "Use the blockwise inverse formula diag(A₁,...,Aₖ)⁻¹=diag(A₁⁻¹,...,Aₖ⁻¹), provided every block is invertible.",
+            "reasoning_path": "Verify each block is square and invertible; form the block-diagonal matrix of block inverses; multiply in both orders; confirm the result is the identity of the full order.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of blocks",
+                "block inverse forms",
+                "parameterized blocks",
+                "left/right inverse verification",
+                "singular block detection"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C026",
+            "concept": "Block Diagonal Matrix",
+            "qp_id": "QP010",
+            "question_possibility": "Evaluate a polynomial in a block diagonal matrix (including powers) blockwise",
+            "archetype_id": "U2_CH8_ST1_AR00119",
+            "archetype": "Evaluate powers and polynomials of block-diagonal matrices blockwise",
+            "assessment_mechanism": "Use block multiplication to show p(diag(A₁,...,Aₖ))=diag(p(A₁),...,p(Aₖ)), reducing the expression independently on each block.",
+            "reasoning_path": "Apply repeated block multiplication to powers; expand the polynomial; evaluate each power within its own block; assemble the diagonal block results; use this to infer invertibility, spectrum or other requested properties.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "polynomial degree",
+                "number of blocks",
+                "different block types",
+                "exponent values",
+                "requested matrix invariant"
             ]
         }
     ]
