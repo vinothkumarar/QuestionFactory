@@ -990,3 +990,25 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 260 dispositions and 82 draft archetypes; 90 source QPs remain untouched.
+
+
+## Batch 053 — elementary-matrix decoding, construction, action and inverse (global QP261–QP265)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C022 / QP001 | FOUNDATION_ONLY | Direct elementary-matrix definition check |
+| C022 / QP002 | ELIGIBLE | Decode swap, scaling or addition operation and recover indices/parameter |
+| C022 / QP003 | ELIGIBLE | Construct elementary matrix by applying operation to identity |
+| C022 / QP004 | ELIGIBLE | Left/right multiplication applies row/column operations |
+| C022 / QP005 | ELIGIBLE | Inverse elementary matrix reverses the encoded operation |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00083`: Decode the elementary operation represented by a matrix.
+- `U2_CH8_ST1_AR00084`: Construct an elementary matrix from a specified operation.
+- `U2_CH8_ST1_AR00085`: Predict matrix changes under elementary matrix multiplication.
+- `U2_CH8_ST1_AR00086`: Find inverse elementary matrices and inverse operations.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 265 dispositions and 86 draft archetypes; 85 source QPs remain untouched.
