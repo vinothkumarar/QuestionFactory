@@ -1769,6 +1769,36 @@
             "qp_id": "QP008",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "For real entries, conjugation is trivial, so skew-Hermitian reduces directly to skew-symmetric."
+        },
+        {
+            "concept_id": "C024",
+            "qp_id": "QP009",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A matrix both Hermitian and skew-Hermitian must satisfy A=−A, hence A=O; this is a direct consequence."
+        },
+        {
+            "concept_id": "C024",
+            "qp_id": "QP010",
+            "disposition": "ELIGIBLE",
+            "rationale": "For A*=−A, if Av=λv then λ is purely imaginary; deriving spectral constraints from the adjoint identity is a distinct mechanism."
+        },
+        {
+            "concept_id": "C024",
+            "qp_id": "QP011",
+            "disposition": "ELIGIBLE",
+            "rationale": "For skew-Hermitian A, conjugate(x*Ax)=x*A*x=−x*Ax, so x*Ax is purely imaginary; this is a reusable quadratic-form inference."
+        },
+        {
+            "concept_id": "C024",
+            "qp_id": "QP012",
+            "disposition": "ELIGIBLE",
+            "rationale": "Adjoint reversal and sign substitution classify AB±BA across Hermitian/skew-Hermitian operand types; this is a multi-case algebraic mechanism."
+        },
+        {
+            "concept_id": "C024",
+            "qp_id": "QP013",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The independent real parameter count is n², matching the Hermitian case; the counting mechanism is already represented."
         }
     ],
     "archetypes": [
@@ -4715,6 +4745,93 @@
                 "complex coefficients",
                 "matrix order",
                 "target structure"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C024",
+            "concept": "Skew-Hermitian Matrix",
+            "qp_id": "QP010",
+            "question_possibility": "Infer constraints on eigenvalues of a skew-Hermitian matrix",
+            "archetype_id": "U2_CH8_ST1_AR00103",
+            "archetype": "Infer purely imaginary eigenvalues of a skew-Hermitian matrix",
+            "assessment_mechanism": "Use A*=−A and the eigenvector equation to show every eigenvalue of a skew-Hermitian matrix has zero real part.",
+            "reasoning_path": "Let Av=λv for nonzero v; compute v*Av=λ||v||²; use A*=−A to show conjugate(v*Av)=−v*Av; infer λ+conjugate(λ)=0; conclude λ is purely imaginary.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "eigenvalue multiplicity",
+                "zero eigenvalue",
+                "diagonalizable versus defective cases",
+                "complex inner product"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C024",
+            "concept": "Skew-Hermitian Matrix",
+            "qp_id": "QP011",
+            "question_possibility": "Infer the nature of the scalar x*Ax when A is skew-Hermitian",
+            "archetype_id": "U2_CH8_ST1_AR00104",
+            "archetype": "Determine the scalar nature of x*Ax for skew-Hermitian A",
+            "assessment_mechanism": "Use conjugation of the quadratic form and A*=−A to prove x*Ax is purely imaginary (including zero).",
+            "reasoning_path": "Take the complex conjugate of x*Ax; rewrite as x*A*x; substitute A*=−A; obtain conjugate(x*Ax)=−x*Ax; conclude its real part is zero.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "vector x",
+                "zero versus nonzero value",
+                "matrix order",
+                "quadratic-form expansion",
+                "real/imaginary component"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C024",
+            "concept": "Skew-Hermitian Matrix",
+            "qp_id": "QP012",
+            "question_possibility": "Classify AB ± BA as Hermitian or skew-Hermitian given the types of A and B",
+            "archetype_id": "U2_CH8_ST1_AR00105",
+            "archetype": "Classify AB±BA using Hermitian and skew-Hermitian operand types",
+            "assessment_mechanism": "Apply adjoint reversal and sign substitution to classify anticommutators and commutators of Hermitian/skew-Hermitian matrices.",
+            "reasoning_path": "Compute (AB)*=B*A*; substitute A*=±A and B*=±B; reverse factor order; add or subtract the original expression; identify the resulting Hermitian/skew-Hermitian sign and any required commutation conditions.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "Hermitian/skew-Hermitian operand pair",
+                "AB versus BA",
+                "sum versus difference",
+                "commuting assumptions",
+                "multiple factors"
             ]
         }
     ]
