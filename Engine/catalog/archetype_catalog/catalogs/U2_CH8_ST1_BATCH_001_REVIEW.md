@@ -262,3 +262,21 @@ New draft candidate:
 - JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
 
 Cumulative status: 70 dispositions and 9 draft archetypes; 280 source QPs remain untouched.
+
+
+## Batch 015 — zero-matrix scalar, transpose, structure and power properties (global QP071–QP075)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C007 / QP007 | FOUNDATION_ONLY | Scalar zero/nonzero case split is a direct property check |
+| C007 / QP008 | FOUNDATION_ONLY | Transpose swaps order while preserving zero entries |
+| C007 / QP009 | FOUNDATION_ONLY | Structural classifications follow by direct substitution |
+| C007 / QP010 | FOUNDATION_ONLY | Zero determinant/trace are direct definition consequences |
+| C007 / QP011 | ELIGIBLE | Integer powers require positive/zero/negative exponent and definedness/invertibility distinctions |
+
+New draft candidate:
+
+- `U2_CH8_ST1_AR00010`: Classify zero-matrix integer powers by exponent and order conditions.
+- JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
+
+Cumulative status: 75 dispositions and 10 draft archetypes; 275 source QPs remain untouched.
