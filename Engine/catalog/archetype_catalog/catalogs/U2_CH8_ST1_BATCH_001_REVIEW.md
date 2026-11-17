@@ -542,3 +542,23 @@ New draft candidate:
 - JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
 
 Cumulative status: 150 dispositions and 25 draft archetypes; 200 source QPs remain untouched.
+
+
+## Batch 031 — symmetric congruence and block-matrix constraints (global QP151–QP155)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C013 / QP012 | FOUNDATION_ONLY | Direct transpose identities for A±Aᵀ |
+| C013 / QP013 | ELIGIBLE | Congruence PᵀAP preserves symmetry by transpose reversal |
+| C013 / QP014 | FOUNDATION_ONLY | Entry-wise symmetry is direct pairwise equality |
+| C013 / QP015 | ELIGIBLE | Block symmetry imposes diagonal-block symmetry and transpose-paired off-diagonal blocks |
+| C013 / QP016 | FOUNDATION_ONLY | Symmetric and triangular together imply diagonal |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00026`: Prove symmetry is preserved by a congruence transform.
+- `U2_CH8_ST1_AR00027`: Derive symmetry constraints for a block-partitioned matrix.
+
+Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 155 dispositions and 27 draft archetypes; 195 source QPs remain untouched.
