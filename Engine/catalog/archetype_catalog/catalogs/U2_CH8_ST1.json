@@ -359,6 +359,36 @@
             "qp_id": "QP005",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Identifying principal or secondary diagonal entries is direct positional recognition within a square matrix."
+        },
+        {
+            "concept_id": "C006",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Counting diagonal and off-diagonal positions follows directly from the n×n grid and standard position formulas; no distinct matrix-type reasoning mechanism is justified."
+        },
+        {
+            "concept_id": "C006",
+            "qp_id": "QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Closure of square matrices under standard operations is a direct property check and remains foundation content."
+        },
+        {
+            "concept_id": "C006",
+            "qp_id": "QP008",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Inferring squareness from square-only constructs is a useful diagnostic, but it overlaps the existing operation-definedness/dimension-inference candidate and is not split into another archetype."
+        },
+        {
+            "concept_id": "C006",
+            "qp_id": "QP009",
+            "disposition": "ELIGIBLE",
+            "rationale": "Determining total row/column dimensions from block-size constraints can require combining several independent block equations; retained as a distinct JEE Main candidate pending academic review."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Zero-matrix recognition by checking all entries is a direct definition-level task."
         }
     ],
     "archetypes": [
@@ -558,6 +588,34 @@
                 "transpose involvement",
                 "known result order",
                 "uniqueness versus multiple admissible dimensions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C006",
+            "concept": "Square Matrix",
+            "qp_id": "QP009",
+            "question_possibility": "Determine conditions on block sizes for a partitioned matrix to be square",
+            "archetype_id": "U2_CH8_ST1_AR00008",
+            "archetype": "Infer square block-matrix conditions from partition dimensions",
+            "assessment_mechanism": "Translate the row-block and column-block sizes into total matrix dimensions, impose equality of total rows and columns, and solve the resulting constraints on block sizes.",
+            "reasoning_path": "Identify the number and sizes of row blocks and column blocks; express total row and column counts; set the totals equal; solve the integer/parameter constraints; check block compatibility and any stated restrictions.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of block rows and columns",
+                "symbolic block sizes",
+                "equal versus constrained block dimensions",
+                "additional order conditions"
             ]
         }
     ]
