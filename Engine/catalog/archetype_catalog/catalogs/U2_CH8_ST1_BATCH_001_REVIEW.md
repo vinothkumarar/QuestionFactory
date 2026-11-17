@@ -1175,3 +1175,24 @@ New draft candidate:
 - JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
 
 Cumulative status: 305 dispositions and 106 draft archetypes; 45 source QPs remain untouched.
+
+
+## Batch 062 — unitary scalar, determinant and diagonal constraints (global QP306–QP310)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C025 / QP005 | FOUNDATION_ONLY | Products, inverses and powers preserve unitarity by direct identities |
+| C025 / QP006 | ELIGIBLE | Scalar multiple is unitary exactly when the scalar has modulus one |
+| C025 / QP007 | ELIGIBLE | Determinant of a unitary matrix has modulus one |
+| C025 / QP008 | FOUNDATION_ONLY | Unitary matrices are invertible and full rank by definition |
+| C025 / QP009 | ELIGIBLE | Diagonal unitarity reduces to modulus-one conditions on each diagonal entry |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00107`: Determine scalar multiples that preserve unitarity.
+- `U2_CH8_ST1_AR00108`: Derive determinant modulus constraints for a unitary matrix.
+- `U2_CH8_ST1_AR00109`: Characterize diagonal unitary matrices entrywise.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 310 dispositions and 109 draft archetypes; 40 source QPs remain untouched.
