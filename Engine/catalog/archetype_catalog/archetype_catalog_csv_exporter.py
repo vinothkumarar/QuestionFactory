@@ -27,6 +27,8 @@ class ArchetypeCatalogCSVExporter:
         "difficulty_potential",
         "variation_capacity",
         "variation_dimensions",
+        "approval_status",
+        "manufacturing_enabled",
     ]
 
     LIST_FIELDS = {
@@ -79,6 +81,11 @@ class ArchetypeCatalogCSVExporter:
                     )
 
                 output = dict(row)
+                output["approval_status"] = (
+                    "DRAFT_CORE_REQUIRES_ACADEMIC_REVIEW"
+                )
+                output["manufacturing_enabled"] = "FALSE"
+
                 for field in self.LIST_FIELDS:
                     value = output[field]
                     if not isinstance(value, list):
