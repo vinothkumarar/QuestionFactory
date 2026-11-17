@@ -37,7 +37,7 @@ class CatalogueDataIntegrityTests(unittest.TestCase):
         catalogue = read_json(ARCHETYPE_CATALOGS / "U1_CH1_ST2.json")
         validate_catalog_response(response=catalogue, input_qps=source)
         self.assertEqual(len(source), 10)
-        self.assertEqual(len(catalogue["qp_dispositions"]), 15)
+        self.assertEqual(len(catalogue["qp_dispositions"]), 10)
         self.assertEqual(catalogue["archetypes"], [])
         self.assertTrue(all(
             row["disposition"] == "FOUNDATION_ONLY"
@@ -52,7 +52,7 @@ class CatalogueDataIntegrityTests(unittest.TestCase):
             response=catalogue,
             input_qps=batch_source,
         )
-        self.assertEqual(len(catalogue["qp_dispositions"]), 10)
+        self.assertEqual(len(catalogue["qp_dispositions"]), 15)
         self.assertEqual(len(catalogue["archetypes"]), 2)
 
         csv_path = ARCHETYPE_CATALOGS / "U2_CH8_ST1.csv"
