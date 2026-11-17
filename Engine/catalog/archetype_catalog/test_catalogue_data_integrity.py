@@ -46,18 +46,18 @@ class CatalogueDataIntegrityTests(unittest.TestCase):
 
     def test_matrix_batch_one_matches_source_and_keeps_gates_closed(self) -> None:
         source = read_json(QP_CATALOGS / "U2_CH8_ST1.json")
-        batch_source = source[:230]
+        batch_source = source[:235]
         catalogue = read_json(ARCHETYPE_CATALOGS / "U2_CH8_ST1.json")
         validate_catalog_response(
             response=catalogue,
             input_qps=batch_source,
         )
-        self.assertEqual(len(catalogue["qp_dispositions"]), 230)
-        self.assertEqual(len(catalogue["archetypes"]), 64)
+        self.assertEqual(len(catalogue["qp_dispositions"]), 235)
+        self.assertEqual(len(catalogue["archetypes"]), 67)
 
         csv_path = ARCHETYPE_CATALOGS / "U2_CH8_ST1.csv"
         rows = csv_path.read_text(encoding="utf-8").splitlines()
-        self.assertEqual(len(rows), 65)
+        self.assertEqual(len(rows), 68)
         for row in rows[1:]:
             self.assertIn("DRAFT_CORE_REQUIRES_ACADEMIC_REVIEW", row)
             self.assertIn("FALSE", row)
@@ -130,6 +130,9 @@ class CatalogueDataIntegrityTests(unittest.TestCase):
                 "U2_CH8_ST1_AR00062",
                 "U2_CH8_ST1_AR00063",
                 "U2_CH8_ST1_AR00064",
+                "U2_CH8_ST1_AR00065",
+                "U2_CH8_ST1_AR00066",
+                "U2_CH8_ST1_AR00067",
             ],
         )
 
