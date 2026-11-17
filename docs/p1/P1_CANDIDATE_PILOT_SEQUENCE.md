@@ -75,3 +75,11 @@ The question uses the dimensions of electric-field energy density and a combinat
 2. P1_CH1_ST4 — Dimensional Analysis
 
 Both are suitable for continued P1 source research. Neither is yet an approved production pilot. The authoritative frozen Blueprint v1.5 source is still unresolved, and the P1 exit gate requires rule conflicts to be resolved or explicitly isolated from the pilot. No questions are to be generated in P1.
+
+
+## Independent answer verification — 2026-11-17
+
+- **Q26 / P1_CH1_ST4:** Electric-field energy density is `u=(1/2)epsilon0*E^2`, with dimensions `M L^-1 T^-2`. Thus `a=1, b=-1, c=-2`, and `2a-b+c=1`. This independently agrees with option B and NTA correct option ID `69112187`.
+- **Q27 / P1_CH1_ST6:** `Y=4FL/(pi*d^2*x)`. Ignoring load error, relative uncertainty is `0.1/150 + 2(0.001/0.08) + 0.001/0.5 = 0.0276667`. With `F=100 N, L=1.5 m, d=0.0008 m, x=0.005 m`, nominal `Y≈5.968×10^10 Pa`, absolute uncertainty `≈1.651×10^9 Pa`, so `alpha=1.65`. This independently agrees with option B and NTA correct option ID `69112191`.
+
+Both answer values and option identifiers are independently checked. Local PDF bytes and SHA-256 remain pending. Candidate ranking is unchanged; no pilot or production order is authorized.
