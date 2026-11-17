@@ -1169,6 +1169,36 @@
             "qp_id": "QP003",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "The equivalent characterizations of non-singularity are standard rank/determinant/inverse facts and remain foundation content."
+        },
+        {
+            "concept_id": "C017",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Transpose, powers, nonzero scalar multiples and adjugates of nonsingular matrices have standard determinant/inverse consequences; this is a direct property set."
+        },
+        {
+            "concept_id": "C017",
+            "qp_id": "QP005",
+            "disposition": "ELIGIBLE",
+            "rationale": "For square matrices of the same order, AB is nonsingular iff both A and B are nonsingular; proving both directions and testing converse implications is a reusable product-factor mechanism."
+        },
+        {
+            "concept_id": "C017",
+            "qp_id": "QP006",
+            "disposition": "ELIGIBLE",
+            "rationale": "A is nonsingular exactly when Ax=b has a unique solution for every b; this links invertibility, existence and uniqueness in a reusable system-solving mechanism."
+        },
+        {
+            "concept_id": "C017",
+            "qp_id": "QP007",
+            "disposition": "ELIGIBLE",
+            "rationale": "Elementary row/column operations are multiplication by invertible elementary matrices, so they preserve rank and nonsingularity while changing determinant by controlled nonzero factors."
+        },
+        {
+            "concept_id": "C017",
+            "qp_id": "QP008",
+            "disposition": "REQUIRES_REVIEW",
+            "rationale": "The necessary/sufficient/equivalent conditions to classify are not enumerated; a source-faithful candidate set is required before this can be assessed."
         }
     ],
     "archetypes": [
@@ -2437,6 +2467,91 @@
                 "nonsingular/rank n−1/rank ≤n−2 cases",
                 "adjugate invertibility",
                 "small-order edge cases"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C017",
+            "concept": "Non-Singular Matrix",
+            "qp_id": "QP005",
+            "question_possibility": "Infer non-singularity relationships for matrix products and factors (A, B, AB)",
+            "archetype_id": "U2_CH8_ST1_AR00045",
+            "archetype": "Infer nonsingularity of matrix products and their factors",
+            "assessment_mechanism": "Use invertibility and determinant multiplicativity to determine the exact relationship between nonsingularity of square matrices A, B and AB, proving both directions and rejecting invalid one-sided assumptions.",
+            "reasoning_path": "Assume compatible square matrices of the same order; use det(AB)=det(A)det(B); prove A and B nonsingular imply AB nonsingular; prove AB nonsingular forces each factor nonsingular; test one-way implications with counterexamples when assumptions change.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "same versus incompatible orders",
+                "two versus multiple factors",
+                "determinant versus inverse proof",
+                "one-way implication versus equivalence"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C017",
+            "concept": "Non-Singular Matrix",
+            "qp_id": "QP006",
+            "question_possibility": "Determine existence and uniqueness of solutions to Ax=b using non-singularity of the coefficient matrix",
+            "archetype_id": "U2_CH8_ST1_AR00046",
+            "archetype": "Connect nonsingularity with existence and uniqueness of Ax=b",
+            "assessment_mechanism": "Use the invertibility of the coefficient matrix to establish that Ax=b has exactly one solution for every right-hand side, and infer nonsingularity from the corresponding universal solution property.",
+            "reasoning_path": "If A is nonsingular, write x=A⁻¹b and prove uniqueness; conversely, use the existence-and-uniqueness property for every b to infer full rank/invertibility; distinguish a single right-hand side from the universal statement.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "single versus every right-hand side",
+                "existence only versus uniqueness",
+                "square matrix order",
+                "homogeneous versus nonhomogeneous system"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C017",
+            "concept": "Non-Singular Matrix",
+            "qp_id": "QP007",
+            "question_possibility": "Assess preservation of non-singularity under specified elementary row or column operations",
+            "archetype_id": "U2_CH8_ST1_AR00047",
+            "archetype": "Track nonsingularity under elementary row and column operations",
+            "assessment_mechanism": "Represent each elementary row/column operation as multiplication by an invertible elementary matrix, then infer preservation of rank and nonsingularity and track determinant changes.",
+            "reasoning_path": "Express the transformed matrix as E A or A E with E invertible; use rank(EA)=rank(A) and det(E)≠0; classify row swap, nonzero scaling and row addition; extend to sequences of operations and verify the matrix remains square.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "row versus column operation",
+                "operation type",
+                "sequence length",
+                "determinant factor",
+                "rank/inverse viewpoint"
             ]
         }
     ]
