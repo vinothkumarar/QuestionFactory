@@ -63,3 +63,20 @@ The next five QPs were reviewed and retained as `FOUNDATION_ONLY`:
 No additional archetypes were added. The two Batch 001 candidate IDs remain unchanged. The catalogue now contains 10 explicit QP dispositions and 2 draft archetypes; the remaining 340 QPs are untouched.
 
 **Next:** review QP011–QP015 against the two existing candidate mechanisms and preserve zero-archetype dispositions where no distinct reasoning is justified.
+
+
+## Batch 003 disposition extension — QP011–QP015
+
+The next five source possibilities were reviewed and retained as `FOUNDATION_ONLY`:
+
+| QP | Source mechanism | Disposition rationale |
+|---|---|---|
+| QP011 | Inclusion hierarchy of integer/rational/real/complex matrix sets | Direct scalar-set hierarchy applied entrywise |
+| QP012 | Count independent real parameters in an m×n real matrix | Direct count of mn independently selectable entries |
+| QP013 | Interpret real-matrix set notation | Notation recognition |
+| C002 / QP001 | Classify real versus complex matrix from entries | Direct definition-level recognition |
+| C002 / QP002 | Compute the complex conjugate of a matrix | Direct entrywise operation |
+
+No additional archetypes were added. The catalogue now has 15 explicit dispositions and retains the two draft candidate archetypes from QP002 and QP005. The remaining 335 source QPs are untouched.
+
+**Next:** review C002 / QP003–QP007. Check whether Hermitian, skew-Hermitian and unitary conditions create genuinely distinct mechanisms before adding any archetype.
