@@ -273,3 +273,10 @@ A second targeted recovery pass was performed after the initial audit:
 - The Library materials corroborate fragments and the authority hierarchy, but expressly state that the precise final approved version and complete rule text must be checked against the canonical source. They do not authorize promoting the recovered fragments to a new freeze.
 
 **Recovery disposition:** The canonical v1.5 artifact remains NOT RECOVERED after the second pass. This is a real P1 blocker, not a missing-document assumption. Preserve the provisional crosswalk and current rule namespaces; do not silently reconstruct or freeze a candidate. If the original file is later supplied or located, compare it line-by-line before changing the authority status.
+
+
+## 9. Additional Git branch/path recovery — 2026-11-17
+
+The GitHub repository currently exposes four branches: `main`, `feature/dual-question-engine-v1`, `docs/exam-hub-master-consolidation` and `recovery-test`. Exact-title and rule-fragment code searches returned no v1.5 artifact. In addition to the default-branch search, five likely canonical paths (including `Blueprint/MASTER_CONSOLIDATED_FROZEN_BLUEPRINT_v1.5.md`, `Blueprint/MASTER_BLUEPRINT_v1.5.md`, `Blueprint/00_MASTER_BLUEPRINT.md` and likely docs locations) were tested against `main`, `docs/exam-hub-master-consolidation` and `recovery-test`; none resolved. The current feature branch's known blueprint files remain the conflicting working/legacy files already audited.
+
+This expands the repository search but does not prove that no historical commit, external drive or prior user-uploaded copy contains the canonical file. No complete v1.5 artifact has been recovered. **User input is now required to identify/upload the original approved 18-part v1.5 file, or to explicitly authorize a separately versioned recovery candidate.** Until then, no canonical v1.5 freeze is declared.
