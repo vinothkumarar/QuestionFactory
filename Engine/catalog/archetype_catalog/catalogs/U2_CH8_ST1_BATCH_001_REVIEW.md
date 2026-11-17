@@ -946,3 +946,25 @@ New draft candidates:
 Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 250 dispositions and 74 draft archetypes; 100 source QPs remain untouched.
+
+
+## Batch 051 — permutation composition, order, powers and symmetry (global QP251–QP255)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C021 / QP008 | ELIGIBLE | Permutation-matrix multiplication composes the underlying permutations |
+| C021 / QP009 | ELIGIBLE | Permutation order is the LCM of disjoint cycle lengths |
+| C021 / QP010 | ELIGIBLE | Powers act by modular shifts within disjoint cycles |
+| C021 / QP011 | FOUNDATION_ONLY | Trace directly counts fixed points |
+| C021 / QP012 | ELIGIBLE | Symmetric permutation matrices correspond exactly to self-inverse permutations with cycles of length 1 or 2 |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00075`: Compose permutations through permutation-matrix multiplication.
+- `U2_CH8_ST1_AR00076`: Determine permutation order from disjoint cycle lengths.
+- `U2_CH8_ST1_AR00077`: Compute powers and periodicity of a permutation matrix.
+- `U2_CH8_ST1_AR00078`: Characterize symmetric permutation matrices through involutions.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 255 dispositions and 78 draft archetypes; 95 source QPs remain untouched.
