@@ -719,6 +719,36 @@
             "qp_id": "QP005",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Products, powers and polynomial expressions preserve upper-triangular form by the standard zero-pattern multiplication rule; this is a direct structural property."
+        },
+        {
+            "concept_id": "C011",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "If a matrix is both upper and lower triangular, all off-diagonal entries vanish and it is diagonal; transpose simply swaps the triangular direction."
+        },
+        {
+            "concept_id": "C011",
+            "qp_id": "QP007",
+            "disposition": "ELIGIBLE",
+            "rationale": "An upper-triangular matrix is invertible exactly when every diagonal entry is nonzero, and its inverse remains upper triangular; this is a reusable structure-plus-invertibility mechanism."
+        },
+        {
+            "concept_id": "C011",
+            "qp_id": "QP008",
+            "disposition": "ELIGIBLE",
+            "rationale": "A strictly upper-triangular n×n matrix is nilpotent with a finite power bound derived from the zero pattern; proving the bound by tracking index paths is a distinct reasoning mechanism."
+        },
+        {
+            "concept_id": "C011",
+            "qp_id": "QP009",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The number of independent entries in an upper-triangular n×n matrix is a direct count of diagonal and above-diagonal positions."
+        },
+        {
+            "concept_id": "C011",
+            "qp_id": "QP010",
+            "disposition": "REQUIRES_REVIEW",
+            "rationale": "The source does not specify which elementary row/column operations are in scope. Different operations preserve or destroy triangularity differently; an exact operation list is needed."
         }
     ],
     "archetypes": [
@@ -1235,6 +1265,64 @@
                 "number of below-diagonal constraints",
                 "independent/dependent equations",
                 "symbolic versus numeric entries"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C011",
+            "concept": "Upper Triangular Matrix",
+            "qp_id": "QP007",
+            "question_possibility": "Determine invertibility conditions for an upper triangular matrix and the triangularity of its inverse",
+            "archetype_id": "U2_CH8_ST1_AR00019",
+            "archetype": "Infer invertibility and inverse structure of an upper-triangular matrix",
+            "assessment_mechanism": "Use the diagonal entries to determine invertibility of an upper-triangular matrix and establish that its inverse, when it exists, retains upper-triangular form.",
+            "reasoning_path": "Use det(T) as the product of diagonal entries; conclude invertibility iff every diagonal entry is nonzero; solve T X=I or use triangular back-substitution to establish the inverse's upper-triangular structure; verify the result.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "zero/nonzero diagonal pattern",
+                "parameterized diagonal entries",
+                "inverse structure",
+                "determinant versus back-substitution"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C011",
+            "concept": "Upper Triangular Matrix",
+            "qp_id": "QP008",
+            "question_possibility": "Establish nilpotency and power bounds for strictly upper triangular matrices",
+            "archetype_id": "U2_CH8_ST1_AR00020",
+            "archetype": "Establish nilpotency bounds for strictly upper-triangular matrices",
+            "assessment_mechanism": "Use the strictly upper-triangular zero pattern to show that products shift nonzero entries progressively above the diagonal, yielding a finite power at which the matrix must vanish.",
+            "reasoning_path": "Track the possible index positions contributing to entries of N^k; each multiplication requires a strictly increasing index chain; show no chain of length n exists in an n×n matrix; conclude N^n=O and check whether a smaller bound follows from additional structure.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "power exponent",
+                "sparsity pattern",
+                "bandwidth",
+                "additional zero constraints"
             ]
         }
     ]
