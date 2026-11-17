@@ -1,0 +1,119 @@
+{
+    "qp_dispositions": [
+        {
+            "concept_id": "C001",
+            "qp_id": "U1_CH1_ST1_QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Definition recall or direct membership in N is prerequisite classification; no distinct multi-step JEE reasoning mechanism is justified within N/W/Z membership alone."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "U1_CH1_ST1_QP002",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Definition recall or direct membership in W is prerequisite classification; no distinct multi-step JEE reasoning mechanism is justified within N/W/Z membership alone."
+        },
+        {
+            "concept_id": "C003",
+            "qp_id": "U1_CH1_ST1_QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Definition recall or direct membership in Z is prerequisite classification; no distinct multi-step JEE reasoning mechanism is justified within N/W/Z membership alone."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "U1_CH1_ST1_QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Definition recall or direct membership in N is prerequisite classification; no distinct multi-step JEE reasoning mechanism is justified within N/W/Z membership alone."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "U1_CH1_ST1_QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Definition recall or direct membership in W is prerequisite classification; no distinct multi-step JEE reasoning mechanism is justified within N/W/Z membership alone."
+        },
+        {
+            "concept_id": "C003",
+            "qp_id": "U1_CH1_ST1_QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Definition recall or direct membership in Z is prerequisite classification; no distinct multi-step JEE reasoning mechanism is justified within N/W/Z membership alone."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "U1_CH1_ST1_QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Definition recall or direct membership in N is prerequisite classification; no distinct multi-step JEE reasoning mechanism is justified within N/W/Z membership alone."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "U1_CH1_ST1_QP008",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Definition recall or direct membership in W is prerequisite classification; no distinct multi-step JEE reasoning mechanism is justified within N/W/Z membership alone."
+        },
+        {
+            "concept_id": "C003",
+            "qp_id": "U1_CH1_ST1_QP009",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Definition recall or direct membership in Z is prerequisite classification; no distinct multi-step JEE reasoning mechanism is justified within N/W/Z membership alone."
+        },
+        {
+            "concept_id": "C004",
+            "qp_id": "U1_CH1_ST1_QP010",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Classification across N, W and Z reduces to sign, integrality and the declared set convention; this remains a foundation diagnostic rather than a distinct JEE archetype."
+        },
+        {
+            "concept_id": "C004",
+            "qp_id": "U1_CH1_ST1_QP011",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Classification across N, W and Z reduces to sign, integrality and the declared set convention; this remains a foundation diagnostic rather than a distinct JEE archetype."
+        },
+        {
+            "concept_id": "C004",
+            "qp_id": "U1_CH1_ST1_QP012",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Classification across N, W and Z reduces to sign, integrality and the declared set convention; this remains a foundation diagnostic rather than a distinct JEE archetype."
+        },
+        {
+            "concept_id": "C005",
+            "qp_id": "U1_CH1_ST1_QP013",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Zero/sign membership checks are boundary diagnostics for the definitions of N, W and Z; they do not establish a standalone JEE archetype."
+        },
+        {
+            "concept_id": "C005",
+            "qp_id": "U1_CH1_ST1_QP014",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Zero/sign membership checks are boundary diagnostics for the definitions of N, W and Z; they do not establish a standalone JEE archetype."
+        },
+        {
+            "concept_id": "C005",
+            "qp_id": "U1_CH1_ST1_QP015",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Zero/sign membership checks are boundary diagnostics for the definitions of N, W and Z; they do not establish a standalone JEE archetype."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "U1_CH1_ST1_QP017",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Arithmetic evaluation followed by N/W/Z classification is routine unless a separate approved mathematical mechanism is introduced; do not import closure or divisibility topics."
+        },
+        {
+            "concept_id": "C008",
+            "qp_id": "U1_CH1_ST1_QP018",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Statement evaluation and error diagnosis remain elementary definition checks within the locked N/W/Z scope; no distinct JEE mechanism is justified."
+        },
+        {
+            "concept_id": "C008",
+            "qp_id": "U1_CH1_ST1_QP019",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Statement evaluation and error diagnosis remain elementary definition checks within the locked N/W/Z scope; no distinct JEE mechanism is justified."
+        },
+        {
+            "concept_id": "C008",
+            "qp_id": "U1_CH1_ST1_QP020",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Statement evaluation and error diagnosis remain elementary definition checks within the locked N/W/Z scope; no distinct JEE mechanism is justified."
+        }
+    ],
+    "archetypes": []
+}
