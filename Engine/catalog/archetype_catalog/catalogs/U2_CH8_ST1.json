@@ -509,6 +509,36 @@
             "qp_id": "QP007",
             "disposition": "ELIGIBLE",
             "rationale": "Left and right multiplication by a diagonal matrix scale rows and columns respectively; reasoning about the entry transformation is a distinct reusable mechanism."
+        },
+        {
+            "concept_id": "C008",
+            "qp_id": "QP008",
+            "disposition": "ELIGIBLE",
+            "rationale": "Solving D²=D, D^k=I or D^m=O entrywise produces simultaneous scalar equations on diagonal entries; this is a reusable equation-constraint mechanism."
+        },
+        {
+            "concept_id": "C008",
+            "qp_id": "QP009",
+            "disposition": "ELIGIBLE",
+            "rationale": "A diagonal matrix that commutes with every matrix must have equal diagonal entries, so it is scalar. Proving this universal property by testing off-diagonal matrix units is a distinct reasoning mechanism."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Recognizing a scalar matrix from its diagonal form is direct definition-level classification."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP002",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Distinguishing scalar, diagonal and identity matrices is direct comparison of definitions and remains foundation content."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP003",
+            "disposition": "ELIGIBLE",
+            "rationale": "Imposing the scalar-matrix form on a parameterized matrix requires all off-diagonal entries to vanish and all diagonal entries to agree; this is a reusable simultaneous-constraint mechanism."
         }
     ],
     "archetypes": [
@@ -880,6 +910,93 @@
                 "zero/nonzero diagonal entries",
                 "parameterized scale factors",
                 "target-entry constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C008",
+            "concept": "Diagonal Matrix",
+            "qp_id": "QP008",
+            "question_possibility": "Determine conditions on diagonal entries for a diagonal matrix to satisfy a given matrix equation (e.g., D^2=D, D^k=I, D^m=0)",
+            "archetype_id": "U2_CH8_ST1_AR00014",
+            "archetype": "Solve diagonal-entry constraints from a diagonal matrix equation",
+            "assessment_mechanism": "Reduce a matrix equation involving a diagonal matrix to independent scalar equations on its diagonal entries, then solve the resulting admissible-value constraints.",
+            "reasoning_path": "Write D=diag(d1,...,dn); apply the stated matrix equation entrywise; solve the scalar equation for each diagonal entry; account for exponent and invertibility restrictions; assemble and verify all admissible diagonal matrices.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix equation type",
+                "exponent values",
+                "real versus complex diagonal entries",
+                "number of distinct diagonal values",
+                "invertibility requirement"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C008",
+            "concept": "Diagonal Matrix",
+            "qp_id": "QP009",
+            "question_possibility": "Determine conditions under which a diagonal matrix commutes with every matrix",
+            "archetype_id": "U2_CH8_ST1_AR00015",
+            "archetype": "Characterize diagonal matrices that commute with every matrix",
+            "assessment_mechanism": "Use universal commutativity with arbitrary matrices to derive equality constraints among the diagonal entries, establishing that the diagonal matrix must be scalar.",
+            "reasoning_path": "Let D=diag(d1,...,dn); use a matrix with a single off-diagonal nonzero entry as a test matrix; compare DM and MD; force each pair of diagonal entries to agree; conclude D is scalar and verify the converse.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "field of entries",
+                "universal versus restricted commutation",
+                "test matrix choice",
+                "parameterized diagonal entries"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C009",
+            "concept": "Scalar Matrix",
+            "qp_id": "QP003",
+            "question_possibility": "Determine parameter conditions under which a given matrix is a scalar matrix",
+            "archetype_id": "U2_CH8_ST1_AR00016",
+            "archetype": "Derive scalar-matrix conditions from a parameterized matrix",
+            "assessment_mechanism": "Translate the scalar-matrix requirement into zero off-diagonal entries and equality of all diagonal entries, then solve the coupled parameter constraints.",
+            "reasoning_path": "Identify off-diagonal positions and diagonal positions; set every off-diagonal entry to zero; equate all diagonal entries to a common scalar; solve the resulting system; verify the matrix is a scalar multiple of identity.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "number of parameters",
+                "off-diagonal constraints",
+                "diagonal equality constraints",
+                "independent/dependent equations"
             ]
         }
     ]
