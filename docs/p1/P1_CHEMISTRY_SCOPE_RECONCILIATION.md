@@ -118,3 +118,8 @@ Do not disable or delete these internal records automatically. Keep them Advance
 ## 2026-11-17 subtopic review update
 
 The mapping register now has provisional dispositions for 50 Chemistry subtopics across C4, C12, C14, C15, C20, C27, C28 and C29. This is not full Chemistry approval: 210 of 260 Chemistry subtopics remain unreviewed. The cross-subject placement of C4 gas/kinetic topics and surface tension/viscosity is explicitly recorded, and C20_CH1_ST9 Chromatographic Methods is provisionally mapped to Main Unit 13 while retaining its existing ID under C20.
+
+
+## 2026-11-17 subtopic review update
+
+The mapping register now contains a provisional Main 2027 and Advanced 2026 disposition for all 260 existing Chemistry subtopic rows. Current status: Main — 182 provisional mapped, 18 partial, 60 no direct explicit scope; Advanced — 246 provisional mapped, 6 partial, 8 no direct explicit scope. These are evidence-backed provisional dispositions, not final academic approval. The empty C27_CH3 Vitamins chapter remains a gap outside the 260-row subtopic register. The Main Unit 13 chromatography cross-unit mapping and Main Unit 20 Practical Chemistry gap remain explicitly recorded.
