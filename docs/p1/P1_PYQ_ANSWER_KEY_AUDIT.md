@@ -66,7 +66,7 @@ The official JEE Advanced 2026 Information Brochure states:
 
 Official brochure: https://jeeadv.ac.in/documents/IBEnglish_2026.pdf
 
-The official 2027 site archive currently exposes question-paper links through 2025, and a direct 2026 final answer-key PDF URL was not recovered in this audit. The 2026 Advanced key source and exact Paper 1/Paper 2 matching remain pending.
+The official 2026 Advanced question papers and both official final answer-key PDFs have now been located. Paper 1 Q3 and Paper 2 Q1 are independently matched and solved; the earlier statement that the final-key URLs were not recovered is superseded by the evidence below.
 
 ## Important scope separation
 
@@ -143,3 +143,23 @@ Paper 2's official final-key URL is located, but no Paper 2 question-level match
 
 
 Paper 2 Q1 is also independently verified: wire resistance `R=L/(sigma*A)=1 ohm`, total current `I=1 A`, carrier density `n=6×10^28 m^-3`, and drift velocity `vd=0.2083 mm/s`, matching option C and the official Paper 2 final key. Evidence is stored as `JEE_ADVANCED_2026_P2_PHY_Q1` in the P1 evidence register.
+
+
+## 2026-11-17 — Session-level answer-key linkage
+
+Both NTA final answer-key PDFs were opened and their page headers inspected. They provide date/shift-level subject question-ID and answer-option tables:
+
+| Main session | Exam dates and shifts represented | Official final answer-key URL | Scope of this linkage |
+|---|---|---|---|
+| Session I | 21, 22, 23, 24 and 28 January 2026; Shift I and Shift II on each date (10 shifts) | https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/02/20260216459398513.pdf | Official key source identified for all 10 January Main records |
+| Session II | 2, 4, 5 and 6 April 2026; Shift I and Shift II; 8 April 2026 Shift II (9 shifts) | https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/20260420409057044.pdf | Official key source identified for all 9 April Main records |
+
+The Session I PDF identifies each of the ten January date/shift combinations in its page headers. The Session II PDF identifies the nine April date/shift combinations, with the India and outside-India centre tables separated within the document. This closes **session-level official answer-key source identification** for all 19 Main 2026 shifts. It does not mean every question ID has been reconciled against the matching question paper.
+
+For Advanced 2026, the official final-key sources are:
+- Paper 1: https://jeeadv.ac.in/documents/p1_solutions_final.pdf — Paper 1 Mathematics Q3 is matched and independently solved.
+- Paper 2: https://jeeadv.ac.in/documents/p2_solutions_final.pdf — Paper 2 Physics Q1 is matched and independently solved.
+
+A derived 21-record linkage register is stored at `docs/p1/P1_2026_SESSION_KEY_LINKAGE.csv`. It links each of the 19 Main shift records and two Advanced papers to the relevant official key URL, preserves question-paper URL status, and separately records question-level match status. The ten January Main question-paper URLs remain absent from the tracker. The 11 accessible question-paper URLs remain URL-access-only. All local PDF byte and SHA-256 fields remain `NO` / `PENDING`.
+
+**Important distinction:** Official answer-key source linked at session/paper level ≠ answer-key question matched ≠ answer independently verified. Only four question-level samples are currently matched and independently solved.
