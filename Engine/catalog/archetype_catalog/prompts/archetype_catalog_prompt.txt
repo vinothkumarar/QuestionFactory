@@ -682,215 +682,144 @@ the catalogue size.
 
 Return ONLY valid JSON.
 
-Use this structure:
+Return a FLAT JSON ARRAY. Each item represents exactly ONE
+Archetype. Do not return a wrapper object, nested QP object,
+or nested archetypes array.
+
+Every record MUST contain these fields:
 
 {
-  "qp_id": "QP001",
-  "qp": "Exact supplied Question Possibility",
-
-  "archetypes": [
-    {
-      "archetype_id": "AR00001",
-
-      "archetype": "Concise description of the distinct
-      assessment/reasoning structure",
-
-      "assessment_mechanism":
-        "What the student must actually reason through",
-
-      "reasoning_path":
-        "Concise description of the reasoning pathway",
-
-      "exam_fit": [
-        "JEE_MAIN",
-        "JEE_ADVANCED"
-      ],
-
-      "difficulty_potential": [
-        "MODERATE",
-        "HARD",
-        "ELITE"
-      ],
-
-      "variation_capacity":
-        "LIMITED | MODERATE | HIGH",
-
-      "variation_dimensions": [
-        "Meaningful dimension 1",
-        "Meaningful dimension 2"
-      ]
-    }
-  ]
+  "subject": "Exact supplied subject",
+  "unit": "Exact supplied unit",
+  "chapter": "Exact supplied chapter",
+  "subtopic": "Exact supplied subtopic",
+  "concept_id": "Exact supplied concept_id",
+  "concept": "Exact supplied concept",
+  "qp_id": "Exact supplied QP ID",
+  "question_possibility": "Exact supplied Question Possibility",
+  "archetype_id": "",
+  "archetype": "Reusable assessment pattern",
+  "assessment_mechanism": "What the student must reason through",
+  "reasoning_path": "The essential reasoning sequence",
+  "exam_fit": ["JEE_MAIN"],
+  "difficulty_potential": ["FOUNDATION", "MODERATE"],
+  "variation_capacity": "LIMITED | MODERATE | HIGH",
+  "variation_dimensions": ["Meaningful dimension 1"]
 }
+
+OUTPUT RULES
+
+• Return one flat array containing all accepted Archetype records.
+• Copy subject, unit, chapter, subtopic, concept_id, concept,
+  qp_id and question_possibility exactly from supplied context.
+• Every supplied QP ID must appear in at least one record unless
+  it is genuinely invalid; explain no exceptions in JSON because
+  output must remain machine-readable.
+• archetype_id MUST be the empty string. The Factory assigns
+  permanent IDs after validation. Never invent or reuse IDs.
+• assessment_mechanism and reasoning_path must be non-empty.
+• exam_fit must be a non-empty array containing only
+  JEE_MAIN and/or JEE_ADVANCED.
+• difficulty_potential must be a non-empty array containing only
+  FOUNDATION, MODERATE, HARD and/or ELITE.
+• variation_capacity must be exactly LIMITED, MODERATE or HIGH.
+• variation_dimensions must be a non-empty array of meaningful
+  instance variations that preserve the same reasoning pathway.
+• Do not add unlisted fields.
+• Do not omit any required field.
+• Do not use null values.
+• No markdown, comments, explanations or code fences.
 
 ============================================================
 21. FIELD DEFINITIONS
 ============================================================
 
+subject, unit, chapter, subtopic, concept_id, concept
 ------------------------------------------------------------
+
+Copy these context values exactly. Do not invent, normalize,
+shorten or reinterpret them.
+
 qp_id
 ------------------------------------------------------------
 
 Must exactly match the supplied QP ID.
 
-------------------------------------------------------------
-qp
+question_possibility
 ------------------------------------------------------------
 
-Must represent the supplied Question Possibility accurately.
+Must exactly match the supplied Question Possibility text.
 
-Do not rewrite it into a different academic possibility.
-
-------------------------------------------------------------
 archetype_id
 ------------------------------------------------------------
 
-Assign a unique sequential ID.
+Always return an empty string. The Factory owns permanent
+identity assignment and will populate this field after
+structural validation.
 
-Do not create multiple IDs for superficial variations.
-
-------------------------------------------------------------
 archetype
 ------------------------------------------------------------
 
-Describe the distinct question structure, not a sample
-question.
+Describe one reusable assessment/reasoning structure, not a
+sample question and not a topic or learning outcome.
 
-Do NOT write an actual question.
-
-------------------------------------------------------------
 assessment_mechanism
 ------------------------------------------------------------
 
-Explain what academic operation the student is being asked
-to perform.
+Explain the actual academic operation required from the student.
 
-Examples:
-
-    compare competing energetic factors
-
-    infer an unknown quantity from successive measurements
-
-    diagnose an invalid application of a governing principle
-
-------------------------------------------------------------
 reasoning_path
 ------------------------------------------------------------
 
-Describe the essential reasoning pathway.
+Describe the essential reasoning sequence. This field is used
+for distinctness review and downstream manufacturing.
 
-This field is particularly important for determining whether
-two Archetypes are genuinely distinct.
-
-------------------------------------------------------------
 exam_fit
 ------------------------------------------------------------
 
-Use only:
+Use one or both of JEE_MAIN and JEE_ADVANCED. Include only exams
+for which the pattern is genuinely suitable.
 
-    JEE_MAIN
-    JEE_ADVANCED
-
-Include every exam for which the Archetype is legitimately
-appropriate.
-
-------------------------------------------------------------
 difficulty_potential
 ------------------------------------------------------------
 
-Use one or more of:
+Use one or more of FOUNDATION, MODERATE, HARD and ELITE.
+Difficulty must arise from reasoning, not cosmetic complexity.
 
-    FOUNDATION
-    MODERATE
-    HARD
-    ELITE
-
-Do not assign ELITE unless the Archetype can naturally support
-that level of reasoning.
-
-------------------------------------------------------------
 variation_capacity
 ------------------------------------------------------------
 
-Use exactly one:
+Use exactly LIMITED, MODERATE or HIGH. This is qualitative
+manufacturing capacity, not a question count.
 
-    LIMITED
-    MODERATE
-    HIGH
-
-This describes qualitative manufacturing capacity.
-
-It is NOT a number of questions.
-
-------------------------------------------------------------
 variation_dimensions
 ------------------------------------------------------------
 
-List only meaningful dimensions that can create materially
-different question instances while preserving the same
-Archetype.
+List meaningful dimensions that can produce distinct question
+instances while preserving the same Archetype.
 
 ============================================================
 22. FINAL INTEGRITY RULES
 ============================================================
 
-The final catalogue must satisfy ALL of the following:
+Before returning the JSON array, verify every record:
 
-✓ Complete academic coverage
-✓ JEE Main awareness
-✓ JEE Advanced awareness
-✓ No superficial Archetype duplication
-✓ No numerical-only Archetypes
-✓ No wording-only Archetypes
-✓ No cosmetic Archetypes
-✓ No accidental QP duplication
-✓ No cross-QP contamination
-✓ Clear reasoning pathways
-✓ Realistic difficulty potential
-✓ Realistic variation capacity
-✓ Meaningful variation dimensions
-✓ No artificial target Archetype count
-✓ No artificial target question count
+1. All required fields exist and have the correct type.
+2. All copied context values are exact.
+3. Every supplied QP is represented.
+4. The Archetype remains inside its QP boundary.
+5. It is reusable and academically meaningful.
+6. It is not direct recall or trivial recognition when being
+   proposed for the JEE catalogue.
+7. It is materially distinct from every other accepted record.
+8. exam_fit and difficulty_potential use only allowed values.
+9. variation_capacity uses an allowed value.
+10. variation_dimensions are meaningful and non-empty.
+11. archetype_id is the empty string.
+12. The result is a flat JSON array and nothing else.
 
-The catalogue is a POSSIBILITY SPACE.
+The catalogue is an academically justified possibility space,
+not a target count. Prevent both over-generation and
+under-discovery.
 
-It is not a question bank.
-
-It is not a list of question instances.
-
-It is not a list of numerical variants.
-
-============================================================
-23. FINAL SELF-CHECK BEFORE RETURNING JSON
-============================================================
-
-Before returning the final JSON:
-
-1. Confirm that every Archetype is materially distinct.
-2. Confirm that no Archetype exists only because numbers changed.
-3. Confirm that no Archetype exists only because elements/
-   entities changed.
-4. Confirm that no Archetype exists only because wording
-   changed.
-5. Confirm that important JEE Main assessment patterns
-   supported by the QP are represented.
-6. Confirm that important JEE Advanced reasoning patterns
-   supported by the QP are represented.
-7. Confirm that foundational possibilities are not falsely
-   labelled Elite.
-8. Confirm that strong analytical possibilities are not
-   artificially downgraded.
-9. Confirm that variation_capacity is realistic.
-10. Confirm that variation_dimensions describe genuine
-    academic variation.
-11. Confirm that question instances would not become repetitive
-    if multiple questions were later manufactured.
-12. Confirm that the final result represents the COMPLETE
-    academically meaningful Archetype space.
-
-Return ONLY the JSON object.
-
-No explanation.
-No commentary.
-No sample questions.
-No markdown.
+Return ONLY the JSON array.
