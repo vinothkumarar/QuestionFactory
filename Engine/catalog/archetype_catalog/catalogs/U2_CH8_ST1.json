@@ -629,6 +629,36 @@
             "qp_id": "QP001",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Identity-matrix recognition is direct comparison with the diagonal ones and off-diagonal zeros."
+        },
+        {
+            "concept_id": "C010",
+            "qp_id": "QP002",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Constructing I_n is direct notation and definition application."
+        },
+        {
+            "concept_id": "C010",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Choosing compatible identity-matrix orders for left/right multiplication follows directly from dimensions; this remains foundation-level."
+        },
+        {
+            "concept_id": "C010",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Simplification using the identity property is direct algebraic substitution."
+        },
+        {
+            "concept_id": "C010",
+            "qp_id": "QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "For I_n, determinant, trace and rank are direct order-based formulas."
+        },
+        {
+            "concept_id": "C010",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The identity matrix satisfies standard properties by direct definition; classification is a foundation check."
         }
     ],
     "archetypes": [
