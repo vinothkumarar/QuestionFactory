@@ -1032,3 +1032,24 @@ New draft candidates:
 Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 270 dispositions and 88 draft archetypes; 80 source QPs remain untouched. Fourteen source possibilities are held for review.
+
+
+## Batch 055 — elementary-operation commutativity and combined transformations (global QP271–QP275)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C022 / QP011 | ELIGIBLE | Commutativity depends on operation types, indices and order |
+| C022 / QP012 | FOUNDATION_ONLY | A fixed operation uniquely determines its elementary matrix |
+| C022 / QP013 | ELIGIBLE | Reverse-engineer whether a matrix represents exactly one elementary operation |
+| C022 / QP014 | ELIGIBLE | Pre/post multiplication combines row and column transformations |
+| C023 / QP001 | FOUNDATION_ONLY | Direct Hermitian definition check |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00089`: Classify when two elementary matrices commute.
+- `U2_CH8_ST1_AR00090`: Recognize whether a transformation is a single elementary operation.
+- `U2_CH8_ST1_AR00091`: Track combined row and column transformations by pre/post multiplication.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 275 dispositions and 91 draft archetypes; 75 source QPs remain untouched.
