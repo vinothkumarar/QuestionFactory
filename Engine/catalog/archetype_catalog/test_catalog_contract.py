@@ -105,6 +105,53 @@ class ArchetypeCatalogContractTests(unittest.TestCase):
         self.assertIn("Concept: Matrix Addition", prompt)
         self.assertIn("Never copy context from another QP", prompt)
 
+    def test_exporter_preserves_zero_archetype_qp_dispositions(self) -> None:
+        source = {
+            "subject": "Mathematics",
+            "unit": "U1",
+            "chapter": "CH1",
+            "subtopic": "Sets",
+            "concept_id": "C001",
+            "concept": "Basic set concepts",
+            "qp_id": "QP001",
+            "question_possibility": "Recognize a set",
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            json_file = root / "catalog.json"
+            archetype_csv = root / "archetypes.csv"
+            disposition_csv = root / "dispositions.csv"
+            json_file.write_text(
+                json.dumps({
+                    "qp_dispositions": [{
+                        "concept_id": "C001",
+                        "qp_id": "QP001",
+                        "disposition": "FOUNDATION_ONLY",
+                        "rationale": "Prerequisite knowledge only.",
+                    }],
+                    "archetypes": [],
+                }),
+                encoding="utf-8",
+            )
+            exporter = ArchetypeCatalogCSVExporter()
+            exporter.export(json_file=json_file, csv_file=archetype_csv)
+            exporter.export_dispositions(
+                json_file=json_file,
+                csv_file=disposition_csv,
+                source_qps=[source],
+            )
+            with archetype_csv.open(newline="", encoding="utf-8") as handle:
+                archetype_rows = list(csv.DictReader(handle))
+            with disposition_csv.open(newline="", encoding="utf-8") as handle:
+                disposition_rows = list(csv.DictReader(handle))
+
+        self.assertEqual(archetype_rows, [])
+        self.assertEqual(len(disposition_rows), 1)
+        self.assertEqual(
+            disposition_rows[0]["disposition"],
+            "FOUNDATION_ONLY",
+        )
+
     def test_csv_export_preserves_metadata_and_default_gate(self) -> None:
         record = valid_record()
         with tempfile.TemporaryDirectory() as directory:
