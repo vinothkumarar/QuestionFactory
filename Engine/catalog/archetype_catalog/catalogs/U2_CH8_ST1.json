@@ -1349,6 +1349,36 @@
             "qp_id": "QP010",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "The nilpotency index is bounded by matrix order and can be sharpened by bandwidth/zero-pattern information; this overlaps the existing nilpotency-bound mechanism."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP011",
+            "disposition": "ELIGIBLE",
+            "rationale": "Nilpotency forces rank(N^k) to decrease until zero, and the index gives a sharp vanishing threshold; relating rank/nullity across powers is a reusable invariant mechanism."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP012",
+            "disposition": "ELIGIBLE",
+            "rationale": "For block triangular matrices, nilpotency is governed by diagonal blocks, while off-diagonal block paths affect the index bound; this is a distinct block-structure mechanism."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP013",
+            "disposition": "REQUIRES_REVIEW",
+            "rationale": "Sums/products of nilpotent matrices require specific commutation or compatibility assumptions; the source groups several operations without defining them."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP014",
+            "disposition": "ELIGIBLE",
+            "rationale": "A nilpotent n×n matrix of index k exists exactly for 1≤k≤n; Jordan nilpotent blocks give a constructive existence method."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP015",
+            "disposition": "ELIGIBLE",
+            "rationale": "For nilpotent N, p(N) is invertible exactly when p(0)≠0; factor the constant term and invert the nilpotent remainder by a finite geometric series."
         }
     ],
     "archetypes": [
@@ -3079,6 +3109,122 @@
                 "matrix order",
                 "parameter-scaled N",
                 "finite-series truncation"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C019",
+            "concept": "Nilpotent Matrix",
+            "qp_id": "QP011",
+            "question_possibility": "Infer rank and nullity constraints for a nilpotent matrix and for its powers",
+            "archetype_id": "U2_CH8_ST1_AR00061",
+            "archetype": "Infer rank and nullity behavior of powers of a nilpotent matrix",
+            "assessment_mechanism": "Use the nilpotency index and nested images/kernels of powers to derive rank/nullity constraints and identify the first power at which rank becomes zero.",
+            "reasoning_path": "Use im(N^{k+1})⊆im(N^k) and ker(N^k)⊆ker(N^{k+1}); track nonincreasing ranks and nondecreasing nullities; use the nilpotency index to establish rank(N^{m})>0 before the index and rank zero at/after it; apply rank-nullity at each power.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "nilpotency index",
+                "rank sequence",
+                "nullity sequence",
+                "known rank of a power"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C019",
+            "concept": "Nilpotent Matrix",
+            "qp_id": "QP012",
+            "question_possibility": "Determine nilpotency and index bounds for block triangular matrices from their diagonal blocks",
+            "archetype_id": "U2_CH8_ST1_AR00062",
+            "archetype": "Determine nilpotency of block-triangular matrices from diagonal blocks",
+            "assessment_mechanism": "Analyze a block-triangular matrix through its diagonal blocks and block-path products to determine nilpotency and bound the nilpotency index.",
+            "reasoning_path": "Inspect the diagonal blocks; use the block-triangular spectrum/characteristic polynomial to test nilpotency; for index bounds, expand powers and track paths through off-diagonal blocks; combine the diagonal-block nilpotency bounds with the number of block transitions; verify the claimed bound.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of diagonal blocks",
+                "block sizes",
+                "diagonal-block indices",
+                "off-diagonal block pattern",
+                "upper versus lower block triangular"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C019",
+            "concept": "Nilpotent Matrix",
+            "qp_id": "QP014",
+            "question_possibility": "Establish existence of nilpotent matrices with prescribed size and index",
+            "archetype_id": "U2_CH8_ST1_AR00063",
+            "archetype": "Construct nilpotent matrices with a prescribed order and index",
+            "assessment_mechanism": "Use nilpotent Jordan blocks to construct an n×n nilpotent matrix of any admissible index k, and prove the necessary bound 1≤k≤n.",
+            "reasoning_path": "For a requested index k, choose the k×k nilpotent Jordan block with ones on the superdiagonal; take its direct sum with an (n−k)×(n−k) zero matrix; verify the kth power vanishes and the (k−1)th power is nonzero; state the admissibility bound.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "target nilpotency index",
+                "Jordan block sizes",
+                "number of blocks",
+                "explicit construction versus existence proof"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C019",
+            "concept": "Nilpotent Matrix",
+            "qp_id": "QP015",
+            "question_possibility": "Decide nilpotency or invertibility of p(N) for a polynomial p based on its constant term",
+            "archetype_id": "U2_CH8_ST1_AR00064",
+            "archetype": "Determine invertibility of p(N) from the constant term",
+            "assessment_mechanism": "Factor p(x)=p(0)+xq(x) and use nilpotency to determine whether p(N) is invertible, constructing the inverse as a finite geometric series when p(0) is nonzero.",
+            "reasoning_path": "Substitute N; write p(N)=p(0)I+Nq(N); if p(0)=0, p(N) is nilpotent and singular; if p(0)≠0, factor p(0) and invert I+Nq(N) by a finite geometric series because Nq(N) is nilpotent; verify the product.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "polynomial constant term",
+                "nilpotency index",
+                "polynomial degree",
+                "field of coefficients",
+                "explicit inverse versus invertibility decision"
             ]
         }
     ]
