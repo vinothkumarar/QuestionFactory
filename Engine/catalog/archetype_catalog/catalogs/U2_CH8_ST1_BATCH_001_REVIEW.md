@@ -133,3 +133,18 @@ All five possibilities were retained as `FOUNDATION_ONLY`:
 | C003 / QP002 | Row-matrix order/indexing constraints | Direct dimensional interpretation |
 
 No archetypes were added. The cumulative catalogue now contains 30 dispositions and retains 6 draft archetypes. The remaining 320 source QPs are untouched.
+
+
+## Batch 007 — row-matrix possibilities (global QP031–QP035)
+
+All five possibilities are retained as `FOUNDATION_ONLY`:
+
+| QP | Source mechanism | Disposition rationale |
+|---|---|---|
+| C003 / QP003 | Parameter conditions for row-matrix shape | Direct order constraint |
+| C003 / QP004 | Construct a row matrix | Direct representation |
+| C003 / QP005 | Row matrix also square/column | Definition-level 1×1 order check |
+| C003 / QP006 | Equality with a given row matrix | Direct order and entrywise equality |
+| C003 / QP007 | Addition/scalar-multiplication closure | Direct shape-preserving closure |
+
+No new archetypes were added. Cumulative status: 35 dispositions, 6 draft archetypes, and 315 source QPs not yet dispositioned.
