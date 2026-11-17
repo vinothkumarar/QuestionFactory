@@ -1139,6 +1139,36 @@
             "qp_id": "QP004",
             "disposition": "ELIGIBLE",
             "rationale": "Transpose, similarity and invertible elementary row/column operations preserve rank and hence singularity; distinguishing invariant operations from determinant scaling is a reusable transformation-invariance mechanism."
+        },
+        {
+            "concept_id": "C016",
+            "qp_id": "QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Determinant zero, non-invertibility, rank deficiency and row/column dependence are equivalent standard characterizations; direct recognition is foundation content."
+        },
+        {
+            "concept_id": "C016",
+            "qp_id": "QP006",
+            "disposition": "ELIGIBLE",
+            "rationale": "The adjugate's structure depends on rank: for nonsingular A it is invertible; for rank n−1 it is nonzero of rank one; for rank at most n−2 it is zero. This is a distinct rank-sensitive inference mechanism."
+        },
+        {
+            "concept_id": "C017",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Non-singularity recognition is a direct nonzero-determinant/invertibility check."
+        },
+        {
+            "concept_id": "C017",
+            "qp_id": "QP002",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Parameter conditions for non-singularity reduce to det(A(λ))≠0 and complement the existing determinant-zero parameter mechanism; no duplicate archetype is created."
+        },
+        {
+            "concept_id": "C017",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The equivalent characterizations of non-singularity are standard rank/determinant/inverse facts and remain foundation content."
         }
     ],
     "archetypes": [
@@ -2378,6 +2408,35 @@
                 "row versus column operations",
                 "invertibility of transformation matrices",
                 "rank and determinant viewpoints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C016",
+            "concept": "Singular Matrix",
+            "qp_id": "QP006",
+            "question_possibility": "Determine singularity relations between a matrix and its adjugate",
+            "archetype_id": "U2_CH8_ST1_AR00044",
+            "archetype": "Infer adjugate structure from the rank of a matrix",
+            "assessment_mechanism": "Use A·adj(A)=det(A)I together with rank conditions to determine whether the adjugate is invertible, rank one or the zero matrix.",
+            "reasoning_path": "Separate the nonsingular and singular cases; if rank(A)=n, use adj(A)=det(A)A⁻¹; if rank(A)=n−1, use the cofactor structure to establish a nonzero rank-one adjugate; if rank(A)≤n−2, all (n−1)-order minors vanish and adj(A)=O; account for the n=1 edge case explicitly.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "rank deficiency",
+                "nonsingular/rank n−1/rank ≤n−2 cases",
+                "adjugate invertibility",
+                "small-order edge cases"
             ]
         }
     ]
