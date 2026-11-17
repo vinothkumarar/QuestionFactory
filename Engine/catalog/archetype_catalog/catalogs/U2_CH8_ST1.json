@@ -29,6 +29,36 @@
             "qp_id": "QP005",
             "disposition": "ELIGIBLE",
             "rationale": "Determining when a linear combination of real matrices remains real can require constraints on complex scalar coefficients and matrix linear independence; this differs from imposing reality conditions on matrix entries themselves. Candidate only; validate against representative JEE questions before approval."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Transpose only reorders the entries of a real matrix, so realness is preserved directly. This is a definition-level closure property rather than a distinct JEE archetype."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "For a real matrix, entrywise conjugation leaves every entry unchanged and the conjugate transpose reduces to the transpose. The stated possibility is direct property recognition without an independent inference mechanism."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "QP008",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The inverse of an invertible real matrix is real, as follows from standard inverse/determinant or linear-system properties. The source possibility states a direct closure theorem and does not by itself define a distinct JEE archetype."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "QP009",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Polynomial and defined rational expressions with real coefficients preserve real entries under the stated operations. This is a direct closure/property check; a richer task would require a separately specified mechanism."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "QP010",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Trace, determinant, minors and cofactors of a real matrix are real by their definitions as sums and products of real entries. This is direct property application, not a distinct archetype."
         }
     ],
     "archetypes": [
