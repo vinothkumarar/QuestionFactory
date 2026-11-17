@@ -1012,3 +1012,23 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 265 dispositions and 86 draft archetypes; 85 source QPs remain untouched.
+
+
+## Batch 054 — elementary-matrix determinant, factorization and equivalence (global QP266–QP270)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C022 / QP006 | FOUNDATION_ONLY | Determinant of elementary matrices follows directly from operation type |
+| C022 / QP007 | ELIGIBLE | Gaussian elimination factors any invertible matrix into elementary matrices |
+| C022 / QP008 | ELIGIBLE | Row/column equivalence is represented by products of elementary matrices |
+| C022 / QP009 | REQUIRES_REVIEW | Minimal operation count lacks an explicit cost model and allowed operation set |
+| C022 / QP010 | REQUIRES_REVIEW | Product-is-elementary conditions need operation-type/index/order constraints |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00087`: Factor an invertible matrix into elementary matrices.
+- `U2_CH8_ST1_AR00088`: Characterize row and column equivalence through elementary matrices.
+
+Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 270 dispositions and 88 draft archetypes; 80 source QPs remain untouched. Fourteen source possibilities are held for review.
