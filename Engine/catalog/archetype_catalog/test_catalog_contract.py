@@ -44,6 +44,13 @@ class ArchetypeCatalogContractTests(unittest.TestCase):
         client = ArchetypeCatalogAIClient.__new__(ArchetypeCatalogAIClient)
         client._validate_records([valid_record()])
 
+    def test_ai_contract_rejects_unexpected_fields(self) -> None:
+        client = ArchetypeCatalogAIClient.__new__(ArchetypeCatalogAIClient)
+        record = valid_record()
+        record["unapproved_field"] = "unexpected"
+        with self.assertRaisesRegex(ValueError, "unexpected fields"):
+            client._validate_records([record])
+
     def test_ai_contract_rejects_ai_assigned_id(self) -> None:
         client = ArchetypeCatalogAIClient.__new__(ArchetypeCatalogAIClient)
         record = valid_record()
