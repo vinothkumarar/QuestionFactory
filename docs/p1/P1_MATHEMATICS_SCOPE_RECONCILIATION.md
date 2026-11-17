@@ -109,3 +109,8 @@ The same learning outcome must not be manufactured three times simply because th
 - The mathematics subtopic mapping rows for U1/U2/U9/U15 are recorded in `P1_TAXONOMY_MAPPING_REGISTER.csv`. They remain provisional pending academic review and full P1 acceptance.
 
 No production questions or taxonomy migrations are authorised by this document.
+
+
+## 2026-11-17 subtopic review update
+
+All 533 Mathematics subtopic rows now have a provisional Main 2027 and Advanced 2026 disposition in the mapping register. Current status: Main — 197 provisional mapped, 104 partial, 232 no direct explicit scope; Advanced — 247 provisional mapped, 96 partial, 190 no direct explicit scope. The review includes chapter-level provisional dispositions for U3–U8 and U10–U14, with subtopic-specific overrides for clear scope boundaries. All rows remain `PENDING_INDEPENDENT_REVIEW`; the crosswalk is not final academic approval.
