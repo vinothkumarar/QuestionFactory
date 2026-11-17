@@ -1559,6 +1559,36 @@
             "qp_id": "QP017",
             "disposition": "ELIGIBLE",
             "rationale": "Permutation matrices under multiplication realize the symmetric group through the permutation-to-matrix correspondence; establishing the isomorphism requires verifying the homomorphism and bijection."
+        },
+        {
+            "concept_id": "C022",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Recognizing whether a square matrix differs from identity by one elementary row/column operation is a direct definition check."
+        },
+        {
+            "concept_id": "C022",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "Decoding an elementary matrix into swap, nonzero scaling or row/column addition requires locating the modified rows/columns and recovering the operation parameter; this is a distinct reverse-engineering mechanism."
+        },
+        {
+            "concept_id": "C022",
+            "qp_id": "QP003",
+            "disposition": "ELIGIBLE",
+            "rationale": "Constructing an elementary matrix from an operation requires applying the operation to the identity matrix; this is a distinct construction mechanism."
+        },
+        {
+            "concept_id": "C022",
+            "qp_id": "QP004",
+            "disposition": "ELIGIBLE",
+            "rationale": "Left multiplication applies the corresponding row operation and right multiplication applies the corresponding column operation; tracking the effect is a distinct transformation mechanism."
+        },
+        {
+            "concept_id": "C022",
+            "qp_id": "QP005",
+            "disposition": "ELIGIBLE",
+            "rationale": "The inverse elementary matrix corresponds to the inverse operation: swap unchanged, scale by reciprocal, or add the opposite multiple; this is a distinct inverse-operation mechanism."
         }
     ],
     "archetypes": [
@@ -3926,6 +3956,122 @@
                 "composition convention",
                 "bijection proof",
                 "identity and inverse"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C022",
+            "concept": "Elementary Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Classify the type and parameters of the elementary operation encoded by a given elementary matrix",
+            "archetype_id": "U2_CH8_ST1_AR00083",
+            "archetype": "Decode the elementary operation represented by a matrix",
+            "assessment_mechanism": "Identify whether an elementary matrix encodes a row/column swap, nonzero scaling or addition of a multiple, and recover the affected indices and parameter.",
+            "reasoning_path": "Compare the matrix with identity; locate changed rows/columns; identify swap, diagonal scaling or single off-diagonal modification; recover the scalar parameter and operation direction; verify by applying it to a generic matrix.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "operation type",
+                "row versus column",
+                "affected indices",
+                "scaling/addition parameter",
+                "matrix order"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C022",
+            "concept": "Elementary Matrix",
+            "qp_id": "QP003",
+            "question_possibility": "Construct the elementary matrix corresponding to a specified elementary row or column operation",
+            "archetype_id": "U2_CH8_ST1_AR00084",
+            "archetype": "Construct an elementary matrix from a specified operation",
+            "assessment_mechanism": "Apply a specified elementary row/column operation to the identity matrix to construct the corresponding elementary matrix.",
+            "reasoning_path": "Start with I_n; perform exactly the specified operation on the relevant row or column; preserve all unaffected entries; verify left/right multiplication produces the intended operation.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "operation type",
+                "row versus column",
+                "affected indices",
+                "parameter value",
+                "matrix order"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C022",
+            "concept": "Elementary Matrix",
+            "qp_id": "QP004",
+            "question_possibility": "Predict the effect of left or right multiplication by a specified elementary matrix on a matrix",
+            "archetype_id": "U2_CH8_ST1_AR00085",
+            "archetype": "Predict matrix changes under elementary matrix multiplication",
+            "assessment_mechanism": "Use left multiplication for row operations and right multiplication for column operations to predict the transformed matrix and track affected entries.",
+            "reasoning_path": "Determine whether E multiplies on the left or right; identify the encoded operation; apply it to the corresponding rows or columns; calculate the transformed entries; verify dimensions and operation direction.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "left versus right multiplication",
+                "row versus column operation",
+                "operation type",
+                "affected indices",
+                "rectangular target matrix"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C022",
+            "concept": "Elementary Matrix",
+            "qp_id": "QP005",
+            "question_possibility": "Determine the inverse of a given elementary matrix and the corresponding inverse operation",
+            "archetype_id": "U2_CH8_ST1_AR00086",
+            "archetype": "Find inverse elementary matrices and inverse operations",
+            "assessment_mechanism": "Reverse the elementary operation to obtain the inverse elementary matrix, distinguishing swaps, nonzero scalings and additive operations.",
+            "reasoning_path": "For a swap, use the same swap; for scaling by c≠0, scale by 1/c; for adding c times one row/column to another, add −c times it; construct E⁻¹ and verify E⁻¹E=I.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "operation type",
+                "nonzero scale factor",
+                "added multiple",
+                "row versus column",
+                "composition of operations"
             ]
         }
     ]
