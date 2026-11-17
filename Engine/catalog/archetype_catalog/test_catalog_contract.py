@@ -101,8 +101,8 @@ class ArchetypeCatalogContractTests(unittest.TestCase):
         prompt = BatchArchetypeCatalogGenerator().load_prompt(
             qps=[base, second]
         )
-        self.assertIn("Concept: Matrix Equality", prompt)
-        self.assertIn("Concept: Matrix Addition", prompt)
+        self.assertIn("concept: Matrix Equality", prompt)
+        self.assertIn("concept: Matrix Addition", prompt)
         self.assertIn("Never copy context from another QP", prompt)
 
     def test_exporter_preserves_zero_archetype_qp_dispositions(self) -> None:
