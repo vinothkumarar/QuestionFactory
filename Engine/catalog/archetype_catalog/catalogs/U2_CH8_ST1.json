@@ -1109,6 +1109,36 @@
             "qp_id": "QP014",
             "disposition": "ELIGIBLE",
             "rationale": "Combining orthogonality with symmetry/skew-symmetry produces additional identities such as Q²=I or Q²=−I and field/order restrictions; this is a distinct combined-structure mechanism."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP015",
+            "disposition": "ELIGIBLE",
+            "rationale": "The independent degrees of freedom of an n×n real orthogonal matrix are n(n−1)/2, reflecting n(n+1)/2 independent orthogonality equations with dependencies; counting this constraint dimension is a distinct parameter-count mechanism."
+        },
+        {
+            "concept_id": "C016",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Singularity is directly identified by determinant zero (for a square matrix); this is definition-level classification."
+        },
+        {
+            "concept_id": "C016",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "A parameterized matrix is singular exactly when its determinant vanishes; expanding and solving det(A(λ))=0 gives a reusable parameter-constraint mechanism."
+        },
+        {
+            "concept_id": "C016",
+            "qp_id": "QP003",
+            "disposition": "ELIGIBLE",
+            "rationale": "Determinant multiplicativity and scalar/power rules allow singularity to be propagated or disproved through products, scalar factors and powers, with important converse distinctions."
+        },
+        {
+            "concept_id": "C016",
+            "qp_id": "QP004",
+            "disposition": "ELIGIBLE",
+            "rationale": "Transpose, similarity and invertible elementary row/column operations preserve rank and hence singularity; distinguishing invariant operations from determinant scaling is a reusable transformation-invariance mechanism."
         }
     ],
     "archetypes": [
@@ -2232,6 +2262,122 @@
                 "matrix order parity",
                 "eigenvalue or determinant constraints",
                 "existence versus classification"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C015",
+            "concept": "Orthogonal Matrix",
+            "qp_id": "QP015",
+            "question_possibility": "Determine the number of independent parameters or constraints in an n×n orthogonal matrix",
+            "archetype_id": "U2_CH8_ST1_AR00040",
+            "archetype": "Count independent degrees of freedom in an orthogonal matrix",
+            "assessment_mechanism": "Translate QᵀQ=I into independent constraints on the n² entries and determine the dimension of the orthogonal-matrix family as n(n−1)/2.",
+            "reasoning_path": "Start with n² real entries; use the independent symmetric equations in QᵀQ=I; account for the n(n+1)/2 independent constraints; obtain n(n−1)/2 degrees of freedom; verify small-order cases and distinguish constraints from dependent equations.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "number of independent constraints",
+                "small-order edge cases",
+                "real versus complex field",
+                "dimension versus number of solutions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C016",
+            "concept": "Singular Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Determine parameter conditions for a square matrix or matrix expression to be singular",
+            "archetype_id": "U2_CH8_ST1_AR00041",
+            "archetype": "Solve determinant-zero conditions for singular matrix parameters",
+            "assessment_mechanism": "Set the determinant of a parameterized square matrix or matrix expression equal to zero, expand or factor the determinant, and solve for the singular parameter values.",
+            "reasoning_path": "Confirm the matrix is square; compute det(A(λ)); factor the determinant where possible; solve det(A(λ))=0; check domain restrictions and repeated roots; verify each candidate parameter in the original matrix.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "number of parameters",
+                "factorable versus expanded determinant",
+                "multiple/repeated roots",
+                "matrix expression structure"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C016",
+            "concept": "Singular Matrix",
+            "qp_id": "QP003",
+            "question_possibility": "Analyze singularity behavior under matrix multiplication, scalar multiplication, and powers",
+            "archetype_id": "U2_CH8_ST1_AR00042",
+            "archetype": "Propagate singularity through products, scalar multiples and powers",
+            "assessment_mechanism": "Use determinant multiplicativity and scalar/power identities to determine when singularity is preserved, including the distinction between one-way implications and converses.",
+            "reasoning_path": "Use det(AB)=det(A)det(B); separate zero and nonzero scalar factors; use det(A^k)=det(A)^k for positive integer k; determine which implications hold and construct counterexamples for invalid converses.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of factors",
+                "zero/nonzero scalar",
+                "positive/zero/negative exponent",
+                "singular versus nonsingular factors",
+                "implication versus converse"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C016",
+            "concept": "Singular Matrix",
+            "qp_id": "QP004",
+            "question_possibility": "Determine preservation of singularity under transpose, similarity transformations, and elementary row or column operations",
+            "archetype_id": "U2_CH8_ST1_AR00043",
+            "archetype": "Track singularity under transpose, similarity and elementary operations",
+            "assessment_mechanism": "Determine which matrix transformations preserve rank and singularity, distinguishing transpose/similarity/invertible elementary operations from transformations that only scale the determinant.",
+            "reasoning_path": "Use rank(Aᵀ)=rank(A); use rank(P⁻¹AP)=rank(A) for invertible P; recognize elementary row/column operations as multiplication by invertible matrices; connect full rank with nonsingularity; verify operation assumptions.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "transpose",
+                "similarity transformation",
+                "row versus column operations",
+                "invertibility of transformation matrices",
+                "rank and determinant viewpoints"
             ]
         }
     ]
