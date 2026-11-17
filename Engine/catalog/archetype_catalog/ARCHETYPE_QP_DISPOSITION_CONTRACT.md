@@ -1,6 +1,6 @@
 # Archetype Catalogue: QP Disposition Contract
 
-Status: Engineering decision — approved for implementation
+Status: Implemented and CI-validated on 2026-11-17
 Scope: Archetype catalogue generation pipeline
 Branch: feature/dual-question-engine-v1
 
@@ -71,3 +71,22 @@ Allowed dispositions:
 ## Acceptance criteria
 
 The pipeline can process a batch in which every QP is classified `FOUNDATION_ONLY` and correctly persist/complete it with zero archetypes. It must also reject any attempt to attach an archetype to a non-eligible QP or omit a QP disposition.
+
+
+## Implementation record
+
+Implemented in the archetype catalogue subsystem:
+- `qp_disposition_contract.py`: strict QP disposition and archetype/source alignment validator.
+- `archetype_catalog_ai_client.py`: parses the two-array response and validates archetype metadata.
+- `batch_archetype_catalog_generator.py`: emits the authoritative disposition-aware prompt contract.
+- `run_all_archetype_catalogs.py`: disposition-based resume, persistence, completion and factory ID assignment.
+- `archetype_catalog_csv_exporter.py`: separate archetype and QP-disposition CSV exports.
+- Regression tests cover eligible/non-eligible handling, missing/duplicate/unknown QPs, copied metadata integrity and empty archetype output.
+- GitHub Actions workflow: `.github/workflows/archetype-catalog-quality.yml`.
+
+CI result for commit `9647bae37ad9d74040fcb4341d35475e156e0bec`:
+- Python compile: passed.
+- Contract tests: 12 passed.
+- Workflow: https://github.com/vinothkumarar/QuestionFactory/actions/runs/44018238267
+
+Production generation has not been run. Existing legacy flat-list catalogues remain preserved and require an explicit migration before resume.
