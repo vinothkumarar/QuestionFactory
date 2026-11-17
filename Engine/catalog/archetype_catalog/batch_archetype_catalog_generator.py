@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 class BatchArchetypeCatalogGenerator:
-    """Build prompts for disposition-aware batches of QPs."""
+    """Build disposition-aware prompts for batches that may span concepts."""
 
     def load_prompt(
         self,
@@ -14,18 +14,6 @@ class BatchArchetypeCatalogGenerator:
         if not qps:
             raise ValueError("QP batch cannot be empty.")
 
-        first = qps[0]
-        context_fields = (
-            "subject", "unit", "chapter", "subtopic", "concept_id", "concept",
-        )
-        for row in qps:
-            for field in context_fields:
-                if row.get(field) != first.get(field):
-                    raise ValueError(
-                        "A batch must contain QPs from one consistent "
-                        f"catalogue context; mismatch in '{field}'."
-                    )
-
         prompt_file = (
             Path(__file__).parent
             / "prompts"
@@ -33,13 +21,28 @@ class BatchArchetypeCatalogGenerator:
         )
         prompt = prompt_file.read_text(encoding="utf-8")
 
-        qp_context = "\n\n".join(
-            f"QP ID: {row['qp_id']}\n"
-            f"Question Possibility: {row['question_possibility']}"
-            for row in qps
+        context_fields = (
+            "subject", "unit", "chapter", "subtopic",
+            "concept_id", "concept", "qp_id", "question_possibility",
         )
+        blocks: list[str] = []
+        for index, row in enumerate(qps, start=1):
+            missing = [
+                field for field in context_fields
+                if not isinstance(row.get(field), str) or not row[field].strip()
+            ]
+            if missing:
+                raise ValueError(
+                    f"QP row #{index} is missing required source fields: "
+                    + ", ".join(missing)
+                )
+            blocks.append(
+                "\n".join(
+                    f"{field}: {row[field]}" for field in context_fields
+                )
+            )
 
-        prompt += f"""
+        prompt += """
 
 ============================================================
 AUTHORITATIVE BATCH CONTRACT — OVERRIDES EARLIER OUTPUT RULES
@@ -51,19 +54,20 @@ top-level keys: "qp_dispositions" and "archetypes".
 
 Required shape:
 
-{{
+{
   "qp_dispositions": [
-    {{
-      "concept_id": "{first['concept_id']}",
+    {
+      "concept_id": "exact source concept_id",
       "qp_id": "exact supplied QP ID",
       "disposition": "ELIGIBLE | FOUNDATION_ONLY | OUT_OF_SCOPE | REQUIRES_REVIEW",
       "rationale": "Specific academic reason for this decision"
-    }}
+    }
   ],
   "archetypes": []
-}}
+}
 
-Classify EVERY supplied QP exactly once.
+Classify EVERY supplied QP exactly once, using the composite identity
+(concept_id, qp_id). QP IDs may repeat under different concepts.
 
 Disposition meanings:
 - ELIGIBLE: one or more genuinely distinct, in-scope JEE archetypes exist.
@@ -81,23 +85,20 @@ Each archetype record must retain the complete established archetype fields:
 subject, unit, chapter, subtopic, concept_id, concept, qp_id,
 question_possibility, archetype_id, archetype, assessment_mechanism,
 reasoning_path, exam_fit, difficulty_potential, variation_capacity,
-variation_dimensions. Copy all source context exactly. Set archetype_id to "".
-Do not add approval or manufacturing permissions.
+variation_dimensions. Copy all source context exactly from the matching
+QP record below. Never copy context from another QP in the same batch.
+Set archetype_id to "". Do not add approval or manufacturing permissions.
 
 The "qp_dispositions" array is the coverage record. Archetype presence is
 NOT the coverage record. Do not omit a QP even when it has no archetype.
 
 Return valid JSON only. No markdown or code fences.
 
-SOURCE CONTEXT
-Subject: {first['subject']}
-Unit: {first['unit']}
-Chapter: {first['chapter']}
-Subtopic: {first['subtopic']}
-Concept ID: {first['concept_id']}
-Concept: {first['concept']}
+SOURCE QUESTION POSSIBILITIES
+Each numbered block is an independent source record. Concepts may differ.
 
-QUESTION POSSIBILITIES
-{qp_context}
 """
+        for index, block in enumerate(blocks, start=1):
+            prompt += f"\n--- SOURCE QP {index} ---\n{block}\n"
+
         return prompt
