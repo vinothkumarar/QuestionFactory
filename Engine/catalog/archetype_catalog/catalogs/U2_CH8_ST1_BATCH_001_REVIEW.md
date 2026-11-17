@@ -864,3 +864,24 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 230 dispositions and 64 draft archetypes; 120 source QPs remain untouched. Eleven source possibilities are held for review.
+
+
+## Batch 047 — involutory parameter, polynomial and spectral mechanisms (global QP231–QP235)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C020 / QP001 | FOUNDATION_ONLY | Direct A²=I verification |
+| C020 / QP002 | ELIGIBLE | Parameterized involutory condition gives simultaneous quadratic entry equations |
+| C020 / QP003 | FOUNDATION_ONLY | An involutory matrix is its own inverse |
+| C020 / QP004 | ELIGIBLE | Even powers reduce to I and odd powers to A; polynomials reduce to aI+bA |
+| C020 / QP005 | ELIGIBLE | Eigenvalues are ±1; multiplicities link to trace, determinant and characteristic polynomial |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00065`: Derive parameter conditions for an involutory matrix.
+- `U2_CH8_ST1_AR00066`: Reduce powers and polynomials of an involutory matrix.
+- `U2_CH8_ST1_AR00067`: Infer eigenvalue multiplicities of an involutory matrix.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 235 dispositions and 67 draft archetypes; 115 source QPs remain untouched.
