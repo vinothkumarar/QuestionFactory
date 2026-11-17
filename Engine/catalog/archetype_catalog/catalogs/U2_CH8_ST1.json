@@ -59,6 +59,36 @@
             "qp_id": "QP010",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Trace, determinant, minors and cofactors of a real matrix are real by their definitions as sums and products of real entries. This is direct property application, not a distinct archetype."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "QP011",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The inclusion chain for integer-, rational-, real- and complex-entry matrices follows entrywise from the corresponding scalar number sets. This is direct hierarchy recognition and does not justify a separate JEE archetype."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "QP012",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "An m×n real matrix has mn independently selectable real entries by definition. Counting these parameters is a direct dimension/counting fact; a distinct linear-algebra constraint problem would need a separately specified source possibility."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "QP013",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Translating R^{m×n} or M_{m×n}(R) is notation recognition for the set of real matrices of fixed order. It is prerequisite knowledge rather than a distinct assessment mechanism."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Classifying a matrix as real or complex from its entries is direct definition-level recognition. It is retained as foundation content and is not a separate JEE archetype."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP002",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Taking the complex conjugate entrywise is a direct operation. Without additional constraints or a multi-step inference, the source possibility does not justify a distinct JEE archetype."
         }
     ],
     "archetypes": [
