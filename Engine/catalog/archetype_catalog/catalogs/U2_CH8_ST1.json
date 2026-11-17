@@ -1229,6 +1229,36 @@
             "qp_id": "QP003",
             "disposition": "ELIGIBLE",
             "rationale": "For A²=A, positive powers collapse to A and polynomials reduce using the projection identity, yielding a reusable algebraic-reduction mechanism."
+        },
+        {
+            "concept_id": "C018",
+            "qp_id": "QP004",
+            "disposition": "ELIGIBLE",
+            "rationale": "A²=A implies every eigenvalue λ satisfies λ²=λ, so λ∈{0,1}; multiplicities are constrained by rank and nullity. This is a reusable spectral-constraint mechanism."
+        },
+        {
+            "concept_id": "C018",
+            "qp_id": "QP005",
+            "disposition": "ELIGIBLE",
+            "rationale": "The polynomial x²−x has distinct roots, so an idempotent matrix is diagonalizable; its similarity class is determined by rank and has canonical form diag(I_r,0)."
+        },
+        {
+            "concept_id": "C018",
+            "qp_id": "QP006",
+            "disposition": "ELIGIBLE",
+            "rationale": "For idempotents, diagonalizability with eigenvalues 0/1 gives trace=rank, nullity=n−rank and determinant 0 or 1 depending on full rank; this is a multi-invariant deduction mechanism."
+        },
+        {
+            "concept_id": "C018",
+            "qp_id": "QP007",
+            "disposition": "ELIGIBLE",
+            "rationale": "I−A is also idempotent, with complementary image/kernel and rank n−rank(A); this is a reusable complement-structure mechanism."
+        },
+        {
+            "concept_id": "C018",
+            "qp_id": "QP008",
+            "disposition": "REQUIRES_REVIEW",
+            "rationale": "The source groups sums, products, scalar multiples and linear combinations without specifying operand relationships such as commutativity or shared idempotent structure; a safe general rule cannot be inferred."
         }
     ],
     "archetypes": [
@@ -2640,6 +2670,122 @@
                 "positive integer exponent",
                 "coefficient field",
                 "requested matrix property"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C018",
+            "concept": "Idempotent Matrix",
+            "qp_id": "QP004",
+            "question_possibility": "Determine the possible eigenvalues and their multiplicities for an idempotent matrix",
+            "archetype_id": "U2_CH8_ST1_AR00050",
+            "archetype": "Infer eigenvalues and multiplicities of an idempotent matrix",
+            "assessment_mechanism": "Use A²=A to constrain every eigenvalue to 0 or 1, then relate algebraic multiplicities to rank, nullity and trace.",
+            "reasoning_path": "Apply the eigenvalue equation to A²=A to obtain λ²=λ; solve λ∈{0,1}; use diagonalizability from the distinct-root minimal polynomial when justified; relate the multiplicity of 1 to rank and the multiplicity of 0 to nullity.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "rank/nullity information",
+                "trace information",
+                "algebraic/geometric multiplicities",
+                "given eigenvalue constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C018",
+            "concept": "Idempotent Matrix",
+            "qp_id": "QP005",
+            "question_possibility": "Determine diagonalizability and canonical similarity form of an idempotent matrix; classify idempotents up to similarity by rank",
+            "archetype_id": "U2_CH8_ST1_AR00051",
+            "archetype": "Classify idempotent matrices up to similarity by rank",
+            "assessment_mechanism": "Use the distinct roots of x(x−1) to establish diagonalizability and reduce an idempotent matrix to the canonical form diag(I_r,0), with similarity class determined by rank.",
+            "reasoning_path": "Use A²−A=0; note x(x−1) has distinct roots; decompose the space into image and kernel; choose bases for image and kernel; represent A as identity on its image and zero on its kernel; form diag(I_r,0).",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "rank",
+                "basis choice",
+                "similarity versus equality",
+                "canonical block sizes"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C018",
+            "concept": "Idempotent Matrix",
+            "qp_id": "QP006",
+            "question_possibility": "Determine and relate rank, trace, nullity, and determinant for an idempotent matrix",
+            "archetype_id": "U2_CH8_ST1_AR00052",
+            "archetype": "Relate rank, trace, nullity and determinant of an idempotent matrix",
+            "assessment_mechanism": "Exploit the 0/1 eigenvalue spectrum and diagonalizability of an idempotent matrix to derive linked formulas for rank, trace, nullity and determinant.",
+            "reasoning_path": "Establish eigenvalues 0 or 1; use the multiplicity of 1 as rank and the multiplicity of 0 as nullity; obtain trace=rank and rank+nullity=n; determinant is 1 only when rank=n and 0 otherwise; verify edge cases.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "rank",
+                "trace",
+                "nullity",
+                "full-rank versus rank-deficient cases"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C018",
+            "concept": "Idempotent Matrix",
+            "qp_id": "QP007",
+            "question_possibility": "Determine properties of the complementary matrix I − A when A is idempotent, including idempotence and rank relations",
+            "archetype_id": "U2_CH8_ST1_AR00053",
+            "archetype": "Analyze the complementary idempotent I−A",
+            "assessment_mechanism": "Use A²=A to prove I−A is idempotent and relate its image, kernel and rank to those of A.",
+            "reasoning_path": "Compute (I−A)²=I−2A+A²=I−A; use image(I−A)=ker(A) and kernel(I−A)=image(A) for an idempotent projection; conclude rank(I−A)=n−rank(A); verify the complementary decomposition.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "rank of A",
+                "image/kernel relations",
+                "complementary subspaces",
+                "additional constraints"
             ]
         }
     ]
