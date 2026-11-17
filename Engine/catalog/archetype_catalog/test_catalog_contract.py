@@ -68,7 +68,7 @@ class ArchetypeCatalogContractTests(unittest.TestCase):
         )
         self.assertIn("AUTHORITATIVE BATCH CONTRACT", prompt)
         self.assertIn('"qp_dispositions"', prompt)
-        self.assertIn('"FOUNDATION_ONLY"', prompt)
+        self.assertIn("FOUNDATION_ONLY", prompt)
         self.assertIn('"assessment_mechanism"', prompt)
         self.assertIn('"variation_dimensions"', prompt)
         self.assertIn('"archetype_id": ""', prompt)
