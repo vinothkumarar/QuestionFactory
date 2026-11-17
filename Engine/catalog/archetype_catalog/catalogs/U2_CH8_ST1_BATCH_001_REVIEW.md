@@ -453,3 +453,21 @@ New draft candidates:
 Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled. Two QPs are now explicitly held for review due underspecified source details.
 
 Cumulative status: 125 dispositions and 20 draft archetypes; 225 source QPs remain untouched.
+
+
+## Batch 026 — upper-triangular product structure and lower-triangular foundations (global QP126–QP130)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C011 / QP011 | ELIGIBLE | Diagonal entries of products/powers are determined by corresponding factor diagonals |
+| C012 / QP001 | FOUNDATION_ONLY | Direct lower-triangular zero-pattern recognition |
+| C012 / QP002 | FOUNDATION_ONLY | Strict/unit lower-triangular distinction follows from the diagonal and zero pattern |
+| C012 / QP003 | FOUNDATION_ONLY | Direct count of independent and forced-zero entries |
+| C012 / QP004 | FOUNDATION_ONLY | Direct closure under addition and scalar multiplication |
+
+New draft candidate:
+
+- `U2_CH8_ST1_AR00021`: Infer diagonal entries of products and powers of upper-triangular matrices.
+- JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
+
+Cumulative status: 130 dispositions and 21 draft archetypes; 220 source QPs remain untouched.
