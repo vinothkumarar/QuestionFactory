@@ -1589,6 +1589,36 @@
             "qp_id": "QP005",
             "disposition": "ELIGIBLE",
             "rationale": "The inverse elementary matrix corresponds to the inverse operation: swap unchanged, scale by reciprocal, or add the opposite multiple; this is a distinct inverse-operation mechanism."
+        },
+        {
+            "concept_id": "C022",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Elementary matrices have determinant −1 for a swap, c for nonzero scaling by c, and 1 for row/column addition; this is a direct formula."
+        },
+        {
+            "concept_id": "C022",
+            "qp_id": "QP007",
+            "disposition": "ELIGIBLE",
+            "rationale": "Every invertible square matrix can be reduced to identity by elementary row operations, giving a factorization into elementary matrices; singular matrices cannot be such products."
+        },
+        {
+            "concept_id": "C022",
+            "qp_id": "QP008",
+            "disposition": "ELIGIBLE",
+            "rationale": "Row/column equivalence is characterized by a finite product of elementary matrices and can be linked to row/column spaces and rank; this is a reusable equivalence mechanism."
+        },
+        {
+            "concept_id": "C022",
+            "qp_id": "QP009",
+            "disposition": "REQUIRES_REVIEW",
+            "rationale": "The operation cost model and permitted operation set are unspecified, so a minimal count is not well-defined from the source possibility alone."
+        },
+        {
+            "concept_id": "C022",
+            "qp_id": "QP010",
+            "disposition": "REQUIRES_REVIEW",
+            "rationale": "Whether a product of elementary matrices is itself elementary depends on operation types, indices and order; the source does not constrain these cases."
         }
     ],
     "archetypes": [
@@ -4072,6 +4102,64 @@
                 "added multiple",
                 "row versus column",
                 "composition of operations"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C022",
+            "concept": "Elementary Matrix",
+            "qp_id": "QP007",
+            "question_possibility": "Determine whether a given square matrix can be expressed as a product of elementary matrices and obtain such a factorization when possible",
+            "archetype_id": "U2_CH8_ST1_AR00087",
+            "archetype": "Factor an invertible matrix into elementary matrices",
+            "assessment_mechanism": "Use Gaussian elimination to reduce an invertible matrix to identity and reverse the sequence of elementary operations to obtain a product factorization.",
+            "reasoning_path": "Apply a sequence of elementary row operations E_k…E_1 to A to obtain I; write E_k…E_1A=I; rearrange to A=E_1⁻¹…E_k⁻¹; use closure of elementary matrices under inversion; verify the factorization.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "operation sequence",
+                "number of factors",
+                "row versus column factorization",
+                "determinant/invertibility"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C022",
+            "concept": "Elementary Matrix",
+            "qp_id": "QP008",
+            "question_possibility": "Determine whether two matrices are row-equivalent or column-equivalent via a finite product of elementary matrices",
+            "archetype_id": "U2_CH8_ST1_AR00088",
+            "archetype": "Characterize row and column equivalence through elementary matrices",
+            "assessment_mechanism": "Translate row/column equivalence into multiplication by a finite product of elementary matrices and connect the relation to invariant row/column spaces and rank.",
+            "reasoning_path": "For row equivalence, express B=EA with E a product of elementary matrices; for column equivalence, express B=AF; derive preserved row/column space and rank conditions; construct or verify a finite operation sequence when required.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "row versus column equivalence",
+                "matrix dimensions",
+                "rank",
+                "row/column space",
+                "explicit operation sequence"
             ]
         }
     ]
