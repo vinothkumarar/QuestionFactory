@@ -842,3 +842,25 @@ New draft candidates:
 Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 225 dispositions and 60 draft archetypes; 125 source QPs remain untouched.
+
+
+## Batch 046 — nilpotent rank, block structure, construction and polynomial inverses (global QP226–QP230)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C019 / QP011 | ELIGIBLE | Rank/nullity sequences of powers decrease/increase up to the nilpotency index |
+| C019 / QP012 | ELIGIBLE | Block-triangular nilpotency depends on diagonal blocks and off-diagonal block paths |
+| C019 / QP013 | REQUIRES_REVIEW | Sum/product rules require explicit commutation and compatibility assumptions |
+| C019 / QP014 | ELIGIBLE | Jordan blocks construct nilpotent matrices with any admissible index 1≤k≤n |
+| C019 / QP015 | ELIGIBLE | p(N) is invertible iff p(0)≠0, with finite geometric inverse when nonzero |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00061`: Infer rank and nullity behavior of powers of a nilpotent matrix.
+- `U2_CH8_ST1_AR00062`: Determine nilpotency of block-triangular matrices from diagonal blocks.
+- `U2_CH8_ST1_AR00063`: Construct nilpotent matrices with a prescribed order and index.
+- `U2_CH8_ST1_AR00064`: Determine invertibility of p(N) from the constant term.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 230 dispositions and 64 draft archetypes; 120 source QPs remain untouched. Eleven source possibilities are held for review.
