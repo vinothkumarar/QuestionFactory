@@ -247,3 +247,19 @@ Other historical defaults (not active production settings until verified): +4/-1
 
 The prior conversation recovery is sufficient to identify the intended v1.5 direction and to prove several repository conflicts. It is **not sufficient to reconstruct the complete frozen blueprint without guessing**. The full original artifact remains the authority blocker. If it cannot be recovered, the safe route is an explicitly versioned recovery candidate, not a file falsely labelled as the original v1.5.
 
+
+
+## 8. Exam-format evidence affecting EDF-01 — 2026-11-17
+
+The official JEE Advanced 2026 Paper 1 and its final-key PDF were opened directly. The paper demonstrates that marking defaults are section-specific, not one global `+4/-1` rule:
+
+| Paper 1 section | Question format | Official marking observed |
+|---|---|---|
+| Section 1 | Single-correct MCQ | +3 correct, 0 unanswered, −1 otherwise |
+| Section 2 | Multiple-correct MCQ | +4 full; partial +1/+2/+3 under stated selection conditions; 0 unanswered; −1 otherwise |
+| Section 3 | Numerical value | +4 correct; 0 otherwise; no negative mark stated |
+| Section 4 | Matching-list MCQ | +4 correct; 0 unanswered; −1 otherwise |
+
+Official evidence: `https://jeeadv.ac.in/documents/p1_english.pdf` and `https://jeeadv.ac.in/documents/p1_solutions_final.pdf`.
+
+**P1 implication:** EDF-01 cannot safely apply a universal +4/−1 default to every JEE Advanced question. It must be keyed to exam, year, paper and section/question format. The recovered historical +4/−1 value remains a default fragment only, not a complete scoring policy. Main 2026 and future exam patterns must also be represented separately.
