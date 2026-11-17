@@ -96,6 +96,12 @@ Official JEE Main 2027 units: (P1) Units and Measurements; (P2) Kinematics; (P3)
 - Official Main P20 Experimental Skills has no clearly identified dedicated internal unit in the current P1–P23 unit list. Check whether any existing P1 subtopics cover experimental procedures; do not assume dimensional analysis or errors alone satisfy the full practical/experimental skills scope.
 - Consolidation of internal units is not proposed in this phase. Preserve IDs and record a many-to-one official mapping.
 
+### Physics Experimental Skills second-pass note — 2026-11-17
+
+A dedicated second-pass crosswalk of all 18 Main 2027 Experimental Skills activities is recorded in `P1_PHYSICS_EXPERIMENTAL_SKILLS_SECOND_PASS.md`. Existing theory paths cover concepts for many activities, but do not establish coverage of apparatus, procedures, observations and experiment-specific graphs. The two P5 chapters remain empty, so the metre-scale/moments activity has no existing subtopic path.
+
+The review also corrected `P10_CH1_ST8 — Simple Pendulum` to Main `MAPPED_PROVISIONAL`: Main Unit 10 explicitly includes simple pendulum theory and Main Unit 20 includes the simple-pendulum energy-dissipation experiment. Its academic-review status remains pending; no ID or enablement flag changed.
+
 ## Chemistry — unit-level crosswalk
 
 Official JEE Main 2027 units: (C1) Some Basic Concepts in Chemistry; (C2) Atomic Structure; (C3) Chemical Bonding and Molecular Structure; (C4) Chemical Thermodynamics; (C5) Solutions; (C6) Equilibrium; (C7) Redox Reactions and Electrochemistry; (C8) Chemical Kinetics; (C9) Classification of Elements and Periodicity in Properties; (C10) p-Block Elements; (C11) d- and f-Block Elements; (C12) Coordination Compounds; (C13) Purification and Characterisation of Organic Compounds; (C14) Some Basic Principles of Organic Chemistry; (C15) Hydrocarbons; (C16) Organic Compounds Containing Halogens; (C17) Organic Compounds Containing Oxygen; (C18) Organic Compounds Containing Nitrogen; (C19) Biomolecules; (C20) Principles Related to Practical Chemistry.
