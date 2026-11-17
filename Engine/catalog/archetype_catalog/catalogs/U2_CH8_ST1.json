@@ -89,6 +89,36 @@
             "qp_id": "QP002",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Taking the complex conjugate entrywise is a direct operation. Without additional constraints or a multi-step inference, the source possibility does not justify a distinct JEE archetype."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Computing a conjugate transpose is a direct entrywise conjugation-and-transposition procedure. It is prerequisite matrix manipulation and does not by itself justify a distinct archetype."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Hermitian verification compares the matrix with its conjugate transpose; this is a direct structural check and is retained as foundation material."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Skew-Hermitian verification compares the conjugate transpose with the negative matrix. It is the sign counterpart of Hermitian verification, not a separate reasoning archetype."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP006",
+            "disposition": "ELIGIBLE",
+            "rationale": "Unitary verification requires checking the conjugate-transpose product against the identity matrix. This is a distinct matrix-condition verification mechanism and is retained as a JEE Main candidate, pending academic review."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP007",
+            "disposition": "ELIGIBLE",
+            "rationale": "Solving parameter conditions for Hermitian, skew-Hermitian or unitary structure requires translating a matrix identity into coupled real/imaginary constraints. This is a distinct parameter-constraint mechanism and remains a JEE Main candidate pending academic review."
         }
     ],
     "archetypes": [
@@ -144,6 +174,63 @@
                 "linear independence or dependence",
                 "coefficient constraints",
                 "presence of zero or repeated matrices"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C002",
+            "concept": "Complex Matrix",
+            "qp_id": "QP006",
+            "question_possibility": "Verify whether a matrix is unitary",
+            "archetype_id": "U2_CH8_ST1_AR00003",
+            "archetype": "Verify unitarity through the conjugate-transpose identity",
+            "assessment_mechanism": "Test whether a square complex matrix is unitary by evaluating the conjugate-transpose product and comparing it with the identity matrix.",
+            "reasoning_path": "Confirm the matrix is square; compute the conjugate transpose; multiply in the required order; compare every entry with the identity matrix; use the result to decide unitarity.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "real versus complex entries",
+                "left versus right product check",
+                "sparse versus dense entries"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C002",
+            "concept": "Complex Matrix",
+            "qp_id": "QP007",
+            "question_possibility": "Determine parameter conditions for a matrix to be Hermitian, skew-Hermitian, or unitary",
+            "archetype_id": "U2_CH8_ST1_AR00004",
+            "archetype": "Derive parameter constraints for Hermitian, skew-Hermitian or unitary structure",
+            "assessment_mechanism": "Convert a required matrix identity into simultaneous equations on unknown real and imaginary parameter components, then solve and verify the admissible parameter set.",
+            "reasoning_path": "Write the relevant identity A*=A, A*=-A or A*A=I; compute the conjugate transpose and required product; equate corresponding entries; separate real and imaginary parts; solve the coupled constraints; verify the original matrix identity.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "target matrix class",
+                "number of parameters",
+                "matrix order",
+                "independent versus dependent constraints",
+                "real and imaginary parameter coupling"
             ]
         }
     ]
