@@ -118,3 +118,18 @@ New draft candidates:
 - `U2_CH8_ST1_AR00006`: Infer product or inverse structure using adjoint reversal and commutativity.
 
 Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled. The cumulative catalogue now contains 25 dispositions and 6 archetypes; 325 source QPs remain untouched.
+
+
+## Batch 006 — unitary characterizations and row-matrix basics (global QP026–QP030)
+
+All five possibilities were retained as `FOUNDATION_ONLY`:
+
+| Concept / QP | Source mechanism | Disposition rationale |
+|---|---|---|
+| C002 / QP013 | Characterize unitarity through orthonormal rows/columns | Equivalent to the existing unitarity identity; do not duplicate QP006 |
+| C002 / QP014 | Diagonal and trace constraints for Hermitian/skew-Hermitian matrices | Consequence of definitions; overlaps the parameter-constraint candidate |
+| C002 / QP015 | Real symmetric/skew-symmetric/orthogonal correspondences | Direct conceptual mapping to complex matrix classes |
+| C003 / QP001 | Identify a row matrix | Direct shape definition |
+| C003 / QP002 | Row-matrix order/indexing constraints | Direct dimensional interpretation |
+
+No archetypes were added. The cumulative catalogue now contains 30 dispositions and retains 6 draft archetypes. The remaining 320 source QPs are untouched.
