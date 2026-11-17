@@ -354,3 +354,21 @@ All five possibilities are retained as `FOUNDATION_ONLY`:
 | C009 / QP008 | Inverse of scalar matrix | Direct nonzero-scalar condition and reciprocal formula |
 
 No new archetypes were added. Cumulative status: 95 dispositions and 16 draft archetypes; 255 source QPs remain untouched.
+
+
+## Batch 020 — scalar-matrix powers, invariants and property classification (global QP096–QP100)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C009 / QP009 | FOUNDATION_ONLY | Scalar-matrix powers reduce to scalar powers |
+| C009 / QP010 | FOUNDATION_ONLY | Adjugate follows a standard order-dependent formula |
+| C009 / QP011 | FOUNDATION_ONLY | Determinant/trace are direct formulas |
+| C009 / QP012 | FOUNDATION_ONLY | Rank/nullity/singularity reduce to λ=0 versus λ≠0 |
+| C009 / QP013 | ELIGIBLE | Multiple matrix properties reduce to scalar equations in λ, creating a reusable parameter-classification mechanism |
+
+New draft candidate:
+
+- `U2_CH8_ST1_AR00017`: Classify scalar-matrix properties through scalar parameter equations.
+- JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
+
+Cumulative status: 100 dispositions and 17 draft archetypes; 250 source QPs remain untouched.
