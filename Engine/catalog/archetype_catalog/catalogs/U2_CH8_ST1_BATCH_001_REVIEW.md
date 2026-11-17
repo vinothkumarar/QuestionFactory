@@ -298,3 +298,23 @@ New draft candidate:
 - JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
 
 Cumulative status: 80 dispositions and 11 draft archetypes; 270 source QPs remain untouched.
+
+
+## Batch 017 — diagonal-matrix operations (global QP081–QP085)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C008 / QP003 | FOUNDATION_ONLY | Singularity reduces to zero/nonzero diagonal entries |
+| C008 / QP004 | FOUNDATION_ONLY | Inverse is obtained by reciprocating nonzero diagonal entries |
+| C008 / QP005 | FOUNDATION_ONLY | Closure/commutativity are direct diagonal-matrix properties |
+| C008 / QP006 | ELIGIBLE | Powers/polynomials reduce to scalar evaluations on diagonal entries |
+| C008 / QP007 | ELIGIBLE | Left/right diagonal multiplication performs row/column scaling |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00012`: Evaluate powers and polynomial expressions of a diagonal matrix.
+- `U2_CH8_ST1_AR00013`: Track row and column scaling under diagonal matrix multiplication.
+
+Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 85 dispositions and 13 draft archetypes; 265 source QPs remain untouched.
