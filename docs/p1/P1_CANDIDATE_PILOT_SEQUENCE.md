@@ -83,3 +83,8 @@ Both are suitable for continued P1 source research. Neither is yet an approved p
 - **Q27 / P1_CH1_ST6:** `Y=4FL/(pi*d^2*x)`. Ignoring load error, relative uncertainty is `0.1/150 + 2(0.001/0.08) + 0.001/0.5 = 0.0276667`. With `F=100 N, L=1.5 m, d=0.0008 m, x=0.005 m`, nominal `Y≈5.968×10^10 Pa`, absolute uncertainty `≈1.651×10^9 Pa`, so `alpha=1.65`. This independently agrees with option B and NTA correct option ID `69112191`.
 
 Both answer values and option identifiers are independently checked. Local PDF bytes and SHA-256 remain pending. Candidate ranking is unchanged; no pilot or production order is authorized.
+
+
+## Additional Advanced PYQ evidence — 2026-11-17
+
+The official JEE Advanced 2026 Paper 1 PDF and final-key PDF are now linked in `P1_PYQ_EVIDENCE_REGISTER.csv`. Paper 1 Q3 maps provisionally to `U2_CH8_ST2 — Matrix Operations`; the final key says B, and independent determinant checks give A=0, B=-2, C=0, D=0, confirming B. The official Paper 2 final-key URL is also located, but no Paper 2 question match is claimed. This additional evidence does not authorize production or change the Physics pilot candidate ranking.
