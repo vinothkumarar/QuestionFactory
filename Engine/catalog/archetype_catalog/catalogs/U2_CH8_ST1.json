@@ -239,6 +239,36 @@
             "qp_id": "QP005",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Checking whether an operation is defined from operand dimensions is prerequisite compatibility reasoning and does not establish a distinct JEE archetype here."
+        },
+        {
+            "concept_id": "C004",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Determining the order/type of a defined expression from column-matrix dimensions is routine dimension arithmetic and remains foundation content."
+        },
+        {
+            "concept_id": "C004",
+            "qp_id": "QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Parameter conditions for one-column order reduce directly to the row-count/column-count definition; no distinct JEE reasoning mechanism is established."
+        },
+        {
+            "concept_id": "C004",
+            "qp_id": "QP008",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A column matrix is square only when it is 1×1; this is a direct order-definition check."
+        },
+        {
+            "concept_id": "C004",
+            "qp_id": "QP009",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Extracting a specified column from a matrix is direct representation and indexing."
+        },
+        {
+            "concept_id": "C004",
+            "qp_id": "QP010",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The number of elements equals the row count for an n×1 matrix; this is direct order interpretation."
         }
     ],
     "archetypes": [
