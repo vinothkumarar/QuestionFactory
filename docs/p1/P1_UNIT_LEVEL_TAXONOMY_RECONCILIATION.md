@@ -139,7 +139,7 @@ Official JEE Main 2027 units: (C1) Some Basic Concepts in Chemistry; (C2) Atomic
 - Main C6 combines internal C6 and C7.
 - Main C7 combines internal C8 and C10.
 - Main C11 combines internal C17 and C18.
-- Main C13 and C20 require explicit purification, characterization, practical exercises and qualitative analysis coverage. No dedicated internal units are evident from the current unit list; inspect subtopics before deciding whether the coverage exists elsewhere.
+- Main C13 and C20 require explicit purification, characterization, practical exercises and qualitative analysis coverage. A second-pass scan of all 260 Chemistry subtopics found one cross-unit chromatography entry (`C20_CH1_ST9`) mapped to Main C13, but no demonstrated coverage of the other major purification/characterisation methods. No directly named practical-chemistry subtopics were found for titrimetric exercises, salt analysis, functional-group detection or preparations. See `P1_CHEMISTRY_COVERAGE_GAP_SECOND_PASS.md`; do not treat the existence of chromatography as full Unit 13 coverage.
 - Internal C4, C12, C14, C15, C20, C28 and C29 have corresponding or related headings in the Advanced 2026 syllabus but no explicit standalone unit in Main 2027. Their Main applicability must not be inferred.
 - Main 2027 is the current Main source; Advanced 2026 remains provisional for Advanced 2027.
 
