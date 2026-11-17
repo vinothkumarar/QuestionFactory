@@ -61,7 +61,7 @@ Eleven question-paper URLs are marked accessible:
 
 The ten January JEE Main shifts remain without an acquired/verified question-paper PDF URL in the current tracker.
 
-The 2026 Acquisition Tracker has zero populated Answer Key URL values and zero SHA-256 values. The official NTA Main Session I and Session II final answer-key PDFs have been identified separately in `P1_PYQ_ANSWER_KEY_AUDIT.md`, but they have not yet been linked to all 19 Main shifts in the tracker.
+The 2026 Acquisition Tracker has zero populated Answer Key URL values and zero SHA-256 values. The official NTA Main Session I and Session II final answer-key PDFs have been identified and linked at session level to all 19 Main shifts in the derived register `P1_2026_SESSION_KEY_LINKAGE.csv`. The original workbook's Answer Key URL cells remain blank; question-level matching is still incomplete.
 
 The official JEE Advanced 2026 Paper 1 and Paper 2 question-paper PDFs and both official final-key PDFs are accessible. Paper 1 Q3 (Mathematics, answer B) and Paper 2 Q1 (Physics, answer C) are matched to their official final keys and independently verified.
 
@@ -106,7 +106,7 @@ A record may advance only when evidence for that exact state exists. A shared an
 | 2002–2025 source quality is mixed | Verify primary/official sources or label archive-only | Keep source confidence separate from paper availability |
 | 10 January 2026 Main papers not located | Search official NTA response-sheet/question-paper publication and preserve non-official copies as such | Do not mark acquired without source evidence |
 | 9 April 2026 Main PDFs accessible but not local | Acquire bytes where technically/legal available, record file size and SHA-256 | Current state URL-access-verified only |
-| Main Session I/II keys not linked to all shifts | Match date, shift, subject and question IDs for every paper | Two Session II Q26/Q27 matches only |
+| Session key URLs linked at session level; question-level matches incomplete | Match date, shift, subject and question IDs for every paper | Official key URLs linked to all 19 Main shifts; four question-level samples only |
 | Advanced 2026 final-key PDFs recovered; complete paper-level reconciliation pending | Match every question against the exact official Paper 1/Paper 2 final key | Do not infer full-paper verification from the two independently checked sample questions |
 | No local hashes | Acquire exact bytes and calculate SHA-256 | Do not invent or copy hashes |
 | Source flags differ between two trackers | Reconcile labels while preserving original workbook snapshots | No destructive overwrite |
@@ -137,3 +137,8 @@ The 2026 Acquisition Tracker itself contains all 247 master records, with 21 rec
 **Acquisition retry:** Direct download attempts for an Advanced paper, a Main April shift paper and the NTA Session I final answer key failed at DNS resolution in the working container. No local files or hashes were produced. Keep these in `URL_ACCESS_VERIFIED` (where applicable), not `PDF_BYTES_ACQUIRED` or `SHA256_VERIFIED`.
 
 **Disposition:** The nine-row classification discrepancy is CLOSED as a reconciled label difference. Tracker normalization and key linkage remain OPEN; no original workbook was modified.
+
+
+### 2026-11-17 session-key linkage correction
+
+The official NTA Session I final key explicitly covers all ten January shifts (21, 22, 23, 24 and 28 January, two shifts per date). The official Session II final key covers all nine April shifts (2, 4, 5 and 6 April, two shifts per date, plus 8 April Shift II). The two Advanced final-key PDFs are also identified. All 21 2026 paper/shift records now have an official final-key source URL recorded in the derived `P1_2026_SESSION_KEY_LINKAGE.csv`. Only four individual questions have been matched and independently solved. This is session/paper-level source linkage, not full question-level verification or local acquisition.
