@@ -194,3 +194,10 @@ The MECP v1.2 activity/deliverable/exit criteria are now tracked explicitly in `
 - The register has 21 records total: 19 Main shifts and 2 Advanced papers. Four question-level samples are marked SAMPLE_MATCHED; the remaining question-level matches remain pending.
 - This closes official answer-key source identification at session/paper level for all 21 2026 records. It does not close question-ID-to-paper matching for all questions or the workbook's still-empty Answer Key URL column. Original Library workbooks remain unchanged.
 - Local PDF bytes and SHA-256 remain unacquired/pending because direct download retries failed at DNS resolution in the working container.
+
+
+## 2026-11-17 — Blueprint source recovery escalation
+
+- Enumerated the four visible GitHub branches and searched exact v1.5 title/rule fragments. Tested five likely canonical blueprint file paths on `main`, `docs/exam-hub-master-consolidation` and `recovery-test`; no candidate file resolved.
+- This does not rule out an unindexed historical commit or an external/prior user file. The canonical 18-part v1.5 source remains the only blocking authority input that cannot be safely reconstructed from fragments.
+- Next dependency: user to provide the original file or its exact storage location, or explicitly authorize a separately versioned recovery candidate. No v1.5 content has been fabricated or frozen.
