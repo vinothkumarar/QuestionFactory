@@ -24,9 +24,17 @@ The irrational numbers are a subset of R and are disjoint from Q; neither Q nor 
 
 Do not import divisibility, parity, primes, intervals, modulus, polynomial roots, calculus, matrices, geometry, decimal-expansion tests, or general set algebra merely to create harder-looking questions. A future QP explicitly scoped to one of those topics may cover it separately.
 
+## Official syllabus alignment (checked 17 November 2026)
+
+The official NTA JEE Main 2027 Mathematics Unit 1 is titled **Sets, Relations and Functions**. Its listed content includes sets and their representation, union, intersection, complement, algebraic properties, power sets, relations and functions. It does **not explicitly list** the natural/whole/integer/rational/irrational/real number hierarchy as a standalone topic. Source: https://jeemain.nta.nic.in/documents/ (Syllabus 2027 PDF, Mathematics Unit 1).
+
+The official JEE Advanced 2026 syllabus lists sets and representations, different kinds of sets, set algebra, intersection, complement, difference, symmetric difference, De Morgan's laws, Cartesian products, relations and functions. It also does **not explicitly list** number-set hierarchy classification as a standalone examinable item. Source: https://jeeadv.ac.in/documents/jee-advanced-2026-syllabus.pdf (Mathematics — Sets, Relations and Functions).
+
+**Interpretation:** ST2 is a valid foundational bridge into set notation and inclusion, but its direct N/W/Z/Q/R classification tasks cannot be treated as an independently established JEE archetype space on syllabus wording alone. A stronger JEE claim would require direct PYQ evidence or a clearly syllabus-aligned reasoning mechanism. Do not infer JEE Advanced suitability from the broader set-theory syllabus.
+
 ## JEE-worthiness decision
 
-ST2 is a narrow, largely foundational subtopic. It can support clean conceptual and logical questions, but it does not justify a large or artificially advanced archetype catalogue.
+ST2 is a narrow, largely foundational subtopic. It can support clean conceptual and logical questions, but it does not justify a large or artificially advanced archetype catalogue. The default disposition is **foundation/prerequisite**, with any JEE Main candidate requiring separate PYQ-backed justification. No JEE Advanced archetype is approved.
 
 Potentially defensible reasoning mechanisms:
 
