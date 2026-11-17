@@ -718,3 +718,24 @@ New draft candidate:
 - JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
 
 Cumulative status: 195 dispositions and 44 draft archetypes; 155 source QPs remain untouched.
+
+
+## Batch 040 — non-singular products, linear systems and elementary operations (global QP196–QP200)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C017 / QP004 | FOUNDATION_ONLY | Standard determinant/inverse consequences under transpose, powers, scalar multiples and adjugate |
+| C017 / QP005 | ELIGIBLE | AB nonsingular iff both compatible square factors are nonsingular |
+| C017 / QP006 | ELIGIBLE | Universal existence and uniqueness of Ax=b characterizes nonsingularity |
+| C017 / QP007 | ELIGIBLE | Invertible elementary row/column operations preserve rank and nonsingularity |
+| C017 / QP008 | REQUIRES_REVIEW | The necessary/sufficient conditions to classify are not enumerated |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00045`: Infer nonsingularity of matrix products and their factors.
+- `U2_CH8_ST1_AR00046`: Connect nonsingularity with existence and uniqueness of Ax=b.
+- `U2_CH8_ST1_AR00047`: Track nonsingularity under elementary row and column operations.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 200 dispositions and 47 draft archetypes; 150 source QPs remain untouched. Six QPs are held for review due unspecified source details.
