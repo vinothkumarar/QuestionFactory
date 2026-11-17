@@ -1469,6 +1469,36 @@
             "qp_id": "QP002",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Constructing the permutation matrix from a specified permutation is direct representation and indexing."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Recovering the row-to-column mapping from the single 1 in each row is direct permutation decoding."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "There are n! permutation matrices of order n, a direct bijection with permutations."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP005",
+            "disposition": "ELIGIBLE",
+            "rationale": "The determinant of a permutation matrix is the sign of its permutation; computing parity from inversions or cycles is a distinct combinatorial-algebraic mechanism."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A permutation matrix is orthogonal, so P⁻¹=Pᵀ; this is a direct property."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP007",
+            "disposition": "ELIGIBLE",
+            "rationale": "Left and right multiplication by permutation matrices reorder rows and columns respectively; tracking the induced index mapping is a distinct transformation mechanism."
         }
     ],
     "archetypes": [
@@ -3546,6 +3576,64 @@
                 "matrix order",
                 "eigenspace multiplicities",
                 "inverse formula versus singularity"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C021",
+            "concept": "Permutation Matrix",
+            "qp_id": "QP005",
+            "question_possibility": "Determine the determinant and parity (even or odd) of a permutation matrix",
+            "archetype_id": "U2_CH8_ST1_AR00073",
+            "archetype": "Determine determinant sign and parity of a permutation matrix",
+            "assessment_mechanism": "Use the correspondence between permutation matrices and permutations to compute determinant as the sign, then determine parity using inversion count or cycle decomposition.",
+            "reasoning_path": "Recover or identify the underlying permutation; count inversions or decompose into disjoint cycles; determine even/odd parity; assign determinant +1/−1; verify using row-swap decomposition.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "one-line permutation notation",
+                "cycle decomposition",
+                "inversion count",
+                "even/odd parity"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C021",
+            "concept": "Permutation Matrix",
+            "qp_id": "QP007",
+            "question_possibility": "Determine the row or column reordering induced by left or right multiplication by a permutation matrix",
+            "archetype_id": "U2_CH8_ST1_AR00074",
+            "archetype": "Track row and column reordering under permutation-matrix multiplication",
+            "assessment_mechanism": "Use left multiplication by a permutation matrix to reorder rows and right multiplication to reorder columns, preserving the exact index mapping.",
+            "reasoning_path": "Interpret each row/column of P as the selected basis vector; compute PA to permute rows and AP to permute columns; compose multiple permutation matrices in the correct order; track the induced mapping and verify dimensions.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "left versus right multiplication",
+                "permutation composition order",
+                "multiple permutation matrices",
+                "rectangular target matrix",
+                "row/column index mapping"
             ]
         }
     ]
