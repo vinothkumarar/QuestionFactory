@@ -595,3 +595,24 @@ All five possibilities are retained as `FOUNDATION_ONLY`:
 | C014 / QP007 | Closure/invariance operations | Direct transpose identities |
 
 No new archetypes were added. Cumulative status: 165 dispositions and 28 draft archetypes; 185 source QPs remain untouched.
+
+
+## Batch 034 — skew-symmetric powers, product algebra and order parity (global QP166–QP170)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C014 / QP008 | ELIGIBLE | Power parity determines symmetric/skew-symmetric type; polynomial expressions split into even/odd powers |
+| C014 / QP009 | ELIGIBLE | Transpose reversal classifies products, commutators and anticommutators across symmetry types |
+| C014 / QP010 | ELIGIBLE | Determinant sign under transpose proves odd-order skew-symmetric matrices singular |
+| C014 / QP011 | FOUNDATION_ONLY | Inverse of an invertible skew-symmetric matrix remains skew-symmetric |
+| C014 / QP012 | FOUNDATION_ONLY | Both symmetric and skew-symmetric implies zero; already dispositioned |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00029`: Classify powers and polynomials of a skew-symmetric matrix.
+- `U2_CH8_ST1_AR00030`: Classify products, commutators and anticommutators by transpose rules.
+- `U2_CH8_ST1_AR00031`: Infer singularity of skew-symmetric matrices from order parity.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 170 dispositions and 31 draft archetypes; 180 source QPs remain untouched.
