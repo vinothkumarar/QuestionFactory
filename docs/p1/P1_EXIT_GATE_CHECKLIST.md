@@ -56,7 +56,7 @@ The mapping-basis categories are a review aid; they do not mean that all 1,026 s
 - 11 official question-paper URLs are marked accessible (9 April Main shifts, 2 Advanced papers).
 - 10 January 2026 Main shifts remain without an acquired/verified paper URL in the tracker.
 - Main Session I and II final answer-key PDFs were identified separately.
-- Two questions from 2 April 2026 Shift 1 are matched and independently solved.
+- Three questions are matched and independently solved: two Main questions from 2 April 2026 Shift 1 and Advanced Paper 1 Q3.
 - Local PDF bytes and SHA-256 values remain pending; no bulk answer-key reconciliation is claimed.
 
 ## 5. Blueprint authority status
