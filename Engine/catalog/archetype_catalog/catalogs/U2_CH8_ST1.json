@@ -329,6 +329,36 @@
             "qp_id": "QP010",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Identity-matrix orders that preserve a rectangular matrix follow directly from compatible dimensions and are retained as foundation content."
+        },
+        {
+            "concept_id": "C006",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Recognizing square shape and stating its order is a direct row-count/column-count definition check."
+        },
+        {
+            "concept_id": "C006",
+            "qp_id": "QP002",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Parameter conditions for squareness reduce to equality of row and column counts; this is a simple order constraint and overlaps the existing dimension-inference mechanism without adding a distinct one."
+        },
+        {
+            "concept_id": "C006",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Determining whether an expression is square from the orders of its operands is routine dimension tracking and overlaps the existing operation-definedness candidate unless a distinct multi-constraint task is specified."
+        },
+        {
+            "concept_id": "C006",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Checking whether determinant, trace, inverse, eigenvalues or characteristic polynomial apply is a direct square-matrix prerequisite check."
+        },
+        {
+            "concept_id": "C006",
+            "qp_id": "QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Identifying principal or secondary diagonal entries is direct positional recognition within a square matrix."
         }
     ],
     "archetypes": [
