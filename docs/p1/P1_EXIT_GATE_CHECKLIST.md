@@ -18,8 +18,8 @@ This checklist applies the P1 activities, deliverables and exit gate in `Questio
 | 5 | Reconcile parent/child enable flags | PARTIAL | Effective-enabled snapshot is 26 TRUE / 1,000 FALSE. Empty chapters and scope gaps are documented. Full parent-child cascade audit still required. |
 | 6 | Preserve historical taxonomy IDs and record mappings | PASS — CURRENT SNAPSHOT | 1,026 unique subtopic codes and IDs; zero duplicates in the mapping register. No source curriculum tables or stable IDs were changed during P1. |
 | 7 | Audit PYQ inventory 2002–2026; separate IIT-JEE/AIEEE from Main/Advanced | INVENTORY PASS; ACQUISITION PARTIAL | 247 inventory rows reconciled: Main 185, Advanced 28, IIT-JEE 21, AIEEE 13. Paper acquisition and historical source validation remain incomplete. |
-| 8 | Record paper/session/question/page/source/URL/hash/key/match/confidence | PARTIAL | Two 2-Apr-2026 Shift 1 questions have official question-ID/option-ID matches and independent solutions. Most records lack local bytes, hashes and question-level key matching. |
-| 9 | Reconcile workbook inventory with QuestionEngine source status and README claims | PARTIAL | 247 unique IDs in acquisition/audited trackers. Official-source label counts differ; 11 paper URLs are accessible, but no answer-key URL or SHA-256 is populated in the 247-row tracker. |
+| 8 | Record paper/session/question/page/source/URL/hash/key/match/confidence | PARTIAL | Two 2-Apr-2026 Shift 1 questions have official question-ID/option-ID matches and independent solutions. All 19 Main shift records now have official session-level key source URLs in `P1_2026_SESSION_KEY_LINKAGE.csv`, and both Advanced papers have official final-key URLs. Most records still lack local bytes, hashes and question-level key matching. |
+| 9 | Reconcile workbook inventory with QuestionEngine source status and README claims | PARTIAL | 247 unique IDs in acquisition/audited trackers. The nine-row official-source label mismatch is reconciled; 11 paper URLs are URL-access-verified. The original workbook still has no Answer Key URL or SHA-256 values; the derived linkage register records all 21 official key URLs. |
 | 10 | Resolve authoritative frozen blueprint source and rule crosswalk | BLOCKED | v1.5 fragments recovered, but complete canonical v1.5 artifact is missing. Repository rule namespaces and schemas conflict. |
 | 11 | Record unresolved mappings as explicit unknowns | PASS | Partial/no-direct mappings, empty chapters, unavailable PDFs, missing hashes and unknown blueprint thresholds are explicitly recorded. |
 
@@ -68,7 +68,7 @@ The mapping-basis categories are a review aid; they do not mean that all 1,026 s
 - 2026 subset: 21 records (19 JEE Main, 2 JEE Advanced).
 - 11 official question-paper URLs are marked accessible (9 April Main shifts, 2 Advanced papers).
 - 10 January 2026 Main shifts remain without an acquired/verified paper URL in the tracker.
-- Main Session I and II final answer-key PDFs were identified separately.
+- Main Session I and II final answer-key PDFs are linked to all 19 Main shifts at session level in `P1_2026_SESSION_KEY_LINKAGE.csv`.
 - Four questions are matched and independently solved: two Main questions from 2 April 2026 Shift 1, Advanced Paper 1 Q3 and Advanced Paper 2 Q1.
 - Local PDF bytes and SHA-256 values remain pending; no bulk answer-key reconciliation is claimed.
 
@@ -120,3 +120,11 @@ Still missing: complete original v1.5 file, exact saturation thresholds, full ar
 **Still open:** Derived canonical source-label normalization, 2026 answer-key URL linkage, 10 January Main PDF sourcing, local PDF acquisition and SHA-256, broad question/key matching, full taxonomy academic review, and canonical Blueprint v1.5 authority.
 
 **P1 remains IN PROGRESS — EXIT GATE NOT PASSED.**
+
+
+## 2D. Official 2026 answer-key source linkage — 2026-11-17
+
+- Session I final key covers the 10 January Main shifts; Session II final key covers the 9 April Main shifts. Both Advanced 2026 final-key PDFs are identified.
+- Derived register `P1_2026_SESSION_KEY_LINKAGE.csv` contains all 21 2026 records with official answer-key source URLs. This closes session/paper-level key-source linkage, not full question-level matching.
+- Four question-level matches are independently verified. Remaining question-level matching is pending.
+- Original Library workbook is unchanged; its Answer Key URL column remains empty. Local PDF bytes and hashes remain pending.
