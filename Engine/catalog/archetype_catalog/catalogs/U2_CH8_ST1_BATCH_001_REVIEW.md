@@ -801,3 +801,24 @@ New draft candidates:
 Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 215 dispositions and 55 draft archetypes; 135 source QPs remain untouched. Ten source possibilities are held for review.
+
+
+## Batch 044 — nilpotent index, parameter constraints and polynomial invariants (global QP216–QP220)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C019 / QP001 | FOUNDATION_ONLY | Direct A^k=O definition check |
+| C019 / QP002 | ELIGIBLE | Find the least positive power that vanishes and prove minimality |
+| C019 / QP003 | ELIGIBLE | Nilpotency imposes simultaneous polynomial constraints on parameters |
+| C019 / QP004 | FOUNDATION_ONLY | Zero eigenvalues, determinant and trace are direct consequences |
+| C019 / QP005 | ELIGIBLE | Characteristic polynomial is λ^n; minimal polynomial is λ^k for the nilpotency index k |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00056`: Determine the index of nilpotency of a matrix.
+- `U2_CH8_ST1_AR00057`: Derive parameter conditions for a nilpotent matrix.
+- `U2_CH8_ST1_AR00058`: Derive characteristic and minimal polynomial constraints for a nilpotent matrix.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 220 dispositions and 58 draft archetypes; 130 source QPs remain untouched.
