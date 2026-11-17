@@ -959,6 +959,36 @@
             "qp_id": "QP002",
             "disposition": "ELIGIBLE",
             "rationale": "Skew-symmetry imposes paired negative-entry constraints and zero diagonal entries; solving parameter/missing-entry conditions is a distinct reusable structural-constraint mechanism."
+        },
+        {
+            "concept_id": "C014",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The skew-symmetric component is (A−Aᵀ)/2 and is part of the full symmetric/skew-symmetric decomposition already represented by AR00024."
+        },
+        {
+            "concept_id": "C014",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Zero diagonal entries and zero trace follow directly from Aᵀ=−A over the real/complex fields."
+        },
+        {
+            "concept_id": "C014",
+            "qp_id": "QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The general element-wise form follows by choosing one free value for each pair above/below the diagonal and negating the transposed entry; this is a direct representation fact."
+        },
+        {
+            "concept_id": "C014",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The number of independent parameters is n(n−1)/2, one for each off-diagonal pair; this is a direct count."
+        },
+        {
+            "concept_id": "C014",
+            "qp_id": "QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Addition, subtraction, scalar multiplication, transpose and negation preserve skew-symmetry by direct transpose identities."
         }
     ],
     "archetypes": [
