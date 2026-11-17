@@ -486,3 +486,21 @@ All five possibilities are retained as `FOUNDATION_ONLY`:
 | C012 / QP009 | Diagonal entries of lower-triangular products/powers | Same mechanism as AR00021; do not duplicate |
 
 No new archetypes were added. Cumulative status: 135 dispositions and 21 draft archetypes; 215 source QPs remain untouched.
+
+
+## Batch 028 — lower-triangular parameter, inverse and nilpotency review (global QP136–QP140)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C012 / QP010 | ELIGIBLE | Parameterized lower-triangular structure requires simultaneous above-diagonal zero constraints |
+| C012 / QP011 | FOUNDATION_ONLY | Inverse triangularity mirrors the upper-triangular inverse candidate |
+| C012 / QP012 | FOUNDATION_ONLY | Nonzero diagonal criterion duplicates the triangular invertibility mechanism |
+| C012 / QP013 | FOUNDATION_ONLY | Strictly lower-triangular nilpotency mirrors the existing upper-triangular nilpotency mechanism |
+| C013 / QP001 | FOUNDATION_ONLY | Symmetric recognition is a direct transpose-equality check |
+
+New draft candidate:
+
+- `U2_CH8_ST1_AR00022`: Derive parameter constraints for a lower-triangular matrix.
+- JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
+
+Cumulative status: 140 dispositions and 22 draft archetypes; 210 source QPs remain untouched.
