@@ -128,3 +128,122 @@ These details are discovery leads only. Where complete user-approved source text
 8. If the original approved source cannot be recovered, the project owner must explicitly authorize a new reconstructed baseline and version; it must not be labelled the historical v1.5.
 
 **P1 status:** Rule authority not resolved. Final blueprint freeze is prohibited. This is a genuine blocking dependency for final P1 acceptance and for selecting a pilot that depends on the disputed rules.
+
+
+## 7. Additional prior-conversation recovery — 2026-11-17
+
+The following fragments were recovered from prior conversation context after the initial repository/Library search. They improve the historical reconstruction, but they are **not a substitute for the missing canonical v1.5 file** and must not be treated as a final source-of-truth artifact.
+
+### 7.1 Recovered part structure
+
+The historical v1.5 structure is remembered as 18 parts: Philosophy; Lifecycle; SC-01 Database-first; Stable IDs; R01–R12; AR-01 Dynamic Count/Saturation; BS-01 Batch Size; DE-01/DE-02; AR-02 Archetype Registry; DI-01; META-01; CM-01; PYQ engines; v1.4 engines; RL-01; EDF-01; Subject Design Pipeline; Hard Stop. Exact original headings and body text are still missing.
+
+### 7.2 R01–R12 recovered quality-rule names
+
+| Rule | Recovered name | Recovered core intent |
+|---|---|---|
+| R01 | Concept First | Test conceptual understanding; concept must be identifiable |
+| R02 | Single Learning Objective | One primary learning objective per question unless integration is intentional |
+| R03 | Mathematical Verification | Verify formulae, calculations, units, dimensions and logic |
+| R04 | Unique Answer | Exactly one correct answer unless the item type permits otherwise |
+| R05 | Explanation Quality | Complete educational explanation of the governing concept |
+| R06 | Difficulty Alignment | Difficulty comes from conceptual depth, not calculation length |
+| R07 | Language Quality | Clear, precise and professional exam language |
+| R08 | Examination Authenticity | Official exam style without answer-revealing patterns |
+| R09 | Originality | Original questions inspired by trends, not copied questions |
+| R10 | Educational Value | Explanation should teach |
+| R11 | Internal Consistency | Question, options, answer and explanation agree |
+| R12 | Production Readiness | Production inclusion gate must pass |
+
+These match the names/intent in `Engine/prompts/master/05_blueprint_rules.md`. No reliable R13–R20 quality-rule definitions were recovered; do not infer them from the AR01–AR20 archetypes.
+
+### 7.3 AR-01, BS-01 and saturation intent
+
+- **AR-01:** Dynamic Count Rule. Batch size is a container; set completion depends on saturation, not a fixed question count. Inputs include concept/archetype coverage, formula diversity, solution diversity, Bloom coverage, PYQ patterns and repetition. Outputs: `CONTINUE` or `SATURATED`.
+- Global principles recovered: coverage over count; quality over speed; set saturation over batch saturation.
+- **BS-01:** default batch size is 10; it does not define set completion.
+- Exact saturation thresholds, weights, formula and minimum coverage percentages remain unknown.
+
+### 7.4 AR-02 archetype names recovered
+
+| ID | Name | ID | Name |
+|---|---|---|---|
+| AR01 | Direct | AR11 | Integer Answer |
+| AR02 | Reverse | AR12 | Counting |
+| AR03 | Parameterized | AR13 | Graphical |
+| AR04 | Composite | AR14 | Advanced Manipulation |
+| AR05 | Transformation | AR15 | PYQ Style |
+| AR06 | Hidden Identity | AR16 | Symmetry |
+| AR07 | Variable Substitution | AR17 | Case Splitting |
+| AR08 | Multi-Step Chain | AR18 | Optimization |
+| AR09 | Statement | AR19 | Functional Equation |
+| AR10 | Assertion–Reason | AR20 | Mixed Concept |
+
+Names are recovered; complete definitions, selection criteria, per-set quotas, examples and activation/saturation thresholds are not. The v1.5 AR19 name is Functional Equation; repository `Blueprint/02_ARCHETYPES.md` says Functional Relation.
+
+### 7.5 DE-01/DE-02 and DR01–DR12 recovered
+
+- **DE-01:** every distractor must represent a plausible, identifiable student misconception; random distractors are prohibited.
+- **DE-02:** distractors must be plausible, distinct, internally consistent, clearly incorrect after correct reasoning and not accidentally become correct; diversify misconception categories.
+
+| ID | Recovered v1.5 distractor category |
+|---|---|
+| DR01 | Arithmetic Error |
+| DR02 | Sign Error |
+| DR03 | Reciprocal Confusion |
+| DR04 | Identity Misuse |
+| DR05 | Quadrant Mistake |
+| DR06 | Principal Value Error |
+| DR07 | Periodicity Mistake |
+| DR08 | Half-Angle Confusion |
+| DR09 | Formula Substitution Error |
+| DR10 | Unit Mismatch |
+| DR11 | Root Selection Mistake |
+| DR12 | Parameter Misinterpretation |
+
+Full definitions, examples, weighting and allowed category distributions are not recovered. This is a third registry distinct from both the repository's DR01–DR10 prompt taxonomy and the historical v1.3 DR01–DR07 taxonomy.
+
+### 7.6 DI-01 and historical execution defaults
+
+Recovered intended set progression:
+- S1 Foundation
+- S2 Easy+
+- S3 Medium
+- S4 Hard
+- S5 Elite
+
+Additional historical difficulty score bands were recorded as Easy 10–20, Easy+ 21–35, Medium 36–55, Medium+ 56–75 and Advanced 76–100. The mapping of these five score bands to S1–S5 is unresolved; Medium+/Advanced must not be silently renamed Hard/Elite.
+
+Historical question-type distributions recovered:
+- S1: 80/10/10
+- S2: 70/15/15
+- S3: 60/20/20
+- S4: 50/25/25
+- S5 adds Integer Answer, Multi-step and PYQ-style forms.
+
+Single Correct / Statement / Assertion–Reason are associated with the S1 split. The exact category allocation for S2–S4 is not recovered.
+
+Other historical defaults (not active production settings until verified): +4/-1 marks; estimated-time bands Easy 45–90s, Easy+ 60–120s, Medium 90–150s, Medium+ 120–210s, Advanced 180–300s; exam relevance mix 70% Main / 20% Advanced / 10% BITSAT; status DRAFT; version v1.0; `is_verified=false`.
+
+### 7.7 Remaining recovered rules
+
+| Rule | Recovered detail | Still unknown |
+|---|---|---|
+| META-01 | `mistake_pattern`, `common_error`, `difficulty_tag`, `prerequisite_concept`, `jee_frequency`, `revision_priority` | Required/optional status and value dictionaries |
+| CM-01 | Unit → Chapter → Subtopic → Concept → Formula → Common Error → Archetype → Question IDs → Difficulty | Cardinality and linking constraints |
+| PYQ-01 | Source/exam/year/paper/shift/question provenance; separate paper, key and solution sources | Full source hierarchy and recency rules |
+| PYQ-02 | Similarity distance 0 Original, 1 Inspired, 2 PYQ-like, 3 Near Duplicate (reject) | Algorithm and score thresholds |
+| SV-01 | Nulls, option completeness, answer consistency, allowed values, escaping, CSV integrity and length limits | Complete canonical schema/value table |
+| QE-01 | Five dimensions /10 each: concept clarity, difficulty accuracy, distractor quality, novelty, JEE relevance; minimum 40/50 | Rubric and veto conditions |
+| RL-01 | DRAFT → UNDER_VERIFICATION → RELEASED | Complete state machine and rollback rules |
+| FD-01 | Formula diversity | Formula families and thresholds |
+| SD-01 | Solution-method diversity | Method taxonomy and thresholds |
+| CE-01 | Coverage expansion | Coverage metric and quotas |
+| CT-01 | Continuity and stable-ID preservation | Full transition/recovery rules |
+| EDF-01 | Defaults include DRAFT, v1.0, `is_verified=false` | Full defaults and override hierarchy |
+| Hard Stop | Stop if schema, continuity, coverage, archetype, formula/solution diversity, PYQ similarity, distractor, answer, explanation or quality gates fail | Exact aggregation and override policy |
+
+### 7.8 Updated P1 decision
+
+The prior conversation recovery is sufficient to identify the intended v1.5 direction and to prove several repository conflicts. It is **not sufficient to reconstruct the complete frozen blueprint without guessing**. The full original artifact remains the authority blocker. If it cannot be recovered, the safe route is an explicitly versioned recovery candidate, not a file falsely labelled as the original v1.5.
+
