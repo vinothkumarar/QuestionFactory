@@ -700,3 +700,21 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 190 dispositions and 43 draft archetypes; 160 source QPs remain untouched.
+
+
+## Batch 039 — singularity characterizations and adjugate rank structure (global QP191–QP195)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C016 / QP005 | FOUNDATION_ONLY | Equivalent determinant/rank/inverse/dependence characterizations are standard facts |
+| C016 / QP006 | ELIGIBLE | Adjugate behavior splits by rank n, n−1 and ≤n−2 |
+| C017 / QP001 | FOUNDATION_ONLY | Direct nonzero-determinant/invertibility check |
+| C017 / QP002 | FOUNDATION_ONLY | Nonzero determinant condition complements AR00041; no duplicate archetype |
+| C017 / QP003 | FOUNDATION_ONLY | Equivalent non-singularity characterizations are standard facts |
+
+New draft candidate:
+
+- `U2_CH8_ST1_AR00044`: Infer adjugate structure from the rank of a matrix.
+- JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
+
+Cumulative status: 195 dispositions and 44 draft archetypes; 155 source QPs remain untouched.
