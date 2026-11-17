@@ -1949,6 +1949,36 @@
             "qp_id": "QP010",
             "disposition": "ELIGIBLE",
             "rationale": "Powers and polynomial expressions of a block-diagonal matrix are evaluated independently on each diagonal block; this is a reusable blockwise reduction."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP011",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The transpose of a block-diagonal matrix is block diagonal with each diagonal block transposed; this is direct blockwise application."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP012",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Linear combinations preserve block-diagonal form when matrices share the same partition, by entrywise closure of the zero off-block pattern."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP013",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Products with a common compatible partition multiply corresponding diagonal blocks independently; this is direct block multiplication."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP014",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A block-diagonal matrix is diagonal exactly when every diagonal block is itself diagonal under the stated coordinate partition."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP015",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A block-diagonal matrix is upper/lower triangular exactly when each diagonal block has the corresponding triangular form; off-block entries are already zero."
         }
     ],
     "archetypes": [
