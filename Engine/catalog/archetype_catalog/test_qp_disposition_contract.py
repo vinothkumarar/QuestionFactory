@@ -121,6 +121,18 @@ class QPDispositionContractTests(unittest.TestCase):
         )
         self.assertEqual(len(result["archetypes"]), 1)
 
+    def test_disposition_rejects_unexpected_fields(self) -> None:
+        item = disposition("FOUNDATION_ONLY")
+        item["unexpected"] = True
+        with self.assertRaisesRegex(ValueError, "exactly"):
+            validate_catalog_response(
+                response={
+                    "qp_dispositions": [item],
+                    "archetypes": [],
+                },
+                input_qps=[qp()],
+            )
+
     def test_archetype_cannot_change_copied_source_metadata(self) -> None:
         changed = archetype()
         changed["question_possibility"] = "Changed by AI"
