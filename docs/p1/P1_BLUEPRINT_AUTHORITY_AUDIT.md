@@ -263,3 +263,13 @@ The official JEE Advanced 2026 Paper 1 and its final-key PDF were opened directl
 Official evidence: `https://jeeadv.ac.in/documents/p1_english.pdf` and `https://jeeadv.ac.in/documents/p1_solutions_final.pdf`.
 
 **P1 implication:** EDF-01 cannot safely apply a universal +4/−1 default to every JEE Advanced question. It must be keyed to exam, year, paper and section/question format. The recovered historical +4/−1 value remains a default fragment only, not a complete scoring policy. Main 2026 and future exam patterns must also be represented separately.
+
+## 8. Second recovery pass — 2026-11-17
+
+A second targeted recovery pass was performed after the initial audit:
+
+- ChatGPT Library semantic search was repeated with the exact title phrase `MASTER CONSOLIDATED FROZEN BLUEPRINT v1.5`, the 18-part structure, and the v1.5 identifiers (AR-01, SC-01, DI-01). The returned relevant records were the consolidated blueprint/QPC notes, decision register, reconciliation addendum and MECP plan; none was the complete signed-off v1.5 artifact.
+- GitHub repository code search was run for the exact title, `Blueprint v1.5`, `AR-01 Dynamic Count SC-01 Schema Freeze` and the recovered DR12 label. No matching files were returned from the repository's default-branch code-search index.
+- The Library materials corroborate fragments and the authority hierarchy, but expressly state that the precise final approved version and complete rule text must be checked against the canonical source. They do not authorize promoting the recovered fragments to a new freeze.
+
+**Recovery disposition:** The canonical v1.5 artifact remains NOT RECOVERED after the second pass. This is a real P1 blocker, not a missing-document assumption. Preserve the provisional crosswalk and current rule namespaces; do not silently reconstruct or freeze a candidate. If the original file is later supplied or located, compare it line-by-line before changing the authority status.
