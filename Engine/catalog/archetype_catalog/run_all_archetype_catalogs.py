@@ -135,15 +135,15 @@ def main() -> None:
         catalog = load_existing_catalog(json_file)
         # Validate all persisted dispositions and archetypes against the
         # original source before resuming. Empty archetype arrays are valid.
-        if catalog["qp_dispositions"]:
+        if catalog["qp_dispositions"] or catalog["archetypes"]:
+            persisted_keys = {
+                (item.get("concept_id"), item.get("qp_id"))
+                for item in catalog["qp_dispositions"]
+            }
             validate_catalog_response(
                 response=catalog,
                 input_qps=[
-                    row for row in qps
-                    if qp_key(row) in {
-                        (item.get("concept_id"), item.get("qp_id"))
-                        for item in catalog["qp_dispositions"]
-                    }
+                    row for row in qps if qp_key(row) in persisted_keys
                 ],
             )
 
