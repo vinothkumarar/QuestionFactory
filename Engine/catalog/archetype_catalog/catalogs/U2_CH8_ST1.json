@@ -779,6 +779,36 @@
             "qp_id": "QP004",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Addition and scalar multiplication preserve lower-triangular form by direct entrywise closure."
+        },
+        {
+            "concept_id": "C012",
+            "qp_id": "QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The product of lower-triangular matrices remains lower triangular by the zero-pattern multiplication rule; this is a direct closure property."
+        },
+        {
+            "concept_id": "C012",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Transpose converts lower-triangular form to upper-triangular form by swapping indices; this is a direct shape transformation."
+        },
+        {
+            "concept_id": "C012",
+            "qp_id": "QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A matrix that is both upper and lower triangular is diagonal; a symmetric lower-triangular matrix is likewise diagonal by entry symmetry. This is a direct structural implication."
+        },
+        {
+            "concept_id": "C012",
+            "qp_id": "QP008",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Powers preserve lower-triangular form by repeated closure under multiplication; this is a direct property."
+        },
+        {
+            "concept_id": "C012",
+            "qp_id": "QP009",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Diagonal entries of lower-triangular products/powers follow the same componentwise rule as upper-triangular matrices; it duplicates the existing archetype mechanism and is retained as a foundation variation."
         }
     ],
     "archetypes": [
