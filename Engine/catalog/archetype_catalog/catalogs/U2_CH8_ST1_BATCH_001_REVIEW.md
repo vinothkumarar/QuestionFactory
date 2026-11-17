@@ -1053,3 +1053,23 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 275 dispositions and 91 draft archetypes; 75 source QPs remain untouched.
+
+
+## Batch 056 — Hermitian parameter constraints and product commutativity (global QP276–QP280)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C023 / QP002 | ELIGIBLE | Hermitian condition imposes real diagonal and conjugate-paired off-diagonal constraints |
+| C023 / QP003 | FOUNDATION_ONLY | General Hermitian/skew-Hermitian decomposition is already represented |
+| C023 / QP004 | FOUNDATION_ONLY | Real vector-space closure follows by adjoint linearity |
+| C023 / QP005 | FOUNDATION_ONLY | Powers/real polynomials preserve Hermiticity by direct identities |
+| C023 / QP006 | ELIGIBLE | Product of Hermitian matrices is Hermitian iff the factors commute |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00092`: Derive parameter and missing-entry constraints for a Hermitian matrix.
+- `U2_CH8_ST1_AR00093`: Determine when a product of Hermitian matrices is Hermitian.
+
+Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 280 dispositions and 93 draft archetypes; 70 source QPs remain untouched.
