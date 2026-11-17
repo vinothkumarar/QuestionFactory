@@ -1079,6 +1079,36 @@
             "qp_id": "QP009",
             "disposition": "ELIGIBLE",
             "rationale": "Special-family classification reduces orthogonality to conditions such as diagonal entries ±1 or orthogonal blocks; this is a reusable structural classification mechanism."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP010",
+            "disposition": "ELIGIBLE",
+            "rationale": "For a real scalar c and orthogonal Q, (cQ)ᵀ(cQ)=c²I, so orthogonality requires c=±1; for a general A, the condition reduces to c²AᵀA=I. This is a reusable scalar-constraint mechanism."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP011",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Row/column permutations and sign changes preserve orthonormality by permuting or negating orthonormal vectors; this is a direct invariance property."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP012",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Orthogonal matrices are necessarily square, full-rank and nonsingular because QᵀQ=I; this is a direct structural prerequisite check."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP013",
+            "disposition": "ELIGIBLE",
+            "rationale": "Orthogonal transformations preserve inner products and hence vector lengths and angles; applying this to vector constraints is a distinct metric-invariance mechanism."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP014",
+            "disposition": "ELIGIBLE",
+            "rationale": "Combining orthogonality with symmetry/skew-symmetry produces additional identities such as Q²=I or Q²=−I and field/order restrictions; this is a distinct combined-structure mechanism."
         }
     ],
     "archetypes": [
@@ -2115,6 +2145,93 @@
                 "permutation pattern",
                 "sign changes",
                 "block sizes and block conditions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C015",
+            "concept": "Orthogonal Matrix",
+            "qp_id": "QP010",
+            "question_possibility": "Determine conditions on a scalar multiple of a matrix for it to be orthogonal",
+            "archetype_id": "U2_CH8_ST1_AR00037",
+            "archetype": "Determine scalar multiples that preserve orthogonality",
+            "assessment_mechanism": "Translate orthogonality of cA into c²AᵀA=I, then solve the scalar constraint under the stated assumptions on A and the scalar field.",
+            "reasoning_path": "Compute (cA)ᵀ(cA)=c²AᵀA; if A is already orthogonal, reduce to c²=1; otherwise compare AᵀA with a scalar multiple of identity; solve for admissible c and verify.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "A already orthogonal or arbitrary",
+                "real versus complex scalar",
+                "single versus multiple scaling factors",
+                "matrix order",
+                "additional normalization constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C015",
+            "concept": "Orthogonal Matrix",
+            "qp_id": "QP013",
+            "question_possibility": "Establish metric-preserving properties of orthogonal matrices, such as preservation of vector lengths, dot products, and angles",
+            "archetype_id": "U2_CH8_ST1_AR00038",
+            "archetype": "Use orthogonality to preserve vector lengths and inner products",
+            "assessment_mechanism": "Apply QᵀQ=I to show that an orthogonal transformation preserves Euclidean inner products, norms and angles, then translate geometric/vector constraints through the transformation.",
+            "reasoning_path": "Compute (Qx)ᵀ(Qy)=xᵀQᵀQy=xᵀy; set x=y to obtain norm preservation; infer angle preservation from dot products; apply the invariant to the given vector or geometric conditions.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "one versus multiple vectors",
+                "length/dot-product/angle target",
+                "unknown orthogonal transform",
+                "vector constraints",
+                "dimension"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C015",
+            "concept": "Orthogonal Matrix",
+            "qp_id": "QP014",
+            "question_possibility": "Determine implications when a matrix is both orthogonal and another special type, such as symmetric or skew-symmetric",
+            "archetype_id": "U2_CH8_ST1_AR00039",
+            "archetype": "Combine orthogonality with symmetric or skew-symmetric structure",
+            "assessment_mechanism": "Use QᵀQ=I together with Qᵀ=Q or Qᵀ=−Q to derive involutory or negative-involutory identities and determine additional restrictions.",
+            "reasoning_path": "For symmetric orthogonal Q, substitute Qᵀ=Q into QᵀQ=I to obtain Q²=I; for skew-symmetric orthogonal Q, substitute Qᵀ=−Q to obtain Q²=−I; examine real-field and dimension feasibility; verify the resulting constraints.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "symmetric versus skew-symmetric",
+                "real versus complex field",
+                "matrix order parity",
+                "eigenvalue or determinant constraints",
+                "existence versus classification"
             ]
         }
     ]
