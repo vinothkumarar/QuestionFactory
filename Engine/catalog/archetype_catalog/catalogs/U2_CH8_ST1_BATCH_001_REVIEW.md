@@ -636,3 +636,24 @@ New draft candidates:
 Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 175 dispositions and 33 draft archetypes; 175 source QPs remain untouched. Five source possibilities are held for review due underspecified conditions.
+
+
+## Batch 036 — orthogonal determinant, entry constraints and special families (global QP176–QP180)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C015 / QP005 | ELIGIBLE | Determinant identity yields det(Q)=±1 and orientation classification |
+| C015 / QP006 | FOUNDATION_ONLY | Standard closure under product, transpose, inverse and powers |
+| C015 / QP007 | FOUNDATION_ONLY | Equivalent orthogonality characterizations by row/column inner products |
+| C015 / QP008 | ELIGIBLE | Unit norms and zero cross-products yield entry bounds and aggregate identities |
+| C015 / QP009 | ELIGIBLE | Orthogonality reduces to family-specific conditions for diagonal, permutation and block matrices |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00034`: Infer determinant and orientation of an orthogonal matrix.
+- `U2_CH8_ST1_AR00035`: Derive entry-wise and aggregate constraints from orthogonality.
+- `U2_CH8_ST1_AR00036`: Characterize orthogonality in diagonal, permutation and block matrix families.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 180 dispositions and 36 draft archetypes; 170 source QPs remain untouched.
