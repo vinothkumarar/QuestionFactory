@@ -37,7 +37,7 @@ Eleven records are marked “URL verified — PDF accessible” (two JEE Advance
 
 The workbook's PDF Verified = Yes field is an access/URL status in these records; it is not proof that local bytes were acquired and hashed. No local PDF bytes or SHA-256 values were present in the inspected files or repository tree.
 
-All 21 2026 records still have Answer Key Verified = No in the workbook. Official key documents were found separately. Three question-level matches have now been completed in the separate P1 evidence register: two Main questions from 2 April 2026 Shift 1 and one Advanced Paper 1 question. The workbook's aggregate field remains unchanged until the full record-level audit is complete.
+All 21 2026 records still have Answer Key Verified = No in the workbook. Official key documents were found separately. Four question-level matches have now been completed in the separate P1 evidence register: two Main questions from 2 April 2026 Shift 1, Advanced Paper 1 Q3 and Advanced Paper 2 Q1. The workbook's aggregate field remains unchanged until the full record-level audit is complete.
 
 ## Official JEE Main 2026 final answer-key evidence
 
@@ -55,7 +55,7 @@ NTA's official documents register links final answer-key documents for both Pape
 
 NTA official documents index: https://jeemain.nta.nic.in/documents/
 
-**Verification state:** Both official answer-key sources are located and accessible. Session II has two question-ID/option-ID matches independently solved and verified for 2 April 2026 Shift 1. Session I and the remaining Session II papers still require record-level matching. Both official Advanced 2026 final-key PDFs are now located; Paper 1 Q3 is matched and independently solved, while Paper 2 matching remains pending. Local bytes and SHA-256 values remain pending, so no full-paper or session-wide verification claim is made.
+**Verification state:** Both official answer-key sources are located and accessible. Session II has two question-ID/option-ID matches independently solved and verified for 2 April 2026 Shift 1. Session I and the remaining Session II papers still require record-level matching. Both official Advanced 2026 final-key PDFs are now located; Paper 1 Q3 and Paper 2 Q1 are both matched and independently solved. Local bytes and SHA-256 values remain pending, so no full-paper or session-wide verification claim is made.
 
 ## Official JEE Advanced 2026 answer-key evidence
 
@@ -140,3 +140,6 @@ Official final key URLs:
 Paper 1 Q3 is matched to the official final key answer `B`. The question asks which 3×3 matrix can be obtained from the identity by elementary row transformations. Such a matrix must be invertible. Determinants of options A, B, C and D are respectively `0, -2, 0, 0`; only B is invertible. The independent result agrees with the official key. This record is in `P1_PYQ_EVIDENCE_REGISTER.csv` as `JEE_ADVANCED_2026_P1_MATH_Q3`.
 
 Paper 2's official final-key URL is located, but no Paper 2 question-level match is claimed yet.
+
+
+Paper 2 Q1 is also independently verified: wire resistance `R=L/(sigma*A)=1 ohm`, total current `I=1 A`, carrier density `n=6×10^28 m^-3`, and drift velocity `vd=0.2083 mm/s`, matching option C and the official Paper 2 final key. Evidence is stored as `JEE_ADVANCED_2026_P2_PHY_Q1` in the P1 evidence register.
