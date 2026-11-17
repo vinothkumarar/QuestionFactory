@@ -51,7 +51,7 @@ class ArchetypeCatalogContractTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Factory assigns"):
             client._validate_records([record])
 
-    def test_prompt_uses_flat_catalogue_contract(self) -> None:
+    def test_prompt_uses_disposition_aware_catalogue_contract(self) -> None:
         prompt = BatchArchetypeCatalogGenerator().load_prompt(
             qps=[
                 {
@@ -66,7 +66,9 @@ class ArchetypeCatalogContractTests(unittest.TestCase):
                 }
             ]
         )
-        self.assertIn("Return a FLAT JSON ARRAY", prompt)
+        self.assertIn("AUTHORITATIVE BATCH CONTRACT", prompt)
+        self.assertIn('"qp_dispositions"', prompt)
+        self.assertIn('"FOUNDATION_ONLY"', prompt)
         self.assertIn('"assessment_mechanism"', prompt)
         self.assertIn('"variation_dimensions"', prompt)
         self.assertIn('"archetype_id": ""', prompt)
@@ -78,7 +80,15 @@ class ArchetypeCatalogContractTests(unittest.TestCase):
             json_file = root / "catalog.json"
             csv_file = root / "catalog.csv"
             json_file.write_text(
-                json.dumps([record]),
+                json.dumps({
+                    "qp_dispositions": [{
+                        "concept_id": record["concept_id"],
+                        "qp_id": record["qp_id"],
+                        "disposition": "ELIGIBLE",
+                        "rationale": "A distinct JEE mechanism is supported.",
+                    }],
+                    "archetypes": [record],
+                }),
                 encoding="utf-8",
             )
 
