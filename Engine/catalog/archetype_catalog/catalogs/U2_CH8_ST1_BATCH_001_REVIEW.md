@@ -226,3 +226,21 @@ All five possibilities are retained as `FOUNDATION_ONLY`:
 | C006 / QP005 | Identify principal/secondary diagonal | Direct positional recognition |
 
 No new archetypes were added. Cumulative status: 60 dispositions, 7 draft archetypes; 290 source QPs remain untouched.
+
+
+## Batch 013 — square-matrix counts, closure and block structure (global QP061–QP065)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C006 / QP006 | FOUNDATION_ONLY | Direct counting of diagonal/off-diagonal positions |
+| C006 / QP007 | FOUNDATION_ONLY | Direct closure properties of square matrices |
+| C006 / QP008 | FOUNDATION_ONLY | Square-only property inference overlaps the existing dimension-inference candidate |
+| C006 / QP009 | ELIGIBLE | Combining block-row and block-column sizes to impose squareness is a distinct constraint mechanism |
+| C007 / QP001 | FOUNDATION_ONLY | Direct zero-matrix definition check |
+
+New draft candidate:
+
+- `U2_CH8_ST1_AR00008`: Infer square block-matrix conditions from partition dimensions.
+- JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
+
+Cumulative status: 65 dispositions and 8 draft archetypes; 285 source QPs remain untouched.
