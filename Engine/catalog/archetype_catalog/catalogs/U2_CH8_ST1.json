@@ -929,6 +929,36 @@
             "qp_id": "QP016",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "A matrix that is both symmetric and triangular must be diagonal because transposed off-diagonal entries force both sides to zero."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP017",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A matrix that is both symmetric and skew-symmetric is zero over the real/complex fields; this is a direct consequence of Aᵀ=A and Aᵀ=−A."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP018",
+            "disposition": "REQUIRES_REVIEW",
+            "rationale": "The source does not specify the transpose relations or assumptions. A safe archetype cannot be defined until representative conditions are supplied."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP019",
+            "disposition": "REQUIRES_REVIEW",
+            "rationale": "The entry constraints and field are unspecified, so the count of admissible symmetric matrices is not determined by this possibility label alone."
+        },
+        {
+            "concept_id": "C014",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Skew-symmetric classification is a direct check of Aᵀ=−A and the implied zero diagonal over the real/complex fields."
+        },
+        {
+            "concept_id": "C014",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "Skew-symmetry imposes paired negative-entry constraints and zero diagonal entries; solving parameter/missing-entry conditions is a distinct reusable structural-constraint mechanism."
         }
     ],
     "archetypes": [
@@ -1705,6 +1735,35 @@
                 "square versus rectangular off-diagonal blocks",
                 "symbolic block entries",
                 "number of independent constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C014",
+            "concept": "Skew-Symmetric Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Determine parameter conditions or missing entries for a matrix to be skew-symmetric",
+            "archetype_id": "U2_CH8_ST1_AR00028",
+            "archetype": "Derive parameter and missing-entry constraints for a skew-symmetric matrix",
+            "assessment_mechanism": "Translate Aᵀ=−A into zero-diagonal conditions and paired negative-entry relations, then solve for unknown parameters or missing entries.",
+            "reasoning_path": "Compare each entry aᵢⱼ with the transposed entry aⱼᵢ; set diagonal entries to zero; impose aⱼᵢ=−aᵢⱼ for i≠j; solve the resulting parameter/missing-entry constraints; verify the complete matrix identity.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "number of missing entries",
+                "parameterized entries",
+                "diagonal constraints",
+                "independent/dependent pair constraints"
             ]
         }
     ]
