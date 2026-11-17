@@ -689,6 +689,36 @@
             "qp_id": "QP011",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Transpose, inverse and integer powers of an identity matrix return the identity of the compatible order; these are direct properties."
+        },
+        {
+            "concept_id": "C011",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Upper-triangular recognition is a direct check that all entries below the main diagonal are zero."
+        },
+        {
+            "concept_id": "C011",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "Requiring all entries below the main diagonal of a parameterized matrix to vanish gives a simultaneous structural constraint system; retained as a JEE Main candidate."
+        },
+        {
+            "concept_id": "C011",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The inclusion relationships among upper triangular, diagonal, scalar and identity matrices follow directly from their definitions."
+        },
+        {
+            "concept_id": "C011",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Addition and scalar multiplication preserve upper-triangular form by direct entrywise closure."
+        },
+        {
+            "concept_id": "C011",
+            "qp_id": "QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Products, powers and polynomial expressions preserve upper-triangular form by the standard zero-pattern multiplication rule; this is a direct structural property."
         }
     ],
     "archetypes": [
@@ -1176,6 +1206,35 @@
                 "matrix order",
                 "single versus combined properties",
                 "parameter restrictions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C011",
+            "concept": "Upper Triangular Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Determine parameter conditions for a matrix to be upper triangular",
+            "archetype_id": "U2_CH8_ST1_AR00018",
+            "archetype": "Derive parameter constraints for an upper-triangular matrix",
+            "assessment_mechanism": "Translate upper-triangular structure into zero constraints on all entries strictly below the main diagonal, then solve the resulting simultaneous equations in the matrix parameters.",
+            "reasoning_path": "Identify every position (i,j) with i>j; set each such entry to zero; solve the resulting parameter equations; retain unconstrained diagonal and above-diagonal entries; verify the resulting matrix has the required zero pattern.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "number of parameters",
+                "number of below-diagonal constraints",
+                "independent/dependent equations",
+                "symbolic versus numeric entries"
             ]
         }
     ]
