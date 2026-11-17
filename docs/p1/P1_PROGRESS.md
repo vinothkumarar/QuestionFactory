@@ -85,7 +85,7 @@ README reconciliation:
 - Resolve this by distinguishing at least: INVENTORIED, URL_VERIFIED, BYTES_ACQUIRED, HASH_VERIFIED, TRANSCRIPTION_VERIFIED, ANSWER_KEY_SOURCE_LINKED, ANSWER_KEY_VERIFIED and SYLLABUS_MAPPED. Do not collapse URL accessibility into acquisition.
 - Historical IIT-JEE and AIEEE remain separate exam families from JEE Main and JEE Advanced. Their syllabus and paper formats must not be assumed identical.
 
-#### Answer-key source follow-up — 2026-11-17\n\n- NTA JEE Main 2026 Session I and Session II final answer-key PDFs are official and text-accessible; they contain subject-wise question IDs and correct option identifiers by date/shift. The Library tracker has not yet linked these URLs to all 19 2026 Main shift records. Two question/key pairs from 2 April Shift 1 are now matched in the P1 evidence register; the remaining paper/shift/question matches are pending.\n- JEE Advanced 2026 Information Brochure states that final answer keys for both papers were scheduled for online publication on 2026-06-01. The direct final-key PDF URL was not recovered during this initial pass; both paper records remain unverified pending exact source retrieval and matching. Official brochure: https://jeeadv.ac.in/documents/IBEnglish_2026.pdf\n\n#### Blueprint authority audit — unresolved
+#### Answer-key source follow-up — 2026-11-17\n\n- NTA JEE Main 2026 Session I and Session II final answer-key PDFs are official and text-accessible; they contain subject-wise question IDs and correct option identifiers by date/shift. The Library tracker has not yet linked these URLs to all 19 2026 Main shift records. Two question/key pairs from 2 April Shift 1 are now independently solved and matched in the P1 evidence register; the remaining paper/shift/question matches are pending.\n- JEE Advanced 2026 Information Brochure states that final answer keys for both papers were scheduled for online publication on 2026-06-01. The direct final-key PDF URL was not recovered during this initial pass; both paper records remain unverified pending exact source retrieval and matching. Official brochure: https://jeeadv.ac.in/documents/IBEnglish_2026.pdf\n\n#### Blueprint authority audit — unresolved
 
 Repository sources inspected:
 - `Engine/prompts/master/05_blueprint_rules.md`
@@ -109,9 +109,9 @@ Findings:
 
 ## Unit-level taxonomy crosswalk — 2026-11-17\n\nCreated `docs/p1/P1_UNIT_LEVEL_TAXONOMY_RECONCILIATION.md` as a working draft. It maps all current internal unit labels against official JEE Main 2027 and provisional JEE Advanced 2026 headings. It identifies one clear Physics Main coverage gap (Experimental Skills), Chemistry Main gaps requiring a subtopic-level search (Purification/Characterisation and Practical Chemistry), multiple Main-vs-Advanced scope differences, and duplicate Mathematics sets/functions structures across U2/U9/U15. This is not a final approval map; every chapter and subtopic still needs exact wording review.\n\n## MECP v1.2 P1 exit gate (verbatim acceptance conditions)\n\n- Pilot subtopic has an evidence-backed official syllabus mapping.\n- Required PYQ/source evidence is sufficient for meaningful analysis, or source gaps are explicitly accepted and bounded.\n- Rule authority is identified and conflicts are resolved or isolated from the pilot.\n- Taxonomy IDs and enablement state are traceable.\n- No pilot selection based solely on catalogue maturity.\n\nThe P1 deliverables also include the official source register, reconciled syllabus master, Main/Advanced applicability map, taxonomy/enablement report, PYQ source/acquisition/answer-key register, authoritative blueprint reference/rule crosswalk, and candidate pilot sequence with source confidence.\n\n## P1 work remaining
 
-1. Complete exact official syllabus extraction and separate Main/Advanced applicability.
-2. Reconcile all 67 internal units, 185 chapters and 1,026 subtopics; preserve IDs and record explicit mapping confidence/status.
-3. Produce a parent/child effective-enablement matrix without silently changing existing IDs or source records.
+1. Independently validate the provisional Main/Advanced mappings against exact official syllabus wording; revalidate Advanced scope when the 2027 syllabus is published.
+2. Complete independent academic review of all 67 internal units, 185 chapters and 1,026 subtopics, prioritising chapter-level inherited mappings and partial/no-direct cases; preserve IDs.
+3. Validate the full parent/child enablement cascade and document disabled-parent/active-child anomalies without silently changing existing flags.
 4. Continue the 247-record PYQ audit: reconcile 2026 shifts, source labels, local file status, hashes, answer-key sources and question-level matching. See `docs/p1/P1_PYQ_SOURCE_AUDIT.md`.
 5. Acquire/verify source PDFs where legally and technically available; compute SHA-256 only after bytes are present.
 6. Establish a canonical PYQ record schema with page/question-level provenance and separate answer-key verification state.
@@ -120,7 +120,7 @@ Findings:
 
 ## Exit gate
 
-**NOT PASSED.** P1 remains ACTIVE. No production questions have been generated in this phase. No final syllabus mapping, complete PYQ verification, or authoritative blueprint freeze is claimed. Two 2026 Main question/key pairs have been matched as provisional source evidence.
+**NOT PASSED.** P1 remains ACTIVE. No production questions have been generated in this phase. No final syllabus mapping, complete PYQ verification, or authoritative blueprint freeze is claimed. Two 2026 Main question/key pairs have been independently solved and matched to official answer-key option IDs as provisional source evidence.
 
 
 ## 2026-11-17 mapping-register validation
