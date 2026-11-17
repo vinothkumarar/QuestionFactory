@@ -1049,6 +1049,36 @@
             "qp_id": "QP004",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "For an orthogonal matrix, Q^{-1}=Qᵀ is the defining inverse relation and is a direct property."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP005",
+            "disposition": "ELIGIBLE",
+            "rationale": "Orthogonal matrices have determinant ±1; the sign distinguishes orientation. Inferring the determinant restriction and classifying orientation is a distinct reusable invariant mechanism."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Products, transposes, inverses and integer powers preserve orthogonality by direct multiplication identities; this is a foundation-level group-property check."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The matrix identity and orthonormal-row/column characterizations are equivalent by direct row/column inner-product expansion."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP008",
+            "disposition": "ELIGIBLE",
+            "rationale": "Orthogonality gives unit column norms, zero cross-dot products, total squared-entry sum n and entrywise bounds; combining these constraints is a distinct reusable inference mechanism."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP009",
+            "disposition": "ELIGIBLE",
+            "rationale": "Special-family classification reduces orthogonality to conditions such as diagonal entries ±1 or orthogonal blocks; this is a reusable structural classification mechanism."
         }
     ],
     "archetypes": [
@@ -1999,6 +2029,92 @@
                 "fixed row/column vectors",
                 "dimension of orthogonal complement",
                 "unique versus multiple completions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C015",
+            "concept": "Orthogonal Matrix",
+            "qp_id": "QP005",
+            "question_possibility": "Determine determinant-related properties of an orthogonal matrix, including possible values and orientation classification",
+            "archetype_id": "U2_CH8_ST1_AR00034",
+            "archetype": "Infer determinant and orientation of an orthogonal matrix",
+            "assessment_mechanism": "Use QᵀQ=I and determinant multiplicativity to derive (det Q)²=1, then classify the determinant as +1 or −1 and interpret orientation.",
+            "reasoning_path": "Take determinants in QᵀQ=I; use det(Qᵀ)=det(Q); obtain (det Q)²=1; conclude det Q=±1 over the reals; use any additional sign/orientation information to select the value.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "given determinant/sign information",
+                "orientation-preserving versus reversing",
+                "parameterized orthogonal matrices"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C015",
+            "concept": "Orthogonal Matrix",
+            "qp_id": "QP008",
+            "question_possibility": "Determine entry-wise and aggregate constraints implied by orthogonality, including unit column norms, zero cross-dot products, total squared-sum equals matrix order, and bounds on entries",
+            "archetype_id": "U2_CH8_ST1_AR00035",
+            "archetype": "Derive entry-wise and aggregate constraints from orthogonality",
+            "assessment_mechanism": "Translate QᵀQ=I into unit-norm and pairwise-zero inner-product constraints, then combine them to infer entry bounds and aggregate squared-entry identities.",
+            "reasoning_path": "Expand each diagonal entry of QᵀQ to obtain unit column norms; expand off-diagonal entries to obtain zero cross-dot products; use these to bound individual entries and sum all squared entries to obtain the order-dependent total; verify constraints.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "row versus column constraints",
+                "individual entry bounds",
+                "aggregate squared-entry sum",
+                "partial versus complete orthogonality information"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C015",
+            "concept": "Orthogonal Matrix",
+            "qp_id": "QP009",
+            "question_possibility": "Characterize orthogonality within special matrix families such as diagonal matrices, permutation or sign-change matrices, and block-diagonal matrices",
+            "archetype_id": "U2_CH8_ST1_AR00036",
+            "archetype": "Characterize orthogonality in diagonal, permutation and block matrix families",
+            "assessment_mechanism": "Reduce the orthogonality identity to family-specific scalar or block conditions, distinguishing diagonal sign matrices, permutation/sign-change matrices and block-diagonal forms.",
+            "reasoning_path": "For a diagonal matrix, require each diagonal entry to have square one; for permutation/sign-change forms, verify row/column orthonormality; for block-diagonal forms, require each square block to be orthogonal; check dimensions and field assumptions.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix family",
+                "diagonal entries",
+                "permutation pattern",
+                "sign changes",
+                "block sizes and block conditions"
             ]
         }
     ]
