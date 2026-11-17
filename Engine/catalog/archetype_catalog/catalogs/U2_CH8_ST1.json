@@ -1439,6 +1439,36 @@
             "qp_id": "QP010",
             "disposition": "ELIGIBLE",
             "rationale": "The minimal polynomial divides x²−1 and the characteristic polynomial has only roots ±1; relating polynomial constraints and multiplicities is a distinct invariant mechanism."
+        },
+        {
+            "concept_id": "C020",
+            "qp_id": "QP011",
+            "disposition": "ELIGIBLE",
+            "rationale": "For involutory A and B, (AB)²=I exactly when AB=BA; the product condition reduces to commutativity, a distinct reusable mechanism."
+        },
+        {
+            "concept_id": "C020",
+            "qp_id": "QP012",
+            "disposition": "ELIGIBLE",
+            "rationale": "Because A²=I, αI+βA has a closed-form inverse proportional to αI−βA when α²−β²≠0; singular exceptional cases follow from the ±1 eigenspaces."
+        },
+        {
+            "concept_id": "C020",
+            "qp_id": "QP013",
+            "disposition": "REQUIRES_REVIEW",
+            "rationale": "Feasibility depends on the field, order, trace/determinant constraints and whether nontriviality is required; the source does not specify these assumptions."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Permutation-matrix recognition is a direct check of exactly one 1 in each row and column and zeros elsewhere."
+        },
+        {
+            "concept_id": "C021",
+            "qp_id": "QP002",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Constructing the permutation matrix from a specified permutation is direct representation and indexing."
         }
     ],
     "archetypes": [
@@ -3459,6 +3489,63 @@
                 "characteristic polynomial",
                 "multiplicities of ±1",
                 "trace/determinant data"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C020",
+            "concept": "Involutory Matrix",
+            "qp_id": "QP011",
+            "question_possibility": "Determine conditions under which the product of matrices is involutory",
+            "archetype_id": "U2_CH8_ST1_AR00071",
+            "archetype": "Determine when a product of involutory matrices is involutory",
+            "assessment_mechanism": "For involutory factors A and B, reduce (AB)²=I to the commutativity condition AB=BA, then test or establish that condition.",
+            "reasoning_path": "Use A²=B²=I; expand (AB)²=ABAB; compare with I; multiply by suitable inverses to show ABAB=I iff AB=BA; verify both directions and extend only under stated assumptions.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "two versus multiple factors",
+                "commuting/noncommuting factors",
+                "product order",
+                "additional symmetry assumptions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C020",
+            "concept": "Involutory Matrix",
+            "qp_id": "QP012",
+            "question_possibility": "Determine invertibility and compute the inverse of linear combinations αI+βA for an involutory A",
+            "archetype_id": "U2_CH8_ST1_AR00072",
+            "archetype": "Invert linear combinations αI+βA for involutory A",
+            "assessment_mechanism": "Use A²=I to multiply αI+βA by αI−βA, reduce the product to (α²−β²)I, and determine the exact invertibility condition and inverse.",
+            "reasoning_path": "Compute (αI+βA)(αI−βA); use A²=I to obtain (α²−β²)I; if the scalar is nonzero, divide to obtain the inverse; if it vanishes, analyze the ±1 eigenspaces to determine singularity.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "scalar parameters α and β",
+                "exceptional values α=±β",
+                "matrix order",
+                "eigenspace multiplicities",
+                "inverse formula versus singularity"
             ]
         }
     ]
