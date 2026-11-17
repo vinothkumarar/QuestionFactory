@@ -1649,6 +1649,36 @@
             "qp_id": "QP001",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Hermitian recognition is a direct check of A*=A, including real diagonal entries and conjugate-paired off-diagonal entries."
+        },
+        {
+            "concept_id": "C023",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "Hermitian structure A*=A imposes real diagonal entries and conjugate-paired off-diagonal entries; solving these simultaneous constraints is a reusable parameter/missing-entry mechanism."
+        },
+        {
+            "concept_id": "C023",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The unique Hermitian/skew-Hermitian decomposition is already represented by the general complex-matrix decomposition archetype; do not duplicate."
+        },
+        {
+            "concept_id": "C023",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Hermitian matrices form a real vector space under addition and real scalar multiplication by direct adjoint linearity."
+        },
+        {
+            "concept_id": "C023",
+            "qp_id": "QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Powers and real-coefficient polynomials of a Hermitian matrix remain Hermitian by direct adjoint identities."
+        },
+        {
+            "concept_id": "C023",
+            "qp_id": "QP006",
+            "disposition": "ELIGIBLE",
+            "rationale": "For Hermitian A and B, (AB)*=BA, so AB is Hermitian exactly when AB=BA; this is a distinct commutativity condition."
         }
     ],
     "archetypes": [
@@ -4277,6 +4307,64 @@
                 "affected row/column intersection",
                 "operation types",
                 "rectangular matrix dimensions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C023",
+            "concept": "Hermitian Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Determine constraints on entries or parameters required for a matrix to be Hermitian",
+            "archetype_id": "U2_CH8_ST1_AR00092",
+            "archetype": "Derive parameter and missing-entry constraints for a Hermitian matrix",
+            "assessment_mechanism": "Translate A*=A into real-diagonal and conjugate-pair constraints on entries, then solve the resulting parameter or missing-entry system.",
+            "reasoning_path": "Compare aᵢⱼ with conjugate(aⱼᵢ); require each diagonal entry to be real; impose conjugate-pair conditions for i≠j; solve the coupled real/imaginary parameter equations; verify A*=A.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "real/imaginary parameter split",
+                "number of missing entries",
+                "diagonal constraints",
+                "conjugate-pair constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C023",
+            "concept": "Hermitian Matrix",
+            "qp_id": "QP006",
+            "question_possibility": "Determine conditions under which a product AB is Hermitian given properties of A and B",
+            "archetype_id": "U2_CH8_ST1_AR00093",
+            "archetype": "Determine when a product of Hermitian matrices is Hermitian",
+            "assessment_mechanism": "Use adjoint reversal (AB)*=B*A* to reduce Hermiticity of a product of Hermitian factors to commutativity and related order conditions.",
+            "reasoning_path": "Apply (AB)*=B*A; compare with AB; derive AB=BA as the necessary and sufficient condition when both factors are Hermitian; extend carefully to multiple factors and verify assumptions.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "two versus multiple factors",
+                "commuting/noncommuting factors",
+                "product order",
+                "additional normality/unitarity assumptions",
+                "complex entries"
             ]
         }
     ]
