@@ -90,3 +90,13 @@ CI result for commit `9647bae37ad9d74040fcb4341d35475e156e0bec`:
 - Workflow: https://github.com/vinothkumarar/QuestionFactory/actions/runs/44018238267
 
 Production generation has not been run. Existing legacy flat-list catalogues remain preserved and require an explicit migration before resume.
+
+
+### Final CI hardening
+
+- Batch prompts now preserve each QP's own subject/unit/chapter/subtopic/concept context. A single batch may contain multiple concepts and repeated QP IDs; composite identity remains `(concept_id, qp_id)`.
+- AI archetype records and QP disposition records are checked against exact schemas; unexpected fields are rejected.
+- Added a regression test proving zero-archetype QPs remain present in the disposition CSV.
+- Final validation commit: `d4e54eef3153dc4b945f0af12bc2625e07d0981f`.
+- GitHub Actions: compile passed; all 16 contract tests passed.
+- Run: https://github.com/vinothkumarar/QuestionFactory/actions/runs/44018469472
