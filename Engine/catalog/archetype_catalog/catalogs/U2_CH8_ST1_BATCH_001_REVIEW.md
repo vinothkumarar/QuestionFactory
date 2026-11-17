@@ -562,3 +562,21 @@ New draft candidates:
 Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 155 dispositions and 27 draft archetypes; 195 source QPs remain untouched.
+
+
+## Batch 032 — symmetric/skew-symmetric boundary and constraints (global QP156–QP160)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C013 / QP017 | FOUNDATION_ONLY | Symmetric and skew-symmetric together imply the zero matrix |
+| C013 / QP018 | REQUIRES_REVIEW | Transpose relations are not specified in the source possibility |
+| C013 / QP019 | REQUIRES_REVIEW | Entry constraints and field are unspecified for the requested count |
+| C014 / QP001 | FOUNDATION_ONLY | Direct skew-symmetric definition check |
+| C014 / QP002 | ELIGIBLE | Paired negative-entry and zero-diagonal constraints form a reusable parameter/missing-entry mechanism |
+
+New draft candidate:
+
+- `U2_CH8_ST1_AR00028`: Derive parameter and missing-entry constraints for a skew-symmetric matrix.
+- JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
+
+Cumulative status: 160 dispositions and 28 draft archetypes; 190 source QPs remain untouched. Four QPs are held for review because their source specifications are insufficiently precise.
