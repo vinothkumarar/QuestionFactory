@@ -299,6 +299,36 @@
             "qp_id": "QP005",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Product compatibility and resulting order follow the standard inner-dimension rule; the source possibility alone does not justify a separate archetype."
+        },
+        {
+            "concept_id": "C005",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Testing self-operations involving a rectangular matrix and its transpose is primarily order-compatibility checking; the source possibility does not yet define a distinct mechanism."
+        },
+        {
+            "concept_id": "C005",
+            "qp_id": "QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Determining whether square-only constructs apply is a direct check of whether row and column counts match; retain as foundation content."
+        },
+        {
+            "concept_id": "C005",
+            "qp_id": "QP008",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Transpose swaps row and column counts and changes row/column type directly; this is a basic representation property."
+        },
+        {
+            "concept_id": "C005",
+            "qp_id": "QP009",
+            "disposition": "ELIGIBLE",
+            "rationale": "Inferring whether a matrix is square or rectangular from several operation-definedness constraints can require solving coupled order conditions; retained as a JEE Main candidate."
+        },
+        {
+            "concept_id": "C005",
+            "qp_id": "QP010",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Identity-matrix orders that preserve a rectangular matrix follow directly from compatible dimensions and are retained as foundation content."
         }
     ],
     "archetypes": [
@@ -469,6 +499,35 @@
                 "commutativity conditions",
                 "invertibility",
                 "number of factors"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C005",
+            "concept": "Rectangular Matrix",
+            "qp_id": "QP009",
+            "question_possibility": "Infer rectangularity or squareness of a matrix from the definedness or outcomes of given operations or properties",
+            "archetype_id": "U2_CH8_ST1_AR00007",
+            "archetype": "Infer matrix dimensions from operation-definedness constraints",
+            "assessment_mechanism": "Translate the definedness or resulting order of several matrix operations into constraints on unknown row and column counts, solve the constraints, and determine whether the matrix must be square or rectangular.",
+            "reasoning_path": "Assign variables to the unknown row and column counts; translate each stated operation into dimension-compatibility equations; combine the equations; solve for admissible positive integer dimensions; check whether row and column counts must be equal; verify every original operation condition.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of operation constraints",
+                "addition versus multiplication",
+                "transpose involvement",
+                "known result order",
+                "uniqueness versus multiple admissible dimensions"
             ]
         }
     ]
