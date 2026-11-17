@@ -163,3 +163,18 @@ All five possibilities are retained as `FOUNDATION_ONLY`:
 | C004 / QP005 | Operation compatibility for column matrices | Basic dimension compatibility |
 
 No new archetypes were added. Cumulative status: 40 dispositions and 6 draft archetypes; 310 source QPs remain.
+
+
+## Batch 009 — further column-matrix possibilities (global QP041–QP045)
+
+All five possibilities are retained as `FOUNDATION_ONLY`:
+
+| QP | Source mechanism | Disposition rationale |
+|---|---|---|
+| C004 / QP006 | Result order/type for expressions involving column matrices | Routine dimension arithmetic |
+| C004 / QP007 | Parameter conditions for column-matrix order | Direct order-definition constraint |
+| C004 / QP008 | When a column matrix is square | 1×1 order check |
+| C004 / QP009 | Extract a specified column | Direct representation/indexing |
+| C004 / QP010 | Relate order and element count | Direct order interpretation |
+
+No new archetypes were added. Cumulative status: 45 dispositions, 6 draft archetypes, 305 QPs remain untouched.
