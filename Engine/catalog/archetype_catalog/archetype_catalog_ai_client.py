@@ -171,7 +171,6 @@ class ArchetypeCatalogAIClient:
                 "qp_id",
                 "question_possibility",
                 "archetype",
-                "archetype_id",
                 "assessment_mechanism",
                 "reasoning_path",
                 "variation_capacity",
