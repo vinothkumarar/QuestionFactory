@@ -402,3 +402,16 @@ All five possibilities are retained as `FOUNDATION_ONLY`:
 | C010 / QP006 | Classify identity among standard matrix types | Direct definition check |
 
 No new archetypes were added. Cumulative status: 110 dispositions and 17 draft archetypes; 240 source QPs remain untouched.
+
+
+## Batch 023 — identity-matrix uniqueness and algebraic characterizations (global QP111–QP115)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C010 / QP007 | FOUNDATION_ONLY | Identity existence/uniqueness follows from the defining property |
+| C010 / QP008 | FOUNDATION_ONLY | Left/right identity for a given matrix is direct order compatibility |
+| C010 / QP009 | REQUIRES_REVIEW | The source does not specify the algebraic conditions; do not invent them |
+| C010 / QP010 | FOUNDATION_ONLY | Spectral properties of identity are direct standard facts |
+| C010 / QP011 | FOUNDATION_ONLY | Transpose, inverse and powers of identity are direct properties |
+
+No new archetypes were added. One source possibility is explicitly held for review because its mathematical conditions are underspecified. Cumulative status: 115 dispositions, 17 draft archetypes; 235 QPs remain untouched.
