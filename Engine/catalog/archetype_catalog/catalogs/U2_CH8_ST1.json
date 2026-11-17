@@ -449,6 +449,36 @@
             "qp_id": "QP011",
             "disposition": "ELIGIBLE",
             "rationale": "Integer powers require careful treatment of positive, zero and negative exponents, including square-matrix and invertibility conditions; this is a distinct boundary-condition assessment mechanism."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "QP012",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A nonempty square zero matrix is singular and therefore has no inverse; this is a direct standard property check."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "QP013",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The zero matrix of a fixed order is unique by entrywise equality; this is a direct definition/proof fact."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "QP014",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A−B=O iff A=B follows immediately by adding B to both sides or comparing entries; this is a foundational equality identity."
+        },
+        {
+            "concept_id": "C008",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Diagonal-matrix recognition is a direct check that every off-diagonal entry is zero."
+        },
+        {
+            "concept_id": "C008",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "Imposing diagonality on a parameterized matrix requires simultaneous zero constraints on all off-diagonal entries; this is a reusable parameter-constraint mechanism and a JEE Main candidate."
         }
     ],
     "archetypes": [
@@ -733,6 +763,35 @@
                 "matrix order",
                 "explicit convention for zero power",
                 "requested definedness versus value"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C008",
+            "concept": "Diagonal Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Determine parameter conditions under which a matrix becomes diagonal",
+            "archetype_id": "U2_CH8_ST1_AR00011",
+            "archetype": "Derive parameter constraints for a matrix to be diagonal",
+            "assessment_mechanism": "Translate the diagonal-matrix requirement into simultaneous zero conditions on every off-diagonal entry of a parameterized matrix, then solve the resulting parameter constraints.",
+            "reasoning_path": "Identify all off-diagonal positions; set each corresponding entry equal to zero; solve the simultaneous equations for the parameters; retain any free parameters; verify that the diagonal entries remain unrestricted except for explicit source conditions.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "number of parameters",
+                "independent/dependent off-diagonal constraints",
+                "linear/nonlinear entry expressions",
+                "free diagonal parameters"
             ]
         }
     ]
