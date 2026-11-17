@@ -1799,6 +1799,36 @@
             "qp_id": "QP013",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "The independent real parameter count is n², matching the Hermitian case; the counting mechanism is already represented."
+        },
+        {
+            "concept_id": "C024",
+            "qp_id": "QP014",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The inverse of an invertible skew-Hermitian matrix remains skew-Hermitian by the transpose-of-inverse/adjoint identity; this is a direct property."
+        },
+        {
+            "concept_id": "C025",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Unitary recognition is a direct check of U*U=I (equivalently UU*=I for square matrices)."
+        },
+        {
+            "concept_id": "C025",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "Unitary structure imposes simultaneous unit-norm and pairwise orthogonality equations on complex rows/columns; solving parameter constraints is a distinct mechanism."
+        },
+        {
+            "concept_id": "C025",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The inverse of a unitary matrix is its conjugate transpose by definition; this is a direct property."
+        },
+        {
+            "concept_id": "C025",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Equivalent characterizations of unitarity by row/column orthonormality and U*U=I are standard direct equivalences."
         }
     ],
     "archetypes": [
@@ -4832,6 +4862,35 @@
                 "sum versus difference",
                 "commuting assumptions",
                 "multiple factors"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C025",
+            "concept": "Unitary Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Determine parameter conditions for a matrix to be unitary",
+            "archetype_id": "U2_CH8_ST1_AR00106",
+            "archetype": "Derive parameter constraints for a unitary matrix",
+            "assessment_mechanism": "Translate U*U=I into simultaneous complex norm and orthogonality equations for columns (or rows), then solve the coupled parameter system.",
+            "reasoning_path": "Compute U*; form U*U; equate diagonal entries to 1 and off-diagonal entries to 0; separate real and imaginary parts of each complex equation; solve for the parameters; verify all orthonormality constraints and square order.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "number of complex parameters",
+                "row versus column equations",
+                "real/imaginary constraint split",
+                "independent/dependent equations"
             ]
         }
     ]
