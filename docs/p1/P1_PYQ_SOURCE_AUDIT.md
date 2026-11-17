@@ -107,9 +107,19 @@ A record may advance only when evidence for that exact state exists. A shared an
 | 10 January 2026 Main papers not located | Search official NTA response-sheet/question-paper publication and preserve non-official copies as such | Do not mark acquired without source evidence |
 | 9 April 2026 Main PDFs accessible but not local | Acquire bytes where technically/legal available, record file size and SHA-256 | Current state URL-access-verified only |
 | Main Session I/II keys not linked to all shifts | Match date, shift, subject and question IDs for every paper | Two Session II Q26/Q27 matches only |
-| Advanced 2026 final key URL not recovered | Locate official final key and map both papers | Keep both Advanced papers unverified |
+| Advanced 2026 final-key PDFs recovered; complete paper-level reconciliation pending | Match every question against the exact official Paper 1/Paper 2 final key | Do not infer full-paper verification from the two independently checked sample questions |
 | No local hashes | Acquire exact bytes and calculate SHA-256 | Do not invent or copy hashes |
 | Source flags differ between two trackers | Reconcile labels while preserving original workbook snapshots | No destructive overwrite |
+
+
+
+### 2026-11-17 correction — Advanced final-key source and sample status
+
+The official JEE Advanced 2026 final-key PDFs have been located and used for two independently verified sample records:
+- Paper 1 final key: https://jeeadv.ac.in/documents/p1_solutions_final.pdf — Paper 1 Mathematics Q3, answer B.
+- Paper 2 final key: https://jeeadv.ac.in/documents/p2_solutions_final.pdf — Paper 2 Physics Q1, answer C.
+
+This supersedes the earlier statement that the Advanced final-key URL had not been recovered. The source URLs and question-level checks are recorded in `P1_PYQ_EVIDENCE_REGISTER.csv`. The broader Advanced paper/key audit remains incomplete. The 2026 acquisition workbook itself still has zero populated Answer Key URL cells; the evidence register is a separate, question-level audit artifact. No local PDF bytes or SHA-256 values are recorded for these four samples.
 
 ## 7. P1 decision
 
