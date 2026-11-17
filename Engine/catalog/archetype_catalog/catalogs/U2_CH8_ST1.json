@@ -899,6 +899,36 @@
             "qp_id": "QP011",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "The adjugate of a symmetric matrix is symmetric by the transpose/cofactor identity; this is a direct property."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP012",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Expressions such as A+Aᵀ and A−Aᵀ have direct symmetric/skew-symmetric properties by transpose identities."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP013",
+            "disposition": "ELIGIBLE",
+            "rationale": "A congruence transform PᵀAP preserves symmetry whenever A is symmetric; proving this by transpose reversal is a distinct reusable structural-preservation mechanism."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP014",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "An entry-wise matrix rule is symmetric when f(i,j)=f(j,i); this is a direct pairwise definition check and overlaps the existing symmetry-constraint mechanism."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP015",
+            "disposition": "ELIGIBLE",
+            "rationale": "A block-partitioned matrix is symmetric exactly when diagonal blocks are symmetric and opposite off-diagonal blocks are transposes; this is a distinct block-structure constraint mechanism."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP016",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A matrix that is both symmetric and triangular must be diagonal because transposed off-diagonal entries force both sides to zero."
         }
     ],
     "archetypes": [
@@ -1617,6 +1647,64 @@
                 "commuting versus noncommuting matrices",
                 "parameterized factors",
                 "product order"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C013",
+            "concept": "Symmetric Matrix",
+            "qp_id": "QP013",
+            "question_possibility": "Determine whether congruence transforms of a symmetric matrix are symmetric",
+            "archetype_id": "U2_CH8_ST1_AR00026",
+            "archetype": "Prove symmetry is preserved by a congruence transform",
+            "assessment_mechanism": "Use transpose reversal to show that PᵀAP is symmetric whenever A is symmetric, without requiring P itself to be symmetric or invertible for the symmetry conclusion.",
+            "reasoning_path": "Transpose PᵀAP; reverse product order to obtain PᵀAᵀP; substitute Aᵀ=A; conclude the transformed matrix equals its transpose; verify the dimensions of the product.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix dimensions",
+                "invertibility of P",
+                "symmetric versus arbitrary P",
+                "parameterized matrices",
+                "congruence versus similarity transform"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C013",
+            "concept": "Symmetric Matrix",
+            "qp_id": "QP015",
+            "question_possibility": "Determine conditions for a block-partitioned matrix to be symmetric",
+            "archetype_id": "U2_CH8_ST1_AR00027",
+            "archetype": "Derive symmetry constraints for a block-partitioned matrix",
+            "assessment_mechanism": "Translate symmetry of a block matrix into conditions on diagonal blocks and transpose relationships between opposite off-diagonal blocks.",
+            "reasoning_path": "Write the block matrix and its transpose using compatible block sizes; equate corresponding blocks; require each diagonal block to be symmetric; require opposite off-diagonal blocks to be transposes; verify the partition dimensions.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of block rows",
+                "block sizes",
+                "square versus rectangular off-diagonal blocks",
+                "symbolic block entries",
+                "number of independent constraints"
             ]
         }
     ]
