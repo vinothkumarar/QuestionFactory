@@ -63,21 +63,22 @@ The ten January JEE Main shifts remain without an acquired/verified question-pap
 
 The 2026 Acquisition Tracker has zero populated Answer Key URL values and zero SHA-256 values. The official NTA Main Session I and Session II final answer-key PDFs have been identified separately in `P1_PYQ_ANSWER_KEY_AUDIT.md`, but they have not yet been linked to all 19 Main shifts in the tracker.
 
-The official JEE Advanced 2026 Paper 1 and Paper 2 question-paper PDFs and both official final-key PDFs are accessible. Paper 1 Q3 is now matched to final key answer B and independently verified; Paper 2 question-level matching remains pending.
+The official JEE Advanced 2026 Paper 1 and Paper 2 question-paper PDFs and both official final-key PDFs are accessible. Paper 1 Q3 (Mathematics, answer B) and Paper 2 Q1 (Physics, answer C) are matched to their official final keys and independently verified.
 
 ## 4. Question-level evidence achieved
 
-Two questions from the official 2 April 2026 JEE Main Paper 1 Shift 1 Physics paper were matched to the NTA Session II final answer key and independently solved, and one JEE Advanced 2026 Paper 1 Mathematics question was matched to the official final key and independently solved:
+Two questions from the official 2 April 2026 JEE Main Paper 1 Shift 1 Physics paper were matched to the NTA Session II final answer key and independently solved, and two JEE Advanced 2026 questions (Paper 1 Mathematics Q3 and Paper 2 Physics Q1) were matched to their official final keys and independently solved:
 
 | Question | Internal subtopic | Paper question ID | Key option ID | Option/value | Independent check |
 |---|---|---:|---:|---|---|
 | Q26 | P1_CH1_ST4 — Dimensional Analysis | 69112126 | 69112187 | B / 1 | `[epsilon0 E^2]` is energy density, `M L^-1 T^-2`; the requested combination equals 1 |
 | Q27 | P1_CH1_ST6 — Errors and Measurements | 69112127 | 69112191 | B / 1.65 | Error propagation in `Y=4FL/(pi*d^2*x)` gives relative error 0.0276667 and `alpha=1.65` |
 | Advanced Paper 1 Q3 | U2_CH8_ST2 — Matrix Operations | Q3 | Q3:B | B | Only option B has non-zero determinant (-2); A/C/D are singular |
+| Advanced Paper 2 Q1 | P12_CH1_ST2 — Drift Velocity | Q1 | Q1:C | C / 0.208 mm/s | Independent circuit/current-density calculation gives 0.2083 mm/s |
 
 Detailed source URLs, question identifiers, answer-key identifiers, independent calculations and source-page references are stored in `P1_PYQ_EVIDENCE_REGISTER.csv`.
 
-This is a three-question sample across one Main shift and one Advanced paper. It does not establish year-wise topic frequency, shift representativeness or complete paper verification.
+This is a four-question sample across one Main shift and two Advanced papers. It does not establish year-wise topic frequency, shift representativeness or complete paper verification.
 
 ## 5. Provenance status model
 
