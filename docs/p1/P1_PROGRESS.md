@@ -44,17 +44,17 @@
 
 #### Initial internal taxonomy inventory (repository CSV snapshot)
 
-| Subject | Internal units | Chapters | Subtopics | Unit enable flags | Chapter enable flags | Subtopic enable flags |
+| Subject | Internal units | Chapters | Subtopics | Unit enable flags | Chapter enable flags | Subtopic enable flags | Effective enabled subtopics* |
 |---|---:|---:|---:|---:|---:|---:|
-| Mathematics | 15 | 95 | 533 | 2 enabled | 2 enabled | 533 enabled |
-| Physics | 23 | 42 | 233 | 1 enabled | 1 enabled | 233 enabled |
-| Chemistry | 29 | 48 | 260 | 0 enabled | 0 enabled | 260 enabled |
-| **Total** | **67** | **185** | **1,026** | **3 enabled** | **3 enabled** | **1,026 enabled** |
+| Mathematics | 15 | 95 | 533 | 2 enabled | 2 enabled | 533 enabled | 20 |
+| Physics | 23 | 42 | 233 | 1 enabled | 1 enabled | 233 enabled | 6 |
+| Chemistry | 29 | 48 | 260 | 0 enabled | 0 enabled | 260 enabled | 0 |
+| **Total** | **67** | **185** | **1,026** | **3 enabled** | **3 enabled** | **1,026 enabled** | **26** |
 
 - These are repository snapshot counts, not claims about the live Supabase database.
-- Parent/child enablement is inconsistent in the snapshot: every subtopic is locally marked enabled even where its chapter or unit is disabled. Effective manufacturing eligibility must therefore be computed hierarchically (subject AND unit AND chapter AND subtopic enabled, with exam-scope verification) rather than trusting the leaf flag alone.
+- Parent/child enablement is inconsistent in the snapshot: every subtopic is locally marked enabled even where its chapter or unit is disabled. A computed parent-chain flag shows only 26 of 1,026 subtopics pass the unit AND chapter AND subtopic flag check (Mathematics 20, Physics 6, Chemistry 0). This is a structural flag result only, not final exam-scope/manufacturing eligibility; official mapping and blueprint gates still apply.
 - No taxonomy IDs or enable flags were changed in this initial audit.
-- Detailed unit/chapter/subtopic mapping against official 2027 Main and provisional 2026 Advanced syllabus remains in progress.
+- Created `docs/p1/P1_TAXONOMY_MAPPING_REGISTER.csv` with all 1,026 stable subtopic IDs, parent IDs, names, snapshot flags, effective parent-chain flags and separate Main/Advanced mapping status. Physics P1_CH1 has five provisional direct mappings and one partial mapping; the remaining 1,020 subtopics remain unreviewed. Detailed unit/chapter/subtopic mapping against official 2027 Main and provisional 2026 Advanced syllabus remains in progress.
 
 #### PYQ inventory and acquisition audit
 
