@@ -1115,3 +1115,24 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 290 dispositions and 99 draft archetypes; 60 source QPs remain untouched.
+
+
+## Batch 059 — skew-Hermitian determinant, scalar and polynomial mechanisms (global QP291–QP295)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C024 / QP004 | FOUNDATION_ONLY | Diagonal entries and trace are purely imaginary |
+| C024 / QP005 | ELIGIBLE | Determinant is real for even order and purely imaginary for odd order |
+| C024 / QP006 | ELIGIBLE | Scalar coefficient conditions distinguish preservation of skew-Hermiticity from conversion to Hermitian |
+| C024 / QP007 | ELIGIBLE | Powers alternate by parity and polynomials split into even/odd parts |
+| C024 / QP008 | FOUNDATION_ONLY | Real skew-Hermitian matrices are directly skew-symmetric |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00100`: Infer determinant reality or pure-imaginary character from skew-Hermitian order.
+- `U2_CH8_ST1_AR00101`: Classify scalar combinations of skew-Hermitian matrices.
+- `U2_CH8_ST1_AR00102`: Classify powers and polynomials of skew-Hermitian matrices.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 295 dispositions and 102 draft archetypes; 55 source QPs remain untouched.
