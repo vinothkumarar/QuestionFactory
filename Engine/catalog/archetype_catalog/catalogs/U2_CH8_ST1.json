@@ -659,6 +659,36 @@
             "qp_id": "QP006",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "The identity matrix satisfies standard properties by direct definition; classification is a foundation check."
+        },
+        {
+            "concept_id": "C010",
+            "qp_id": "QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Existence and uniqueness of the identity matrix for a fixed order follow from the defining entry pattern and two-sided identity property; this is foundational algebra."
+        },
+        {
+            "concept_id": "C010",
+            "qp_id": "QP008",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Determining left/right identity matrices for a particular rectangular matrix is direct order compatibility and identity action."
+        },
+        {
+            "concept_id": "C010",
+            "qp_id": "QP009",
+            "disposition": "REQUIRES_REVIEW",
+            "rationale": "The source possibility does not specify the algebraic conditions. Different condition sets can imply different conclusions, so a safe disposition requires a concrete, source-faithful specification before an archetype can be assessed."
+        },
+        {
+            "concept_id": "C010",
+            "qp_id": "QP010",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The identity matrix has eigenvalue 1 with multiplicity equal to its order; its spectral facts are direct standard properties."
+        },
+        {
+            "concept_id": "C010",
+            "qp_id": "QP011",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Transpose, inverse and integer powers of an identity matrix return the identity of the compatible order; these are direct properties."
         }
     ],
     "archetypes": [
