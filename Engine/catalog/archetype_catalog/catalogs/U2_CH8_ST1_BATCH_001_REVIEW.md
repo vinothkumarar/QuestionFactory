@@ -211,3 +211,18 @@ New draft candidate:
 - JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
 
 Cumulative status: 55 dispositions and 7 draft archetypes; 295 source QPs remain untouched.
+
+
+## Batch 012 — square-matrix foundations (global QP056–QP060)
+
+All five possibilities are retained as `FOUNDATION_ONLY`:
+
+| QP | Source mechanism | Disposition rationale |
+|---|---|---|
+| C006 / QP001 | Classify square matrix and state order | Direct shape definition |
+| C006 / QP002 | Parameter conditions for squareness | Simple row/column equality; overlaps dimension inference |
+| C006 / QP003 | Determine whether a matrix expression is square | Routine dimension tracking; no distinct mechanism established |
+| C006 / QP004 | Applicability of square-only constructs | Direct prerequisite check |
+| C006 / QP005 | Identify principal/secondary diagonal | Direct positional recognition |
+
+No new archetypes were added. Cumulative status: 60 dispositions, 7 draft archetypes; 290 source QPs remain untouched.
