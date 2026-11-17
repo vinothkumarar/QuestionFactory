@@ -339,3 +339,18 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 90 dispositions and 16 draft archetypes; 260 source QPs remain untouched.
+
+
+## Batch 019 — scalar-matrix properties (global QP091–QP095)
+
+All five possibilities are retained as `FOUNDATION_ONLY`:
+
+| QP | Source mechanism | Disposition rationale |
+|---|---|---|
+| C009 / QP004 | Construct a scalar matrix | Direct definition |
+| C009 / QP005 | Equivalent scalar-matrix characterizations | Overlaps the universal-commutativity candidate |
+| C009 / QP006 | Add/multiply scalar matrices | Direct scalar arithmetic |
+| C009 / QP007 | Multiply arbitrary matrix by scalar matrix | Uniform scaling; universal commutation already represented |
+| C009 / QP008 | Inverse of scalar matrix | Direct nonzero-scalar condition and reciprocal formula |
+
+No new archetypes were added. Cumulative status: 95 dispositions and 16 draft archetypes; 255 source QPs remain untouched.
