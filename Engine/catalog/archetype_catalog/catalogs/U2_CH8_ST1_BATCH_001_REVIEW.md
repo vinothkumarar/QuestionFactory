@@ -193,3 +193,21 @@ All five possibilities are retained as `FOUNDATION_ONLY`:
 | C005 / QP005 | Product compatibility and resulting order | Inner-dimension rule |
 
 No new archetypes were added. Cumulative status: 50 dispositions, 6 draft archetypes; 300 QPs remain untouched.
+
+
+## Batch 011 — rectangular-matrix operation constraints (global QP051–QP055)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C005 / QP006 | FOUNDATION_ONLY | Basic order compatibility for self-operations and transpose |
+| C005 / QP007 | FOUNDATION_ONLY | Applicability of square-only properties is a direct order check |
+| C005 / QP008 | FOUNDATION_ONLY | Transpose swaps row/column counts directly |
+| C005 / QP009 | ELIGIBLE | Multiple operation-definedness constraints can be combined to infer unknown dimensions |
+| C005 / QP010 | FOUNDATION_ONLY | Identity-matrix order compatibility follows directly from dimensions |
+
+New draft candidate:
+
+- `U2_CH8_ST1_AR00007`: Infer matrix dimensions from operation-definedness constraints.
+- JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
+
+Cumulative status: 55 dispositions and 7 draft archetypes; 295 source QPs remain untouched.
