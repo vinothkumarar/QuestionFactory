@@ -1136,3 +1136,24 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 295 dispositions and 102 draft archetypes; 55 source QPs remain untouched.
+
+
+## Batch 060 — skew-Hermitian spectral, quadratic-form and product algebra (global QP296–QP300)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C024 / QP009 | FOUNDATION_ONLY | Both Hermitian and skew-Hermitian implies zero |
+| C024 / QP010 | ELIGIBLE | Eigenvalues of skew-Hermitian matrices are purely imaginary |
+| C024 / QP011 | ELIGIBLE | x*Ax is purely imaginary for skew-Hermitian A |
+| C024 / QP012 | ELIGIBLE | Adjoint reversal classifies AB±BA across symmetry types |
+| C024 / QP013 | FOUNDATION_ONLY | Independent real parameter count is n², matching the Hermitian count |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00103`: Infer purely imaginary eigenvalues of a skew-Hermitian matrix.
+- `U2_CH8_ST1_AR00104`: Determine the scalar nature of x*Ax for skew-Hermitian A.
+- `U2_CH8_ST1_AR00105`: Classify AB±BA using Hermitian and skew-Hermitian operand types.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 300 dispositions and 105 draft archetypes; 50 source QPs remain untouched.
