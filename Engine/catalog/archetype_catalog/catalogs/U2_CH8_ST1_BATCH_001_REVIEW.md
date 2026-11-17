@@ -415,3 +415,21 @@ No new archetypes were added. Cumulative status: 110 dispositions and 17 draft a
 | C010 / QP011 | FOUNDATION_ONLY | Transpose, inverse and powers of identity are direct properties |
 
 No new archetypes were added. One source possibility is explicitly held for review because its mathematical conditions are underspecified. Cumulative status: 115 dispositions, 17 draft archetypes; 235 QPs remain untouched.
+
+
+## Batch 024 — upper-triangular matrix foundations and parameter constraints (global QP116–QP120)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C011 / QP001 | FOUNDATION_ONLY | Direct zero-pattern recognition below the main diagonal |
+| C011 / QP002 | ELIGIBLE | Simultaneous parameter constraints on all below-diagonal entries |
+| C011 / QP003 | FOUNDATION_ONLY | Direct inclusion relationships among matrix classes |
+| C011 / QP004 | FOUNDATION_ONLY | Direct closure under addition/scalar multiplication |
+| C011 / QP005 | FOUNDATION_ONLY | Direct preservation under product, powers and polynomials |
+
+New draft candidate:
+
+- `U2_CH8_ST1_AR00018`: Derive parameter constraints for an upper-triangular matrix.
+- JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
+
+Cumulative status: 120 dispositions and 18 draft archetypes; 230 source QPs remain untouched.
