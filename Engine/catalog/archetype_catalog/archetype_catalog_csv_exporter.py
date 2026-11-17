@@ -70,8 +70,15 @@ class ArchetypeCatalogCSVExporter:
                         f"Archetype record #{index} must be an object."
                     )
 
-                missing = [
+                generated_fields = [
                     field for field in self.HEADERS
+                    if field not in {
+                        "approval_status",
+                        "manufacturing_enabled",
+                    }
+                ]
+                missing = [
+                    field for field in generated_fields
                     if field not in row
                 ]
                 if missing:
