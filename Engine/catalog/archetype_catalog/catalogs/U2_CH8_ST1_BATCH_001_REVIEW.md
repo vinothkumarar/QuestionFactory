@@ -80,3 +80,23 @@ The next five source possibilities were reviewed and retained as `FOUNDATION_ONL
 No additional archetypes were added. The catalogue now has 15 explicit dispositions and retains the two draft candidate archetypes from QP002 and QP005. The remaining 335 source QPs are untouched.
 
 **Next:** review C002 / QP003–QP007. Check whether Hermitian, skew-Hermitian and unitary conditions create genuinely distinct mechanisms before adding any archetype.
+
+
+## Batch 004 disposition and archetype extension — C002 / QP003–QP007
+
+| QP | Disposition | Reason |
+|---|---|---|
+| QP003 | FOUNDATION_ONLY | Conjugate transpose is a direct entrywise operation |
+| QP004 | FOUNDATION_ONLY | Hermitian verification is a direct comparison with the conjugate transpose |
+| QP005 | FOUNDATION_ONLY | Skew-Hermitian verification is the sign counterpart of the Hermitian check, not a separate reasoning mechanism |
+| QP006 | ELIGIBLE | Unitary verification requires checking the conjugate-transpose product against the identity |
+| QP007 | ELIGIBLE | Parameter constraints for Hermitian/skew-Hermitian/unitary conditions require simultaneous real/imaginary equations |
+
+Two additional draft candidates have been created:
+
+- `U2_CH8_ST1_AR00003`: Verify unitarity through the conjugate-transpose identity.
+- `U2_CH8_ST1_AR00004`: Derive parameter constraints for Hermitian, skew-Hermitian or unitary structure.
+
+Both are JEE Main candidates only, with Moderate/Hard potential, and remain `DRAFT_CORE_REQUIRES_ACADEMIC_REVIEW` with `manufacturing_enabled=FALSE`.
+
+The cumulative catalogue now has 20 QP dispositions and 4 draft archetypes. The remaining 330 QPs are untouched.
