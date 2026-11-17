@@ -105,3 +105,19 @@ Every transition must have evidence and must not be inferred from a previous sta
 - Locate official JEE Advanced 2026 final answer keys and match both papers.
 - Audit the remaining 2002–2025 inventory by paper family and primary source.
 - Do not begin bulk transcription or production-question generation until provenance and rights review are recorded.
+
+
+## First question-level match — 2026-11-17
+
+Two Physics questions from the official 2 April 2026 Shift 1 JEE Main Paper 1 were inspected in the official question-paper PDF and matched to the official NTA Session II final answer key by question ID and correct option ID:
+
+| Question | Internal candidate | Official paper reference | Official final-key match | Status |
+|---|---|---|---|---|
+| Q26 | P1_CH1_ST4 — Dimensional Analysis | Question ID 69112126; paper PDF page index 9 | Correct Option ID 69112187 (option B; displayed value 1) | Question ID and option ID matched |
+| Q27 | P1_CH1_ST6 — Errors and Measurements | Question ID 69112127; paper PDF page index 10 | Correct Option ID 69112191 (option B; displayed value 1.65) | Question ID and option ID matched |
+
+Official paper PDF: https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/202604092096865379.pdf
+
+Official Session II final key: https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/20260420409057044.pdf
+
+The paper/key question identifiers are matched, but local bytes and SHA-256 remain pending. This is two questions from one shift only and does not support cross-year frequency/trend claims.
