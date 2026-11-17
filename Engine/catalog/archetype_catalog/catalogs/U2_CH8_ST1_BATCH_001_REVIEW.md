@@ -1196,3 +1196,24 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 310 dispositions and 109 draft archetypes; 40 source QPs remain untouched.
+
+
+## Batch 063 — triangular, block-diagonal and metric unitary properties (global QP311–QP315)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C025 / QP010 | ELIGIBLE | Triangular unitarity forces a diagonal phase matrix |
+| C025 / QP011 | ELIGIBLE | Block-diagonal unitarity reduces to independent unitary blocks |
+| C025 / QP012 | FOUNDATION_ONLY | Real unitary matrices are orthogonal by direct conjugation restriction |
+| C025 / QP013 | FOUNDATION_ONLY | Entrywise orthonormality expands U*U=I and is covered by parameter constraints |
+| C025 / QP014 | ELIGIBLE | Unitary transformations preserve complex inner products and norms |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00110`: Characterize triangular unitary matrices as diagonal phase matrices.
+- `U2_CH8_ST1_AR00111`: Determine unitarity of block-diagonal matrices from their blocks.
+- `U2_CH8_ST1_AR00112`: Use unitary transformations to preserve complex inner products and norms.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 315 dispositions and 112 draft archetypes; 35 source QPs remain untouched.
