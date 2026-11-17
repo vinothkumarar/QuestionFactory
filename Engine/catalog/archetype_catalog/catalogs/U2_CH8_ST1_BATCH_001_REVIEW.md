@@ -504,3 +504,23 @@ New draft candidate:
 - JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
 
 Cumulative status: 140 dispositions and 22 draft archetypes; 210 source QPs remain untouched.
+
+
+## Batch 029 — symmetric-matrix parameter constraints and decomposition (global QP141–QP145)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C013 / QP002 | ELIGIBLE | Pairwise equality constraints between transposed entries define a reusable parameter mechanism |
+| C013 / QP003 | FOUNDATION_ONLY | Direct count of independent diagonal and off-diagonal pair entries |
+| C013 / QP004 | FOUNDATION_ONLY | Symmetric component formula is included in the full decomposition |
+| C013 / QP005 | ELIGIBLE | Canonical symmetric/skew-symmetric decomposition is a reusable construction |
+| C013 / QP006 | FOUNDATION_ONLY | Uniqueness follows directly from the decomposition identities |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00023`: Derive parameter constraints for a symmetric matrix.
+- `U2_CH8_ST1_AR00024`: Decompose a square matrix into symmetric and skew-symmetric parts.
+
+Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 145 dispositions and 24 draft archetypes; 205 source QPs remain untouched.
