@@ -906,3 +906,23 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 240 dispositions and 70 draft archetypes; 110 source QPs remain untouched.
+
+
+## Batch 049 — involutory product and linear-combination inverse mechanisms (global QP241–QP245)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C020 / QP011 | ELIGIBLE | Product of involutory matrices is involutory iff the factors commute |
+| C020 / QP012 | ELIGIBLE | αI+βA has a closed-form inverse when α²−β²≠0 |
+| C020 / QP013 | REQUIRES_REVIEW | Feasibility requires explicit field, order, invariant and nontriviality assumptions |
+| C021 / QP001 | FOUNDATION_ONLY | Direct permutation-matrix pattern recognition |
+| C021 / QP002 | FOUNDATION_ONLY | Direct construction from a specified permutation |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00071`: Determine when a product of involutory matrices is involutory.
+- `U2_CH8_ST1_AR00072`: Invert linear combinations αI+βA for involutory A.
+
+Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 245 dispositions and 72 draft archetypes; 105 source QPs remain untouched. Twelve source possibilities are held for review.
