@@ -174,3 +174,14 @@ Findings:
 ## P1 acceptance-gate tracking
 
 The MECP v1.2 activity/deliverable/exit criteria are now tracked explicitly in `docs/p1/P1_EXIT_GATE_CHECKLIST.md`. Overall P1 status remains **IN PROGRESS / EXIT GATE NOT PASSED**. The canonical frozen v1.5 authority is the current blocking decision; PYQ local bytes/hashes and independent taxonomy review also remain open.
+
+
+## 2026-11-17 — PYQ tracker row-level reconciliation and acquisition retry
+
+- Materialized and compared the two Library workbooks in the working environment: `JEE_PYQ_Phase2_1_Audited_Source_Registry.xlsx` and `JEE_PYQ_Phase2_2_2026_English_Acquisition_Registry.xlsx`.
+- Both workbooks contain 247 rows and the exact same 247 unique `PYQ_ID` values in the same index order. The 2026 acquisition workbook is a 247-row master copy with a 21-record 2026 subset, not a separate 21-row-only workbook.
+- Resolved the reported nine-record official-source discrepancy: the 9 April 2026 Main records have the same IDs and source URLs in both workbooks; only `Official Source Confirmed` labels differ. The Acquisition Tracker labels these nine records `Yes`, while the Audited Registry labels them `Yes — NTA archive exists`. Both workbooks have 66 non-`No` records in that field (11+26+29 versus 2+26+38). This is a classification-label difference, not nine missing/extra papers or a difference in source-record count.
+- The 2026 Acquisition Tracker has 11 populated question-paper URLs (9 April Main + 2 Advanced) and 11 URL-access flags. The Audited Registry has zero populated PDF URL cells. Both still have zero Answer Key URL cells and zero SHA-256 cells; the 11 flags are not local-byte acquisition or hash verification.
+- The ten January Main 2026 shift records remain without a populated question-paper URL in the acquisition tracker.
+- Retried direct PDF downloads for Advanced 2026 Paper 1, Main 2026 April 2 Shift 1 and the official Main Session I final key. The working container failed DNS resolution for the official hosts. No PDF bytes were saved and no SHA-256 was calculated. This is a working-environment network limitation; it does not invalidate the official URLs previously verified through web access.
+- No Library workbook was overwritten and no source IDs, taxonomy IDs, enablement flags or production code were changed.
