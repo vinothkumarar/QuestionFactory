@@ -11,7 +11,7 @@
 - The source QPC was not modified.
 - Eight concept groupings are recorded in `U1_CH1_ST1_concepts.csv`.
 - QP016 is quarantined because its source text is malformed; no meaning is inferred.
-- Fifty-two archetype candidates remain across the 19 interpretable QPs.
+- Fifty-two archetype candidates remain across the 19 interpretable QPs. All 52 rows carry machine-readable `approval_status=DRAFT_REQUIRES_ACADEMIC_REVIEW` and `manufacturing_enabled=FALSE` gates.
 
 ## Pairwise overlap pass
 
@@ -62,6 +62,8 @@ Repository search found no corroborating corrected wording. The trailing `?1` ca
 | Interpretable QPs | 19 |
 | Concept rows | 8 |
 | Retained archetype candidates | 52 |
+| Candidate rows marked draft | 52 |
+| Candidate rows manufacturing-enabled | 0 |
 | Distinct sequential archetype IDs | 52 |
 | ID range | AR00001–AR00052 |
 | QP016 | QUARANTINED |
@@ -69,7 +71,7 @@ Repository search found no corroborating corrected wording. The trailing `?1` ca
 
 ## Important quality limitation
 
-The current `assessment_mechanism` and `reasoning_path` columns were populated as structured draft descriptions. Some use broad templates and are not yet sufficiently specific to serve as final academic approval evidence. They must be rewritten or verified against each archetype's actual mathematical reasoning before manufacturing is enabled.
+The current `assessment_mechanism` and `reasoning_path` columns were populated as structured draft descriptions. Some use broad templates and are not yet sufficiently specific to serve as final academic approval evidence. They must be rewritten or verified against each archetype's actual mathematical reasoning before manufacturing is enabled. The registry now carries an explicit machine-readable approval gate: all rows are DRAFT and manufacturing is FALSE.
 
 ## Release status
 
