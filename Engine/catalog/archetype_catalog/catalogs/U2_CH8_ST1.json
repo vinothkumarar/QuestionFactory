@@ -179,6 +179,36 @@
             "qp_id": "QP002",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Determining row-matrix order and indexing constraints is direct dimensional interpretation; no distinct JEE reasoning mechanism is justified by the source possibility."
+        },
+        {
+            "concept_id": "C003",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Solving for a matrix to have exactly one row is a direct shape constraint on its order; it is a foundation-level classification task."
+        },
+        {
+            "concept_id": "C003",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Constructing a one-row matrix from supplied entries or a pattern is direct representation and does not establish a distinct JEE reasoning mechanism."
+        },
+        {
+            "concept_id": "C003",
+            "qp_id": "QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A row matrix is also square or a column matrix only in the 1×1 case; this is a direct order-definition check."
+        },
+        {
+            "concept_id": "C003",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Equality with a given row matrix requires matching order and corresponding entries, which is a direct matrix-equality prerequisite."
+        },
+        {
+            "concept_id": "C003",
+            "qp_id": "QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Addition and scalar multiplication preserve the one-row shape when orders match; this is a direct closure property."
         }
     ],
     "archetypes": [
