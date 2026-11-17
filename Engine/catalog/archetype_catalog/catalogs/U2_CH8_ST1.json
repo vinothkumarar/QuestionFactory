@@ -1289,6 +1289,36 @@
             "qp_id": "QP013",
             "disposition": "REQUIRES_REVIEW",
             "rationale": "The structured classes and property combinations are open-ended; specific families and assumptions must be enumerated before a single archetype can be assessed."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Nilpotency is directly recognized by verifying A^k=O for some positive integer k; the basic definition check is foundation content."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "Finding the least positive k with A^k=O requires sequential power analysis and a minimality proof; this is a distinct index-of-nilpotency mechanism."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP003",
+            "disposition": "ELIGIBLE",
+            "rationale": "Parameterized nilpotency imposes simultaneous polynomial constraints on matrix entries; for small orders these can be derived from trace/determinant or powers, forming a reusable constraint mechanism."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "All eigenvalues of a nilpotent matrix are zero, so determinant and trace vanish; these are direct consequences."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP005",
+            "disposition": "ELIGIBLE",
+            "rationale": "A nilpotent n×n matrix has characteristic polynomial λ^n and minimal polynomial λ^k for its nilpotency index k; relating these invariants is a distinct polynomial-structure mechanism."
         }
     ],
     "archetypes": [
@@ -2874,6 +2904,93 @@
                 "minimal versus characteristic polynomial",
                 "eigenvalue multiplicities",
                 "field and diagonalizability assumptions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C019",
+            "concept": "Nilpotent Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Determine the index of nilpotency of a nilpotent matrix",
+            "archetype_id": "U2_CH8_ST1_AR00056",
+            "archetype": "Determine the index of nilpotency of a matrix",
+            "assessment_mechanism": "Find the least positive integer k for which A^k=O, using successive powers, structural constraints or nilpotent block patterns, and prove that the preceding power is nonzero.",
+            "reasoning_path": "Compute or characterize A, A², A³ and subsequent powers; identify the first zero power; verify A^{k−1}≠O; use the n×n bound k≤n when applicable; report the least index.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "explicit versus parameterized matrix",
+                "Jordan/block structure",
+                "power computation versus theoretical bound",
+                "nilpotency index"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C019",
+            "concept": "Nilpotent Matrix",
+            "qp_id": "QP003",
+            "question_possibility": "Determine conditions on parameters for a matrix to be nilpotent",
+            "archetype_id": "U2_CH8_ST1_AR00057",
+            "archetype": "Derive parameter conditions for a nilpotent matrix",
+            "assessment_mechanism": "Translate nilpotency into the vanishing of a sufficiently high matrix power or equivalent characteristic/minimal-polynomial constraints, then solve for the matrix parameters.",
+            "reasoning_path": "Use A^k=O for a suitable k or apply the characteristic-polynomial condition for nilpotency; expand the required matrix equations; solve simultaneous polynomial constraints; verify that the resulting matrix is nilpotent and identify its index where required.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "number of parameters",
+                "power bound",
+                "trace/determinant constraints for low order",
+                "polynomial equation system"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C019",
+            "concept": "Nilpotent Matrix",
+            "qp_id": "QP005",
+            "question_possibility": "Determine characteristic polynomial constraints for a nilpotent matrix",
+            "archetype_id": "U2_CH8_ST1_AR00058",
+            "archetype": "Derive characteristic and minimal polynomial constraints for a nilpotent matrix",
+            "assessment_mechanism": "Use nilpotency to show that all eigenvalues vanish, giving characteristic polynomial λ^n, while the minimal polynomial is λ^k where k is the nilpotency index.",
+            "reasoning_path": "Apply A^k=O; infer every eigenvalue λ satisfies λ^k=0; conclude all eigenvalues are zero and χ_A(λ)=λ^n; identify the least exponent k for the minimal polynomial; relate k to the nilpotency index.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "nilpotency index",
+                "characteristic versus minimal polynomial",
+                "eigenvalue information",
+                "Jordan block size constraints"
             ]
         }
     ]
