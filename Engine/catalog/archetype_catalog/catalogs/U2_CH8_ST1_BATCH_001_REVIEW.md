@@ -244,3 +244,21 @@ New draft candidate:
 - JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
 
 Cumulative status: 65 dispositions and 8 draft archetypes; 285 source QPs remain untouched.
+
+
+## Batch 014 — zero-matrix properties and zero-product reasoning (global QP066–QP070)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C007 / QP002 | FOUNDATION_ONLY | Entrywise zero equations for parameterized matrices |
+| C007 / QP003 | FOUNDATION_ONLY | Zero-matrix order compatibility |
+| C007 / QP004 | FOUNDATION_ONLY | Additive identity simplification |
+| C007 / QP005 | FOUNDATION_ONLY | Direct zero-product property |
+| C007 / QP006 | ELIGIBLE | Refuting AB=O ⇒ A=O or B=O using nonzero matrix zero divisors requires a distinct counterexample/nullspace mechanism |
+
+New draft candidate:
+
+- `U2_CH8_ST1_AR00009`: Disprove the zero-product implication with nonzero matrices.
+- JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
+
+Cumulative status: 70 dispositions and 9 draft archetypes; 280 source QPs remain untouched.
