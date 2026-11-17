@@ -1829,6 +1829,36 @@
             "qp_id": "QP004",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Equivalent characterizations of unitarity by row/column orthonormality and U*U=I are standard direct equivalences."
+        },
+        {
+            "concept_id": "C025",
+            "qp_id": "QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Products, inverses and integer powers of unitary matrices remain unitary by direct adjoint identities; this is standard closure."
+        },
+        {
+            "concept_id": "C025",
+            "qp_id": "QP006",
+            "disposition": "ELIGIBLE",
+            "rationale": "For unitary U, (cU)*(cU)=|c|²I, so cU is unitary exactly when |c|=1; this is a distinct scalar-modulus constraint."
+        },
+        {
+            "concept_id": "C025",
+            "qp_id": "QP007",
+            "disposition": "ELIGIBLE",
+            "rationale": "Taking determinants in U*U=I yields conjugate(det U)det U=1, hence |det U|=1; this is a reusable complex-invariant mechanism."
+        },
+        {
+            "concept_id": "C025",
+            "qp_id": "QP008",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Unitary matrices are automatically invertible and full rank, with inverse U*; this is a direct property."
+        },
+        {
+            "concept_id": "C025",
+            "qp_id": "QP009",
+            "disposition": "ELIGIBLE",
+            "rationale": "A diagonal matrix is unitary exactly when every diagonal entry has modulus one; this is a distinct entrywise classification mechanism."
         }
     ],
     "archetypes": [
@@ -4891,6 +4921,93 @@
                 "row versus column equations",
                 "real/imaginary constraint split",
                 "independent/dependent equations"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C025",
+            "concept": "Unitary Matrix",
+            "qp_id": "QP006",
+            "question_possibility": "Determine scalar conditions under which a scalar multiple of a unitary matrix is unitary",
+            "archetype_id": "U2_CH8_ST1_AR00107",
+            "archetype": "Determine scalar multiples that preserve unitarity",
+            "assessment_mechanism": "Use (cU)*(cU)=|c|²I to derive the necessary and sufficient unit-modulus condition for a scalar multiple of a unitary matrix.",
+            "reasoning_path": "Compute (cU)*=conjugate(c)U*; multiply by cU; use U*U=I; obtain |c|²I; conclude |c|=1; verify the converse.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "real versus complex scalar",
+                "unit-modulus condition",
+                "multiple scalar factors",
+                "matrix order",
+                "additional normalization constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C025",
+            "concept": "Unitary Matrix",
+            "qp_id": "QP007",
+            "question_possibility": "Determine determinant constraints of unitary matrices",
+            "archetype_id": "U2_CH8_ST1_AR00108",
+            "archetype": "Derive determinant modulus constraints for a unitary matrix",
+            "assessment_mechanism": "Take determinants in U*U=I to show the determinant lies on the unit circle and use this to constrain parameterized unitary matrices.",
+            "reasoning_path": "Apply det(U*U)=det(I); use det(U*)=conjugate(det U); obtain |det U|²=1; conclude |det U|=1; combine with any given phase or determinant constraints.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "determinant phase",
+                "parameterized entries",
+                "real versus complex determinant",
+                "additional spectral constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C025",
+            "concept": "Unitary Matrix",
+            "qp_id": "QP009",
+            "question_possibility": "Characterize diagonal unitary matrices",
+            "archetype_id": "U2_CH8_ST1_AR00109",
+            "archetype": "Characterize diagonal unitary matrices entrywise",
+            "assessment_mechanism": "Reduce U*U=I for a diagonal matrix to independent modulus-one conditions on each diagonal entry.",
+            "reasoning_path": "Write U=diag(u₁,...,uₙ); compute U*=diag(conjugate(u₁),...,conjugate(uₙ)); equate U*U to I; obtain |uᵢ|=1 for every i; construct or classify all admissible entries.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "phase angles",
+                "roots of unity versus arbitrary unit complex values",
+                "parameterized diagonal entries",
+                "determinant constraint"
             ]
         }
     ]
