@@ -46,27 +46,31 @@ class CatalogueDataIntegrityTests(unittest.TestCase):
 
     def test_matrix_batch_one_matches_source_and_keeps_gates_closed(self) -> None:
         source = read_json(QP_CATALOGS / "U2_CH8_ST1.json")
-        batch_source = source[:15]
+        batch_source = source[:20]
         catalogue = read_json(ARCHETYPE_CATALOGS / "U2_CH8_ST1.json")
         validate_catalog_response(
             response=catalogue,
             input_qps=batch_source,
         )
-        self.assertEqual(len(catalogue["qp_dispositions"]), 15)
-        self.assertEqual(len(catalogue["archetypes"]), 2)
+        self.assertEqual(len(catalogue["qp_dispositions"]), 20)
+        self.assertEqual(len(catalogue["archetypes"]), 4)
 
         csv_path = ARCHETYPE_CATALOGS / "U2_CH8_ST1.csv"
         rows = csv_path.read_text(encoding="utf-8").splitlines()
-        self.assertEqual(len(rows), 3)
-        self.assertIn("DRAFT_CORE_REQUIRES_ACADEMIC_REVIEW", rows[1])
-        self.assertIn("FALSE", rows[1])
-        self.assertIn("DRAFT_CORE_REQUIRES_ACADEMIC_REVIEW", rows[2])
-        self.assertIn("FALSE", rows[2])
+        self.assertEqual(len(rows), 5)
+        for row in rows[1:]:
+            self.assertIn("DRAFT_CORE_REQUIRES_ACADEMIC_REVIEW", row)
+            self.assertIn("FALSE", row)
 
         ids = [row["archetype_id"] for row in catalogue["archetypes"]]
         self.assertEqual(
             ids,
-            ["U2_CH8_ST1_AR00001", "U2_CH8_ST1_AR00002"],
+            [
+                "U2_CH8_ST1_AR00001",
+                "U2_CH8_ST1_AR00002",
+                "U2_CH8_ST1_AR00003",
+                "U2_CH8_ST1_AR00004",
+            ],
         )
 
 
