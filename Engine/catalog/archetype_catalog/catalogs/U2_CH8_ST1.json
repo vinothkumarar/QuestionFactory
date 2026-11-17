@@ -1319,6 +1319,36 @@
             "qp_id": "QP005",
             "disposition": "ELIGIBLE",
             "rationale": "A nilpotent n×n matrix has characteristic polynomial λ^n and minimal polynomial λ^k for its nilpotency index k; relating these invariants is a distinct polynomial-structure mechanism."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP006",
+            "disposition": "ELIGIBLE",
+            "rationale": "Because N^k=O, any polynomial p(N) reduces to its constant term times I plus a finite sum of lower powers; using the index truncates the expression and is a reusable algebraic-reduction mechanism."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP007",
+            "disposition": "ELIGIBLE",
+            "rationale": "The finite geometric series gives (I−N)⁻¹=I+N+…+N^{k−1} for N^k=O, and the plus-sign variant follows similarly; this is a distinct finite-inverse construction."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP008",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Similarity preserves nilpotency and its index by (P⁻¹NP)^k=P⁻¹N^kP; this is a direct invariance property."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP009",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Strictly upper/lower triangular matrices are nilpotent, while a triangular matrix with a nonzero diagonal entry cannot be nilpotent; these are standard structural facts already covered by triangular-pattern reasoning."
+        },
+        {
+            "concept_id": "C019",
+            "qp_id": "QP010",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The nilpotency index is bounded by matrix order and can be sharpened by bandwidth/zero-pattern information; this overlaps the existing nilpotency-bound mechanism."
         }
     ],
     "archetypes": [
@@ -2991,6 +3021,64 @@
                 "characteristic versus minimal polynomial",
                 "eigenvalue information",
                 "Jordan block size constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C019",
+            "concept": "Nilpotent Matrix",
+            "qp_id": "QP006",
+            "question_possibility": "Evaluate polynomial expressions in a nilpotent matrix using nilpotency",
+            "archetype_id": "U2_CH8_ST1_AR00059",
+            "archetype": "Reduce polynomial expressions in a nilpotent matrix",
+            "assessment_mechanism": "Use N^k=O to truncate every polynomial or power series expression in N to a finite polynomial of degree below the nilpotency index.",
+            "reasoning_path": "Identify the nilpotency index k; expand the polynomial in powers of N; replace every term N^j with j≥k by zero; combine coefficients of remaining powers; verify the finite reduced expression.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "nilpotency index",
+                "polynomial degree",
+                "constant term",
+                "multiple polynomial expressions",
+                "matrix order"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C019",
+            "concept": "Nilpotent Matrix",
+            "qp_id": "QP007",
+            "question_possibility": "Establish invertibility and obtain (I ± N)^{-1} for a nilpotent matrix N",
+            "archetype_id": "U2_CH8_ST1_AR00060",
+            "archetype": "Construct inverses of I±N using finite geometric series",
+            "assessment_mechanism": "Use nilpotency N^k=O to construct exact finite inverses for I−N and I+N, avoiding infinite-series assumptions.",
+            "reasoning_path": "Write the finite geometric sum; multiply (I−N)(I+N+…+N^{k−1}) and show the remainder N^k vanishes; derive the alternating-sign inverse for I+N; verify both left and right products.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "nilpotency index",
+                "plus versus minus sign",
+                "matrix order",
+                "parameter-scaled N",
+                "finite-series truncation"
             ]
         }
     ]
