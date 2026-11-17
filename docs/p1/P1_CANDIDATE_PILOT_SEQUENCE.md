@@ -87,7 +87,7 @@ Both answer values and option identifiers are independently checked. Local PDF b
 
 ## Additional Advanced PYQ evidence — 2026-11-17
 
-The official JEE Advanced 2026 Paper 1 PDF and final-key PDF are now linked in `P1_PYQ_EVIDENCE_REGISTER.csv`. Paper 1 Q3 maps provisionally to `U2_CH8_ST2 — Matrix Operations`; the final key says B, and independent determinant checks give A=0, B=-2, C=0, D=0, confirming B. The official Paper 2 final-key URL is also located, but no Paper 2 question match is claimed. This additional evidence does not authorize production or change the Physics pilot candidate ranking.
+The official JEE Advanced 2026 Paper 1 PDF and final-key PDF are linked in `P1_PYQ_EVIDENCE_REGISTER.csv`. Paper 1 Q3 maps provisionally to `U2_CH8_ST2 — Matrix Operations`; the final key says B, and independent determinant checks give A=0, B=-2, C=0, D=0, confirming B. The Paper 2 final-key URL is also linked, and Paper 2 Physics Q1 is independently matched to answer C in the evidence register. This additional evidence does not authorize production or change the Physics pilot candidate ranking.
 
 
 The official JEE Advanced 2026 Paper 2 Q1 is additionally mapped to `P12_CH1_ST2 — Drift Velocity`. The paper provides wire geometry, conductivity, battery/internal resistance and material data; the independent circuit/current-density calculation gives `vd≈0.2083 mm/s`, matching official answer C. The P2 question and final key are linked in the evidence register. No pilot or production order is authorised.
