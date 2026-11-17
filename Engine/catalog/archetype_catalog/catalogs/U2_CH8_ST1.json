@@ -119,6 +119,36 @@
             "qp_id": "QP007",
             "disposition": "ELIGIBLE",
             "rationale": "Solving parameter conditions for Hermitian, skew-Hermitian or unitary structure requires translating a matrix identity into coupled real/imaginary constraints. This is a distinct parameter-constraint mechanism and remains a JEE Main candidate pending academic review."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP008",
+            "disposition": "ELIGIBLE",
+            "rationale": "The canonical decomposition into Hermitian and skew-Hermitian components is a reusable construction with a verifiable uniqueness structure; retained as a JEE Main candidate pending academic review."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP009",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Scalar multiplication effects on Hermitian/skew-Hermitian type follow directly from conjugate-transpose identities and real/imaginary scalar conditions; this is a concise property check."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP010",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Sum/difference type outcomes are direct closure checks and can be summarized by a small operation table; no independent multi-step mechanism is justified by the source possibility alone."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP011",
+            "disposition": "ELIGIBLE",
+            "rationale": "Products and inverses require applying adjoint identities, reversing factor order and respecting commutativity/invertibility conditions; this is a reusable multi-step matrix-structure mechanism, retained as a JEE Main candidate."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP012",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The adjoint identities are foundational transformation rules. Memorizing or directly applying the identities alone does not establish a separate archetype from product/adjoint reasoning."
         }
     ],
     "archetypes": [
@@ -231,6 +261,64 @@
                 "matrix order",
                 "independent versus dependent constraints",
                 "real and imaginary parameter coupling"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C002",
+            "concept": "Complex Matrix",
+            "qp_id": "QP008",
+            "question_possibility": "Decompose a complex matrix into Hermitian and skew-Hermitian components",
+            "archetype_id": "U2_CH8_ST1_AR00005",
+            "archetype": "Decompose a complex matrix into Hermitian and skew-Hermitian components",
+            "assessment_mechanism": "Construct the Hermitian and skew-Hermitian parts of a complex square matrix using its adjoint, then verify that their sum recovers the original matrix.",
+            "reasoning_path": "Compute A†; form H=(A+A†)/2 and K=(A−A†)/2; verify H†=H and K†=−K; verify A=H+K; use uniqueness when required.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "entry structure",
+                "parameterized entries",
+                "component verification",
+                "uniqueness requirement"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C002",
+            "concept": "Complex Matrix",
+            "qp_id": "QP011",
+            "question_possibility": "Determine the resulting type under matrix product, inverse, or adjoint given operand types and commutativity constraints",
+            "archetype_id": "U2_CH8_ST1_AR00006",
+            "archetype": "Infer product or inverse structure using adjoint reversal and commutativity",
+            "assessment_mechanism": "Determine whether products or inverses preserve a Hermitian, skew-Hermitian or unitary condition by applying adjoint identities, reversing product order and checking the required commutativity or invertibility assumptions.",
+            "reasoning_path": "Write the adjoint of the product in reverse order; substitute the given operand identities; compare with the target matrix or its inverse; identify where commutativity is required; verify every assumption before concluding the resulting type.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "operand matrix classes",
+                "factor order",
+                "commutativity conditions",
+                "invertibility",
+                "number of factors"
             ]
         }
     ]
