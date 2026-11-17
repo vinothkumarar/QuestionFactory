@@ -134,6 +134,16 @@ Findings:
 - Added `P1_CHEMISTRY_COVERAGE_GAP_SECOND_PASS.md` and updated the unit-level and empty-chapter gap audits. No taxonomy IDs, parent paths or enablement flags were changed.
 - These are inventory-level gap findings; actual external/prior catalogue content must still be inspected before proposing any new taxonomy IDs.
 
+## 2026-11-17 — Physics Experimental Skills second-pass review
+
+- Scanned all 233 Physics subtopic names against the 18 experiments/activities listed in official JEE Main 2027 Physics Unit 20 (NTA PDF page 5, lines 140–152).
+- Found theory-level paths for many activities (simple pendulum, Young's modulus, surface energy/capillarity, viscosity/Stokes law, specific heat, meter bridge/resistivity, Ohm's law, galvanometer, optics, diode/Zener/LED), but the current taxonomy does not separately represent the required practical procedures, apparatus, observations, graphs and measurements.
+- The metre-scale/moments experiment remains blocked by the two empty P5 chapters. No dedicated Experimental Skills hierarchy exists in the current internal unit list.
+- Found and corrected one definite mapping error: `P10_CH1_ST8 — Simple Pendulum` was marked Main `NO_DIRECT_EXPLICIT_SCOPE`, but the official Main 2027 syllabus explicitly includes simple pendulum theory in Unit 10 and a simple-pendulum experiment in Unit 20. It is now `MAPPED_PROVISIONAL`; the stable UUID, all flags and `PENDING_INDEPENDENT_REVIEW` status are unchanged.
+- Added `P1_PHYSICS_EXPERIMENTAL_SKILLS_SECOND_PASS.md`. This is an internal second pass, not independent human academic approval.
+- Revalidated the mapping register after the correction: 1,026 rows; 1,026 unique codes and UUIDs; zero missing required fields; Main 2027 status totals 589 mapped / 130 partial / 307 no direct; Advanced 2026 totals unchanged at 688 mapped / 107 partial / 231 no direct; all 1,026 rows remain pending independent review; effective-enabled snapshot remains 26 TRUE / 1,000 FALSE.
+- No production generation or enablement changes were made.
+
 ## MECP v1.2 P1 exit gate (verbatim acceptance conditions)\n\n- Pilot subtopic has an evidence-backed official syllabus mapping.\n- Required PYQ/source evidence is sufficient for meaningful analysis, or source gaps are explicitly accepted and bounded.\n- Rule authority is identified and conflicts are resolved or isolated from the pilot.\n- Taxonomy IDs and enablement state are traceable.\n- No pilot selection based solely on catalogue maturity.\n\nThe P1 deliverables also include the official source register, reconciled syllabus master, Main/Advanced applicability map, taxonomy/enablement report, PYQ source/acquisition/answer-key register, authoritative blueprint reference/rule crosswalk, and candidate pilot sequence with source confidence.\n\n## P1 work remaining
 
 1. Independently validate the provisional Main/Advanced mappings against exact official syllabus wording; revalidate Advanced scope when the 2027 syllabus is published.
