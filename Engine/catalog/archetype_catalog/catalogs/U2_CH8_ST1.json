@@ -569,6 +569,36 @@
             "qp_id": "QP008",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "A scalar matrix is invertible exactly when its scalar is nonzero, with inverse the reciprocal scalar times identity; this is a direct property."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP009",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Integer powers of a scalar matrix reduce to scalar powers and direct invertibility conditions; this is a straightforward consequence of scalar-matrix form."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP010",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The adjugate of a scalar matrix follows a standard order-dependent formula; direct formula recall/application is retained as foundation content."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP011",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Determinant and trace reduce to λ^n and nλ respectively; these are direct standard formulas."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP012",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Rank, nullity and singularity reduce to the λ=0 versus λ≠0 case split; this is direct property classification."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP013",
+            "disposition": "ELIGIBLE",
+            "rationale": "A scalar matrix λI satisfies each listed structural property exactly when λ obeys a corresponding scalar equation; solving and consolidating these conditions is a reusable parameter-classification mechanism."
         }
     ],
     "archetypes": [
@@ -1027,6 +1057,35 @@
                 "off-diagonal constraints",
                 "diagonal equality constraints",
                 "independent/dependent equations"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C009",
+            "concept": "Scalar Matrix",
+            "qp_id": "QP013",
+            "question_possibility": "Determine parameter conditions for a scalar matrix to satisfy a specified standard property (identity, zero, idempotent, nilpotent, involutory, symmetric, skew-symmetric, orthogonal)",
+            "archetype_id": "U2_CH8_ST1_AR00017",
+            "archetype": "Classify scalar-matrix properties through scalar parameter equations",
+            "assessment_mechanism": "Translate a requested structural property of λI into a scalar equation or condition on λ, solve the condition, and distinguish the resulting matrix classes.",
+            "reasoning_path": "Write the scalar matrix as λI_n; translate each target property into its defining matrix identity; reduce the identity to a scalar equation in λ; solve over the stated field; check dimension and property-specific restrictions; verify the resulting matrix directly.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "HIGH",
+            "variation_dimensions": [
+                "target property",
+                "field of scalars",
+                "matrix order",
+                "single versus combined properties",
+                "parameter restrictions"
             ]
         }
     ]
