@@ -318,3 +318,24 @@ New draft candidates:
 Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 85 dispositions and 13 draft archetypes; 265 source QPs remain untouched.
+
+
+## Batch 018 — diagonal equations and scalar-matrix structure (global QP086–QP090)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C008 / QP008 | ELIGIBLE | Diagonal matrix equations reduce to simultaneous scalar constraints on diagonal entries |
+| C008 / QP009 | ELIGIBLE | Universal commutativity forces equality of all diagonal entries; test with off-diagonal matrix units |
+| C009 / QP001 | FOUNDATION_ONLY | Direct scalar-matrix recognition |
+| C009 / QP002 | FOUNDATION_ONLY | Direct distinction among scalar, diagonal and identity definitions |
+| C009 / QP003 | ELIGIBLE | Parameterized scalar-matrix constraints require zero off-diagonal entries and equal diagonal entries |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00014`: Solve diagonal-entry constraints from a diagonal matrix equation.
+- `U2_CH8_ST1_AR00015`: Characterize diagonal matrices that commute with every matrix.
+- `U2_CH8_ST1_AR00016`: Derive scalar-matrix conditions from a parameterized matrix.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 90 dispositions and 16 draft archetypes; 260 source QPs remain untouched.
