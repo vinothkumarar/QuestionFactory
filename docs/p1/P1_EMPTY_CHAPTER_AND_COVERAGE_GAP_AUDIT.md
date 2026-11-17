@@ -39,6 +39,16 @@ The current curriculum CSV snapshot contains six chapters with zero subtopic row
 2. **Official Main Unit 13 — Purification and Characterisation of Organic Compounds** includes crystallisation, sublimation, distillation, extraction, chromatography, qualitative/quantitative analysis and formula calculations. No dedicated internal unit/chapter is evident from the unit list; check all existing subtopics before deciding whether content is covered elsewhere.
 3. **Official Main Unit 20 — Principles Related to Practical Chemistry** includes functional-group detection, preparations, titrimetric exercises, qualitative salt analysis and practical experiments. No dedicated internal unit/chapter is evident from the unit list; coverage must be demonstrated at subtopic level, not inferred from Metallurgy or General Organic Chemistry.
 
+## 2A. Chemistry coverage second-pass finding — 2026-11-17
+
+A scan of all 260 Chemistry subtopic names found one relevant existing Main Unit 13 topic: `C20_CH1_ST9 — Chromatographic Methods` (UUID `3bd3b3eb-e250-4e91-8efe-ca8827a2657a`). It is currently nested under C20 Metallurgy, but the mapping register correctly records a cross-unit mapping to Main 2027 Unit 13 Purification and Characterisation (NTA syllabus PDF page 8, lines 206–207). Its parent unit/chapter are disabled, so its effective parent-chain flag is FALSE.
+
+No other direct taxonomy labels were found for crystallisation, sublimation, distillation, extraction, qualitative/quantitative organic analysis or formula determination. This makes Main Unit 13 **partially represented**, not wholly absent and not complete.
+
+No directly named practical-chemistry entries were found for titrimetric exercises, salt analysis, functional-group detection, preparations or practical procedures. Adjacent theory subtopics are not accepted as proof of practical coverage.
+
+See `P1_CHEMISTRY_COVERAGE_GAP_SECOND_PASS.md` for the complete second-pass method, evidence and bounded conclusions. No IDs, parent paths or enable flags were changed.
+
 ## 3. JEE Advanced 2026 comparison
 
 - P4/P5 topics are within the Advanced Physics mechanics scope, but empty chapters prevent subtopic-level mapping and PYQ traceability.
