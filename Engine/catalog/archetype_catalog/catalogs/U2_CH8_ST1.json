@@ -539,6 +539,36 @@
             "qp_id": "QP003",
             "disposition": "ELIGIBLE",
             "rationale": "Imposing the scalar-matrix form on a parameterized matrix requires all off-diagonal entries to vanish and all diagonal entries to agree; this is a reusable simultaneous-constraint mechanism."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Constructing a scalar matrix from a specified scalar and order is direct notation/definition application."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Equivalent characterizations of scalar matrices overlap the universal-commutativity mechanism already represented by the scalar-matrix candidate; no duplicate archetype is created."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Addition and multiplication of scalar matrices reduce to scalar arithmetic and preserve scalar-matrix form directly."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Multiplication by a scalar matrix gives uniform scaling and commutation; the universal-commutation reasoning is already represented by the existing candidate."
+        },
+        {
+            "concept_id": "C009",
+            "qp_id": "QP008",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A scalar matrix is invertible exactly when its scalar is nonzero, with inverse the reciprocal scalar times identity; this is a direct property."
         }
     ],
     "archetypes": [
