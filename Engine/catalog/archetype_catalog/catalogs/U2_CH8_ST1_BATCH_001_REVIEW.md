@@ -372,3 +372,18 @@ New draft candidate:
 - JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
 
 Cumulative status: 100 dispositions and 17 draft archetypes; 250 source QPs remain untouched.
+
+
+## Batch 021 — scalar-matrix parameter follow-ups and identity recognition (global QP101–QP105)
+
+All five possibilities are retained as `FOUNDATION_ONLY`:
+
+| QP | Source mechanism | Disposition rationale |
+|---|---|---|
+| C009 / QP014 | Infer scalar value from constraints | Direct parameter identification; overlaps AR00017 |
+| C009 / QP015 | Count scalar matrices under entry constraints | Counting admissible scalar values; no distinct mechanism established |
+| C009 / QP016 | Existence/uniqueness of constrained scalar matrix | Overlaps scalar-parameter equation candidate |
+| C009 / QP017 | Polynomial in a scalar matrix | Direct reduction to p(λ)I |
+| C010 / QP001 | Identify identity matrix | Direct definition check |
+
+No new archetypes were added. Cumulative status: 105 dispositions and 17 draft archetypes; 245 source QPs remain untouched.
