@@ -80,6 +80,31 @@ class ArchetypeCatalogContractTests(unittest.TestCase):
         self.assertIn('"variation_dimensions"', prompt)
         self.assertIn('"archetype_id": ""', prompt)
 
+    def test_prompt_preserves_context_for_mixed_concept_batch(self) -> None:
+        base = {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Matrix Operations",
+            "concept_id": "C001",
+            "concept": "Matrix Equality",
+            "qp_id": "QP001",
+            "question_possibility": "Determine whether two matrices are equal",
+        }
+        second = {
+            **base,
+            "concept_id": "C002",
+            "concept": "Matrix Addition",
+            "qp_id": "QP001",
+            "question_possibility": "Compute a matrix sum",
+        }
+        prompt = BatchArchetypeCatalogGenerator().load_prompt(
+            qps=[base, second]
+        )
+        self.assertIn("Concept: Matrix Equality", prompt)
+        self.assertIn("Concept: Matrix Addition", prompt)
+        self.assertIn("Never copy context from another QP", prompt)
+
     def test_csv_export_preserves_metadata_and_default_gate(self) -> None:
         record = valid_record()
         with tempfile.TemporaryDirectory() as directory:
