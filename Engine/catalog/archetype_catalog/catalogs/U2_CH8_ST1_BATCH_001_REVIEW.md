@@ -1073,3 +1073,24 @@ New draft candidates:
 Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 280 dispositions and 93 draft archetypes; 70 source QPs remain untouched.
+
+
+## Batch 057 — Hermitian invariants, positive semidefinite products and congruence (global QP281–QP285)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C023 / QP007 | FOUNDATION_ONLY | Inverse/adjugate Hermitian properties follow directly from adjoint identities |
+| C023 / QP008 | ELIGIBLE | Hermitian eigenvalues are real, giving real trace and determinant |
+| C023 / QP009 | ELIGIBLE | A*A and AA* are Hermitian positive semidefinite by quadratic-form norms |
+| C023 / QP010 | ELIGIBLE | Hermitian structure is preserved by congruence P*AP |
+| C023 / QP011 | FOUNDATION_ONLY | Real Hermitian/symmetric and Hermitian/skew-Hermitian scalar correspondences are direct |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00094`: Infer real trace and determinant invariants of a Hermitian matrix.
+- `U2_CH8_ST1_AR00095`: Establish positive semidefiniteness of A*A and AA*.
+- `U2_CH8_ST1_AR00096`: Prove Hermitian structure is preserved by congruence transformations.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 285 dispositions and 96 draft archetypes; 65 source QPs remain untouched.
