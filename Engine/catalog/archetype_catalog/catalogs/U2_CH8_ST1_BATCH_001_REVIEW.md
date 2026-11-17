@@ -616,3 +616,23 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 170 dispositions and 31 draft archetypes; 180 source QPs remain untouched.
+
+
+## Batch 035 — orthogonal matrix parameter and completion mechanisms (global QP171–QP175)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C014 / QP013 | REQUIRES_REVIEW | Allowed discrete entry set/counting constraints are unspecified |
+| C015 / QP001 | FOUNDATION_ONLY | Direct verification by QᵀQ=I |
+| C015 / QP002 | ELIGIBLE | Parameterized orthogonality creates coupled norm and inner-product equations |
+| C015 / QP003 | ELIGIBLE | Completing missing entries requires constructing an orthonormal completion |
+| C015 / QP004 | FOUNDATION_ONLY | Q⁻¹=Qᵀ is a direct orthogonal-matrix property |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00032`: Derive parameter constraints for an orthogonal matrix.
+- `U2_CH8_ST1_AR00033`: Complete a partially specified matrix to an orthogonal matrix.
+
+Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 175 dispositions and 33 draft archetypes; 175 source QPs remain untouched. Five source possibilities are held for review due underspecified conditions.
