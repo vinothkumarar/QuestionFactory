@@ -50,7 +50,8 @@ Repository search found no corroborating corrected wording. The trailing `?1` ca
 ## Scope controls
 
 - Scope remains limited to Natural Numbers, Whole Numbers and Integers.
-- Natural-number inclusion of zero must be an explicit configuration, not an implicit assumption.
+- Operational default for this India-focused JEE catalogue: **N = {1, 2, 3, ...}**, **W = {0, 1, 2, ...}**, and **Z = {..., -2, -1, 0, 1, 2, ...}**. This makes zero a whole number and integer, but not a natural number.
+- Keep the natural-number convention configurable at subject/test level; if an approved source explicitly defines N to include zero, that test configuration overrides the default. Every generated item involving zero must inherit and state the active convention where ambiguity is possible.
 - Broader sets, divisibility, primes, HCF/LCM and unrelated Number System topics must not be imported into ST1.
 - JEE fit and difficulty fields are candidate assessments, not official syllabus mapping approval.
 
@@ -111,3 +112,8 @@ The source QPC provides short possibility labels, not detailed sub-archetype spe
 5. Pilot a small Foundation batch from the approved core candidates, then expand by demonstrated need.
 
 **Current status: 19 streamlined core drafts + 33 parked candidates; zero manufacturing-enabled rows.**
+
+
+### Operational convention decision
+
+To avoid blocking catalogue work on a convention debate, the project adopts the common school-level convention used for this India-focused JEE workflow: N is positive counting numbers, W includes zero, and Z includes all signed integers. This is a configurable project default, not a claim that every textbook or source uses identical notation. The generator and question metadata must carry the active convention; no question may rely on an unstated convention.
