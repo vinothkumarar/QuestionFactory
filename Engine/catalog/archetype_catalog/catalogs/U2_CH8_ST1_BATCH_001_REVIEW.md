@@ -739,3 +739,23 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 200 dispositions and 47 draft archetypes; 150 source QPs remain untouched. Six QPs are held for review due unspecified source details.
+
+
+## Batch 041 — non-singular counting holds and idempotent matrix mechanisms (global QP201–QP205)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C017 / QP009 | REQUIRES_REVIEW | Discrete entry set and counting constraints are unspecified |
+| C017 / QP010 | REQUIRES_REVIEW | Matrix constraints and allowed entries are unspecified |
+| C018 / QP001 | FOUNDATION_ONLY | Direct A²=A verification |
+| C018 / QP002 | ELIGIBLE | Parameterized idempotency produces simultaneous quadratic entry equations |
+| C018 / QP003 | ELIGIBLE | Positive powers collapse to A; polynomial expressions reduce to a linear form in I and A |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00048`: Solve parameter conditions for an idempotent matrix.
+- `U2_CH8_ST1_AR00049`: Reduce powers and polynomials of an idempotent matrix.
+
+Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 205 dispositions and 49 draft archetypes; 145 source QPs remain untouched. Eight source possibilities are held for review due underspecified details.
