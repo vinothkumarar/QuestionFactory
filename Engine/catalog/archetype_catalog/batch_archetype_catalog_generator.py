@@ -4,185 +4,101 @@ from pathlib import Path
 
 
 class BatchArchetypeCatalogGenerator:
-    """
-    Generates Archetype Catalogs
-    for a batch of Question Possibilities.
-    """
+    """Build disposition-aware prompts for batches that may span concepts."""
 
     def load_prompt(
         self,
         *,
         qps: list[dict[str, str]],
     ) -> str:
-
         if not qps:
-            raise ValueError(
-                "QP batch cannot be empty."
-            )
-
-        first = qps[0]
-
-        subject = first["subject"]
-        unit = first["unit"]
-        chapter = first["chapter"]
-        subtopic = first["subtopic"]
-        concept_id = first["concept_id"]
-        concept = first["concept"]
+            raise ValueError("QP batch cannot be empty.")
 
         prompt_file = (
             Path(__file__).parent
             / "prompts"
             / "archetype_catalog_prompt.txt"
         )
+        prompt = prompt_file.read_text(encoding="utf-8")
 
-        prompt = prompt_file.read_text(
-            encoding="utf-8"
+        context_fields = (
+            "subject", "unit", "chapter", "subtopic",
+            "concept_id", "concept", "qp_id", "question_possibility",
         )
+        blocks: list[str] = []
+        for index, row in enumerate(qps, start=1):
+            missing = [
+                field for field in context_fields
+                if not isinstance(row.get(field), str) or not row[field].strip()
+            ]
+            if missing:
+                raise ValueError(
+                    f"QP row #{index} is missing required source fields: "
+                    + ", ".join(missing)
+                )
+            blocks.append(
+                "\n".join(
+                    f"{field}: {row[field]}" for field in context_fields
+                )
+            )
 
-        prompt += f"""
+        prompt += """
 
-CONTEXT INFORMATION
+============================================================
+AUTHORITATIVE BATCH CONTRACT — OVERRIDES EARLIER OUTPUT RULES
+============================================================
 
-Subject:
-{subject}
+The earlier flat-array output instructions are superseded by
+this section. Return exactly one JSON object with exactly two
+top-level keys: "qp_dispositions" and "archetypes".
 
-Unit:
-{unit}
+Required shape:
 
-Chapter:
-{chapter}
+{
+  "qp_dispositions": [
+    {
+      "concept_id": "exact source concept_id",
+      "qp_id": "exact supplied QP ID",
+      "disposition": "ELIGIBLE | FOUNDATION_ONLY | OUT_OF_SCOPE | REQUIRES_REVIEW",
+      "rationale": "Specific academic reason for this decision"
+    }
+  ],
+  "archetypes": []
+}
 
-Subtopic:
-{subtopic}
+Classify EVERY supplied QP exactly once, using the composite identity
+(concept_id, qp_id). QP IDs may repeat under different concepts.
 
-Concept ID:
-{concept_id}
+Disposition meanings:
+- ELIGIBLE: one or more genuinely distinct, in-scope JEE archetypes exist.
+- FOUNDATION_ONLY: useful prerequisite/foundation learning, but no standalone
+  JEE archetype is justified for this QP.
+- OUT_OF_SCOPE: this QP does not belong in the active manufacturing scope.
+- REQUIRES_REVIEW: source or academic evidence is insufficient for a decision.
 
-Concept:
-{concept}
+Only ELIGIBLE QPs may have archetype records. Every ELIGIBLE QP must have
+at least one archetype. All other dispositions must have zero archetypes.
+An empty "archetypes" array is valid when no QP is ELIGIBLE.
+Do not fabricate a shallow archetype to satisfy coverage.
 
-IMPORTANT
+Each archetype record must retain the complete established archetype fields:
+subject, unit, chapter, subtopic, concept_id, concept, qp_id,
+question_possibility, archetype_id, archetype, assessment_mechanism,
+reasoning_path, exam_fit, difficulty_potential, variation_capacity,
+variation_dimensions. Copy all source context exactly from the matching
+QP record below. Never copy context from another QP in the same batch.
+Set archetype_id to "". Do not add approval or manufacturing permissions.
 
-The following Question Possibilities
-belong to the SAME Concept.
+The "qp_dispositions" array is the coverage record. Archetype presence is
+NOT the coverage record. Do not omit a QP even when it has no archetype.
 
-Generate Archetypes for EVERY
-Question Possibility.
+Return valid JSON only. No markdown or code fences.
 
-Do NOT skip any Question Possibility.
-
-Every supplied Question Possibility
-must appear in the output.
-
-Every supplied QP ID must appear
-in at least one output record.
-
-Return flat JSON records only.
-
-Every Archetype record must
-contain its originating qp_id.
-
-Do NOT group, nest, or aggregate
-Archetypes under a Question
-Possibility.
-
-IMPORTANT DISCOVERY RULES
-
-Process each Question Possibility
-independently.
-
-Fully exhaust the Archetype space
-for one Question Possibility before
-moving to the next Question
-Possibility.
-
-Do NOT balance output across
-Question Possibilities.
-
-Do NOT generate an equal number
-of Archetypes for all Question
-Possibilities.
-
-Different Question Possibilities may
-have different Archetype counts.
-
-Some Question Possibilities may
-require significantly more
-Archetypes than others.
-
-The number of Archetypes is
-determined solely by the size of the
-Archetype space of that Question
-Possibility.
-
-Do NOT stop Archetype discovery
-early merely because multiple
-Question Possibilities were supplied.
-
-For every Question Possibility,
-discover the COMPLETE Archetype
-space exactly as you would if that
-Question Possibility were processed
-alone in a dedicated API call.
-
-IMPORTANT JEE FILTER
-
-Generate ONLY JEE-worthy Archetypes.
-
-An Archetype must represent a
-distinct reasoning pathway.
-
-Do NOT create Archetypes that differ
-only by presentation format.
-
-The following alone do NOT qualify
-as distinct Archetypes:
-
-• Table interpretation
-• Graph interpretation
-• Bar chart interpretation
-• Line chart interpretation
-• Diagram interpretation
-• Data formatting variations
-• Information layout variations
-
-Such variants belong to the same
-Archetype unless the underlying
-reasoning pathway changes.
-
-Prefer Archetypes requiring:
-
-• Inference
-• Deduction
-• Comparison
-• Ranking
-• Constraint analysis
-• Consistency validation
-• Multi-step reasoning
-• Multi-condition evaluation
-• Reverse reasoning
-• Exception identification
-
-Reject Archetypes that can be solved
-through direct recall alone.
-
-Prefer fewer high-quality JEE
-Archetypes over many shallow
-assessment-format Archetypes.
-
-QUESTION POSSIBILITIES
-"""
-
-        for row in qps:
-
-            prompt += f"""
-
-QP ID:
-{row["qp_id"]}
-
-Question Possibility:
-{row["question_possibility"]}
+SOURCE QUESTION POSSIBILITIES
+Each numbered block is an independent source record. Concepts may differ.
 
 """
+        for index, block in enumerate(blocks, start=1):
+            prompt += f"\n--- SOURCE QP {index} ---\n{block}\n"
 
         return prompt

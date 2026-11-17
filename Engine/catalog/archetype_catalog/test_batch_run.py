@@ -6,18 +6,12 @@ from pathlib import Path
 from Engine.catalog.archetype_catalog.archetype_catalog_ai_client import (
     ArchetypeCatalogAIClient,
 )
-
 from Engine.catalog.archetype_catalog.batch_archetype_catalog_generator import (
     BatchArchetypeCatalogGenerator,
 )
 
 
 def main() -> None:
-
-    # ---------------------------------------------------------
-    # Test QP
-    # ---------------------------------------------------------
-
     qps = [
         {
             "subject": "Chemistry",
@@ -31,91 +25,36 @@ def main() -> None:
             ),
             "qp_id": "QP001",
             "question_possibility": (
-                "Identify ionic bonding as formation via "
-                "complete electron transfer followed by "
-                "electrostatic attraction between resulting ions"
+                "Identify ionic bonding as formation via complete electron "
+                "transfer followed by electrostatic attraction between ions"
             ),
         }
     ]
 
-    # ---------------------------------------------------------
-    # Generate prompt
-    # ---------------------------------------------------------
-
-    batch = qps[:1]
-
-    generator = (
-        BatchArchetypeCatalogGenerator()
+    prompt = BatchArchetypeCatalogGenerator().load_prompt(qps=qps)
+    result = ArchetypeCatalogAIClient().generate_json(
+        prompt,
+        input_qps=qps,
     )
 
-    prompt = generator.load_prompt(
-        qps=batch,
-    )
-
-    # ---------------------------------------------------------
-    # Call AI
-    # ---------------------------------------------------------
-
-    client = (
-        ArchetypeCatalogAIClient()
-    )
-
-    print()
-    print(
-        "Calling GPT-5..."
-    )
-
-    result = (
-        client.generate_json(
-            prompt
-        )
-    )
-
-    # ---------------------------------------------------------
-    # Save TEST output only
-    # ---------------------------------------------------------
-
-    output_file = (
-        Path(__file__).parent
-        / "test_archetype_output.json"
-    )
-
+    output_file = Path(__file__).parent / "test_archetype_output.json"
     output_file.write_text(
-        json.dumps(
-            result,
-            indent=4,
-            ensure_ascii=False,
-        ),
+        json.dumps(result, indent=4, ensure_ascii=False),
         encoding="utf-8",
     )
 
-    print()
-    print(
-        "SUCCESS: Archetype schema validation passed."
-    )
-
-    print(
-        f"Saved: {output_file}"
-    )
-
-    print(
-        f"Records: {len(result)}"
-    )
-
-    # ---------------------------------------------------------
-    # Display variation information
-    # ---------------------------------------------------------
-
-    print()
-    print(
-        "Variation metadata:"
-    )
-
-    for record in result:
-
+    print("SUCCESS: disposition-aware archetype schema validation passed.")
+    print(f"Saved: {output_file}")
+    print(f"QP dispositions: {len(result['qp_dispositions'])}")
+    print(f"Archetypes: {len(result['archetypes'])}")
+    for item in result["qp_dispositions"]:
         print(
-            f"{record['archetype_id']} | "
-            f"{record['variation_capacity']} | "
+            f"{item['qp_id']} | {item['disposition']} | "
+            f"{item['rationale']}"
+        )
+    for record in result["archetypes"]:
+        print(
+            f"{record['qp_id']} | {record['variation_capacity']} | "
             f"{record['variation_dimensions']}"
         )
 

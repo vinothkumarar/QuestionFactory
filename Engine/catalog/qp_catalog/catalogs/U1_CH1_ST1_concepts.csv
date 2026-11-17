@@ -1,0 +1,9 @@
+concept_id,concept,qp_ids,scope_note
+C001,Natural number definition and membership,"U1_CH1_ST1_QP001;U1_CH1_ST1_QP004;U1_CH1_ST1_QP007",Record the adopted convention for inclusion of zero; do not assume silently
+C002,Whole number definition and membership,"U1_CH1_ST1_QP002;U1_CH1_ST1_QP005;U1_CH1_ST1_QP008",Whole numbers include zero under the standard convention used here
+C003,Integer definition and membership,"U1_CH1_ST1_QP003;U1_CH1_ST1_QP006;U1_CH1_ST1_QP009",Integers include negative integers zero and positive integers
+C004,Classification across the three sets,"U1_CH1_ST1_QP010;U1_CH1_ST1_QP011;U1_CH1_ST1_QP012",Use only N W Z unless a broader set is explicitly approved
+C005,Zero and sign-sensitive membership,"U1_CH1_ST1_QP013;U1_CH1_ST1_QP014;U1_CH1_ST1_QP015",Distinguish zero positive and negative values carefully
+C006,Boundary and edge-case classification,"U1_CH1_ST1_QP016",SOURCE AMBIGUITY: original possibility text ends with ?1; quarantine pending source clarification
+C007,Classification under arithmetic transformations,"U1_CH1_ST1_QP017",Keep operands and results within the approved N W Z scope
+C008,Logical and diagnostic classification,"U1_CH1_ST1_QP018;U1_CH1_ST1_QP019;U1_CH1_ST1_QP020",Statements must have unambiguous set convention and truth conditions

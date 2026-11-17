@@ -1,0 +1,65 @@
+{
+    "qp_dispositions": [
+        {
+            "concept_id": "C001",
+            "qp_id": "U1_CH1_ST2_QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Direct verification of the N/W/Z/Q/R inclusion hierarchy is foundational. Correct/incorrect polarity does not create a separate JEE archetype."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "U1_CH1_ST2_QP002",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Direct verification of the N/W/Z/Q/R inclusion hierarchy is foundational. Correct/incorrect polarity does not create a separate JEE archetype."
+        },
+        {
+            "concept_id": "C001",
+            "qp_id": "U1_CH1_ST2_QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Direct verification of the N/W/Z/Q/R inclusion hierarchy is foundational. Correct/incorrect polarity does not create a separate JEE archetype."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "U1_CH1_ST2_QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Subset/proper-subset/superset recognition is foundational here; strictness is useful prerequisite reasoning but is not independently approved as a JEE archetype."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "U1_CH1_ST2_QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Subset/proper-subset/superset recognition is foundational here; strictness is useful prerequisite reasoning but is not independently approved as a JEE archetype."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "U1_CH1_ST2_QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Subset/proper-subset/superset recognition is foundational here; strictness is useful prerequisite reasoning but is not independently approved as a JEE archetype."
+        },
+        {
+            "concept_id": "C003",
+            "qp_id": "U1_CH1_ST2_QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Membership propagation from A ⊆ B is a direct consequence of the subset definition and remains a foundation check."
+        },
+        {
+            "concept_id": "C004",
+            "qp_id": "U1_CH1_ST2_QP008",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Statement checking and counterexample use are valid logical foundations, but the source possibilities overlap and lack approved JEE-level distinction."
+        },
+        {
+            "concept_id": "C004",
+            "qp_id": "U1_CH1_ST2_QP009",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Statement checking and counterexample use are valid logical foundations, but the source possibilities overlap and lack approved JEE-level distinction."
+        },
+        {
+            "concept_id": "C005",
+            "qp_id": "U1_CH1_ST2_QP010",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A Venn diagram is a representation change only; it does not establish a distinct JEE archetype without a materially different inference mechanism."
+        }
+    ],
+    "archetypes": []
+}

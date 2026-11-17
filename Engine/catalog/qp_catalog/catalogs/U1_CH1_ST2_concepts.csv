@@ -1,0 +1,6 @@
+concept_id,concept,qp_ids,scope_note
+C001,Set inclusion and chain relationships,"U1_CH1_ST2_QP001;U1_CH1_ST2_QP002;U1_CH1_ST2_QP003",Assess subset inclusion and consistency of inclusion chains; do not assume equality from one-way inclusion
+C002,Subset and superset identification,"U1_CH1_ST2_QP004;U1_CH1_ST2_QP005;U1_CH1_ST2_QP006",Distinguish subset proper subset and superset using the stated sets and definitions
+C003,Membership inferred through inclusion,"U1_CH1_ST2_QP007",Use a valid inclusion relation to infer element membership; do not reverse implications without justification
+C004,Logical set relationship statements,"U1_CH1_ST2_QP008;U1_CH1_ST2_QP009",Evaluate statements using definitions and counterexamples; keep universal and existential claims distinct
+C005,Venn diagram representation of inclusion,"U1_CH1_ST2_QP010",Interpret diagrammed inclusion relations without treating visual overlap alone as proof of equality or disjointness

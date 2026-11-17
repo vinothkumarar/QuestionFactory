@@ -1,0 +1,20 @@
+subject,unit,chapter,subtopic,concept_id,concept,qp_id,question_possibility
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C001,Natural number definition and membership,U1_CH1_ST1_QP001,Definition of Natural Numbers
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C002,Whole number definition and membership,U1_CH1_ST1_QP002,Definition of Whole Numbers
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C003,Integer definition and membership,U1_CH1_ST1_QP003,Definition of Integers
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C001,Natural number definition and membership,U1_CH1_ST1_QP004,Identify Natural Number
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C002,Whole number definition and membership,U1_CH1_ST1_QP005,Identify Whole Number
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C003,Integer definition and membership,U1_CH1_ST1_QP006,Identify Integer
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C001,Natural number definition and membership,U1_CH1_ST1_QP007,Identify Non-Natural Number
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C002,Whole number definition and membership,U1_CH1_ST1_QP008,Identify Non-Whole Number
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C003,Integer definition and membership,U1_CH1_ST1_QP009,Identify Non-Integer
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C004,Classification across the three sets,U1_CH1_ST1_QP010,Classify Given Number
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C004,Classification across the three sets,U1_CH1_ST1_QP011,Classify Multiple Numbers
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C004,Classification across the three sets,U1_CH1_ST1_QP012,Smallest Applicable Number Set
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C005,Zero and sign-sensitive membership,U1_CH1_ST1_QP013,Membership of Zero
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C005,Zero and sign-sensitive membership,U1_CH1_ST1_QP014,Membership of Positive Integer
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C005,Zero and sign-sensitive membership,U1_CH1_ST1_QP015,Membership of Negative Integer
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C007,Classification under arithmetic transformations,U1_CH1_ST1_QP017,Classification after Arithmetic Operation
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C008,Logical and diagnostic classification,U1_CH1_ST1_QP018,Statement-based Classification
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C008,Logical and diagnostic classification,U1_CH1_ST1_QP019,True/False Classification
+Mathematics,U1,CH1,"Natural Numbers, Whole Numbers and Integers",C008,Logical and diagnostic classification,U1_CH1_ST1_QP020,Error Detection in Classification

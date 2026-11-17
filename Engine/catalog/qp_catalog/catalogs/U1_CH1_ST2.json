@@ -1,0 +1,102 @@
+[
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Inclusion Relations among Number Sets",
+        "concept_id": "C001",
+        "concept": "Set inclusion and chain relationships",
+        "qp_id": "U1_CH1_ST2_QP001",
+        "question_possibility": "Correct Inclusion Relation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Inclusion Relations among Number Sets",
+        "concept_id": "C001",
+        "concept": "Set inclusion and chain relationships",
+        "qp_id": "U1_CH1_ST2_QP002",
+        "question_possibility": "Incorrect Inclusion Relation"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Inclusion Relations among Number Sets",
+        "concept_id": "C001",
+        "concept": "Set inclusion and chain relationships",
+        "qp_id": "U1_CH1_ST2_QP003",
+        "question_possibility": "Complete Inclusion Chain"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Inclusion Relations among Number Sets",
+        "concept_id": "C002",
+        "concept": "Subset and superset identification",
+        "qp_id": "U1_CH1_ST2_QP004",
+        "question_possibility": "Missing Set Identification"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Inclusion Relations among Number Sets",
+        "concept_id": "C002",
+        "concept": "Subset and superset identification",
+        "qp_id": "U1_CH1_ST2_QP005",
+        "question_possibility": "Proper Subset Identification"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Inclusion Relations among Number Sets",
+        "concept_id": "C002",
+        "concept": "Subset and superset identification",
+        "qp_id": "U1_CH1_ST2_QP006",
+        "question_possibility": "Superset Identification"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Inclusion Relations among Number Sets",
+        "concept_id": "C003",
+        "concept": "Membership inferred through inclusion",
+        "qp_id": "U1_CH1_ST2_QP007",
+        "question_possibility": "Membership using Inclusion"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Inclusion Relations among Number Sets",
+        "concept_id": "C004",
+        "concept": "Logical set relationship statements",
+        "qp_id": "U1_CH1_ST2_QP008",
+        "question_possibility": "Set Relationship Statements"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Inclusion Relations among Number Sets",
+        "concept_id": "C004",
+        "concept": "Logical set relationship statements",
+        "qp_id": "U1_CH1_ST2_QP009",
+        "question_possibility": "Counterexample to Inclusion"
+    },
+    {
+        "subject": "Mathematics",
+        "unit": "U1",
+        "chapter": "CH1",
+        "subtopic": "Inclusion Relations among Number Sets",
+        "concept_id": "C005",
+        "concept": "Venn diagram representation of inclusion",
+        "qp_id": "U1_CH1_ST2_QP010",
+        "question_possibility": "Venn Diagram Interpretation"
+    }
+]

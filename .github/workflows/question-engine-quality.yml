@@ -1,0 +1,28 @@
+name: Dual Question Engine Quality
+
+on:
+  push:
+    paths:
+      - "QuestionEngine/**"
+      - ".github/workflows/question-engine-quality.yml"
+  pull_request:
+    paths:
+      - "QuestionEngine/**"
+      - ".github/workflows/question-engine-quality.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Question Engine dependencies
+        run: python -m pip install -r QuestionEngine/requirements.txt
+      - name: Compile
+        run: python -m compileall QuestionEngine
+      - name: Unit tests
+        env:
+          PYTHONPATH: QuestionEngine
+        run: python -m unittest discover -s QuestionEngine/tests -v
