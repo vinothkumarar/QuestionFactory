@@ -46,13 +46,13 @@ class CatalogueDataIntegrityTests(unittest.TestCase):
 
     def test_matrix_batch_one_matches_source_and_keeps_gates_closed(self) -> None:
         source = read_json(QP_CATALOGS / "U2_CH8_ST1.json")
-        batch_source = source[:5]
+        batch_source = source[:10]
         catalogue = read_json(ARCHETYPE_CATALOGS / "U2_CH8_ST1.json")
         validate_catalog_response(
             response=catalogue,
             input_qps=batch_source,
         )
-        self.assertEqual(len(catalogue["qp_dispositions"]), 5)
+        self.assertEqual(len(catalogue["qp_dispositions"]), 10)
         self.assertEqual(len(catalogue["archetypes"]), 2)
 
         csv_path = ARCHETYPE_CATALOGS / "U2_CH8_ST1.csv"
