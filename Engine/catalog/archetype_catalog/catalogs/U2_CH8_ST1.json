@@ -1199,6 +1199,36 @@
             "qp_id": "QP008",
             "disposition": "REQUIRES_REVIEW",
             "rationale": "The necessary/sufficient/equivalent conditions to classify are not enumerated; a source-faithful candidate set is required before this can be assessed."
+        },
+        {
+            "concept_id": "C017",
+            "qp_id": "QP009",
+            "disposition": "REQUIRES_REVIEW",
+            "rationale": "The discrete entry set and admissibility constraints are unspecified, so the number of non-singular matrices cannot be determined safely."
+        },
+        {
+            "concept_id": "C017",
+            "qp_id": "QP010",
+            "disposition": "REQUIRES_REVIEW",
+            "rationale": "The matrix constraints and allowed entries are not specified; existence/construction depends on those details and must not be invented."
+        },
+        {
+            "concept_id": "C018",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Idempotency is directly checked by A²=A; this is definition-level recognition."
+        },
+        {
+            "concept_id": "C018",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "Imposing A²=A on a parameterized matrix creates simultaneous nonlinear entry equations; solving them is a reusable structural-constraint mechanism."
+        },
+        {
+            "concept_id": "C018",
+            "qp_id": "QP003",
+            "disposition": "ELIGIBLE",
+            "rationale": "For A²=A, positive powers collapse to A and polynomials reduce using the projection identity, yielding a reusable algebraic-reduction mechanism."
         }
     ],
     "archetypes": [
@@ -2552,6 +2582,64 @@
                 "sequence length",
                 "determinant factor",
                 "rank/inverse viewpoint"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C018",
+            "concept": "Idempotent Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Determine parameter conditions under which a matrix is idempotent",
+            "archetype_id": "U2_CH8_ST1_AR00048",
+            "archetype": "Solve parameter conditions for an idempotent matrix",
+            "assessment_mechanism": "Translate A²=A into entrywise quadratic equations for a parameterized matrix and solve the simultaneous system, verifying the resulting projection structure.",
+            "reasoning_path": "Compute A² symbolically; equate each entry of A² with the corresponding entry of A; solve the coupled polynomial equations; check parameter branches and degeneracies; substitute each solution back into A²=A.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "number of parameters",
+                "linear/quadratic constraints",
+                "independent/dependent equations",
+                "rank or eigenvalue restrictions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C018",
+            "concept": "Idempotent Matrix",
+            "qp_id": "QP003",
+            "question_possibility": "Simplify or evaluate powers and polynomial expressions in an idempotent matrix",
+            "archetype_id": "U2_CH8_ST1_AR00049",
+            "archetype": "Reduce powers and polynomials of an idempotent matrix",
+            "assessment_mechanism": "Use A²=A to reduce every positive integer power to A and reduce a polynomial p(A) to a linear expression in I and A.",
+            "reasoning_path": "Apply A²=A repeatedly to show A^k=A for k≥1; write p(A)=a₀I+(a₁+a₂+...)A after reducing all positive powers; equivalently separate the values p(0) and p(1); verify the reduced expression.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "polynomial degree",
+                "constant term",
+                "positive integer exponent",
+                "coefficient field",
+                "requested matrix property"
             ]
         }
     ]
