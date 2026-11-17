@@ -98,3 +98,8 @@ These are candidates only. Their source authenticity and question-key linkage ar
 - Verify all P8 cross-unit assignments and P2 vector cross-unit assignment.
 - Confirm the no-direct/partial topics against a second academic reviewer.
 - Preserve all IDs and source enable flags; do not make bulk enablement changes during P1.
+
+
+## 2026-11-17 subtopic review update
+
+All 233 existing Physics subtopic rows now have a provisional Main 2027 and Advanced 2026 disposition in the mapping register. Current status: Main — 209 provisional mapped, 8 partial, 16 no direct explicit scope; Advanced — 195 provisional mapped, 5 partial, 33 no direct explicit scope. This does not resolve the five empty P4/P5 chapters or the missing Experimental Skills hierarchy. It also does not constitute final academic approval; the no-direct and partial records require independent review.
