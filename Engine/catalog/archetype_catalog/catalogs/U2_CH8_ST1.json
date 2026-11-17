@@ -1889,6 +1889,36 @@
             "qp_id": "QP014",
             "disposition": "ELIGIBLE",
             "rationale": "Unitary matrices preserve complex inner products and hence vector norms; deriving this from U*U=I and applying it to vector constraints is a distinct metric-invariance mechanism."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Block-diagonal recognition is a direct check that off-diagonal blocks are zero under the stated partition."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "Admissible block partitions of a fixed order require solving positive-integer composition constraints under any block-size restrictions; this is a distinct partition/counting mechanism."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Constructing a block-diagonal matrix from specified square blocks is direct block placement."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Extracting the diagonal blocks from a stated partition is direct block indexing."
+        },
+        {
+            "concept_id": "C026",
+            "qp_id": "QP005",
+            "disposition": "ELIGIBLE",
+            "rationale": "The determinant of a block-diagonal matrix factors as the product of determinants of its diagonal blocks; using this to infer singularity or parameter constraints is a reusable factorization mechanism."
         }
     ],
     "archetypes": [
@@ -5125,6 +5155,64 @@
                 "complex vector dimensions",
                 "unknown unitary transform",
                 "vector constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C026",
+            "concept": "Block Diagonal Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Determine admissible block partitions for a given square matrix size",
+            "archetype_id": "U2_CH8_ST1_AR00113",
+            "archetype": "Determine admissible block partitions of a fixed matrix order",
+            "assessment_mechanism": "Translate a square matrix order and block-size restrictions into positive-integer partition constraints, then enumerate or count the admissible block structures.",
+            "reasoning_path": "Let the total order be n; express it as a sum of positive block sizes; apply minimum/maximum/equality restrictions; solve the integer partition conditions; distinguish ordered block sizes from unordered partitions according to the stated partition convention.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "total matrix order",
+                "number of blocks",
+                "equal/unequal block sizes",
+                "minimum/maximum block sizes",
+                "ordered versus unordered partitions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C026",
+            "concept": "Block Diagonal Matrix",
+            "qp_id": "QP005",
+            "question_possibility": "Determine the determinant of a block diagonal matrix from determinants of its blocks",
+            "archetype_id": "U2_CH8_ST1_AR00114",
+            "archetype": "Factor determinant and singularity conditions of a block-diagonal matrix",
+            "assessment_mechanism": "Use det(diag(A₁,...,Aₖ))=∏det(Aᵢ) to reduce determinant, invertibility and singularity questions to the diagonal blocks.",
+            "reasoning_path": "Identify the diagonal blocks; apply the determinant product formula; determine when the total determinant is zero/nonzero; isolate parameter conditions blockwise; verify compatible square block sizes and the converse.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of blocks",
+                "block orders",
+                "parameterized block determinants",
+                "singularity of one versus multiple blocks",
+                "determinant value versus invertibility"
             ]
         }
     ]
