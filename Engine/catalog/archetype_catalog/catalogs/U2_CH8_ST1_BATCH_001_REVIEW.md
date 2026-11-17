@@ -678,3 +678,25 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 185 dispositions and 39 draft archetypes; 165 source QPs remain untouched.
+
+
+## Batch 038 — orthogonal degrees of freedom and singularity transformations (global QP186–QP190)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C015 / QP015 | ELIGIBLE | Independent degrees of freedom of O(n) are n(n−1)/2 |
+| C016 / QP001 | FOUNDATION_ONLY | Direct determinant-zero singularity classification |
+| C016 / QP002 | ELIGIBLE | Solve det(A(λ))=0 for singular parameter values |
+| C016 / QP003 | ELIGIBLE | Propagate singularity through products, scalar multiples and powers using determinant identities |
+| C016 / QP004 | ELIGIBLE | Track singularity invariance under transpose, similarity and invertible elementary operations |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00040`: Count independent degrees of freedom in an orthogonal matrix.
+- `U2_CH8_ST1_AR00041`: Solve determinant-zero conditions for singular matrix parameters.
+- `U2_CH8_ST1_AR00042`: Propagate singularity through products, scalar multiples and powers.
+- `U2_CH8_ST1_AR00043`: Track singularity under transpose, similarity and elementary operations.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 190 dispositions and 43 draft archetypes; 160 source QPs remain untouched.
