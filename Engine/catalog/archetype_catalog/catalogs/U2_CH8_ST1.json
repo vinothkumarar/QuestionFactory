@@ -149,6 +149,36 @@
             "qp_id": "QP012",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "The adjoint identities are foundational transformation rules. Memorizing or directly applying the identities alone does not establish a separate archetype from product/adjoint reasoning."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP013",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Orthonormal rows/columns provide an equivalent characterization of unitarity already represented by the conjugate-transpose identity candidate. Retain as a variation/reference, not a duplicate archetype."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP014",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Diagonal and trace constraints are direct consequences of Hermitian/skew-Hermitian definitions and overlap with the parameter-constraint candidate. No separate mechanism is justified."
+        },
+        {
+            "concept_id": "C002",
+            "qp_id": "QP015",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The real symmetric/skew-symmetric/orthogonal correspondences are direct special cases of the complex matrix classes; this is conceptual mapping rather than a distinct assessment mechanism."
+        },
+        {
+            "concept_id": "C003",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Identifying a row matrix from its one-row order is a direct shape definition and remains foundation content."
+        },
+        {
+            "concept_id": "C003",
+            "qp_id": "QP002",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Determining row-matrix order and indexing constraints is direct dimensional interpretation; no distinct JEE reasoning mechanism is justified by the source possibility."
         }
     ],
     "archetypes": [
