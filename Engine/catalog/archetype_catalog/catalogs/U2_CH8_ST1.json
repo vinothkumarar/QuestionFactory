@@ -419,6 +419,36 @@
             "qp_id": "QP006",
             "disposition": "ELIGIBLE",
             "rationale": "The implication AB=O ⇒ A=O or B=O is false for matrices; constructing nonzero zero-divisor matrices or reasoning through nullspaces is a distinct reusable inference/counterexample mechanism."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "QP007",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Scalar-multiplication zero implications split directly on whether the scalar is zero; this is a short property check and remains foundation-level."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "QP008",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Transpose preserves the zero entries and swaps the matrix order; this is a direct transformation property."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "QP009",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The zero matrix satisfies several standard structural definitions by direct substitution; this is classification by definitions."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "QP010",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Determinant and trace of a zero square matrix follow directly from their definitions and are retained as foundation facts."
+        },
+        {
+            "concept_id": "C007",
+            "qp_id": "QP011",
+            "disposition": "ELIGIBLE",
+            "rationale": "Integer powers require careful treatment of positive, zero and negative exponents, including square-matrix and invertibility conditions; this is a distinct boundary-condition assessment mechanism."
         }
     ],
     "archetypes": [
@@ -675,6 +705,34 @@
                 "singular versus invertible factors",
                 "explicit counterexample versus existence reasoning",
                 "additional symmetry/structure constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C007",
+            "concept": "Zero Matrix",
+            "qp_id": "QP011",
+            "question_possibility": "Evaluate integer powers of a zero matrix",
+            "archetype_id": "U2_CH8_ST1_AR00010",
+            "archetype": "Classify zero-matrix integer powers by exponent and order conditions",
+            "assessment_mechanism": "Evaluate whether integer powers of a zero matrix are defined and determine the result by separating positive, zero and negative exponents while respecting square-matrix and invertibility requirements.",
+            "reasoning_path": "Check that the matrix is square for matrix powers; for positive integer exponents, use repeated multiplication to obtain the zero matrix; for exponent zero, apply the stated identity-matrix convention; for negative exponents, test invertibility and recognize that a zero square matrix is singular; state undefined cases explicitly.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "positive/zero/negative exponent",
+                "matrix order",
+                "explicit convention for zero power",
+                "requested definedness versus value"
             ]
         }
     ]
