@@ -34,6 +34,12 @@ This checklist applies the P1 activities, deliverables and exit gate in `Questio
 | Authoritative blueprint reference and rule crosswalk | BLOCKED | `P1_BLUEPRINT_AUTHORITY_AUDIT.md`; original v1.5 source artifact not located |
 | Candidate pilot sequence with source confidence | CANDIDATE ONLY | `P1_CANDIDATE_PILOT_SEQUENCE.md`; no pilot or production order authorised |
 
+## 2A. Additional second-pass evidence — 2026-11-17
+
+- `P1_SAMPLE_MAPPING_SECOND_PASS.md` reviews all four question-level PYQ samples against the internal taxonomy, official scope and parent-chain enablement. It is an internal second pass, not independent human academic sign-off.
+- `P1_CHEMISTRY_COVERAGE_GAP_SECOND_PASS.md` scans all 260 Chemistry subtopic names and records the cross-unit chromatography entry, the remaining Main Unit 13 gaps, Practical Chemistry coverage gaps and empty Vitamins chapter.
+- The Chemistry gap audit now distinguishes partial Unit 13 coverage from a wholly absent taxonomy path. No IDs, parent paths or enablement flags were changed.
+
 ## 3. Mapping register structural validation
 
 - Total rows: 1,026.
