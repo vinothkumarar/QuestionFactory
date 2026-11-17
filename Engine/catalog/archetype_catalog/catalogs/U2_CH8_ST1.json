@@ -1859,6 +1859,36 @@
             "qp_id": "QP009",
             "disposition": "ELIGIBLE",
             "rationale": "A diagonal matrix is unitary exactly when every diagonal entry has modulus one; this is a distinct entrywise classification mechanism."
+        },
+        {
+            "concept_id": "C025",
+            "qp_id": "QP010",
+            "disposition": "ELIGIBLE",
+            "rationale": "A triangular unitary matrix must be diagonal: triangularity and orthonormal columns force off-diagonal entries to zero, while each diagonal entry has modulus one."
+        },
+        {
+            "concept_id": "C025",
+            "qp_id": "QP011",
+            "disposition": "ELIGIBLE",
+            "rationale": "A block-diagonal matrix is unitary exactly when every square diagonal block is unitary; the block equations decouple into independent unitary conditions."
+        },
+        {
+            "concept_id": "C025",
+            "qp_id": "QP012",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "A real unitary matrix is orthogonal because conjugate transpose equals transpose for real entries; this is a direct field restriction."
+        },
+        {
+            "concept_id": "C025",
+            "qp_id": "QP013",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Entrywise orthonormality equations are the expanded form of U*U=I and are already part of the unitary parameter-condition candidate."
+        },
+        {
+            "concept_id": "C025",
+            "qp_id": "QP014",
+            "disposition": "ELIGIBLE",
+            "rationale": "Unitary matrices preserve complex inner products and hence vector norms; deriving this from U*U=I and applying it to vector constraints is a distinct metric-invariance mechanism."
         }
     ],
     "archetypes": [
@@ -5008,6 +5038,93 @@
                 "roots of unity versus arbitrary unit complex values",
                 "parameterized diagonal entries",
                 "determinant constraint"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C025",
+            "concept": "Unitary Matrix",
+            "qp_id": "QP010",
+            "question_possibility": "Characterize triangular unitary matrices",
+            "archetype_id": "U2_CH8_ST1_AR00110",
+            "archetype": "Characterize triangular unitary matrices as diagonal phase matrices",
+            "assessment_mechanism": "Use triangularity and column orthonormality to show all off-diagonal entries vanish, leaving diagonal entries of modulus one.",
+            "reasoning_path": "Use U*U=I; apply unit norm to each column and orthogonality between distinct columns; combine with upper/lower triangular zero pattern to force off-diagonal entries to zero; conclude U is diagonal with |uᵢᵢ|=1; verify the converse.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "upper versus lower triangular",
+                "matrix order",
+                "diagonal phases",
+                "row/column orthonormality",
+                "complex unit entries"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C025",
+            "concept": "Unitary Matrix",
+            "qp_id": "QP011",
+            "question_possibility": "Determine unitarity of block-diagonal matrices from the unitarity of their blocks",
+            "archetype_id": "U2_CH8_ST1_AR00111",
+            "archetype": "Determine unitarity of block-diagonal matrices from their blocks",
+            "assessment_mechanism": "Reduce U*U=I for a block-diagonal matrix to independent unitary conditions on each diagonal block.",
+            "reasoning_path": "Write U=diag(U₁,...,Uₖ); compute U*=diag(U₁*,...,Uₖ*); multiply blockwise; equate each block Uᵢ*Uᵢ with its identity; verify compatible block sizes and converse.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "number of blocks",
+                "block sizes",
+                "individual block conditions",
+                "rectangular block incompatibility",
+                "parameterized blocks"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C025",
+            "concept": "Unitary Matrix",
+            "qp_id": "QP014",
+            "question_possibility": "Establish norm-preservation by unitary matrices for vectors",
+            "archetype_id": "U2_CH8_ST1_AR00112",
+            "archetype": "Use unitary transformations to preserve complex inner products and norms",
+            "assessment_mechanism": "Apply U*U=I to show (Ux)*(Uy)=x*y and hence ||Ux||=||x||, then transfer vector constraints through the transformation.",
+            "reasoning_path": "Compute (Ux)*(Uy)=x*U*Uy=x*y; set x=y to obtain norm preservation; use the identity to preserve angles/orthogonality; apply to the specified vectors or unknown transform.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "one versus multiple vectors",
+                "inner product/norm/orthogonality target",
+                "complex vector dimensions",
+                "unknown unitary transform",
+                "vector constraints"
             ]
         }
     ]
