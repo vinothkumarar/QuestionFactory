@@ -170,8 +170,8 @@ class ArchetypeCatalogAIClient:
             string_fields = {
                 "qp_id",
                 "question_possibility",
-                "archetype_id",
                 "archetype",
+                "archetype_id",
                 "assessment_mechanism",
                 "reasoning_path",
                 "variation_capacity",
@@ -191,6 +191,18 @@ class ArchetypeCatalogAIClient:
                         f"({record['archetype_id']}) "
                         f"has invalid '{field_name}'."
                     )
+
+            # -------------------------------------------------
+            # Factory-owned ID must be blank in AI output
+            # -------------------------------------------------
+
+            archetype_id = record.get("archetype_id")
+
+            if archetype_id != "":
+                raise ValueError(
+                    f"Archetype record #{index} must leave "
+                    "archetype_id empty; the Factory assigns it."
+                )
 
             # -------------------------------------------------
             # List fields
