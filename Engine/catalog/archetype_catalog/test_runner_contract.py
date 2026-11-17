@@ -13,6 +13,7 @@ from Engine.catalog.archetype_catalog.run_all_archetype_catalogs import (
     assign_archetype_ids,
     load_existing_catalog,
     persist_catalog,
+    select_qp_files,
 )
 
 
@@ -45,6 +46,25 @@ class ArchetypeRunnerContractTests(unittest.TestCase):
             path.write_text(json.dumps([]), encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "Legacy flat-list"):
                 load_existing_catalog(path)
+
+    def test_runner_can_select_only_requested_catalogue_scope(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "U1_CH1_ST1.json").write_text("[]", encoding="utf-8")
+            (root / "U2_CH8_ST1.json").write_text("[]", encoding="utf-8")
+            selected = select_qp_files(
+                qp_dir=root,
+                scopes=["U1_CH1_ST1"],
+            )
+        self.assertEqual([path.stem for path in selected], ["U1_CH1_ST1"])
+
+    def test_runner_rejects_unknown_catalogue_scope(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            with self.assertRaisesRegex(ValueError, "not found"):
+                select_qp_files(
+                    qp_dir=Path(directory),
+                    scopes=["U1_CH1_ST99"],
+                )
 
     def test_persistence_keeps_zero_archetype_disposition(self) -> None:
         source: dict[str, Any] = {
