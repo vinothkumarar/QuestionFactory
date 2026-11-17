@@ -37,7 +37,7 @@ class CatalogueDataIntegrityTests(unittest.TestCase):
         catalogue = read_json(ARCHETYPE_CATALOGS / "U1_CH1_ST2.json")
         validate_catalog_response(response=catalogue, input_qps=source)
         self.assertEqual(len(source), 10)
-        self.assertEqual(len(catalogue["qp_dispositions"]), 10)
+        self.assertEqual(len(catalogue["qp_dispositions"]), 15)
         self.assertEqual(catalogue["archetypes"], [])
         self.assertTrue(all(
             row["disposition"] == "FOUNDATION_ONLY"
@@ -46,7 +46,7 @@ class CatalogueDataIntegrityTests(unittest.TestCase):
 
     def test_matrix_batch_one_matches_source_and_keeps_gates_closed(self) -> None:
         source = read_json(QP_CATALOGS / "U2_CH8_ST1.json")
-        batch_source = source[:10]
+        batch_source = source[:15]
         catalogue = read_json(ARCHETYPE_CATALOGS / "U2_CH8_ST1.json")
         validate_catalog_response(
             response=catalogue,
