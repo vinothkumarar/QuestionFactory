@@ -1259,6 +1259,36 @@
             "qp_id": "QP008",
             "disposition": "REQUIRES_REVIEW",
             "rationale": "The source groups sums, products, scalar multiples and linear combinations without specifying operand relationships such as commutativity or shared idempotent structure; a safe general rule cannot be inferred."
+        },
+        {
+            "concept_id": "C018",
+            "qp_id": "QP009",
+            "disposition": "ELIGIBLE",
+            "rationale": "Idempotency reduces I±αA to scalar actions on the 0/1 eigenspaces, yielding exact invertibility conditions and closed-form inverses; this is a reusable rational-expression mechanism."
+        },
+        {
+            "concept_id": "C018",
+            "qp_id": "QP010",
+            "disposition": "ELIGIBLE",
+            "rationale": "The minimal polynomial divides x(x−1) and the characteristic polynomial is x^{n−r}(x−1)^r; linking these polynomials to rank and eigenvalue multiplicity is a distinct algebraic-invariant mechanism."
+        },
+        {
+            "concept_id": "C018",
+            "qp_id": "QP011",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Existence of nontrivial idempotents under rank/trace/determinant constraints follows from the rank range 1…n−1 and the canonical projection form; this is covered by the rank/similarity archetypes."
+        },
+        {
+            "concept_id": "C018",
+            "qp_id": "QP012",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Idempotent matrices are similar iff they have the same rank over the stated field; this is already represented by the canonical similarity classification candidate."
+        },
+        {
+            "concept_id": "C018",
+            "qp_id": "QP013",
+            "disposition": "REQUIRES_REVIEW",
+            "rationale": "The structured classes and property combinations are open-ended; specific families and assumptions must be enumerated before a single archetype can be assessed."
         }
     ],
     "archetypes": [
@@ -2786,6 +2816,64 @@
                 "image/kernel relations",
                 "complementary subspaces",
                 "additional constraints"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C018",
+            "concept": "Idempotent Matrix",
+            "qp_id": "QP009",
+            "question_possibility": "Determine invertibility conditions for an idempotent matrix and for matrices of the form I ± αA; compute inverses when they exist",
+            "archetype_id": "U2_CH8_ST1_AR00054",
+            "archetype": "Determine invertibility and inverses of I±αA for idempotent A",
+            "assessment_mechanism": "Use A²=A to reduce products involving I±αA to a linear expression in A, derive the exact scalar invertibility condition, and construct a closed-form inverse.",
+            "reasoning_path": "Assume A²=A; multiply I+αA by I−βA and choose β so the A coefficient vanishes; derive the nonzero denominator condition; repeat for I−αA; verify both left and right inverse identities.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "plus versus minus sign",
+                "scalar parameter α",
+                "exceptional parameter values",
+                "field of scalars",
+                "inverse existence versus formula"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C018",
+            "concept": "Idempotent Matrix",
+            "qp_id": "QP010",
+            "question_possibility": "Determine minimal and characteristic polynomial constraints for an idempotent matrix and infer one from the other",
+            "archetype_id": "U2_CH8_ST1_AR00055",
+            "archetype": "Derive minimal and characteristic polynomial constraints for an idempotent matrix",
+            "assessment_mechanism": "Use A²=A to show the minimal polynomial divides x(x−1), then connect the 0/1 eigenvalue multiplicities and rank to the characteristic polynomial.",
+            "reasoning_path": "Apply A²−A=0; use the distinct roots 0 and 1 to constrain the minimal polynomial; infer diagonalizability; let r=rank(A) be the multiplicity of eigenvalue 1; write the characteristic polynomial x^{n−r}(x−1)^r; verify the rank and trace consequences.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "rank",
+                "minimal versus characteristic polynomial",
+                "eigenvalue multiplicities",
+                "field and diagonalizability assumptions"
             ]
         }
     ]
