@@ -121,3 +121,14 @@ Findings:
 ## Exit gate
 
 **NOT PASSED.** P1 remains ACTIVE. No production questions have been generated in this phase. No final syllabus mapping, complete PYQ verification, or authoritative blueprint freeze is claimed. Two 2026 Main question/key pairs have been matched as provisional source evidence.
+
+
+## 2026-11-17 mapping-register validation
+
+- Rows: 1,026; unique subtopic codes: 1,026; unique subtopic IDs: 1,026; duplicate codes/IDs: 0.
+- Required mapping fields missing: 0 (subject, subtopic ID/code, Main status, Advanced status, confidence, evidence, mapping basis, academic-review status).
+- No row remains `UNREVIEWED`.
+- Main 2027 dispositions across all subjects: 588 provisional mapped, 130 partial, 308 no direct explicit scope.
+- Advanced 2026 dispositions across all subjects: 688 provisional mapped, 107 partial, 231 no direct explicit scope.
+- Effective-enabled snapshot: 26 TRUE, 1,000 FALSE. These are preserved snapshots; no source curriculum enable flags were changed.
+- All 1,026 rows remain `PENDING_INDEPENDENT_REVIEW`. The mapping-basis classification (chapter-level vs subtopic-level) is a review aid, not a claim of final academic verification.
