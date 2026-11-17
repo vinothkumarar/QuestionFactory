@@ -280,3 +280,21 @@ New draft candidate:
 - JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
 
 Cumulative status: 75 dispositions and 10 draft archetypes; 275 source QPs remain untouched.
+
+
+## Batch 016 — zero-matrix identities and diagonal-matrix parameter constraints (global QP076–QP080)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C007 / QP012 | FOUNDATION_ONLY | Zero matrix is singular; inverse does not exist |
+| C007 / QP013 | FOUNDATION_ONLY | Uniqueness follows by entrywise equality |
+| C007 / QP014 | FOUNDATION_ONLY | A−B=O iff A=B is a direct equality identity |
+| C008 / QP001 | FOUNDATION_ONLY | Diagonal recognition is a direct off-diagonal zero check |
+| C008 / QP002 | ELIGIBLE | Simultaneous zero constraints on off-diagonal entries produce a reusable parameter-constraint mechanism |
+
+New draft candidate:
+
+- `U2_CH8_ST1_AR00011`: Derive parameter constraints for a matrix to be diagonal.
+- JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
+
+Cumulative status: 80 dispositions and 11 draft archetypes; 270 source QPs remain untouched.
