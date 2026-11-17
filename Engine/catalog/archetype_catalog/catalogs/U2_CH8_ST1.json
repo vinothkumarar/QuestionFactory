@@ -1379,6 +1379,36 @@
             "qp_id": "QP015",
             "disposition": "ELIGIBLE",
             "rationale": "For nilpotent N, p(N) is invertible exactly when p(0)≠0; factor the constant term and invert the nilpotent remainder by a finite geometric series."
+        },
+        {
+            "concept_id": "C020",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Involutory recognition is a direct check of A²=I."
+        },
+        {
+            "concept_id": "C020",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "Imposing A²=I on a parameterized matrix yields simultaneous quadratic entry constraints; solving them is a reusable structural-constraint mechanism."
+        },
+        {
+            "concept_id": "C020",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "An involutory matrix is its own inverse because A²=I; this is a direct consequence."
+        },
+        {
+            "concept_id": "C020",
+            "qp_id": "QP004",
+            "disposition": "ELIGIBLE",
+            "rationale": "Powers alternate between I and A, so any polynomial reduces to aI+bA according to even/odd coefficient sums; this is a reusable algebraic-reduction mechanism."
+        },
+        {
+            "concept_id": "C020",
+            "qp_id": "QP005",
+            "disposition": "ELIGIBLE",
+            "rationale": "A²=I forces eigenvalues to ±1; multiplicities determine trace and determinant and provide a distinct spectral-constraint mechanism."
         }
     ],
     "archetypes": [
@@ -3225,6 +3255,93 @@
                 "polynomial degree",
                 "field of coefficients",
                 "explicit inverse versus invertibility decision"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C020",
+            "concept": "Involutory Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Determine parameter conditions for a matrix to be involutory",
+            "archetype_id": "U2_CH8_ST1_AR00065",
+            "archetype": "Derive parameter conditions for an involutory matrix",
+            "assessment_mechanism": "Translate A²=I into simultaneous quadratic equations on matrix entries or parameters, then solve and verify the involutory condition.",
+            "reasoning_path": "Compute A² symbolically; equate each entry with the corresponding identity entry; solve the coupled equations; check all parameter branches; substitute back to verify A²=I.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "number of parameters",
+                "quadratic constraints",
+                "independent/dependent equations",
+                "symmetric or structured matrix assumptions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C020",
+            "concept": "Involutory Matrix",
+            "qp_id": "QP004",
+            "question_possibility": "Evaluate powers and reduce polynomials in an involutory matrix",
+            "archetype_id": "U2_CH8_ST1_AR00066",
+            "archetype": "Reduce powers and polynomials of an involutory matrix",
+            "assessment_mechanism": "Use A²=I to reduce even powers to I and odd powers to A, then express any polynomial in A as a linear combination of I and A.",
+            "reasoning_path": "Separate even and odd exponents; replace A^{2m} with I and A^{2m+1} with A; collect the corresponding polynomial coefficients; verify the reduced expression and handle negative powers using A⁻¹=A.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "polynomial degree",
+                "even/odd coefficient sums",
+                "positive/negative exponents",
+                "matrix order",
+                "requested expression"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C020",
+            "concept": "Involutory Matrix",
+            "qp_id": "QP005",
+            "question_possibility": "Determine eigenvalues and multiplicity structure of an involutory matrix",
+            "archetype_id": "U2_CH8_ST1_AR00067",
+            "archetype": "Infer eigenvalue multiplicities of an involutory matrix",
+            "assessment_mechanism": "Use A²=I to constrain eigenvalues to ±1 and relate their multiplicities to trace, determinant and characteristic polynomial.",
+            "reasoning_path": "Apply the eigenvalue equation to obtain λ²=1; conclude λ∈{−1,+1}; count multiplicities using trace and determinant where supplied; derive the characteristic polynomial; verify consistency with matrix order.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "trace/determinant information",
+                "multiplicity of ±1",
+                "field assumptions",
+                "characteristic polynomial"
             ]
         }
     ]
