@@ -76,6 +76,14 @@ Do not import divisibility, parity, prime-number properties, interval theory, po
 | QP008 + QP009 | One statement/counterexample mechanism where the reasoning is identical |
 | QP010 | Representation variant; do not create a separate archetype solely for a Venn diagram |
 
+## Official syllabus calibration
+
+The official NTA JEE Main 2027 Mathematics Unit 1 lists sets and their representation, union, intersection, complement, algebraic properties, power sets, relations and functions. It does not explicitly name classification/inclusion among N, W, Z, Q and R as a standalone item. The official JEE Advanced 2026 syllabus adds set types, set algebra, difference, symmetric difference and De Morgan's laws, but likewise does not explicitly name this number-set hierarchy. Official references:
+- https://jeemain.nta.nic.in/documents/ — Syllabus 2027 PDF, Mathematics Unit 1.
+- https://jeeadv.ac.in/documents/jee-advanced-2026-syllabus.pdf — Mathematics, Sets, Relations and Functions.
+
+Accordingly, these representative tasks are best treated as foundational support for the broader Sets unit. A JEE Main or Advanced label requires stronger evidence from actual PYQs or a demonstrably syllabus-aligned reasoning mechanism; do not award it merely because the task uses subset notation.
+
 ## Qualification verdict
 
 - Five candidate mechanism families have been identified for review.
