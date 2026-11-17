@@ -178,3 +178,18 @@ All five possibilities are retained as `FOUNDATION_ONLY`:
 | C004 / QP010 | Relate order and element count | Direct order interpretation |
 
 No new archetypes were added. Cumulative status: 45 dispositions, 6 draft archetypes, 305 QPs remain untouched.
+
+
+## Batch 010 — rectangular-matrix possibilities (global QP046–QP050)
+
+All five possibilities are retained as `FOUNDATION_ONLY`:
+
+| QP | Source mechanism | Disposition rationale |
+|---|---|---|
+| C005 / QP001 | Classify rectangular matrix | Direct comparison of row/column counts |
+| C005 / QP002 | Distinguish row/column/general rectangular matrix | Direct order interpretation |
+| C005 / QP003 | Determine possible orders from constraints | Routine dimension/integer reasoning |
+| C005 / QP004 | Addition/subtraction compatibility | Equal-order check |
+| C005 / QP005 | Product compatibility and resulting order | Inner-dimension rule |
+
+No new archetypes were added. Cumulative status: 50 dispositions, 6 draft archetypes; 300 QPs remain untouched.
