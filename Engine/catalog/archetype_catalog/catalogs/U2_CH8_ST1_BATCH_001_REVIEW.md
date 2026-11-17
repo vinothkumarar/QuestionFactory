@@ -148,3 +148,18 @@ All five possibilities are retained as `FOUNDATION_ONLY`:
 | C003 / QP007 | Addition/scalar-multiplication closure | Direct shape-preserving closure |
 
 No new archetypes were added. Cumulative status: 35 dispositions, 6 draft archetypes, and 315 source QPs not yet dispositioned.
+
+
+## Batch 008 — column-matrix possibilities (global QP036–QP040)
+
+All five possibilities are retained as `FOUNDATION_ONLY`:
+
+| QP | Source mechanism | Disposition rationale |
+|---|---|---|
+| C004 / QP001 | Identify a column matrix | Direct one-column definition |
+| C004 / QP002 | Construct a column matrix | Direct representation |
+| C004 / QP003 | Equality of column matrices | Order and entrywise equality |
+| C004 / QP004 | Transpose of a column matrix | Direct row/column shape transformation |
+| C004 / QP005 | Operation compatibility for column matrices | Basic dimension compatibility |
+
+No new archetypes were added. Cumulative status: 40 dispositions and 6 draft archetypes; 310 source QPs remain.
