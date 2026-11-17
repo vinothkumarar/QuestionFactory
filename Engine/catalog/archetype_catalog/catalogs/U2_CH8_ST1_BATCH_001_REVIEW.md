@@ -471,3 +471,18 @@ New draft candidate:
 - JEE Main candidate only; Moderate/Hard potential; academic approval pending; manufacturing disabled.
 
 Cumulative status: 130 dispositions and 21 draft archetypes; 220 source QPs remain untouched.
+
+
+## Batch 027 — lower-triangular closure and symmetry properties (global QP131–QP135)
+
+All five possibilities are retained as `FOUNDATION_ONLY`:
+
+| QP | Source mechanism | Disposition rationale |
+|---|---|---|
+| C012 / QP005 | Product of lower-triangular matrices | Direct closure |
+| C012 / QP006 | Transpose relation | Direct conversion to upper-triangular form |
+| C012 / QP007 | Both upper/lower or lower plus symmetric implies diagonal | Direct structural implication |
+| C012 / QP008 | Powers of lower-triangular matrices | Direct repeated closure |
+| C012 / QP009 | Diagonal entries of lower-triangular products/powers | Same mechanism as AR00021; do not duplicate |
+
+No new archetypes were added. Cumulative status: 135 dispositions and 21 draft archetypes; 215 source QPs remain untouched.
