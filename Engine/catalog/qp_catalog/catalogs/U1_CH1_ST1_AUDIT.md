@@ -1,4 +1,4 @@
-# U1–CH1–ST1 Catalogue Audit — v1.0
+# U1–CH1–ST1 Catalogue Audit — v1.1
 
 **Repository:** `vinothkumarar/QuestionFactory`  
 **Branch:** `feature/dual-question-engine-v1`  
@@ -7,48 +7,79 @@
 
 ## Source reconciliation
 
-- The existing source QPC contains 20 ST1 question possibilities: `U1_CH1_ST1_QP001` through `U1_CH1_ST1_QP020`.
-- Source identifiers and source QP wording were not edited.
-- Eight concept groupings were created in `U1_CH1_ST1_concepts.csv`.
-- Fifty-seven materially distinct archetypes were catalogued for 19 resolvable QPs.
-- Archetype IDs are sequential from `AR00001` through `AR00057`, unique within this subtopic catalogue.
-- Each archetype row retains its full source QP identifier.
+- The source QPC contains 20 ST1 question possibilities: `U1_CH1_ST1_QP001` through `U1_CH1_ST1_QP020`.
+- The source QPC was not modified.
+- Eight concept groupings are recorded in `U1_CH1_ST1_concepts.csv`.
+- QP016 is quarantined because its source text is malformed; no meaning is inferred.
+- Fifty-two archetype candidates remain across the 19 interpretable QPs.
 
-## Quarantine: QP016
+## Pairwise overlap pass
 
-The source row for `U1_CH1_ST1_QP016` is exactly:
+The first candidate list contained 57 rows. Five were removed before approval because they were duplicates, presentation-only variants, or belonged more naturally to another QP:
 
-`Boundary Classification (?1`
+| Removed candidate | Reason |
+|---|---|
+| Initial AR00002 (QP001) | Selecting a formal definition is a response-format variant of recalling/recognizing the definition, not a distinct assessment mechanism |
+| Initial AR00003 (QP001) | Zero-convention boundary is explicitly covered by QP013; cross-QP duplication |
+| Initial AR00008 (QP003) | Set-builder recognition duplicates recognition of the integer-set definition |
+| Initial AR00020 (QP007) | Sign/zero exclusion is the same membership test as direct non-natural identification |
+| Initial AR00025 (QP009) | Selecting a non-integral member from a list is a presentation variant of determining non-integrality |
 
-The terminal text is malformed/ambiguous. No meaning has been inferred and no archetypes have been fabricated for this QP. It is mapped to concept `C006` with a quarantine note in the concept registry. It must be clarified against the authoritative source before archetype discovery or question manufacturing.
+The retained candidates were re-numbered sequentially from `AR00001` to `AR00052` before catalogue release. These identifiers are now stable; do not renumber them in subsequent revisions. If a later audit rejects an item, retain its ID as deprecated rather than recycling it.
+
+## Cross-QP review flags
+
+These pairs are related and must be checked for genuine distinctness during the next academic review:
+
+- QP001 / QP004: definition knowledge versus applying membership to a supplied value.
+- QP004 / QP010 / QP012: target-set membership versus broad classification versus smallest-set classification.
+- QP007 / QP008 / QP009: excluded-from-set identification for N, W and Z; preserve only where the target set changes the actual reasoning.
+- QP018 / QP019 / QP020: statement evaluation, true/false classification and error diagnosis; do not create superficial variants of the same proposition test.
+- QP013 / QP018: zero-specific convention statements versus general set-membership statements.
+
+These are review flags, not automatic merges: distinct QPs may legitimately test different knowledge outcomes. Final decisions must compare the actual reasoning mechanism, not only the wording.
+
+## QP016 quarantine
+
+The source row is exactly:
+
+`U1_CH1_ST1_QP016,U1_CH1_ST1,Boundary Classification (?1`
+
+Repository search found no corroborating corrected wording. The trailing `?1` cannot safely be interpreted as `-1`, `+1`, or any other value. QP016 remains quarantined and must not be generated until the original catalogue author/source is checked.
 
 ## Scope controls
 
-- Scope is limited to Natural Numbers, Whole Numbers and Integers.
-- Natural-number inclusion of zero must be explicitly configured per approved curriculum convention.
-- Broader number sets, divisibility, primes, HCF/LCM, and other Number System topics are not silently introduced into ST1.
-- Parameterized and operation-based archetypes must remain within the approved N/W/Z scope.
-- Exam alignment and difficulty potential describe archetype suitability; they do not constitute official syllabus mapping approval.
+- Scope remains limited to Natural Numbers, Whole Numbers and Integers.
+- Natural-number inclusion of zero must be an explicit configuration, not an implicit assumption.
+- Broader sets, divisibility, primes, HCF/LCM and unrelated Number System topics must not be imported into ST1.
+- JEE fit and difficulty fields are candidate assessments, not official syllabus mapping approval.
 
 ## Structural validation
 
 | Check | Result |
 |---|---:|
 | Source ST1 QPs | 20 |
+| Interpretable QPs | 19 |
 | Concept rows | 8 |
-| Archetype rows | 57 |
-| Distinct archetype IDs | 57 |
-| Sequential archetype IDs (`AR00001`–`AR00057`) | PASS |
-| QPs represented by archetypes | 19 |
-| Malformed archetype CSV rows | 0 |
+| Retained archetype candidates | 52 |
+| Distinct sequential archetype IDs | 52 |
+| ID range | AR00001–AR00052 |
 | QP016 | QUARANTINED |
+| Source QPC modifications | None |
 
-## Files
+## Important quality limitation
 
-- `Engine/catalog/qp_catalog/catalogs/U1_CH1_ST1_concepts.csv`
-- `Engine/catalog/archetype_catalog/catalogs/U1_CH1_ST1.csv`
+The current `assessment_mechanism` and `reasoning_path` columns were populated as structured draft descriptions. Some use broad templates and are not yet sufficiently specific to serve as final academic approval evidence. They must be rewritten or verified against each archetype's actual mathematical reasoning before manufacturing is enabled.
 
 ## Release status
 
-**Catalogue draft is structurally validated, not yet academically approved.** Archetype assessment-mechanism and reasoning-path descriptions are structured candidate metadata and still require pairwise expert review; the registry is not a claim that all 57 candidates have passed final distinctness approval.  
-Next gate: independently review archetype completeness and distinctness, resolve QP016, then run the factory's applicable validation and staging workflow. No question instances are generated by this catalogue step.
+**ST1 catalogue remains DRAFT / NOT APPROVED FOR MANUFACTURING.**
+
+Next autonomous gate:
+1. Rewrite and validate the 52 assessment mechanisms and reasoning paths individually.
+2. Complete the flagged cross-QP distinctness review.
+3. Resolve QP016 from an authoritative source if possible.
+4. Run repository tests and catalogue validation.
+5. Only then enable the first Foundation manufacturing batch.
+
+No question instances have been generated by this catalogue audit.
