@@ -1237,3 +1237,28 @@ New draft candidates:
 Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 320 dispositions and 114 draft archetypes; 30 source QPs remain untouched.
+
+
+## Batch 065 — block-diagonal trace, rank, invertibility, inverse and polynomial evaluation (global QP321–QP325)
+
+All five possibilities are retained as `ELIGIBLE`:
+
+| QP | Assessment mechanism |
+|---|---|
+| C026 / QP006 | Aggregate trace as the sum of block traces |
+| C026 / QP007 | Aggregate rank as the sum of block ranks |
+| C026 / QP008 | Determine full invertibility from every diagonal block |
+| C026 / QP009 | Construct the inverse blockwise |
+| C026 / QP010 | Evaluate powers and polynomials independently on each block |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00115`: Aggregate trace across diagonal blocks.
+- `U2_CH8_ST1_AR00116`: Aggregate rank across diagonal blocks.
+- `U2_CH8_ST1_AR00117`: Determine invertibility of a block-diagonal matrix blockwise.
+- `U2_CH8_ST1_AR00118`: Construct the inverse of an invertible block-diagonal matrix.
+- `U2_CH8_ST1_AR00119`: Evaluate powers and polynomials of block-diagonal matrices blockwise.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 325 dispositions and 119 draft archetypes; 25 source QPs remain untouched.
