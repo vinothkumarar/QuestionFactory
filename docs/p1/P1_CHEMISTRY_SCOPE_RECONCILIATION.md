@@ -21,7 +21,7 @@
 | C1 | Mole Concept | Unit 1 Some Basic Concepts in Chemistry | General Topics | Direct |
 | C2 | Atomic Structure | Unit 2 Atomic Structure | Atomic Structure | Direct |
 | C3 | Chemical Bonding and Molecular Structure | Unit 3 Chemical Bonding | Chemical Bonding | Direct |
-| C4 | States of Matter | Partial cross-unit: gas/kinetic topics to Main Unit 9; surface/viscosity topics to Main Unit 7; vapour-pressure topics need precise context | States of Matter: Gases and Liquids | Advanced direct; Main split/partial |
+| C4 | States of Matter | Partial cross-subject: gas/kinetic topics to Main Physics Unit 9; surface/viscosity topics to Main Physics Unit 7; vapour-pressure topics need precise context | States of Matter: Gases and Liquids | Advanced direct; Main split/partial |
 | C5 | Thermodynamics | Unit 4 Chemical Thermodynamics | Chemical Thermodynamics | Direct |
 | C6 | Chemical Equilibrium | Unit 6 Equilibrium | Chemical and Ionic Equilibrium | Direct |
 | C7 | Ionic Equilibrium | Unit 6 Equilibrium | Chemical and Ionic Equilibrium | Direct |
@@ -29,7 +29,7 @@
 | C9 | Solutions | Unit 5 Solutions | Solutions | Direct |
 | C10 | Electrochemistry | Unit 7 Redox Reactions and Electrochemistry | Electrochemistry | Direct |
 | C11 | Chemical Kinetics | Unit 8 Chemical Kinetics | Chemical Kinetics | Direct |
-| C12 | Surface Chemistry | No explicit standalone Main unit; individual catalyst topics may overlap Main Unit 8 | Surface Chemistry | Advanced direct; Main partial/absent by subtopic |
+| C12 | Surface Chemistry | No explicit standalone Main unit; individual catalyst topics overlap Main Units 6 and 8 | Surface Chemistry | Advanced direct; Main partial/absent by subtopic |
 | C13 | Classification of Elements and Periodicity | Unit 9 | Classification and Periodicity | Direct |
 | C14 | Hydrogen | No explicit standalone Main unit | Hydrogen | Advanced direct |
 | C15 | s-Block Elements | Main Unit 9 names s-block classification/trends but not the detailed s-block chemistry chapter | s-Block Elements | Main partial; Advanced direct |
@@ -63,7 +63,7 @@ Current internal evidence:
 - No dedicated internal purification/characterisation unit or chapter is evident.
 - C21 General Organic Chemistry covers classification, nomenclature, isomerism, electronic effects, intermediates, acidity/basicity, aromaticity and mechanisms; it does not provide the full Main Unit 13 purification/quantitative-analysis scope.
 
-Disposition: partial mapping exists for chromatography only; the remaining official Unit 13 coverage is a taxonomy gap pending full subtopic search.
+Disposition: partial mapping exists for chromatography only; the remaining official Unit 13 coverage is a taxonomy gap pending full subtopic search. The mapping register records C20_CH1_ST9 as a Main Unit 13 cross-unit candidate, not as Metallurgy.
 
 ### 2. Principles Related to Practical Chemistry — Main Unit 20
 
@@ -113,3 +113,8 @@ Do not disable or delete these internal records automatically. Keep them Advance
 - Add/approve Vitamins subtopics under the existing C27_CH3 only after academic review and stable-ID plan; do not invent content during P1.
 - Keep Main-only and Advanced-only topics separate.
 - Preserve all current codes/UUIDs and enable flags.
+
+
+## 2026-11-17 subtopic review update
+
+The mapping register now has provisional dispositions for 50 Chemistry subtopics across C4, C12, C14, C15, C20, C27, C28 and C29. This is not full Chemistry approval: 210 of 260 Chemistry subtopics remain unreviewed. The cross-subject placement of C4 gas/kinetic topics and surface tension/viscosity is explicitly recorded, and C20_CH1_ST9 Chromatographic Methods is provisionally mapped to Main Unit 13 while retaining its existing ID under C20.
