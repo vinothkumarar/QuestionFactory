@@ -8,90 +8,40 @@ from typing import Any
 from Engine.catalog.archetype_catalog.archetype_catalog_ai_client import (
     ArchetypeCatalogAIClient,
 )
-
+from Engine.catalog.archetype_catalog.archetype_catalog_csv_exporter import (
+    ArchetypeCatalogCSVExporter,
+)
 from Engine.catalog.archetype_catalog.batch_archetype_catalog_generator import (
     BatchArchetypeCatalogGenerator,
 )
-
-from Engine.catalog.archetype_catalog.archetype_catalog_csv_exporter import (
-    ArchetypeCatalogCSVExporter,
+from Engine.catalog.archetype_catalog.qp_disposition_contract import (
+    qp_key,
+    validate_catalog_response,
 )
 
 
 BATCH_SIZE = 5
 
 
-def load_existing_archetypes(
-    json_file: Path,
-) -> list[dict[str, Any]]:
-    """
-    Load previously generated Archetype records.
-
-    An existing JSON file represents a partially
-    completed catalog when the .complete marker
-    does not exist.
-    """
-
+def load_existing_catalog(json_file: Path) -> dict[str, list[dict[str, Any]]]:
     if not json_file.exists():
-        return []
-
-    data = json.loads(
-        json_file.read_text(
-            encoding="utf-8",
-        )
-    )
-
-    if not isinstance(data, list):
+        return {"qp_dispositions": [], "archetypes": []}
+    data = json.loads(json_file.read_text(encoding="utf-8"))
+    if isinstance(data, list):
         raise ValueError(
-            f"Archetype catalog must contain a JSON list: "
-            f"{json_file}"
+            f"Legacy flat-list catalogue detected at {json_file}. "
+            "It has no explicit QP dispositions and cannot be resumed safely. "
+            "Preserve it and migrate explicitly before running this pipeline."
         )
-
+    if not isinstance(data, dict) or set(data) != {
+        "qp_dispositions", "archetypes",
+    }:
+        raise ValueError(f"Invalid disposition-aware catalogue: {json_file}")
+    if not isinstance(data["qp_dispositions"], list) or not isinstance(
+        data["archetypes"], list
+    ):
+        raise ValueError(f"Malformed catalogue arrays: {json_file}")
     return data
-
-
-def get_completed_qp_keys(
-    archetypes: list[dict[str, Any]],
-) -> set[tuple[str, str]]:
-    """
-    Return unique QP identities already represented
-    in the generated Archetype Catalog.
-
-    QP identity is:
-
-        concept_id + qp_id
-
-    qp_id alone is NOT globally unique.
-    """
-
-    completed: set[tuple[str, str]] = set()
-
-    for row in archetypes:
-
-        concept_id = row.get(
-            "concept_id",
-            "",
-        )
-
-        qp_id = row.get(
-            "qp_id",
-            "",
-        )
-
-        if (
-            isinstance(concept_id, str)
-            and concept_id
-            and isinstance(qp_id, str)
-            and qp_id
-        ):
-            completed.add(
-                (
-                    concept_id,
-                    qp_id,
-                )
-            )
-
-    return completed
 
 
 def get_next_archetype_number(
@@ -99,56 +49,14 @@ def get_next_archetype_number(
     archetypes: list[dict[str, Any]],
     scope_id: str,
 ) -> int:
-    """
-    Determine the next permanent Archetype number.
-
-    Existing Archetype IDs are preserved.
-
-    Example:
-
-        U1_CH1_ST1_AR00001
-        U1_CH1_ST1_AR00002
-
-    returns:
-
-        3
-    """
-
-    pattern = re.compile(
-        rf"^{re.escape(scope_id)}_AR(\d+)$"
-    )
-
+    pattern = re.compile(rf"^{re.escape(scope_id)}_AR(\d+)$")
     highest = 0
-
     for row in archetypes:
-
-        archetype_id = row.get(
-            "archetype_id",
-            "",
-        )
-
-        if not isinstance(
-            archetype_id,
-            str,
-        ):
-            continue
-
-        match = pattern.match(
-            archetype_id
-        )
-
-        if match is None:
-            continue
-
-        number = int(
-            match.group(1)
-        )
-
-        highest = max(
-            highest,
-            number,
-        )
-
+        value = row.get("archetype_id", "")
+        if isinstance(value, str):
+            match = pattern.match(value)
+            if match:
+                highest = max(highest, int(match.group(1)))
     return highest + 1
 
 
@@ -158,579 +66,169 @@ def assign_archetype_ids(
     scope_id: str,
     existing_archetypes: list[dict[str, Any]],
 ) -> None:
-    """
-    Assign permanent Archetype IDs to newly
-    generated records.
-
-    Existing Archetype IDs are preserved.
-    """
-
-    next_number = (
-        get_next_archetype_number(
-            archetypes=existing_archetypes,
-            scope_id=scope_id,
-        )
+    next_number = get_next_archetype_number(
+        archetypes=existing_archetypes,
+        scope_id=scope_id,
     )
-
-    for row in archetypes:
-
-        existing_id = row.get(
-            "archetype_id",
-            "",
-        )
-
-        if (
-            isinstance(existing_id, str)
-            and existing_id.strip()
-        ):
-            continue
-
-        row["archetype_id"] = (
-            f"{scope_id}_AR"
-            f"{next_number:05d}"
-        )
-
-        next_number += 1
-    """
-    Assign permanent Archetype IDs to newly
-    generated records.
-
-    The AI does not control Archetype identity.
-
-    IDs are assigned by the factory.
-
-    Existing non-empty IDs are preserved.
-    """
-
-    next_number = (
-        get_next_archetype_number(
-            archetypes=archetypes,
-            scope_id=scope_id,
-        )
-    )
-
-    for row in archetypes:
-
-        existing_id = row.get(
-            "archetype_id",
-            "",
-        )
-
-        if (
-            isinstance(existing_id, str)
-            and existing_id.strip()
-        ):
-            continue
-
-        row["archetype_id"] = (
-            f"{scope_id}_AR"
-            f"{next_number:05d}"
-        )
-
-        next_number += 1
-
-
-def validate_archetype_records(
-    *,
-    records: list[dict[str, Any]],
-    batch_qp_ids: list[str],
-) -> None:
-    """
-    Validate the structural integrity of one
-    generated Archetype batch.
-    """
-
-    required_fields = [
-        "subject",
-        "unit",
-        "chapter",
-        "subtopic",
-        "concept_id",
-        "concept",
-        "qp_id",
-        "question_possibility",
-        "archetype",
-    ]
-
-    for index, row in enumerate(
-        records,
-        start=1,
-    ):
-
-        if not isinstance(
-            row,
-            dict,
-        ):
-            raise RuntimeError(
-                "Archetype batch contains "
-                f"non-object record at index {index}."
-            )
-
-        for field in required_fields:
-
-            value = row.get(
-                field,
-                "",
-            )
-
-            if not isinstance(
-                value,
-                str,
-            ) or not value.strip():
-
-                raise RuntimeError(
-                    "Archetype record is missing "
-                    f"required field '{field}' "
-                    f"at index {index}."
-                )
-
-    returned_qp_ids = {
-        row["qp_id"]
-        for row in records
+    existing_ids = {
+        row.get("archetype_id") for row in existing_archetypes
     }
-
-    missing_qp_ids = [
-        qp_id
-        for qp_id in batch_qp_ids
-        if qp_id not in returned_qp_ids
-    ]
-
-    if missing_qp_ids:
-
-        raise RuntimeError(
-            "Archetype batch did not return "
-            "records for every supplied QP. "
-            f"Missing QPs: {missing_qp_ids}"
-        )
+    for row in archetypes:
+        if row.get("archetype_id") != "":
+            raise ValueError("AI archetype IDs must be blank before factory assignment.")
+        candidate = f"{scope_id}_AR{next_number:05d}"
+        while candidate in existing_ids:
+            next_number += 1
+            candidate = f"{scope_id}_AR{next_number:05d}"
+        row["archetype_id"] = candidate
+        existing_ids.add(candidate)
+        next_number += 1
 
 
-def write_catalog(
+def persist_catalog(
     *,
     json_file: Path,
-    csv_file: Path,
-    archetypes: list[dict[str, Any]],
-    csv_exporter: ArchetypeCatalogCSVExporter,
+    archetype_csv: Path,
+    disposition_csv: Path,
+    catalog: dict[str, list[dict[str, Any]]],
+    source_qps: list[dict[str, Any]],
+    exporter: ArchetypeCatalogCSVExporter,
 ) -> None:
-    """
-    Persist the current catalog state.
-
-    JSON is written first.
-
-    CSV is then regenerated from the
-    current JSON state.
-    """
-
     json_file.write_text(
-        json.dumps(
-            archetypes,
-            indent=4,
-            ensure_ascii=False,
-        ),
+        json.dumps(catalog, indent=4, ensure_ascii=False),
         encoding="utf-8",
     )
-
-    csv_exporter.export(
+    exporter.export(json_file=json_file, csv_file=archetype_csv)
+    exporter.export_dispositions(
         json_file=json_file,
-        csv_file=csv_file,
+        csv_file=disposition_csv,
+        source_qps=source_qps,
     )
 
 
 def main() -> None:
+    qp_dir = Path(__file__).parent.parent / "qp_catalog" / "catalogs"
+    qp_files = sorted(qp_dir.glob("*.json"))
+    output_dir = Path(__file__).parent / "catalogs"
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    qp_dir = (
-        Path(__file__).parent.parent
-        / "qp_catalog"
-        / "catalogs"
-    )
+    generator = BatchArchetypeCatalogGenerator()
+    client = ArchetypeCatalogAIClient()
+    exporter = ArchetypeCatalogCSVExporter()
 
-    qp_files = sorted(
-        qp_dir.glob("*.json")
-    )
-
-    total = len(qp_files)
-
-    output_dir = (
-        Path(__file__).parent
-        / "catalogs"
-    )
-
-    output_dir.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
-
-    generator = (
-        BatchArchetypeCatalogGenerator()
-    )
-
-    client = (
-        ArchetypeCatalogAIClient()
-    )
-
-    csv_exporter = (
-        ArchetypeCatalogCSVExporter()
-    )
-
-    for index, qp_file in enumerate(
-        qp_files,
-        start=1,
-    ):
-
-        qps = json.loads(
-            qp_file.read_text(
-                encoding="utf-8",
-            )
-        )
-
-        if not qps:
-
-            print(
-                f"[{index}/{total}] "
-                f"Skipping empty catalog: "
-                f"{qp_file.name}"
-            )
-
+    for file_index, qp_file in enumerate(qp_files, start=1):
+        qps = json.loads(qp_file.read_text(encoding="utf-8"))
+        if not isinstance(qps, list) or not qps:
+            print(f"[{file_index}/{len(qp_files)}] Skipping empty/invalid source: {qp_file.name}")
             continue
-
-        # -------------------------------------------------
-        # Permanent catalog scope
-        # -------------------------------------------------
 
         scope_id = qp_file.stem
-
-        json_file = (
-            output_dir
-            / f"{scope_id}.json"
-        )
-
-        csv_file = (
-            output_dir
-            / f"{scope_id}.csv"
-        )
-
-        complete_file = (
-            output_dir
-            / f"{scope_id}.complete"
-        )
-
-        # -------------------------------------------------
-        # Completed catalog
-        # -------------------------------------------------
+        json_file = output_dir / f"{scope_id}.json"
+        archetype_csv = output_dir / f"{scope_id}.csv"
+        disposition_csv = output_dir / f"{scope_id}_qp_dispositions.csv"
+        complete_file = output_dir / f"{scope_id}.complete"
 
         if complete_file.exists():
-
-            print(
-                f"[{index}/{total}] "
-                f"Skipping completed: "
-                f"{scope_id}"
-            )
-
+            print(f"[{file_index}/{len(qp_files)}] Already complete: {scope_id}")
             continue
 
-        # -------------------------------------------------
-        # Load existing partial catalog
-        # -------------------------------------------------
-
-        all_archetypes = (
-            load_existing_archetypes(
-                json_file,
+        catalog = load_existing_catalog(json_file)
+        # Validate all persisted dispositions and archetypes against the
+        # original source before resuming. Empty archetype arrays are valid.
+        if catalog["qp_dispositions"]:
+            validate_catalog_response(
+                response=catalog,
+                input_qps=[
+                    row for row in qps
+                    if qp_key(row) in {
+                        (item.get("concept_id"), item.get("qp_id"))
+                        for item in catalog["qp_dispositions"]
+                    }
+                ],
             )
-        )
 
-        completed_qp_keys = (
-            get_completed_qp_keys(
-                all_archetypes,
-            )
-        )
-
-        # -------------------------------------------------
-        # Existing ID information
-        # -------------------------------------------------
-
-        next_archetype_number = (
-            get_next_archetype_number(
-                archetypes=all_archetypes,
-                scope_id=scope_id,
-            )
-        )
-
-        # -------------------------------------------------
-        # Basic source information
-        # -------------------------------------------------
-
-        first_row = qps[0]
-
-        print()
+        completed_keys = {
+            (item.get("concept_id"), item.get("qp_id"))
+            for item in catalog["qp_dispositions"]
+        }
+        remaining = [row for row in qps if qp_key(row) not in completed_keys]
 
         print(
-            f"[{index}/{total}] "
-            f"Generating: "
-            f"{first_row['unit']} | "
-            f"{first_row['chapter']} | "
-            f"{first_row['subtopic']}"
+            f"\n[{file_index}/{len(qp_files)}] {scope_id}: "
+            f"{len(qps)} source QPs, {len(completed_keys)} dispositioned, "
+            f"{len(remaining)} remaining."
         )
 
-        print(
-            f"  Catalog scope: {scope_id}"
-        )
+        for offset in range(0, len(remaining), BATCH_SIZE):
+            batch = remaining[offset:offset + BATCH_SIZE]
+            print(f"  Processing QPs: {[row['qp_id'] for row in batch]}")
 
-        print(
-            f"  Source QPs: {len(qps)}"
-        )
+            prompt = generator.load_prompt(qps=batch)
+            result = client.generate_json(prompt, input_qps=batch)
 
-        print(
-            "  Next Archetype ID: "
-            f"{scope_id}_AR"
-            f"{next_archetype_number:05d}"
-        )
-
-        if completed_qp_keys:
-
-            print(
-                f"  Resume mode: "
-                f"{len(completed_qp_keys)} QPs "
-                f"already completed."
-            )
-
-        # -------------------------------------------------
-        # Process only QPs not already completed
-        # -------------------------------------------------
-
-        remaining_qps = [
-            qp
-            for qp in qps
-            if (
-                qp.get(
-                    "concept_id",
-                    "",
-                ),
-                qp.get(
-                    "qp_id",
-                    "",
-                ),
-            ) not in completed_qp_keys
-        ]
-
-        if not remaining_qps:
-
-            print(
-                "  All QPs already generated."
-            )
-
-            complete_file.touch()
-
-            print(
-                f"  Created completion marker: "
-                f"{complete_file.name}"
-            )
-
-            continue
-
-        # -------------------------------------------------
-        # Batch processing
-        # -------------------------------------------------
-
-        total_remaining = len(
-            remaining_qps
-        )
-
-        batch_count = (
-            total_remaining
-            + BATCH_SIZE
-            - 1
-        ) // BATCH_SIZE
-
-        for batch_index in range(
-            batch_count
-        ):
-
-            start = (
-                batch_index
-                * BATCH_SIZE
-            )
-
-            end = min(
-                start + BATCH_SIZE,
-                total_remaining,
-            )
-
-            batch = remaining_qps[
-                start:end
-            ]
-
-            batch_qp_ids = [
-                qp["qp_id"]
-                for qp in batch
-            ]
-
-            print()
-
-            print(
-                f"  Batch "
-                f"{batch_index + 1}/"
-                f"{batch_count}"
-            )
-
-            print(
-                f"  QPs: "
-                f"{batch_qp_ids}"
-            )
-
-            # -------------------------------------------------
-            # Build batch prompt
-            # -------------------------------------------------
-
-            prompt = (
-                generator.load_prompt(
-                    qps=batch,
-                )
-            )
-
-            print(
-                "  START API"
-            )
-
-            # -------------------------------------------------
-            # API call
-            # -------------------------------------------------
-
-            result = (
-                client.generate_json(
-                    prompt,
-                )
-            )
-
-            print(
-                "  DONE API"
-            )
-
-            print(
-                f"  Archetypes returned: "
-                f"{len(result)}"
-            )
-
-            # -------------------------------------------------
-            # Validate AI output
-            # -------------------------------------------------
-
-            validate_archetype_records(
-                records=result,
-                batch_qp_ids=batch_qp_ids,
-            )
-
-            # -------------------------------------------------
-            # Assign permanent factory IDs
-            # -------------------------------------------------
-
+            new_archetypes = result["archetypes"]
             assign_archetype_ids(
-                archetypes=result,
+                archetypes=new_archetypes,
                 scope_id=scope_id,
-                existing_archetypes=all_archetypes,
+                existing_archetypes=catalog["archetypes"],
             )
 
-            # -------------------------------------------------
-            # Validate assigned IDs
-            # -------------------------------------------------
+            catalog["qp_dispositions"].extend(result["qp_dispositions"])
+            catalog["archetypes"].extend(new_archetypes)
 
-            existing_ids = {
-                row.get(
-                    "archetype_id",
-                    "",
-                )
-                for row in all_archetypes
+            # Validate the accumulated state against the complete source set
+            # represented so far, including valid zero-archetype QPs.
+            processed_keys = {
+                (item["concept_id"], item["qp_id"])
+                for item in catalog["qp_dispositions"]
             }
-
-            new_ids = [
-                row["archetype_id"]
-                for row in result
+            processed_qps = [
+                row for row in qps if qp_key(row) in processed_keys
             ]
-
-            duplicate_ids = [
-                archetype_id
-                for archetype_id in new_ids
-                if archetype_id in existing_ids
-            ]
-
-            if duplicate_ids:
-
-                raise RuntimeError(
-                    "Duplicate permanent "
-                    "Archetype IDs detected: "
-                    f"{duplicate_ids}"
-                )
-
-            # -------------------------------------------------
-            # Append successful batch
-            # -------------------------------------------------
-
-            all_archetypes.extend(
-                result
+            validate_catalog_response(
+                response=catalog,
+                input_qps=processed_qps,
             )
-
-            # -------------------------------------------------
-            # Immediate persistence
-            # -------------------------------------------------
-
-            write_catalog(
+            persist_catalog(
                 json_file=json_file,
-                csv_file=csv_file,
-                archetypes=all_archetypes,
-                csv_exporter=csv_exporter,
+                archetype_csv=archetype_csv,
+                disposition_csv=disposition_csv,
+                catalog=catalog,
+                source_qps=qps,
+                exporter=exporter,
             )
-
             print(
-                f"  JSON updated: "
-                f"{json_file.name}"
+                f"  Saved {len(result['qp_dispositions'])} dispositions; "
+                f"{len(new_archetypes)} archetypes."
             )
 
-            print(
-                f"  CSV updated : "
-                f"{csv_file.name}"
+        final_keys = {
+            (item["concept_id"], item["qp_id"])
+            for item in catalog["qp_dispositions"]
+        }
+        source_keys = {qp_key(row) for row in qps}
+        if final_keys != source_keys:
+            missing = sorted(source_keys - final_keys)
+            raise RuntimeError(
+                f"Cannot mark {scope_id} complete; missing dispositions: {missing}"
             )
 
-            print(
-                f"  Archetypes saved this batch: "
-                f"{len(result)}"
-            )
-
-            print(
-                f"  Total archetypes saved: "
-                f"{len(all_archetypes)}"
-            )
-
-        # -------------------------------------------------
-        # Entire subtopic completed
-        # -------------------------------------------------
-
+        validate_catalog_response(response=catalog, input_qps=qps)
+        persist_catalog(
+            json_file=json_file,
+            archetype_csv=archetype_csv,
+            disposition_csv=disposition_csv,
+            catalog=catalog,
+            source_qps=qps,
+            exporter=exporter,
+        )
         complete_file.touch()
-
-        print()
-
         print(
-            f"  COMPLETE: "
-            f"{scope_id}"
+            f"  COMPLETE: {scope_id} | QPs: {len(qps)} | "
+            f"Archetypes: {len(catalog['archetypes'])}"
         )
 
-        print(
-            f"  Total QPs processed: "
-            f"{len(qps)}"
-        )
-
-        print(
-            f"  Total archetypes: "
-            f"{len(all_archetypes)}"
-        )
-
-        print(
-            f"  Completion marker: "
-            f"{complete_file.name}"
-        )
-
-    print()
-
-    print(
-        "Archetype catalog generation complete."
-    )
+    print("\nDisposition-aware archetype catalogue generation complete.")
 
 
 if __name__ == "__main__":
