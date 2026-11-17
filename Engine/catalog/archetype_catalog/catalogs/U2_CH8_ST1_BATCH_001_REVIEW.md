@@ -387,3 +387,18 @@ All five possibilities are retained as `FOUNDATION_ONLY`:
 | C010 / QP001 | Identify identity matrix | Direct definition check |
 
 No new archetypes were added. Cumulative status: 105 dispositions and 17 draft archetypes; 245 source QPs remain untouched.
+
+
+## Batch 022 — identity-matrix fundamentals (global QP106–QP110)
+
+All five possibilities are retained as `FOUNDATION_ONLY`:
+
+| QP | Source mechanism | Disposition rationale |
+|---|---|---|
+| C010 / QP002 | Construct identity matrix | Direct definition |
+| C010 / QP003 | Identity order compatibility in products | Direct dimension matching |
+| C010 / QP004 | Simplify using identity properties | Direct algebraic substitution |
+| C010 / QP005 | Determinant, trace and rank of identity | Direct order-based formulas |
+| C010 / QP006 | Classify identity among standard matrix types | Direct definition check |
+
+No new archetypes were added. Cumulative status: 110 dispositions and 17 draft archetypes; 240 source QPs remain untouched.
