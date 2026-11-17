@@ -37,7 +37,7 @@ Eleven records are marked “URL verified — PDF accessible” (two JEE Advance
 
 The workbook's PDF Verified = Yes field is an access/URL status in these records; it is not proof that local bytes were acquired and hashed. No local PDF bytes or SHA-256 values were present in the inspected files or repository tree.
 
-All 21 2026 records still have Answer Key Verified = No in the workbook. Official key documents were found separately, but no per-question or per-shift reconciliation has yet been completed.
+All 21 2026 records still have Answer Key Verified = No in the workbook. Official key documents were found separately. Two question-level matches from 2 April 2026 Shift 1 have now been completed in the separate P1 evidence register; the workbook's aggregate field remains unchanged until the full record-level audit is complete.
 
 ## Official JEE Main 2026 final answer-key evidence
 
@@ -55,7 +55,7 @@ NTA's official documents register links final answer-key documents for both Pape
 
 NTA official documents index: https://jeemain.nta.nic.in/documents/
 
-**Verification state:** The official answer-key sources are located and their indexed contents are accessible. The tracker still needs the exact answer-key URL, local bytes, SHA-256, exam date/shift matching, and question-ID matching for each paper. Therefore the 2026 answer keys are not yet marked VERIFIED at record/question level.
+**Verification state:** Both official answer-key sources are located and accessible. Session II has two question-ID/option-ID matches independently solved and verified for 2 April 2026 Shift 1. Session I and the remaining Session II papers still require record-level matching. Local bytes and SHA-256 values remain pending, so no full-paper or session-wide verification claim is made.
 
 ## Official JEE Advanced 2026 answer-key evidence
 
@@ -113,11 +113,19 @@ Two Physics questions from the official 2 April 2026 Shift 1 JEE Main Paper 1 we
 
 | Question | Internal candidate | Official paper reference | Official final-key match | Status |
 |---|---|---|---|---|
-| Q26 | P1_CH1_ST4 — Dimensional Analysis | Question ID 69112126; paper PDF page index 9 | Correct Option ID 69112187 (option B; displayed value 1) | Question ID and option ID matched |
-| Q27 | P1_CH1_ST6 — Errors and Measurements | Question ID 69112127; paper PDF page index 10 | Correct Option ID 69112191 (option B; displayed value 1.65) | Question ID and option ID matched |
+| Q26 | P1_CH1_ST4 — Dimensional Analysis | Question ID 69112126; paper PDF page index 9 | Correct Option ID 69112187 (option B; displayed value 1) | Independently solved; key value and option matched |
+| Q27 | P1_CH1_ST6 — Errors and Measurements | Question ID 69112127; paper PDF page index 10 | Correct Option ID 69112191 (option B; displayed value 1.65) | Independently solved; key value and option matched |
 
 Official paper PDF: https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/202604092096865379.pdf
 
 Official Session II final key: https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/20260420409057044.pdf
 
 The paper/key question identifiers are matched, but local bytes and SHA-256 remain pending. This is two questions from one shift only and does not support cross-year frequency/trend claims.
+
+
+### Independent answer verification
+
+- **Q26:** The dimensional formula of electric-field energy density is energy per volume, `M L^-1 T^-2`. Thus `a=1, b=-1, c=-2`, and `2a-b+c=1`. This agrees with option B and the official correct option ID `69112187`.
+- **Q27:** Young's modulus is `Y=4FL/(pi*d^2*x)`. Ignoring load uncertainty, the relative uncertainty is `0.1/150 + 2(0.001/0.08) + 0.001/0.5 = 0.0276667`. The nominal modulus is approximately `5.968 x 10^10 Pa`; its absolute uncertainty is approximately `1.651 x 10^9 Pa`, giving `alpha=1.65`. This agrees with option B and official correct option ID `69112191`.
+
+The two independently verified records are stored in `P1_PYQ_EVIDENCE_REGISTER.csv`. Their `local_pdf_bytes_acquired` fields remain `NO`, and both SHA-256 fields remain `PENDING`.
