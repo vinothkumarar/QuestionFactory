@@ -479,6 +479,36 @@
             "qp_id": "QP002",
             "disposition": "ELIGIBLE",
             "rationale": "Imposing diagonality on a parameterized matrix requires simultaneous zero constraints on all off-diagonal entries; this is a reusable parameter-constraint mechanism and a JEE Main candidate."
+        },
+        {
+            "concept_id": "C008",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "For a diagonal matrix, determinant and nonsingularity reduce to the product/nonzero status of diagonal entries; this is a direct property check."
+        },
+        {
+            "concept_id": "C008",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The inverse of an invertible diagonal matrix is obtained by reciprocating each nonzero diagonal entry; this is a direct standard formula."
+        },
+        {
+            "concept_id": "C008",
+            "qp_id": "QP005",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Diagonal matrices are closed under compatible standard operations and commute under multiplication; these are direct algebraic properties."
+        },
+        {
+            "concept_id": "C008",
+            "qp_id": "QP006",
+            "disposition": "ELIGIBLE",
+            "rationale": "Powers and polynomial expressions in a diagonal matrix can be evaluated entrywise on the diagonal, giving a reusable reduction of matrix expressions to scalar evaluations."
+        },
+        {
+            "concept_id": "C008",
+            "qp_id": "QP007",
+            "disposition": "ELIGIBLE",
+            "rationale": "Left and right multiplication by a diagonal matrix scale rows and columns respectively; reasoning about the entry transformation is a distinct reusable mechanism."
         }
     ],
     "archetypes": [
@@ -792,6 +822,64 @@
                 "independent/dependent off-diagonal constraints",
                 "linear/nonlinear entry expressions",
                 "free diagonal parameters"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C008",
+            "concept": "Diagonal Matrix",
+            "qp_id": "QP006",
+            "question_possibility": "Evaluate powers or polynomial expressions in a diagonal matrix",
+            "archetype_id": "U2_CH8_ST1_AR00012",
+            "archetype": "Evaluate powers and polynomial expressions of a diagonal matrix",
+            "assessment_mechanism": "Reduce a power or polynomial in a diagonal matrix to independent scalar evaluations on its diagonal entries, preserving the diagonal structure.",
+            "reasoning_path": "Represent D as diag(d1,...,dn); apply the requested power or polynomial to each diagonal entry; retain zeros/off-diagonal structure; handle any exponent or polynomial domain restrictions; assemble the resulting diagonal matrix.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "polynomial degree",
+                "repeated/zero diagonal entries",
+                "parameterized diagonal entries",
+                "requested matrix property"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C008",
+            "concept": "Diagonal Matrix",
+            "qp_id": "QP007",
+            "question_possibility": "Determine the effect of left or right multiplication by a diagonal matrix on another matrix",
+            "archetype_id": "U2_CH8_ST1_AR00013",
+            "archetype": "Track row and column scaling under diagonal matrix multiplication",
+            "assessment_mechanism": "Determine the effect of left or right multiplication by a diagonal matrix by translating the operation into independent row or column scaling.",
+            "reasoning_path": "Check matrix dimensions; for left multiplication, multiply each row by the corresponding diagonal entry; for right multiplication, multiply each column by the corresponding diagonal entry; infer zeroing, scaling or preservation conditions entrywise.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "left versus right multiplication",
+                "rectangular target matrix",
+                "zero/nonzero diagonal entries",
+                "parameterized scale factors",
+                "target-entry constraints"
             ]
         }
     ]
