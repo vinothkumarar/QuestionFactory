@@ -1094,3 +1094,24 @@ New draft candidates:
 All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 285 dispositions and 96 draft archetypes; 65 source QPs remain untouched.
+
+
+## Batch 058 — Hermitian quadratic-form characterization and Hermitian/skew-Hermitian parameter counts (global QP286–QP290)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C023 / QP012 | ELIGIBLE | A is Hermitian iff x*Ax is real for every complex x |
+| C023 / QP013 | ELIGIBLE | Hermitian matrices have n² independent real parameters |
+| C024 / QP001 | FOUNDATION_ONLY | Direct skew-Hermitian definition check |
+| C024 / QP002 | ELIGIBLE | Purely imaginary diagonal and negative-conjugate off-diagonal constraints |
+| C024 / QP003 | FOUNDATION_ONLY | General Hermitian/skew-Hermitian decomposition already represented |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00097`: Characterize Hermitian matrices through real quadratic forms.
+- `U2_CH8_ST1_AR00098`: Count independent real parameters of a Hermitian matrix.
+- `U2_CH8_ST1_AR00099`: Derive parameter and missing-entry constraints for a skew-Hermitian matrix.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 290 dispositions and 99 draft archetypes; 60 source QPs remain untouched.
