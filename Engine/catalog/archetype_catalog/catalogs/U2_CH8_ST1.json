@@ -1409,6 +1409,36 @@
             "qp_id": "QP005",
             "disposition": "ELIGIBLE",
             "rationale": "A²=I forces eigenvalues to ±1; multiplicities determine trace and determinant and provide a distinct spectral-constraint mechanism."
+        },
+        {
+            "concept_id": "C020",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Trace and determinant follow directly from the multiplicities of eigenvalues ±1 and are already covered by the spectral multiplicity candidate."
+        },
+        {
+            "concept_id": "C020",
+            "qp_id": "QP007",
+            "disposition": "ELIGIBLE",
+            "rationale": "An involutory matrix has minimal polynomial dividing (x−1)(x+1) with distinct roots, so it is diagonalizable and similar to diag(I_r,−I_{n−r}); this is a distinct canonical classification mechanism."
+        },
+        {
+            "concept_id": "C020",
+            "qp_id": "QP008",
+            "disposition": "ELIGIBLE",
+            "rationale": "The matrices P±=(I±A)/2 are complementary idempotent projectors onto the ±1 eigenspaces; constructing and using these projectors is a reusable decomposition mechanism."
+        },
+        {
+            "concept_id": "C020",
+            "qp_id": "QP009",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Ranks/nullities of I±A are dimensions of the corresponding eigenspaces and follow from the projector decomposition; this is represented by the projector candidate."
+        },
+        {
+            "concept_id": "C020",
+            "qp_id": "QP010",
+            "disposition": "ELIGIBLE",
+            "rationale": "The minimal polynomial divides x²−1 and the characteristic polynomial has only roots ±1; relating polynomial constraints and multiplicities is a distinct invariant mechanism."
         }
     ],
     "archetypes": [
@@ -3342,6 +3372,93 @@
                 "multiplicity of ±1",
                 "field assumptions",
                 "characteristic polynomial"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C020",
+            "concept": "Involutory Matrix",
+            "qp_id": "QP007",
+            "question_possibility": "Diagonalize or classify an involutory matrix up to similarity into blocks of I and −I",
+            "archetype_id": "U2_CH8_ST1_AR00068",
+            "archetype": "Classify involutory matrices up to similarity into ±I blocks",
+            "assessment_mechanism": "Use the distinct roots of x²−1 to establish diagonalizability and classify an involutory matrix by the multiplicities of eigenvalues +1 and −1.",
+            "reasoning_path": "Apply A²=I; note the minimal polynomial divides (x−1)(x+1) with distinct roots; decompose the vector space into the ±1 eigenspaces; choose bases for each; obtain the canonical form diag(I_r,−I_{n−r}).",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "multiplicities of ±1",
+                "trace/determinant constraints",
+                "similarity versus equality",
+                "field assumptions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C020",
+            "concept": "Involutory Matrix",
+            "qp_id": "QP008",
+            "question_possibility": "Establish and use the projector decomposition (I±A)/2 for an involutory matrix",
+            "archetype_id": "U2_CH8_ST1_AR00069",
+            "archetype": "Construct complementary projectors from an involutory matrix",
+            "assessment_mechanism": "Use P+=(I+A)/2 and P−=(I−A)/2 to construct complementary idempotent projectors onto the +1 and −1 eigenspaces of an involutory matrix.",
+            "reasoning_path": "Define P±; use A²=I to verify P±²=P±; verify P+P−=O and P++P−=I; show AP+=P+ and AP−=−P−; interpret their images as the corresponding eigenspaces.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "field characteristic and division by 2",
+                "projector ranks",
+                "eigenspace dimensions",
+                "complementary decomposition"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C020",
+            "concept": "Involutory Matrix",
+            "qp_id": "QP010",
+            "question_possibility": "Determine the minimal polynomial and characterize the characteristic polynomial constraints of an involutory matrix",
+            "archetype_id": "U2_CH8_ST1_AR00070",
+            "archetype": "Derive minimal and characteristic polynomial constraints for an involutory matrix",
+            "assessment_mechanism": "Use A²=I to constrain the minimal polynomial to divide x²−1 and the characteristic polynomial to have roots only at ±1, then relate multiplicities to matrix invariants.",
+            "reasoning_path": "Apply A²−I=0; infer m_A(x) divides x²−1; use distinct roots to establish diagonalizability; write χ_A(x)=(x−1)^r(x+1)^{n−r}; connect r and n−r to trace and determinant.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "minimal polynomial",
+                "characteristic polynomial",
+                "multiplicities of ±1",
+                "trace/determinant data"
             ]
         }
     ]
