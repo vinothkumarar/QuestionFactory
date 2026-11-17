@@ -759,3 +759,25 @@ New draft candidates:
 Both are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
 
 Cumulative status: 205 dispositions and 49 draft archetypes; 145 source QPs remain untouched. Eight source possibilities are held for review due underspecified details.
+
+
+## Batch 042 — idempotent spectral, canonical and complementary structure (global QP206–QP210)
+
+| QP | Disposition | Reason |
+|---|---|---|
+| C018 / QP004 | ELIGIBLE | Eigenvalues of an idempotent matrix are restricted to 0 or 1 |
+| C018 / QP005 | ELIGIBLE | Idempotents are diagonalizable and similar to diag(I_r,0), classified by rank |
+| C018 / QP006 | ELIGIBLE | Rank, trace, nullity and determinant follow from the 0/1 spectrum |
+| C018 / QP007 | ELIGIBLE | I−A is idempotent and has complementary image/kernel and rank |
+| C018 / QP008 | REQUIRES_REVIEW | Sum/product/scalar-combination rules need operand commutativity and relationship assumptions |
+
+New draft candidates:
+
+- `U2_CH8_ST1_AR00050`: Infer eigenvalues and multiplicities of an idempotent matrix.
+- `U2_CH8_ST1_AR00051`: Classify idempotent matrices up to similarity by rank.
+- `U2_CH8_ST1_AR00052`: Relate rank, trace, nullity and determinant of an idempotent matrix.
+- `U2_CH8_ST1_AR00053`: Analyze the complementary idempotent I−A.
+
+All are JEE Main candidates only, Moderate/Hard potential, and remain draft with manufacturing disabled.
+
+Cumulative status: 210 dispositions and 53 draft archetypes; 140 source QPs remain untouched. Nine source possibilities are held for review.
