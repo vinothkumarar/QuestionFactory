@@ -47,7 +47,7 @@ The two trackers use different labels/counts for the same 66 non-`No` official-s
 | Yes — NTA archive exists | 29 | 38 |
 | No | 181 | 181 |
 
-The total non-`No` count is 66 in both, but the categorisation differs. Reconcile the nine-row label difference before treating these fields as a canonical source-quality measure.
+The total non-`No` count is 66 in both. A row-level comparison confirms the exact nine differing labels are the nine April 2026 JEE Main shift records: `Yes` in the Acquisition Tracker versus `Yes — NTA archive exists` in the Audited Registry. The same 247 `PYQ_ID` values occur in both workbooks. This is a label-normalization difference, not a missing/extra source-record discrepancy. Preserve the original workbooks and normalize only in a derived reconciliation view.
 
 ## 3. 2026 acquisition state
 
@@ -126,3 +126,14 @@ This supersedes the earlier statement that the Advanced final-key URL had not be
 The 247-record inventory is structurally usable as a target list, but not as a verified PYQ bank. The 2026 sample proves that official question IDs can be matched to final answer-key option IDs and independently checked. It does not satisfy bulk source acquisition, complete answer-key reconciliation or cross-year representativeness.
 
 No bulk question transcription, PYQ-driven production batch or production-question generation is authorised by this audit.
+
+
+### 2026-11-17 row-level reconciliation correction
+
+A fresh raw-workbook comparison was completed after materializing both files. The two 247-row trackers have identical `PYQ_ID` sets (247/247; no missing or additional IDs). The nine-row official-source label difference is fully explained: the nine April 2026 JEE Main shift records are `Yes` in the 2026 Acquisition Tracker and `Yes — NTA archive exists` in the Audited Registry. The aggregate non-`No` count is 66 in both workbooks. Therefore, this is a label-normalization difference, not a nine-record inventory discrepancy.
+
+The 2026 Acquisition Tracker itself contains all 247 master records, with 21 records in its 2026 subset. Eleven of those 21 have question-paper URLs and URL-access flags (nine April Main shifts and two Advanced papers); ten January Main shifts have no PDF URL. The Audited Registry has no populated PDF URLs. Both workbooks have zero Answer Key URL and SHA-256 cells populated. Neither tracker proves local PDF byte acquisition.
+
+**Acquisition retry:** Direct download attempts for an Advanced paper, a Main April shift paper and the NTA Session I final answer key failed at DNS resolution in the working container. No local files or hashes were produced. Keep these in `URL_ACCESS_VERIFIED` (where applicable), not `PDF_BYTES_ACQUIRED` or `SHA256_VERIFIED`.
+
+**Disposition:** The nine-row classification discrepancy is CLOSED as a reconciled label difference. Tracker normalization and key linkage remain OPEN; no original workbook was modified.
