@@ -839,6 +839,36 @@
             "qp_id": "QP001",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "Symmetric-matrix recognition is a direct comparison of the matrix with its transpose."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "Symmetry imposes pairwise equality between corresponding transposed entries; solving these simultaneous parameter constraints is a reusable structural-constraint mechanism."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP003",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The number of independent entries is n diagonal entries plus one entry for each unordered off-diagonal pair; this is a direct count."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "The symmetric component is (A+Aᵀ)/2, a direct formula that is included in the full decomposition mechanism."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP005",
+            "disposition": "ELIGIBLE",
+            "rationale": "Every square matrix decomposes as (A+Aᵀ)/2 plus (A−Aᵀ)/2; constructing and verifying both components is a reusable decomposition mechanism."
+        },
+        {
+            "concept_id": "C013",
+            "qp_id": "QP006",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Uniqueness follows by adding/subtracting the symmetric and skew-symmetric parts; this is a direct consequence of the decomposition and is not a separate archetype."
         }
     ],
     "archetypes": [
@@ -1471,6 +1501,63 @@
                 "number of above-diagonal constraints",
                 "independent/dependent equations",
                 "symbolic versus numeric entries"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C013",
+            "concept": "Symmetric Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Determine parameter conditions for a matrix to be symmetric",
+            "archetype_id": "U2_CH8_ST1_AR00023",
+            "archetype": "Derive parameter constraints for a symmetric matrix",
+            "assessment_mechanism": "Translate symmetry A=Aᵀ into pairwise equality constraints between transposed off-diagonal entries of a parameterized square matrix, then solve the resulting system.",
+            "reasoning_path": "Write A=Aᵀ; compare entries aᵢⱼ and aⱼᵢ for each i<j; impose equality; solve all parameter equations; leave diagonal entries unrestricted unless additional conditions are stated; verify symmetry.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "number of parameterized entry pairs",
+                "independent/dependent constraints",
+                "diagonal versus off-diagonal parameters"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C013",
+            "concept": "Symmetric Matrix",
+            "qp_id": "QP005",
+            "question_possibility": "Decompose a square matrix into symmetric and skew-symmetric parts",
+            "archetype_id": "U2_CH8_ST1_AR00024",
+            "archetype": "Decompose a square matrix into symmetric and skew-symmetric parts",
+            "assessment_mechanism": "Construct the canonical symmetric and skew-symmetric components of a square matrix and verify that they sum to the original matrix.",
+            "reasoning_path": "Compute Aᵀ; form S=(A+Aᵀ)/2 and K=(A−Aᵀ)/2; verify Sᵀ=S and Kᵀ=−K; verify A=S+K; establish uniqueness when required.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "entry structure",
+                "rational versus complex entries",
+                "component verification",
+                "uniqueness condition"
             ]
         }
     ]
