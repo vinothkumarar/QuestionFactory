@@ -1019,6 +1019,36 @@
             "qp_id": "QP012",
             "disposition": "FOUNDATION_ONLY",
             "rationale": "A matrix both symmetric and skew-symmetric is zero over the real/complex fields; this duplicates the earlier foundation disposition."
+        },
+        {
+            "concept_id": "C014",
+            "qp_id": "QP013",
+            "disposition": "REQUIRES_REVIEW",
+            "rationale": "The allowed discrete entry set and counting constraints are not specified, so the number of skew-symmetric matrices cannot be determined safely from this source possibility alone."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP001",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "Orthogonality is checked directly by QᵀQ=I (equivalently QQᵀ=I for square matrices); basic recognition is retained as foundation content."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP002",
+            "disposition": "ELIGIBLE",
+            "rationale": "Orthogonality imposes coupled column/row norm and orthogonality equations on the parameters; solving these simultaneous constraints is a reusable JEE Main candidate mechanism."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP003",
+            "disposition": "ELIGIBLE",
+            "rationale": "Completing missing entries to form an orthogonal matrix requires constructing an orthonormal completion subject to existing row/column constraints, distinct from merely verifying a supplied matrix."
+        },
+        {
+            "concept_id": "C015",
+            "qp_id": "QP004",
+            "disposition": "FOUNDATION_ONLY",
+            "rationale": "For an orthogonal matrix, Q^{-1}=Qᵀ is the defining inverse relation and is a direct property."
         }
     ],
     "archetypes": [
@@ -1911,6 +1941,64 @@
                 "determinant constraints",
                 "singularity versus invertibility",
                 "additional structural assumptions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C015",
+            "concept": "Orthogonal Matrix",
+            "qp_id": "QP002",
+            "question_possibility": "Determine parameter conditions that make a matrix orthogonal",
+            "archetype_id": "U2_CH8_ST1_AR00032",
+            "archetype": "Derive parameter constraints for an orthogonal matrix",
+            "assessment_mechanism": "Translate QᵀQ=I (or QQᵀ=I) into simultaneous unit-norm and pairwise-orthogonality equations for the rows or columns, then solve for unknown parameters.",
+            "reasoning_path": "Write the orthogonality identity; form one unit-length equation for each column and one zero inner-product equation for each distinct column pair; solve the coupled parameter equations; verify all equations and the square-matrix condition.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "number of unknown parameters",
+                "row versus column equations",
+                "independent/dependent constraints",
+                "real parameter restrictions"
+            ]
+        },
+        {
+            "subject": "Mathematics",
+            "unit": "Algebra",
+            "chapter": "Matrices",
+            "subtopic": "Types of Matrices",
+            "concept_id": "C015",
+            "concept": "Orthogonal Matrix",
+            "qp_id": "QP003",
+            "question_possibility": "Complete a partially specified matrix so that it becomes orthogonal",
+            "archetype_id": "U2_CH8_ST1_AR00033",
+            "archetype": "Complete a partially specified matrix to an orthogonal matrix",
+            "assessment_mechanism": "Construct missing entries so that the rows or columns form an orthonormal system, using existing entries as fixed constraints.",
+            "reasoning_path": "Choose rows or columns as vectors; impose unit norms and pairwise zero inner products; solve for missing coordinates; check compatibility and possible multiple completions; verify QᵀQ=I.",
+            "exam_fit": [
+                "JEE_MAIN"
+            ],
+            "difficulty_potential": [
+                "MODERATE",
+                "HARD"
+            ],
+            "variation_capacity": "MODERATE",
+            "variation_dimensions": [
+                "matrix order",
+                "number of missing entries",
+                "fixed row/column vectors",
+                "dimension of orthogonal complement",
+                "unique versus multiple completions"
             ]
         }
     ]
