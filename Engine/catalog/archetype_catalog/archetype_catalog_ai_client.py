@@ -229,6 +229,27 @@ class ArchetypeCatalogAIClient:
                         f"must be a list."
                     )
 
+            allowed_values = {
+                "exam_fit": {"JEE_MAIN", "JEE_ADVANCED"},
+                "difficulty_potential": {
+                    "FOUNDATION",
+                    "MODERATE",
+                    "HARD",
+                    "ELITE",
+                },
+            }
+
+            for field_name, allowed in allowed_values.items():
+                values = record[field_name]
+                if not values or any(
+                    not isinstance(value, str) or value not in allowed
+                    for value in values
+                ):
+                    raise ValueError(
+                        f"Archetype record #{index} has invalid "
+                        f"'{field_name}' values."
+                    )
+
             # -------------------------------------------------
             # Variation capacity
             # -------------------------------------------------
