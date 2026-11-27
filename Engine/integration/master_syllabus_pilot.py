@@ -171,6 +171,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
                 st["subtopic_name"],model=os.environ.get("REVIEW_MODEL","gpt-5"),
             )
             print(json.dumps({"independent_review":"passed","count":len(review)}),flush=True)
+            break  # Stop immediately on first fully validated batch.
         except RuntimeError as exc:
             reason=str(exc)
             duplicate_failure=(
