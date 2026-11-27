@@ -133,7 +133,10 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
     for candidate in records:
         if any(near_duplicate(candidate["question_text"], prior["question_text"]) for prior in existing):
             raise RuntimeError("A duplicate or near-duplicate question already exists in Supabase")
-    # Structural validation is not mathematical proof; drafts require review.\n    if os.environ.get("DRY_RUN","false").lower() in ("1","true","yes"):\n        print(json.dumps({"result":"validated_dry_run","count":len(records),"master_subtopic":code,"question_codes":[q["question_code"] for q in records]}))\n        return
+    # Structural validation is not mathematical proof; drafts require review.
+    if os.environ.get("DRY_RUN","false").lower() in ("1","true","yes"):
+        print(json.dumps({"result":"validated_dry_run","count":len(records),"master_subtopic":code,"question_codes":[q["question_code"] for q in records]}))
+        return
     inserted=api("questions","POST",records)
     if len(inserted)!=count:
         raise RuntimeError("Unexpected insert count")
