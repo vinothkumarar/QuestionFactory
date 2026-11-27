@@ -16,8 +16,9 @@ def main():
     if not re.fullmatch(r"[A-Za-z0-9_]+", chapter):
         raise ValueError("MASTER_CHAPTER_CODE must be a valid canonical chapter code")
     limit = int(os.environ.get("SUBTOPIC_LIMIT", "5"))
+    offset = int(os.environ.get("SUBTOPIC_OFFSET", "0"))
     count = int(os.environ.get("QUESTION_COUNT", "5"))
-    if not 1 <= limit <= 20 or not 1 <= count <= 20:
+    if not 1 <= limit <= 20 or not 1 <= count <= 20 or not 0 <= offset <= 10000:
         raise ValueError("Limits must be between 1 and 20")
     base = os.environ["SUPABASE_URL"].rstrip("/")
     key = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
@@ -30,7 +31,7 @@ def main():
     if len(chapters) != 1:
         raise RuntimeError("Chapter not uniquely found in Master Syllabus")
     subtopics = get("subtopics?chapter_id=eq." + chapters[0]["id"] +
-                    "&select=id,code,subtopic_name&order=code.asc&limit=" + str(limit))
+                    "&select=id,code,subtopic_name&order=code.asc&limit=" + str(limit) + "&offset=" + str(offset))
     if not subtopics:
         raise RuntimeError("No Master Syllabus subtopics found")
     dry_run = os.environ.get("DRY_RUN", "true").lower() not in ("false", "0", "no")
