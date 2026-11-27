@@ -1,0 +1,17 @@
+name: ExamHub QP Discovery Registry Test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  qp-discovery:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify CIRE store and QP discovery
+        run: |
+          python -m Engine.integration.cire_catalog_store
+          python -m Engine.integration.qp_discovery
