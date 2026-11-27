@@ -11,6 +11,11 @@ on:
         required: true
         type: number
         default: 3
+      subtopic_offset:
+        description: Skip first N subtopics (0 for beginning, 3 for ST4 onward)
+        required: true
+        type: number
+        default: 0
       count:
         description: Draft questions per subtopic (1-20)
         required: true
@@ -37,6 +42,7 @@ jobs:
       OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5' }}
       MASTER_CHAPTER_CODE: ${{ inputs.chapter }}
       SUBTOPIC_LIMIT: ${{ inputs.subtopic_limit }}
+      SUBTOPIC_OFFSET: ${{ inputs.subtopic_offset }}
       QUESTION_COUNT: ${{ inputs.count }}
       DRY_RUN: ${{ inputs.dry_run }}
     steps:
