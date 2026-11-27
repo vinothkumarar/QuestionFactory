@@ -146,7 +146,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
                 "accepted_total":len(accepted_questions),"pending":count-len(accepted_questions)}),flush=True)
     if not accepted_questions:
         print(json.dumps({"result":"no_unique_questions","count":0,"requested":count,
-                          "master_subtopic":code}),flush=True)
+                          "pending":count,"master_subtopic":code}),flush=True)
         return
     questions=accepted_questions
     seen=set()
@@ -209,10 +209,16 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
     if os.environ.get("DRY_RUN","false").lower() in ("1","true","yes"):
         print(json.dumps({"result":"validated_dry_run","count":len(records),"requested":count,"pending":count-len(records),"master_subtopic":code,"question_codes":[q["question_code"] for q in records]}))
         return
+    if not records:
+        print(json.dumps({"result":"no_valid_drafts","count":0,"requested":count,
+                          "pending":count,"master_subtopic":code}),flush=True)
+        return
     inserted=api("questions","POST",records)
     if len(inserted)!=len(records):
         raise RuntimeError("Unexpected insert count")
-    print(json.dumps({"result":"drafts_inserted","count":len(inserted),"master_subtopic":code,"ids":[q["id"] for q in inserted]}))
+    print(json.dumps({"result":"drafts_inserted","count":len(inserted),"requested":count,
+                      "pending":count-len(inserted),"master_subtopic":code,
+                      "ids":[q["id"] for q in inserted]}))
 if __name__=="__main__":
     try:
         main()
