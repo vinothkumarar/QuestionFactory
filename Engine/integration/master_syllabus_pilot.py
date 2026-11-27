@@ -183,12 +183,18 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
             concept=q["concept_tested"],source_type="AI",
             metadata={"question_archetype":q["question_archetype"]},
         )
+        valid=True
         for validator in validators:
             report=validator.validate(model)
             if not report.passed or report.errors:
-                raise RuntimeError(f"Question {i} failed {validator.__class__.__name__}: {report.errors}")
+                print(json.dumps({"validator_rejected":i,"validator":validator.__class__.__name__,
+                                  "errors":str(report.errors)[:300]}),flush=True)
+                valid=False
+                break
             if report.warnings:
                 print(f"QUALITY WARNING question={i} validator={validator.__class__.__name__}: {report.warnings}",flush=True)
+        if not valid:
+            continue
         records.append({"question_code":model.question_code,
             "subject_id":subj["id"],"unit_id":unit["id"],"chapter_id":ch["id"],"subtopic_id":st["id"],
             "question_text":q["question_text"],"option_a":q["option_a"],"option_b":q["option_b"],"option_c":q["option_c"],"option_d":q["option_d"],
