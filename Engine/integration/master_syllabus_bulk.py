@@ -34,9 +34,12 @@ def main():
                     "&select=id,code,subtopic_name&order=code.asc&limit=" + str(limit) + "&offset=" + str(offset))
     if not subtopics:
         raise RuntimeError("No Master Syllabus subtopics found")
+    expected = os.environ.get("EXPECTED_FIRST_SUBTOPIC", "").strip()
+    if expected and subtopics[0]["code"] != expected:
+        raise RuntimeError(f"Wrong target: expected first subtopic {expected}, got {subtopics[0]['code']}. Nothing generated.")
     dry_run = os.environ.get("DRY_RUN", "true").lower() not in ("false", "0", "no")
     print(json.dumps({"chapter": chapter, "subtopics": [s["code"] for s in subtopics],
-                      "per_subtopic": count, "dry_run": dry_run}), flush=True)
+                      "per_subtopic": count, "offset": offset, "expected_first": expected, "dry_run": dry_run}), flush=True)
     results = []
     for st in subtopics:
         env = os.environ.copy()
