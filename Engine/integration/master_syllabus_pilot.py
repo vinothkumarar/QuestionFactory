@@ -9,6 +9,7 @@ import re
 import sys
 import urllib.parse
 import urllib.request
+import urllib.error
 from openai import OpenAI
 
 def main():
@@ -28,8 +29,12 @@ def main():
     headers={"apikey":key,"Authorization":"Bearer "+key,"Content-Type":"application/json"}
     def api(path,method="GET",payload=None):
         req=urllib.request.Request(base+"/rest/v1/"+path,headers={**headers,**({"Prefer":"return=representation"} if method=="POST" else {})},data=None if payload is None else json.dumps(payload).encode(),method=method)
-        with urllib.request.urlopen(req,timeout=45) as resp:
-            return json.loads(resp.read() or b"[]")
+        try:
+            with urllib.request.urlopen(req,timeout=45) as resp:
+                return json.loads(resp.read() or b"[]")
+        except urllib.error.HTTPError as exc:
+            detail=exc.read().decode("utf-8",errors="replace")[:1200]
+            raise RuntimeError(f"Supabase REST {method} {path.split('?')[0]} HTTP {exc.code}: {detail}") from exc
     def get_one(table, column, value, select):
         rows=api(table+"?"+column+"=eq."+urllib.parse.quote(str(value),safe="")+"&select="+select)
         if not isinstance(rows,list) or len(rows)!=1:
@@ -82,8 +87,8 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
             "question_text":q["question_text"],"option_a":q["option_a"],"option_b":q["option_b"],"option_c":q["option_c"],"option_d":q["option_d"],
             "correct_option":answer_key,"answer":q["answer"],"explanation":q["explanation"],
             "concept_tested":q["concept_tested"],"question_archetype":q["question_archetype"],
-            "difficulty":"Easy","set_no":"S1","question_type":"Single Correct","source_type":"AI",
-            "status":"DRAFT","is_verified":False})
+            "difficulty":"Easy","set_no":1,"question_type":"Single Correct","source_type":"AI",
+            "status":"draft","is_verified":False})
     # Fail closed if an identical question already exists in this subtopic.
     existing=api("questions?subtopic_id=eq."+st["id"]+"&select=question_text")
     old={q["question_text"].strip().casefold() for q in existing}
