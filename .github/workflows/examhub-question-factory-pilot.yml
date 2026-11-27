@@ -1,71 +1,41 @@
-name: ExamHub Question Factory Pilot
+name: ExamHub Live Master Syllabus Pilot
 on:
   workflow_dispatch:
     inputs:
-      subject:
-        description: Master subject
-        required: true
-        default: Aptitude
-      unit:
-        required: true
-        default: A1
-      chapter:
-        required: true
-        default: A1_CH1
       subtopic:
+        description: Canonical Master Syllabus subtopic code
         required: true
         default: A1_CH1_ST1
-      set_no:
-        required: true
-        type: choice
-        options: [S1, S2, S3, S4, S5]
-        default: S1
       count:
+        description: Number of S1 Easy draft questions (1-20)
         required: true
         type: number
         default: 5
 permissions:
   contents: read
 jobs:
-  manufacture:
+  generate-and-stage:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
+    environment: examhub-pilot
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
       OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5' }}
+      MASTER_SUBTOPIC_CODE: ${{ inputs.subtopic }}
+      QUESTION_COUNT: ${{ inputs.count }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Validate inputs and credentials
-        env:
-          INPUT_COUNT: ${{ inputs.count }}
-          INPUT_SUBTOPIC: ${{ inputs.subtopic }}
+      - name: Check secrets
         run: |
-          test -n "$OPENAI_API_KEY" || (echo "OPENAI_API_KEY secret is required" && exit 1)
-          test "$INPUT_COUNT" -ge 1 && test "$INPUT_COUNT" -le 20
-          test -n "$INPUT_SUBTOPIC"
-      - name: Install runtime dependencies
-        run: python -m pip install openai python-dotenv pydantic PyYAML
-      - name: Run existing v3 manufacturing engine
-        run: |
-          python -m Engine.factory.run_factory \
-            --scope SUBTOPIC \
-            --subject "${{ inputs.subject }}" \
-            --unit "${{ inputs.unit }}" \
-            --chapter "${{ inputs.chapter }}" \
-            --subtopic "${{ inputs.subtopic }}" \
-            --start-set "${{ inputs.set_no }}" \
-            --end-set "${{ inputs.set_no }}" \
-            --start-batch 1 --end-batch 1 \
-            --questions-per-batch "${{ inputs.count }}"
-      - name: Preserve generated output for review
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: examhub-pilot-output
-          path: |
-            output/
-            QuestionBank/
-          if-no-files-found: warn
+          test -n "$OPENAI_API_KEY"
+          test -n "$SUPABASE_URL"
+          test -n "$SUPABASE_SERVICE_ROLE_KEY"
+      - name: Install OpenAI SDK
+        run: python -m pip install 'openai>=1,<3'
+      - name: Generate S1 questions from live Master Syllabus and stage drafts
+        run: python -m Engine.integration.master_syllabus_pilot
