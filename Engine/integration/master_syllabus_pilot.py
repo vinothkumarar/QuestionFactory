@@ -18,6 +18,13 @@ def main():
     count=int(os.environ.get("QUESTION_COUNT","5"))
     if not 1<=count<=20 or not re.fullmatch(r"[A-Za-z0-9_]+",code):
         raise ValueError("Invalid pilot inputs")
+    # Validate legacy JWT role without exposing the secret.
+    if key.count(".")==2:
+        import base64
+        part=key.split(".")[1]
+        claims=json.loads(base64.urlsafe_b64decode(part+"="*(-len(part)%4)))
+        if claims.get("role")!="service_role":
+            raise RuntimeError("GitHub SUPABASE_SERVICE_ROLE_KEY is not a service_role key; replace the secret, do not weaken RLS.")
     headers={"apikey":key,"Authorization":"Bearer "+key,"Content-Type":"application/json"}
     def api(path,method="GET",payload=None):
         req=urllib.request.Request(base+"/rest/v1/"+path,headers={**headers,**({"Prefer":"return=representation"} if method=="POST" else {})},data=None if payload is None else json.dumps(payload).encode(),method=method)
@@ -32,7 +39,10 @@ def main():
     st=get_one("subtopics","code",code,"id,code,subtopic_name,chapter_id")
     ch=get_one("chapters","id",st["chapter_id"],"id,code,chapter_name,unit_id")
     unit=get_one("units","id",ch["unit_id"],"id,code,unit_name,subject_id")
-    subj=get_one("subjects","id",unit["subject_id"],"id,subject_name")
+    try:
+        subj=get_one("subjects","id",unit["subject_id"],"id,subject_name")
+    except RuntimeError as exc:
+        raise RuntimeError("Subject inaccessible: verify GitHub SUPABASE_SERVICE_ROLE_KEY uses the real service_role/secret key for the SUPABASE_URL project. Do not change RLS.") from exc
     if not all([st["subtopic_name"],ch["chapter_name"],unit["unit_name"],subj["subject_name"]]):
         raise RuntimeError("Master syllabus names incomplete")
     print("MASTER VERIFIED:",subj["subject_name"],unit["code"],ch["code"],st["code"],flush=True)
