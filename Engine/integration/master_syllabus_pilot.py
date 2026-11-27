@@ -12,6 +12,9 @@ import urllib.parse
 import urllib.request
 import urllib.error
 import uuid
+from pathlib import Path
+from Engine.integration.cire_catalog_store import upsert_chain
+from Engine.integration.qp_discovery import register_possibility, record_outcome, coverage as qp_coverage
 from openai import OpenAI
 from Engine.models.generated_question_model import GeneratedQuestionModel
 from Engine.quality.option_validator import OptionValidator
@@ -81,6 +84,9 @@ def main():
     coverage={"concepts":dict(concept_counts.most_common(50)),
               "archetypes":dict(archetype_counts.most_common(50))}
     print(json.dumps({"cire_coverage":coverage,"subtopic":code},ensure_ascii=False),flush=True)
+    catalog_path=Path("Engine/catalog/cire/master")/(code+".json")
+    if catalog_path.exists():
+        print(json.dumps({"qp_discovery_coverage":qp_coverage(catalog_path)},ensure_ascii=False),flush=True)
     client=OpenAI(api_key=os.environ["OPENAI_API_KEY"])
     prompt=f"""Generate exactly {count} original easy (S1 foundation) multiple-choice questions for the verified Master Syllabus:
 Subject: {subj['subject_name']}
@@ -103,7 +109,7 @@ Do NOT merely change values, names, wording, currencies, or contexts. Reusing a 
 but reusing the same mathematical question pattern is not. If the topic has no remaining genuinely
 distinct S1 patterns, generation must fail rather than invent cosmetic variants.
 Each must have exactly four distinct, plausible options, one mathematically correct option, an exact answer text matching that option, and a clear worked explanation. No duplicate questions. Do not include markdown.
-Return ONLY a JSON array of objects with keys question_text, option_a, option_b, option_c, option_d, correct_option (A/B/C/D), answer, explanation, concept_tested, question_pattern, question_archetype.\nThe question_pattern must describe the actual givens-to-unknown relationship, not a generic label.
+Return ONLY a JSON array of objects with keys question_text, option_a, option_b, option_c, option_d, correct_option (A/B/C/D), answer, explanation, concept_tested, concept_definition, question_pattern, question_archetype, possibility_givens, possibility_unknown, possibility_reasoning_steps. For the possibility fields describe the abstract givens, target unknown and distinctive reasoning pathway independent of numerical values. Avoid cosmetic variants.\nThe question_pattern must describe the actual givens-to-unknown relationship, not a generic label.
 """
     max_attempts=int(os.environ.get("UNIQUENESS_MAX_ATTEMPTS","3"))
     if not 1<=max_attempts<=5:
@@ -128,7 +134,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
         if not isinstance(candidates,list) or len(candidates)!=needed:
             raise RuntimeError("Wrong question count")
         required=("question_text","option_a","option_b","option_c","option_d",
-                  "correct_option","answer","explanation","concept_tested","question_pattern","question_archetype")
+                  "correct_option","answer","explanation","concept_tested","concept_definition","question_pattern","question_archetype","possibility_givens","possibility_unknown","possibility_reasoning_steps")
         structurally_valid=[]
         for q in candidates:
             if any(not isinstance(q.get(k),str) or not q[k].strip() for k in required):
@@ -234,6 +240,19 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
     inserted=api("questions","POST",records)
     if len(inserted)!=len(records):
         raise RuntimeError("Unexpected insert count")
+    # Catalog updates follow successful Supabase insertion, never a dry run.
+    # Pair validated records with their original source questions by text.
+    source_by_text={q["question_text"]:q for q in accepted_questions}
+    for record in records:
+        q=source_by_text[record["question_text"]]
+        chain=upsert_chain(catalog_path,code,q["concept_tested"],q["concept_definition"],
+                           q["question_pattern"],q["question_archetype"])
+        possibility=register_possibility(catalog_path,chain["qp_id"],
+                     q["possibility_givens"],q["possibility_unknown"],
+                     q["possibility_reasoning_steps"],"S1")
+        record_outcome(catalog_path,possibility["id"],question_code=record["question_code"])
+    print(json.dumps({"catalog_updated":str(catalog_path),
+                      "qp_discovery_coverage":qp_coverage(catalog_path)},ensure_ascii=False),flush=True)
     print(json.dumps({"result":"drafts_inserted","count":len(inserted),"requested":count,
                       "pending":count-len(inserted),"master_subtopic":code,
                       "ids":[q["id"] for q in inserted]}))
