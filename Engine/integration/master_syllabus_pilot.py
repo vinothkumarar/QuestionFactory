@@ -23,10 +23,16 @@ def main():
         req=urllib.request.Request(base+"/rest/v1/"+path,headers={**headers,**({"Prefer":"return=representation"} if method=="POST" else {})},data=None if payload is None else json.dumps(payload).encode(),method=method)
         with urllib.request.urlopen(req,timeout=45) as resp:
             return json.loads(resp.read() or b"[]")
-    sts=api("subtopics?code=eq."+urllib.parse.quote(code,safe="")+"&select=id,code,subtopic_name,chapter_id,chapters(id,code,chapter_name,unit_id,units(id,code,unit_name,subject_id,subjects(id,subject_name)))")
-    if len(sts)!=1:
-        raise RuntimeError("Canonical Master ST missing or ambiguous")
-    st=sts[0]; ch=st["chapters"]; unit=ch["units"]; subj=unit["subjects"]
+    def get_one(table, column, value, select):
+        rows=api(table+"?"+column+"=eq."+urllib.parse.quote(str(value),safe="")+"&select="+select)
+        if not isinstance(rows,list) or len(rows)!=1:
+            raise RuntimeError("Master lookup failed for "+table+" ("+column+")")
+        return rows[0]
+    # Explicit FK traversal avoids fragile nested REST embedding.
+    st=get_one("subtopics","code",code,"id,code,subtopic_name,chapter_id")
+    ch=get_one("chapters","id",st["chapter_id"],"id,code,chapter_name,unit_id")
+    unit=get_one("units","id",ch["unit_id"],"id,code,unit_name,subject_id")
+    subj=get_one("subjects","id",unit["subject_id"],"id,subject_name")
     if not all([st["subtopic_name"],ch["chapter_name"],unit["unit_name"],subj["subject_name"]]):
         raise RuntimeError("Master syllabus names incomplete")
     print("MASTER VERIFIED:",subj["subject_name"],unit["code"],ch["code"],st["code"],flush=True)
