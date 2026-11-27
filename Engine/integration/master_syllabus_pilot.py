@@ -93,84 +93,84 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
     retry_feedback=""
     for attempt in range(1,max_attempts+1):
         try:
-        response=client.responses.create(model=os.environ.get("OPENAI_MODEL","gpt-5"),input=prompt+retry_feedback)
-        raw=response.output_text.strip()
-        if raw.startswith("```"):
-            raw=re.sub(r"^\`\`\`(?:json)?\s*|\s*\`\`\`$","",raw)
-        questions=json.loads(raw)
-        if not isinstance(questions,list) or len(questions)!=count:
-            raise RuntimeError("Wrong question count")
-        seen=set(); records=[]
-        def normalized_text(value):
-            return " ".join(re.findall("[a-z0-9]+", value.casefold()))
-        def near_duplicate(a, b):
-            a, b = normalized_text(a), normalized_text(b)
-            if not a or not b:
-                return False
-            if a == b:
-                return True
-            # Distinct numeric parameters make separate practice instances.
-            nums_a = re.findall("[0-9]+", a)
-            nums_b = re.findall("[0-9]+", b)
-            if nums_a != nums_b:
-                return False
-            return SequenceMatcher(None, a, b, autojunk=False).ratio() >= 0.995
-        validators=(OptionValidator(), SemanticValidator(), DifficultyValidator(), ArchetypeValidator())
-        for i,q in enumerate(questions,1):
-            required=("question_text","option_a","option_b","option_c","option_d","correct_option","answer","explanation","concept_tested","question_archetype")
-            if any(not isinstance(q.get(f),str) or not q[f].strip() for f in required):
-                raise RuntimeError(f"Question {i}: missing required fields")
-            options=[q["option_"+x] for x in "abcd"]
-            if len(set(x.strip().casefold() for x in options))!=4:
-                raise RuntimeError(f"Question {i}: duplicate options")
-            answer_key=q["correct_option"].strip().upper()
-            if answer_key not in "ABCD" or q["answer"].strip()!=q["option_"+answer_key.lower()].strip():
-                raise RuntimeError(f"Question {i}: answer mismatch")
-            normalized=q["question_text"].strip().casefold()
-            if normalized in seen or any(near_duplicate(q["question_text"], previous["question_text"]) for previous in records):
-                raise RuntimeError(f"Question {i}: duplicate or near-duplicate within batch")
-            seen.add(normalized)
-            # Adapt the Supabase payload to the existing Question Factory OS model.
-            # Archetype Validator expects a canonical family, while the generated
-            # question_archetype is a more specific descriptive subtype.
-            model=GeneratedQuestionModel(
-                question_code=code+"_Q"+uuid.uuid4().hex[:16].upper(),
-                unit_code=unit["code"],chapter_code=ch["code"],subtopic_code=st["code"],
-                set_number=1,question_text=q["question_text"],options=options,
-                correct_option=answer_key,explanation=q["explanation"],
-                difficulty="Easy",archetype="Computational",
-                concept=q["concept_tested"],source_type="AI",
-                metadata={"question_archetype":q["question_archetype"]},
+            response=client.responses.create(model=os.environ.get("OPENAI_MODEL","gpt-5"),input=prompt+retry_feedback)
+            raw=response.output_text.strip()
+            if raw.startswith("```"):
+                raw=re.sub(r"^\`\`\`(?:json)?\s*|\s*\`\`\`$","",raw)
+            questions=json.loads(raw)
+            if not isinstance(questions,list) or len(questions)!=count:
+                raise RuntimeError("Wrong question count")
+            seen=set(); records=[]
+            def normalized_text(value):
+                return " ".join(re.findall("[a-z0-9]+", value.casefold()))
+            def near_duplicate(a, b):
+                a, b = normalized_text(a), normalized_text(b)
+                if not a or not b:
+                    return False
+                if a == b:
+                    return True
+                # Distinct numeric parameters make separate practice instances.
+                nums_a = re.findall("[0-9]+", a)
+                nums_b = re.findall("[0-9]+", b)
+                if nums_a != nums_b:
+                    return False
+                return SequenceMatcher(None, a, b, autojunk=False).ratio() >= 0.995
+            validators=(OptionValidator(), SemanticValidator(), DifficultyValidator(), ArchetypeValidator())
+            for i,q in enumerate(questions,1):
+                required=("question_text","option_a","option_b","option_c","option_d","correct_option","answer","explanation","concept_tested","question_archetype")
+                if any(not isinstance(q.get(f),str) or not q[f].strip() for f in required):
+                    raise RuntimeError(f"Question {i}: missing required fields")
+                options=[q["option_"+x] for x in "abcd"]
+                if len(set(x.strip().casefold() for x in options))!=4:
+                    raise RuntimeError(f"Question {i}: duplicate options")
+                answer_key=q["correct_option"].strip().upper()
+                if answer_key not in "ABCD" or q["answer"].strip()!=q["option_"+answer_key.lower()].strip():
+                    raise RuntimeError(f"Question {i}: answer mismatch")
+                normalized=q["question_text"].strip().casefold()
+                if normalized in seen or any(near_duplicate(q["question_text"], previous["question_text"]) for previous in records):
+                    raise RuntimeError(f"Question {i}: duplicate or near-duplicate within batch")
+                seen.add(normalized)
+                # Adapt the Supabase payload to the existing Question Factory OS model.
+                # Archetype Validator expects a canonical family, while the generated
+                # question_archetype is a more specific descriptive subtype.
+                model=GeneratedQuestionModel(
+                    question_code=code+"_Q"+uuid.uuid4().hex[:16].upper(),
+                    unit_code=unit["code"],chapter_code=ch["code"],subtopic_code=st["code"],
+                    set_number=1,question_text=q["question_text"],options=options,
+                    correct_option=answer_key,explanation=q["explanation"],
+                    difficulty="Easy",archetype="Computational",
+                    concept=q["concept_tested"],source_type="AI",
+                    metadata={"question_archetype":q["question_archetype"]},
+                )
+                for validator in validators:
+                    report=validator.validate(model)
+                    if not report.passed or report.errors:
+                        raise RuntimeError(f"Question {i} failed {validator.__class__.__name__}: {report.errors}")
+                    if report.warnings:
+                        print(f"QUALITY WARNING question={i} validator={validator.__class__.__name__}: {report.warnings}",flush=True)
+                records.append({"question_code":model.question_code,
+                    "subject_id":subj["id"],"unit_id":unit["id"],"chapter_id":ch["id"],"subtopic_id":st["id"],
+                    "question_text":q["question_text"],"option_a":q["option_a"],"option_b":q["option_b"],"option_c":q["option_c"],"option_d":q["option_d"],
+                    "correct_option":answer_key,"answer":q["answer"],"explanation":q["explanation"],
+                    "concept_tested":q["concept_tested"],"question_archetype":q["question_archetype"],
+                    "difficulty":"Easy","set_no":1,"question_type":"Single Correct","source_type":"AI",
+                    "status":"draft","is_verified":False})
+            for candidate in records:
+                if any(near_duplicate(candidate["question_text"], prior["question_text"]) for prior in existing):
+                    raise RuntimeError("A duplicate or near-duplicate question already exists in Supabase")
+            # Reject cosmetic variations and equivalent mathematical reasoning before saving.
+            uniqueness = review_reasoning_uniqueness(
+                client, questions, existing,
+                model=os.environ.get("REVIEW_MODEL", "gpt-5"),
             )
-            for validator in validators:
-                report=validator.validate(model)
-                if not report.passed or report.errors:
-                    raise RuntimeError(f"Question {i} failed {validator.__class__.__name__}: {report.errors}")
-                if report.warnings:
-                    print(f"QUALITY WARNING question={i} validator={validator.__class__.__name__}: {report.warnings}",flush=True)
-            records.append({"question_code":model.question_code,
-                "subject_id":subj["id"],"unit_id":unit["id"],"chapter_id":ch["id"],"subtopic_id":st["id"],
-                "question_text":q["question_text"],"option_a":q["option_a"],"option_b":q["option_b"],"option_c":q["option_c"],"option_d":q["option_d"],
-                "correct_option":answer_key,"answer":q["answer"],"explanation":q["explanation"],
-                "concept_tested":q["concept_tested"],"question_archetype":q["question_archetype"],
-                "difficulty":"Easy","set_no":1,"question_type":"Single Correct","source_type":"AI",
-                "status":"draft","is_verified":False})
-        for candidate in records:
-            if any(near_duplicate(candidate["question_text"], prior["question_text"]) for prior in existing):
-                raise RuntimeError("A duplicate or near-duplicate question already exists in Supabase")
-        # Reject cosmetic variations and equivalent mathematical reasoning before saving.
-        uniqueness = review_reasoning_uniqueness(
-            client, questions, existing,
-            model=os.environ.get("REVIEW_MODEL", "gpt-5"),
-        )
-        print(json.dumps({"reasoning_uniqueness": uniqueness}), flush=True)
-        # An independent model reviews answers before even a dry-run can pass.
-        # This is additional evidence, not a mathematical proof or publication approval.
-        review=verify_questions(
-            client,questions,subj["subject_name"],ch["chapter_name"],
-            st["subtopic_name"],model=os.environ.get("REVIEW_MODEL","gpt-5"),
-        )
-        print(json.dumps({"independent_review":"passed","count":len(review)}),flush=True)
+            print(json.dumps({"reasoning_uniqueness": uniqueness}), flush=True)
+            # An independent model reviews answers before even a dry-run can pass.
+            # This is additional evidence, not a mathematical proof or publication approval.
+            review=verify_questions(
+                client,questions,subj["subject_name"],ch["chapter_name"],
+                st["subtopic_name"],model=os.environ.get("REVIEW_MODEL","gpt-5"),
+            )
+            print(json.dumps({"independent_review":"passed","count":len(review)}),flush=True)
         except RuntimeError as exc:
             reason=str(exc)
             duplicate_failure=(
