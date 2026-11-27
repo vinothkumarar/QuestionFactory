@@ -12,6 +12,11 @@ import urllib.request
 import urllib.error
 import uuid
 from openai import OpenAI
+from Engine.models.generated_question_model import GeneratedQuestionModel
+from Engine.quality.option_validator import OptionValidator
+from Engine.quality.semantic_validator import SemanticValidator
+from Engine.quality.difficulty_validator import DifficultyValidator
+from Engine.quality.archetype_validator import ArchetypeValidator
 
 def main():
     base=os.environ["SUPABASE_URL"].rstrip("/")
@@ -70,6 +75,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
     if not isinstance(questions,list) or len(questions)!=count:
         raise RuntimeError("Wrong question count")
     seen=set(); records=[]
+    validators=(OptionValidator(), SemanticValidator(), DifficultyValidator(), ArchetypeValidator())
     for i,q in enumerate(questions,1):
         required=("question_text","option_a","option_b","option_c","option_d","correct_option","answer","explanation","concept_tested","question_archetype")
         if any(not isinstance(q.get(f),str) or not q[f].strip() for f in required):
@@ -84,7 +90,25 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
         if normalized in seen:
             raise RuntimeError(f"Question {i}: duplicate question")
         seen.add(normalized)
-        records.append({"question_code":code+"_Q"+uuid.uuid4().hex[:16].upper(),
+        # Adapt the Supabase payload to the existing Question Factory OS model.
+        # Archetype Validator expects a canonical family, while the generated
+        # question_archetype is a more specific descriptive subtype.
+        model=GeneratedQuestionModel(
+            question_code=code+"_Q"+uuid.uuid4().hex[:16].upper(),
+            unit_code=unit["code"],chapter_code=ch["code"],subtopic_code=st["code"],
+            set_number=1,question_text=q["question_text"],options=options,
+            correct_option=answer_key,explanation=q["explanation"],
+            difficulty="Easy",archetype="Computational",
+            concept=q["concept_tested"],source_type="AI",
+            metadata={"question_archetype":q["question_archetype"]},
+        )
+        for validator in validators:
+            report=validator.validate(model)
+            if not report.passed or report.errors:
+                raise RuntimeError(f"Question {i} failed {validator.__class__.__name__}: {report.errors}")
+            if report.warnings:
+                print(f"QUALITY WARNING question={i} validator={validator.__class__.__name__}: {report.warnings}",flush=True)
+        records.append({"question_code":model.question_code,
             "subject_id":subj["id"],"unit_id":unit["id"],"chapter_id":ch["id"],"subtopic_id":st["id"],
             "question_text":q["question_text"],"option_a":q["option_a"],"option_b":q["option_b"],"option_c":q["option_c"],"option_d":q["option_d"],
             "correct_option":answer_key,"answer":q["answer"],"explanation":q["explanation"],
