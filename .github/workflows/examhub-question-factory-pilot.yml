@@ -1,0 +1,71 @@
+name: ExamHub Question Factory Pilot
+on:
+  workflow_dispatch:
+    inputs:
+      subject:
+        description: Master subject
+        required: true
+        default: Aptitude
+      unit:
+        required: true
+        default: A1
+      chapter:
+        required: true
+        default: A1_CH1
+      subtopic:
+        required: true
+        default: A1_CH1_ST1
+      set_no:
+        required: true
+        type: choice
+        options: [S1, S2, S3, S4, S5]
+        default: S1
+      count:
+        required: true
+        type: number
+        default: 5
+permissions:
+  contents: read
+jobs:
+  manufacture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate inputs and credentials
+        env:
+          INPUT_COUNT: ${{ inputs.count }}
+          INPUT_SUBTOPIC: ${{ inputs.subtopic }}
+        run: |
+          test -n "$OPENAI_API_KEY" || (echo "OPENAI_API_KEY secret is required" && exit 1)
+          test "$INPUT_COUNT" -ge 1 && test "$INPUT_COUNT" -le 20
+          test -n "$INPUT_SUBTOPIC"
+      - name: Install runtime dependencies
+        run: python -m pip install openai python-dotenv pydantic PyYAML
+      - name: Run existing v3 manufacturing engine
+        run: |
+          python -m Engine.factory.run_factory \
+            --scope SUBTOPIC \
+            --subject "${{ inputs.subject }}" \
+            --unit "${{ inputs.unit }}" \
+            --chapter "${{ inputs.chapter }}" \
+            --subtopic "${{ inputs.subtopic }}" \
+            --start-set "${{ inputs.set_no }}" \
+            --end-set "${{ inputs.set_no }}" \
+            --start-batch 1 --end-batch 1 \
+            --questions-per-batch "${{ inputs.count }}"
+      - name: Preserve generated output for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: examhub-pilot-output
+          path: |
+            output/
+            QuestionBank/
+          if-no-files-found: warn
