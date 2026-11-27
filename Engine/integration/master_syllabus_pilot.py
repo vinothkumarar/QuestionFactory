@@ -19,6 +19,7 @@ from Engine.quality.semantic_validator import SemanticValidator
 from Engine.quality.difficulty_validator import DifficultyValidator
 from Engine.quality.archetype_validator import ArchetypeValidator
 from Engine.integration.independent_answer_review import verify_questions
+from Engine.integration.reasoning_uniqueness import review_reasoning_uniqueness
 
 def main():
     base=os.environ["SUPABASE_URL"].rstrip("/")
@@ -143,6 +144,12 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
     for candidate in records:
         if any(near_duplicate(candidate["question_text"], prior["question_text"]) for prior in existing):
             raise RuntimeError("A duplicate or near-duplicate question already exists in Supabase")
+    # Reject cosmetic variations and equivalent mathematical reasoning before saving.
+    uniqueness = review_reasoning_uniqueness(
+        client, questions, existing,
+        model=os.environ.get("REVIEW_MODEL", "gpt-5"),
+    )
+    print(json.dumps({"reasoning_uniqueness": uniqueness}), flush=True)
     # An independent model reviews answers before even a dry-run can pass.
     # This is additional evidence, not a mathematical proof or publication approval.
     review=verify_questions(
