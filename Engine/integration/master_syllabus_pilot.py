@@ -10,6 +10,7 @@ import sys
 import urllib.parse
 import urllib.request
 import urllib.error
+import uuid
 from openai import OpenAI
 
 def main():
@@ -83,7 +84,8 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
         if normalized in seen:
             raise RuntimeError(f"Question {i}: duplicate question")
         seen.add(normalized)
-        records.append({"subject_id":subj["id"],"unit_id":unit["id"],"chapter_id":ch["id"],"subtopic_id":st["id"],
+        records.append({"question_code":code+"_Q"+uuid.uuid4().hex[:16].upper(),
+            "subject_id":subj["id"],"unit_id":unit["id"],"chapter_id":ch["id"],"subtopic_id":st["id"],
             "question_text":q["question_text"],"option_a":q["option_a"],"option_b":q["option_b"],"option_c":q["option_c"],"option_d":q["option_d"],
             "correct_option":answer_key,"answer":q["answer"],"explanation":q["explanation"],
             "concept_tested":q["concept_tested"],"question_archetype":q["question_archetype"],
