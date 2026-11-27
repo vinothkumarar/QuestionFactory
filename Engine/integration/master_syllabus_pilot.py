@@ -63,7 +63,7 @@ Subject: {subj['subject_name']}
 Unit: {unit['unit_name']}
 Chapter: {ch['chapter_name']}
 Subtopic: {st['subtopic_name']}
-Use five distinct simple percentage calculation/interpretation scenarios if count is five.
+Use varied scenarios strictly relevant to the named subtopic. Do not force percentage questions unless the subtopic requires percentages. Prefer Indian educational contexts and INR (₹) for money.
 Each must have exactly four distinct, plausible options, one mathematically correct option, an exact answer text matching that option, and a clear worked explanation. No duplicate questions. Do not include markdown.
 Return ONLY a JSON array of objects with keys question_text, option_a, option_b, option_c, option_d, correct_option (A/B/C/D), answer, explanation, concept_tested, question_archetype.
 """
@@ -120,7 +120,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
     old={q["question_text"].strip().casefold() for q in existing}
     if any(q["question_text"].strip().casefold() in old for q in records):
         raise RuntimeError("A duplicate question already exists in Supabase")
-    # Structural validation is not mathematical proof; drafts require review.
+    # Structural validation is not mathematical proof; drafts require review.\n    if os.environ.get("DRY_RUN","false").lower() in ("1","true","yes"):\n        print(json.dumps({"result":"validated_dry_run","count":len(records),"master_subtopic":code,"question_codes":[q["question_code"] for q in records]}))\n        return
     inserted=api("questions","POST",records)
     if len(inserted)!=count:
         raise RuntimeError("Unexpected insert count")
