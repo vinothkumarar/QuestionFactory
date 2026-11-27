@@ -1,0 +1,86 @@
+"""ExamHub master-driven five-question pilot.
+
+Uses the live canonical Supabase Master Syllabus and OpenAI to generate a
+small S1 draft batch. Does not modify the legacy Question Factory engine.
+"""
+import json
+import os
+import re
+import sys
+import urllib.parse
+import urllib.request
+from openai import OpenAI
+
+def main():
+    base=os.environ["SUPABASE_URL"].rstrip("/")
+    key=os.environ["SUPABASE_SERVICE_ROLE_KEY"]
+    code=os.environ.get("MASTER_SUBTOPIC_CODE","A1_CH1_ST1")
+    count=int(os.environ.get("QUESTION_COUNT","5"))
+    if not 1<=count<=20 or not re.fullmatch(r"[A-Za-z0-9_]+",code):
+        raise ValueError("Invalid pilot inputs")
+    headers={"apikey":key,"Authorization":"Bearer "+key,"Content-Type":"application/json"}
+    def api(path,method="GET",payload=None):
+        req=urllib.request.Request(base+"/rest/v1/"+path,headers={**headers,**({"Prefer":"return=representation"} if method=="POST" else {})},data=None if payload is None else json.dumps(payload).encode(),method=method)
+        with urllib.request.urlopen(req,timeout=45) as resp:
+            return json.loads(resp.read() or b"[]")
+    sts=api("subtopics?code=eq."+urllib.parse.quote(code,safe="")+"&select=id,code,subtopic_name,chapter_id,chapters(id,code,chapter_name,unit_id,units(id,code,unit_name,subject_id,subjects(id,subject_name)))")
+    if len(sts)!=1:
+        raise RuntimeError("Canonical Master ST missing or ambiguous")
+    st=sts[0]; ch=st["chapters"]; unit=ch["units"]; subj=unit["subjects"]
+    if not all([st["subtopic_name"],ch["chapter_name"],unit["unit_name"],subj["subject_name"]]):
+        raise RuntimeError("Master syllabus names incomplete")
+    print("MASTER VERIFIED:",subj["subject_name"],unit["code"],ch["code"],st["code"],flush=True)
+    client=OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+    prompt=f"""Generate exactly {count} original easy (S1 foundation) multiple-choice questions for the verified Master Syllabus:
+Subject: {subj['subject_name']}
+Unit: {unit['unit_name']}
+Chapter: {ch['chapter_name']}
+Subtopic: {st['subtopic_name']}
+Use five distinct simple percentage calculation/interpretation scenarios if count is five.
+Each must have exactly four distinct, plausible options, one mathematically correct option, an exact answer text matching that option, and a clear worked explanation. No duplicate questions. Do not include markdown.
+Return ONLY a JSON array of objects with keys question_text, option_a, option_b, option_c, option_d, correct_option (A/B/C/D), answer, explanation, concept_tested, question_archetype.
+"""
+    response=client.responses.create(model=os.environ.get("OPENAI_MODEL","gpt-5"),input=prompt)
+    raw=response.output_text.strip()
+    if raw.startswith("```"):
+        raw=re.sub(r"^\`\`\`(?:json)?\s*|\s*\`\`\`$","",raw)
+    questions=json.loads(raw)
+    if not isinstance(questions,list) or len(questions)!=count:
+        raise RuntimeError("Wrong question count")
+    seen=set(); records=[]
+    for i,q in enumerate(questions,1):
+        required=("question_text","option_a","option_b","option_c","option_d","correct_option","answer","explanation","concept_tested","question_archetype")
+        if any(not isinstance(q.get(f),str) or not q[f].strip() for f in required):
+            raise RuntimeError(f"Question {i}: missing required fields")
+        options=[q["option_"+x] for x in "abcd"]
+        if len(set(x.strip().casefold() for x in options))!=4:
+            raise RuntimeError(f"Question {i}: duplicate options")
+        answer_key=q["correct_option"].strip().upper()
+        if answer_key not in "ABCD" or q["answer"].strip()!=q["option_"+answer_key.lower()].strip():
+            raise RuntimeError(f"Question {i}: answer mismatch")
+        normalized=q["question_text"].strip().casefold()
+        if normalized in seen:
+            raise RuntimeError(f"Question {i}: duplicate question")
+        seen.add(normalized)
+        records.append({"subject_id":subj["id"],"unit_id":unit["id"],"chapter_id":ch["id"],"subtopic_id":st["id"],
+            "question_text":q["question_text"],"option_a":q["option_a"],"option_b":q["option_b"],"option_c":q["option_c"],"option_d":q["option_d"],
+            "correct_option":answer_key,"answer":q["answer"],"explanation":q["explanation"],
+            "concept_tested":q["concept_tested"],"question_archetype":q["question_archetype"],
+            "difficulty":"Easy","set_no":"S1","question_type":"Single Correct","source_type":"AI",
+            "status":"DRAFT","is_verified":False})
+    # Fail closed if an identical question already exists in this subtopic.
+    existing=api("questions?subtopic_id=eq."+st["id"]+"&select=question_text")
+    old={q["question_text"].strip().casefold() for q in existing}
+    if any(q["question_text"].strip().casefold() in old for q in records):
+        raise RuntimeError("A duplicate question already exists in Supabase")
+    # Structural validation is not mathematical proof; drafts require review.
+    inserted=api("questions","POST",records)
+    if len(inserted)!=count:
+        raise RuntimeError("Unexpected insert count")
+    print(json.dumps({"result":"drafts_inserted","count":len(inserted),"master_subtopic":code,"ids":[q["id"] for q in inserted]}))
+if __name__=="__main__":
+    try:
+        main()
+    except Exception as ex:
+        print("PILOT FAILED:",type(ex).__name__,str(ex),file=sys.stderr)
+        sys.exit(1)
