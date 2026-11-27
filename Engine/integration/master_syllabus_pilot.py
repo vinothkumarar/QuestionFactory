@@ -79,9 +79,19 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
     seen=set(); records=[]
     def normalized_text(value):
         return re.sub(r"[^\\w]+", " ", value.casefold()).strip()
-    def near_duplicate(a,b):
-        a,b=normalized_text(a),normalized_text(b)
-        return bool(a and b and (a==b or SequenceMatcher(None,a,b,autojunk=False).ratio()>=0.94))
+    def near_duplicate(a, b):
+        a, b = normalized_text(a), normalized_text(b)
+        if not a or not b:
+            return False
+        if a == b:
+            return True
+        # Similar phrasing alone is insufficient: different numerical inputs
+        # can represent distinct practice questions in the same archetype.
+        numbers_a = re.findall(r"\\d+(?:\\.\\d+)?", a)
+        numbers_b = re.findall(r"\\d+(?:\\.\\d+)?", b)
+        if numbers_a != numbers_b:
+            return False
+        return SequenceMatcher(None, a, b, autojunk=False).ratio() >= 0.98
     validators=(OptionValidator(), SemanticValidator(), DifficultyValidator(), ArchetypeValidator())
     for i,q in enumerate(questions,1):
         required=("question_text","option_a","option_b","option_c","option_d","correct_option","answer","explanation","concept_tested","question_archetype")
