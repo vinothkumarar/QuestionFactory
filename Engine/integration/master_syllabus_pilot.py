@@ -80,12 +80,20 @@ Subtopic: {st['subtopic_name']}
 Use varied scenarios strictly relevant to the named subtopic. Do not force percentage questions unless the subtopic requires percentages. Prefer Indian educational contexts and INR (₹) for money.
 Existing questions in this SAME canonical subtopic (do not reproduce their reasoning structures):
 {json.dumps([row["question_text"] for row in existing], ensure_ascii=False)}
+For EACH proposed question, first plan internally:
+- CONCEPT: the specific knowledge relationship being tested, not merely the chapter title.
+- QP (question pattern): the precise givens-to-unknown structure and solution pathway.
+- ARCHETYPE: the broad reasoning presentation (e.g. reverse inference, comparison, multi-step deduction, application).
+Diversify CONCEPT and QP selections across this batch. Prefer underrepresented concepts and
+reasoning structures relative to the existing canonical-subtopic questions above. Do not
+force an artificial concept when the syllabus scope is narrow. An archetype label alone
+does not make a repeated problem unique.
 Design NEW givens-to-unknown relationships, inference steps and solution strategies.
 Do NOT merely change values, names, wording, currencies, or contexts. Reusing a concept is allowed,
 but reusing the same mathematical question pattern is not. If the topic has no remaining genuinely
 distinct S1 patterns, generation must fail rather than invent cosmetic variants.
 Each must have exactly four distinct, plausible options, one mathematically correct option, an exact answer text matching that option, and a clear worked explanation. No duplicate questions. Do not include markdown.
-Return ONLY a JSON array of objects with keys question_text, option_a, option_b, option_c, option_d, correct_option (A/B/C/D), answer, explanation, concept_tested, question_archetype.
+Return ONLY a JSON array of objects with keys question_text, option_a, option_b, option_c, option_d, correct_option (A/B/C/D), answer, explanation, concept_tested, question_pattern, question_archetype.\nThe question_pattern must describe the actual givens-to-unknown relationship, not a generic label.
 """
     max_attempts=int(os.environ.get("UNIQUENESS_MAX_ATTEMPTS","3"))
     if not 1<=max_attempts<=5:
@@ -110,7 +118,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
         if not isinstance(candidates,list) or len(candidates)!=needed:
             raise RuntimeError("Wrong question count")
         required=("question_text","option_a","option_b","option_c","option_d",
-                  "correct_option","answer","explanation","concept_tested","question_archetype")
+                  "correct_option","answer","explanation","concept_tested","question_pattern","question_archetype")
         structurally_valid=[]
         for q in candidates:
             if any(not isinstance(q.get(k),str) or not q[k].strip() for k in required):
@@ -158,7 +166,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
         return bool(a and b and (a==b or SequenceMatcher(None,a,b,autojunk=False).ratio()>=0.995))
     validators=(OptionValidator(),SemanticValidator(),DifficultyValidator(),ArchetypeValidator())
     for i,q in enumerate(accepted_questions,1):
-        required=("question_text","option_a","option_b","option_c","option_d","correct_option","answer","explanation","concept_tested","question_archetype")
+        required=("question_text","option_a","option_b","option_c","option_d","correct_option","answer","explanation","concept_tested","question_pattern","question_archetype")
         if any(not isinstance(q.get(f),str) or not q[f].strip() for f in required):
             raise RuntimeError(f"Question {i}: missing required fields")
         options=[q["option_"+x] for x in "abcd"]
@@ -181,7 +189,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
             correct_option=answer_key,explanation=q["explanation"],
             difficulty="Easy",archetype="Computational",
             concept=q["concept_tested"],source_type="AI",
-            metadata={"question_archetype":q["question_archetype"]},
+            metadata={"question_pattern":q["question_pattern"],"question_archetype":q["question_archetype"]},
         )
         valid=True
         for validator in validators:
