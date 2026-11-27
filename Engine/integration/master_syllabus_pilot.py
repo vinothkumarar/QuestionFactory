@@ -78,20 +78,19 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
         raise RuntimeError("Wrong question count")
     seen=set(); records=[]
     def normalized_text(value):
-        return re.sub(r"[^\\w]+", " ", value.casefold()).strip()
+        return " ".join(re.findall("[a-z0-9]+", value.casefold()))
     def near_duplicate(a, b):
         a, b = normalized_text(a), normalized_text(b)
         if not a or not b:
             return False
         if a == b:
             return True
-        # Similar phrasing alone is insufficient: different numerical inputs
-        # can represent distinct practice questions in the same archetype.
-        numbers_a = re.findall(r"\\d+(?:\\.\\d+)?", a)
-        numbers_b = re.findall(r"\\d+(?:\\.\\d+)?", b)
-        if numbers_a != numbers_b:
+        # Distinct numeric parameters make separate practice instances.
+        nums_a = re.findall("[0-9]+", a)
+        nums_b = re.findall("[0-9]+", b)
+        if nums_a != nums_b:
             return False
-        return SequenceMatcher(None, a, b, autojunk=False).ratio() >= 0.98
+        return SequenceMatcher(None, a, b, autojunk=False).ratio() >= 0.995
     validators=(OptionValidator(), SemanticValidator(), DifficultyValidator(), ArchetypeValidator())
     for i,q in enumerate(questions,1):
         required=("question_text","option_a","option_b","option_c","option_d","correct_option","answer","explanation","concept_tested","question_archetype")
