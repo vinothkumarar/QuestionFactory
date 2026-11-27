@@ -60,6 +60,17 @@ def main():
     if not all([st["subtopic_name"],ch["chapter_name"],unit["unit_name"],subj["subject_name"]]):
         raise RuntimeError("Master syllabus names incomplete")
     print("MASTER VERIFIED:",subj["subject_name"],unit["code"],ch["code"],st["code"],flush=True)
+    # Load the complete canonical-subtopic bank BEFORE generation.
+    # This is the only duplicate-comparison scope, regardless of exam mappings.
+    existing=[]
+    for page in range(100):
+        batch=api("questions?subtopic_id=eq."+st["id"]+"&select=question_text&order=id.asc&limit=1000&offset="+str(page*1000))
+        existing.extend(batch)
+        if len(batch)<1000:
+            break
+    else:
+        raise RuntimeError("Duplicate scan exceeded 100000 existing questions")
+    print(json.dumps({"existing_subtopic_questions":len(existing),"subtopic":code}),flush=True)
     client=OpenAI(api_key=os.environ["OPENAI_API_KEY"])
     prompt=f"""Generate exactly {count} original easy (S1 foundation) multiple-choice questions for the verified Master Syllabus:
 Subject: {subj['subject_name']}
@@ -67,6 +78,12 @@ Unit: {unit['unit_name']}
 Chapter: {ch['chapter_name']}
 Subtopic: {st['subtopic_name']}
 Use varied scenarios strictly relevant to the named subtopic. Do not force percentage questions unless the subtopic requires percentages. Prefer Indian educational contexts and INR (₹) for money.
+Existing questions in this SAME canonical subtopic (do not reproduce their reasoning structures):
+{json.dumps([row["question_text"] for row in existing], ensure_ascii=False)}
+Design NEW givens-to-unknown relationships, inference steps and solution strategies.
+Do NOT merely change values, names, wording, currencies, or contexts. Reusing a concept is allowed,
+but reusing the same mathematical question pattern is not. If the topic has no remaining genuinely
+distinct S1 patterns, generation must fail rather than invent cosmetic variants.
 Each must have exactly four distinct, plausible options, one mathematically correct option, an exact answer text matching that option, and a clear worked explanation. No duplicate questions. Do not include markdown.
 Return ONLY a JSON array of objects with keys question_text, option_a, option_b, option_c, option_d, correct_option (A/B/C/D), answer, explanation, concept_tested, question_archetype.
 """
@@ -132,15 +149,6 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
             "concept_tested":q["concept_tested"],"question_archetype":q["question_archetype"],
             "difficulty":"Easy","set_no":1,"question_type":"Single Correct","source_type":"AI",
             "status":"draft","is_verified":False})
-    # Fail closed if an identical question already exists in this subtopic.
-    existing=[]
-    for page in range(100):
-        batch=api("questions?subtopic_id=eq."+st["id"]+"&select=question_text&order=id.asc&limit=1000&offset="+str(page*1000))
-        existing.extend(batch)
-        if len(batch)<1000:
-            break
-    else:
-        raise RuntimeError("Duplicate scan exceeded 100000 existing questions; refusing incomplete scan")
     for candidate in records:
         if any(near_duplicate(candidate["question_text"], prior["question_text"]) for prior in existing):
             raise RuntimeError("A duplicate or near-duplicate question already exists in Supabase")
