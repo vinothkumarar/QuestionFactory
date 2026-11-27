@@ -4,6 +4,7 @@ Uses the live canonical Supabase Master Syllabus and OpenAI to generate a
 small S1 draft batch. Does not modify the legacy Question Factory engine.
 """
 import json
+from difflib import SequenceMatcher
 import os
 import re
 import sys
@@ -75,6 +76,11 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
     if not isinstance(questions,list) or len(questions)!=count:
         raise RuntimeError("Wrong question count")
     seen=set(); records=[]
+    def normalized_text(value):
+        return re.sub(r"[^\\w]+", " ", value.casefold()).strip()
+    def near_duplicate(a,b):
+        a,b=normalized_text(a),normalized_text(b)
+        return bool(a and b and (a==b or SequenceMatcher(None,a,b,autojunk=False).ratio()>=0.94))
     validators=(OptionValidator(), SemanticValidator(), DifficultyValidator(), ArchetypeValidator())
     for i,q in enumerate(questions,1):
         required=("question_text","option_a","option_b","option_c","option_d","correct_option","answer","explanation","concept_tested","question_archetype")
@@ -87,8 +93,8 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
         if answer_key not in "ABCD" or q["answer"].strip()!=q["option_"+answer_key.lower()].strip():
             raise RuntimeError(f"Question {i}: answer mismatch")
         normalized=q["question_text"].strip().casefold()
-        if normalized in seen:
-            raise RuntimeError(f"Question {i}: duplicate question")
+        if normalized in seen or any(near_duplicate(q["question_text"], previous["question_text"]) for previous in records):
+            raise RuntimeError(f"Question {i}: duplicate or near-duplicate within batch")
         seen.add(normalized)
         # Adapt the Supabase payload to the existing Question Factory OS model.
         # Archetype Validator expects a canonical family, while the generated
@@ -116,10 +122,17 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
             "difficulty":"Easy","set_no":1,"question_type":"Single Correct","source_type":"AI",
             "status":"draft","is_verified":False})
     # Fail closed if an identical question already exists in this subtopic.
-    existing=api("questions?subtopic_id=eq."+st["id"]+"&select=question_text")
-    old={q["question_text"].strip().casefold() for q in existing}
-    if any(q["question_text"].strip().casefold() in old for q in records):
-        raise RuntimeError("A duplicate question already exists in Supabase")
+    existing=[]
+    for page in range(100):
+        batch=api("questions?subtopic_id=eq."+st["id"]+"&select=question_text&order=id.asc&limit=1000&offset="+str(page*1000))
+        existing.extend(batch)
+        if len(batch)<1000:
+            break
+    else:
+        raise RuntimeError("Duplicate scan exceeded 100000 existing questions; refusing incomplete scan")
+    for candidate in records:
+        if any(near_duplicate(candidate["question_text"], prior["question_text"]) for prior in existing):
+            raise RuntimeError("A duplicate or near-duplicate question already exists in Supabase")
     # Structural validation is not mathematical proof; drafts require review.\n    if os.environ.get("DRY_RUN","false").lower() in ("1","true","yes"):\n        print(json.dumps({"result":"validated_dry_run","count":len(records),"master_subtopic":code,"question_codes":[q["question_code"] for q in records]}))\n        return
     inserted=api("questions","POST",records)
     if len(inserted)!=count:
