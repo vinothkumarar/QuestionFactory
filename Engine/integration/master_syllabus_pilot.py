@@ -18,6 +18,7 @@ from Engine.quality.option_validator import OptionValidator
 from Engine.quality.semantic_validator import SemanticValidator
 from Engine.quality.difficulty_validator import DifficultyValidator
 from Engine.quality.archetype_validator import ArchetypeValidator
+from Engine.integration.independent_answer_review import verify_questions
 
 def main():
     base=os.environ["SUPABASE_URL"].rstrip("/")
@@ -133,6 +134,13 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
     for candidate in records:
         if any(near_duplicate(candidate["question_text"], prior["question_text"]) for prior in existing):
             raise RuntimeError("A duplicate or near-duplicate question already exists in Supabase")
+    # An independent model reviews answers before even a dry-run can pass.
+    # This is additional evidence, not a mathematical proof or publication approval.
+    review=verify_questions(
+        client,questions,subj["subject_name"],ch["chapter_name"],
+        st["subtopic_name"],model=os.environ.get("REVIEW_MODEL","gpt-5"),
+    )
+    print(json.dumps({"independent_review":"passed","count":len(review)}),flush=True)
     # Structural validation is not mathematical proof; drafts require review.
     if os.environ.get("DRY_RUN","false").lower() in ("1","true","yes"):
         print(json.dumps({"result":"validated_dry_run","count":len(records),"master_subtopic":code,"question_codes":[q["question_code"] for q in records]}))
