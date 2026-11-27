@@ -51,8 +51,7 @@ def main():
                                 env=env, check=False)
         results.append({"subtopic": st["code"], "passed": result.returncode == 0})
         if result.returncode:
-            print("STOPPED: subtopic failed; remaining subtopics not attempted", file=sys.stderr)
-            break
+            print("SUBTOPIC FAILED: continuing to next independent subtopic", file=sys.stderr, flush=True)
     print("BULK SUMMARY:", json.dumps(results), flush=True)
     if any(not r["passed"] for r in results):
         sys.exit(1)
