@@ -16,6 +16,11 @@ on:
         required: true
         type: number
         default: 0
+      expected_first_subtopic:
+        description: Safety check first target code (e.g. A1_CH1_ST4); leave blank to skip
+        required: false
+        type: string
+        default: ""
       count:
         description: Draft questions per subtopic (1-20)
         required: true
@@ -43,6 +48,7 @@ jobs:
       MASTER_CHAPTER_CODE: ${{ inputs.chapter }}
       SUBTOPIC_LIMIT: ${{ inputs.subtopic_limit }}
       SUBTOPIC_OFFSET: ${{ inputs.subtopic_offset }}
+      EXPECTED_FIRST_SUBTOPIC: ${{ inputs.expected_first_subtopic }}
       QUESTION_COUNT: ${{ inputs.count }}
       DRY_RUN: ${{ inputs.dry_run }}
     steps:
