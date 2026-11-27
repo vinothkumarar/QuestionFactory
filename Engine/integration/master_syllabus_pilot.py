@@ -64,13 +64,23 @@ def main():
     # This is the only duplicate-comparison scope, regardless of exam mappings.
     existing=[]
     for page in range(100):
-        batch=api("questions?subtopic_id=eq."+st["id"]+"&select=question_text&order=id.asc&limit=1000&offset="+str(page*1000))
+        batch=api("questions?subtopic_id=eq."+st["id"]+"&select=question_text,concept_tested,question_archetype&order=id.asc&limit=1000&offset="+str(page*1000))
         existing.extend(batch)
         if len(batch)<1000:
             break
     else:
         raise RuntimeError("Duplicate scan exceeded 100000 existing questions")
     print(json.dumps({"existing_subtopic_questions":len(existing),"subtopic":code}),flush=True)
+    # Dynamic CIRE coverage uses only previously accepted canonical-subtopic
+    # question metadata. No extra model call or up-front catalog generation.
+    from collections import Counter
+    concept_counts=Counter((row.get("concept_tested") or "").strip().casefold()
+                           for row in existing if (row.get("concept_tested") or "").strip())
+    archetype_counts=Counter((row.get("question_archetype") or "").strip().casefold()
+                             for row in existing if (row.get("question_archetype") or "").strip())
+    coverage={"concepts":dict(concept_counts.most_common(50)),
+              "archetypes":dict(archetype_counts.most_common(50))}
+    print(json.dumps({"cire_coverage":coverage,"subtopic":code},ensure_ascii=False),flush=True)
     client=OpenAI(api_key=os.environ["OPENAI_API_KEY"])
     prompt=f"""Generate exactly {count} original easy (S1 foundation) multiple-choice questions for the verified Master Syllabus:
 Subject: {subj['subject_name']}
@@ -88,7 +98,7 @@ Diversify CONCEPT and QP selections across this batch. Prefer underrepresented c
 reasoning structures relative to the existing canonical-subtopic questions above. Do not
 force an artificial concept when the syllabus scope is narrow. An archetype label alone
 does not make a repeated problem unique.
-Design NEW givens-to-unknown relationships, inference steps and solution strategies.
+Current canonical-subtopic coverage (historical labels are approximate, not formal catalog IDs):\n{json.dumps(coverage, ensure_ascii=False)}\nPrefer meaningful gaps, without inventing artificial distinctions.\nDesign NEW givens-to-unknown relationships, inference steps and solution strategies.
 Do NOT merely change values, names, wording, currencies, or contexts. Reusing a concept is allowed,
 but reusing the same mathematical question pattern is not. If the topic has no remaining genuinely
 distinct S1 patterns, generation must fail rather than invent cosmetic variants.
