@@ -48,11 +48,32 @@ def main():
         env["DRY_RUN"] = "true" if dry_run else "false"
         print("START SUBTOPIC:", st["code"], flush=True)
         result = subprocess.run([sys.executable, "-m", "Engine.integration.master_syllabus_pilot"],
-                                env=env, check=False)
-        results.append({"subtopic": st["code"], "passed": result.returncode == 0})
+                                env=env, check=False, capture_output=True, text=True)
+        if result.stdout:
+            print(result.stdout, flush=True)
+        if result.stderr:
+            print(result.stderr, file=sys.stderr, flush=True)
+        payload = None
+        for line in result.stdout.splitlines():
+            try:
+                row = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if isinstance(row, dict) and row.get("result") in (
+                "drafts_inserted", "validated_dry_run", "no_unique_questions", "no_valid_drafts"):
+                payload = row
+        accepted = int(payload.get("count", 0)) if payload else 0
+        results.append({"subtopic": st["code"], "passed": result.returncode == 0,
+                        "requested": count, "accepted": accepted,
+                        "pending": count - accepted,
+                        "result": payload.get("result") if payload else "error"})
         if result.returncode:
             print("SUBTOPIC FAILED: continuing to next independent subtopic", file=sys.stderr, flush=True)
     print("BULK SUMMARY:", json.dumps(results), flush=True)
+    print("CHAPTER TOTALS:", json.dumps({"requested": count * len(results),
+          "accepted": sum(r["accepted"] for r in results),
+          "pending": sum(r["pending"] for r in results),
+          "dry_run": dry_run}), flush=True)
     if any(not r["passed"] for r in results):
         sys.exit(1)
 
