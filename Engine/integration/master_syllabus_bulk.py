@@ -19,6 +19,9 @@ def main():
     limit = int(os.environ.get("SUBTOPIC_LIMIT", "5"))
     offset = int(os.environ.get("SUBTOPIC_OFFSET", "0"))
     count = int(os.environ.get("QUESTION_COUNT", "5"))
+    difficulty = os.environ.get("QUESTION_DIFFICULTY", "S1").strip().upper()
+    if difficulty not in ("S1", "S2", "S3", "S4"):
+        raise ValueError("Invalid QUESTION_DIFFICULTY")
     if not 1 <= limit <= 20 or not 1 <= count <= 20 or not 0 <= offset <= 10000:
         raise ValueError("Limits must be between 1 and 20")
     base = os.environ["SUPABASE_URL"].rstrip("/")
@@ -82,7 +85,7 @@ def main():
               "duplicates_rejected": sum(r["metrics"].get("duplicates_rejected", 0) for r in results),
               "answer_rejected": sum(r["metrics"].get("answer_rejected", 0) for r in results),
               "validator_rejected": sum(r["metrics"].get("validator_rejected", 0) for r in results),
-              "dry_run": dry_run, "chapter": chapter,
+              "dry_run": dry_run, "chapter": chapter, "difficulty": difficulty,
               "subtopics": results}
     report_path = Path("artifacts/question_factory_run_summary.json")
     report_path.parent.mkdir(parents=True, exist_ok=True)
