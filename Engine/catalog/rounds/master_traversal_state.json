@@ -1,0 +1,37 @@
+{
+  "config": {
+    "subject": "A1",
+    "difficulty": "S1",
+    "round_number": 1,
+    "subtopics_per_batch": 1,
+    "questions_per_subtopic": 1,
+    "dry_run": true
+  },
+  "chapters": [
+    "A1_CH1",
+    "A1_CH2",
+    "A1_CH3",
+    "A2_CH1",
+    "A2_CH2",
+    "A3_CH1",
+    "A3_CH2",
+    "A3_CH3",
+    "A4_CH1",
+    "A4_CH2",
+    "A5_CH1",
+    "A5_CH2",
+    "A5_CH3",
+    "A6_CH1",
+    "A6_CH2",
+    "A7_CH1",
+    "A7_CH2",
+    "A8_CH1",
+    "A8_CH2"
+  ],
+  "chapter_index": 0,
+  "subtopic_offset": 0,
+  "completed_batches": 0,
+  "status": "running",
+  "incomplete_subtopics": [],
+  "history": []
+}
