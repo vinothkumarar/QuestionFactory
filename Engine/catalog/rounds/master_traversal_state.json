@@ -29,8 +29,8 @@
     "A8_CH2"
   ],
   "chapter_index": 0,
-  "subtopic_offset": 3,
-  "completed_batches": 3,
+  "subtopic_offset": 4,
+  "completed_batches": 4,
   "status": "paused",
   "incomplete_subtopics": [],
   "history": [
@@ -56,6 +56,15 @@
       "chapter": "A1_CH1",
       "offset": 2,
       "next_offset": 3,
+      "requested": 1,
+      "accepted": 1,
+      "pending": 0,
+      "failed_subtopics": 0
+    },
+    {
+      "chapter": "A1_CH1",
+      "offset": 3,
+      "next_offset": 4,
       "requested": 1,
       "accepted": 1,
       "pending": 0,
