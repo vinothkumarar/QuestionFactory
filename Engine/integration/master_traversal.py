@@ -33,14 +33,27 @@ def main():
   subjects=[s for s in subjects if s["subject_name"].casefold()==wanted.casefold()]
  if not subjects:raise RuntimeError("No matching Master subject")
  chapters=[]
+ chapter_sizes={}
  for s in subjects:
   units=get("units","select=id,code&subject_id=eq."+urllib.parse.quote(str(s["id"]),safe="")+"&order=code.asc&limit=1000")
   for u in units:
    rows=get("chapters","select=id,code&unit_id=eq."+urllib.parse.quote(str(u["id"]),safe="")+"&order=code.asc&limit=1000")
    for ch in rows:
-    subtopics=get("subtopics","select=id&chapter_id=eq."+urllib.parse.quote(str(ch["id"]),safe="")+"&limit=1")
-    if subtopics:chapters.append(ch["code"])
+    # Count subtopics to report coverage and advance at exact chapter boundaries.
+    chapter_id=urllib.parse.quote(str(ch["id"]),safe="")
+    subtopics=[]
+    page=0
+    while True:
+     batch=get("subtopics","select=id&chapter_id=eq."+chapter_id+"&order=code.asc&limit=1000&offset="+str(page))
+     subtopics.extend(batch)
+     if len(batch)<1000:break
+     page+=1000
+    if subtopics:
+     if ch["code"] in chapter_sizes:raise RuntimeError("Duplicate Master chapter code")
+     chapters.append(ch["code"])
+     chapter_sizes[ch["code"]]=len(subtopics)
  if not chapters:raise RuntimeError("No Master chapters with subtopics")
+ total_subtopics=sum(chapter_sizes.values())
  STATE.parent.mkdir(parents=True,exist_ok=True)
  REPORT.parent.mkdir(parents=True,exist_ok=True)
  if resume:
@@ -53,6 +66,11 @@ def main():
   state=dict(config=config,chapters=chapters,chapter_index=0,subtopic_offset=0,completed_batches=0,
              status="running",incomplete_subtopics=[],history=[])
  def save():
+  completed=sum(chapter_sizes[ch] for ch in chapters[:state["chapter_index"]])+state["subtopic_offset"]
+  state["coverage"]={"total_chapters":len(chapters),"total_subtopics":total_subtopics,
+                     "completed_chapters":state["chapter_index"],"validated_subtopics":completed,
+                     "remaining_subtopics":total_subtopics-completed,
+                     "percent":round(100*completed/total_subtopics,2)}
   STATE.write_text(json.dumps(state,indent=2)+"\n",encoding="utf-8")
   REPORT.write_text(json.dumps(state,indent=2)+"\n",encoding="utf-8")
   subprocess.run(["git","add",str(STATE)],check=True)
@@ -73,6 +91,7 @@ def main():
   remaining=get("subtopics","select=id&chapter_id=eq."+urllib.parse.quote(str(ids[0]["id"]),safe="")+
                 "&order=code.asc&offset="+str(offset)+"&limit="+str(limit))
   if not remaining:
+   if offset!=chapter_sizes[chapter]:raise RuntimeError("Unexpected empty subtopic page")
    state["chapter_index"]+=1
    state["subtopic_offset"]=0
    save()
@@ -96,7 +115,7 @@ def main():
    state["status"]="needs_review";save();raise RuntimeError("Invalid checkpoint advancement")
   state["subtopic_offset"]=nxt
   state["completed_batches"]+=1
-  if len(remaining)<limit:
+  if nxt>=chapter_sizes[chapter]:
    state["chapter_index"]+=1
    state["subtopic_offset"]=0
   save()
