@@ -10,7 +10,7 @@
   "next_offset": 2,
   "completed_batches": 2,
   "incomplete_subtopics": [],
-  "status": "running",
+  "status": "paused",
   "history": [
     {
       "offset": 0,
