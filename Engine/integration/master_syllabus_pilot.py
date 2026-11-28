@@ -115,6 +115,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
     if not 1<=max_attempts<=5:
         raise ValueError("UNIQUENESS_MAX_ATTEMPTS must be between 1 and 5")
     accepted_questions=[]
+    metrics={"generated_candidates":0,"format_rejected":0,"duplicates_rejected":0,"answer_rejected":0,"validator_rejected":0,"attempts":0}
     feedback=""
     for attempt in range(1,max_attempts+1):
         needed=count-len(accepted_questions)
@@ -131,10 +132,12 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
         if raw.startswith("```"):
             raw=re.sub(r"^```(?:json)?\s*|\s*```$","",raw)
         candidates=json.loads(raw)
+        metrics["attempts"]+=1
         if not isinstance(candidates,list) or len(candidates)!=needed:
             raise RuntimeError("Wrong question count")
         required=("question_text","option_a","option_b","option_c","option_d",
                   "correct_option","answer","explanation","concept_tested","concept_definition","question_pattern","question_archetype","possibility_givens","possibility_unknown","possibility_reasoning_steps")
+        metrics["generated_candidates"]+=len(candidates)
         structurally_valid=[]
         for q in candidates:
             if any(not isinstance(q.get(k),str) or not q[k].strip() for k in required):
@@ -145,6 +148,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
                 or q["answer"].strip()!=q["option_"+key.lower()].strip()):
                 continue
             structurally_valid.append(q)
+        metrics["format_rejected"]+=len(candidates)-len(structurally_valid)
         print(json.dumps({"attempt":attempt,"requested":needed,
                           "format_valid":len(structurally_valid)}),flush=True)
         if structurally_valid:
@@ -154,6 +158,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
             decision=find_reasoning_duplicates(client,structurally_valid,comparison_bank,
                             model=os.environ.get("REVIEW_MODEL","gpt-5"))
             rejected=set(decision["rejected_indices"])
+            metrics["duplicates_rejected"]+=len(rejected)
             feedback="\nAvoid these rejected reasoning patterns: "+json.dumps(decision["reasons"],ensure_ascii=False)
             for i,q in enumerate(structurally_valid):
                 if i in rejected:
@@ -163,13 +168,14 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
                     verify_questions(client,[q],subj["subject_name"],ch["chapter_name"],
                         st["subtopic_name"],model=os.environ.get("REVIEW_MODEL","gpt-5"))
                 except (RuntimeError,ValueError) as exc:
+                    metrics["answer_rejected"]+=1
                     print(json.dumps({"answer_rejected":i,"reason":str(exc)[:250]}),flush=True)
                     continue
                 accepted_questions.append(q)
             print(json.dumps({"attempt":attempt,"duplicates_rejected":len(rejected),
                 "accepted_total":len(accepted_questions),"pending":count-len(accepted_questions)}),flush=True)
     if not accepted_questions:
-        print(json.dumps({"result":"no_unique_questions","count":0,"requested":count,
+        print(json.dumps({"result":"no_unique_questions","metrics":metrics,"count":0,"requested":count,
                           "pending":count,"master_subtopic":code}),flush=True)
         return
     questions=accepted_questions
@@ -218,6 +224,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
             if report.warnings:
                 print(f"QUALITY WARNING question={i} validator={validator.__class__.__name__}: {report.warnings}",flush=True)
         if not valid:
+            metrics["validator_rejected"]+=1
             continue
         records.append({"question_code":model.question_code,
             "subject_id":subj["id"],"unit_id":unit["id"],"chapter_id":ch["id"],"subtopic_id":st["id"],
@@ -231,10 +238,10 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
                       "pending":count-len(records),"master_subtopic":code}),flush=True)
     # Structural validation is not mathematical proof; drafts require review.
     if os.environ.get("DRY_RUN","false").lower() in ("1","true","yes"):
-        print(json.dumps({"result":"validated_dry_run","count":len(records),"requested":count,"pending":count-len(records),"master_subtopic":code,"question_codes":[q["question_code"] for q in records]}))
+        print(json.dumps({"result":"validated_dry_run","metrics":metrics,"count":len(records),"requested":count,"pending":count-len(records),"master_subtopic":code,"question_codes":[q["question_code"] for q in records]}))
         return
     if not records:
-        print(json.dumps({"result":"no_valid_drafts","count":0,"requested":count,
+        print(json.dumps({"result":"no_valid_drafts","metrics":metrics,"count":0,"requested":count,
                           "pending":count,"master_subtopic":code}),flush=True)
         return
     inserted=api("questions","POST",records)
@@ -253,7 +260,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
         record_outcome(catalog_path,possibility["id"],question_code=record["question_code"])
     print(json.dumps({"catalog_updated":str(catalog_path),
                       "qp_discovery_coverage":qp_coverage(catalog_path)},ensure_ascii=False),flush=True)
-    print(json.dumps({"result":"drafts_inserted","count":len(inserted),"requested":count,
+    print(json.dumps({"result":"drafts_inserted","metrics":metrics,"count":len(inserted),"requested":count,
                       "pending":count-len(inserted),"master_subtopic":code,
                       "ids":[q["id"] for q in inserted]}))
 if __name__=="__main__":
