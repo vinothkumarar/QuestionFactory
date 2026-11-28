@@ -26,6 +26,16 @@ on:
         required: true
         type: number
         default: 5
+      difficulty:
+        description: Question difficulty S1 foundation, S2 standard, S3 advanced, S4 expert
+        required: true
+        type: choice
+        options:
+          - S1
+          - S2
+          - S3
+          - S4
+        default: S1
       dry_run:
         description: Validate only; do not insert into Supabase
         required: true
@@ -50,6 +60,7 @@ jobs:
       SUBTOPIC_OFFSET: ${{ inputs.subtopic_offset }}
       EXPECTED_FIRST_SUBTOPIC: ${{ inputs.expected_first_subtopic }}
       QUESTION_COUNT: ${{ inputs.count }}
+      QUESTION_DIFFICULTY: ${{ inputs.difficulty }}
       DRY_RUN: ${{ inputs.dry_run }}
     steps:
       - uses: actions/checkout@v4
