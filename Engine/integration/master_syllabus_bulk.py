@@ -67,7 +67,8 @@ def main():
         results.append({"subtopic": st["code"], "passed": result.returncode == 0,
                         "requested": count, "accepted": accepted,
                         "pending": count - accepted,
-                        "result": payload.get("result") if payload else "error"})
+                        "result": payload.get("result") if payload else "error",
+                        "metrics": payload.get("metrics", {}) if payload else {}})
         if result.returncode:
             print("SUBTOPIC FAILED: continuing to next independent subtopic", file=sys.stderr, flush=True)
     # Machine-readable run report; upload as a GitHub Actions artifact.
@@ -76,6 +77,11 @@ def main():
               "validated_or_inserted": sum(r["accepted"] for r in results),
               "pending": sum(r["pending"] for r in results),
               "failed_subtopics": sum(not r["passed"] for r in results),
+              "generated_candidates": sum(r["metrics"].get("generated_candidates", 0) for r in results),
+              "format_rejected": sum(r["metrics"].get("format_rejected", 0) for r in results),
+              "duplicates_rejected": sum(r["metrics"].get("duplicates_rejected", 0) for r in results),
+              "answer_rejected": sum(r["metrics"].get("answer_rejected", 0) for r in results),
+              "validator_rejected": sum(r["metrics"].get("validator_rejected", 0) for r in results),
               "dry_run": dry_run, "chapter": chapter,
               "subtopics": results}
     report_path = Path("artifacts/question_factory_run_summary.json")
