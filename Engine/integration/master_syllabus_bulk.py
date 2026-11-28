@@ -3,6 +3,7 @@
 Runs one subtopic per child process. Defaults to dry-run; publication never occurs.
 """
 import json
+from pathlib import Path
 import os
 import re
 import subprocess
@@ -69,6 +70,18 @@ def main():
                         "result": payload.get("result") if payload else "error"})
         if result.returncode:
             print("SUBTOPIC FAILED: continuing to next independent subtopic", file=sys.stderr, flush=True)
+    # Machine-readable run report; upload as a GitHub Actions artifact.
+    # In dry-run, accepted means validated only, not inserted.
+    totals = {"requested": count * len(results),
+              "validated_or_inserted": sum(r["accepted"] for r in results),
+              "pending": sum(r["pending"] for r in results),
+              "failed_subtopics": sum(not r["passed"] for r in results),
+              "dry_run": dry_run, "chapter": chapter,
+              "subtopics": results}
+    report_path = Path("artifacts/question_factory_run_summary.json")
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(json.dumps(totals, indent=2), encoding="utf-8")
+    print("RUN REPORT:", str(report_path), flush=True)
     print("BULK SUMMARY:", json.dumps(results), flush=True)
     print("CHAPTER TOTALS:", json.dumps({"requested": count * len(results),
           "accepted": sum(r["accepted"] for r in results),
