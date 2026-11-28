@@ -7,9 +7,15 @@
     "count": 1,
     "dry_run": true
   },
-  "next_offset": 0,
-  "completed_batches": 0,
+  "next_offset": 1,
+  "completed_batches": 1,
   "incomplete_subtopics": [],
   "status": "running",
-  "history": []
+  "history": [
+    {
+      "offset": 0,
+      "next_offset": 1,
+      "pending": 0
+    }
+  ]
 }
