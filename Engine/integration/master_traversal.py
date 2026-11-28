@@ -25,8 +25,12 @@ def main():
   req=urllib.request.Request(base+"/rest/v1/"+table+"?"+query,headers=headers)
   with urllib.request.urlopen(req,timeout=45) as resp:return json.load(resp)
  # Explicit traversal avoids assuming PostgREST relationship names.
- subjects=get("subjects","select=id,code,subject_name&order=code.asc&limit=1000")
- if subject!="ALL":subjects=[s for s in subjects if s.get("code")==subject]
+ subjects=get("subjects","select=id,subject_name&order=subject_name.asc&limit=1000")
+ # The canonical subjects table has no code column; A1/B1 are unit-code families.
+ subject_aliases={"A1":"Aptitude","B1":"Biology","C1":"Chemistry","P1":"Physics","M1":"Maths"}
+ if subject!="ALL":
+  wanted=subject_aliases.get(subject,subject)
+  subjects=[s for s in subjects if s["subject_name"].casefold()==wanted.casefold()]
  if not subjects:raise RuntimeError("No matching Master subject")
  chapters=[]
  for s in subjects:
