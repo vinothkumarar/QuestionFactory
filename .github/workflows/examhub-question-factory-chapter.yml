@@ -26,6 +26,11 @@ on:
         required: true
         type: number
         default: 5
+      generation_round:
+        description: Generation round number (1-1000)
+        required: true
+        type: number
+        default: 1
       difficulty:
         description: Question difficulty S1 foundation, S2 standard, S3 advanced, S4 expert
         required: true
@@ -61,6 +66,7 @@ jobs:
       EXPECTED_FIRST_SUBTOPIC: ${{ inputs.expected_first_subtopic }}
       QUESTION_COUNT: ${{ inputs.count }}
       QUESTION_DIFFICULTY: ${{ inputs.difficulty }}
+      GENERATION_ROUND: ${{ inputs.generation_round }}
       DRY_RUN: ${{ inputs.dry_run }}
     steps:
       - uses: actions/checkout@v4
