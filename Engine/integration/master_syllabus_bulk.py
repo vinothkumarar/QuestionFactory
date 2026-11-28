@@ -20,6 +20,9 @@ def main():
     offset = int(os.environ.get("SUBTOPIC_OFFSET", "0"))
     count = int(os.environ.get("QUESTION_COUNT", "5"))
     difficulty = os.environ.get("QUESTION_DIFFICULTY", "S1").strip().upper()
+    round_number = int(os.environ.get("GENERATION_ROUND", "1"))
+    if not 1 <= round_number <= 1000:
+        raise ValueError("GENERATION_ROUND must be between 1 and 1000")
     if difficulty not in ("S1", "S2", "S3", "S4"):
         raise ValueError("Invalid QUESTION_DIFFICULTY")
     if not 1 <= limit <= 20 or not 1 <= count <= 20 or not 0 <= offset <= 10000:
@@ -45,6 +48,19 @@ def main():
     print(json.dumps({"chapter": chapter, "subtopics": [s["code"] for s in subtopics],
                       "per_subtopic": count, "offset": offset, "expected_first": expected, "dry_run": dry_run}), flush=True)
     results = []
+    report_path = Path("artifacts/question_factory_run_summary.json")
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    def write_checkpoint():
+        completed = sum(r["passed"] and r["pending"] == 0 for r in results)
+        checkpoint = {"schema_version": 2, "chapter": chapter, "round": round_number,
+                      "difficulty": difficulty, "dry_run": dry_run,
+                      "offset": offset, "requested_subtopics": len(subtopics),
+                      "processed_subtopics": len(results), "completed_subtopics": completed,
+                      "next_offset": offset + len(results),
+                      "incomplete_subtopics": [r["subtopic"] for r in results if not r["passed"] or r["pending"] > 0],
+                      "subtopics": results}
+        report_path.write_text(json.dumps(checkpoint, indent=2), encoding="utf-8")
+    write_checkpoint()
     for st in subtopics:
         env = os.environ.copy()
         env["MASTER_SUBTOPIC_CODE"] = st["code"]
@@ -72,6 +88,7 @@ def main():
                         "pending": count - accepted,
                         "result": payload.get("result") if payload else "error",
                         "metrics": payload.get("metrics", {}) if payload else {}})
+        write_checkpoint()
         if result.returncode:
             print("SUBTOPIC FAILED: continuing to next independent subtopic", file=sys.stderr, flush=True)
     # Machine-readable run report; upload as a GitHub Actions artifact.
@@ -86,6 +103,11 @@ def main():
               "answer_rejected": sum(r["metrics"].get("answer_rejected", 0) for r in results),
               "validator_rejected": sum(r["metrics"].get("validator_rejected", 0) for r in results),
               "dry_run": dry_run, "chapter": chapter, "difficulty": difficulty,
+              "round": round_number, "offset": offset,
+              "next_offset": offset + len(results),
+              "processed_subtopics": len(results),
+              "completed_subtopics": sum(r["passed"] and r["pending"] == 0 for r in results),
+              "incomplete_subtopics": [r["subtopic"] for r in results if not r["passed"] or r["pending"] > 0],
               "subtopics": results}
     report_path = Path("artifacts/question_factory_run_summary.json")
     report_path.parent.mkdir(parents=True, exist_ok=True)
