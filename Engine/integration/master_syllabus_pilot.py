@@ -29,6 +29,14 @@ def main():
     key=os.environ["SUPABASE_SERVICE_ROLE_KEY"]
     code=os.environ.get("MASTER_SUBTOPIC_CODE","A1_CH1_ST1")
     count=int(os.environ.get("QUESTION_COUNT","5"))
+    level=os.environ.get("QUESTION_DIFFICULTY","S1").strip().upper()
+    level_to_db={"S1":"Easy","S2":"Medium","S3":"Hard","S4":"Elite"}
+    if level not in level_to_db:
+        raise ValueError("QUESTION_DIFFICULTY must be S1, S2, S3 or S4")
+    level_guidance={"S1":"direct concept application, one clear inference",
+                    "S2":"standard application, two linked reasoning steps",
+                    "S3":"advanced multi-step reasoning and synthesis",
+                    "S4":"non-routine expert reasoning with a genuinely demanding insight"}
     if not 1<=count<=20 or not re.fullmatch(r"[A-Za-z0-9_]+",code):
         raise ValueError("Invalid pilot inputs")
     # Validate legacy JWT role without exposing the secret.
@@ -88,7 +96,7 @@ def main():
     if catalog_path.exists():
         print(json.dumps({"qp_discovery_coverage":qp_coverage(catalog_path)},ensure_ascii=False),flush=True)
     client=OpenAI(api_key=os.environ["OPENAI_API_KEY"])
-    prompt=f"""Generate exactly {count} original easy (S1 foundation) multiple-choice questions for the verified Master Syllabus:
+    prompt=f"""Generate exactly {count} original {level} ({level_guidance[level]}) multiple-choice questions for the verified Master Syllabus:
 Subject: {subj['subject_name']}
 Unit: {unit['unit_name']}
 Chapter: {ch['chapter_name']}
@@ -115,7 +123,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
     if not 1<=max_attempts<=5:
         raise ValueError("UNIQUENESS_MAX_ATTEMPTS must be between 1 and 5")
     accepted_questions=[]
-    metrics={"generated_candidates":0,"format_rejected":0,"duplicates_rejected":0,"answer_rejected":0,"validator_rejected":0,"attempts":0}
+    metrics={"difficulty":level,"generated_candidates":0,"format_rejected":0,"duplicates_rejected":0,"answer_rejected":0,"validator_rejected":0,"attempts":0}
     feedback=""
     for attempt in range(1,max_attempts+1):
         needed=count-len(accepted_questions)
@@ -209,7 +217,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
             unit_code=unit["code"],chapter_code=ch["code"],subtopic_code=st["code"],
             set_number=1,question_text=q["question_text"],options=options,
             correct_option=answer_key,explanation=q["explanation"],
-            difficulty="Easy",archetype="Computational",
+            difficulty=level_to_db[level],archetype="Computational",
             concept=q["concept_tested"],source_type="AI",
             metadata={"question_pattern":q["question_pattern"],"question_archetype":q["question_archetype"]},
         )
@@ -231,7 +239,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
             "question_text":q["question_text"],"option_a":q["option_a"],"option_b":q["option_b"],"option_c":q["option_c"],"option_d":q["option_d"],
             "correct_option":answer_key,"answer":q["answer"],"explanation":q["explanation"],
             "concept_tested":q["concept_tested"],"question_archetype":q["question_archetype"],
-            "difficulty":"Easy","set_no":1,"question_type":"Single Correct","source_type":"AI",
+            "difficulty":level_to_db[level],"set_no":1,"question_type":"Single Correct","source_type":"AI",
             "status":"draft","is_verified":False})
 
     print(json.dumps({"unique_validated":len(records),"requested":count,
@@ -256,7 +264,7 @@ Return ONLY a JSON array of objects with keys question_text, option_a, option_b,
                            q["question_pattern"],q["question_archetype"])
         possibility=register_possibility(catalog_path,chain["qp_id"],
                      q["possibility_givens"],q["possibility_unknown"],
-                     q["possibility_reasoning_steps"],"S1")
+                     q["possibility_reasoning_steps"],level)
         record_outcome(catalog_path,possibility["id"],question_code=record["question_code"])
     print(json.dumps({"catalog_updated":str(catalog_path),
                       "qp_discovery_coverage":qp_coverage(catalog_path)},ensure_ascii=False),flush=True)
