@@ -7,8 +7,8 @@
     "count": 1,
     "dry_run": true
   },
-  "next_offset": 2,
-  "completed_batches": 2,
+  "next_offset": 3,
+  "completed_batches": 3,
   "incomplete_subtopics": [],
   "status": "paused",
   "history": [
@@ -20,6 +20,11 @@
     {
       "offset": 1,
       "next_offset": 2,
+      "pending": 0
+    },
+    {
+      "offset": 2,
+      "next_offset": 3,
       "pending": 0
     }
   ]
