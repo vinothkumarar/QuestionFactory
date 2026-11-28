@@ -1,0 +1,15 @@
+{
+  "config": {
+    "chapter": "A1_CH1",
+    "difficulty": "S1",
+    "round_number": 1,
+    "limit": 1,
+    "count": 1,
+    "dry_run": true
+  },
+  "next_offset": 0,
+  "completed_batches": 0,
+  "incomplete_subtopics": [],
+  "status": "running",
+  "history": []
+}
